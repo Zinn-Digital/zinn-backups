@@ -1,0 +1,1067 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zinn-backups\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: zinn-backups\n"
+"X-Generator: scripts/wp-i18n-translate.py\n"
+
+#. Plugin Name of the plugin
+#: zinn-backups.php
+#: includes/class-admin.php:50
+msgid "Zinn® Backups"
+msgstr "Zinn® Backups"
+
+#. Plugin URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com/wordpress-plugins/zinn-backups"
+msgstr "https://zinndigital.com/wordpress-plugins/zinn-backups"
+
+#. Description of the plugin
+#: zinn-backups.php
+msgid "Backs up your WordPress files and database to your own storage — Dropbox, Google Drive, Cloudflare R2, Amazon S3 or any S3-compatible bucket — restores them in one go, and imports backups made by other backup and migration plugins."
+msgstr "将您的 WordPress 文件和数据库备份到您自己的存储空间 — Dropbox、Google Drive、Cloudflare R2、Amazon S3 或任何兼容 S3 的存储桶 — 一次性恢复它们，并导入由其他备份和迁移插件创建的备份。"
+
+#. Author of the plugin
+#: zinn-backups.php
+msgid "Neil Lock — CEO, Zinn Digital® Ltd"
+msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
+
+#. Author URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com"
+msgstr "https://zinndigital.com"
+
+#: includes/class-admin.php:69
+#: includes/class-admin.php:174
+msgid "Backups"
+msgstr "备份"
+
+#: includes/class-admin.php:73
+msgid "Get Pro: schedules, several storages, encryption"
+msgstr "获取 Pro：计划任务、多个存储位置、加密"
+
+#: includes/class-admin.php:110
+msgid "Working…"
+msgstr "正在处理…"
+
+#: includes/class-admin.php:111
+#: includes/class-admin.php:345
+msgid "Finished"
+msgstr "已完成"
+
+#: includes/class-admin.php:112
+#: includes/class-admin.php:346
+msgid "Failed"
+msgstr "失败"
+
+#: includes/class-admin.php:113
+#: includes/class-admin.php:347
+msgid "Cancelled"
+msgstr "已取消"
+
+#: includes/class-admin.php:114
+#: includes/class-admin.php:271
+#: includes/class-admin.php:316
+msgid "Cancel"
+msgstr "取消"
+
+#: includes/class-admin.php:115
+#: includes/class-admin.php:313
+#: includes/class-admin.php:316
+#: includes/class-restore-job.php:136
+msgid "Restore"
+msgstr "恢复"
+
+#: includes/class-admin.php:116
+msgid "Delete"
+msgstr "删除"
+
+#: includes/class-admin.php:117
+msgid "Delete this backup from your storage? This cannot be undone."
+msgstr "要从您的存储空间中删除此备份吗？此操作无法撤销。"
+
+#: includes/class-admin.php:118
+msgid "No backups yet. Press “Back up now” to make the first one."
+msgstr "尚无备份。请点击“立即备份”以创建第一个备份。"
+
+#: includes/class-admin.php:119
+msgid "Reading your storage…"
+msgstr "正在读取您的存储空间…"
+
+#: includes/class-admin.php:120
+msgctxt "a complete backup, as opposed to an incremental one"
+msgid "Full backup"
+msgstr "完整备份"
+
+#: includes/class-admin.php:121
+msgctxt "a backup holding only what changed since an earlier one"
+msgid "Incremental backup"
+msgstr "增量备份"
+
+#: includes/class-admin.php:122
+msgid "Encrypted"
+msgstr "已加密"
+
+#: includes/class-admin.php:123
+msgid "From another site"
+msgstr "从其他站点"
+
+#: includes/class-admin.php:124
+msgid "Database"
+msgstr "数据库"
+
+#: includes/class-admin.php:125
+msgid "Files"
+msgstr "文件"
+
+#. translators: 1: file name, 2: percentage uploaded.
+#: includes/class-admin.php:127
+#, php-format
+msgid "Uploading %1$s: %2$s%%"
+msgstr "正在上传 %1$s：%2$s%%"
+
+#: includes/class-admin.php:128
+msgid "Sign in to Dropbox in the window that opened, then paste the code Dropbox shows you:"
+msgstr "请在打开的窗口中登录 Dropbox，然后粘贴 Dropbox 向您显示的代码："
+
+#: includes/class-admin.php:129
+msgid "Saved."
+msgstr "已保存。"
+
+#: includes/class-admin.php:130
+msgid "Remove this destination from the plugin? The backups stored in it are not deleted."
+msgstr "要从插件中移除此目标位置吗？存储在其中的备份不会被删除。"
+
+#: includes/class-admin.php:131
+msgid "Reload the page to see the restored site."
+msgstr "重新載入頁面以檢視已還原的網站。"
+
+#: includes/class-admin.php:175
+msgid "Storage"
+msgstr "存储"
+
+#: includes/class-admin.php:176
+msgid "Import & migrate"
+msgstr "导入与迁移"
+
+#: includes/class-admin.php:177
+msgid "Settings"
+msgstr "设置"
+
+#: includes/class-admin.php:203
+msgid "Sections"
+msgstr "区块"
+
+#: includes/class-admin.php:251
+msgid "Google Drive is connected."
+msgstr "Google Drive 已连接。"
+
+#: includes/class-admin.php:255
+msgid "Google Drive could not be connected."
+msgstr "无法连接 Google Drive。"
+
+#: includes/class-admin.php:270
+msgid "Details"
+msgstr "详细信息"
+
+#: includes/class-admin.php:283
+#: includes/class-admin.php:302
+msgid "Back up now"
+msgstr "立即备份"
+
+#. translators: %s: link to the Storage tab.
+#: includes/class-admin.php:288
+#, php-format
+msgid "Backups go to your own storage, not this server. <a href=\"%s\">Connect your storage</a> first."
+msgstr "备份会保存到您自己的存储空间，而不是此服务器。请先<a href=\"%s\">连接您的存储空间</a>。"
+
+#: includes/class-admin.php:296
+msgid "What to back up"
+msgstr "要备份的内容"
+
+#: includes/class-admin.php:297
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files and database"
+msgstr "文件和数据库"
+
+#: includes/class-admin.php:298
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Database only"
+msgstr "仅数据库"
+
+#: includes/class-admin.php:299
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files only"
+msgstr "仅文件"
+
+#: includes/class-admin.php:301
+msgid "Note (optional)"
+msgstr "备注（可选）"
+
+#: includes/class-admin.php:304
+msgid "Each part is uploaded to your storage and removed from this server before the next one is made, so the backup never takes up room on your hosting."
+msgstr "每个部分在生成下一个部分之前，都会上传到您的存储空间并从此服务器中删除，因此备份永远不会占用您主机的空间。"
+
+#: includes/class-admin.php:307
+msgid "Your backups"
+msgstr "您的备份"
+
+#: includes/class-admin.php:307
+msgid "Refresh"
+msgstr "刷新"
+
+#: includes/class-admin.php:311
+msgid "Restore this backup"
+msgstr "恢复此备份"
+
+#: includes/class-admin.php:314
+msgid "Passphrase"
+msgstr "密码短语"
+
+#: includes/class-admin.php:315
+msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
+msgstr "我了解这会将此站点的文件和数据库替换为备份中的文件和数据库。备份中不存在的文件将被保留。"
+
+#: includes/class-admin.php:321
+msgid "Recent activity"
+msgstr "近期活动"
+
+#: includes/class-admin.php:327
+#: includes/class-backup-job.php:104
+msgid "Backup"
+msgstr "备份"
+
+#: includes/class-admin.php:327
+msgid "Restore / import"
+msgstr "恢复 / 导入"
+
+#: includes/class-admin.php:348
+msgid "Running"
+msgstr "正在运行"
+
+#: includes/class-admin.php:360
+msgid "Your storage"
+msgid_plural "Your storage destinations"
+msgstr[0] "您的存储空间"
+
+#: includes/class-admin.php:362
+msgid "No storage yet. Choose where your backups go below."
+msgstr "尚无存储空间。请在下方选择备份的保存位置。"
+
+#: includes/class-admin.php:372
+msgid "Ready"
+msgstr "就绪"
+
+#: includes/class-admin.php:372
+msgid "Not connected"
+msgstr "未连接"
+
+#: includes/class-admin.php:373
+msgid "Connect"
+msgstr "连接"
+
+#: includes/class-admin.php:374
+msgid "Test"
+msgstr "测试"
+
+#: includes/class-admin.php:375
+msgid "Edit"
+msgstr "编辑"
+
+#: includes/class-admin.php:376
+msgid "Remove"
+msgstr "移除"
+
+#: includes/class-admin.php:382
+msgid "Add storage"
+msgstr "添加存储"
+
+#: includes/class-admin.php:386
+msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
+msgstr "备份会发送到一个存储目的地。如需使用其他存储目的地，请编辑或移除上方的存储目的地。"
+
+#: includes/class-admin.php:397
+msgid "Kind of storage"
+msgstr "存储类型"
+
+#: includes/class-admin.php:402
+msgid "Name (for you)"
+msgstr "名称（仅您可见）"
+
+#: includes/class-admin.php:404
+msgid "Provider"
+msgstr "提供商"
+
+#: includes/class-admin.php:409
+msgid "Cloudflare account id"
+msgstr "Cloudflare 账户 ID"
+
+#: includes/class-admin.php:410
+msgid "Endpoint address"
+msgstr "端点地址"
+
+#: includes/class-admin.php:411
+msgid "Region"
+msgstr "区域"
+
+#: includes/class-admin.php:412
+msgid "Bucket"
+msgstr "存储桶"
+
+#: includes/class-admin.php:413
+msgid "Access key id"
+msgstr "访问密钥 ID"
+
+#: includes/class-admin.php:414
+msgid "Secret access key"
+msgstr "秘密访问密钥"
+
+#: includes/class-admin.php:414
+msgid "Leave empty to keep the saved key"
+msgstr "留空以保留已保存的密钥"
+
+#: includes/class-admin.php:415
+msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
+msgstr "对于 Cloudflare R2：请在 Cloudflare 控制面板中打开 R2，创建一个存储桶，然后前往“Manage R2 API tokens”→ 为该存储桶创建一个具有 Object Read & Write 权限的令牌，并在此处复制访问密钥 ID（access key id）和机密密钥。"
+
+#: includes/class-admin.php:418
+msgid "Dropbox app key"
+msgstr "Dropbox 应用密钥"
+
+#: includes/class-admin.php:419
+msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
+msgstr "在 dropbox.com/developers/apps (Scoped access, App folder) 创建一个具有 files.content.read、files.content.write 和 files.metadata.read 权限的应用程序，并将其 App key 复制到此处。保存，然后点击“连接”。"
+
+#: includes/class-admin.php:421
+msgid "OAuth client id"
+msgstr "OAuth 客户端 ID"
+
+#: includes/class-admin.php:422
+msgid "OAuth client secret"
+msgstr "OAuth 客户端密钥"
+
+#: includes/class-admin.php:422
+msgid "Leave empty to keep the saved secret"
+msgstr "留空以保留已保存的密码"
+
+#: includes/class-admin.php:423
+msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
+msgstr "在 Google Cloud Console 中，启用 Google Drive API，然后创建一个类型为“Web 应用程序”的 OAuth 客户端，并将此地址设置为已获授权的重定向 URI："
+
+#: includes/class-admin.php:423
+msgid "Save, then press Connect. The plugin only sees the files it creates."
+msgstr "保存，然后点击连接。该插件只能看到其自身创建的文件。"
+
+#: includes/class-admin.php:425
+msgid "Folder inside the storage (optional)"
+msgstr "存储中的文件夹（可选）"
+
+#: includes/class-admin.php:426
+msgid "Save storage"
+msgstr "节省存储空间"
+
+#: includes/class-admin.php:436
+msgid "Import a backup from another plugin or host"
+msgstr "从其他插件或主机导入备份"
+
+#: includes/class-admin.php:437
+msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
+msgstr "从由 UpdraftPlus、All-in-One WP Migration (.wpress)、Duplicator (zip)、BackWPup、WPvivid、Jetpack VaultPress Backup、BlogVault、Zinn® Migrate 创建的备份，或包含其 .sql 转储的 WordPress 站点的任何 zip/tar 归档中导入站点。内容将进入 wp-content，数据库将替换此站点的数据库；地址会自动更改为此站点的地址。"
+
+#: includes/class-admin.php:439
+msgid "Upload from your computer"
+msgstr "从您的计算机上传"
+
+#: includes/class-admin.php:439
+msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
+msgstr "请一次性选择备份的所有文件（UpdraftPlus 会生成多个文件）。大文件会分块发送，因此不受您主机的上传限制影响。"
+
+#: includes/class-admin.php:440
+msgid "Or from links (Google Drive, Dropbox or any download address)"
+msgstr "或通过链接（Google Drive、Dropbox 或任何下载地址）"
+
+#: includes/class-admin.php:440
+msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
+msgstr "每行一个链接。对于 Google 云端硬盘和 Dropbox，请将文件共享给“任何拥有该链接的人”并粘贴该链接；之后请再次关闭共享。"
+
+#: includes/class-admin.php:442
+msgid "Or a file already on this server"
+msgstr "或已在此服务器上的文件"
+
+#. translators: %s: folder path.
+#: includes/class-admin.php:450
+#, php-format
+msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
+msgstr "请通过 FTP 或主机的文​​件管理器将归档上传到 %s，然后重新加载此页面。"
+
+#: includes/class-admin.php:455
+msgid "Or a deploy code from another site"
+msgstr "或来自其他站点的部署代码"
+
+#: includes/class-admin.php:455
+msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
+msgstr "如果其他站点向您提供了 Zinn® Backups 部署代码，请将其粘贴在此处，以便将该备份复制到此站点，而无需共享其存储密钥。代码仅在数小时内有效；请像对待密码一样妥善保管。"
+
+#: includes/class-admin.php:455
+msgid "Passphrase (only if that backup is encrypted)"
+msgstr "密码短语（仅在该备份已加密时）"
+
+#: includes/class-admin.php:456
+#: includes/class-admin.php:458
+msgid "Import"
+msgstr "导入"
+
+#: includes/class-admin.php:457
+msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
+msgstr "我了解导入会替换此站点的內容和数据库。完成后，请使用导入站点中的账户登录。"
+
+#: includes/class-admin.php:460
+msgid "Moving to Zinn® hosting?"
+msgstr "正在迁移到 Zinn® 主机？"
+
+#: includes/class-admin.php:460
+msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
+msgstr "Zinn Digital® 可以为您从旧主机迁移网站。如果您的旧主机不提供 FTP、SSH 或控制面板访问权限，请在旧网站上安装 Zinn® Migrate；它会生成一个归档文件，供您在此导入或提交给 Zinn®。"
+
+#: includes/class-admin.php:470
+msgid "What goes into a backup"
+msgstr "备份中包含哪些内容"
+
+#: includes/class-admin.php:471
+msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
+msgstr "包含 WordPress 自身的文件（wp-admin、wp-includes）。通常不需要：WordPress 始终可以重新安装。"
+
+#: includes/class-admin.php:472
+msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
+msgstr "同时排除这些文件夹或文件（每行一个，相对于 WordPress 文件夹）"
+
+#: includes/class-admin.php:473
+msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
+msgstr "始终排除：缓存、更新暂存空间以及其他备份插件自身的归档文件夹："
+
+#: includes/class-admin.php:474
+msgid "Size of each part (MB)"
+msgstr "每个分卷的大小 (MB)"
+
+#: includes/class-admin.php:479
+msgid "Save settings"
+msgstr "保存设置"
+
+#: includes/class-archiver.php:52
+msgid "A backup part could not be opened for writing. Check that wp-content has free space."
+msgstr "无法打开备份分卷以进行写入。请检查 wp-content 是否有可用空间。"
+
+#: includes/class-archiver.php:113
+msgid "A backup part could not be written. Check that wp-content has free space."
+msgstr "备份的一部分无法写入。请检查 wp-content 是否有可用空间。"
+
+#: includes/class-backup-job.php:42
+msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
+msgstr "请先在 Storage 选项卡上连接存储目标位置：备份保存在您自己的存储空间中，而非此服务器上。"
+
+#: includes/class-backup-job.php:45
+#: includes/class-restore-job.php:108
+msgid "Multisite networks are not supported yet."
+msgstr "尚不支持多站点网络。"
+
+#: includes/class-backup-job.php:48
+msgid "This server’s PHP has no ZipArchive extension. Ask your host to enable it."
+msgstr "此服务器的 PHP 没有 ZipArchive 扩展。请联系您的主机提供商以启用它。"
+
+#: includes/class-backup-job.php:98
+msgid "Starting"
+msgstr "正在启动"
+
+#: includes/class-backup-job.php:99
+msgid "Listing files"
+msgstr "正在列出文件"
+
+#: includes/class-backup-job.php:100
+msgid "Backing up the database"
+msgstr "正在备份数据库"
+
+#: includes/class-backup-job.php:101
+msgid "Packing files"
+msgstr "正在打包文件"
+
+#: includes/class-backup-job.php:102
+msgid "Uploading to your storage"
+msgstr "正在上传至您的存储空间"
+
+#: includes/class-backup-job.php:103
+msgid "Finishing"
+msgstr "正在完成"
+
+#: includes/class-backup-job.php:123
+msgid "The backup reached an unknown stage."
+msgstr "备份已达到未知阶段。"
+
+#. translators: %s: backup id.
+#: includes/class-backup-job.php:143
+#, php-format
+msgid "Backup %s started."
+msgstr "%s 备份已开始。"
+
+#. translators: 1: number of files, 2: total size.
+#: includes/class-backup-job.php:168
+#, php-format
+msgid "Found %1$s files (%2$s)."
+msgstr "找到 %1$s 个文件 (%2$s)。"
+
+#. translators: 1: number of tables, 2: number of rows, 3: size.
+#: includes/class-backup-job.php:209
+#, php-format
+msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
+msgstr "数据库：%1$d 个表，%2$s 行，%3$s 已压缩。"
+
+#. translators: 1: size of the backup, 2: number of destinations.
+#: includes/class-backup-job.php:473
+#, php-format
+msgid "Backup complete: %1$s stored in %2$d destination."
+msgid_plural "Backup complete: %1$s stored in %2$d destinations."
+msgstr[0] "备份完成：%1$s已存储在 %2$d 个目标位置。"
+
+#: includes/class-backup-job.php:503
+msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
+msgstr "部分已上传的内容无法从您的存储空间中移除；它们位于未完成的备份文件夹中，绝不会被提供用于恢复。"
+
+#: includes/class-backup-job.php:520
+msgid "A storage destination was removed while the backup was running."
+msgstr "备份正在运行时，某个存储目的地已被移除。"
+
+#: includes/class-catalog.php:134
+msgid "That is not a backup folder."
+msgstr "那不是备份文件夹。"
+
+#: includes/class-catalog.php:138
+#: includes/class-restore-job.php:186
+msgid "That storage destination is no longer saved on this site."
+msgstr "该存储目标已不再保存在此站点上。"
+
+#: includes/class-catalog.php:141
+msgid "Later incremental backups are built on this one. Delete those first."
+msgstr "后续的增量备份基于此备份构建。请先删除这些备份。"
+
+#: includes/class-crypto.php:88
+msgid "This file is not an encrypted Zinn® Backups file."
+msgstr "此文件不是加密的 Zinn® Backups 文件。"
+
+#: includes/class-crypto.php:103
+msgid "The backup could not be decrypted: the passphrase is wrong or the file is damaged."
+msgstr "备份无法解密：密码错误或文件已损坏。"
+
+#: includes/class-crypto.php:112
+msgid "The encrypted backup file is incomplete."
+msgstr "加密的备份文件不完整。"
+
+#: includes/class-database-dumper.php:67
+msgid "The database file could not be written. Check that wp-content has free space."
+msgstr "无法写入数据库文件。请检查 wp-content 是否有可用空间。"
+
+#: includes/class-deploy-code.php:41
+msgid "That is not a deploy code. A deploy code starts with zbdeploy1."
+msgstr "那不是部署代码。部署代码以 zbdeploy1 开头。"
+
+#: includes/class-deploy-code.php:46
+#: includes/class-deploy-code.php:67
+#: includes/class-deploy-code.php:76
+msgid "That deploy code is damaged. Copy it again from the other site."
+msgstr "该部署代码已损坏。请从另一个站点重新复制它。"
+
+#: includes/class-deploy-code.php:56
+msgid "The deploy code has expired or its backup was deleted. Make a new code on the other site."
+msgstr "部署代码已过期或其备份已被删除。请在另一个站点上生成新代码。"
+
+#: includes/class-deploy-code.php:60
+msgid "That deploy code does not point at a Zinn® Backups backup."
+msgstr "该部署代码未指向 Zinn® Backups 备份。"
+
+#: includes/class-deploy-code.php:63
+msgid "The deploy code has expired. Make a new code on the other site."
+msgstr "部署代码已过期。请在另一个站点上生成新代码。"
+
+#: includes/class-downloader.php:83
+msgid "The server stopped honouring partial downloads. Start the import again."
+msgstr "服务器已停止支持断点续传。请重新开始导入。"
+
+#: includes/class-downloader.php:87
+msgid "The link opened a web page instead of a file. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link."
+msgstr "该链接打开了网页而非文件。对于 Google Drive 和 Dropbox，请将文件共享为“知道链接的任何人”，并粘贴该链接。"
+
+#. translators: %d: HTTP status code.
+#: includes/class-downloader.php:96
+#, php-format
+msgid "The link answered with HTTP %d."
+msgstr "链接返回了 HTTP %d。"
+
+#: includes/class-file-scanner.php:53
+msgid "The file list could not be written."
+msgstr "无法写入文件列表。"
+
+#. translators: %s: the network error message.
+#: includes/class-http.php:46
+#, php-format
+msgid "The storage service could not be reached: %s"
+msgstr "无法访问存储服务：%s"
+
+#. translators: 1: service name, 2: HTTP status code, 3: the service's own error text.
+#: includes/class-http.php:78
+#, php-format
+msgid "%1$s answered with HTTP %2$d: %3$s"
+msgstr "%1$s 返回了 HTTP %2$d：%3$s"
+
+#: includes/class-http.php:113
+msgid "no details given"
+msgstr "未提供详细信息"
+
+#: includes/class-plugin.php:96
+msgid "You are not allowed to manage backups."
+msgstr "您无权管理备份。"
+
+#: includes/class-plugin.php:196
+msgid "Tick the box to confirm that the restore replaces this site’s files and database."
+msgstr "勾选该复选框以确认恢复操作将替换此站点的文件和数据库。"
+
+#: includes/class-plugin.php:271
+#: includes/class-plugin.php:290
+msgid "Save the destination first."
+msgstr "请先保存目标地址。"
+
+#: includes/class-plugin.php:274
+msgid "Connected: a test file was written and removed."
+msgstr "已连接：测试文件已写入并删除。"
+
+#: includes/class-plugin.php:306
+msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
+msgstr "请先输入您的 Dropbox 应用的应用密钥（请参阅表单旁边的步骤）。"
+
+#: includes/class-plugin.php:319
+msgid "This kind of storage does not sign in."
+msgstr "此类存储不进行登录。"
+
+#: includes/class-plugin.php:336
+msgid "The sign-in expired. Press Connect again."
+msgstr "登录已过期。请再次点击连接。"
+
+#: includes/class-plugin.php:342
+msgid "Dropbox is connected."
+msgstr "Dropbox 已连接。"
+
+#: includes/class-plugin.php:411
+msgid "Settings saved."
+msgstr "设置已保存。"
+
+#: includes/class-plugin.php:427
+#: includes/class-runner.php:64
+msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
+msgstr "另一个备份、恢复或导入正在运行。请等待其完成，或将其取消。"
+
+#: includes/class-plugin.php:453
+msgid "The upload was not started properly. Start again."
+msgstr "上传未正常开始。请重新开始。"
+
+#: includes/class-plugin.php:457
+msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
+msgstr "分块未送达。您的服务器可能会限制上传大小；请重试。"
+
+#: includes/class-plugin.php:481
+msgid "Tick the box to confirm that the import replaces this site’s content and database."
+msgstr "勾选该框以确认导入将替换本站点的所有内容和数据库。"
+
+#: includes/class-plugin.php:535
+msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
+msgstr "选择要导入的归档：上传它、粘贴链接或从导入文件夹中选取。"
+
+#. translators: 1: a percentage, e.g. 50. 2: a Pro plugin's name.
+#: includes/class-pro-discount.php:132
+#, php-format
+msgid "Hosting customer? Get %1$d%% off %2$s"
+msgstr "托管客户？获取 %2$s 的 %1$d%% 折扣"
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:141
+#, php-format
+msgid "As a Zinn Digital® hosting customer you get a personal code for %d%% off your first payment. Renewals are at the normal price."
+msgstr "作为 Zinn Digital® 托管客户，您可获得用于首次付款享受 %d%% 折扣的专属代码。续费按正常价格收取。"
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:156
+#, php-format
+msgid "Get my %d%% code and go to checkout"
+msgstr "获取我的 %d%% 折扣码并前往结账"
+
+#: includes/class-pro-discount.php:171
+msgid "Sorry, you are not allowed to do that."
+msgstr "抱歉，您没有权限执行此操作。"
+
+#: includes/class-pro-discount.php:222
+msgid "This discount is for customers with a paid hosting plan in good standing. Free trials do not qualify."
+msgstr "此折扣适用于拥有状态良好之付费托管方案的客户。免费试用不符合资格。"
+
+#: includes/class-pro-discount.php:225
+msgid "You have already used your hosting-customer discount for this plugin."
+msgstr "您已为该插件使用过您的托管客户折扣。"
+
+#: includes/class-pro-discount.php:228
+msgid "We could not get your code just now. Please try again in a few minutes."
+msgstr "我们刚才无法获取您的验证码。请在几分钟后重试。"
+
+#: includes/class-restore-job.php:128
+msgid "Reading the backup"
+msgstr "正在读取备份"
+
+#: includes/class-restore-job.php:129
+msgid "Downloading the archive"
+msgstr "正在下载归档"
+
+#: includes/class-restore-job.php:130
+msgid "Recognising the archive"
+msgstr "正在识别归档"
+
+#: includes/class-restore-job.php:131
+msgid "Restoring files"
+msgstr "正在恢复文件"
+
+#: includes/class-restore-job.php:132
+msgid "Downloading the database"
+msgstr "正在下载数据库"
+
+#: includes/class-restore-job.php:133
+msgid "Restoring the database"
+msgstr "正在恢复数据库"
+
+#: includes/class-restore-job.php:134
+msgid "Updating the site address"
+msgstr "正在更新站点地址"
+
+#: includes/class-restore-job.php:135
+msgid "Switching to the restored database"
+msgstr "正在切换到已恢复的数据库"
+
+#: includes/class-restore-job.php:158
+msgid "The restore reached an unknown stage."
+msgstr "恢复过程进入了未知阶段。"
+
+#: includes/class-restore-job.php:201
+msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
+msgstr "此文件夹中没有完整的 Zinn® Backups 备份（缺少清单）。"
+
+#: includes/class-restore-job.php:204
+msgid "This backup is encrypted. Enter its passphrase to restore it."
+msgstr "此備份已加密。請輸入密碼短語以還原。"
+
+#. translators: %s: backup id.
+#: includes/class-restore-job.php:219
+#, php-format
+msgid "This incremental backup needs backup %s, which is no longer in the storage."
+msgstr "此增量备份需要备份 %s，但该备份已不在存储中。"
+
+#. translators: 1: backup date, 2: number of parts.
+#: includes/class-restore-job.php:266
+#, php-format
+msgid "Restoring the backup of %1$s (%2$d file parts)."
+msgstr "正在恢复 %1$s 的备份（%2$d 个文件分卷）。"
+
+#. translators: 1: number of files, 2: example paths.
+#: includes/class-restore-job.php:340
+#, php-format
+msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
+msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
+msgstr[0] "无法覆盖文件 %1$s，因为此站点无权修改该文件，已保留原样：%2$s"
+
+#. translators: %s: number of files.
+#: includes/class-restore-job.php:359
+#, php-format
+msgid "Restored %s files."
+msgstr "已恢复 %s 个文件。"
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:422
+#, php-format
+msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
+msgstr "%s 下载后与校验和不匹配。存储中的副本可能已损坏。"
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:493
+#, php-format
+msgid "%s did not arrive. Upload it again."
+msgstr "%s未送达。请重新上传。"
+
+#. translators: %s: list of backup formats.
+#: includes/class-restore-job.php:515
+#, php-format
+msgid "Recognised: %s."
+msgstr "已识别：%s。"
+
+#. translators: 1: number of files, 2: number of files skipped.
+#: includes/class-restore-job.php:542
+#, php-format
+msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
+msgstr "已将 %1$s 个文件导入至 wp-content（已忽略 %2$s 个：缓存、drop-in 和其他备份插件的文件夹）。"
+
+#: includes/class-restore-job.php:588
+msgid "The archive has no database dump, so only files were imported."
+msgstr "存档中没有数据库转储，因此仅导入了文件。"
+
+#. translators: %d: number of tables.
+#: includes/class-restore-job.php:598
+#, php-format
+msgid "Database restored into %d temporary tables."
+msgstr "数据库已恢复至 %d 个临时表中。"
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:615
+#, php-format
+msgid "%s has no WordPress tables in it and was skipped."
+msgstr "%s 中没有 WordPress 数据表，已跳过。"
+
+#: includes/class-restore-job.php:653
+#: includes/class-table-swap.php:237
+msgid "The backup’s database has no WordPress tables, so nothing was replaced."
+msgstr "备份的数据库中没有 WordPress 数据表，因此未替换任何内容。"
+
+#: includes/class-restore-job.php:658
+msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
+msgstr "此备份属于多站点网络。不支持将网络恢复至单个站点。"
+
+#. translators: 1: old address, 2: this site's address.
+#: includes/class-restore-job.php:683
+#, php-format
+msgid "Moving the content from %1$s to %2$s."
+msgstr "正在将内容从 %1$s 移动到 %2$s。"
+
+#: includes/class-restore-job.php:809
+msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
+msgstr "恢复完成。如果您已退出登录，请使用已恢复网站的帐户登录。"
+
+#: includes/class-restore-job.php:810
+msgid "Restore complete."
+msgstr "恢复完成。"
+
+#. translators: 1: error message, 2: seconds until the retry.
+#: includes/class-runner.php:160
+#, php-format
+msgid "%1$s — trying again in %2$d seconds."
+msgstr "%1$s — 将在 %2$d 秒后重试。"
+
+#: includes/class-runner.php:189
+msgid "Cancelled."
+msgstr "已取消。"
+
+#: includes/class-settings.php:145
+msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
+msgstr "备份会发送到一个存储目的地。请编辑或移除您现有的目的地以使用其他目的地。"
+
+#: includes/class-sql-importer.php:84
+msgid "The database file could not be opened."
+msgstr "无法打开数据库文件。"
+
+#. translators: 1: database error, 2: start of the statement.
+#: includes/class-sql-importer.php:262
+#, php-format
+msgid "The database refused a statement from the backup: %1$s (%2$s…)"
+msgstr "数据库拒绝了来自备份的语句：%1$s（%2$s…）"
+
+#. translators: %s: database error.
+#: includes/class-table-swap.php:256
+#, php-format
+msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
+msgstr "无法调换已恢复的表：%s。您的站点未发生更改。"
+
+#: includes/class-work-dir.php:43
+msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
+msgstr "没有可用于临时备份文件的可写文件夹。请将 wp-content 设为可写，然后重试。"
+
+#: includes/class-work-dir.php:90
+msgid "Could not create a folder for this job."
+msgstr "无法为此任务创建文件夹。"
+
+#. translators: %s: the Zinn Digital trade mark, which is not translated.
+#: includes/class-zinn-backups-promo.php:349
+#: includes/class-zinn-backups-promo.php:407
+#, php-format
+msgid "%s — guides and services"
+msgstr "%s — 指南与服务"
+
+#: includes/class-zinn-backups-promo.php:364
+msgid "User guides"
+msgstr "用户指南"
+
+#. translators: %s: this plugin's name, e.g. "Zinn® Cache".
+#: includes/class-zinn-backups-promo.php:414
+#, php-format
+msgid "Read the %s user guide"
+msgstr "阅读 %s 用户指南"
+
+#: includes/class-zinn-backups-promo.php:422
+msgid "Hide this"
+msgstr "隐藏此项"
+
+#: includes/class-zinn-backups-promo.php:535
+msgid "Zinn® hosting for WordPress"
+msgstr "适用于 WordPress 的 Zinn® 托管"
+
+#: includes/class-zinn-backups-promo.php:536
+msgid "LiteSpeed, daily backups, free migration and a control panel built for people who run more than one site."
+msgstr "LiteSpeed、每日备份、免费迁移以及专为管理多个网站的用户打造的控制面板。"
+
+#: includes/class-zinn-backups-promo.php:542
+msgid "The Zinn® marketplace"
+msgstr "Zinn® 市场"
+
+#: includes/class-zinn-backups-promo.php:543
+msgid "Buy and sell established sites, domains and link placements, with the money held safely until both sides are happy."
+msgstr "买卖成熟网站、域名和外链位置，资金安全托管，直至买卖双方均满意为止。"
+
+#: includes/class-zinn-backups-promo.php:590
+msgid "Zinn Hub® — hire people who do this for a living"
+msgstr "Zinn Hub® — 聘请以此为生的专业人员"
+
+#: includes/class-zinn-backups-promo.php:591
+msgid "Our global freelance marketplace: browse over 10,000 ready-made services from writers, designers, developers and SEOs, or post a project and let them bid."
+msgstr "我们的全球自由职业市场：浏览由作者、设计师、开发者和 SEO 专家提供的超过 10,000 种现成服务，或者发布项目让他们竞标。"
+
+#: includes/class-zinn-backups-updater.php:253
+msgid "See the Zinn Digital® release notes."
+msgstr "查看 Zinn Digital® 发行说明。"
+
+#: includes/class-zinn-backups-updater.php:302
+msgid "The Zinn® update service did not issue a download link for this update. Check that this site can reach the Zinn® platform, then try again."
+msgstr "Zinn® 更新服务未提供此更新的下载链接。请检查此站点是否可以访问 Zinn® 平台，然后重试。"
+
+#. translators: %s: the download error reported by WordPress.
+#: includes/class-zinn-backups-updater.php:316
+#, php-format
+msgid "The update could not be downloaded from the Zinn® update service (%s). Try again in a few minutes."
+msgstr "无法从 Zinn® 更新服务（%s）下载更新。请在几分钟后重试。"
+
+#: includes/class-zinn-backups-updater.php:330
+msgid "The downloaded update failed its integrity check and was not installed."
+msgstr "下载的更新未通过完整性检查，未予安装。"
+
+#: includes/import/class-archive-reader.php:147
+msgid "The zip archive could not be opened. It may be damaged or incomplete."
+msgstr "无法打开 zip 压缩文件。它可能已损坏或不完整。"
+
+#: includes/import/class-archive-reader.php:311
+msgid "This .wpress file uses a format we cannot read (it may be compressed or encrypted by All-in-One WP Migration). Export it again without encryption."
+msgstr "此 .wpress 文件使用了我们无法读取的格式（可能已被 All-in-One WP Migration 压缩或加密）。请在不加密的情况下重新导出。"
+
+#: includes/import/class-formats.php:66
+msgid "This is a Duplicator “DupArchive” (.daf) file. In Duplicator, build the package again with the archive format set to ZIP, then import that."
+msgstr "这是一个 Duplicator “DupArchive” (.daf) 文件。在 Duplicator 中，将归档格式设置为 ZIP 重新构建该安装包，然后将其导入。"
+
+#: includes/import/class-formats.php:69
+msgid "This UpdraftPlus database backup is encrypted. Decrypt it in UpdraftPlus (or turn off database encryption and back up again), then import it."
+msgstr "此 UpdraftPlus 数据库备份已加密。请在 UpdraftPlus 中将其解密（或关闭数据库加密并重新备份），然后再进行导入。"
+
+#: includes/import/class-formats.php:76
+msgid "Database dump"
+msgstr "数据库转储"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:93
+#, php-format
+msgid "%s is not a backup archive we can read (zip, tar, tar.gz, .wpress, .sql or .sql.gz)."
+msgstr "%s 不是我们可读取的备份存档（zip、tar、tar.gz、.wpress、.sql 或 .sql.gz）。"
+
+#: includes/import/class-formats.php:99
+msgid "Website archive"
+msgstr "网站归档"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:123
+#, php-format
+msgid "%s has no WordPress content (no wp-content folder and no database dump) in it."
+msgstr "%s 中没有 WordPress 内容（没有 wp-content 文件夹，也没有数据库转储）。"
+
+#: includes/import/class-formats.php:155
+msgid "This .wpress file is encrypted or compressed by All-in-One WP Migration. Export it again with encryption and compression switched off, then import that."
+msgstr "此 .wpress 文件已被 All-in-One WP Migration 加密或压缩。请在关闭加密和压缩功能后重新导出，然后再导入该文件。"
+
+#: includes/storage/class-destinations.php:62
+msgid "Other S3-compatible storage"
+msgstr "其他兼容 S3 的存储"
+
+#: includes/storage/class-destinations.php:77
+msgid "Cloudflare R2, Amazon S3 or S3-compatible"
+msgstr "Cloudflare R2、Amazon S3 或兼容 S3"
+
+#: includes/storage/class-destinations.php:100
+msgid "The storage keys could not be read on this site. Enter the secret key again on the Storage tab."
+msgstr "无法在此站点上读取存储密钥。请在“存储”选项卡上重新输入密钥。"
+
+#: includes/storage/class-destinations.php:116
+msgid "This kind of storage is not known."
+msgstr "这种存储类型是未知的。"
+
+#: includes/storage/class-destinations.php:168
+msgid "Choose a kind of storage."
+msgstr "请选择一种存储类型。"
+
+#: includes/storage/class-destinations.php:187
+msgid "Enter the bucket name and the access key."
+msgstr "请输入存储桶名称和访问密钥。"
+
+#: includes/storage/class-destinations.php:190
+msgid "Enter your Cloudflare account id (or the full R2 endpoint)."
+msgstr "输入您的 Cloudflare 账户 ID（或完整的 R2 终端节点）。"
+
+#: includes/storage/class-destinations.php:193
+msgid "Enter the endpoint address of your storage."
+msgstr "请输入您的存储终端节点地址。"
+
+#: includes/storage/class-destinations.php:202
+msgid "Enter the OAuth client id from your Google Cloud project."
+msgstr "请输入您的 Google Cloud 项目中的 OAuth client id。"
+
+#: includes/storage/class-dropbox.php:94
+msgid "Dropbox did not return a refresh token. Start the connection again."
+msgstr "Dropbox 未返回刷新令牌。请重新发起连接。"
+
+#: includes/storage/class-dropbox.php:369
+msgid "Dropbox is not connected. Connect it again on the Storage tab."
+msgstr "Dropbox 未连接。请在“存储”选项卡上重新连接。"
+
+#: includes/storage/class-google-drive.php:114
+msgid "Google did not return a refresh token. Remove this site from your Google account’s third-party access and connect again."
+msgstr "Google 未返回刷新令牌。请从您的 Google 帐号的第三方访问权限中移除此网站，然后重新连接。"
+
+#: includes/storage/class-google-drive.php:308
+msgid "That file is not in Google Drive any more."
+msgstr "该文件已不在 Google Drive 中。"
+
+#: includes/storage/class-google-drive.php:477
+msgid "Google Drive is not connected. Connect it again on the Storage tab."
+msgstr "Google Drive 未连接。请在“存储”选项卡中重新连接。"
+
+#: includes/storage/class-s3.php:85
+msgid "The storage service did not start the upload."
+msgstr "存储服务未开始上传。"
+
+#: includes/storage/class-s3.php:352
+msgid "The storage service sent a reply that could not be read."
+msgstr "存储服务发送了无法读取的回复。"
+
+#: includes/storage/class-s3.php:380
+msgid "A temporary backup file could not be read."
+msgstr "无法读取临时备份文件。"
+
+#: includes/storage/class-url-source.php:71
+msgid "A deploy link is read-only."
+msgstr "部署链接是只读的。"
+
+#: includes/storage/class-url-source.php:106
+msgid "The deploy code has no link for a file this backup needs."
+msgstr "部署代码中没有此备份所需文件的链接。"
+
+#: includes/storage/class-url-source.php:115
+msgid "The deploy link"
+msgstr "部署链接"

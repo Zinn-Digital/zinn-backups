@@ -1,0 +1,1082 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zinn-backups\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=((((n % 100) >= 3 && (n % 100) <= 10)) ? 3 : (((n % 100) >= 11 && (n % 100) <= 99)) ? 4 : ((n == 1)) ? 1 : ((n == 2)) ? 2 : ((n == 0)) ? 0 : 5);\n"
+"X-Domain: zinn-backups\n"
+"X-Generator: scripts/wp-i18n-translate.py\n"
+
+#. Plugin Name of the plugin
+#: zinn-backups.php
+#: includes/class-admin.php:50
+msgid "Zinn® Backups"
+msgstr "Zinn® Backups"
+
+#. Plugin URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com/wordpress-plugins/zinn-backups"
+msgstr "https://zinndigital.com/wordpress-plugins/zinn-backups"
+
+#. Description of the plugin
+#: zinn-backups.php
+msgid "Backs up your WordPress files and database to your own storage — Dropbox, Google Drive, Cloudflare R2, Amazon S3 or any S3-compatible bucket — restores them in one go, and imports backups made by other backup and migration plugins."
+msgstr "يقوم بنسخ ملفات WordPress وقاعدة البيانات احتياطيًا إلى مساحة التخزين الخاصة بك — مثل Dropbox أو Google Drive أو Cloudflare R2 أو Amazon S3 أو أي وحدة تخزين متوافقة مع S3 — ويستعيدها دفعة واحدة، ويستورد النسخ الاحتياطية التي تم إنشاؤها بواسطة إضافات النسخ الاحتياطي والنقل الأخرى."
+
+#. Author of the plugin
+#: zinn-backups.php
+msgid "Neil Lock — CEO, Zinn Digital® Ltd"
+msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
+
+#. Author URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com"
+msgstr "https://zinndigital.com"
+
+#: includes/class-admin.php:69
+#: includes/class-admin.php:174
+msgid "Backups"
+msgstr "النسخ الاحتياطية"
+
+#: includes/class-admin.php:73
+msgid "Get Pro: schedules, several storages, encryption"
+msgstr "احصل على Pro: الجداول الزمنية، مساحات تخزين متعددة، التشفير"
+
+#: includes/class-admin.php:110
+msgid "Working…"
+msgstr "جارٍ العمل…"
+
+#: includes/class-admin.php:111
+#: includes/class-admin.php:345
+msgid "Finished"
+msgstr "مكتمل"
+
+#: includes/class-admin.php:112
+#: includes/class-admin.php:346
+msgid "Failed"
+msgstr "فشل"
+
+#: includes/class-admin.php:113
+#: includes/class-admin.php:347
+msgid "Cancelled"
+msgstr "ملغي"
+
+#: includes/class-admin.php:114
+#: includes/class-admin.php:271
+#: includes/class-admin.php:316
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: includes/class-admin.php:115
+#: includes/class-admin.php:313
+#: includes/class-admin.php:316
+#: includes/class-restore-job.php:136
+msgid "Restore"
+msgstr "استعادة"
+
+#: includes/class-admin.php:116
+msgid "Delete"
+msgstr "حذف"
+
+#: includes/class-admin.php:117
+msgid "Delete this backup from your storage? This cannot be undone."
+msgstr "هل تريد حذف هذه النسخة الاحتياطية من مساحة التخزين الخاصة بك؟ لا يمكن التراجع عن هذا الإجراء."
+
+#: includes/class-admin.php:118
+msgid "No backups yet. Press “Back up now” to make the first one."
+msgstr "لا توجد نسخ احتياطية حتى الآن. اضغط على \"النسخ الاحتياطي الآن\" لإنشاء النسخة الأولى."
+
+#: includes/class-admin.php:119
+msgid "Reading your storage…"
+msgstr "جارٍ قراءة سعة التخزين الخاصة بك…"
+
+#: includes/class-admin.php:120
+msgctxt "a complete backup, as opposed to an incremental one"
+msgid "Full backup"
+msgstr "نسخ احتياطي كامل"
+
+#: includes/class-admin.php:121
+msgctxt "a backup holding only what changed since an earlier one"
+msgid "Incremental backup"
+msgstr "نسخ احتياطي تزايدي"
+
+#: includes/class-admin.php:122
+msgid "Encrypted"
+msgstr "مشفر"
+
+#: includes/class-admin.php:123
+msgid "From another site"
+msgstr "من موقع آخر"
+
+#: includes/class-admin.php:124
+msgid "Database"
+msgstr "قاعدة البيانات"
+
+#: includes/class-admin.php:125
+msgid "Files"
+msgstr "الملفات"
+
+#. translators: 1: file name, 2: percentage uploaded.
+#: includes/class-admin.php:127
+#, php-format
+msgid "Uploading %1$s: %2$s%%"
+msgstr "جارٍ رفع %1$s: %2$s%%"
+
+#: includes/class-admin.php:128
+msgid "Sign in to Dropbox in the window that opened, then paste the code Dropbox shows you:"
+msgstr "سجّل الدخول إلى Dropbox في النافذة التي فُتحت، ثم الصق الرمز الذي يعرضه لك Dropbox:"
+
+#: includes/class-admin.php:129
+msgid "Saved."
+msgstr "تم الحفظ."
+
+#: includes/class-admin.php:130
+msgid "Remove this destination from the plugin? The backups stored in it are not deleted."
+msgstr "هل تريد إزالة هذه الوجهة من الإضافة؟ لن يتم حذف النسخ الاحتياطية المخزنة فيها."
+
+#: includes/class-admin.php:131
+msgid "Reload the page to see the restored site."
+msgstr "أعِد تحميل الصفحة لرؤية الموقع المستعاد."
+
+#: includes/class-admin.php:175
+msgid "Storage"
+msgstr "التخزين"
+
+#: includes/class-admin.php:176
+msgid "Import & migrate"
+msgstr "استيراد وترحيل"
+
+#: includes/class-admin.php:177
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: includes/class-admin.php:203
+msgid "Sections"
+msgstr "الأقسام"
+
+#: includes/class-admin.php:251
+msgid "Google Drive is connected."
+msgstr "Google Drive متصل."
+
+#: includes/class-admin.php:255
+msgid "Google Drive could not be connected."
+msgstr "تعذر الاتصال بـ Google Drive."
+
+#: includes/class-admin.php:270
+msgid "Details"
+msgstr "التفاصيل"
+
+#: includes/class-admin.php:283
+#: includes/class-admin.php:302
+msgid "Back up now"
+msgstr "النسخ الاحتياطي الآن"
+
+#. translators: %s: link to the Storage tab.
+#: includes/class-admin.php:288
+#, php-format
+msgid "Backups go to your own storage, not this server. <a href=\"%s\">Connect your storage</a> first."
+msgstr "تنتقل النسخ الاحتياطية إلى وحدة التخزين الخاصة بك، وليس إلى هذا الخادم. <a href=\"%s\">اربط وحدة التخزين الخاصة بك</a> أولاً."
+
+#: includes/class-admin.php:296
+msgid "What to back up"
+msgstr "ما الذي ترغب في نسخه احتياطيًا"
+
+#: includes/class-admin.php:297
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files and database"
+msgstr "الملفات وقاعدة البيانات"
+
+#: includes/class-admin.php:298
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Database only"
+msgstr "قاعدة البيانات فقط"
+
+#: includes/class-admin.php:299
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files only"
+msgstr "الملفات فقط"
+
+#: includes/class-admin.php:301
+msgid "Note (optional)"
+msgstr "ملاحظة (اختياري)"
+
+#: includes/class-admin.php:304
+msgid "Each part is uploaded to your storage and removed from this server before the next one is made, so the backup never takes up room on your hosting."
+msgstr "يتم رفع كل جزء إلى وحدة التخزين الخاصة بك وإزالته من هذا الخادم قبل إنشاء الجزء التالي، وبالتالي لا تشغل النسخة الاحتياطية أي مساحة على استضافتك مطلقًا."
+
+#: includes/class-admin.php:307
+msgid "Your backups"
+msgstr "نسخك الاحتياطية"
+
+#: includes/class-admin.php:307
+msgid "Refresh"
+msgstr "تحديث"
+
+#: includes/class-admin.php:311
+msgid "Restore this backup"
+msgstr "استعادة هذه النسخة الاحتياطية"
+
+#: includes/class-admin.php:314
+msgid "Passphrase"
+msgstr "عبارة المرور"
+
+#: includes/class-admin.php:315
+msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
+msgstr "أدرك أن هذا يستبدل ملفات هذا الموقع وقاعدة بياناته بملفات وقاعدة بيانات النسخة الاحتياطية. سيتم الاحتفاظ بالملفات غير الموجودة في النسخة الاحتياطية."
+
+#: includes/class-admin.php:321
+msgid "Recent activity"
+msgstr "النشاط الأخير"
+
+#: includes/class-admin.php:327
+#: includes/class-backup-job.php:104
+msgid "Backup"
+msgstr "نسخ احتياطي"
+
+#: includes/class-admin.php:327
+msgid "Restore / import"
+msgstr "استعادة / استيراد"
+
+#: includes/class-admin.php:348
+msgid "Running"
+msgstr "قيد التشغيل"
+
+#: includes/class-admin.php:360
+msgid "Your storage"
+msgid_plural "Your storage destinations"
+msgstr[0] "مساحة التخزين الخاصة بك"
+msgstr[1] "وجهات التخزين الخاصة بك"
+msgstr[2] "وجهات التخزين الخاصة بك"
+msgstr[3] "وجهات التخزين الخاصة بك"
+msgstr[4] "وجهات التخزين الخاصة بك"
+msgstr[5] "وجهات التخزين الخاصة بك"
+
+#: includes/class-admin.php:362
+msgid "No storage yet. Choose where your backups go below."
+msgstr "لا توجد مساحة تخزين بعد. اختر أدناه المكان الذي تذهب إليه نسخك الاحتياطية."
+
+#: includes/class-admin.php:372
+msgid "Ready"
+msgstr "جاهز"
+
+#: includes/class-admin.php:372
+msgid "Not connected"
+msgstr "غير متصل"
+
+#: includes/class-admin.php:373
+msgid "Connect"
+msgstr "اتصال"
+
+#: includes/class-admin.php:374
+msgid "Test"
+msgstr "اختبار"
+
+#: includes/class-admin.php:375
+msgid "Edit"
+msgstr "تحرير"
+
+#: includes/class-admin.php:376
+msgid "Remove"
+msgstr "إزالة"
+
+#: includes/class-admin.php:382
+msgid "Add storage"
+msgstr "إضافة مساحة تخزين"
+
+#: includes/class-admin.php:386
+msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
+msgstr "تنتقل النسخ الاحتياطية إلى وجهة تخزين واحدة. لاستخدام وجهة مختلفة، يرجى تعديل الوجهة المذكورة أعلاه أو إزالتها."
+
+#: includes/class-admin.php:397
+msgid "Kind of storage"
+msgstr "نوع التخزين"
+
+#: includes/class-admin.php:402
+msgid "Name (for you)"
+msgstr "الاسم (لك)"
+
+#: includes/class-admin.php:404
+msgid "Provider"
+msgstr "المزود"
+
+#: includes/class-admin.php:409
+msgid "Cloudflare account id"
+msgstr "معرّف حساب Cloudflare"
+
+#: includes/class-admin.php:410
+msgid "Endpoint address"
+msgstr "عنوان نقطة النهاية"
+
+#: includes/class-admin.php:411
+msgid "Region"
+msgstr "المنطقة"
+
+#: includes/class-admin.php:412
+msgid "Bucket"
+msgstr "حاوية"
+
+#: includes/class-admin.php:413
+msgid "Access key id"
+msgstr "معرّف مفتاح الوصول"
+
+#: includes/class-admin.php:414
+msgid "Secret access key"
+msgstr "مفتاح الوصول السري"
+
+#: includes/class-admin.php:414
+msgid "Leave empty to keep the saved key"
+msgstr "اتركه فارغًا للاحتفاظ بالمفتاح المحفوظ"
+
+#: includes/class-admin.php:415
+msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
+msgstr "بالنسبة إلى Cloudflare R2: في لوحة تحكم Cloudflare، افتح R2، وأنشئ مستودعًا (bucket)، ثم انتقل إلى \"Manage R2 API tokens\" ← أنشئ رمزًا مميزًا بصلاحية Object Read & Write لذلك المستودع، وانسخ access key id وsecret هنا."
+
+#: includes/class-admin.php:418
+msgid "Dropbox app key"
+msgstr "مفتاح تطبيق Dropbox"
+
+#: includes/class-admin.php:419
+msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
+msgstr "أنشئ تطبيقًا على dropbox.com/developers/apps (وصول محدد النطاق Scoped access، مجلد التطبيق App folder) مع أذونات files.content.read وfiles.content.write وfiles.metadata.read، وانسخ App key الخاص به هنا. احفظ، ثم اضغط على Connect."
+
+#: includes/class-admin.php:421
+msgid "OAuth client id"
+msgstr "معرّف عميل OAuth"
+
+#: includes/class-admin.php:422
+msgid "OAuth client secret"
+msgstr "سر عميل OAuth"
+
+#: includes/class-admin.php:422
+msgid "Leave empty to keep the saved secret"
+msgstr "اتركه فارغًا للاحتفاظ بالسر المحفوظ"
+
+#: includes/class-admin.php:423
+msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
+msgstr "في Google Cloud Console، فعّل Google Drive API، ثم أنشئ عميل OAuth من نوع \"Web application\" باستخدام هذا العنوان كمعرّف URI معتمد لإعادة التوجيه:"
+
+#: includes/class-admin.php:423
+msgid "Save, then press Connect. The plugin only sees the files it creates."
+msgstr "احفظ، ثم اضغط على \"اتصال\". لا يرى المكون الإضافي إلا الملفات التي ينشئها."
+
+#: includes/class-admin.php:425
+msgid "Folder inside the storage (optional)"
+msgstr "المجلد داخل مساحة التخزين (اختياري)"
+
+#: includes/class-admin.php:426
+msgid "Save storage"
+msgstr "توفير مساحة التخزين"
+
+#: includes/class-admin.php:436
+msgid "Import a backup from another plugin or host"
+msgstr "استيراد نسخة احتياطية من إضافة أو استضافة أخرى"
+
+#: includes/class-admin.php:437
+msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
+msgstr "قم باستيراد موقع من نسخة احتياطية تم إنشاؤها بواسطة UpdraftPlus أو All-in-One WP Migration (.wpress) أو Duplicator (zip) أو BackWPup أو WPvivid أو Jetpack VaultPress Backup أو BlogVault أو Zinn® Migrate أو أي أرشيف zip/tar لموقع WordPress يحتوي على تفريغ .sql الخاص به. ينتقل المحتوى إلى wp-content وتحل قاعدة البيانات محل قاعدة بيانات هذا الموقع؛ وتتغير العناوين إلى عناوين هذا الموقع تلقائيًا."
+
+#: includes/class-admin.php:439
+msgid "Upload from your computer"
+msgstr "الرفع من جهاز الكمبيوتر الخاص بك"
+
+#: includes/class-admin.php:439
+msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
+msgstr "اختر كل ملف من ملفات النسخة الاحتياطية في آنٍ واحد (ينشئ UpdraftPlus عدة ملفات). يتم إرسال الملفات الكبيرة في أجزاء صغيرة، لذلك لا ينطبق حد الرفع الخاص بمستضيفك."
+
+#: includes/class-admin.php:440
+msgid "Or from links (Google Drive, Dropbox or any download address)"
+msgstr "أو من روابط (Google Drive أو Dropbox أو أي عنوان تنزيل)"
+
+#: includes/class-admin.php:440
+msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
+msgstr "رابط واحد في كل سطر. بالنسبة إلى Google Drive وDropbox، شارك الملف مع \"أي شخص لديه الرابط\" والصق ذلك الرابط؛ وأوقف تشغيل المشاركة مرة أخرى بعد ذلك."
+
+#: includes/class-admin.php:442
+msgid "Or a file already on this server"
+msgstr "أو ملف موجود بالفعل على هذا الخادم"
+
+#. translators: %s: folder path.
+#: includes/class-admin.php:450
+#, php-format
+msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
+msgstr "ارفع الأرشيفات عبر FTP أو مدير ملفات الاستضافة إلى %s وأعد تحميل هذه الصفحة."
+
+#: includes/class-admin.php:455
+msgid "Or a deploy code from another site"
+msgstr "أو رمز نشر من موقع آخر"
+
+#: includes/class-admin.php:455
+msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
+msgstr "إذا منحك موقع آخر رمز نشر من Zinn® Backups، فقم بلصقه هنا لنسخ تلك النسخة الاحتياطية إلى هذا الموقع دون مشاركة مفاتيح التخزين الخاصة بها. يعمل الرمز لبضع ساعات؛ تعامل معه ككلمة مرور."
+
+#: includes/class-admin.php:455
+msgid "Passphrase (only if that backup is encrypted)"
+msgstr "عبارة المرور (فقط إذا كانت هذه النسخة الاحتياطية مشفرة)"
+
+#: includes/class-admin.php:456
+#: includes/class-admin.php:458
+msgid "Import"
+msgstr "استيراد"
+
+#: includes/class-admin.php:457
+msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
+msgstr "أفهم أن الاستيراد يستبدل محتوى هذا الموقع وقاعدة بياناته. بعد ذلك، قم بتسجيل الدخول باستخدام حساب من الموقع المستورد."
+
+#: includes/class-admin.php:460
+msgid "Moving to Zinn® hosting?"
+msgstr "هل تنتقل إلى استضافة Zinn®؟"
+
+#: includes/class-admin.php:460
+msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
+msgstr "يمكن لـ Zinn Digital® نقل موقعك نيابةً عنك من مضيفك القديم. إذا كان مضيفك القديم لا يوفر لك وصولاً عبر FTP أو SSH أو لوحة التحكم، فقم بتثبيت Zinn® Migrate على الموقع القديم؛ حيث ينشئ أرشيفًا واحدًا يمكنك استيراده هنا أو تسليمه إلى Zinn®."
+
+#: includes/class-admin.php:470
+msgid "What goes into a backup"
+msgstr "ما الذي تتضمنه النسخة الاحتياطية"
+
+#: includes/class-admin.php:471
+msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
+msgstr "تضمين ملفات WordPress الخاصة (wp-admin، wp-includes). غير مطلوب عادةً: يمكن دائمًا إعادة تثبيت WordPress."
+
+#: includes/class-admin.php:472
+msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
+msgstr "استبعد أيضًا هذه المجلدات أو الملفات (واحد في كل سطر، نسبيًا لمجلد WordPress)"
+
+#: includes/class-admin.php:473
+msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
+msgstr "تُستثنى دائمًا: ذاكرات التخزين المؤقت، ومساحة التحديث المؤقتة، ومجلدات الأرشيف الخاصة بإضافات النسخ الاحتياطي الأخرى:"
+
+#: includes/class-admin.php:474
+msgid "Size of each part (MB)"
+msgstr "حجم كل جزء (ميجابايت)"
+
+#: includes/class-admin.php:479
+msgid "Save settings"
+msgstr "حفظ الإعدادات"
+
+#: includes/class-archiver.php:52
+msgid "A backup part could not be opened for writing. Check that wp-content has free space."
+msgstr "تعذر فتح جزء من النسخة الاحتياطية للكتابة. تحقق من وجود مساحة فارغة في wp-content."
+
+#: includes/class-archiver.php:113
+msgid "A backup part could not be written. Check that wp-content has free space."
+msgstr "تعذر كتابة جزء من النسخة الاحتياطية. تحقق من وجود مساحة فارغة في wp-content."
+
+#: includes/class-backup-job.php:42
+msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
+msgstr "قم بربط وجهة تخزين في علامة التبويب Storage أولاً: يتم حفظ النسخ الاحتياطية في وحدة التخزين الخاصة بك، وليس على هذا الخادم."
+
+#: includes/class-backup-job.php:45
+#: includes/class-restore-job.php:108
+msgid "Multisite networks are not supported yet."
+msgstr "شبكات المواقع المتعددة غير مدعومة بعد."
+
+#: includes/class-backup-job.php:48
+msgid "This server’s PHP has no ZipArchive extension. Ask your host to enable it."
+msgstr "لا يحتوي PHP في هذا الخادم على إضافة ZipArchive. اطلب من مستضيفك تفعيلها."
+
+#: includes/class-backup-job.php:98
+msgid "Starting"
+msgstr "قيد البدء"
+
+#: includes/class-backup-job.php:99
+msgid "Listing files"
+msgstr "جارٍ سرد الملفات"
+
+#: includes/class-backup-job.php:100
+msgid "Backing up the database"
+msgstr "جارٍ نسخ قاعدة البيانات احتياطيًا"
+
+#: includes/class-backup-job.php:101
+msgid "Packing files"
+msgstr "جارٍ حزم الملفات"
+
+#: includes/class-backup-job.php:102
+msgid "Uploading to your storage"
+msgstr "جارٍ الرفع إلى مساحة التخزين الخاصة بك"
+
+#: includes/class-backup-job.php:103
+msgid "Finishing"
+msgstr "جارٍ الإنهاء"
+
+#: includes/class-backup-job.php:123
+msgid "The backup reached an unknown stage."
+msgstr "وصلت النسخة الاحتياطية إلى مرحلة غير معروفة."
+
+#. translators: %s: backup id.
+#: includes/class-backup-job.php:143
+#, php-format
+msgid "Backup %s started."
+msgstr "بدأ النسخ الاحتياطي لـ %s."
+
+#. translators: 1: number of files, 2: total size.
+#: includes/class-backup-job.php:168
+#, php-format
+msgid "Found %1$s files (%2$s)."
+msgstr "تم العثور على %1$s من الملفات (%2$s)."
+
+#. translators: 1: number of tables, 2: number of rows, 3: size.
+#: includes/class-backup-job.php:209
+#, php-format
+msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
+msgstr "قاعدة البيانات: %1$d جداول، %2$s صفوف، %3$s مضغوطة."
+
+#. translators: 1: size of the backup, 2: number of destinations.
+#: includes/class-backup-job.php:473
+#, php-format
+msgid "Backup complete: %1$s stored in %2$d destination."
+msgid_plural "Backup complete: %1$s stored in %2$d destinations."
+msgstr[0] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d وجهة."
+msgstr[1] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d من الوجهات."
+msgstr[2] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d من الوجهات."
+msgstr[3] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d من الوجهات."
+msgstr[4] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d من الوجهات."
+msgstr[5] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d من الوجهات."
+
+#: includes/class-backup-job.php:503
+msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
+msgstr "تعذر حذف بعض الأجزاء التي تم رفعها بالفعل من مساحة التخزين الخاصة بك؛ فهي موجودة في مجلد نسخ احتياطي غير مكتمل ولا تُتاح أبدًا للاستعادة."
+
+#: includes/class-backup-job.php:520
+msgid "A storage destination was removed while the backup was running."
+msgstr "تمت إزالة إحدى وجهات التخزين أثناء تشغيل النسخ الاحتياطي."
+
+#: includes/class-catalog.php:134
+msgid "That is not a backup folder."
+msgstr "هذا ليس مجلد نسخ احتياطي."
+
+#: includes/class-catalog.php:138
+#: includes/class-restore-job.php:186
+msgid "That storage destination is no longer saved on this site."
+msgstr "لم تعد وجهة التخزين هذه محفوظة على هذا الموقع."
+
+#: includes/class-catalog.php:141
+msgid "Later incremental backups are built on this one. Delete those first."
+msgstr "تعتمد النسخ الاحتياطية التزايدية اللاحقة على هذه النسخة. احذف تلك أولاً."
+
+#: includes/class-crypto.php:88
+msgid "This file is not an encrypted Zinn® Backups file."
+msgstr "هذا الملف ليس ملف Zinn® Backups مشفرًا."
+
+#: includes/class-crypto.php:103
+msgid "The backup could not be decrypted: the passphrase is wrong or the file is damaged."
+msgstr "تعذر فك تشفير النسخة الاحتياطية: إما أن عبارة المرور غير صحيحة أو أن الملف تالف."
+
+#: includes/class-crypto.php:112
+msgid "The encrypted backup file is incomplete."
+msgstr "ملف النسخ الاحتياطي المشفر غير مكتمل."
+
+#: includes/class-database-dumper.php:67
+msgid "The database file could not be written. Check that wp-content has free space."
+msgstr "تعذر كتابة ملف قاعدة البيانات. تحقق من توفر مساحة فارغة في wp-content."
+
+#: includes/class-deploy-code.php:41
+msgid "That is not a deploy code. A deploy code starts with zbdeploy1."
+msgstr "هذا ليس رمز نشر. يبدأ رمز النشر بـ zbdeploy1."
+
+#: includes/class-deploy-code.php:46
+#: includes/class-deploy-code.php:67
+#: includes/class-deploy-code.php:76
+msgid "That deploy code is damaged. Copy it again from the other site."
+msgstr "رمز النشر هذا تالف. يرجى نسخه مرة أخرى من الموقع الآخر."
+
+#: includes/class-deploy-code.php:56
+msgid "The deploy code has expired or its backup was deleted. Make a new code on the other site."
+msgstr "انتهت صلاحية رمز النشر أو تم حذف نسخته الاحتياطية. يرجى إنشاء رمز جديد على الموقع الآخر."
+
+#: includes/class-deploy-code.php:60
+msgid "That deploy code does not point at a Zinn® Backups backup."
+msgstr "رمز النشر هذا لا يشير إلى نسخة احتياطية من Zinn® Backups."
+
+#: includes/class-deploy-code.php:63
+msgid "The deploy code has expired. Make a new code on the other site."
+msgstr "انتهت صلاحية رمز النشر. أنشئ رمزًا جديدًا على الموقع الآخر."
+
+#: includes/class-downloader.php:83
+msgid "The server stopped honouring partial downloads. Start the import again."
+msgstr "توقف الخادم عن قبول التنزيلات الجزئية. يُرجى بدء الاستيراد مرة أخرى."
+
+#: includes/class-downloader.php:87
+msgid "The link opened a web page instead of a file. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link."
+msgstr "فتح الرابط صفحة ويب بدلاً من ملف. بالنسبة لـ Google Drive وDropbox، شارك الملف مع \"أي شخص لديه الرابط\" والصق ذلك الرابط."
+
+#. translators: %d: HTTP status code.
+#: includes/class-downloader.php:96
+#, php-format
+msgid "The link answered with HTTP %d."
+msgstr "استجاب الرابط برمز HTTP %d."
+
+#: includes/class-file-scanner.php:53
+msgid "The file list could not be written."
+msgstr "تعذر كتابة قائمة الملفات."
+
+#. translators: %s: the network error message.
+#: includes/class-http.php:46
+#, php-format
+msgid "The storage service could not be reached: %s"
+msgstr "تعذر الوصول إلى خدمة التخزين: %s"
+
+#. translators: 1: service name, 2: HTTP status code, 3: the service's own error text.
+#: includes/class-http.php:78
+#, php-format
+msgid "%1$s answered with HTTP %2$d: %3$s"
+msgstr "أجاب %1$s باستخدام HTTP %2$d: %3$s"
+
+#: includes/class-http.php:113
+msgid "no details given"
+msgstr "لم يتم تقديم تفاصيل"
+
+#: includes/class-plugin.php:96
+msgid "You are not allowed to manage backups."
+msgstr "غير مسموح لك بإدارة النسخ الاحتياطية."
+
+#: includes/class-plugin.php:196
+msgid "Tick the box to confirm that the restore replaces this site’s files and database."
+msgstr "حدد المربع لتأكيد أن الاستعادة تستبدل ملفات هذا الموقع وقاعدة بياناته."
+
+#: includes/class-plugin.php:271
+#: includes/class-plugin.php:290
+msgid "Save the destination first."
+msgstr "احفظ الوجهة أولاً."
+
+#: includes/class-plugin.php:274
+msgid "Connected: a test file was written and removed."
+msgstr "متصل: تمت كتابة ملف تجريبي وحذفه."
+
+#: includes/class-plugin.php:306
+msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
+msgstr "أدخل مفتاح التطبيق لتطبيق Dropbox أولاً (راجع الخطوات بجوار النموذج)."
+
+#: includes/class-plugin.php:319
+msgid "This kind of storage does not sign in."
+msgstr "هذا النوع من التخزين لا يقوم بتسجيل الدخول."
+
+#: includes/class-plugin.php:336
+msgid "The sign-in expired. Press Connect again."
+msgstr "انتهت صلاحية تسجيل الدخول. اضغط على اتصال مرة أخرى."
+
+#: includes/class-plugin.php:342
+msgid "Dropbox is connected."
+msgstr "Dropbox متصل."
+
+#: includes/class-plugin.php:411
+msgid "Settings saved."
+msgstr "تم حفظ الإعدادات."
+
+#: includes/class-plugin.php:427
+#: includes/class-runner.php:64
+msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
+msgstr "هناك عملية نسخ احتياطي أو استعادة أو استيراد أخرى قيد التشغيل. انتظر حتى تنتهي، أو قم بإلغائها."
+
+#: includes/class-plugin.php:453
+msgid "The upload was not started properly. Start again."
+msgstr "لم يبدأ الرفع بشكل صحيح. ابدأ من جديد."
+
+#: includes/class-plugin.php:457
+msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
+msgstr "لم يصل الجزء. قد يحدد خادمك أحجام الرفع؛ يُرجى المحاولة مرة أخرى."
+
+#: includes/class-plugin.php:481
+msgid "Tick the box to confirm that the import replaces this site’s content and database."
+msgstr "حدد المربع لتأكيد أن الاستيراد سيستبدل محتوى هذا الموقع وقاعدة بياناته."
+
+#: includes/class-plugin.php:535
+msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
+msgstr "اختر أرشيفًا لاستيراده: قم برفعه، أو الصق رابطًا، أو اختر واحدًا من مجلد الاستيراد."
+
+#. translators: 1: a percentage, e.g. 50. 2: a Pro plugin's name.
+#: includes/class-pro-discount.php:132
+#, php-format
+msgid "Hosting customer? Get %1$d%% off %2$s"
+msgstr "عميل استضافة؟ احصل على خصم بنسبة %1$d%% على %2$s"
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:141
+#, php-format
+msgid "As a Zinn Digital® hosting customer you get a personal code for %d%% off your first payment. Renewals are at the normal price."
+msgstr "بصفتكم أحد عملاء استضافة Zinn Digital®، ستحصلون على رمز شخصي بخصم %d%% على دفعتكم الأولى. التجديدات بالسعر العادي."
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:156
+#, php-format
+msgid "Get my %d%% code and go to checkout"
+msgstr "احصل على رمز الـ %d%% الخاص بي وانتقل إلى الدفع"
+
+#: includes/class-pro-discount.php:171
+msgid "Sorry, you are not allowed to do that."
+msgstr "عذرًا، غير مسموح لك بالقيام بذلك."
+
+#: includes/class-pro-discount.php:222
+msgid "This discount is for customers with a paid hosting plan in good standing. Free trials do not qualify."
+msgstr "هذا الخصم مخصص للعملاء الذين لديهم خطة استضافة مدفوعة بحالة جيدة. لا تشمل هذه الميزة الفترات التجريبية المجانية."
+
+#: includes/class-pro-discount.php:225
+msgid "You have already used your hosting-customer discount for this plugin."
+msgstr "لقد استخدمت بالفعل خصم عميل الاستضافة الخاص بك لهذا الملحق."
+
+#: includes/class-pro-discount.php:228
+msgid "We could not get your code just now. Please try again in a few minutes."
+msgstr "تعذر علينا الحصول على الرمز الخاص بك للتو. يرجى إعادة المحاولة بعد بضع دقائق."
+
+#: includes/class-restore-job.php:128
+msgid "Reading the backup"
+msgstr "جارٍ قراءة النسخة الاحتياطية"
+
+#: includes/class-restore-job.php:129
+msgid "Downloading the archive"
+msgstr "جارٍ تنزيل الأرشيف"
+
+#: includes/class-restore-job.php:130
+msgid "Recognising the archive"
+msgstr "التعرف على الأرشيف"
+
+#: includes/class-restore-job.php:131
+msgid "Restoring files"
+msgstr "جارٍ استعادة الملفات"
+
+#: includes/class-restore-job.php:132
+msgid "Downloading the database"
+msgstr "جارٍ تنزيل قاعدة البيانات"
+
+#: includes/class-restore-job.php:133
+msgid "Restoring the database"
+msgstr "جارٍ استعادة قاعدة البيانات"
+
+#: includes/class-restore-job.php:134
+msgid "Updating the site address"
+msgstr "جارٍ تحديث عنوان الموقع"
+
+#: includes/class-restore-job.php:135
+msgid "Switching to the restored database"
+msgstr "التبديل إلى قاعدة البيانات المستعادة"
+
+#: includes/class-restore-job.php:158
+msgid "The restore reached an unknown stage."
+msgstr "وصلت الاستعادة إلى مرحلة غير معروفة."
+
+#: includes/class-restore-job.php:201
+msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
+msgstr "لا يحتوي هذا المجلد على نسخة احتياطية كاملة من Zinn® Backups (ملف البيان مفقود)."
+
+#: includes/class-restore-job.php:204
+msgid "This backup is encrypted. Enter its passphrase to restore it."
+msgstr "هذه النسخة الاحتياطية مشفرة. أدخل عبارة المرور الخاصة بها لاستعادتها."
+
+#. translators: %s: backup id.
+#: includes/class-restore-job.php:219
+#, php-format
+msgid "This incremental backup needs backup %s, which is no longer in the storage."
+msgstr "يحتاج هذا النسخ الاحتياطي التزايدي إلى النسخة الاحتياطية %s، والتي لم تعد موجودة في وحدة التخزين."
+
+#. translators: 1: backup date, 2: number of parts.
+#: includes/class-restore-job.php:266
+#, php-format
+msgid "Restoring the backup of %1$s (%2$d file parts)."
+msgstr "تجري استعادة النسخة الاحتياطية لـ %1$s (%2$d من أجزاء الملف)."
+
+#. translators: 1: number of files, 2: example paths.
+#: includes/class-restore-job.php:340
+#, php-format
+msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
+msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
+msgstr[0] "تعذر استبدال ملف %1$s لأن هذا الموقع غير مسموح له بتغييره، وتم تركه كما هو: %2$s"
+msgstr[1] "تعذر استبدال %1$s ملفات لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
+msgstr[2] "تعذر استبدال %1$s ملفات لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
+msgstr[3] "تعذر استبدال %1$s ملفات لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
+msgstr[4] "تعذر استبدال %1$s ملفات لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
+msgstr[5] "تعذر استبدال %1$s ملفات لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
+
+#. translators: %s: number of files.
+#: includes/class-restore-job.php:359
+#, php-format
+msgid "Restored %s files."
+msgstr "تمت استعادة %s من الملفات."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:422
+#, php-format
+msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
+msgstr "لم يتطابق %s مع المجموع الاختباري الخاص به بعد التنزيل. قد تكون النسخة الموجودة في وحدة التخزين تالفة."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:493
+#, php-format
+msgid "%s did not arrive. Upload it again."
+msgstr "لم يصل %s. يُرجى رفعه مرة أخرى."
+
+#. translators: %s: list of backup formats.
+#: includes/class-restore-job.php:515
+#, php-format
+msgid "Recognised: %s."
+msgstr "تم التعرف عليه: %s."
+
+#. translators: 1: number of files, 2: number of files skipped.
+#: includes/class-restore-job.php:542
+#, php-format
+msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
+msgstr "تم استيراد %1$s من الملفات إلى wp-content (تم استبعاد %2$s: التخزين المؤقت، وdrop-ins، ومجلدات إضافات النسخ الاحتياطي الأخرى)."
+
+#: includes/class-restore-job.php:588
+msgid "The archive has no database dump, so only files were imported."
+msgstr "لا يحتوي الأرشيف على تفريغ لقاعدة البيانات، لذا تم استيراد الملفات فقط."
+
+#. translators: %d: number of tables.
+#: includes/class-restore-job.php:598
+#, php-format
+msgid "Database restored into %d temporary tables."
+msgstr "تمت استعادة قاعدة البيانات في %d جداول مؤقتة."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:615
+#, php-format
+msgid "%s has no WordPress tables in it and was skipped."
+msgstr "لا يحتوي %s على أي جداول WordPress وتم تخطيه."
+
+#: includes/class-restore-job.php:653
+#: includes/class-table-swap.php:237
+msgid "The backup’s database has no WordPress tables, so nothing was replaced."
+msgstr "لا تحتوي قاعدة بيانات النسخة الاحتياطية على أي جداول WordPress، لذلك لم يُستبدل أي شيء."
+
+#: includes/class-restore-job.php:658
+msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
+msgstr "هذه النسخة الاحتياطية مخصصة لشبكة متعددة المواقع. استعادة شبكة إلى موقع واحد غير مدعومة."
+
+#. translators: 1: old address, 2: this site's address.
+#: includes/class-restore-job.php:683
+#, php-format
+msgid "Moving the content from %1$s to %2$s."
+msgstr "جارٍ نقل المحتوى من %1$s إلى %2$s."
+
+#: includes/class-restore-job.php:809
+msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
+msgstr "اكتملت الاستعادة. إذا تم تسجيل خروجك، سجّل الدخول باستخدام حساب من الموقع المستعاد."
+
+#: includes/class-restore-job.php:810
+msgid "Restore complete."
+msgstr "اكتملت الاستعادة."
+
+#. translators: 1: error message, 2: seconds until the retry.
+#: includes/class-runner.php:160
+#, php-format
+msgid "%1$s — trying again in %2$d seconds."
+msgstr "%1$s — ستتم إعادة المحاولة بعد %2$d ثوانٍ."
+
+#: includes/class-runner.php:189
+msgid "Cancelled."
+msgstr "أُلغي."
+
+#: includes/class-settings.php:145
+msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
+msgstr "تنتقل النسخ الاحتياطية إلى وجهة تخزين واحدة. قم بتحرير الوجهة الحالية أو إزالتها لاستخدام وجهة أخرى."
+
+#: includes/class-sql-importer.php:84
+msgid "The database file could not be opened."
+msgstr "تعذر فتح ملف قاعدة البيانات."
+
+#. translators: 1: database error, 2: start of the statement.
+#: includes/class-sql-importer.php:262
+#, php-format
+msgid "The database refused a statement from the backup: %1$s (%2$s…)"
+msgstr "رفضت قاعدة البيانات عبارة من النسخة الاحتياطية: %1$s (%2$s…)"
+
+#. translators: %s: database error.
+#: includes/class-table-swap.php:256
+#, php-format
+msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
+msgstr "تعذر استبدال الجداول المستعادة: %s. لم يطرأ أي تغيير على موقعك."
+
+#: includes/class-work-dir.php:43
+msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
+msgstr "لا يوجد مجلد قابل للكتابة لملفات النسخ الاحتياطي المؤقتة. يُرجى جعل wp-content قابلاً للكتابة والمحاولة مرة أخرى."
+
+#: includes/class-work-dir.php:90
+msgid "Could not create a folder for this job."
+msgstr "تعذر إنشاء مجلد لهذه المهمة."
+
+#. translators: %s: the Zinn Digital trade mark, which is not translated.
+#: includes/class-zinn-backups-promo.php:349
+#: includes/class-zinn-backups-promo.php:407
+#, php-format
+msgid "%s — guides and services"
+msgstr "%s — أدلة وخدمات"
+
+#: includes/class-zinn-backups-promo.php:364
+msgid "User guides"
+msgstr "أدلة المستخدم"
+
+#. translators: %s: this plugin's name, e.g. "Zinn® Cache".
+#: includes/class-zinn-backups-promo.php:414
+#, php-format
+msgid "Read the %s user guide"
+msgstr "اقرأ دليل مستخدم %s"
+
+#: includes/class-zinn-backups-promo.php:422
+msgid "Hide this"
+msgstr "إخفاء هذا"
+
+#: includes/class-zinn-backups-promo.php:535
+msgid "Zinn® hosting for WordPress"
+msgstr "استضافة Zinn® لـ WordPress"
+
+#: includes/class-zinn-backups-promo.php:536
+msgid "LiteSpeed, daily backups, free migration and a control panel built for people who run more than one site."
+msgstr "LiteSpeed، ونسخ احتياطية يومية، وترحيل مجاني، ولوحة تحكم مصممة للأشخاص الذين يديرون أكثر من موقع واحد."
+
+#: includes/class-zinn-backups-promo.php:542
+msgid "The Zinn® marketplace"
+msgstr "سوق Zinn®"
+
+#: includes/class-zinn-backups-promo.php:543
+msgid "Buy and sell established sites, domains and link placements, with the money held safely until both sides are happy."
+msgstr "قُم ببيع وشراء المواقع القائمة، والنطاقات، ومواضع الروابط، مع الاحتفاظ بالأموال بأمان حتى يشعر الطرفان بالرضا."
+
+#: includes/class-zinn-backups-promo.php:590
+msgid "Zinn Hub® — hire people who do this for a living"
+msgstr "Zinn Hub® — وظّف أشخاصاً يتخذون من هذا العمل مهنةً لهم"
+
+#: includes/class-zinn-backups-promo.php:591
+msgid "Our global freelance marketplace: browse over 10,000 ready-made services from writers, designers, developers and SEOs, or post a project and let them bid."
+msgstr "سوق العمل الحر العالمي الخاص بنا: تصفح أكثر من 10,000 خدمة جاهزة يقدمها كُتّاب ومصممون ومطورون وخبراء تحسين محركات البحث، أو انشر مشروعًا ودعهم يتنافسون عليه."
+
+#: includes/class-zinn-backups-updater.php:253
+msgid "See the Zinn Digital® release notes."
+msgstr "اطلع على ملاحظات إصدار Zinn Digital®."
+
+#: includes/class-zinn-backups-updater.php:302
+msgid "The Zinn® update service did not issue a download link for this update. Check that this site can reach the Zinn® platform, then try again."
+msgstr "لم تُصدر خدمة تحديث Zinn® رابط تنزيل لهذا التحديث. يُرجى التحقق من إمكانية وصول هذا الموقع إلى منصة Zinn®، ثم المحاولة مرة أخرى."
+
+#. translators: %s: the download error reported by WordPress.
+#: includes/class-zinn-backups-updater.php:316
+#, php-format
+msgid "The update could not be downloaded from the Zinn® update service (%s). Try again in a few minutes."
+msgstr "تعذر تنزيل التحديث من خدمة تحديث Zinn® (%s). يُرجى المحاولة مرة أخرى بعد بضع دقائق."
+
+#: includes/class-zinn-backups-updater.php:330
+msgid "The downloaded update failed its integrity check and was not installed."
+msgstr "فشل التحديث الذي تم تنزيله في فحص السلامة ولم يتم تثبيته."
+
+#: includes/import/class-archive-reader.php:147
+msgid "The zip archive could not be opened. It may be damaged or incomplete."
+msgstr "تعذر فتح أرشيف zip. قد يكون تالفًا أو غير مكتمل."
+
+#: includes/import/class-archive-reader.php:311
+msgid "This .wpress file uses a format we cannot read (it may be compressed or encrypted by All-in-One WP Migration). Export it again without encryption."
+msgstr "يستخدم ملف .wpress هذا تنسيقًا لا يمكننا قراءته (قد يكون مضغوطًا أو مشفرًا بواسطة All-in-One WP Migration). يرجى تصديره مرة أخرى دون تشفير."
+
+#: includes/import/class-formats.php:66
+msgid "This is a Duplicator “DupArchive” (.daf) file. In Duplicator, build the package again with the archive format set to ZIP, then import that."
+msgstr "هذا ملف Duplicator من نوع “DupArchive” (.daf). في Duplicator، يُرجى إنشاء الحزمة مرة أخرى مع ضبط تنسيق الأرشيف على ZIP، ثم استيرادها."
+
+#: includes/import/class-formats.php:69
+msgid "This UpdraftPlus database backup is encrypted. Decrypt it in UpdraftPlus (or turn off database encryption and back up again), then import it."
+msgstr "نسخة قاعدة بيانات UpdraftPlus الاحتياطية هذه مشفرة. يُرجى فك تشفيرها في UpdraftPlus (أو إيقاف تشغيل تشفير قاعدة البيانات وإعادة النسخ الاحتياطي مجددًا)، ثم استيرادها."
+
+#: includes/import/class-formats.php:76
+msgid "Database dump"
+msgstr "تفريغ قاعدة البيانات"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:93
+#, php-format
+msgid "%s is not a backup archive we can read (zip, tar, tar.gz, .wpress, .sql or .sql.gz)."
+msgstr "%s ليس أرشيف نسخ احتياطي يمكننا قراءته (zip أو tar أو tar.gz أو .wpress أو .sql أو .sql.gz)."
+
+#: includes/import/class-formats.php:99
+msgid "Website archive"
+msgstr "أرشيف الموقع الإلكتروني"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:123
+#, php-format
+msgid "%s has no WordPress content (no wp-content folder and no database dump) in it."
+msgstr "لا يحتوي %s على أي محتوى WordPress (لا يوجد مجلد wp-content ولا يوجد تفريغ لقاعدة البيانات)."
+
+#: includes/import/class-formats.php:155
+msgid "This .wpress file is encrypted or compressed by All-in-One WP Migration. Export it again with encryption and compression switched off, then import that."
+msgstr "ملف .wpress هذا مشفر أو مضغوط بواسطة All-in-One WP Migration. يرجى تصديره مرة أخرى مع إيقاف تشغيل التشفير والضغط، ثم استيراده."
+
+#: includes/storage/class-destinations.php:62
+msgid "Other S3-compatible storage"
+msgstr "سعة تخزينية أخرى متوافقة مع S3"
+
+#: includes/storage/class-destinations.php:77
+msgid "Cloudflare R2, Amazon S3 or S3-compatible"
+msgstr "Cloudflare R2، أو Amazon S3، أو متوافق مع S3"
+
+#: includes/storage/class-destinations.php:100
+msgid "The storage keys could not be read on this site. Enter the secret key again on the Storage tab."
+msgstr "تعذر قراءة مفاتيح التخزين على هذا الموقع. أعد إدخال المفتاح السري في علامة تبويب التخزين."
+
+#: includes/storage/class-destinations.php:116
+msgid "This kind of storage is not known."
+msgstr "هذا النوع من التخزين غير معروف."
+
+#: includes/storage/class-destinations.php:168
+msgid "Choose a kind of storage."
+msgstr "اختر نوع التخزين."
+
+#: includes/storage/class-destinations.php:187
+msgid "Enter the bucket name and the access key."
+msgstr "أدخل اسم الحاوية ومفتاح الوصول."
+
+#: includes/storage/class-destinations.php:190
+msgid "Enter your Cloudflare account id (or the full R2 endpoint)."
+msgstr "أدخل معرّف حساب Cloudflare الخاص بك (أو نقطة نهاية R2 الكاملة)."
+
+#: includes/storage/class-destinations.php:193
+msgid "Enter the endpoint address of your storage."
+msgstr "أدخل عنوان نقطة النهاية الخاصة بمساحة التخزين لديك."
+
+#: includes/storage/class-destinations.php:202
+msgid "Enter the OAuth client id from your Google Cloud project."
+msgstr "أدخل OAuth client id من مشروع Google Cloud الخاص بك."
+
+#: includes/storage/class-dropbox.php:94
+msgid "Dropbox did not return a refresh token. Start the connection again."
+msgstr "لم يقم Dropbox بإرجاع رمز تحديث مميز. ابدأ الاتصال مرة أخرى."
+
+#: includes/storage/class-dropbox.php:369
+msgid "Dropbox is not connected. Connect it again on the Storage tab."
+msgstr "Dropbox غير متصل. يُرجى إعادة الاتصال من علامة التبويب \"التخزين\"."
+
+#: includes/storage/class-google-drive.php:114
+msgid "Google did not return a refresh token. Remove this site from your Google account’s third-party access and connect again."
+msgstr "لم يُرجع Google رمز تحديث مميزًا. يُرجى إزالة هذا الموقع من حق الوصول التابع لجهات خارجية في حساب Google الخاص بك وإعادة الاتصال مرة أخرى."
+
+#: includes/storage/class-google-drive.php:308
+msgid "That file is not in Google Drive any more."
+msgstr "لم يعد هذا الملف موجوداً في Google Drive بعد الآن."
+
+#: includes/storage/class-google-drive.php:477
+msgid "Google Drive is not connected. Connect it again on the Storage tab."
+msgstr "Google Drive غير متصل. يُرجى إعادة الاتصال من علامة التبويب التخزين."
+
+#: includes/storage/class-s3.php:85
+msgid "The storage service did not start the upload."
+msgstr "لم تبدأ خدمة التخزين الرفع."
+
+#: includes/storage/class-s3.php:352
+msgid "The storage service sent a reply that could not be read."
+msgstr "أرسلت خدمة التخزين رداً يتعذر قراءته."
+
+#: includes/storage/class-s3.php:380
+msgid "A temporary backup file could not be read."
+msgstr "تعذر قراءة ملف النسخ الاحتياطي المؤقت."
+
+#: includes/storage/class-url-source.php:71
+msgid "A deploy link is read-only."
+msgstr "رابط النشر للقراءة فقط."
+
+#: includes/storage/class-url-source.php:106
+msgid "The deploy code has no link for a file this backup needs."
+msgstr "لا يحتوي رمز النشر على رابط لملف يحتاج إليه هذا النسخ الاحتياطي."
+
+#: includes/storage/class-url-source.php:115
+msgid "The deploy link"
+msgstr "رابط النشر"

@@ -1,0 +1,78 @@
+# Zinn® Backups
+
+Back up files and database to your own Dropbox, Google Drive, R2 or S3, restore safely, and import backups from other plugins.
+
+Built and maintained by **Neil Lock — CEO, Zinn Digital® Ltd** — https://zinndigital.com
+
+## Download
+
+- **[Download the latest version from zinndigital.com](https://zinndigital.com/wordpress-plugins)** — always current, no account needed.
+- Or take the zip from [Releases](../../releases/latest) here on GitHub.
+
+Both are the same file. The download page is the canonical one: it is served from our own infrastructure and is what the plugin's own updater checks against.
+
+## Zinn® Backups Pro
+
+The add-on for Zinn® Backups: several storage destinations at once, scheduled and incremental backups, retention rules, encryption with your own passphrase, deploying a backup to another site with a one-time code, e-mail notices and white label.
+
+- **[See what Zinn® Backups Pro adds, and what it costs](https://zinndigital.com/wordpress-plugins/zinn-backups-pro)**
+
+Everything in Zinn® Backups keeps working without it.
+
+## Requirements
+
+| | |
+|---|---|
+| Version | `1.0.2` |
+| Requires WordPress | 6.6 or later |
+| Tested up to | WordPress **7.1** |
+| Requires PHP | 8.2 or later |
+| Licence | GPL-2.0-or-later |
+
+Every release is installed and activated against the current stable WordPress before it is published, on a real install with WooCommerce alongside — the *Tested up to* figure above is that test, not an estimate.
+
+## Install
+
+1. Download the zip.
+2. In WordPress: **Plugins → Add New → Upload Plugin**, choose the zip, install.
+3. Activate.
+
+On a site we host this plugin keeps itself up to date. On your own WordPress it has no credentials for our update service and does not contact us — check back here, or watch this repository's releases.
+
+## Our other WordPress plugins
+
+- **[zinn-cache](https://github.com/Zinn-Digital/zinn-cache)** — A page cache and a Redis object cache for any WordPress site: the LiteSpeed server cache where there is one and its own disk cache everywhere else, smart auto-purge and a Redis cache that proves it works. Zinn® Cache Pro is an add-on on top of it. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-cache/)
+- **[zinn-chat](https://github.com/Zinn-Digital/zinn-chat)** — A complete help desk and AI assistant that runs on your own WordPress: answers visitors from your own pages with links using your own AI key, live chat with a multi-chat inbox, and support tickets in wp-admin, on a submit-a-ticket page and in the WooCommerce account area. Under 10 KB on the page, and no requests at all until a visitor opens it.
+- **[zinn-connector](https://github.com/Zinn-Digital/zinn-connector)** — Connect any WordPress site to Zinn Digital® so scheduled articles publish to it. Pair with a code from your dashboard. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-connector/)
+- **[zinn-migrate](https://github.com/Zinn-Digital/zinn-migrate)** — Install it on the WordPress site you are LEAVING. It packages that site — files and database — into one archive and gives you a private link to paste into your Zinn Digital® migration. For hosts that give you no FTP, no SSH and no control-panel API; if you have any of those, Zinn® can fetch the site directly and you do not need this.
+- **[zinn-offload](https://github.com/Zinn-Digital/zinn-offload)** — Move a WordPress media library to Zinn® object storage and serve it from a CDN. Configured from the Zinn® dashboard — no access key is ever typed into WordPress. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-offload/)
+- **[zinn-reseller](https://github.com/Zinn-Digital/zinn-reseller-toolkit)** — Sell Zinn Digital® hosting from your own WordPress site — domain search, one-click client sign-in, and WooCommerce provisioning. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-reseller/)
+- **[zinn-translate](https://github.com/Zinn-Digital/zinn-translate)** — Publish a WordPress site in 58 languages on their own web addresses — translated slugs, SEO metadata, menus, WooCommerce and hreflang — translated with a Zinn Digital® plan or the site owner's own provider key. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-translate/)
+
+All of them are free to download from https://zinndigital.com/wordpress-plugins.
+
+## Languages
+
+This plugin ships **complete translations for 57 languages** — every label, notice, error and setting it adds to your admin, not a subset. The catalogues are bundled, so they work as soon as you set your site language; there is no separate language pack to install.
+
+5 of them are right-to-left (ar, fa_IR, he_IL, ps, ur) and every screen this plugin adds was rendered in a real WordPress install in each of those languages and checked.
+
+The full list of languages is in `readme.txt` under **Translations**. `languages/` holds the `.pot` template plus a `.po`, `.mo` and `.l10n.php` for every language, so corrections and new languages can be contributed directly.
+
+## Support
+
+- Open an issue here, or contact us through https://zinndigital.com.
+- Customers: everything is in your dashboard at https://app.zinndigital.com.
+
+## Licence
+
+GPL-2.0-or-later. See [LICENSE](LICENSE).
+
+---
+
+© Zinn Digital® Ltd. `Zinn`, `Zinner` and `ZINNECTOR` are registered trade marks.
+
+<!-- Generated by scripts/wp-repo-sync.py from wp/plugins.json and the plugin's own
+     headers. Do not edit this file here: an edit is overwritten on the next release,
+     and a hand-maintained copy of a fact is how this repo came to advertise a
+     product name we do not use. Change the source in the platform repository. -->

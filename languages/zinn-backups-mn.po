@@ -1,0 +1,1070 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zinn-backups\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: mn\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: zinn-backups\n"
+"X-Generator: scripts/wp-i18n-translate.py\n"
+
+#. Plugin Name of the plugin
+#: zinn-backups.php
+#: includes/class-admin.php:50
+msgid "Zinn® Backups"
+msgstr "Zinn® Backups"
+
+#. Plugin URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com/wordpress-plugins/zinn-backups"
+msgstr "https://zinndigital.com/wordpress-plugins/zinn-backups"
+
+#. Description of the plugin
+#: zinn-backups.php
+msgid "Backs up your WordPress files and database to your own storage — Dropbox, Google Drive, Cloudflare R2, Amazon S3 or any S3-compatible bucket — restores them in one go, and imports backups made by other backup and migration plugins."
+msgstr "Таны WordPress файлууд болон мэдээллийн санг өөрийн хадгалах сан болох Dropbox, Google Drive, Cloudflare R2, Amazon S3 эсвэл S3-тэй нийцтэй дурын санд нөөцөлж, тэдгээрийг нэгэн зэрэг сэргээж, бусад нөөцлөлт болон шилжүүлгийн нэмэлт өргөтгөлүүдийн үүсгэсэн нөөцлөлтийг импортлоно."
+
+#. Author of the plugin
+#: zinn-backups.php
+msgid "Neil Lock — CEO, Zinn Digital® Ltd"
+msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
+
+#. Author URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com"
+msgstr "https://zinndigital.com"
+
+#: includes/class-admin.php:69
+#: includes/class-admin.php:174
+msgid "Backups"
+msgstr "Нөөцлөлтүүд"
+
+#: includes/class-admin.php:73
+msgid "Get Pro: schedules, several storages, encryption"
+msgstr "Pro хувилбарыг авах: хуваарь, олон хадгалах сан, шифрлэлт"
+
+#: includes/class-admin.php:110
+msgid "Working…"
+msgstr "Ажиллаж байна…"
+
+#: includes/class-admin.php:111
+#: includes/class-admin.php:345
+msgid "Finished"
+msgstr "Дууссан"
+
+#: includes/class-admin.php:112
+#: includes/class-admin.php:346
+msgid "Failed"
+msgstr "Амжилтгүй болсон"
+
+#: includes/class-admin.php:113
+#: includes/class-admin.php:347
+msgid "Cancelled"
+msgstr "Цуцлагдсан"
+
+#: includes/class-admin.php:114
+#: includes/class-admin.php:271
+#: includes/class-admin.php:316
+msgid "Cancel"
+msgstr "Цуцлах"
+
+#: includes/class-admin.php:115
+#: includes/class-admin.php:313
+#: includes/class-admin.php:316
+#: includes/class-restore-job.php:136
+msgid "Restore"
+msgstr "Сэргээх"
+
+#: includes/class-admin.php:116
+msgid "Delete"
+msgstr "Устгах"
+
+#: includes/class-admin.php:117
+msgid "Delete this backup from your storage? This cannot be undone."
+msgstr "Энэ нөөц хуулбарыг өөрийн сангаас устгах уу? Үүнийг буцаах боломжгүй."
+
+#: includes/class-admin.php:118
+msgid "No backups yet. Press “Back up now” to make the first one."
+msgstr "Одоогоор нөөц хуулбар алга байна. Эхнийхийг үүсгэхийн тулд \"Одоо нөөцлөх\" дээр дарна уу."
+
+#: includes/class-admin.php:119
+msgid "Reading your storage…"
+msgstr "Таны хадгалах санг уншиж байна…"
+
+#: includes/class-admin.php:120
+msgctxt "a complete backup, as opposed to an incremental one"
+msgid "Full backup"
+msgstr "Бүрэн нөөцлөлт"
+
+#: includes/class-admin.php:121
+msgctxt "a backup holding only what changed since an earlier one"
+msgid "Incremental backup"
+msgstr "Өсөн нэмэгдэх нөөцлөлт"
+
+#: includes/class-admin.php:122
+msgid "Encrypted"
+msgstr "Шифрлэгдсэн"
+
+#: includes/class-admin.php:123
+msgid "From another site"
+msgstr "Өөр сайтаас"
+
+#: includes/class-admin.php:124
+msgid "Database"
+msgstr "Өгөгдлийн сан"
+
+#: includes/class-admin.php:125
+msgid "Files"
+msgstr "Файлууд"
+
+#. translators: 1: file name, 2: percentage uploaded.
+#: includes/class-admin.php:127
+#, php-format
+msgid "Uploading %1$s: %2$s%%"
+msgstr "%1$s-г хуулж байна: %2$s%%"
+
+#: includes/class-admin.php:128
+msgid "Sign in to Dropbox in the window that opened, then paste the code Dropbox shows you:"
+msgstr "Нээгдсэн цонхонд Dropbox-д нэвтэрч, Dropbox-оос харуулсан кодыг буулгана уу:"
+
+#: includes/class-admin.php:129
+msgid "Saved."
+msgstr "Хадгалсан."
+
+#: includes/class-admin.php:130
+msgid "Remove this destination from the plugin? The backups stored in it are not deleted."
+msgstr "Энэ байршлыг залгаасаас хасах уу? Үүнд хадгалагдсан нөөц хуулбарууд устахгүй."
+
+#: includes/class-admin.php:131
+msgid "Reload the page to see the restored site."
+msgstr "Сэргээсэн сайтыг харахын тулд хуудсыг дахин ачаална уу."
+
+#: includes/class-admin.php:175
+msgid "Storage"
+msgstr "Хадгалах сан"
+
+#: includes/class-admin.php:176
+msgid "Import & migrate"
+msgstr "Импортлох ба шилжүүлэх"
+
+#: includes/class-admin.php:177
+msgid "Settings"
+msgstr "Тохиргоо"
+
+#: includes/class-admin.php:203
+msgid "Sections"
+msgstr "Хэсгүүд"
+
+#: includes/class-admin.php:251
+msgid "Google Drive is connected."
+msgstr "Google Drive холбогдсон байна."
+
+#: includes/class-admin.php:255
+msgid "Google Drive could not be connected."
+msgstr "Google Drive-г холбох боломжгүй байна."
+
+#: includes/class-admin.php:270
+msgid "Details"
+msgstr "Дэлгэрэнгүй"
+
+#: includes/class-admin.php:283
+#: includes/class-admin.php:302
+msgid "Back up now"
+msgstr "Одоо нөөцлөх"
+
+#. translators: %s: link to the Storage tab.
+#: includes/class-admin.php:288
+#, php-format
+msgid "Backups go to your own storage, not this server. <a href=\"%s\">Connect your storage</a> first."
+msgstr "Нөөцлөлтүүд энэ серверт биш, таны өөрийн хадгалах санд хадгалагдана. Эхлээд <a href=\"%s\">хадгалах сангаа холбоно уу</a>."
+
+#: includes/class-admin.php:296
+msgid "What to back up"
+msgstr "Юуны нөөц хуулбар хийх вэ"
+
+#: includes/class-admin.php:297
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files and database"
+msgstr "Файлууд болон өгөгдлийн сан"
+
+#: includes/class-admin.php:298
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Database only"
+msgstr "Зөвхөн өгөгдлийн сан"
+
+#: includes/class-admin.php:299
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files only"
+msgstr "Зөвхөн файлууд"
+
+#: includes/class-admin.php:301
+msgid "Note (optional)"
+msgstr "Тэмдэглэл (заавал биш)"
+
+#: includes/class-admin.php:304
+msgid "Each part is uploaded to your storage and removed from this server before the next one is made, so the backup never takes up room on your hosting."
+msgstr "Дараагийн хэсгийг үүсгэхээс өмнө хэсэг бүрийг таны хадгалах сан руу байршуулж, энэ серверээс устгадаг тул нөөц хуулбар нь таны хостинг дээр хэзээ ч зай эзэлдэггүй."
+
+#: includes/class-admin.php:307
+msgid "Your backups"
+msgstr "Таны нөөцлөлтүүд"
+
+#: includes/class-admin.php:307
+msgid "Refresh"
+msgstr "Сэргээх"
+
+#: includes/class-admin.php:311
+msgid "Restore this backup"
+msgstr "Энэ нөөц хуулбарыг сэргээх"
+
+#: includes/class-admin.php:314
+msgid "Passphrase"
+msgstr "Нууц хэллэг"
+
+#: includes/class-admin.php:315
+msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
+msgstr "Энэ нь энэ сайтын файлууд болон өгөгдлийн санг нөөцлөлтөөр солино гэдгийг ойлгож байна. Нөөцлөлтөд ороогүй файлууд хадгалагдана."
+
+#: includes/class-admin.php:321
+msgid "Recent activity"
+msgstr "Сүүлийн үеийн үйл ажиллагаа"
+
+#: includes/class-admin.php:327
+#: includes/class-backup-job.php:104
+msgid "Backup"
+msgstr "Нөөцлөлт"
+
+#: includes/class-admin.php:327
+msgid "Restore / import"
+msgstr "Сэргээх / импортлох"
+
+#: includes/class-admin.php:348
+msgid "Running"
+msgstr "Ажиллаж байна"
+
+#: includes/class-admin.php:360
+msgid "Your storage"
+msgid_plural "Your storage destinations"
+msgstr[0] "Таны хадгалах сан"
+msgstr[1] "Таны хадгалах байршлууд"
+
+#: includes/class-admin.php:362
+msgid "No storage yet. Choose where your backups go below."
+msgstr "Хараахан хадгалах сан байхгүй байна. Таны нөөцлөлтүүд хаашаа орохыг доороос сонгоно уу."
+
+#: includes/class-admin.php:372
+msgid "Ready"
+msgstr "Бэлэн"
+
+#: includes/class-admin.php:372
+msgid "Not connected"
+msgstr "Холбогдоогүй"
+
+#: includes/class-admin.php:373
+msgid "Connect"
+msgstr "Холбох"
+
+#: includes/class-admin.php:374
+msgid "Test"
+msgstr "Туршилт"
+
+#: includes/class-admin.php:375
+msgid "Edit"
+msgstr "Засах"
+
+#: includes/class-admin.php:376
+msgid "Remove"
+msgstr "Устгах"
+
+#: includes/class-admin.php:382
+msgid "Add storage"
+msgstr "Хадгалах зай нэмэх"
+
+#: includes/class-admin.php:386
+msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
+msgstr "Нөөцлөлтүүд нэг хадгалах байршил руу очно. Өөр байршил ашиглахын тулд дээрхийг засна уу эсвэл устгана уу."
+
+#: includes/class-admin.php:397
+msgid "Kind of storage"
+msgstr "Хадгалах сангийн төрөл"
+
+#: includes/class-admin.php:402
+msgid "Name (for you)"
+msgstr "Нэр (таны хувьд)"
+
+#: includes/class-admin.php:404
+msgid "Provider"
+msgstr "Нийлүүлэгч"
+
+#: includes/class-admin.php:409
+msgid "Cloudflare account id"
+msgstr "Cloudflare дансны ID"
+
+#: includes/class-admin.php:410
+msgid "Endpoint address"
+msgstr "Төгсгөлийн цэгийн хаяг"
+
+#: includes/class-admin.php:411
+msgid "Region"
+msgstr "Бүс"
+
+#: includes/class-admin.php:412
+msgid "Bucket"
+msgstr "Бакет"
+
+#: includes/class-admin.php:413
+msgid "Access key id"
+msgstr "Хандах түлхүүрийн ID"
+
+#: includes/class-admin.php:414
+msgid "Secret access key"
+msgstr "Нууц хандалтын түлхүүр"
+
+#: includes/class-admin.php:414
+msgid "Leave empty to keep the saved key"
+msgstr "Хадгалсан түлхүүрийг хэвээр үлдээхийн тулд хоосон орхино уу"
+
+#: includes/class-admin.php:415
+msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
+msgstr "Cloudflare R2-ийн хувьд: Cloudflare хянах самбарт R2-ийг нээж, bucket үүсгээд, дараа нь “Manage R2 API tokens” → тухайн bucket-д зориулж Object Read & Write эрхтэй токен үүсгэж, access key id болон secret-ийг энд хуулна уу."
+
+#: includes/class-admin.php:418
+msgid "Dropbox app key"
+msgstr "Dropbox аппын түлхүүр"
+
+#: includes/class-admin.php:419
+msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
+msgstr "dropbox.com/developers/apps дээр files.content.read, files.content.write болон files.metadata.read зөвшөөрөлтэй апп үүсгэж (Scoped access, App folder), түүний App key-г энд хуулна уу. Хадгалаад, дараа нь Connect дээр дарна уу."
+
+#: includes/class-admin.php:421
+msgid "OAuth client id"
+msgstr "OAuth клиентийн ID"
+
+#: includes/class-admin.php:422
+msgid "OAuth client secret"
+msgstr "OAuth клиентийн нууц"
+
+#: includes/class-admin.php:422
+msgid "Leave empty to keep the saved secret"
+msgstr "Хадгалсан нууцыг хэвээр үлдээхийн тулд хоосон орхино уу"
+
+#: includes/class-admin.php:423
+msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
+msgstr "Google Cloud Console дотор Google Drive API-г идэвхжүүлж, дараа нь энэ хаягийг зөвшөөрөгдсөн дахин чиглүүлэх URI болгон ашиглан \"Web application\" төрлийн OAuth клиент үүсгэнэ үү:"
+
+#: includes/class-admin.php:423
+msgid "Save, then press Connect. The plugin only sees the files it creates."
+msgstr "Хадгалаад, дараа нь Холбох товчийг дарна уу. Залгаас нь зөвхөн өөрийн үүсгэсэн файлуудыг л харна."
+
+#: includes/class-admin.php:425
+msgid "Folder inside the storage (optional)"
+msgstr "Хадгалах сан доторх хавтас (заавал биш)"
+
+#: includes/class-admin.php:426
+msgid "Save storage"
+msgstr "Хадгалах зай хэмнэх"
+
+#: includes/class-admin.php:436
+msgid "Import a backup from another plugin or host"
+msgstr "Өөр нэмэлт өргөтгөл эсвэл хостоос нөөцлөлт импортлох"
+
+#: includes/class-admin.php:437
+msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
+msgstr "UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate эсвэл .sql дамп бүхий WordPress сайтын дурын zip/tar архиваас үүсгэсэн нөөц хуулбараас сайтыг оруулж ирнэ үү. Агуулга нь wp-content руу очих бөгөөд өгөгдлийн сан нь энэ сайтынхыг орлох болно; хаягууд автоматаар энэ сайтын хаяг болж өөрчлөгдөнө."
+
+#: includes/class-admin.php:439
+msgid "Upload from your computer"
+msgstr "Компьютерээсээ байршуулах"
+
+#: includes/class-admin.php:439
+msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
+msgstr "Нөөц хуулбарын файл бүрийг нэгэн зэрэг сонгоно уу (UpdraftPlus хэд хэдэн файл үүсгэдэг). Том файлуудыг жижиг хэсгүүдээр илгээдэг тул таны хостын хуулах хязгаар хамаарахгүй."
+
+#: includes/class-admin.php:440
+msgid "Or from links (Google Drive, Dropbox or any download address)"
+msgstr "Эсвэл холбоосоос (Google Drive, Dropbox эсвэл татаж авах дурын хаяг)"
+
+#: includes/class-admin.php:440
+msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
+msgstr "Мөр тус бүрд нэг холбоос. Google Drive болон Dropbox-ын хувьд файлыг \"холбоос бүхий хэн ч байсан\" гэж хуваалцаад уг холбоосыг буулгана уу; дараа нь хуваалцахыг дахин унтраана уу."
+
+#: includes/class-admin.php:442
+msgid "Or a file already on this server"
+msgstr "Эсвэл энэ сервер дээр аль хэдийн байгаа файл"
+
+#. translators: %s: folder path.
+#: includes/class-admin.php:450
+#, php-format
+msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
+msgstr "Архивуудыг FTP эсвэл өөрийн хостын файл менежерээр %s руу хуулж, энэ хуудсыг дахин ачаална уу."
+
+#: includes/class-admin.php:455
+msgid "Or a deploy code from another site"
+msgstr "Эсвэл өөр сайтаас байршуулах код"
+
+#: includes/class-admin.php:455
+msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
+msgstr "Хэрэв өөр сайт танд Zinn® Backups-ийн байршуулах код өгсөн бол түүний хадгалах сангийн түлхүүрүүдийг хуваалцахгүйгээр уг нөөц хуулбарыг энэ сайт руу хуулахын тулд энд буулгана уу. Код нь хэдхэн цагийн турш ажиллах тул үүнийг нууц үг шиг авч үзнэ үү."
+
+#: includes/class-admin.php:455
+msgid "Passphrase (only if that backup is encrypted)"
+msgstr "Нууц хэллэг (зөвхөн тэрхүү нөөцлөлт шифрлэгдсэн бол)"
+
+#: includes/class-admin.php:456
+#: includes/class-admin.php:458
+msgid "Import"
+msgstr "Импортлох"
+
+#: includes/class-admin.php:457
+msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
+msgstr "Импорт нь энэ сайтын агуулга болон мэдээллийн санг орлоно гэдгийг ойлгож байна. Үүний дараа импортлосон сайтын бүртгэлээр нэвтэрнэ үү."
+
+#: includes/class-admin.php:460
+msgid "Moving to Zinn® hosting?"
+msgstr "Zinn® хостинг руу шилжих үү?"
+
+#: includes/class-admin.php:460
+msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
+msgstr "Zinn Digital® нь таны хуучин хостоос сайтыг тань таны өмнөөс шилжүүлж өгөх боломжтой. Хэрэв таны хуучин хост танд FTP, SSH эсвэл хяналтын самбарын хандалт өгөхгүй бол хуучин сайт дээр Zinn® Migrate-ийг суулгана уу; энэ нь таны энд импортлох эсвэл Zinn®-д өгөх боломжтой нэг архивыг үүсгэдэг."
+
+#: includes/class-admin.php:470
+msgid "What goes into a backup"
+msgstr "Нөөцлөлтөд юу багтдаг вэ"
+
+#: includes/class-admin.php:471
+msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
+msgstr "WordPress-ийн өөрийн файлуудыг оруулах (wp-admin, wp-includes). Ихэвчлэн шаардлагагүй: WordPress-ийг хэзээ ч дахин суулгах боломжтой."
+
+#: includes/class-admin.php:472
+msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
+msgstr "Мөн эдгээр хавтас эсвэл файлуудыг орхино уу (мөр бүрт нэг, WordPress хавтастай харьцангуй)"
+
+#: includes/class-admin.php:473
+msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
+msgstr "Үргэлж хасагдах: кэшүүд, шинэчлэлтийн түр зай болон бусад нөөцлөх залгаасуудын өөрийн архивын хавтаснууд:"
+
+#: includes/class-admin.php:474
+msgid "Size of each part (MB)"
+msgstr "Хэсэг тус бүрийн хэмжээ (МБ)"
+
+#: includes/class-admin.php:479
+msgid "Save settings"
+msgstr "Тохиргоог хадгалах"
+
+#: includes/class-archiver.php:52
+msgid "A backup part could not be opened for writing. Check that wp-content has free space."
+msgstr "Нөөцлөлтийн хэсгийг бичихэд нээж чадсангүй. wp-content дотор сул зай байгаа эсэхийг шалгана уу."
+
+#: includes/class-archiver.php:113
+msgid "A backup part could not be written. Check that wp-content has free space."
+msgstr "Нөөцлөлтийн хэсгийг бичиж чадсангүй. wp-content дээр сул зай байгаа эсэхийг шалгана уу."
+
+#: includes/class-backup-job.php:42
+msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
+msgstr "Эхлээд Storage таб дээр хадгалах байршлыг холбоно уу: нөөц хуулбарууд энэ сервер дээр бус, таны өөрийн хадгалах санд хадгалагдана."
+
+#: includes/class-backup-job.php:45
+#: includes/class-restore-job.php:108
+msgid "Multisite networks are not supported yet."
+msgstr "Олон сайтын сүлжээг хараахан дэмжихгүй байна."
+
+#: includes/class-backup-job.php:48
+msgid "This server’s PHP has no ZipArchive extension. Ask your host to enable it."
+msgstr "Энэ серверийн PHP-д ZipArchive өргөтгөл алга байна. Үүнийг идэвхжүүлэхийг хостинг үйлчилгээ үзүүлэгчээсээ хүснэ үү."
+
+#: includes/class-backup-job.php:98
+msgid "Starting"
+msgstr "Эхлүүлж байна"
+
+#: includes/class-backup-job.php:99
+msgid "Listing files"
+msgstr "Файлуудыг жагсааж байна"
+
+#: includes/class-backup-job.php:100
+msgid "Backing up the database"
+msgstr "Өгөгдлийн сангийн нөөц хуулбар хийж байна"
+
+#: includes/class-backup-job.php:101
+msgid "Packing files"
+msgstr "Файлуудыг багцалж байна"
+
+#: includes/class-backup-job.php:102
+msgid "Uploading to your storage"
+msgstr "Таны хадгалах сан руу хуулж байна"
+
+#: includes/class-backup-job.php:103
+msgid "Finishing"
+msgstr "Дуусгаж байна"
+
+#: includes/class-backup-job.php:123
+msgid "The backup reached an unknown stage."
+msgstr "Нөөцлөлт тодорхойгүй үе шатанд хүрсэн байна."
+
+#. translators: %s: backup id.
+#: includes/class-backup-job.php:143
+#, php-format
+msgid "Backup %s started."
+msgstr "%s-н нөөцлөлт эхэллээ."
+
+#. translators: 1: number of files, 2: total size.
+#: includes/class-backup-job.php:168
+#, php-format
+msgid "Found %1$s files (%2$s)."
+msgstr "%1$s файл олдлоо (%2$s)."
+
+#. translators: 1: number of tables, 2: number of rows, 3: size.
+#: includes/class-backup-job.php:209
+#, php-format
+msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
+msgstr "Өгөгдлийн сан: %1$d хүснэгт, %2$s мөр, %3$s шахагдсан."
+
+#. translators: 1: size of the backup, 2: number of destinations.
+#: includes/class-backup-job.php:473
+#, php-format
+msgid "Backup complete: %1$s stored in %2$d destination."
+msgid_plural "Backup complete: %1$s stored in %2$d destinations."
+msgstr[0] "Нөөцлөлт дууссан: %1$s-г %2$d байршилд хадгалсан."
+msgstr[1] "Нөөцлөлт дууссан: %1$s-г %2$d газарт хадгаллаа."
+
+#: includes/class-backup-job.php:503
+msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
+msgstr "Аль хэдийн байршуулсан зарим хэсгийг таны хадгалах сангаас устгах боломжгүй байв; тэдгээр нь дутуу нөөцлөлтийн хавтсанд байгаа бөгөөд сэргээхэд хэзээ ч санал болгогдохгүй."
+
+#: includes/class-backup-job.php:520
+msgid "A storage destination was removed while the backup was running."
+msgstr "Нөөцлөлт хийгдэж байх үед хадгалах байршил устгагдсан байна."
+
+#: includes/class-catalog.php:134
+msgid "That is not a backup folder."
+msgstr "Энэ нь нөөцлөлтийн хавтас биш байна."
+
+#: includes/class-catalog.php:138
+#: includes/class-restore-job.php:186
+msgid "That storage destination is no longer saved on this site."
+msgstr "Энэ хадгалах байршил энэ сайтад хадгалагдахаа больсон байна."
+
+#: includes/class-catalog.php:141
+msgid "Later incremental backups are built on this one. Delete those first."
+msgstr "Дараагийн өсөн нэмэгдэх нөөц хуулбарууд нь үүн дээр үндэслэгдсэн байна. Эхлээд тэдгээрийг устгана уу."
+
+#: includes/class-crypto.php:88
+msgid "This file is not an encrypted Zinn® Backups file."
+msgstr "Энэ файл нь шифрлэгдсэн Zinn® Backups файл биш байна."
+
+#: includes/class-crypto.php:103
+msgid "The backup could not be decrypted: the passphrase is wrong or the file is damaged."
+msgstr "Нөөц хуулбарын шифрийг тайлж чадсангүй: нууц үг буруу эсвэл файл гэмтсэн байна."
+
+#: includes/class-crypto.php:112
+msgid "The encrypted backup file is incomplete."
+msgstr "Шифрлэгдсэн нөөц хуулбарын файл дутуу байна."
+
+#: includes/class-database-dumper.php:67
+msgid "The database file could not be written. Check that wp-content has free space."
+msgstr "Өгөгдлийн сангийн файлыг бичиж чадсангүй. wp-content дотор сул зай байгаа эсэхийг шалгана уу."
+
+#: includes/class-deploy-code.php:41
+msgid "That is not a deploy code. A deploy code starts with zbdeploy1."
+msgstr "Энэ байршуулах код биш байна. Байршуулах код zbdeploy1-ээр эхэлдэг."
+
+#: includes/class-deploy-code.php:46
+#: includes/class-deploy-code.php:67
+#: includes/class-deploy-code.php:76
+msgid "That deploy code is damaged. Copy it again from the other site."
+msgstr "Байршуулах код гэмтсэн байна. Үүнийг нөгөө сайтаас дахин хуулна уу."
+
+#: includes/class-deploy-code.php:56
+msgid "The deploy code has expired or its backup was deleted. Make a new code on the other site."
+msgstr "Байршуулах кодын хугацаа дууссан эсвэл нөөц хуулбар нь устгагдсан байна. Нөгөө сайт дээр шинэ код үүсгэнэ үү."
+
+#: includes/class-deploy-code.php:60
+msgid "That deploy code does not point at a Zinn® Backups backup."
+msgstr "Тэрхүү байршуулах код нь Zinn® Backups нөөц хуулбар руу заагаагүй байна."
+
+#: includes/class-deploy-code.php:63
+msgid "The deploy code has expired. Make a new code on the other site."
+msgstr "Байршуулах кодын хугацаа дууссан байна. Нөгөө сайт дээр шинэ код үүсгэнэ үү."
+
+#: includes/class-downloader.php:83
+msgid "The server stopped honouring partial downloads. Start the import again."
+msgstr "Сервер хэсэгчлэн татах үйлдлийг дэмжихээ больсон байна. Импортыг дахин эхлүүлнэ үү."
+
+#: includes/class-downloader.php:87
+msgid "The link opened a web page instead of a file. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link."
+msgstr "Холбоос нь файлын оронд вэб хуудсыг нээсэн байна. Google Drive болон Dropbox-ын хувьд файлыг \"холбоос бүхий хүн бүр\" тохиргоотойгоор хуваалцаж, тухайн холбоосыг буулгана уу."
+
+#. translators: %d: HTTP status code.
+#: includes/class-downloader.php:96
+#, php-format
+msgid "The link answered with HTTP %d."
+msgstr "Холбоос HTTP %d хариу өглөө."
+
+#: includes/class-file-scanner.php:53
+msgid "The file list could not be written."
+msgstr "Файлын жагсаалтыг бичиж чадсангүй."
+
+#. translators: %s: the network error message.
+#: includes/class-http.php:46
+#, php-format
+msgid "The storage service could not be reached: %s"
+msgstr "Хадгалах сангийн үйлчилгээтэй холбогдож чадсангүй: %s"
+
+#. translators: 1: service name, 2: HTTP status code, 3: the service's own error text.
+#: includes/class-http.php:78
+#, php-format
+msgid "%1$s answered with HTTP %2$d: %3$s"
+msgstr "%1$s дараах HTTP %2$d кодоор хариулав: %3$s"
+
+#: includes/class-http.php:113
+msgid "no details given"
+msgstr "Дэлгэрэнгүй мэдээлэл өгөгдөөгүй байна"
+
+#: includes/class-plugin.php:96
+msgid "You are not allowed to manage backups."
+msgstr "Та нөөц хуулбарыг удирдах эрхгүй байна."
+
+#: includes/class-plugin.php:196
+msgid "Tick the box to confirm that the restore replaces this site’s files and database."
+msgstr "Сэргээлт нь энэ сайтын файл болон мэдээллийн санг солихыг баталгаажуулахын тулд нүдийг чагтална уу."
+
+#: includes/class-plugin.php:271
+#: includes/class-plugin.php:290
+msgid "Save the destination first."
+msgstr "Эхлээд очих газрыг хадгална уу."
+
+#: includes/class-plugin.php:274
+msgid "Connected: a test file was written and removed."
+msgstr "Холбогдсон: тестийн файл бичигдэж, устгагдсан."
+
+#: includes/class-plugin.php:306
+msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
+msgstr "Эхлээд өөрийн Dropbox аппын апп түлхүүрийг оруулна уу (маягтын хажууд байгаа алхмуудыг харна уу)."
+
+#: includes/class-plugin.php:319
+msgid "This kind of storage does not sign in."
+msgstr "Энэ төрлийн хадгалах сан системд нэвтэрдэггүй."
+
+#: includes/class-plugin.php:336
+msgid "The sign-in expired. Press Connect again."
+msgstr "Нэвтрэх хугацаа дууссан байна. Холбох товчийг дахин дарна уу."
+
+#: includes/class-plugin.php:342
+msgid "Dropbox is connected."
+msgstr "Dropbox холбогдсон."
+
+#: includes/class-plugin.php:411
+msgid "Settings saved."
+msgstr "Тохиргоо хадгалагдлаа."
+
+#: includes/class-plugin.php:427
+#: includes/class-runner.php:64
+msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
+msgstr "Өөр нөөцлөлт, сэргээлт эсвэл импорт хийгдэж байна. Үүнийг дуустал хүлээнэ үү, эсвэл цуцална уу."
+
+#: includes/class-plugin.php:453
+msgid "The upload was not started properly. Start again."
+msgstr "Хуулалт зөв эхэлсэнгүй. Дахин эхлүүлнэ үү."
+
+#: includes/class-plugin.php:457
+msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
+msgstr "Хэсэг ирсэнгүй. Таны сервер байршуулах хэмжээг хязгаарласан байж магадгүй; дахин оролдоно уу."
+
+#: includes/class-plugin.php:481
+msgid "Tick the box to confirm that the import replaces this site’s content and database."
+msgstr "Импорт нь энэ сайтын агуулга болон мэдээллийн санг орлох болно гэдгийг баталгаажуулахын тулд нүдийг чагтална уу."
+
+#: includes/class-plugin.php:535
+msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
+msgstr "Импортлох архивыг сонгоно уу: байршуулах, холбоос буулгах, эсвэл импортын хавтаснаас нэгийг сонгоно уу."
+
+#. translators: 1: a percentage, e.g. 50. 2: a Pro plugin's name.
+#: includes/class-pro-discount.php:132
+#, php-format
+msgid "Hosting customer? Get %1$d%% off %2$s"
+msgstr "Хостингийн хэрэглэгч үү? %2$s дээр %1$d%% хөнгөлөлт аваарай"
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:141
+#, php-format
+msgid "As a Zinn Digital® hosting customer you get a personal code for %d%% off your first payment. Renewals are at the normal price."
+msgstr "Zinn Digital® хостингийн хэрэглэгчийн хувьд та анхны төлбөрөөсөө %d%% хөнгөлөлт авах хувийн код авах болно. Сунгалтыг ердийн үнээр хийнэ."
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:156
+#, php-format
+msgid "Get my %d%% code and go to checkout"
+msgstr "Миний %d%% кодыг авч тооцоо хийх хэсэг рүү очно уу"
+
+#: includes/class-pro-discount.php:171
+msgid "Sorry, you are not allowed to do that."
+msgstr "Уучлаарай, танд үүнийг хийх эрх олгогдоогүй байна."
+
+#: includes/class-pro-discount.php:222
+msgid "This discount is for customers with a paid hosting plan in good standing. Free trials do not qualify."
+msgstr "Энэхүү хөнгөлөлт нь төлбөрийн зөрчилгүй, төлбөртэй хостингийн багцтай хэрэглэгчдэд зориулагдсан болно. Үнэгүй туршилтын хувилбарууд хамаарахгүй."
+
+#: includes/class-pro-discount.php:225
+msgid "You have already used your hosting-customer discount for this plugin."
+msgstr "Та энэ залгаасын хостинг хэрэглэгчийн хөнгөлөлтөө аль хэдийн ашигласан байна."
+
+#: includes/class-pro-discount.php:228
+msgid "We could not get your code just now. Please try again in a few minutes."
+msgstr "Бид таны кодыг сая авч чадсангүй. Хэдэн минутын дараа дахин оролдоно уу."
+
+#: includes/class-restore-job.php:128
+msgid "Reading the backup"
+msgstr "Нөөц хуулбарыг уншиж байна"
+
+#: includes/class-restore-job.php:129
+msgid "Downloading the archive"
+msgstr "Архивыг татаж авч байна"
+
+#: includes/class-restore-job.php:130
+msgid "Recognising the archive"
+msgstr "Архивыг таньж байна"
+
+#: includes/class-restore-job.php:131
+msgid "Restoring files"
+msgstr "Файлуудыг сэргээж байна"
+
+#: includes/class-restore-job.php:132
+msgid "Downloading the database"
+msgstr "Өгөгдлийн санг татаж байна"
+
+#: includes/class-restore-job.php:133
+msgid "Restoring the database"
+msgstr "Өгөгдлийн санг сэргээж байна"
+
+#: includes/class-restore-job.php:134
+msgid "Updating the site address"
+msgstr "Сайтын хаягийг шинэчилж байна"
+
+#: includes/class-restore-job.php:135
+msgid "Switching to the restored database"
+msgstr "Сэргээсэн өгөгдлийн сан руу шилжиж байна"
+
+#: includes/class-restore-job.php:158
+msgid "The restore reached an unknown stage."
+msgstr "Сэргээлт тодорхойгүй үе шатанд хүрсэн байна."
+
+#: includes/class-restore-job.php:201
+msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
+msgstr "Энэ хавтсанд бүрэн Zinn® Backups нөөц хуулбар байхгүй байна (манифест дутуу байна)."
+
+#: includes/class-restore-job.php:204
+msgid "This backup is encrypted. Enter its passphrase to restore it."
+msgstr "Энэ нөөцлөлт шифрлэгдсэн байна. Үүнийг сэргээхийн тулд нууц үгээ оруулна уу."
+
+#. translators: %s: backup id.
+#: includes/class-restore-job.php:219
+#, php-format
+msgid "This incremental backup needs backup %s, which is no longer in the storage."
+msgstr "Энэхүү өсөн нэмэгдэх нөөц хуулбарт хадгалах санд байхаа больсон %s нөөц хуулбар шаардлагатай."
+
+#. translators: 1: backup date, 2: number of parts.
+#: includes/class-restore-job.php:266
+#, php-format
+msgid "Restoring the backup of %1$s (%2$d file parts)."
+msgstr "%1$s-ийн нөөц хуулбарыг сэргээж байна (%2$d файлын хэсэг)."
+
+#. translators: 1: number of files, 2: example paths.
+#: includes/class-restore-job.php:340
+#, php-format
+msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
+msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
+msgstr[0] "%1$s файлыг дарж бичих боломжгүй байв, учир нь энэ сайт үүнийг өөрчлөх эрхгүй тул хэвээр нь үлдээсэн: %2$s"
+msgstr[1] "Энэ сайт тэдгээрийг өөрчлөх эрхгүй тул %1$s файлыг дарж бичих боломжгүй байсан бөгөөд хэвээр нь үлдээсэн: %2$s"
+
+#. translators: %s: number of files.
+#: includes/class-restore-job.php:359
+#, php-format
+msgid "Restored %s files."
+msgstr "%s файл сэргээгдсэн."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:422
+#, php-format
+msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
+msgstr "%s нь татаж авсны дараа шалгах нийлбэртэйгээ таарсангүй. Хадгалах санд байгаа хуулбар гэмтсэн байж болзошгүй."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:493
+#, php-format
+msgid "%s did not arrive. Upload it again."
+msgstr "%s ирсэнгүй. Үүнийг дахин байршуулна уу."
+
+#. translators: %s: list of backup formats.
+#: includes/class-restore-job.php:515
+#, php-format
+msgid "Recognised: %s."
+msgstr "Танигдсан: %s."
+
+#. translators: 1: number of files, 2: number of files skipped.
+#: includes/class-restore-job.php:542
+#, php-format
+msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
+msgstr "wp-content руу %1$s файл импортлосон (%2$s-г орхисон: кэшүүд, drop-in-ууд болон бусад нөөцлөх залгаасуудын хавтаснууд)."
+
+#: includes/class-restore-job.php:588
+msgid "The archive has no database dump, so only files were imported."
+msgstr "Архивт өгөгдлийн сангийн хуулбар байхгүй тул зөвхөн файлуудыг импортолсон."
+
+#. translators: %d: number of tables.
+#: includes/class-restore-job.php:598
+#, php-format
+msgid "Database restored into %d temporary tables."
+msgstr "Өгөгдлийн санг %d түр хүснэгтэд сэргээсэн."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:615
+#, php-format
+msgid "%s has no WordPress tables in it and was skipped."
+msgstr "%s нь дотроо ямар ч WordPress хүснэгт агуулаагүй тул алгаслаа."
+
+#: includes/class-restore-job.php:653
+#: includes/class-table-swap.php:237
+msgid "The backup’s database has no WordPress tables, so nothing was replaced."
+msgstr "Нөөцлөлтийн өгөгдлийн санд WordPress хүснэгтүүд байхгүй тул юу ч солигдоогүй."
+
+#: includes/class-restore-job.php:658
+msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
+msgstr "Энэхүү нөөц хуулбар нь сүлжээ сайтынх (multisite) юм. Сүлжээг нэг сайтад сэргээхийг дэмжихгүй."
+
+#. translators: 1: old address, 2: this site's address.
+#: includes/class-restore-job.php:683
+#, php-format
+msgid "Moving the content from %1$s to %2$s."
+msgstr "Агуулгыг %1$s-ээс %2$s руу зөөж байна."
+
+#: includes/class-restore-job.php:809
+msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
+msgstr "Сэргээж дууслаа. Хэрэв та системээс гарсан бол сэргээсэн сайтын бүртгэлээр нэвтэрнэ үү."
+
+#: includes/class-restore-job.php:810
+msgid "Restore complete."
+msgstr "Сэргээж дууслаа."
+
+#. translators: 1: error message, 2: seconds until the retry.
+#: includes/class-runner.php:160
+#, php-format
+msgid "%1$s — trying again in %2$d seconds."
+msgstr "%1$s — %2$d секундийн дараа дахин оролдоно."
+
+#: includes/class-runner.php:189
+msgid "Cancelled."
+msgstr "Цуцлагдсан."
+
+#: includes/class-settings.php:145
+msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
+msgstr "Нөөцлөлтүүд нэг хадгалах байршил руу очно. Өөр байршил ашиглахын тулд байгаагаа засах эсвэл устгана уу."
+
+#: includes/class-sql-importer.php:84
+msgid "The database file could not be opened."
+msgstr "Өгөгдлийн сангийн файлыг нээж чадсангүй."
+
+#. translators: 1: database error, 2: start of the statement.
+#: includes/class-sql-importer.php:262
+#, php-format
+msgid "The database refused a statement from the backup: %1$s (%2$s…)"
+msgstr "Өгөгдлийн сан нөөцлөлтөөс ирсэн мэдэгдлийг буцаалаа: %1$s (%2$s…)"
+
+#. translators: %s: database error.
+#: includes/class-table-swap.php:256
+#, php-format
+msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
+msgstr "Сэргээсэн хүснэгтүүдийг сэлгэж чадсангүй: %s. Таны сайт өөрчлөгдөөгүй хэвээр байна."
+
+#: includes/class-work-dir.php:43
+msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
+msgstr "Түр нөөц файлуудад зориулсан бичих боломжтой хавтас байхгүй байна. wp-content хавтсыг бичих боломжтой болгоод дахин оролдоно уу."
+
+#: includes/class-work-dir.php:90
+msgid "Could not create a folder for this job."
+msgstr "Энэ даалгаварт зориулж хавтас үүсгэж чадсангүй."
+
+#. translators: %s: the Zinn Digital trade mark, which is not translated.
+#: includes/class-zinn-backups-promo.php:349
+#: includes/class-zinn-backups-promo.php:407
+#, php-format
+msgid "%s — guides and services"
+msgstr "%s — гарын авлага ба үйлчилгээ"
+
+#: includes/class-zinn-backups-promo.php:364
+msgid "User guides"
+msgstr "Хэрэглэгчийн гарын авлага"
+
+#. translators: %s: this plugin's name, e.g. "Zinn® Cache".
+#: includes/class-zinn-backups-promo.php:414
+#, php-format
+msgid "Read the %s user guide"
+msgstr "%s хэрэглэгчийн гарын авлагыг уншина уу"
+
+#: includes/class-zinn-backups-promo.php:422
+msgid "Hide this"
+msgstr "Үүнийг нуух"
+
+#: includes/class-zinn-backups-promo.php:535
+msgid "Zinn® hosting for WordPress"
+msgstr "WordPress-д зориулсан Zinn® хостинг"
+
+#: includes/class-zinn-backups-promo.php:536
+msgid "LiteSpeed, daily backups, free migration and a control panel built for people who run more than one site."
+msgstr "LiteSpeed, өдөр тутмын нөөцлөлт, үнэгүй шилжүүлэг болон нэгээс олон сайт ажиллуулдаг хүмүүст зориулсан хяналтын самбар."
+
+#: includes/class-zinn-backups-promo.php:542
+msgid "The Zinn® marketplace"
+msgstr "Zinn® зах зээл"
+
+#: includes/class-zinn-backups-promo.php:543
+msgid "Buy and sell established sites, domains and link placements, with the money held safely until both sides are happy."
+msgstr "Хоёр тал сэтгэл хангалуун байх хүртэл мөнгийг найдвартай хадгалж, хөгжүүлсэн сайтууд, домэйнууд болон холбоос байршуулалтуудыг худалдан авч, зарна уу."
+
+#: includes/class-zinn-backups-promo.php:590
+msgid "Zinn Hub® — hire people who do this for a living"
+msgstr "Zinn Hub® — үүнийг мэргэжлийн түвшинд хийдэг хүмүүсийг хөлслөөрэй"
+
+#: includes/class-zinn-backups-promo.php:591
+msgid "Our global freelance marketplace: browse over 10,000 ready-made services from writers, designers, developers and SEOs, or post a project and let them bid."
+msgstr "Манай дэлхийн чөлөөт зах зээл: зохиолчид, дизайнерууд, хөгжүүлэгчид болон SEO мэргэжилтнүүдийн 10,000 гаруй бэлэн үйлчилгээтэй танилцах эсвэл төсөл нийтэлж санал ирүүлэх боломжийг тэдэнд олгоно уу."
+
+#: includes/class-zinn-backups-updater.php:253
+msgid "See the Zinn Digital® release notes."
+msgstr "Zinn Digital® хувилбарын тэмдэглэлийг үзнэ үү."
+
+#: includes/class-zinn-backups-updater.php:302
+msgid "The Zinn® update service did not issue a download link for this update. Check that this site can reach the Zinn® platform, then try again."
+msgstr "Zinn® шинэчлэлийн үйлчилгээ энэ шинэчлэлтийн татах холбоосыг олгосонгүй. Энэ сайт Zinn® платформд холбогдож чадах эсэхийг шалгаад, дахин оролдоно уу."
+
+#. translators: %s: the download error reported by WordPress.
+#: includes/class-zinn-backups-updater.php:316
+#, php-format
+msgid "The update could not be downloaded from the Zinn® update service (%s). Try again in a few minutes."
+msgstr "Zinn® шинэчлэх үйлчилгээнээс (%s) шинэчлэлтийг татаж авах боломжгүй байна. Хэдэн минутын дараа дахин оролдоно уу."
+
+#: includes/class-zinn-backups-updater.php:330
+msgid "The downloaded update failed its integrity check and was not installed."
+msgstr "Татаж авсан шинэчлэлтийн бүрэн бүтэн байдлыг шалгах ажиллагаа амжилтгүй болсон тул суулгасангүй."
+
+#: includes/import/class-archive-reader.php:147
+msgid "The zip archive could not be opened. It may be damaged or incomplete."
+msgstr "Zip архивыг нээх боломжгүй байна. Энэ нь гэмтсэн эсвэл дутуу байж магадгүй."
+
+#: includes/import/class-archive-reader.php:311
+msgid "This .wpress file uses a format we cannot read (it may be compressed or encrypted by All-in-One WP Migration). Export it again without encryption."
+msgstr "Энэхүү .wpress файл нь бидний унших боломжгүй форматыг ашиглаж байна (үүнийг All-in-One WP Migration ша шахсан эсвэл шифрлэсэн байж болзошгүй). Үүнийг шифрлэлтгүйгээр дахин экспортлоно уу."
+
+#: includes/import/class-formats.php:66
+msgid "This is a Duplicator “DupArchive” (.daf) file. In Duplicator, build the package again with the archive format set to ZIP, then import that."
+msgstr "Энэ бол Duplicator “DupArchive” (.daf) файл юм. Duplicator дотор архивын форматыг ZIP болгон тохируулан багцыг дахин үүсгэж, дараа нь импортлоно уу."
+
+#: includes/import/class-formats.php:69
+msgid "This UpdraftPlus database backup is encrypted. Decrypt it in UpdraftPlus (or turn off database encryption and back up again), then import it."
+msgstr "Энэхүү UpdraftPlus өгөгдлийн сангийн нөөцлөлт нь шифрлэгдсэн байна. Үүнийг UpdraftPlus дээр тайлна уу (эсвэл өгөгдлийн сангийн шифрлэлтийг унтрааж, дахин нөөцөлнө үү), дараа нь импортлоно уу."
+
+#: includes/import/class-formats.php:76
+msgid "Database dump"
+msgstr "Өгөгдлийн сангийн дамп"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:93
+#, php-format
+msgid "%s is not a backup archive we can read (zip, tar, tar.gz, .wpress, .sql or .sql.gz)."
+msgstr "%s нь бидний уншиж чадах нөөц архив биш байна (zip, tar, tar.gz, .wpress, .sql эсвэл .sql.gz)."
+
+#: includes/import/class-formats.php:99
+msgid "Website archive"
+msgstr "Вэбсайтын архив"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:123
+#, php-format
+msgid "%s has no WordPress content (no wp-content folder and no database dump) in it."
+msgstr "%s нь дотроо ямар ч WordPress агуулга (wp-content хавтас болон өгөгдлийн сангийн хуулбар байхгүй) агуулаагүй байна."
+
+#: includes/import/class-formats.php:155
+msgid "This .wpress file is encrypted or compressed by All-in-One WP Migration. Export it again with encryption and compression switched off, then import that."
+msgstr "Энэхүү .wpress файл нь All-in-One WP Migration-аар шифрлэгдсэн эсвэл шахагдсан байна. Шифрлэлт болон шахалтыг унтрааж дахин экспортлоод, дараа нь импортлоно уу."
+
+#: includes/storage/class-destinations.php:62
+msgid "Other S3-compatible storage"
+msgstr "Бусад S3-тэй нийцтэй сан"
+
+#: includes/storage/class-destinations.php:77
+msgid "Cloudflare R2, Amazon S3 or S3-compatible"
+msgstr "Cloudflare R2, Amazon S3 эсвэл S3-д нийцтэй"
+
+#: includes/storage/class-destinations.php:100
+msgid "The storage keys could not be read on this site. Enter the secret key again on the Storage tab."
+msgstr "Энэ сайт дээр хадгалах сангийн түлхүүрүүдийг унших боломжгүй байлаа. Хадгалах сан таб дээр нууц түлхүүрийг дахин оруулна уу."
+
+#: includes/storage/class-destinations.php:116
+msgid "This kind of storage is not known."
+msgstr "Энэ төрлийн хадгалах сан тодорхойгүй байна."
+
+#: includes/storage/class-destinations.php:168
+msgid "Choose a kind of storage."
+msgstr "Хадгалах сангийн төрлийг сонгоно уу."
+
+#: includes/storage/class-destinations.php:187
+msgid "Enter the bucket name and the access key."
+msgstr "Бакетын нэр болон хандалтын түлхүүрийг оруулна уу."
+
+#: includes/storage/class-destinations.php:190
+msgid "Enter your Cloudflare account id (or the full R2 endpoint)."
+msgstr "Өөрийн Cloudflare бүртгэлийн ID-г (эсвэл бүтэн R2 төгсгөлийн цэгийг) оруулна уу."
+
+#: includes/storage/class-destinations.php:193
+msgid "Enter the endpoint address of your storage."
+msgstr "Хадгалах сангийнхаа төгсгөлийн цэгийн хаягийг оруулна уу."
+
+#: includes/storage/class-destinations.php:202
+msgid "Enter the OAuth client id from your Google Cloud project."
+msgstr "Та Google Cloud төслөөсөө OAuth client id-г оруулна уу."
+
+#: includes/storage/class-dropbox.php:94
+msgid "Dropbox did not return a refresh token. Start the connection again."
+msgstr "Dropbox сэргээх токен буцаасангүй. Холболтыг дахин эхлүүлнэ үү."
+
+#: includes/storage/class-dropbox.php:369
+msgid "Dropbox is not connected. Connect it again on the Storage tab."
+msgstr "Dropbox холбогдоогүй байна. Хадгалах сан таб дээр дахин холбоно уу."
+
+#: includes/storage/class-google-drive.php:114
+msgid "Google did not return a refresh token. Remove this site from your Google account’s third-party access and connect again."
+msgstr "Google сэргээх токен буцаасангүй. Энэ сайтыг өөрийн Google бүртгэлийн гуравдагч талын хандалтаас хасаад дахин холбогдоно уу."
+
+#: includes/storage/class-google-drive.php:308
+msgid "That file is not in Google Drive any more."
+msgstr "Тэр файл Google Drive дээр байхаа больсон байна."
+
+#: includes/storage/class-google-drive.php:477
+msgid "Google Drive is not connected. Connect it again on the Storage tab."
+msgstr "Google Drive холбогдоогүй байна. Сангийн таб дээр дахин холбоно уу."
+
+#: includes/storage/class-s3.php:85
+msgid "The storage service did not start the upload."
+msgstr "Хадгалах үйлчилгээ байршуулалтыг эхлүүлсэнгүй."
+
+#: includes/storage/class-s3.php:352
+msgid "The storage service sent a reply that could not be read."
+msgstr "Хадгалах үйлчилгээ унших боломжгүй хариу илгээлээ."
+
+#: includes/storage/class-s3.php:380
+msgid "A temporary backup file could not be read."
+msgstr "Түр нөөц файлыг уншиж чадсангүй."
+
+#: includes/storage/class-url-source.php:71
+msgid "A deploy link is read-only."
+msgstr "Байршуулалтын холбоос нь зөвхөн унших боломжтой."
+
+#: includes/storage/class-url-source.php:106
+msgid "The deploy code has no link for a file this backup needs."
+msgstr "Байршуулах кодонд энэ нөөц хуулбарт шаардлагатай файлын холбоос байхгүй байна."
+
+#: includes/storage/class-url-source.php:115
+msgid "The deploy link"
+msgstr "Байршуулах холбоос"

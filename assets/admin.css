@@ -1,0 +1,178 @@
+/* Zinn® Backups — admin screen. Logical properties only, so right-to-left languages mirror. */
+
+.zb .zb-card {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	padding-block: 8px 16px;
+	padding-inline: 16px;
+	margin-block: 16px;
+	max-inline-size: 1100px;
+}
+
+.zb .zb-card h2 {
+	margin-block: 8px;
+}
+
+.zb .zb-inline label {
+	display: inline-block;
+	margin-inline-end: 12px;
+	margin-block-end: 8px;
+}
+
+.zb .zb-form fieldset {
+	border: 1px solid #dcdcde;
+	padding-block: 4px 8px;
+	padding-inline: 12px;
+	margin-block: 12px;
+}
+
+.zb .zb-form fieldset[hidden],
+.zb [hidden] {
+	display: none;
+}
+
+.zb .zb-block {
+	display: block;
+	margin-block: 4px;
+}
+
+.zb .zb-actions {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.zb .zb-job__bar {
+	inline-size: 100%;
+	block-size: 14px;
+}
+
+.zb .zb-job--failed {
+	border-inline-start: 4px solid #d63638;
+}
+
+.zb .zb-job--done {
+	border-inline-start: 4px solid #00a32a;
+}
+
+.zb .zb-job__log {
+	max-block-size: 220px;
+	overflow-y: auto;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 12px;
+}
+
+.zb .zb-log--warning {
+	color: #996800;
+}
+
+.zb .zb-log--error {
+	color: #d63638;
+}
+
+.zb .zb-badge {
+	display: inline-block;
+	border-radius: 10px;
+	padding-inline: 8px;
+	padding-block: 1px;
+	margin-inline-end: 4px;
+	margin-block: 2px;
+	font-size: 12px;
+	background: #f0f0f1;
+}
+
+.zb .zb-badge--ok,
+.zb .zb-badge--full {
+	background: #edfaef;
+	color: #00631d;
+}
+
+.zb .zb-badge--warn,
+.zb .zb-badge--other {
+	background: #fcf9e8;
+	color: #6e4f00;
+}
+
+.zb .zb-badge--incremental {
+	background: #f0f6fc;
+	color: #0a4b78;
+}
+
+.zb .zb-badge--lock {
+	background: #f6f0fd;
+	color: #4a2a7a;
+}
+
+.zb .zb-destinations {
+	margin: 0;
+}
+
+.zb .zb-destination {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	align-items: center;
+	padding-block: 8px;
+	border-block-end: 1px solid #f0f0f1;
+}
+
+.zb .zb-dest-actions {
+	margin-inline-start: auto;
+}
+
+.zb .zb-ok {
+	color: #00631d;
+}
+
+.zb .zb-error {
+	color: #d63638;
+}
+
+.zb .zb-danger {
+	color: #b32d2e;
+}
+
+.zb .zb-row-actions {
+	text-align: end;
+	white-space: nowrap;
+}
+
+.zb .zb-dialog {
+	max-inline-size: 560px;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	padding-inline: 20px;
+}
+
+.zb .zb-dialog::backdrop {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.zb .zb-ticks li {
+	list-style: none;
+	padding-inline-start: 24px;
+	position: relative;
+}
+
+.zb .zb-ticks li::before {
+	content: "\2713";
+	position: absolute;
+	inset-inline-start: 0;
+	color: #00a32a;
+}
+
+.zb .zb-history__failed {
+	color: #d63638;
+}
+
+@media (max-width: 782px) {
+	.zb .zb-table td {
+		display: block;
+	}
+
+	.zb .zb-row-actions {
+		text-align: start;
+	}
+}

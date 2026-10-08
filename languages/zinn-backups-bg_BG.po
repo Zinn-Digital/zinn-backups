@@ -1,0 +1,1070 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zinn-backups\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bg_BG\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: zinn-backups\n"
+"X-Generator: scripts/wp-i18n-translate.py\n"
+
+#. Plugin Name of the plugin
+#: zinn-backups.php
+#: includes/class-admin.php:50
+msgid "Zinn® Backups"
+msgstr "Zinn® Backups"
+
+#. Plugin URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com/wordpress-plugins/zinn-backups"
+msgstr "https://zinndigital.com/wordpress-plugins/zinn-backups"
+
+#. Description of the plugin
+#: zinn-backups.php
+msgid "Backs up your WordPress files and database to your own storage — Dropbox, Google Drive, Cloudflare R2, Amazon S3 or any S3-compatible bucket — restores them in one go, and imports backups made by other backup and migration plugins."
+msgstr "Създава резервно копие на вашите WordPress файлове и база данни във ваше собствено хранилище — Dropbox, Google Drive, Cloudflare R2, Amazon S3 или всяко съвместимо с S3 хранилище — възстановява ги наведнъж и импортира резервни копия, направени от други разширения за архивиране и миграция."
+
+#. Author of the plugin
+#: zinn-backups.php
+msgid "Neil Lock — CEO, Zinn Digital® Ltd"
+msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
+
+#. Author URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com"
+msgstr "https://zinndigital.com"
+
+#: includes/class-admin.php:69
+#: includes/class-admin.php:174
+msgid "Backups"
+msgstr "Резервни копия"
+
+#: includes/class-admin.php:73
+msgid "Get Pro: schedules, several storages, encryption"
+msgstr "Вземете Pro: графици, множество хранилища, криптиране"
+
+#: includes/class-admin.php:110
+msgid "Working…"
+msgstr "Обработва се…"
+
+#: includes/class-admin.php:111
+#: includes/class-admin.php:345
+msgid "Finished"
+msgstr "Завършено"
+
+#: includes/class-admin.php:112
+#: includes/class-admin.php:346
+msgid "Failed"
+msgstr "Неуспешно"
+
+#: includes/class-admin.php:113
+#: includes/class-admin.php:347
+msgid "Cancelled"
+msgstr "Отказан"
+
+#: includes/class-admin.php:114
+#: includes/class-admin.php:271
+#: includes/class-admin.php:316
+msgid "Cancel"
+msgstr "Отказ"
+
+#: includes/class-admin.php:115
+#: includes/class-admin.php:313
+#: includes/class-admin.php:316
+#: includes/class-restore-job.php:136
+msgid "Restore"
+msgstr "Възстановяване"
+
+#: includes/class-admin.php:116
+msgid "Delete"
+msgstr "Изтриване"
+
+#: includes/class-admin.php:117
+msgid "Delete this backup from your storage? This cannot be undone."
+msgstr "Искате ли да изтриете това резервно копие от хранилището си? Това действие е необратимо."
+
+#: includes/class-admin.php:118
+msgid "No backups yet. Press “Back up now” to make the first one."
+msgstr "Все още няма резервни копия. Натиснете „Архивиране сега“, за да направите първото."
+
+#: includes/class-admin.php:119
+msgid "Reading your storage…"
+msgstr "Четене на вашето хранилище…"
+
+#: includes/class-admin.php:120
+msgctxt "a complete backup, as opposed to an incremental one"
+msgid "Full backup"
+msgstr "Пълно резервно копие"
+
+#: includes/class-admin.php:121
+msgctxt "a backup holding only what changed since an earlier one"
+msgid "Incremental backup"
+msgstr "Инкрементално резервно копие"
+
+#: includes/class-admin.php:122
+msgid "Encrypted"
+msgstr "Криптирано"
+
+#: includes/class-admin.php:123
+msgid "From another site"
+msgstr "От друг сайт"
+
+#: includes/class-admin.php:124
+msgid "Database"
+msgstr "База данни"
+
+#: includes/class-admin.php:125
+msgid "Files"
+msgstr "Файлове"
+
+#. translators: 1: file name, 2: percentage uploaded.
+#: includes/class-admin.php:127
+#, php-format
+msgid "Uploading %1$s: %2$s%%"
+msgstr "Качване на %1$s: %2$s%%"
+
+#: includes/class-admin.php:128
+msgid "Sign in to Dropbox in the window that opened, then paste the code Dropbox shows you:"
+msgstr "Влезте в Dropbox в отворения прозорец, след което поставете кода, който Dropbox ви показва:"
+
+#: includes/class-admin.php:129
+msgid "Saved."
+msgstr "Запазено."
+
+#: includes/class-admin.php:130
+msgid "Remove this destination from the plugin? The backups stored in it are not deleted."
+msgstr "Премахване на това местоназначение от разширението? Съхранените в него резервни копия не се изтриват."
+
+#: includes/class-admin.php:131
+msgid "Reload the page to see the restored site."
+msgstr "Презаредете страницата, за да видите възстановения сайт."
+
+#: includes/class-admin.php:175
+msgid "Storage"
+msgstr "Хранилище"
+
+#: includes/class-admin.php:176
+msgid "Import & migrate"
+msgstr "Внасяне и мигриране"
+
+#: includes/class-admin.php:177
+msgid "Settings"
+msgstr "Настройки"
+
+#: includes/class-admin.php:203
+msgid "Sections"
+msgstr "Раздели"
+
+#: includes/class-admin.php:251
+msgid "Google Drive is connected."
+msgstr "Google Drive е свързан."
+
+#: includes/class-admin.php:255
+msgid "Google Drive could not be connected."
+msgstr "Не можа да се установи връзка с Google Drive."
+
+#: includes/class-admin.php:270
+msgid "Details"
+msgstr "Подробности"
+
+#: includes/class-admin.php:283
+#: includes/class-admin.php:302
+msgid "Back up now"
+msgstr "Архивиране сега"
+
+#. translators: %s: link to the Storage tab.
+#: includes/class-admin.php:288
+#, php-format
+msgid "Backups go to your own storage, not this server. <a href=\"%s\">Connect your storage</a> first."
+msgstr "Резервните копия отиват във вашето собствено хранилище, а не на този сървър. Първо <a href=\"%s\">свържете хранилището си</a>."
+
+#: includes/class-admin.php:296
+msgid "What to back up"
+msgstr "Какво да се архивира"
+
+#: includes/class-admin.php:297
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files and database"
+msgstr "Файлове и база данни"
+
+#: includes/class-admin.php:298
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Database only"
+msgstr "Само база данни"
+
+#: includes/class-admin.php:299
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files only"
+msgstr "Само файлове"
+
+#: includes/class-admin.php:301
+msgid "Note (optional)"
+msgstr "Бележка (по избор)"
+
+#: includes/class-admin.php:304
+msgid "Each part is uploaded to your storage and removed from this server before the next one is made, so the backup never takes up room on your hosting."
+msgstr "Всяка част се качва във вашето хранилище и се премахва от този сървър, преди да бъде създадена следващата, така че резервното копие никога не заема място на вашия хостинг."
+
+#: includes/class-admin.php:307
+msgid "Your backups"
+msgstr "Вашите резервни копия"
+
+#: includes/class-admin.php:307
+msgid "Refresh"
+msgstr "Обновяване"
+
+#: includes/class-admin.php:311
+msgid "Restore this backup"
+msgstr "Възстановете това резервно копие"
+
+#: includes/class-admin.php:314
+msgid "Passphrase"
+msgstr "Паролна фраза"
+
+#: includes/class-admin.php:315
+msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
+msgstr "Разбирам, че това заменя файловете и базата данни на този сайт с тези от резервното копие. Файловете, които не са в резервното копие, се запазват."
+
+#: includes/class-admin.php:321
+msgid "Recent activity"
+msgstr "Последна активност"
+
+#: includes/class-admin.php:327
+#: includes/class-backup-job.php:104
+msgid "Backup"
+msgstr "Резервно копие"
+
+#: includes/class-admin.php:327
+msgid "Restore / import"
+msgstr "Възстановяване / импортиране"
+
+#: includes/class-admin.php:348
+msgid "Running"
+msgstr "Работи"
+
+#: includes/class-admin.php:360
+msgid "Your storage"
+msgid_plural "Your storage destinations"
+msgstr[0] "Вашето хранилище"
+msgstr[1] "Вашите дестинации за съхранение"
+
+#: includes/class-admin.php:362
+msgid "No storage yet. Choose where your backups go below."
+msgstr "Все още няма хранилище. Изберете по-долу къде да отиват вашите резервни копия."
+
+#: includes/class-admin.php:372
+msgid "Ready"
+msgstr "Готово"
+
+#: includes/class-admin.php:372
+msgid "Not connected"
+msgstr "Няма връзка"
+
+#: includes/class-admin.php:373
+msgid "Connect"
+msgstr "Свързване"
+
+#: includes/class-admin.php:374
+msgid "Test"
+msgstr "Тест"
+
+#: includes/class-admin.php:375
+msgid "Edit"
+msgstr "Редактиране"
+
+#: includes/class-admin.php:376
+msgid "Remove"
+msgstr "Премахване"
+
+#: includes/class-admin.php:382
+msgid "Add storage"
+msgstr "Добавяне на хранилище"
+
+#: includes/class-admin.php:386
+msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
+msgstr "Резервните копия се изпращат до едно местоназначение за съхранение. За да използвате друго, редактирайте или премахнете горното."
+
+#: includes/class-admin.php:397
+msgid "Kind of storage"
+msgstr "Вид хранилище"
+
+#: includes/class-admin.php:402
+msgid "Name (for you)"
+msgstr "Име (за вас)"
+
+#: includes/class-admin.php:404
+msgid "Provider"
+msgstr "Доставчик"
+
+#: includes/class-admin.php:409
+msgid "Cloudflare account id"
+msgstr "Идент. номер на акаунт в Cloudflare"
+
+#: includes/class-admin.php:410
+msgid "Endpoint address"
+msgstr "Адрес на крайна точка"
+
+#: includes/class-admin.php:411
+msgid "Region"
+msgstr "Регион"
+
+#: includes/class-admin.php:412
+msgid "Bucket"
+msgstr "Бъкет"
+
+#: includes/class-admin.php:413
+msgid "Access key id"
+msgstr "Идент. на ключ за достъп"
+
+#: includes/class-admin.php:414
+msgid "Secret access key"
+msgstr "Таен ключ за достъп"
+
+#: includes/class-admin.php:414
+msgid "Leave empty to keep the saved key"
+msgstr "Оставете празно, за да запазите записания ключ"
+
+#: includes/class-admin.php:415
+msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
+msgstr "За Cloudflare R2: в таблото за управление на Cloudflare отворете R2, създайте кофа (bucket), след това „Manage R2 API tokens“ → създайте токен с Object Read & Write за тази кофа и копирайте тук access key id и secret."
+
+#: includes/class-admin.php:418
+msgid "Dropbox app key"
+msgstr "Ключ на приложението в Dropbox"
+
+#: includes/class-admin.php:419
+msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
+msgstr "Създайте приложение на dropbox.com/developers/apps (Scoped access, App folder) с разрешенията files.content.read, files.content.write и files.metadata.read и копирайте неговия App key тук. Запазете, след което натиснете Connect."
+
+#: includes/class-admin.php:421
+msgid "OAuth client id"
+msgstr "Идент. номер на OAuth клиент"
+
+#: includes/class-admin.php:422
+msgid "OAuth client secret"
+msgstr "Тайна на OAuth клиента"
+
+#: includes/class-admin.php:422
+msgid "Leave empty to keep the saved secret"
+msgstr "Оставете празно, за да запазите записаната тайна"
+
+#: includes/class-admin.php:423
+msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
+msgstr "В Google Cloud Console активирайте Google Drive API, след което създайте OAuth клиент от тип „Web application“ с този адрес като упълномощен URI за пренасочване:"
+
+#: includes/class-admin.php:423
+msgid "Save, then press Connect. The plugin only sees the files it creates."
+msgstr "Запазете, след което натиснете „Свързване“. Разширението вижда само файловете, които самото то създава."
+
+#: includes/class-admin.php:425
+msgid "Folder inside the storage (optional)"
+msgstr "Папка в хранилището (по избор)"
+
+#: includes/class-admin.php:426
+msgid "Save storage"
+msgstr "Спестете дисково пространство"
+
+#: includes/class-admin.php:436
+msgid "Import a backup from another plugin or host"
+msgstr "Импортиране на резервно копие от друго разширение или хостинг"
+
+#: includes/class-admin.php:437
+msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
+msgstr "Внесете сайт от резервно копие, направено с UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate или всеки zip/tar архив на WordPress сайт с неговия .sql дъмп. Съдържанието отива в wp-content, а базата данни заменя тази на този сайт; адресите се променят към тези на този сайт автоматично."
+
+#: includes/class-admin.php:439
+msgid "Upload from your computer"
+msgstr "Качване от вашия компютър"
+
+#: includes/class-admin.php:439
+msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
+msgstr "Изберете всички файлове от резервното копие наведнъж (UpdraftPlus създава няколко). Големите файлове се изпращат на малки части, така че лимитът за качване на Вашия хостинг не се прилага."
+
+#: includes/class-admin.php:440
+msgid "Or from links (Google Drive, Dropbox or any download address)"
+msgstr "Или от връзки (Google Drive, Dropbox или друг адрес за изтегляне)"
+
+#: includes/class-admin.php:440
+msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
+msgstr "По една връзка на ред. За Google Drive и Dropbox споделете файла с „всеки с връзката“ и поставете тази връзка; след това изключете споделянето отново."
+
+#: includes/class-admin.php:442
+msgid "Or a file already on this server"
+msgstr "Или файл, който вече е на този сървър"
+
+#. translators: %s: folder path.
+#: includes/class-admin.php:450
+#, php-format
+msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
+msgstr "Качете архивите чрез FTP или файловия мениджър на вашия хостинг в %s и презаредете тази страница."
+
+#: includes/class-admin.php:455
+msgid "Or a deploy code from another site"
+msgstr "Или код за внедряване от друг сайт"
+
+#: includes/class-admin.php:455
+msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
+msgstr "Ако друг сайт ви е предоставил код за внедряване от Zinn® Backups, поставете го тук, за да копирате това резервно копие на този сайт, без да споделяте ключовете му за съхранение. Кодът е валиден няколко часа; отнасяйте се към него като към парола."
+
+#: includes/class-admin.php:455
+msgid "Passphrase (only if that backup is encrypted)"
+msgstr "Парола (само ако това резервно копие е криптирано)"
+
+#: includes/class-admin.php:456
+#: includes/class-admin.php:458
+msgid "Import"
+msgstr "Импортиране"
+
+#: includes/class-admin.php:457
+msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
+msgstr "Разбирам, че внасянето заменя съдържанието и базата данни на този сайт. След това влезте с акаунт от внесения сайт."
+
+#: includes/class-admin.php:460
+msgid "Moving to Zinn® hosting?"
+msgstr "Премествате се към хостинг на Zinn®?"
+
+#: includes/class-admin.php:460
+msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
+msgstr "Zinn Digital® може да премести сайта Ви от стария Ви хост вместо Вас. Ако старият Ви хост не Ви предоставя достъп до FTP, SSH или контролния панел, инсталирайте Zinn® Migrate на стария сайт; тя създава един архив, който можете да импортирате тук или да предадете на Zinn®."
+
+#: includes/class-admin.php:470
+msgid "What goes into a backup"
+msgstr "Какво съдържа резервното копие"
+
+#: includes/class-admin.php:471
+msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
+msgstr "Включване на собствените файлове на WordPress (wp-admin, wp-includes). Обикновено не е необходимо: WordPress винаги може да бъде преинсталиран."
+
+#: includes/class-admin.php:472
+msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
+msgstr "Също така изключете тези папки или файлове (по един на ред, относително спрямо папката на WordPress)"
+
+#: includes/class-admin.php:473
+msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
+msgstr "Винаги се изключват: кешове, работно пространство за обновления и собствените архивни папки на други разширения за резервни копия:"
+
+#: includes/class-admin.php:474
+msgid "Size of each part (MB)"
+msgstr "Размер на всяка част (MB)"
+
+#: includes/class-admin.php:479
+msgid "Save settings"
+msgstr "Запазване на настройките"
+
+#: includes/class-archiver.php:52
+msgid "A backup part could not be opened for writing. Check that wp-content has free space."
+msgstr "Част от резервното копие не можа да бъде отворена за запис. Проверете дали в wp-content има свободно място."
+
+#: includes/class-archiver.php:113
+msgid "A backup part could not be written. Check that wp-content has free space."
+msgstr "Част от резервното копие не можа да бъде записана. Проверете дали има свободно място в wp-content."
+
+#: includes/class-backup-job.php:42
+msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
+msgstr "Първо свържете дестинация за съхранение в раздела Storage: резервните копия се съхраняват във вашето собствено хранилище, а не на този сървър."
+
+#: includes/class-backup-job.php:45
+#: includes/class-restore-job.php:108
+msgid "Multisite networks are not supported yet."
+msgstr "Мрежите от сайтове (Multisite) все още не се поддържат."
+
+#: includes/class-backup-job.php:48
+msgid "This server’s PHP has no ZipArchive extension. Ask your host to enable it."
+msgstr "PHP на този сървър няма разширение ZipArchive. Помолете вашия хостинг доставчик да го активира."
+
+#: includes/class-backup-job.php:98
+msgid "Starting"
+msgstr "Стартиране"
+
+#: includes/class-backup-job.php:99
+msgid "Listing files"
+msgstr "Извеждане на файловете в списък"
+
+#: includes/class-backup-job.php:100
+msgid "Backing up the database"
+msgstr "Създаване на резервно копие на базата данни"
+
+#: includes/class-backup-job.php:101
+msgid "Packing files"
+msgstr "Опаковане на файловете"
+
+#: includes/class-backup-job.php:102
+msgid "Uploading to your storage"
+msgstr "Качване във вашето хранилище"
+
+#: includes/class-backup-job.php:103
+msgid "Finishing"
+msgstr "Завършване"
+
+#: includes/class-backup-job.php:123
+msgid "The backup reached an unknown stage."
+msgstr "Резервното копие достигна неизвестен етап."
+
+#. translators: %s: backup id.
+#: includes/class-backup-job.php:143
+#, php-format
+msgid "Backup %s started."
+msgstr "Архивирането на %s започна."
+
+#. translators: 1: number of files, 2: total size.
+#: includes/class-backup-job.php:168
+#, php-format
+msgid "Found %1$s files (%2$s)."
+msgstr "Намерени са %1$s файла (%2$s)."
+
+#. translators: 1: number of tables, 2: number of rows, 3: size.
+#: includes/class-backup-job.php:209
+#, php-format
+msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
+msgstr "База от данни: %1$d таблици, %2$s реда, %3$s компресирани."
+
+#. translators: 1: size of the backup, 2: number of destinations.
+#: includes/class-backup-job.php:473
+#, php-format
+msgid "Backup complete: %1$s stored in %2$d destination."
+msgid_plural "Backup complete: %1$s stored in %2$d destinations."
+msgstr[0] "Резервното копие е завършено: %1$s се съхранява в %2$d дестинация."
+msgstr[1] "Архивирането завърши: %1$s се съхранява в %2$d дестинации."
+
+#: includes/class-backup-job.php:503
+msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
+msgstr "Някои вече качени части не можаха да бъдат премахнати от вашето хранилище; те се намират в папка за незавършени резервни копия и никога не се предлагат за възстановяване."
+
+#: includes/class-backup-job.php:520
+msgid "A storage destination was removed while the backup was running."
+msgstr "Целта за съхранение беше премахната, докато архивирането се изпълняваше."
+
+#: includes/class-catalog.php:134
+msgid "That is not a backup folder."
+msgstr "Това не е папка за резервно копие."
+
+#: includes/class-catalog.php:138
+#: includes/class-restore-job.php:186
+msgid "That storage destination is no longer saved on this site."
+msgstr "Това местоположение за съхранение вече не е запазено на този сайт."
+
+#: includes/class-catalog.php:141
+msgid "Later incremental backups are built on this one. Delete those first."
+msgstr "По-късните инкрементални резервни копия са изградени върху това. Първо изтрийте тях."
+
+#: includes/class-crypto.php:88
+msgid "This file is not an encrypted Zinn® Backups file."
+msgstr "Този файл не е шифрован файл на Zinn® Backups."
+
+#: includes/class-crypto.php:103
+msgid "The backup could not be decrypted: the passphrase is wrong or the file is damaged."
+msgstr "Резервното копие не можа да бъде декриптирано: паролата е грешна или файлът е повреден."
+
+#: includes/class-crypto.php:112
+msgid "The encrypted backup file is incomplete."
+msgstr "Шифрованият архивен файл е непълен."
+
+#: includes/class-database-dumper.php:67
+msgid "The database file could not be written. Check that wp-content has free space."
+msgstr "Файлът на базата данни не можа да бъде записан. Проверете дали има свободно място в wp-content."
+
+#: includes/class-deploy-code.php:41
+msgid "That is not a deploy code. A deploy code starts with zbdeploy1."
+msgstr "Това не е код за внедряване. Кодът за внедряване започва с zbdeploy1."
+
+#: includes/class-deploy-code.php:46
+#: includes/class-deploy-code.php:67
+#: includes/class-deploy-code.php:76
+msgid "That deploy code is damaged. Copy it again from the other site."
+msgstr "Този код за внедряване е повреден. Копирайте го отново от другия сайт."
+
+#: includes/class-deploy-code.php:56
+msgid "The deploy code has expired or its backup was deleted. Make a new code on the other site."
+msgstr "Кодът за внедряване е изтекъл или резервното му копие е изтрито. Създайте нов код на другия сайт."
+
+#: includes/class-deploy-code.php:60
+msgid "That deploy code does not point at a Zinn® Backups backup."
+msgstr "Този код за внедряване не сочи към резервно копие на Zinn® Backups."
+
+#: includes/class-deploy-code.php:63
+msgid "The deploy code has expired. Make a new code on the other site."
+msgstr "Кодът за внедряване е изтекъл. Създайте нов код на другия сайт."
+
+#: includes/class-downloader.php:83
+msgid "The server stopped honouring partial downloads. Start the import again."
+msgstr "Сървърът спря да приема частично изтегляне. Стартирайте импортирането отново."
+
+#: includes/class-downloader.php:87
+msgid "The link opened a web page instead of a file. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link."
+msgstr "Връзката отвори уеб страница вместо файл. За Google Drive и Dropbox споделете файла с „всеки с връзката“ и поставете тази връзка."
+
+#. translators: %d: HTTP status code.
+#: includes/class-downloader.php:96
+#, php-format
+msgid "The link answered with HTTP %d."
+msgstr "Връзката отговори с HTTP %d."
+
+#: includes/class-file-scanner.php:53
+msgid "The file list could not be written."
+msgstr "Списъкът с файлове не можа да бъде записан."
+
+#. translators: %s: the network error message.
+#: includes/class-http.php:46
+#, php-format
+msgid "The storage service could not be reached: %s"
+msgstr "Услугата за съхранение не можа да бъде достигната: %s"
+
+#. translators: 1: service name, 2: HTTP status code, 3: the service's own error text.
+#: includes/class-http.php:78
+#, php-format
+msgid "%1$s answered with HTTP %2$d: %3$s"
+msgstr "%1$s отговори с HTTP %2$d: %3$s"
+
+#: includes/class-http.php:113
+msgid "no details given"
+msgstr "Няма предоставени подробности"
+
+#: includes/class-plugin.php:96
+msgid "You are not allowed to manage backups."
+msgstr "Нямате право да управлявате резервни копия."
+
+#: includes/class-plugin.php:196
+msgid "Tick the box to confirm that the restore replaces this site’s files and database."
+msgstr "Поставете отметка в квадратчето, за да потвърдите, че възстановяването ще замени файловете и базата данни на този сайт."
+
+#: includes/class-plugin.php:271
+#: includes/class-plugin.php:290
+msgid "Save the destination first."
+msgstr "Първо запазете дестинацията."
+
+#: includes/class-plugin.php:274
+msgid "Connected: a test file was written and removed."
+msgstr "Свързано: тестов файл беше записан и премахнат."
+
+#: includes/class-plugin.php:306
+msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
+msgstr "Първо въведете ключа на вашето Dropbox приложение (вижте стъпките до формуляра)."
+
+#: includes/class-plugin.php:319
+msgid "This kind of storage does not sign in."
+msgstr "Този вид хранилище не влиза в профила."
+
+#: includes/class-plugin.php:336
+msgid "The sign-in expired. Press Connect again."
+msgstr "Срокът за влизане изтече. Натиснете Свързване отново."
+
+#: includes/class-plugin.php:342
+msgid "Dropbox is connected."
+msgstr "Dropbox е свързан."
+
+#: includes/class-plugin.php:411
+msgid "Settings saved."
+msgstr "Настройките са запазени."
+
+#: includes/class-plugin.php:427
+#: includes/class-runner.php:64
+msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
+msgstr "В момента се изпълнява друго резервно копие, възстановяване или импортиране. Изчакайте да завърши или го отменете."
+
+#: includes/class-plugin.php:453
+msgid "The upload was not started properly. Start again."
+msgstr "Качването не започна правилно. Започнете отново."
+
+#: includes/class-plugin.php:457
+msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
+msgstr "Частта не пристигна. Вашият сървър може да ограничава размера на качванията; опитайте отново."
+
+#: includes/class-plugin.php:481
+msgid "Tick the box to confirm that the import replaces this site’s content and database."
+msgstr "Поставете отметка в квадратчето, за да потвърдите, че импортирането ще замени съдържанието и базата данни на този сайт."
+
+#: includes/class-plugin.php:535
+msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
+msgstr "Изберете архив за импортиране: качете го, поставете връзка или изберете такъв от папката за импортиране."
+
+#. translators: 1: a percentage, e.g. 50. 2: a Pro plugin's name.
+#: includes/class-pro-discount.php:132
+#, php-format
+msgid "Hosting customer? Get %1$d%% off %2$s"
+msgstr "Клиент на хостинг? Вземете %1$d%% отстъпка от %2$s"
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:141
+#, php-format
+msgid "As a Zinn Digital® hosting customer you get a personal code for %d%% off your first payment. Renewals are at the normal price."
+msgstr "Като клиент на хостинг от Zinn Digital® получавате личен код за %d%% отстъпка от първото Ви плащане. Подновяванията са на стандартната цена."
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:156
+#, php-format
+msgid "Get my %d%% code and go to checkout"
+msgstr "Вземете моя %d%% код и преминете към плащане"
+
+#: includes/class-pro-discount.php:171
+msgid "Sorry, you are not allowed to do that."
+msgstr "Съжаляваме, но нямате право да правите това."
+
+#: includes/class-pro-discount.php:222
+msgid "This discount is for customers with a paid hosting plan in good standing. Free trials do not qualify."
+msgstr "Тази отстъпка е за клиенти с платен хостинг план в добро състояние. Безплатните пробни периоди не отговарят на условията."
+
+#: includes/class-pro-discount.php:225
+msgid "You have already used your hosting-customer discount for this plugin."
+msgstr "Вече използвахте своята отстъпка за хостинг клиент за тази приставка."
+
+#: includes/class-pro-discount.php:228
+msgid "We could not get your code just now. Please try again in a few minutes."
+msgstr "Не успяхме да получим Вашия код току-що. Моля, опитайте отново след няколко минути."
+
+#: includes/class-restore-job.php:128
+msgid "Reading the backup"
+msgstr "Четене на резервното копие"
+
+#: includes/class-restore-job.php:129
+msgid "Downloading the archive"
+msgstr "Изтегляне на архива"
+
+#: includes/class-restore-job.php:130
+msgid "Recognising the archive"
+msgstr "Разпознаване на архива"
+
+#: includes/class-restore-job.php:131
+msgid "Restoring files"
+msgstr "Възстановяване на файлове"
+
+#: includes/class-restore-job.php:132
+msgid "Downloading the database"
+msgstr "Изтегляне на базата данни"
+
+#: includes/class-restore-job.php:133
+msgid "Restoring the database"
+msgstr "Възстановяване на базата данни"
+
+#: includes/class-restore-job.php:134
+msgid "Updating the site address"
+msgstr "Обновяване на адреса на сайта"
+
+#: includes/class-restore-job.php:135
+msgid "Switching to the restored database"
+msgstr "Превключване към възстановената база данни"
+
+#: includes/class-restore-job.php:158
+msgid "The restore reached an unknown stage."
+msgstr "Възстановяването достигна неизвестен етап."
+
+#: includes/class-restore-job.php:201
+msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
+msgstr "Тази папка не съдържа пълно резервно копие от Zinn® Backups (манифестът липсва)."
+
+#: includes/class-restore-job.php:204
+msgid "This backup is encrypted. Enter its passphrase to restore it."
+msgstr "Това резервно копие е криптирано. Въведете неговата паролна фраза, за да го възстановите."
+
+#. translators: %s: backup id.
+#: includes/class-restore-job.php:219
+#, php-format
+msgid "This incremental backup needs backup %s, which is no longer in the storage."
+msgstr "Това инкрементно резервно копие изисква резервно копие %s, което вече не се намира в хранилището."
+
+#. translators: 1: backup date, 2: number of parts.
+#: includes/class-restore-job.php:266
+#, php-format
+msgid "Restoring the backup of %1$s (%2$d file parts)."
+msgstr "Възстановяване на резервното копие на %1$s (%2$d части на файла)."
+
+#. translators: 1: number of files, 2: example paths.
+#: includes/class-restore-job.php:340
+#, php-format
+msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
+msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
+msgstr[0] "Файлът %1$s не можа да бъде презаписан, тъй като този сайт няма разрешение да го променя, и беше оставен в първоначалния си вид: %2$s"
+msgstr[1] "%1$s файла не можаха да бъдат презаписани, тъй като този сайт няма разрешение да ги променя, и бяха оставени без промяна: %2$s"
+
+#. translators: %s: number of files.
+#: includes/class-restore-job.php:359
+#, php-format
+msgid "Restored %s files."
+msgstr "Възстановени са %s файла."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:422
+#, php-format
+msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
+msgstr "%s не съответства на контролната си сума след изтеглянето. Копието в хранилището може да е повредено."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:493
+#, php-format
+msgid "%s did not arrive. Upload it again."
+msgstr "%s не пристигна. Моля, качете го отново."
+
+#. translators: %s: list of backup formats.
+#: includes/class-restore-job.php:515
+#, php-format
+msgid "Recognised: %s."
+msgstr "Разпознато: %s."
+
+#. translators: 1: number of files, 2: number of files skipped.
+#: includes/class-restore-job.php:542
+#, php-format
+msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
+msgstr "Импортирани са %1$s файла в wp-content (пропуснати са %2$s: кешове, drop-in разширения и папки на други разширения за резервни копия)."
+
+#: includes/class-restore-job.php:588
+msgid "The archive has no database dump, so only files were imported."
+msgstr "Архивът не съдържа копие на базата данни, затова бяха импортирани само файлове."
+
+#. translators: %d: number of tables.
+#: includes/class-restore-job.php:598
+#, php-format
+msgid "Database restored into %d temporary tables."
+msgstr "Базата данни е възстановена в %d временни таблици."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:615
+#, php-format
+msgid "%s has no WordPress tables in it and was skipped."
+msgstr "%s не съдържа таблици на WordPress и беше прескочен."
+
+#: includes/class-restore-job.php:653
+#: includes/class-table-swap.php:237
+msgid "The backup’s database has no WordPress tables, so nothing was replaced."
+msgstr "Базата данни на резервното копие не съдържа таблици на WordPress, затова нищо не беше заменено."
+
+#: includes/class-restore-job.php:658
+msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
+msgstr "Това резервно копие е на мрежа от сайтове (multisite). Възстановяването на мрежа в единичен сайт не се поддържа."
+
+#. translators: 1: old address, 2: this site's address.
+#: includes/class-restore-job.php:683
+#, php-format
+msgid "Moving the content from %1$s to %2$s."
+msgstr "Преместване на съдържанието от %1$s в %2$s."
+
+#: includes/class-restore-job.php:809
+msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
+msgstr "Възстановяването завърши. Ако сте излезли от профила си, влезте с акаунт от възстановения сайт."
+
+#: includes/class-restore-job.php:810
+msgid "Restore complete."
+msgstr "Възстановяването завърши."
+
+#. translators: 1: error message, 2: seconds until the retry.
+#: includes/class-runner.php:160
+#, php-format
+msgid "%1$s — trying again in %2$d seconds."
+msgstr "%1$s — повторен опит след %2$d секунди."
+
+#: includes/class-runner.php:189
+msgid "Cancelled."
+msgstr "Отменено."
+
+#: includes/class-settings.php:145
+msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
+msgstr "Резервните копия отиват в едно местоназначение за съхранение. Редактирайте или премахнете съществуващото, за да използвате друго."
+
+#: includes/class-sql-importer.php:84
+msgid "The database file could not be opened."
+msgstr "Файлът на базата данни не можа да бъде отворен."
+
+#. translators: 1: database error, 2: start of the statement.
+#: includes/class-sql-importer.php:262
+#, php-format
+msgid "The database refused a statement from the backup: %1$s (%2$s…)"
+msgstr "Базата данни отхвърли заявка от резервното копие: %1$s (%2$s…)"
+
+#. translators: %s: database error.
+#: includes/class-table-swap.php:256
+#, php-format
+msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
+msgstr "Възстановените таблици не можаха да бъдат разменени: %s. Вашият сайт не е променен."
+
+#: includes/class-work-dir.php:43
+msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
+msgstr "Няма папка с права за запис за временните архивни файлове. Направете wp-content с права за запис и опитайте отново."
+
+#: includes/class-work-dir.php:90
+msgid "Could not create a folder for this job."
+msgstr "Не можа да се създаде папка за тази задача."
+
+#. translators: %s: the Zinn Digital trade mark, which is not translated.
+#: includes/class-zinn-backups-promo.php:349
+#: includes/class-zinn-backups-promo.php:407
+#, php-format
+msgid "%s — guides and services"
+msgstr "%s — ръководства и услуги"
+
+#: includes/class-zinn-backups-promo.php:364
+msgid "User guides"
+msgstr "Ръководства за потребителя"
+
+#. translators: %s: this plugin's name, e.g. "Zinn® Cache".
+#: includes/class-zinn-backups-promo.php:414
+#, php-format
+msgid "Read the %s user guide"
+msgstr "Прочетете ръководството за потребителя на %s"
+
+#: includes/class-zinn-backups-promo.php:422
+msgid "Hide this"
+msgstr "Скриване на това"
+
+#: includes/class-zinn-backups-promo.php:535
+msgid "Zinn® hosting for WordPress"
+msgstr "Zinn® хостинг за WordPress"
+
+#: includes/class-zinn-backups-promo.php:536
+msgid "LiteSpeed, daily backups, free migration and a control panel built for people who run more than one site."
+msgstr "LiteSpeed, ежедневни резервни копия, безплатна миграция и контролен панел, създаден за хора, които управляват повече от един сайт."
+
+#: includes/class-zinn-backups-promo.php:542
+msgid "The Zinn® marketplace"
+msgstr "Пазарът на Zinn®"
+
+#: includes/class-zinn-backups-promo.php:543
+msgid "Buy and sell established sites, domains and link placements, with the money held safely until both sides are happy."
+msgstr "Купувайте и продавайте утвърдени сайтове, домейни и разполагания на връзки, като парите се пазят надеждно, докато двете страни не останат доволни."
+
+#: includes/class-zinn-backups-promo.php:590
+msgid "Zinn Hub® — hire people who do this for a living"
+msgstr "Zinn Hub® — наемете хора, за които това е професия"
+
+#: includes/class-zinn-backups-promo.php:591
+msgid "Our global freelance marketplace: browse over 10,000 ready-made services from writers, designers, developers and SEOs, or post a project and let them bid."
+msgstr "Нашият глобален пазар за фрийлансъри: разгледайте над 10 000 готови услуги от автори, дизайнери, разработчици и SEO специалисти, или публикувайте проект и им позволете да наддават."
+
+#: includes/class-zinn-backups-updater.php:253
+msgid "See the Zinn Digital® release notes."
+msgstr "Вижте бележките по изданието на Zinn Digital®."
+
+#: includes/class-zinn-backups-updater.php:302
+msgid "The Zinn® update service did not issue a download link for this update. Check that this site can reach the Zinn® platform, then try again."
+msgstr "Услугата за обновяване на Zinn® не предостави връзка за изтегляне на това обновление. Проверете дали този сайт има достъп до платформата на Zinn®, след което опитайте отново."
+
+#. translators: %s: the download error reported by WordPress.
+#: includes/class-zinn-backups-updater.php:316
+#, php-format
+msgid "The update could not be downloaded from the Zinn® update service (%s). Try again in a few minutes."
+msgstr "Актуализацията не можа да бъде изтеглена от услугата за актуализиране на Zinn® (%s). Опитайте отново след няколко минути."
+
+#: includes/class-zinn-backups-updater.php:330
+msgid "The downloaded update failed its integrity check and was not installed."
+msgstr "Изтегленото обновяване не премина проверката за цялостност и не беше инсталирано."
+
+#: includes/import/class-archive-reader.php:147
+msgid "The zip archive could not be opened. It may be damaged or incomplete."
+msgstr "Zip архивът не можа да бъде отворен. Може да е повреден или непълен."
+
+#: includes/import/class-archive-reader.php:311
+msgid "This .wpress file uses a format we cannot read (it may be compressed or encrypted by All-in-One WP Migration). Export it again without encryption."
+msgstr "Този .wpress файл използва формат, който не можем да разчетем (възможно е да е компресиран или криптиран от All-in-One WP Migration). Моля, експортирайте го отново без криптиране."
+
+#: includes/import/class-formats.php:66
+msgid "This is a Duplicator “DupArchive” (.daf) file. In Duplicator, build the package again with the archive format set to ZIP, then import that."
+msgstr "Това е Duplicator „DupArchive“ (.daf) файл. В Duplicator изградете пакета отново със зададен архив формат ZIP, след което го импортирайте."
+
+#: includes/import/class-formats.php:69
+msgid "This UpdraftPlus database backup is encrypted. Decrypt it in UpdraftPlus (or turn off database encryption and back up again), then import it."
+msgstr "Това резервно копие на базата данни от UpdraftPlus е криптирано. Декриптирайте го в UpdraftPlus (или изключете криптирането на базата данни и направете ново резервно копие), след което го импортирайте."
+
+#: includes/import/class-formats.php:76
+msgid "Database dump"
+msgstr "Дъмп на базата данни"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:93
+#, php-format
+msgid "%s is not a backup archive we can read (zip, tar, tar.gz, .wpress, .sql or .sql.gz)."
+msgstr "%s не е архив с резервно копие, който можем да разчетем (zip, tar, tar.gz, .wpress, .sql или .sql.gz)."
+
+#: includes/import/class-formats.php:99
+msgid "Website archive"
+msgstr "Архив на уебсайта"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:123
+#, php-format
+msgid "%s has no WordPress content (no wp-content folder and no database dump) in it."
+msgstr "%s не съдържа никакво WordPress съдържание (няма папка wp-content и няма копие на базата данни)."
+
+#: includes/import/class-formats.php:155
+msgid "This .wpress file is encrypted or compressed by All-in-One WP Migration. Export it again with encryption and compression switched off, then import that."
+msgstr "Този .wpress файл е шифрован или компресиран от All-in-One WP Migration. Експортирайте го отново с изключени шифроване и компресиране, след което го импортирайте."
+
+#: includes/storage/class-destinations.php:62
+msgid "Other S3-compatible storage"
+msgstr "Друго S3-съвместимо хранилище"
+
+#: includes/storage/class-destinations.php:77
+msgid "Cloudflare R2, Amazon S3 or S3-compatible"
+msgstr "Cloudflare R2, Amazon S3 или съвместимо с S3"
+
+#: includes/storage/class-destinations.php:100
+msgid "The storage keys could not be read on this site. Enter the secret key again on the Storage tab."
+msgstr "Ключовете за съхранение не можаха да бъдат прочетени на този сайт. Въведете тайния ключ отново в раздела „Съхранение“."
+
+#: includes/storage/class-destinations.php:116
+msgid "This kind of storage is not known."
+msgstr "Този вид хранилище не е познат."
+
+#: includes/storage/class-destinations.php:168
+msgid "Choose a kind of storage."
+msgstr "Изберете вид хранилище."
+
+#: includes/storage/class-destinations.php:187
+msgid "Enter the bucket name and the access key."
+msgstr "Въведете името на кофата и ключа за достъп."
+
+#: includes/storage/class-destinations.php:190
+msgid "Enter your Cloudflare account id (or the full R2 endpoint)."
+msgstr "Въведете идентификатора на вашия профил в Cloudflare (или пълната крайна точка на R2)."
+
+#: includes/storage/class-destinations.php:193
+msgid "Enter the endpoint address of your storage."
+msgstr "Въведете адреса на крайната точка на вашето хранилище."
+
+#: includes/storage/class-destinations.php:202
+msgid "Enter the OAuth client id from your Google Cloud project."
+msgstr "Въведете OAuth client id от вашия проект в Google Cloud."
+
+#: includes/storage/class-dropbox.php:94
+msgid "Dropbox did not return a refresh token. Start the connection again."
+msgstr "Dropbox не върна токен за опресняване. Стартирайте свързването отново."
+
+#: includes/storage/class-dropbox.php:369
+msgid "Dropbox is not connected. Connect it again on the Storage tab."
+msgstr "Dropbox не е свързан. Свържете го отново от раздела „Съхранение“."
+
+#: includes/storage/class-google-drive.php:114
+msgid "Google did not return a refresh token. Remove this site from your Google account’s third-party access and connect again."
+msgstr "Google не върна токен за обновяване. Премахнете този сайт от достъпа на трети страни във вашия акаунт в Google и се свържете отново."
+
+#: includes/storage/class-google-drive.php:308
+msgid "That file is not in Google Drive any more."
+msgstr "Този файл вече не е в Google Drive."
+
+#: includes/storage/class-google-drive.php:477
+msgid "Google Drive is not connected. Connect it again on the Storage tab."
+msgstr "Google Drive не е свързан. Свържете го отново от раздела „Съхранение“."
+
+#: includes/storage/class-s3.php:85
+msgid "The storage service did not start the upload."
+msgstr "Услугата за съхранение не стартира качването."
+
+#: includes/storage/class-s3.php:352
+msgid "The storage service sent a reply that could not be read."
+msgstr "Услугата за съхранение изпрати отговор, който не може да бъде прочетен."
+
+#: includes/storage/class-s3.php:380
+msgid "A temporary backup file could not be read."
+msgstr "Временният архивен файл не можа да бъде прочетен."
+
+#: includes/storage/class-url-source.php:71
+msgid "A deploy link is read-only."
+msgstr "Връзката за внедряване е само за четене."
+
+#: includes/storage/class-url-source.php:106
+msgid "The deploy code has no link for a file this backup needs."
+msgstr "Кодът за внедряване не съдържа връзка за файл, необходим за това архивиране."
+
+#: includes/storage/class-url-source.php:115
+msgid "The deploy link"
+msgstr "Връзката за внедряване"

@@ -1,0 +1,1070 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zinn-backups\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: so_SO\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: zinn-backups\n"
+"X-Generator: scripts/wp-i18n-translate.py\n"
+
+#. Plugin Name of the plugin
+#: zinn-backups.php
+#: includes/class-admin.php:50
+msgid "Zinn® Backups"
+msgstr "Zinn® Backups"
+
+#. Plugin URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com/wordpress-plugins/zinn-backups"
+msgstr "https://zinndigital.com/wordpress-plugins/zinn-backups"
+
+#. Description of the plugin
+#: zinn-backups.php
+msgid "Backs up your WordPress files and database to your own storage — Dropbox, Google Drive, Cloudflare R2, Amazon S3 or any S3-compatible bucket — restores them in one go, and imports backups made by other backup and migration plugins."
+msgstr "Wuxuu faylashada iyo xog-ururintaada WordPress dib ugu kaydiyaa kaydkaaga gaarka ah — Dropbox, Google Drive, Cloudflare R2, Amazon S3 ama baaldi kasta oo ku habboon S3 — wuxuuna ku soo celiyaa hal mar, isagoo soo dhoofinaya kaydyo ay sameeyeen furmooyin kale oo kaydinta iyo wareejinta ah."
+
+#. Author of the plugin
+#: zinn-backups.php
+msgid "Neil Lock — CEO, Zinn Digital® Ltd"
+msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
+
+#. Author URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com"
+msgstr "https://zinndigital.com"
+
+#: includes/class-admin.php:69
+#: includes/class-admin.php:174
+msgid "Backups"
+msgstr "Kaydinta xogta"
+
+#: includes/class-admin.php:73
+msgid "Get Pro: schedules, several storages, encryption"
+msgstr "Hel Pro: jadwalada, dhowr kayd, siraynta"
+
+#: includes/class-admin.php:110
+msgid "Working…"
+msgstr "Shaqaynaya…"
+
+#: includes/class-admin.php:111
+#: includes/class-admin.php:345
+msgid "Finished"
+msgstr "Dhammaystiran"
+
+#: includes/class-admin.php:112
+#: includes/class-admin.php:346
+msgid "Failed"
+msgstr "Wuu fashilmay"
+
+#: includes/class-admin.php:113
+#: includes/class-admin.php:347
+msgid "Cancelled"
+msgstr "La baajiyay"
+
+#: includes/class-admin.php:114
+#: includes/class-admin.php:271
+#: includes/class-admin.php:316
+msgid "Cancel"
+msgstr "Kansal garee"
+
+#: includes/class-admin.php:115
+#: includes/class-admin.php:313
+#: includes/class-admin.php:316
+#: includes/class-restore-job.php:136
+msgid "Restore"
+msgstr "Soo celi"
+
+#: includes/class-admin.php:116
+msgid "Delete"
+msgstr "Tir"
+
+#: includes/class-admin.php:117
+msgid "Delete this backup from your storage? This cannot be undone."
+msgstr "Ma ka tirtirtaa kaydintan kaydsigaaga? Tan dib looma celin karo."
+
+#: includes/class-admin.php:118
+msgid "No backups yet. Press “Back up now” to make the first one."
+msgstr "Weli ma jiraan wax keyd ah. Riix \"Keydi hadda\" si aad u sameyso midka koowaad."
+
+#: includes/class-admin.php:119
+msgid "Reading your storage…"
+msgstr "Akhrinta keydkaaga…"
+
+#: includes/class-admin.php:120
+msgctxt "a complete backup, as opposed to an incremental one"
+msgid "Full backup"
+msgstr "Kayd buuxa"
+
+#: includes/class-admin.php:121
+msgctxt "a backup holding only what changed since an earlier one"
+msgid "Incremental backup"
+msgstr "Soo celin kordhaysa"
+
+#: includes/class-admin.php:122
+msgid "Encrypted"
+msgstr "La qariyey"
+
+#: includes/class-admin.php:123
+msgid "From another site"
+msgstr "Laga keenay goob kale"
+
+#: includes/class-admin.php:124
+msgid "Database"
+msgstr "Xog-ururin"
+
+#: includes/class-admin.php:125
+msgid "Files"
+msgstr "Faylasha"
+
+#. translators: 1: file name, 2: percentage uploaded.
+#: includes/class-admin.php:127
+#, php-format
+msgid "Uploading %1$s: %2$s%%"
+msgstr "Soo gelinta %1$s: %2$s%%"
+
+#: includes/class-admin.php:128
+msgid "Sign in to Dropbox in the window that opened, then paste the code Dropbox shows you:"
+msgstr "Gal Dropbox daaqadda furantay, ka dibna dheji koodhka Dropbox ku tusayo:"
+
+#: includes/class-admin.php:129
+msgid "Saved."
+msgstr "Waa la keydiyay."
+
+#: includes/class-admin.php:130
+msgid "Remove this destination from the plugin? The backups stored in it are not deleted."
+msgstr "Meeshan lagu kaydiyo ma laga saaraa furaha? Nuqullada kaydka ah ee ku dhex jira lama tirtirayo."
+
+#: includes/class-admin.php:131
+msgid "Reload the page to see the restored site."
+msgstr "Dib u soo rari bogga si aad u aragto goobta dib loo soo celiyay."
+
+#: includes/class-admin.php:175
+msgid "Storage"
+msgstr "Kaydinta"
+
+#: includes/class-admin.php:176
+msgid "Import & migrate"
+msgstr "Soo daji & guuri"
+
+#: includes/class-admin.php:177
+msgid "Settings"
+msgstr "Hagaajinta"
+
+#: includes/class-admin.php:203
+msgid "Sections"
+msgstr "Qaybaha"
+
+#: includes/class-admin.php:251
+msgid "Google Drive is connected."
+msgstr "Google Drive waa ku xidhan yahay."
+
+#: includes/class-admin.php:255
+msgid "Google Drive could not be connected."
+msgstr "Google Drive lama xiriirin karin."
+
+#: includes/class-admin.php:270
+msgid "Details"
+msgstr "Faahfaahinta"
+
+#: includes/class-admin.php:283
+#: includes/class-admin.php:302
+msgid "Back up now"
+msgstr "Hadda kaydi"
+
+#. translators: %s: link to the Storage tab.
+#: includes/class-admin.php:288
+#, php-format
+msgid "Backups go to your own storage, not this server. <a href=\"%s\">Connect your storage</a> first."
+msgstr "Kaydintu waxay aadaysaa kaydkaaga gaarka ah, ma aha adeegahan. Marka hore <a href=\"%s\">ku xidh kaydkaaga</a>."
+
+#: includes/class-admin.php:296
+msgid "What to back up"
+msgstr "Waxa la kaydinayo"
+
+#: includes/class-admin.php:297
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files and database"
+msgstr "Faylasha iyo xog-ururinta"
+
+#: includes/class-admin.php:298
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Database only"
+msgstr "Kaliya xog-ururin"
+
+#: includes/class-admin.php:299
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files only"
+msgstr "Faylasha kaliya"
+
+#: includes/class-admin.php:301
+msgid "Note (optional)"
+msgstr "Xusuusin (ikhtiyaari)"
+
+#: includes/class-admin.php:304
+msgid "Each part is uploaded to your storage and removed from this server before the next one is made, so the backup never takes up room on your hosting."
+msgstr "Qayb kasta waxaa lagu shubaa kaydkaaga waxaana laga saaraa seerfarkan ka hor inta aan la samayn qaybta xigta, markaa koobiga kaydku marnaba meel kama qaato martigelintaada."
+
+#: includes/class-admin.php:307
+msgid "Your backups"
+msgstr "Koobiyadaada kaydka ah"
+
+#: includes/class-admin.php:307
+msgid "Refresh"
+msgstr "Dib u cusboonaysii"
+
+#: includes/class-admin.php:311
+msgid "Restore this backup"
+msgstr "Soo celi kaydkan"
+
+#: includes/class-admin.php:314
+msgid "Passphrase"
+msgstr "Weerada sirta ah"
+
+#: includes/class-admin.php:315
+msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
+msgstr "Waan fahamsanahay in tani ay ku beddelayso faylashan iyo kaydka xogta goobtan kuwa ku jira kaydka koobiyeynta. Faylasha aan ku jirin kaydka koobiyeynta waa la xafidayaa."
+
+#: includes/class-admin.php:321
+msgid "Recent activity"
+msgstr "Dhaqdhaqaaqii ugu dambeeyay"
+
+#: includes/class-admin.php:327
+#: includes/class-backup-job.php:104
+msgid "Backup"
+msgstr "Kaydinta xogta"
+
+#: includes/class-admin.php:327
+msgid "Restore / import"
+msgstr "Soo celi / soo dhoofso"
+
+#: includes/class-admin.php:348
+msgid "Running"
+msgstr "Shaqeynaya"
+
+#: includes/class-admin.php:360
+msgid "Your storage"
+msgid_plural "Your storage destinations"
+msgstr[0] "Kaydintaada"
+msgstr[1] "Goobahaaga kaydinta"
+
+#: includes/class-admin.php:362
+msgid "No storage yet. Choose where your backups go below."
+msgstr "Weli ma jirto kayd. Hoos ka dooro meesha ay ku soconayaan kaydintaadu."
+
+#: includes/class-admin.php:372
+msgid "Ready"
+msgstr "Diyaar"
+
+#: includes/class-admin.php:372
+msgid "Not connected"
+msgstr "Kuma xirna"
+
+#: includes/class-admin.php:373
+msgid "Connect"
+msgstr "Ku xir"
+
+#: includes/class-admin.php:374
+msgid "Test"
+msgstr "Tijaabi"
+
+#: includes/class-admin.php:375
+msgid "Edit"
+msgstr "Wax ka beddel"
+
+#: includes/class-admin.php:376
+msgid "Remove"
+msgstr "Ka saar"
+
+#: includes/class-admin.php:382
+msgid "Add storage"
+msgstr "Ku dar kaydinta"
+
+#: includes/class-admin.php:386
+msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
+msgstr "Kaydintu waxay aadaan hal meel oo kaydin ah. Si aad mid kale u isticmaasho, wax ka beddel ama ka saar kan sare."
+
+#: includes/class-admin.php:397
+msgid "Kind of storage"
+msgstr "Nooca kaydinta"
+
+#: includes/class-admin.php:402
+msgid "Name (for you)"
+msgstr "Magaca (adiga kuu gaar ah)"
+
+#: includes/class-admin.php:404
+msgid "Provider"
+msgstr "Bixiye"
+
+#: includes/class-admin.php:409
+msgid "Cloudflare account id"
+msgstr "Aqoonsiga koontada Cloudflare"
+
+#: includes/class-admin.php:410
+msgid "Endpoint address"
+msgstr "Cinwaanka barta dhamaadka"
+
+#: includes/class-admin.php:411
+msgid "Region"
+msgstr "Gobol"
+
+#: includes/class-admin.php:412
+msgid "Bucket"
+msgstr "Baaldiga"
+
+#: includes/class-admin.php:413
+msgid "Access key id"
+msgstr "Aqoonsiga furaha gelitaanka"
+
+#: includes/class-admin.php:414
+msgid "Secret access key"
+msgstr "Furaha gelitaanka qarsoodiga ah"
+
+#: includes/class-admin.php:414
+msgid "Leave empty to keep the saved key"
+msgstr "Faaruq uga tag si aad u hayso furaha la kaydiyay"
+
+#: includes/class-admin.php:415
+msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
+msgstr "Wixii ku saabsan Cloudflare R2: gudaha dashboard-ka Cloudflare ka fur R2, samee baaldi (bucket), kaddibna “Manage R2 API tokens” → u samee token leh Object Read & Write baaldigaas, oo halkan ku koobiyeey aqoonsiga furaha gelitaanka (access key id) iyo sirta."
+
+#: includes/class-admin.php:418
+msgid "Dropbox app key"
+msgstr "Furaha abka Dropbox"
+
+#: includes/class-admin.php:419
+msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
+msgstr "Ka samee barnaamij dropbox.com/developers/apps (Scoped access, App folder) adigoo siinaya rukhsadaha files.content.read, files.content.write iyo files.metadata.read, ka dibna halkaan ku soo koobi App key-giisa. Keydi, ka dibna riix Connect."
+
+#: includes/class-admin.php:421
+msgid "OAuth client id"
+msgstr "Aqoonsiga macmiilka OAuth"
+
+#: includes/class-admin.php:422
+msgid "OAuth client secret"
+msgstr "Sirta macmiilka OAuth"
+
+#: includes/class-admin.php:422
+msgid "Leave empty to keep the saved secret"
+msgstr "Faaruq uga tag si aad u hayso sirta la keydiyay"
+
+#: includes/class-admin.php:423
+msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
+msgstr "Gudaha Google Cloud Console, ka shaqaysii Google Drive API, ka dibna samee macmiilka OAuth ee nooca \"Web application\" oo ciwaankani yahay URI dib-u-hagaajin oo la oggol yahay:"
+
+#: includes/class-admin.php:423
+msgid "Save, then press Connect. The plugin only sees the files it creates."
+msgstr "Keydi, ka dibna riix Xiriiri. Furaha wuxuu arkaa oo keliya faylasha uu isagu abuuro."
+
+#: includes/class-admin.php:425
+msgid "Folder inside the storage (optional)"
+msgstr "Galka ku dhex jira keydka (ikhtiyaari)"
+
+#: includes/class-admin.php:426
+msgid "Save storage"
+msgstr "Kaydso meel kaydinta"
+
+#: includes/class-admin.php:436
+msgid "Import a backup from another plugin or host"
+msgstr "Kaga soo dhoobso kayd firiiric (backup) plugin kale ama meel kale"
+
+#: includes/class-admin.php:437
+msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
+msgstr "Ka keen goob kayd ay samaysay UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, ama fayl kasta oo zip/tar ah oo ah goobta WordPress oo ay ku jirto daadinteeda .sql. Waxyaabaha ku jira waxay galaan wp-content xog-ururintuna waxay beddelaysaa tan goobtan; ciwaannada waxaa si toos ah loogu beddelaa kuwa goobtan."
+
+#: includes/class-admin.php:439
+msgid "Upload from your computer"
+msgstr "Ka soo geli kombiyuutarkaaga"
+
+#: includes/class-admin.php:439
+msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
+msgstr "Dooro fayl kasta oo kaydka ah hal mar (UpdraftPlus wuxuu sameeyaa dhowr). Faylasha waaweyn waxaa loo diraa qaybo yaryar, markaa xadka gelinta martigeliyahaagu ma khuseeyo."
+
+#: includes/class-admin.php:440
+msgid "Or from links (Google Drive, Dropbox or any download address)"
+msgstr "Ama xiriirinta (Google Drive, Dropbox ama cinwaan kasta oo lagu soo dejiyo)"
+
+#: includes/class-admin.php:440
+msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
+msgstr "Halkii xariiqba hal xiriiriye. Google Drive iyo Dropbox, la wadaag faylka \"qof kasta oo haysta xiriiriyaha\" oo dheji xiriiriyahaas; ka dibna mar kale dami wadaagidda."
+
+#: includes/class-admin.php:442
+msgid "Or a file already on this server"
+msgstr "Ama fayl horey ugu jiray adeegahan"
+
+#. translators: %s: folder path.
+#: includes/class-admin.php:450
+#, php-format
+msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
+msgstr "Ku soo dheji kaydadka FTP ama maareeyaha faylka ee martigeliyahaaga %s oo dib u cusbooneysii boggan."
+
+#: includes/class-admin.php:455
+msgid "Or a deploy code from another site"
+msgstr "Ama koodhka daabacaadda ee goob kale"
+
+#: includes/class-admin.php:455
+msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
+msgstr "Haddii degel kale uu ku siiyay koodhka geynta ee Zinn® Backups, halkan ku dheji si aad koobigaas ugu soo guuriso degelkan adigoon la wadaagin furayaasha kaydinta. Koodhku waxa uu shaqaynayaa dhawr saacadood oo keliya; ula dhaqan sida erayga sirta ah."
+
+#: includes/class-admin.php:455
+msgid "Passphrase (only if that backup is encrypted)"
+msgstr "Weeraha sirta ah (haddii keliya koobigaas la xafiday)"
+
+#: includes/class-admin.php:456
+#: includes/class-admin.php:458
+msgid "Import"
+msgstr "Soo dhoofso"
+
+#: includes/class-admin.php:457
+msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
+msgstr "Waan fahamsanahay in soo dejintu ay beddelayso nuxurka iyo xog-ururinta goobtan. Ka dib, ku gal akoon ka socda goobta la soo dejiyay."
+
+#: includes/class-admin.php:460
+msgid "Moving to Zinn® hosting?"
+msgstr "Ma u wareegaysaa martigelinta Zinn®?"
+
+#: includes/class-admin.php:460
+msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
+msgstr "Zinn Digital® waxay kaaga soo rari kartaa boggaaga meeshii hore ee lagu martigelin jiray. Haddii aysan meeshaadii hore ku siinaynin gelitaanka FTP, SSH ama control-panel, ku rakib Zinn® Migrate boggaagii hore; waxay samaynaysaa hal kayd oo aad halkan ku soo dejisan karto ama u dhiibi karto Zinn®."
+
+#: includes/class-admin.php:470
+msgid "What goes into a backup"
+msgstr "Maxaa ku jira kaydka"
+
+#: includes/class-admin.php:471
+msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
+msgstr "Ku dar faylasha WordPress u gaarka ah (wp-admin, wp-includes). Badanaa looma baahna: WordPress mar kasta dib ayaa loo rakibi karaa."
+
+#: includes/class-admin.php:472
+msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
+msgstr "Sidoo kale ka tag galka ama faylashan (midkiiba sadar, marka loo eego galka WordPress)"
+
+#: includes/class-admin.php:473
+msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
+msgstr "Had iyo jeer laga tagay: kaydadka xusuusta (caches), goobta ku meel gaarka ah ee cusboonaysiinta, iyo galalka kaydka ee furayaasha kale ee kaydinta:"
+
+#: includes/class-admin.php:474
+msgid "Size of each part (MB)"
+msgstr "Cabirka qayb kasta (MB)"
+
+#: includes/class-admin.php:479
+msgid "Save settings"
+msgstr "Kaydi habaynta"
+
+#: includes/class-archiver.php:52
+msgid "A backup part could not be opened for writing. Check that wp-content has free space."
+msgstr "Qayb ka mid ah kaydka dib-u-soo-celinta lama furi karin si wax loogu qoro. Hubi in wp-content ay leedahay meel bannaan."
+
+#: includes/class-archiver.php:113
+msgid "A backup part could not be written. Check that wp-content has free space."
+msgstr "Qayb ka mid ah kaydinta lama qori karin. Hubi in wp-content uu leeyahay meel bannaan."
+
+#: includes/class-backup-job.php:42
+msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
+msgstr "Marka hore ku xidh meel kaydin ah tab-ka Storage: koobiyada kaydka ah waxa lagu hayaa kaydkaaga gaarka ah, ee laguma hayo seerfarkan."
+
+#: includes/class-backup-job.php:45
+#: includes/class-restore-job.php:108
+msgid "Multisite networks are not supported yet."
+msgstr "Shabakadaha goobaha badan (multisite) weli lama taageero."
+
+#: includes/class-backup-job.php:48
+msgid "This server’s PHP has no ZipArchive extension. Ask your host to enable it."
+msgstr "PHP-ga server-kani ma laha kordhinta ZipArchive. Waydiiso martigeliyahaaga inuu awood siiyo."
+
+#: includes/class-backup-job.php:98
+msgid "Starting"
+msgstr "Bilaabaya"
+
+#: includes/class-backup-job.php:99
+msgid "Listing files"
+msgstr "Liis gareynta faylasha"
+
+#: includes/class-backup-job.php:100
+msgid "Backing up the database"
+msgstr "Kaydinta xog-ururinta"
+
+#: includes/class-backup-job.php:101
+msgid "Packing files"
+msgstr "Xiridda faylasha"
+
+#: includes/class-backup-job.php:102
+msgid "Uploading to your storage"
+msgstr "Waxaa loo rarayaa keydkaaga"
+
+#: includes/class-backup-job.php:103
+msgid "Finishing"
+msgstr "Dhameystiraya"
+
+#: includes/class-backup-job.php:123
+msgid "The backup reached an unknown stage."
+msgstr "Kaydintu waxay gaadhay marxalad aan la garanayn."
+
+#. translators: %s: backup id.
+#: includes/class-backup-job.php:143
+#, php-format
+msgid "Backup %s started."
+msgstr "Kaydinta %s waa la bilaabay."
+
+#. translators: 1: number of files, 2: total size.
+#: includes/class-backup-job.php:168
+#, php-format
+msgid "Found %1$s files (%2$s)."
+msgstr "Waxaa la helay %1$s fayl (%2$s)."
+
+#. translators: 1: number of tables, 2: number of rows, 3: size.
+#: includes/class-backup-job.php:209
+#, php-format
+msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
+msgstr "Xog-ururin: %1$d miisas, %2$s safaf, %3$s la cufay."
+
+#. translators: 1: size of the backup, 2: number of destinations.
+#: includes/class-backup-job.php:473
+#, php-format
+msgid "Backup complete: %1$s stored in %2$d destination."
+msgid_plural "Backup complete: %1$s stored in %2$d destinations."
+msgstr[0] "Kaydintu way dhammaatay: %1$s waxa lagu kaydiyay %2$d meel."
+msgstr[1] "Kaydintii waa dhammaatay: %1$s waxaa lagu keydiyay %2$d goobood."
+
+#: includes/class-backup-job.php:503
+msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
+msgstr "Qaybo ka mid ah oo horay loo soo geliyay lagama saari karo kaydintaada; waxay ku jiraan faylka kaydinta aan dhamaystirnayn weligoodna looma soo bandhigo soo celinta."
+
+#: includes/class-backup-job.php:520
+msgid "A storage destination was removed while the backup was running."
+msgstr "Goob kaydin ayaa la saaray intii uu socday kaydinta nuqulka."
+
+#: includes/class-catalog.php:134
+msgid "That is not a backup folder."
+msgstr "Taasi ma aha gal kayd ah."
+
+#: includes/class-catalog.php:138
+#: includes/class-restore-job.php:186
+msgid "That storage destination is no longer saved on this site."
+msgstr "Goobtaas wax lagu kaydiyo dib dambe looguma kaydinayo goobtan."
+
+#: includes/class-catalog.php:141
+msgid "Later incremental backups are built on this one. Delete those first."
+msgstr "Koobiyada dambe ee kordhinta ah waxay ku dhisan yihiin kan. Marka hore tirtir kuwaas."
+
+#: includes/class-crypto.php:88
+msgid "This file is not an encrypted Zinn® Backups file."
+msgstr "Faylkan ma aha fayl Zinn® Backups ah oo la siray."
+
+#: includes/class-crypto.php:103
+msgid "The backup could not be decrypted: the passphrase is wrong or the file is damaged."
+msgstr "Koobka kaydka ah lama furfuri karin: weedha sirta ah ayaa khaldan ama faylka ayaa waxyeeloobay."
+
+#: includes/class-crypto.php:112
+msgid "The encrypted backup file is incomplete."
+msgstr "Faylka kaydka ee sirta ah ma dhammaystirna."
+
+#: includes/class-database-dumper.php:67
+msgid "The database file could not be written. Check that wp-content has free space."
+msgstr "Faylka keydka xogta lama qori karin. Hubi in wp-content uu leeyahay meel bannaan."
+
+#: includes/class-deploy-code.php:41
+msgid "That is not a deploy code. A deploy code starts with zbdeploy1."
+msgstr "Taasi ma aha koodhka daadgureynta. Koodhka daadgureynta wuxuu ka bilaabmaa zbdeploy1."
+
+#: includes/class-deploy-code.php:46
+#: includes/class-deploy-code.php:67
+#: includes/class-deploy-code.php:76
+msgid "That deploy code is damaged. Copy it again from the other site."
+msgstr "Koodhkaas geynta wuu waxyeeloobay. Mar kale kaga soo koobi saytka kale."
+
+#: includes/class-deploy-code.php:56
+msgid "The deploy code has expired or its backup was deleted. Make a new code on the other site."
+msgstr "Xeerka geynta wuu dhacay ama kaydkiisii waa la tirtiray. Ka samee koodh cusub goobta kale."
+
+#: includes/class-deploy-code.php:60
+msgid "That deploy code does not point at a Zinn® Backups backup."
+msgstr "Koodkaas hawlgelinta ma tilmaamayo kaydka Zinn® Backups."
+
+#: includes/class-deploy-code.php:63
+msgid "The deploy code has expired. Make a new code on the other site."
+msgstr "Xeerka hawlgelinta wuu dhacay. Ka samee koodh cusub goobta kale."
+
+#: includes/class-downloader.php:83
+msgid "The server stopped honouring partial downloads. Start the import again."
+msgstr "Server-ku wuxuu joojiyay aqbalida soo dejinta qayb ahaan ah. Dib u billow soo dejinta xogta."
+
+#: includes/class-downloader.php:87
+msgid "The link opened a web page instead of a file. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link."
+msgstr "Xiriirintu waxay furtay bog internet ah halkii ay ka furi lahayd fayl. Google Drive iyo Dropbox, la wadaag faylka \"qof kasta oo haysta xiriirinta\" oo dheji xiriirintaas."
+
+#. translators: %d: HTTP status code.
+#: includes/class-downloader.php:96
+#, php-format
+msgid "The link answered with HTTP %d."
+msgstr "Xiriirintu waxay kaga jawaabtay HTTP %d."
+
+#: includes/class-file-scanner.php:53
+msgid "The file list could not be written."
+msgstr "Lama qori karin liiska faylka."
+
+#. translators: %s: the network error message.
+#: includes/class-http.php:46
+#, php-format
+msgid "The storage service could not be reached: %s"
+msgstr "Adeegga kaydinta lama gaari karin: %s"
+
+#. translators: 1: service name, 2: HTTP status code, 3: the service's own error text.
+#: includes/class-http.php:78
+#, php-format
+msgid "%1$s answered with HTTP %2$d: %3$s"
+msgstr "%1$s wuxuu kaga jawaabay HTTP %2$d: %3$s"
+
+#: includes/class-http.php:113
+msgid "no details given"
+msgstr "Faahfaahin lama bixin"
+
+#: includes/class-plugin.php:96
+msgid "You are not allowed to manage backups."
+msgstr "Laguma oggola inaad maamusho koobiyada kaydka ah."
+
+#: includes/class-plugin.php:196
+msgid "Tick the box to confirm that the restore replaces this site’s files and database."
+msgstr "Calaamadee sanduuqa si aad u xaqiijiso in dib-u-soo-celintu ay beddelayso faylasha iyo xog-ururinta boggan."
+
+#: includes/class-plugin.php:271
+#: includes/class-plugin.php:290
+msgid "Save the destination first."
+msgstr "Marka hore kaydi halka loo socdo."
+
+#: includes/class-plugin.php:274
+msgid "Connected: a test file was written and removed."
+msgstr "Waa ku xidhan yahay: fayl tijaabo ah ayaa la qoray oo meesha laga saaray."
+
+#: includes/class-plugin.php:306
+msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
+msgstr "Marka hore geli furaha app-ka ee Dropbox-kaaga (eeg tillaabooyinka ku xiga foomka)."
+
+#: includes/class-plugin.php:319
+msgid "This kind of storage does not sign in."
+msgstr "Kaydkan noocan ah ma galo."
+
+#: includes/class-plugin.php:336
+msgid "The sign-in expired. Press Connect again."
+msgstr "Galitaanku wuu dhacay. Mar kale riix Ku xidh."
+
+#: includes/class-plugin.php:342
+msgid "Dropbox is connected."
+msgstr "Dropbox waa ku xiran yahay."
+
+#: includes/class-plugin.php:411
+msgid "Settings saved."
+msgstr "Habsocodka waa la keydiyay."
+
+#: includes/class-plugin.php:427
+#: includes/class-runner.php:64
+msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
+msgstr "Kayd kale, soo celin ama soo dejin ayaa socota. Sug inta ay ka dhammaanayso, ama jooji."
+
+#: includes/class-plugin.php:453
+msgid "The upload was not started properly. Start again."
+msgstr "Soo-gelintu si sax ah uma bilaaban. Dib u bilow."
+
+#: includes/class-plugin.php:457
+msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
+msgstr "Qaybtu ma soo gaarin. Seerfarkaagu waxa laga yaabaa inuu xaddido cabbirka soo gelinta; mar kale isku day."
+
+#: includes/class-plugin.php:481
+msgid "Tick the box to confirm that the import replaces this site’s content and database."
+msgstr "Calaamadee sanduuqa si aad u xaqiijiso in soo dejintu beddelayso nuxurka iyo xog-ururinta boggan."
+
+#: includes/class-plugin.php:535
+msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
+msgstr "Dooro kayd aad soo dejiso: soo geli, dheji xiriiriye, ama mid ka dooro galka soo dejinta."
+
+#. translators: 1: a percentage, e.g. 50. 2: a Pro plugin's name.
+#: includes/class-pro-discount.php:132
+#, php-format
+msgid "Hosting customer? Get %1$d%% off %2$s"
+msgstr "Macaamiil hosting ah? Ka hel %1$d%% dhimis %2$s"
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:141
+#, php-format
+msgid "As a Zinn Digital® hosting customer you get a personal code for %d%% off your first payment. Renewals are at the normal price."
+msgstr "Adigoo ah macaamiil martigelinta Zinn Digital® waxaad helaysaa koodh shakhsi ah oo loogu talagalay %d%% dhimis ah lacag-bixintaada ugu horreysa. Cusboonaysiinta waxay ku socotaa qiimaha caadiga ah."
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:156
+#, php-format
+msgid "Get my %d%% code and go to checkout"
+msgstr "Hel koodkayga %d%% oo u gudub bixinta"
+
+#: includes/class-pro-discount.php:171
+msgid "Sorry, you are not allowed to do that."
+msgstr "Waan ka xunnahay, laguma oggola inaad taas samayso."
+
+#: includes/class-pro-discount.php:222
+msgid "This discount is for customers with a paid hosting plan in good standing. Free trials do not qualify."
+msgstr "Qiimo dhimistan waxaa loogu talagalay macaamiisha leh qorshe martigelineed oo lacag ah oo xaaladdiisu wanaagsan tahay. Tijaabooyinka bilaashka ah ma u qalmaan."
+
+#: includes/class-pro-discount.php:225
+msgid "You have already used your hosting-customer discount for this plugin."
+msgstr "Hore ayaad u isticmaashay qiimo dhimista macaamiisha martigelinta ee qalabkan."
+
+#: includes/class-pro-discount.php:228
+msgid "We could not get your code just now. Please try again in a few minutes."
+msgstr "Hadda ma aannu heli karin koodhkaaga. Fadlan isku day mar kale dhowr daqiiqo ka dib."
+
+#: includes/class-restore-job.php:128
+msgid "Reading the backup"
+msgstr "Akhrinta kaydka"
+
+#: includes/class-restore-job.php:129
+msgid "Downloading the archive"
+msgstr "Soo dejinta kaydka"
+
+#: includes/class-restore-job.php:130
+msgid "Recognising the archive"
+msgstr "Aqoonsashada kaydka"
+
+#: includes/class-restore-job.php:131
+msgid "Restoring files"
+msgstr "Soo celinta faylasha"
+
+#: includes/class-restore-job.php:132
+msgid "Downloading the database"
+msgstr "Soo dejinta xog-ururinta"
+
+#: includes/class-restore-job.php:133
+msgid "Restoring the database"
+msgstr "Dib u soo celinta kaydka xogta"
+
+#: includes/class-restore-job.php:134
+msgid "Updating the site address"
+msgstr "Cusboonaysiinta ciwaanka bogga"
+
+#: includes/class-restore-job.php:135
+msgid "Switching to the restored database"
+msgstr "U beddelashada xog-ururinta dib loo soo celiyay"
+
+#: includes/class-restore-job.php:158
+msgid "The restore reached an unknown stage."
+msgstr "Soo celintu waxay gaadhay heer aan la garanayn."
+
+#: includes/class-restore-job.php:201
+msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
+msgstr "Galalkan kuma jiraan koobiyayn buuxda oo Zinn® Backups ah (manifest-kii waa maqan yahay)."
+
+#: includes/class-restore-job.php:204
+msgid "This backup is encrypted. Enter its passphrase to restore it."
+msgstr "Kaydkan dib-u-soo-celinta waa la xafiday. Geli erey-furaha si aad dib ugu soo celiso."
+
+#. translators: %s: backup id.
+#: includes/class-restore-job.php:219
+#, php-format
+msgid "This incremental backup needs backup %s, which is no longer in the storage."
+msgstr "Kaydkan kordhinta ah wuxuu u baahan yahay kaydka %s, kaas oo aan hadda ku jirin kaydinta."
+
+#. translators: 1: backup date, 2: number of parts.
+#: includes/class-restore-job.php:266
+#, php-format
+msgid "Restoring the backup of %1$s (%2$d file parts)."
+msgstr "Dib u soo celinta kaydka %1$s (%2$d qaybaha faylka)."
+
+#. translators: 1: number of files, 2: example paths.
+#: includes/class-restore-job.php:340
+#, php-format
+msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
+msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
+msgstr[0] "Faylka %1$s lama dul qori karin sababtoo ah goobtan looma oggola inay beddesho, waxaana loo daayay siduu ahaa: %2$s"
+msgstr[1] "%1$s faylal lama dul qori karin sababtoo ah goobtan looma oggola inay wax ka beddesho, waxaana looga tagay sidooda: %2$s"
+
+#. translators: %s: number of files.
+#: includes/class-restore-job.php:359
+#, php-format
+msgid "Restored %s files."
+msgstr "Waxaa dib loo soo celiyay %s fayl."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:422
+#, php-format
+msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
+msgstr "%s kuma ekeysnaan qadarkiisa hubinta markii la soo dejiyay ka dib. Nuqulka ku jira kaydinta waxa laga yaabaa inuu waxyeeloobay."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:493
+#, php-format
+msgid "%s did not arrive. Upload it again."
+msgstr "%s ma soo gaarin. Fadlan mar kale soo geli."
+
+#. translators: %s: list of backup formats.
+#: includes/class-restore-job.php:515
+#, php-format
+msgid "Recognised: %s."
+msgstr "La aqoonsaday: %s."
+
+#. translators: 1: number of files, 2: number of files skipped.
+#: includes/class-restore-job.php:542
+#, php-format
+msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
+msgstr "Waxa la geliyay faylasha %1$s galka wp-content (%2$s waa laga tagay: caches, drop-ins iyo galalka kale ee plugins-ka kaydka)."
+
+#: includes/class-restore-job.php:588
+msgid "The archive has no database dump, so only files were imported."
+msgstr "Kaydka ma laha kayd-macluumaad daadasho (database dump), sidaas darteed faylasha kaliya ayaa la soo dhoofiyay."
+
+#. translators: %d: number of tables.
+#: includes/class-restore-job.php:598
+#, php-format
+msgid "Database restored into %d temporary tables."
+msgstr "Xog-ururinta waxaa lagu soo celiyay %d jadwal oo kumeelgaar ah."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:615
+#, php-format
+msgid "%s has no WordPress tables in it and was skipped."
+msgstr "%s kuma jiraan wax jadwalyo WordPress ah waana laga gudbay."
+
+#: includes/class-restore-job.php:653
+#: includes/class-table-swap.php:237
+msgid "The backup’s database has no WordPress tables, so nothing was replaced."
+msgstr "Xog-ururinta kaydka ma laha wax shaxan WordPress ah, sidaas darteed waxba lama beddelin."
+
+#: includes/class-restore-job.php:658
+msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
+msgstr "Koobiyadan kaydka ahi waxay ka timid shabakad mareegyo badan leh (multisite). Dib-u-soo-celinta shabakad lagu celiyo hal mareeg lama taageero."
+
+#. translators: 1: old address, 2: this site's address.
+#: includes/class-restore-job.php:683
+#, php-format
+msgid "Moving the content from %1$s to %2$s."
+msgstr "Ka rarida nuxurka %1$s una rarida %2$s."
+
+#: includes/class-restore-job.php:809
+msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
+msgstr "Dib u soo celintu waa dhammaatay. Haddii lagaa saaray, ku gal akoon ka socda bogga dib loo soo celiyay."
+
+#: includes/class-restore-job.php:810
+msgid "Restore complete."
+msgstr "Soo celintii waa dhammaatay."
+
+#. translators: 1: error message, 2: seconds until the retry.
+#: includes/class-runner.php:160
+#, php-format
+msgid "%1$s — trying again in %2$d seconds."
+msgstr "%1$s — mar labaad la isku dayayaa %2$d ilbidhiqsi gudahood."
+
+#: includes/class-runner.php:189
+msgid "Cancelled."
+msgstr "Waa la joojiyay."
+
+#: includes/class-settings.php:145
+msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
+msgstr "Koobiyada kaydka ah waxay aadaan hal meel oo kaydin ah. Wax ka beddel ama ka saar kan aad haysato si aad mid kale u isticmaasho."
+
+#: includes/class-sql-importer.php:84
+msgid "The database file could not be opened."
+msgstr "Faylka kaydka xogta lama furi karin."
+
+#. translators: 1: database error, 2: start of the statement.
+#: includes/class-sql-importer.php:262
+#, php-format
+msgid "The database refused a statement from the backup: %1$s (%2$s…)"
+msgstr "Xog-ururintu waxay diidday bayaan ka yimid kaydka: %1$s (%2$s…)"
+
+#. translators: %s: database error.
+#: includes/class-table-swap.php:256
+#, php-format
+msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
+msgstr "Jadwalka dib loo soo celiyay lama beddeli karin: %s. Goobtaadu waxba iskama beddelin."
+
+#: includes/class-work-dir.php:43
+msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
+msgstr "Ma jiro fayl loo qori karo oo loogu talagalay faylasha kaydka ku meel gaarka ah. Ka dhig wp-content mid la qori karo oo isku day mar kale."
+
+#: includes/class-work-dir.php:90
+msgid "Could not create a folder for this job."
+msgstr "Lama abuuri karin galka shaqadan."
+
+#. translators: %s: the Zinn Digital trade mark, which is not translated.
+#: includes/class-zinn-backups-promo.php:349
+#: includes/class-zinn-backups-promo.php:407
+#, php-format
+msgid "%s — guides and services"
+msgstr "%s — tilmaamaha iyo adeegyada"
+
+#: includes/class-zinn-backups-promo.php:364
+msgid "User guides"
+msgstr "Hagayaasha isticmaalaha"
+
+#. translators: %s: this plugin's name, e.g. "Zinn® Cache".
+#: includes/class-zinn-backups-promo.php:414
+#, php-format
+msgid "Read the %s user guide"
+msgstr "Akhriso hagaha isticmaalaha %s"
+
+#: includes/class-zinn-backups-promo.php:422
+msgid "Hide this"
+msgstr "Qari tan"
+
+#: includes/class-zinn-backups-promo.php:535
+msgid "Zinn® hosting for WordPress"
+msgstr "Martigelinta Zinn® ee WordPress"
+
+#: includes/class-zinn-backups-promo.php:536
+msgid "LiteSpeed, daily backups, free migration and a control panel built for people who run more than one site."
+msgstr "LiteSpeed, kaydinta maalinlaha ah, wareejin bilaash ah iyo qaybta maamulka oo loo dhisay dadka maamula wax ka badan hal goob."
+
+#: includes/class-zinn-backups-promo.php:542
+msgid "The Zinn® marketplace"
+msgstr "Suuqa Zinn®"
+
+#: includes/class-zinn-backups-promo.php:543
+msgid "Buy and sell established sites, domains and link placements, with the money held safely until both sides are happy."
+msgstr "Iibso oo iibi goobaha la dhisay, meelaha magacyada iyo meeleynta xiriiriyaha, iyadoo lacagta si ammaan ah loo hayo ilaa labada dhinacba ay ku qancaan."
+
+#: includes/class-zinn-backups-promo.php:590
+msgid "Zinn Hub® — hire people who do this for a living"
+msgstr "Zinn Hub® — kireyso dad shaqo ahaan tan u qabta"
+
+#: includes/class-zinn-backups-promo.php:591
+msgid "Our global freelance marketplace: browse over 10,000 ready-made services from writers, designers, developers and SEOs, or post a project and let them bid."
+msgstr "Suuqayada xorta ah ee caalamiga ah: ka baadh in ka badan 10,000 oo adeegyo diyaarsan oo ka yimid qoraayaasha, naqshadeeyayaasha, horumariyayaasha iyo khubarada SEO, ama dheji mashruuc oo u oggolow inay dalab soo gudbiyaan."
+
+#: includes/class-zinn-backups-updater.php:253
+msgid "See the Zinn Digital® release notes."
+msgstr "Fiiri qoraallada war-saxaafadeedka Zinn Digital®."
+
+#: includes/class-zinn-backups-updater.php:302
+msgid "The Zinn® update service did not issue a download link for this update. Check that this site can reach the Zinn® platform, then try again."
+msgstr "Adeegga cusboonaysiinta ee Zinn® ma soo saarin xiriirinta soo dejinta ee cusboonaysiintan. Hubi in goobtani ay gaari karto madal-ka Zinn®, ka dibna mar kale isku day."
+
+#. translators: %s: the download error reported by WordPress.
+#: includes/class-zinn-backups-updater.php:316
+#, php-format
+msgid "The update could not be downloaded from the Zinn® update service (%s). Try again in a few minutes."
+msgstr "Cusboonaysiinta lagama soo dejisan karin adeegga cusboonaysiinta ee Zinn® (%s). Ku soo celi dhowr daqiiqo ka dib."
+
+#: includes/class-zinn-backups-updater.php:330
+msgid "The downloaded update failed its integrity check and was not installed."
+msgstr "Cusboonaysiinta la soo dejiyay kuma guulaysan hubinta saxnimadeeda lamana rakibin."
+
+#: includes/import/class-archive-reader.php:147
+msgid "The zip archive could not be opened. It may be damaged or incomplete."
+msgstr "Kaydka zip-ka lama furi karin. Waxaa laga yaabaa inuu waxyeeloobay ama aanu dhamaystirnayn."
+
+#: includes/import/class-archive-reader.php:311
+msgid "This .wpress file uses a format we cannot read (it may be compressed or encrypted by All-in-One WP Migration). Export it again without encryption."
+msgstr "Faylkan .wpress wuxuu isticmaalayaa qaab aanan akhrin karin (waxaa laga yaabaa in lagu cufay ama lagu siray All-in-One WP Migration). Fadlan mar kale dhoofi adigoon sirin."
+
+#: includes/import/class-formats.php:66
+msgid "This is a Duplicator “DupArchive” (.daf) file. In Duplicator, build the package again with the archive format set to ZIP, then import that."
+msgstr "Kani waa fayl Duplicator “DupArchive” (.daf) ah. Gudaha Duplicator, mar kale dhis xirmada iyadoo qaabka kaydka loo dejiyay ZIP, ka dibna soo geli taas."
+
+#: includes/import/class-formats.php:69
+msgid "This UpdraftPlus database backup is encrypted. Decrypt it in UpdraftPlus (or turn off database encryption and back up again), then import it."
+msgstr "Koobkan kaydka xogta ee UpdraftPlus waa la xafiday. Ka fur xafidaada UpdraftPlus (ama dami xafidaada kaydka xogta oo mar kale koobi samee), ka dibna soo geli."
+
+#: includes/import/class-formats.php:76
+msgid "Database dump"
+msgstr "Koobka xogta keydka"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:93
+#, php-format
+msgid "%s is not a backup archive we can read (zip, tar, tar.gz, .wpress, .sql or .sql.gz)."
+msgstr "%s ma aha kaydka kaydinta oo aan akhrisan karno (zip, tar, tar.gz, .wpress, .sql ama .sql.gz)."
+
+#: includes/import/class-formats.php:99
+msgid "Website archive"
+msgstr "Kaydka bogga intarneedka"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:123
+#, php-format
+msgid "%s has no WordPress content (no wp-content folder and no database dump) in it."
+msgstr "%s kuma jiraan wax kooban WordPress ah (ma jiro galka wp-content mana jiro kaydka xogta)."
+
+#: includes/import/class-formats.php:155
+msgid "This .wpress file is encrypted or compressed by All-in-One WP Migration. Export it again with encryption and compression switched off, then import that."
+msgstr "Faylkan .wpress waxaa siray ama cadaadiyay All-in-One WP Migration. Mar kale dhoofso adiga oo daminaya siraynta iyo cadaadinta, ka dibna soo geli."
+
+#: includes/storage/class-destinations.php:62
+msgid "Other S3-compatible storage"
+msgstr "Kayd kale oo la jaanqaadi kara S3"
+
+#: includes/storage/class-destinations.php:77
+msgid "Cloudflare R2, Amazon S3 or S3-compatible"
+msgstr "Cloudflare R2, Amazon S3 ama la jaanqaadi kara S3"
+
+#: includes/storage/class-destinations.php:100
+msgid "The storage keys could not be read on this site. Enter the secret key again on the Storage tab."
+msgstr "Furayaasha kaydinta laguma akhriyi karin goobtan. Mar labaad geli furaha sirta ah ee ku yaal tabka Kaydinta."
+
+#: includes/storage/class-destinations.php:116
+msgid "This kind of storage is not known."
+msgstr "Kaydkan noociisa ah lama yaqaan."
+
+#: includes/storage/class-destinations.php:168
+msgid "Choose a kind of storage."
+msgstr "Dooro nooc kayd ah."
+
+#: includes/storage/class-destinations.php:187
+msgid "Enter the bucket name and the access key."
+msgstr "Geli magaca baaldiga iyo furaha gelitaanka."
+
+#: includes/storage/class-destinations.php:190
+msgid "Enter your Cloudflare account id (or the full R2 endpoint)."
+msgstr "Geli aqoonsiga akoonkaaga Cloudflare (ama barta dhammaadka R2 ee buuxda)."
+
+#: includes/storage/class-destinations.php:193
+msgid "Enter the endpoint address of your storage."
+msgstr "Geli ciwaanka barta dhamaadka ee kaydintaada."
+
+#: includes/storage/class-destinations.php:202
+msgid "Enter the OAuth client id from your Google Cloud project."
+msgstr "Geli OAuth client id ee mashruucaaga Google Cloud."
+
+#: includes/storage/class-dropbox.php:94
+msgid "Dropbox did not return a refresh token. Start the connection again."
+msgstr "Dropbox ma soo celin calaamadda cusboonaysiinta. Xiriirka mar kale bilow."
+
+#: includes/storage/class-dropbox.php:369
+msgid "Dropbox is not connected. Connect it again on the Storage tab."
+msgstr "Dropbox kuma xirna. Mar kale ku xir tabka Kaydinta."
+
+#: includes/storage/class-google-drive.php:114
+msgid "Google did not return a refresh token. Remove this site from your Google account’s third-party access and connect again."
+msgstr "Google ma soo celin calaamadda cusboonaysiinta (refresh token). Ka saar goobtan gelitaanka dhinac saddexaad ee koontadaada Google oo mar kale ku xir."
+
+#: includes/storage/class-google-drive.php:308
+msgid "That file is not in Google Drive any more."
+msgstr "Faylkaas mar dambe kuma jiro Google Drive."
+
+#: includes/storage/class-google-drive.php:477
+msgid "Google Drive is not connected. Connect it again on the Storage tab."
+msgstr "Google Drive kuma xirna. Mar kale ku xidh tabka Kaydinta."
+
+#: includes/storage/class-s3.php:85
+msgid "The storage service did not start the upload."
+msgstr "Adeegga kaydinta ma bilaabin soo gelinta."
+
+#: includes/storage/class-s3.php:352
+msgid "The storage service sent a reply that could not be read."
+msgstr "Adeegga kaydinta ayaa soo diray jawaab aan la akhriyi karin."
+
+#: includes/storage/class-s3.php:380
+msgid "A temporary backup file could not be read."
+msgstr "Fayl kaydinta kumeelgaarka ah lama akhrin karin."
+
+#: includes/storage/class-url-source.php:71
+msgid "A deploy link is read-only."
+msgstr "Xiriirinta daabacaaddu waa akhris-keliya."
+
+#: includes/storage/class-url-source.php:106
+msgid "The deploy code has no link for a file this backup needs."
+msgstr "Koodhka daabulidda ma laha xiriiriye faylka ay kaydintani u baahan tahay."
+
+#: includes/storage/class-url-source.php:115
+msgid "The deploy link"
+msgstr "Xiriirinta daabulidda"

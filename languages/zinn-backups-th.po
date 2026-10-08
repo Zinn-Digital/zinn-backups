@@ -1,0 +1,1067 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zinn-backups\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: th\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: zinn-backups\n"
+"X-Generator: scripts/wp-i18n-translate.py\n"
+
+#. Plugin Name of the plugin
+#: zinn-backups.php
+#: includes/class-admin.php:50
+msgid "Zinn® Backups"
+msgstr "Zinn® Backups"
+
+#. Plugin URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com/wordpress-plugins/zinn-backups"
+msgstr "https://zinndigital.com/wordpress-plugins/zinn-backups"
+
+#. Description of the plugin
+#: zinn-backups.php
+msgid "Backs up your WordPress files and database to your own storage — Dropbox, Google Drive, Cloudflare R2, Amazon S3 or any S3-compatible bucket — restores them in one go, and imports backups made by other backup and migration plugins."
+msgstr "สำรองไฟล์และฐานข้อมูล WordPress ของคุณไปยังพื้นที่จัดเก็บข้อมูลของคุณเอง — Dropbox, Google Drive, Cloudflare R2, Amazon S3 หรือบักเก็ตที่เข้ากันได้กับ S3 — กู้คืนได้ในคราวเดียว และนำเข้าข้อมูลสำรองที่สร้างโดยปลั๊กอินสำรองข้อมูลและย้ายข้อมูลอื่นๆ"
+
+#. Author of the plugin
+#: zinn-backups.php
+msgid "Neil Lock — CEO, Zinn Digital® Ltd"
+msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
+
+#. Author URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com"
+msgstr "https://zinndigital.com"
+
+#: includes/class-admin.php:69
+#: includes/class-admin.php:174
+msgid "Backups"
+msgstr "ข้อมูลสำรอง"
+
+#: includes/class-admin.php:73
+msgid "Get Pro: schedules, several storages, encryption"
+msgstr "รับ Pro: กำหนดการ, ที่จัดเก็บข้อมูลหลายแห่ง, การเข้ารหัส"
+
+#: includes/class-admin.php:110
+msgid "Working…"
+msgstr "กำลังทำงาน…"
+
+#: includes/class-admin.php:111
+#: includes/class-admin.php:345
+msgid "Finished"
+msgstr "เสร็จสิ้น"
+
+#: includes/class-admin.php:112
+#: includes/class-admin.php:346
+msgid "Failed"
+msgstr "ล้มเหลว"
+
+#: includes/class-admin.php:113
+#: includes/class-admin.php:347
+msgid "Cancelled"
+msgstr "ยกเลิกแล้ว"
+
+#: includes/class-admin.php:114
+#: includes/class-admin.php:271
+#: includes/class-admin.php:316
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#: includes/class-admin.php:115
+#: includes/class-admin.php:313
+#: includes/class-admin.php:316
+#: includes/class-restore-job.php:136
+msgid "Restore"
+msgstr "กู้คืน"
+
+#: includes/class-admin.php:116
+msgid "Delete"
+msgstr "ลบ"
+
+#: includes/class-admin.php:117
+msgid "Delete this backup from your storage? This cannot be undone."
+msgstr "ลบข้อมูลสำรองนี้ออกจากพื้นที่จัดเก็บข้อมูลของคุณหรือไม่? ไม่สามารถเลิกทำสิ่งนี้ได้"
+
+#: includes/class-admin.php:118
+msgid "No backups yet. Press “Back up now” to make the first one."
+msgstr "ยังไม่มีการสำรองข้อมูล กด \"สำรองข้อมูลทันที\" เพื่อสร้างชุดแรก"
+
+#: includes/class-admin.php:119
+msgid "Reading your storage…"
+msgstr "กำลังอ่านข้อมูลพื้นที่จัดเก็บข้อมูลของคุณ…"
+
+#: includes/class-admin.php:120
+msgctxt "a complete backup, as opposed to an incremental one"
+msgid "Full backup"
+msgstr "สำรองข้อมูลแบบเต็ม"
+
+#: includes/class-admin.php:121
+msgctxt "a backup holding only what changed since an earlier one"
+msgid "Incremental backup"
+msgstr "การสำรองข้อมูลส่วนเพิ่ม"
+
+#: includes/class-admin.php:122
+msgid "Encrypted"
+msgstr "เข้ารหัสแล้ว"
+
+#: includes/class-admin.php:123
+msgid "From another site"
+msgstr "จากไซต์อื่น"
+
+#: includes/class-admin.php:124
+msgid "Database"
+msgstr "ฐานข้อมูล"
+
+#: includes/class-admin.php:125
+msgid "Files"
+msgstr "ไฟล์"
+
+#. translators: 1: file name, 2: percentage uploaded.
+#: includes/class-admin.php:127
+#, php-format
+msgid "Uploading %1$s: %2$s%%"
+msgstr "กำลังอัปโหลด %1$s: %2$s%%"
+
+#: includes/class-admin.php:128
+msgid "Sign in to Dropbox in the window that opened, then paste the code Dropbox shows you:"
+msgstr "ลงชื่อเข้าใช้ Dropbox ในหน้าต่างที่เปิดอยู่ จากนั้นวางโค้ดที่ Dropbox แสดงให้คุณเห็น:"
+
+#: includes/class-admin.php:129
+msgid "Saved."
+msgstr "บันทึกแล้ว"
+
+#: includes/class-admin.php:130
+msgid "Remove this destination from the plugin? The backups stored in it are not deleted."
+msgstr "ลบปลายทางนี้ออกจากปลั๊กอินหรือไม่ ข้อมูลสำรองที่จัดเก็บไว้ในนั้นจะไม่ถูกลบ"
+
+#: includes/class-admin.php:131
+msgid "Reload the page to see the restored site."
+msgstr "โหลดหน้านี้ใหม่เพื่อดูไซต์ที่กู้คืนแล้ว"
+
+#: includes/class-admin.php:175
+msgid "Storage"
+msgstr "พื้นที่จัดเก็บข้อมูล"
+
+#: includes/class-admin.php:176
+msgid "Import & migrate"
+msgstr "นำเข้าและย้ายข้อมูล"
+
+#: includes/class-admin.php:177
+msgid "Settings"
+msgstr "การตั้งค่า"
+
+#: includes/class-admin.php:203
+msgid "Sections"
+msgstr "ส่วน"
+
+#: includes/class-admin.php:251
+msgid "Google Drive is connected."
+msgstr "Google Drive เชื่อมต่อแล้ว"
+
+#: includes/class-admin.php:255
+msgid "Google Drive could not be connected."
+msgstr "ไม่สามารถเชื่อมต่อ Google Drive ได้"
+
+#: includes/class-admin.php:270
+msgid "Details"
+msgstr "รายละเอียด"
+
+#: includes/class-admin.php:283
+#: includes/class-admin.php:302
+msgid "Back up now"
+msgstr "สำรองข้อมูลทันที"
+
+#. translators: %s: link to the Storage tab.
+#: includes/class-admin.php:288
+#, php-format
+msgid "Backups go to your own storage, not this server. <a href=\"%s\">Connect your storage</a> first."
+msgstr "ข้อมูลสำรองจะถูกส่งไปยังพื้นที่จัดเก็บข้อมูลของคุณเอง ไม่ใช่เซิร์ฟเวอร์นี้ <a href=\"%s\">เชื่อมต่อพื้นที่จัดเก็บข้อมูลของคุณ</a>ก่อน"
+
+#: includes/class-admin.php:296
+msgid "What to back up"
+msgstr "สิ่งที่ต้องการสำรองข้อมูล"
+
+#: includes/class-admin.php:297
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files and database"
+msgstr "ไฟล์และฐานข้อมูล"
+
+#: includes/class-admin.php:298
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Database only"
+msgstr "ฐานข้อมูลเท่านั้น"
+
+#: includes/class-admin.php:299
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files only"
+msgstr "ไฟล์เท่านั้น"
+
+#: includes/class-admin.php:301
+msgid "Note (optional)"
+msgstr "หมายเหตุ (ไม่บังคับ)"
+
+#: includes/class-admin.php:304
+msgid "Each part is uploaded to your storage and removed from this server before the next one is made, so the backup never takes up room on your hosting."
+msgstr "แต่ละส่วนจะได้รับการอัปโหลดไปยังพื้นที่จัดเก็บข้อมูลของคุณและลบออกจากเซิร์ฟเวอร์นี้ก่อนที่จะสร้างส่วนถัดไป ดังนั้นการสำรองข้อมูลจึงไม่เปลืองพื้นที่บนโฮสติ้งของคุณอย่างแน่นอน"
+
+#: includes/class-admin.php:307
+msgid "Your backups"
+msgstr "ข้อมูลสำรองของคุณ"
+
+#: includes/class-admin.php:307
+msgid "Refresh"
+msgstr "รีเฟรช"
+
+#: includes/class-admin.php:311
+msgid "Restore this backup"
+msgstr "กู้คืนข้อมูลสำรองนี้"
+
+#: includes/class-admin.php:314
+msgid "Passphrase"
+msgstr "ข้อความรหัสผ่าน"
+
+#: includes/class-admin.php:315
+msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
+msgstr "ฉันเข้าใจว่าการดำเนินการนี้จะแทนที่ไฟล์และฐานข้อมูลของไซต์นี้ด้วยไฟล์และฐานข้อมูลจากการสำรองข้อมูล ไฟล์ที่ไม่ได้อยู่ในการสำรองข้อมูลจะยังคงถูกเก็บไว้"
+
+#: includes/class-admin.php:321
+msgid "Recent activity"
+msgstr "กิจกรรมล่าสุด"
+
+#: includes/class-admin.php:327
+#: includes/class-backup-job.php:104
+msgid "Backup"
+msgstr "สำรองข้อมูล"
+
+#: includes/class-admin.php:327
+msgid "Restore / import"
+msgstr "กู้คืน / นำเข้า"
+
+#: includes/class-admin.php:348
+msgid "Running"
+msgstr "กำลังทำงาน"
+
+#: includes/class-admin.php:360
+msgid "Your storage"
+msgid_plural "Your storage destinations"
+msgstr[0] "พื้นที่จัดเก็บข้อมูลของคุณ"
+
+#: includes/class-admin.php:362
+msgid "No storage yet. Choose where your backups go below."
+msgstr "ยังไม่มีพื้นที่จัดเก็บ เลือกตำแหน่งที่ข้อมูลสำรองของคุณจะถูกส่งไปที่ด้านล่าง"
+
+#: includes/class-admin.php:372
+msgid "Ready"
+msgstr "พร้อม"
+
+#: includes/class-admin.php:372
+msgid "Not connected"
+msgstr "ไม่ได้เชื่อมต่อ"
+
+#: includes/class-admin.php:373
+msgid "Connect"
+msgstr "เชื่อมต่อ"
+
+#: includes/class-admin.php:374
+msgid "Test"
+msgstr "ทดสอบ"
+
+#: includes/class-admin.php:375
+msgid "Edit"
+msgstr "แก้ไข"
+
+#: includes/class-admin.php:376
+msgid "Remove"
+msgstr "เอาออก"
+
+#: includes/class-admin.php:382
+msgid "Add storage"
+msgstr "เพิ่มพื้นที่จัดเก็บข้อมูล"
+
+#: includes/class-admin.php:386
+msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
+msgstr "ข้อมูลสำรองจะไปยังปลายทางการจัดเก็บข้อมูลแห่งเดียว หากต้องการใช้ปลายทางอื่น ให้แก้ไขหรือลบรายการด้านบน"
+
+#: includes/class-admin.php:397
+msgid "Kind of storage"
+msgstr "ชนิดของพื้นที่จัดเก็บ"
+
+#: includes/class-admin.php:402
+msgid "Name (for you)"
+msgstr "ชื่อ (สำหรับคุณ)"
+
+#: includes/class-admin.php:404
+msgid "Provider"
+msgstr "ผู้ให้บริการ"
+
+#: includes/class-admin.php:409
+msgid "Cloudflare account id"
+msgstr "ID บัญชี Cloudflare"
+
+#: includes/class-admin.php:410
+msgid "Endpoint address"
+msgstr "ที่อยู่ปลายทาง"
+
+#: includes/class-admin.php:411
+msgid "Region"
+msgstr "ภูมิภาค"
+
+#: includes/class-admin.php:412
+msgid "Bucket"
+msgstr "บักเก็ต"
+
+#: includes/class-admin.php:413
+msgid "Access key id"
+msgstr "ID คีย์การเข้าถึง"
+
+#: includes/class-admin.php:414
+msgid "Secret access key"
+msgstr "คีย์การเข้าถึงที่เป็นความลับ"
+
+#: includes/class-admin.php:414
+msgid "Leave empty to keep the saved key"
+msgstr "เว้นว่างไว้เพื่อใช้คีย์ที่บันทึกไว้เดิม"
+
+#: includes/class-admin.php:415
+msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
+msgstr "สำหรับ Cloudflare R2: ในแดชบอร์ด Cloudflare ให้เปิด R2 สร้างบักเก็ต จากนั้นไปที่ “Manage R2 API tokens” → สร้างโทเคนที่มีสิทธิ์ Object Read & Write สำหรับบักเก็ตนั้น แล้วคัดลอก access key id และ secret มาวางที่นี่"
+
+#: includes/class-admin.php:418
+msgid "Dropbox app key"
+msgstr "คีย์แอป Dropbox"
+
+#: includes/class-admin.php:419
+msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
+msgstr "สร้างแอปที่ dropbox.com/developers/apps (Scoped access, App folder) ด้วยสิทธิ์ files.content.read, files.content.write และ files.metadata.read แล้วคัดลอก App key มาวางที่นี่ บันทึก จากนั้นกดเชื่อมต่อ"
+
+#: includes/class-admin.php:421
+msgid "OAuth client id"
+msgstr "OAuth ไคลเอนต์ ID"
+
+#: includes/class-admin.php:422
+msgid "OAuth client secret"
+msgstr "ความลับไคลเอนต์ OAuth"
+
+#: includes/class-admin.php:422
+msgid "Leave empty to keep the saved secret"
+msgstr "เว้นว่างไว้เพื่อเก็บข้อมูลลับที่บันทึกไว้"
+
+#: includes/class-admin.php:423
+msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
+msgstr "ใน Google Cloud Console ให้เปิดใช้งาน Google Drive API จากนั้นสร้างไคลเอนต์ OAuth ประเภท \"Web application\" โดยใช้ที่อยู่นี้เป็น URI การเปลี่ยนเส้นทางที่ได้รับอนุญาต:"
+
+#: includes/class-admin.php:423
+msgid "Save, then press Connect. The plugin only sees the files it creates."
+msgstr "บันทึก แล้วกดเชื่อมต่อ ปลั๊กอินจะมองเห็นเฉพาะไฟล์ที่สร้างขึ้นเองเท่านั้น"
+
+#: includes/class-admin.php:425
+msgid "Folder inside the storage (optional)"
+msgstr "โฟลเดอร์ภายในพื้นที่จัดเก็บข้อมูล (ไม่บังคับ)"
+
+#: includes/class-admin.php:426
+msgid "Save storage"
+msgstr "ประหยัดพื้นที่จัดเก็บข้อมูล"
+
+#: includes/class-admin.php:436
+msgid "Import a backup from another plugin or host"
+msgstr "นำเข้าข้อมูลสำรองจากปลั๊กอินหรือโฮสต์อื่น"
+
+#: includes/class-admin.php:437
+msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
+msgstr "นำเข้าเว็บไซต์จากไฟล์สำรองข้อมูลที่สร้างโดย UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate หรือไฟล์เก็บถาวร zip/tar ใดๆ ของเว็บไซต์ WordPress พร้อมไฟล์ดัมพ์ .sql เนื้อหาจะถูกย้ายไปยัง wp-content และฐานข้อมูลจะแทนที่ของเว็บไซต์นี้ โดยที่อยู่จะถูกเปลี่ยนเป็นของเว็บไซต์นี้โดยอัตโนมัติ"
+
+#: includes/class-admin.php:439
+msgid "Upload from your computer"
+msgstr "อัปโหลดจากคอมพิวเตอร์ของคุณ"
+
+#: includes/class-admin.php:439
+msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
+msgstr "เลือกทุกไฟล์ของการสำรองข้อมูลพร้อมกัน (UpdraftPlus สร้างขึ้นหลายไฟล์) ไฟล์ขนาดใหญ่จะถูกส่งเป็นชิ้นเล็กๆ ขีดจำกัดการอัปโหลดของโฮสต์ของคุณจึงไม่มีผลบังคับใช้"
+
+#: includes/class-admin.php:440
+msgid "Or from links (Google Drive, Dropbox or any download address)"
+msgstr "หรือจากลิงก์ (Google Drive, Dropbox หรือที่อยู่สำหรับดาวน์โหลดใดๆ)"
+
+#: includes/class-admin.php:440
+msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
+msgstr "หนึ่งลิงก์ต่อหนึ่งบรรทัด สำหรับ Google Drive และ Dropbox ให้แชร์ไฟล์กับ \"ทุกคนที่มีลิงก์\" และวางลิงก์นั้น จากนั้นให้ปิดการแชร์อีกครั้งในภายหลัง"
+
+#: includes/class-admin.php:442
+msgid "Or a file already on this server"
+msgstr "หรือไฟล์ที่มีอยู่แล้วบนเซิร์ฟเวอร์นี้"
+
+#. translators: %s: folder path.
+#: includes/class-admin.php:450
+#, php-format
+msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
+msgstr "อัปโหลดไฟล์เก็บถาวรผ่าน FTP หรือตัวจัดการไฟล์ของผู้ให้บริการโฮสต์ของคุณไปยัง %s และโหลดหน้านี้ใหม่"
+
+#: includes/class-admin.php:455
+msgid "Or a deploy code from another site"
+msgstr "หรือรหัสการปรับใช้จากไซต์อื่น"
+
+#: includes/class-admin.php:455
+msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
+msgstr "หากเว็บไซต์อื่นให้รหัสการปรับใช้ Zinn® Backups แก่คุณ ให้วางที่นี่เพื่อคัดลอกข้อมูลสำรองนั้นมายังไซต์นี้โดยไม่ต้องเปิดเผยคีย์พื้นที่จัดเก็บข้อมูล รหัสจะใช้งานได้เพียงไม่กี่ชั่วโมง โปรดรักษาความปลอดภัยเช่นเดียวกับรหัสผ่าน"
+
+#: includes/class-admin.php:455
+msgid "Passphrase (only if that backup is encrypted)"
+msgstr "ข้อความรหัสผ่าน (เฉพาะในกรณีที่มีการเข้ารหัสข้อมูลสำรองนั้น)"
+
+#: includes/class-admin.php:456
+#: includes/class-admin.php:458
+msgid "Import"
+msgstr "นำเข้า"
+
+#: includes/class-admin.php:457
+msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
+msgstr "ฉันเข้าใจว่าการนำเข้าจะแทนที่เนื้อหาและฐานข้อมูลของไซต์นี้ หลังจากนั้น ให้ลงชื่อเข้าใช้ด้วยบัญชีจากไซต์ที่นำเข้า"
+
+#: includes/class-admin.php:460
+msgid "Moving to Zinn® hosting?"
+msgstr "กำลังย้ายไปโฮสติ้งของ Zinn® ใช่ไหม?"
+
+#: includes/class-admin.php:460
+msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
+msgstr "Zinn Digital® สามารถย้ายไซต์ของคุณจากผู้ให้บริการโฮสติ้งเดิมให้คุณได้ หากผู้ให้บริการเดิมไม่ให้สิทธิ์การเข้าถึง FTP, SSH หรือแผงควบคุม ให้ติดตั้ง Zinn® Migrate บนไซต์เดิม ปลั๊กอินนี้จะสร้างไฟล์เก็บถาวรหนึ่งไฟล์ที่คุณสามารถนำเข้าที่นี่หรือส่งให้ Zinn® ได้"
+
+#: includes/class-admin.php:470
+msgid "What goes into a backup"
+msgstr "สิ่งที่รวมอยู่ในการสำรองข้อมูล"
+
+#: includes/class-admin.php:471
+msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
+msgstr "รวมไฟล์ของ WordPress เอง (wp-admin, wp-includes) โดยปกติไม่จำเป็น: WordPress สามารถติดตั้งใหม่ได้ตลอดเวลา"
+
+#: includes/class-admin.php:472
+msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
+msgstr "ละเว้นโฟลเดอร์หรือไฟล์เหล่านี้ด้วย (หนึ่งรายการต่อบรรทัด สัมพันธ์กับโฟลเดอร์ WordPress)"
+
+#: includes/class-admin.php:473
+msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
+msgstr "ละเว้นเสมอ: แคช, พื้นที่ชั่วคราวสำหรับการอัปเดต และโฟลเดอร์ไฟล์เก็บถาวรของปลั๊กอินสำรองข้อมูลอื่น ๆ:"
+
+#: includes/class-admin.php:474
+msgid "Size of each part (MB)"
+msgstr "ขนาดของแต่ละส่วน (MB)"
+
+#: includes/class-admin.php:479
+msgid "Save settings"
+msgstr "บันทึกการตั้งค่า"
+
+#: includes/class-archiver.php:52
+msgid "A backup part could not be opened for writing. Check that wp-content has free space."
+msgstr "ไม่สามารถเปิดส่วนหนึ่งของข้อมูลสำรองเพื่อเขียนได้ โปรดตรวจสอบว่า wp-content มีพื้นที่ว่างหรือไม่"
+
+#: includes/class-archiver.php:113
+msgid "A backup part could not be written. Check that wp-content has free space."
+msgstr "ไม่สามารถเขียนส่วนของข้อมูลสำรองได้ โปรดตรวจสอบว่า wp-content มีพื้นที่ว่างหรือไม่"
+
+#: includes/class-backup-job.php:42
+msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
+msgstr "เชื่อมต่อปลายทางของพื้นที่จัดเก็บข้อมูลบนแท็บ Storage ก่อน: การสำรองข้อมูลจะถูกเก็บไว้ในพื้นที่จัดเก็บของคุณเอง ไม่ใช่บนเซิร์ฟเวอร์นี้"
+
+#: includes/class-backup-job.php:45
+#: includes/class-restore-job.php:108
+msgid "Multisite networks are not supported yet."
+msgstr "ยังไม่รองรับเครือข่ายหลายไซต์ (Multisite)"
+
+#: includes/class-backup-job.php:48
+msgid "This server’s PHP has no ZipArchive extension. Ask your host to enable it."
+msgstr "PHP ของเซิร์ฟเวอร์นี้ไม่มีส่วนขยาย ZipArchive โปรดแจ้งให้ผู้ให้บริการโฮสติ้งของคุณเปิดใช้งาน"
+
+#: includes/class-backup-job.php:98
+msgid "Starting"
+msgstr "กำลังเริ่ม"
+
+#: includes/class-backup-job.php:99
+msgid "Listing files"
+msgstr "กำลังแสดงรายการไฟล์"
+
+#: includes/class-backup-job.php:100
+msgid "Backing up the database"
+msgstr "กำลังสำรองข้อมูลฐานข้อมูล"
+
+#: includes/class-backup-job.php:101
+msgid "Packing files"
+msgstr "กำลังรวมไฟล์"
+
+#: includes/class-backup-job.php:102
+msgid "Uploading to your storage"
+msgstr "กำลังอัปโหลดไปยังพื้นที่จัดเก็บข้อมูลของคุณ"
+
+#: includes/class-backup-job.php:103
+msgid "Finishing"
+msgstr "กำลังเสร็จสิ้น"
+
+#: includes/class-backup-job.php:123
+msgid "The backup reached an unknown stage."
+msgstr "การสำรองข้อมูลถึงขั้นตอนที่ไม่รู้จัก"
+
+#. translators: %s: backup id.
+#: includes/class-backup-job.php:143
+#, php-format
+msgid "Backup %s started."
+msgstr "เริ่มการสำรองข้อมูล %s แล้ว"
+
+#. translators: 1: number of files, 2: total size.
+#: includes/class-backup-job.php:168
+#, php-format
+msgid "Found %1$s files (%2$s)."
+msgstr "พบ %1$s ไฟล์ (%2$s)"
+
+#. translators: 1: number of tables, 2: number of rows, 3: size.
+#: includes/class-backup-job.php:209
+#, php-format
+msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
+msgstr "ฐานข้อมูล: %1$d ตาราง, %2$s แถว, บีบอัดแล้ว %3$s"
+
+#. translators: 1: size of the backup, 2: number of destinations.
+#: includes/class-backup-job.php:473
+#, php-format
+msgid "Backup complete: %1$s stored in %2$d destination."
+msgid_plural "Backup complete: %1$s stored in %2$d destinations."
+msgstr[0] "การสำรองข้อมูลเสร็จสมบูรณ์: จัดเก็บ %1$s ไว้ใน %2$d ปลายทางแล้ว"
+
+#: includes/class-backup-job.php:503
+msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
+msgstr "ไม่สามารถลบบางส่วนที่อัปโหลดไปแล้วออกจากพื้นที่จัดเก็บข้อมูลของคุณได้ ส่วนเหล่านี้อยู่ในโฟลเดอร์สำรองข้อมูลที่ไม่สมบูรณ์และจะไม่ถูกนำมาเสนอให้กู้คืน"
+
+#: includes/class-backup-job.php:520
+msgid "A storage destination was removed while the backup was running."
+msgstr "ปลายทางของพื้นที่จัดเก็บข้อมูลถูกนำออกขณะกำลังสำรองข้อมูล"
+
+#: includes/class-catalog.php:134
+msgid "That is not a backup folder."
+msgstr "นั่นไม่ใช่โฟลเดอร์สำรองข้อมูล"
+
+#: includes/class-catalog.php:138
+#: includes/class-restore-job.php:186
+msgid "That storage destination is no longer saved on this site."
+msgstr "ปลายทางการจัดเก็บข้อมูลนั้นไม่ได้บันทึกไว้ในไซต์นี้อีกต่อไป"
+
+#: includes/class-catalog.php:141
+msgid "Later incremental backups are built on this one. Delete those first."
+msgstr "การสำรองข้อมูลส่วนเพิ่มในภายหลังจะสร้างขึ้นบนชุดนี้ โปรดลบชุดเหล่านั้นก่อน"
+
+#: includes/class-crypto.php:88
+msgid "This file is not an encrypted Zinn® Backups file."
+msgstr "ไฟล์นี้ไม่ใช่ไฟล์ Zinn® Backups ที่เข้ารหัสไว้"
+
+#: includes/class-crypto.php:103
+msgid "The backup could not be decrypted: the passphrase is wrong or the file is damaged."
+msgstr "ไม่สามารถถอดรหัสข้อมูลสำรองได้: ข้อความรหัสผ่านไม่ถูกต้องหรือไฟล์เสียหาย"
+
+#: includes/class-crypto.php:112
+msgid "The encrypted backup file is incomplete."
+msgstr "ไฟล์สำรองข้อมูลที่เข้ารหัสไม่สมบูรณ์"
+
+#: includes/class-database-dumper.php:67
+msgid "The database file could not be written. Check that wp-content has free space."
+msgstr "ไม่สามารถเขียนไฟล์ฐานข้อมูลได้ โปรดตรวจสอบว่า wp-content มีพื้นที่ว่างหรือไม่"
+
+#: includes/class-deploy-code.php:41
+msgid "That is not a deploy code. A deploy code starts with zbdeploy1."
+msgstr "นั่นไม่ใช่รหัสการปรับใช้ รหัสการปรับใช้เริ่มต้นด้วย zbdeploy1"
+
+#: includes/class-deploy-code.php:46
+#: includes/class-deploy-code.php:67
+#: includes/class-deploy-code.php:76
+msgid "That deploy code is damaged. Copy it again from the other site."
+msgstr "โค้ดการปรับใช้นั้นเสียหาย โปรดคัดลอกอีกครั้งจากอีกเว็บไซต์หนึ่ง"
+
+#: includes/class-deploy-code.php:56
+msgid "The deploy code has expired or its backup was deleted. Make a new code on the other site."
+msgstr "รหัสสำหรับการปรับใช้หมดอายุแล้วหรือข้อมูลสำรองถูกลบไปแล้ว โปรดสร้างรหัสใหม่บนอีกไซต์หนึ่ง"
+
+#: includes/class-deploy-code.php:60
+msgid "That deploy code does not point at a Zinn® Backups backup."
+msgstr "รหัสการปรับใช้นั้นไม่ได้ชี้ไปยังการสำรองข้อมูลของ Zinn® Backups"
+
+#: includes/class-deploy-code.php:63
+msgid "The deploy code has expired. Make a new code on the other site."
+msgstr "รหัสสำหรับการปรับใช้หมดอายุแล้ว โปรดสร้างรหัสใหม่บนอีกไซต์หนึ่ง"
+
+#: includes/class-downloader.php:83
+msgid "The server stopped honouring partial downloads. Start the import again."
+msgstr "เซิร์ฟเวอร์หยุดรองรับการดาวน์โหลดบางส่วนแล้ว โปรดเริ่มการนำเข้าใหม่อีกครั้ง"
+
+#: includes/class-downloader.php:87
+msgid "The link opened a web page instead of a file. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link."
+msgstr "ลิงก์เปิดหน้าเว็บแทนที่จะเป็นไฟล์ สำหรับ Google Drive และ Dropbox ให้แชร์ไฟล์กับ \"ทุกคนที่มีลิงก์\" แล้ววางลิงก์นั้น"
+
+#. translators: %d: HTTP status code.
+#: includes/class-downloader.php:96
+#, php-format
+msgid "The link answered with HTTP %d."
+msgstr "ลิงก์ตอบกลับด้วย HTTP %d"
+
+#: includes/class-file-scanner.php:53
+msgid "The file list could not be written."
+msgstr "ไม่สามารถเขียนรายการไฟล์ได้"
+
+#. translators: %s: the network error message.
+#: includes/class-http.php:46
+#, php-format
+msgid "The storage service could not be reached: %s"
+msgstr "ไม่สามารถเข้าถึงบริการพื้นที่จัดเก็บข้อมูลได้: %s"
+
+#. translators: 1: service name, 2: HTTP status code, 3: the service's own error text.
+#: includes/class-http.php:78
+#, php-format
+msgid "%1$s answered with HTTP %2$d: %3$s"
+msgstr "%1$s ตอบกลับด้วย HTTP %2$d: %3$s"
+
+#: includes/class-http.php:113
+msgid "no details given"
+msgstr "ไม่ได้ระบุรายละเอียด"
+
+#: includes/class-plugin.php:96
+msgid "You are not allowed to manage backups."
+msgstr "คุณไม่ได้รับอนุญาตให้จัดการการสำรองข้อมูล"
+
+#: includes/class-plugin.php:196
+msgid "Tick the box to confirm that the restore replaces this site’s files and database."
+msgstr "ทำเครื่องหมายในช่องเพื่อยืนยันว่าการกู้คืนจะแทนที่ไฟล์และฐานข้อมูลของไซต์นี้"
+
+#: includes/class-plugin.php:271
+#: includes/class-plugin.php:290
+msgid "Save the destination first."
+msgstr "บันทึกปลายทางก่อน"
+
+#: includes/class-plugin.php:274
+msgid "Connected: a test file was written and removed."
+msgstr "เชื่อมต่อแล้ว: มีการเขียนและลบไฟล์ทดสอบแล้ว"
+
+#: includes/class-plugin.php:306
+msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
+msgstr "ป้อนคีย์แอปของแอป Dropbox ของคุณก่อน (ดูขั้นตอนข้างแบบฟอร์ม)"
+
+#: includes/class-plugin.php:319
+msgid "This kind of storage does not sign in."
+msgstr "ที่จัดเก็บข้อมูลประเภทนี้ไม่ได้ลงชื่อเข้าใช้"
+
+#: includes/class-plugin.php:336
+msgid "The sign-in expired. Press Connect again."
+msgstr "การลงชื่อเข้าใช้หมดอายุแล้ว กดเชื่อมต่ออีกครั้ง"
+
+#: includes/class-plugin.php:342
+msgid "Dropbox is connected."
+msgstr "เชื่อมต่อ Dropbox แล้ว"
+
+#: includes/class-plugin.php:411
+msgid "Settings saved."
+msgstr "บันทึกการตั้งค่าแล้ว"
+
+#: includes/class-plugin.php:427
+#: includes/class-runner.php:64
+msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
+msgstr "กำลังสำรองข้อมูล กู้คืน หรือนำเข้าข้อมูลอื่นอยู่ โปรดรอจนกว่าจะเสร็จสิ้น หรือยกเลิกการทำงาน"
+
+#: includes/class-plugin.php:453
+msgid "The upload was not started properly. Start again."
+msgstr "การอัปโหลดไม่ได้เริ่มต้นอย่างถูกต้อง โปรดเริ่มต้นใหม่อีกครั้ง"
+
+#: includes/class-plugin.php:457
+msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
+msgstr "ข้อมูลส่วนนี้มาไม่ถึง เซิร์ฟเวอร์ของคุณอาจจำกัดขนาดการอัปโหลด โปรดลองอีกครั้ง"
+
+#: includes/class-plugin.php:481
+msgid "Tick the box to confirm that the import replaces this site’s content and database."
+msgstr "ทำเครื่องหมายในช่องเพื่อยืนยันว่าการนำเข้าจะแทนที่เนื้อหาและฐานข้อมูลของไซต์นี้"
+
+#: includes/class-plugin.php:535
+msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
+msgstr "เลือกไฟล์เก็บถาวรที่จะนำเข้า: อัปโหลด วางลิงก์ หรือเลือกจากโฟลเดอร์นำเข้า"
+
+#. translators: 1: a percentage, e.g. 50. 2: a Pro plugin's name.
+#: includes/class-pro-discount.php:132
+#, php-format
+msgid "Hosting customer? Get %1$d%% off %2$s"
+msgstr "ลูกค้าโฮสติ้งใช่ไหม? รับส่วนลด %1$d%% สำหรับ %2$s"
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:141
+#, php-format
+msgid "As a Zinn Digital® hosting customer you get a personal code for %d%% off your first payment. Renewals are at the normal price."
+msgstr "ในฐานะลูกค้าโฮสติ้งของ Zinn Digital® คุณจะได้รับรหัสส่วนตัวเพื่อรับส่วนลด %d%% สำหรับการชำระเงินครั้งแรก การต่ออายุจะเป็นไปตามราคาปกติ"
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:156
+#, php-format
+msgid "Get my %d%% code and go to checkout"
+msgstr "รับรหัส %d%% ของฉันและไปที่หน้าชำระเงิน"
+
+#: includes/class-pro-discount.php:171
+msgid "Sorry, you are not allowed to do that."
+msgstr "ขออภัย คุณไม่ได้รับอนุญาตให้ดำเนินการนี้"
+
+#: includes/class-pro-discount.php:222
+msgid "This discount is for customers with a paid hosting plan in good standing. Free trials do not qualify."
+msgstr "ส่วนลดนี้สำหรับลูกค้าที่มีแผนบริการโฮสติ้งแบบชำระเงินในสถานะปกติ ไม่รวมการทดลองใช้ฟรี"
+
+#: includes/class-pro-discount.php:225
+msgid "You have already used your hosting-customer discount for this plugin."
+msgstr "คุณได้ใช้ส่วนลดลูกค้าโฮสติ้งสำหรับปลั๊กอินนี้ไปแล้ว"
+
+#: includes/class-pro-discount.php:228
+msgid "We could not get your code just now. Please try again in a few minutes."
+msgstr "เราไม่สามารถรับรหัสของคุณได้ในขณะนี้ โปรดลองอีกครั้งในอีกไม่กี่นาที"
+
+#: includes/class-restore-job.php:128
+msgid "Reading the backup"
+msgstr "กำลังอ่านข้อมูลสำรอง"
+
+#: includes/class-restore-job.php:129
+msgid "Downloading the archive"
+msgstr "กำลังดาวน์โหลดไฟล์เก็บถาวร"
+
+#: includes/class-restore-job.php:130
+msgid "Recognising the archive"
+msgstr "กำลังระบุไฟล์เก็บถาวร"
+
+#: includes/class-restore-job.php:131
+msgid "Restoring files"
+msgstr "กำลังกู้คืนไฟล์"
+
+#: includes/class-restore-job.php:132
+msgid "Downloading the database"
+msgstr "กำลังดาวน์โหลดฐานข้อมูล"
+
+#: includes/class-restore-job.php:133
+msgid "Restoring the database"
+msgstr "กำลังกู้คืนฐานข้อมูล"
+
+#: includes/class-restore-job.php:134
+msgid "Updating the site address"
+msgstr "กำลังอัปเดตที่อยู่เว็บไซต์"
+
+#: includes/class-restore-job.php:135
+msgid "Switching to the restored database"
+msgstr "กำลังสลับไปยังฐานข้อมูลที่กู้คืน"
+
+#: includes/class-restore-job.php:158
+msgid "The restore reached an unknown stage."
+msgstr "การคืนค่าถึงขั้นตอนที่ไม่รู้จัก"
+
+#: includes/class-restore-job.php:201
+msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
+msgstr "โฟลเดอร์นี้ไม่มีการสำรองข้อมูล Zinn® Backups ที่สมบูรณ์ (ไฟล์ manifest ขาดหายไป)"
+
+#: includes/class-restore-job.php:204
+msgid "This backup is encrypted. Enter its passphrase to restore it."
+msgstr "ข้อมูลสำรองนี้ได้รับการเข้ารหัส ป้อนวลีรหัสผ่านเพื่อกู้คืน"
+
+#. translators: %s: backup id.
+#: includes/class-restore-job.php:219
+#, php-format
+msgid "This incremental backup needs backup %s, which is no longer in the storage."
+msgstr "การสำรองข้อมูลส่วนเพิ่มนี้ต้องการการสำรองข้อมูล %s ซึ่งไม่มีอยู่ในพื้นที่จัดเก็บอีกต่อไป"
+
+#. translators: 1: backup date, 2: number of parts.
+#: includes/class-restore-job.php:266
+#, php-format
+msgid "Restoring the backup of %1$s (%2$d file parts)."
+msgstr "กำลังกู้คืนข้อมูลสำรองของ %1$s (%2$d ส่วนของไฟล์)"
+
+#. translators: 1: number of files, 2: example paths.
+#: includes/class-restore-job.php:340
+#, php-format
+msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
+msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
+msgstr[0] "ไม่สามารถเขียนทับไฟล์ %1$s ได้เนื่องจากไซต์นี้ไม่ได้รับอนุญาตให้เปลี่ยนแปลง และถูกปล่อยไว้ตามเดิม: %2$s"
+
+#. translators: %s: number of files.
+#: includes/class-restore-job.php:359
+#, php-format
+msgid "Restored %s files."
+msgstr "กู้คืนไฟล์แล้ว %s ไฟล์"
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:422
+#, php-format
+msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
+msgstr "%s ไม่ตรงกับเช็คซัมหลังจากดาวน์โหลด สำเนาในที่จัดเก็บข้อมูลอาจเสียหาย"
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:493
+#, php-format
+msgid "%s did not arrive. Upload it again."
+msgstr "%s มาไม่ถึง โปรดอัปโหลดอีกครั้ง"
+
+#. translators: %s: list of backup formats.
+#: includes/class-restore-job.php:515
+#, php-format
+msgid "Recognised: %s."
+msgstr "รับรู้แล้ว: %s"
+
+#. translators: 1: number of files, 2: number of files skipped.
+#: includes/class-restore-job.php:542
+#, php-format
+msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
+msgstr "นำเข้า %1$s ไฟล์ไปยัง wp-content แล้ว (เว้นไว้ %2$s: แคช, drop-ins และโฟลเดอร์ของปลั๊กอินสำรองข้อมูลอื่นๆ)"
+
+#: includes/class-restore-job.php:588
+msgid "The archive has no database dump, so only files were imported."
+msgstr "ไฟล์เก็บถาวรไม่มีดัมพ์ฐานข้อมูล ดังนั้นจึงนำเข้าเฉพาะไฟล์เท่านั้น"
+
+#. translators: %d: number of tables.
+#: includes/class-restore-job.php:598
+#, php-format
+msgid "Database restored into %d temporary tables."
+msgstr "กู้คืนฐานข้อมูลไปยังตารางชั่วคราว %d ตารางแล้ว"
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:615
+#, php-format
+msgid "%s has no WordPress tables in it and was skipped."
+msgstr "%s ไม่มีตาราง WordPress อยู่ภายในและถูกข้ามไป"
+
+#: includes/class-restore-job.php:653
+#: includes/class-table-swap.php:237
+msgid "The backup’s database has no WordPress tables, so nothing was replaced."
+msgstr "ฐานข้อมูลของข้อมูลสำรองไม่มีตาราง WordPress ดังนั้นจึงไม่มีการแทนที่สิ่งใด"
+
+#: includes/class-restore-job.php:658
+msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
+msgstr "ข้อมูลสำรองนี้มาจากเครือข่ายหลายไซต์ (multisite) ไม่รองรับการกู้คืนเครือข่ายไปยังไซต์เดียว"
+
+#. translators: 1: old address, 2: this site's address.
+#: includes/class-restore-job.php:683
+#, php-format
+msgid "Moving the content from %1$s to %2$s."
+msgstr "กำลังย้ายเนื้อหาจาก %1$s ไปยัง %2$s"
+
+#: includes/class-restore-job.php:809
+msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
+msgstr "กู้คืนเสร็จสมบูรณ์ หากคุณออกจากระบบ ให้เข้าสู่ระบบด้วยบัญชีจากไซต์ที่กู้คืนแล้ว"
+
+#: includes/class-restore-job.php:810
+msgid "Restore complete."
+msgstr "กู้คืนเสร็จสมบูรณ์"
+
+#. translators: 1: error message, 2: seconds until the retry.
+#: includes/class-runner.php:160
+#, php-format
+msgid "%1$s — trying again in %2$d seconds."
+msgstr "%1$s — กำลังลองอีกครั้งในอีก %2$d วินาที"
+
+#: includes/class-runner.php:189
+msgid "Cancelled."
+msgstr "ยกเลิกแล้ว"
+
+#: includes/class-settings.php:145
+msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
+msgstr "ข้อมูลสำรองจะไปยังปลายทางจัดเก็บข้อมูลเดียว แก้ไขหรือลบปลายทางที่คุณมีเพื่อใช้อันอื่น"
+
+#: includes/class-sql-importer.php:84
+msgid "The database file could not be opened."
+msgstr "ไม่สามารถเปิดไฟล์ฐานข้อมูลได้"
+
+#. translators: 1: database error, 2: start of the statement.
+#: includes/class-sql-importer.php:262
+#, php-format
+msgid "The database refused a statement from the backup: %1$s (%2$s…)"
+msgstr "ฐานข้อมูลปฏิเสธคำสั่งจากข้อมูลสำรอง: %1$s (%2$s…)"
+
+#. translators: %s: database error.
+#: includes/class-table-swap.php:256
+#, php-format
+msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
+msgstr "ไม่สามารถสลับตารางที่กู้คืนได้: %s เว็บไซต์ของคุณยังไม่มีการเปลี่ยนแปลง"
+
+#: includes/class-work-dir.php:43
+msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
+msgstr "ไม่มีโฟลเดอร์ที่สามารถเขียนได้สำหรับไฟล์สำรองชั่วคราว โปรดกำหนดให้ wp-content สามารถเขียนได้และลองใหม่อีกครั้ง"
+
+#: includes/class-work-dir.php:90
+msgid "Could not create a folder for this job."
+msgstr "ไม่สามารถสร้างโฟลเดอร์สำหรับงานนี้ได้"
+
+#. translators: %s: the Zinn Digital trade mark, which is not translated.
+#: includes/class-zinn-backups-promo.php:349
+#: includes/class-zinn-backups-promo.php:407
+#, php-format
+msgid "%s — guides and services"
+msgstr "%s — คู่มือและบริการ"
+
+#: includes/class-zinn-backups-promo.php:364
+msgid "User guides"
+msgstr "คู่มือผู้ใช้"
+
+#. translators: %s: this plugin's name, e.g. "Zinn® Cache".
+#: includes/class-zinn-backups-promo.php:414
+#, php-format
+msgid "Read the %s user guide"
+msgstr "อ่านคู่มือผู้ใช้ %s"
+
+#: includes/class-zinn-backups-promo.php:422
+msgid "Hide this"
+msgstr "ซ่อนสิ่งนี้"
+
+#: includes/class-zinn-backups-promo.php:535
+msgid "Zinn® hosting for WordPress"
+msgstr "โฮสติ้ง Zinn® สำหรับ WordPress"
+
+#: includes/class-zinn-backups-promo.php:536
+msgid "LiteSpeed, daily backups, free migration and a control panel built for people who run more than one site."
+msgstr "LiteSpeed การสำรองข้อมูลรายวัน การย้ายข้อมูลฟรี และแผงควบคุมที่สร้างขึ้นสำหรับผู้ที่ดูแลมากกว่าหนึ่งเว็บไซต์"
+
+#: includes/class-zinn-backups-promo.php:542
+msgid "The Zinn® marketplace"
+msgstr "มาร์เก็ตเพลส Zinn®"
+
+#: includes/class-zinn-backups-promo.php:543
+msgid "Buy and sell established sites, domains and link placements, with the money held safely until both sides are happy."
+msgstr "ซื้อและขายเว็บไซต์ที่ดำเนินงานอยู่แล้ว โดเมน และตำแหน่งวางลิงก์ โดยเงินจะถูกเก็บไว้อย่างปลอดภัยจนกว่าทั้งสองฝ่ายจะพึงพอใจ"
+
+#: includes/class-zinn-backups-promo.php:590
+msgid "Zinn Hub® — hire people who do this for a living"
+msgstr "Zinn Hub® — จ้างผู้ที่ทำสิ่งนี้เป็นอาชีพ"
+
+#: includes/class-zinn-backups-promo.php:591
+msgid "Our global freelance marketplace: browse over 10,000 ready-made services from writers, designers, developers and SEOs, or post a project and let them bid."
+msgstr "ตลาดฟรีแลนซ์ระดับโลกของเรา: เลือกดูบริการสำเร็จรูปกว่า 10,000 รายการจากนักเขียน นักออกแบบ นักพัฒนา และผู้เชี่ยวชาญด้าน SEO หรือโพสต์โปรเจกต์เพื่อให้พวกเขายื่นข้อเสนอ"
+
+#: includes/class-zinn-backups-updater.php:253
+msgid "See the Zinn Digital® release notes."
+msgstr "ดูบันทึกประจำรุ่นของ Zinn Digital®"
+
+#: includes/class-zinn-backups-updater.php:302
+msgid "The Zinn® update service did not issue a download link for this update. Check that this site can reach the Zinn® platform, then try again."
+msgstr "บริการอัปเดต Zinn® ไม่ได้ออกลิงก์ดาวน์โหลดสำหรับการอัปเดตนี้ โปรดตรวจสอบว่าไซต์นี้สามารถเข้าถึงแพลตฟอร์ม Zinn® ได้หรือไม่ แล้วลองอีกครั้ง"
+
+#. translators: %s: the download error reported by WordPress.
+#: includes/class-zinn-backups-updater.php:316
+#, php-format
+msgid "The update could not be downloaded from the Zinn® update service (%s). Try again in a few minutes."
+msgstr "ไม่สามารถดาวน์โหลดการอัปเดตจากบริการอัปเดตของ Zinn® (%s) ได้ โปรดลองอีกครั้งในอีกสองสามนาที"
+
+#: includes/class-zinn-backups-updater.php:330
+msgid "The downloaded update failed its integrity check and was not installed."
+msgstr "การอัปเดตที่ดาวน์โหลดมาไม่ผ่านการตรวจสอบความสมบูรณ์และไม่ได้ถูกติดตั้ง"
+
+#: includes/import/class-archive-reader.php:147
+msgid "The zip archive could not be opened. It may be damaged or incomplete."
+msgstr "ไม่สามารถเปิดไฟล์ zip ได้ ไฟล์อาจเสียหายหรือไม่สมบูรณ์"
+
+#: includes/import/class-archive-reader.php:311
+msgid "This .wpress file uses a format we cannot read (it may be compressed or encrypted by All-in-One WP Migration). Export it again without encryption."
+msgstr "ไฟล์ .wpress นี้ใช้รูปแบบที่เราไม่สามารถอ่านได้ (อาจถูกบีบอัดหรือเข้ารหัสโดย All-in-One WP Migration) โปรดส่งออกอีกครั้งโดยไม่เข้ารหัส"
+
+#: includes/import/class-formats.php:66
+msgid "This is a Duplicator “DupArchive” (.daf) file. In Duplicator, build the package again with the archive format set to ZIP, then import that."
+msgstr "นี่คือไฟล์ Duplicator “DupArchive” (.daf) ใน Duplicator ให้สร้างแพ็กเกจใหม่อีกครั้งโดยตั้งค่ารูปแบบไฟล์เก็บถาวรเป็น ZIP จากนั้นจึงนำเข้าไฟล์ดังกล่าว"
+
+#: includes/import/class-formats.php:69
+msgid "This UpdraftPlus database backup is encrypted. Decrypt it in UpdraftPlus (or turn off database encryption and back up again), then import it."
+msgstr "ไฟล์สำรองข้อมูลฐานข้อมูล UpdraftPlus นี้ได้รับการเข้ารหัส ถอดรหัสใน UpdraftPlus (หรือปิดการเข้ารหัสฐานข้อมูลและสำรองข้อมูลอีกครั้ง) จากนั้นจึงนำเข้า"
+
+#: includes/import/class-formats.php:76
+msgid "Database dump"
+msgstr "ดัมพ์ฐานข้อมูล"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:93
+#, php-format
+msgid "%s is not a backup archive we can read (zip, tar, tar.gz, .wpress, .sql or .sql.gz)."
+msgstr "%s ไม่ใช่ไฟล์เก็บถาวรสำรองที่เราสามารถอ่านได้ (zip, tar, tar.gz, .wpress, .sql หรือ .sql.gz)"
+
+#: includes/import/class-formats.php:99
+msgid "Website archive"
+msgstr "คลังข้อมูลเว็บไซต์"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:123
+#, php-format
+msgid "%s has no WordPress content (no wp-content folder and no database dump) in it."
+msgstr "%s ไม่มีเนื้อหา WordPress (ไม่มีโฟลเดอร์ wp-content และไม่มีดัมป์ฐานข้อมูล) อยู่ข้างใน"
+
+#: includes/import/class-formats.php:155
+msgid "This .wpress file is encrypted or compressed by All-in-One WP Migration. Export it again with encryption and compression switched off, then import that."
+msgstr "ไฟล์ .wpress นี้ถูกเข้ารหัสหรือบีบอัดโดย All-in-One WP Migration โปรดส่งออกอีกครั้งโดยปิดการเข้ารหัสและการบีบอัด จากนั้นจึงนำเข้าไฟล์นั้น"
+
+#: includes/storage/class-destinations.php:62
+msgid "Other S3-compatible storage"
+msgstr "ที่เก็บข้อมูลอื่นที่เข้ากันได้กับ S3"
+
+#: includes/storage/class-destinations.php:77
+msgid "Cloudflare R2, Amazon S3 or S3-compatible"
+msgstr "Cloudflare R2, Amazon S3 หรือเข้ากันได้กับ S3"
+
+#: includes/storage/class-destinations.php:100
+msgid "The storage keys could not be read on this site. Enter the secret key again on the Storage tab."
+msgstr "ไม่สามารถอ่านคีย์ที่เก็บข้อมูลบนไซต์นี้ได้ โปรดป้อนคีย์ลับอีกครั้งในแท็บที่เก็บข้อมูล"
+
+#: includes/storage/class-destinations.php:116
+msgid "This kind of storage is not known."
+msgstr "ไม่รู้จักพื้นที่จัดเก็บข้อมูลประเภทนี้"
+
+#: includes/storage/class-destinations.php:168
+msgid "Choose a kind of storage."
+msgstr "เลือกประเภทของพื้นที่จัดเก็บข้อมูล"
+
+#: includes/storage/class-destinations.php:187
+msgid "Enter the bucket name and the access key."
+msgstr "ป้อนชื่อบัคเก็ตและคีย์การเข้าถึง"
+
+#: includes/storage/class-destinations.php:190
+msgid "Enter your Cloudflare account id (or the full R2 endpoint)."
+msgstr "ป้อน ID บัญชี Cloudflare ของคุณ (หรือปลายทาง R2 แบบเต็ม)"
+
+#: includes/storage/class-destinations.php:193
+msgid "Enter the endpoint address of your storage."
+msgstr "ป้อนที่อยู่ปลายทางของพื้นที่จัดเก็บข้อมูลของคุณ"
+
+#: includes/storage/class-destinations.php:202
+msgid "Enter the OAuth client id from your Google Cloud project."
+msgstr "ป้อน OAuth client id จากโปรเจกต์ Google Cloud ของคุณ"
+
+#: includes/storage/class-dropbox.php:94
+msgid "Dropbox did not return a refresh token. Start the connection again."
+msgstr "Dropbox ไม่ได้ส่งคืนโทเค็นสำหรับรีเฟรช โปรดเริ่มการเชื่อมต่อใหม่อีกครั้ง"
+
+#: includes/storage/class-dropbox.php:369
+msgid "Dropbox is not connected. Connect it again on the Storage tab."
+msgstr "Dropbox ไม่ได้เชื่อมต่ออยู่ โปรดเชื่อมต่ออีกครั้งในแท็บที่จัดเก็บข้อมูล"
+
+#: includes/storage/class-google-drive.php:114
+msgid "Google did not return a refresh token. Remove this site from your Google account’s third-party access and connect again."
+msgstr "Google ไม่ได้ส่งคืนโทเค็นการรีเฟรช ลบไซต์นี้ออกจากการเข้าถึงของบุคคลที่สามในบัญชี Google ของคุณ แล้วเชื่อมต่ออีกครั้ง"
+
+#: includes/storage/class-google-drive.php:308
+msgid "That file is not in Google Drive any more."
+msgstr "ไฟล์นั้นไม่ได้อยู่ใน Google Drive อีกต่อไปแล้ว"
+
+#: includes/storage/class-google-drive.php:477
+msgid "Google Drive is not connected. Connect it again on the Storage tab."
+msgstr "Google Drive ไม่ได้เชื่อมต่ออยู่ โปรดเชื่อมต่ออีกครั้งในแท็บพื้นที่จัดเก็บข้อมูล"
+
+#: includes/storage/class-s3.php:85
+msgid "The storage service did not start the upload."
+msgstr "บริการจัดเก็บข้อมูลไม่ได้เริ่มการอัปโหลด"
+
+#: includes/storage/class-s3.php:352
+msgid "The storage service sent a reply that could not be read."
+msgstr "บริการจัดเก็บข้อมูลส่งการตอบกลับที่ไม่สามารถอ่านได้"
+
+#: includes/storage/class-s3.php:380
+msgid "A temporary backup file could not be read."
+msgstr "ไม่สามารถอ่านไฟล์สำรองชั่วคราวได้"
+
+#: includes/storage/class-url-source.php:71
+msgid "A deploy link is read-only."
+msgstr "ลิงก์การปรับใช้เป็นแบบอ่านอย่างเดียว"
+
+#: includes/storage/class-url-source.php:106
+msgid "The deploy code has no link for a file this backup needs."
+msgstr "โค้ดสำหรับปรับใช้ไม่มีลิงก์สำหรับไฟล์ที่การสำรองข้อมูลนี้ต้องใช้"
+
+#: includes/storage/class-url-source.php:115
+msgid "The deploy link"
+msgstr "ลิงก์การปรับใช้"

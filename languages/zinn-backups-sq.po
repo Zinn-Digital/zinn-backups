@@ -1,0 +1,1070 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zinn-backups\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sq\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: zinn-backups\n"
+"X-Generator: scripts/wp-i18n-translate.py\n"
+
+#. Plugin Name of the plugin
+#: zinn-backups.php
+#: includes/class-admin.php:50
+msgid "Zinn® Backups"
+msgstr "Zinn® Backups"
+
+#. Plugin URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com/wordpress-plugins/zinn-backups"
+msgstr "https://zinndigital.com/wordpress-plugins/zinn-backups"
+
+#. Description of the plugin
+#: zinn-backups.php
+msgid "Backs up your WordPress files and database to your own storage — Dropbox, Google Drive, Cloudflare R2, Amazon S3 or any S3-compatible bucket — restores them in one go, and imports backups made by other backup and migration plugins."
+msgstr "Krijon kopje rezervë të skedarëve dhe bazës suaj të të dhënave në WordPress në hapësirën tuaj ruajtëse — Dropbox, Google Drive, Cloudflare R2, Amazon S3 ose çdo bucket të përputhshëm me S3 — i rikthen ato menjëherë, dhe importon kopje rezervë të krijuara nga shtojca të tjera kopjimi dhe migrimi."
+
+#. Author of the plugin
+#: zinn-backups.php
+msgid "Neil Lock — CEO, Zinn Digital® Ltd"
+msgstr "Neil Lock — CEO, Zinn Digital® Ltd"
+
+#. Author URI of the plugin
+#: zinn-backups.php
+msgid "https://zinndigital.com"
+msgstr "https://zinndigital.com"
+
+#: includes/class-admin.php:69
+#: includes/class-admin.php:174
+msgid "Backups"
+msgstr "Kopje rezervë"
+
+#: includes/class-admin.php:73
+msgid "Get Pro: schedules, several storages, encryption"
+msgstr "Merrni Pro: plane, disa hapësira ruajtjeje, enkriptim"
+
+#: includes/class-admin.php:110
+msgid "Working…"
+msgstr "Po punohet…"
+
+#: includes/class-admin.php:111
+#: includes/class-admin.php:345
+msgid "Finished"
+msgstr "Përfunduar"
+
+#: includes/class-admin.php:112
+#: includes/class-admin.php:346
+msgid "Failed"
+msgstr "Dështoi"
+
+#: includes/class-admin.php:113
+#: includes/class-admin.php:347
+msgid "Cancelled"
+msgstr "Anuluar"
+
+#: includes/class-admin.php:114
+#: includes/class-admin.php:271
+#: includes/class-admin.php:316
+msgid "Cancel"
+msgstr "Anulo"
+
+#: includes/class-admin.php:115
+#: includes/class-admin.php:313
+#: includes/class-admin.php:316
+#: includes/class-restore-job.php:136
+msgid "Restore"
+msgstr "Rikthe"
+
+#: includes/class-admin.php:116
+msgid "Delete"
+msgstr "Fshije"
+
+#: includes/class-admin.php:117
+msgid "Delete this backup from your storage? This cannot be undone."
+msgstr "Të fshihet ky kopje rezervë nga hapësira juaj ruajtëse? Ky veprim nuk mund të zhbëhet."
+
+#: includes/class-admin.php:118
+msgid "No backups yet. Press “Back up now” to make the first one."
+msgstr "Ende nuk ka kopje rezervë. Shtypni \"Krijo kopje rezervë tani\" për të krijuar të parën."
+
+#: includes/class-admin.php:119
+msgid "Reading your storage…"
+msgstr "Po lexohet hapësira juaj e ruajtjes…"
+
+#: includes/class-admin.php:120
+msgctxt "a complete backup, as opposed to an incremental one"
+msgid "Full backup"
+msgstr "Kopje e plotë rezervë"
+
+#: includes/class-admin.php:121
+msgctxt "a backup holding only what changed since an earlier one"
+msgid "Incremental backup"
+msgstr "Kopje rezervë rritëse"
+
+#: includes/class-admin.php:122
+msgid "Encrypted"
+msgstr "I koduar"
+
+#: includes/class-admin.php:123
+msgid "From another site"
+msgstr "Nga një faqe tjetër"
+
+#: includes/class-admin.php:124
+msgid "Database"
+msgstr "Bazë të dhënash"
+
+#: includes/class-admin.php:125
+msgid "Files"
+msgstr "Skedarë"
+
+#. translators: 1: file name, 2: percentage uploaded.
+#: includes/class-admin.php:127
+#, php-format
+msgid "Uploading %1$s: %2$s%%"
+msgstr "Po ngarkohet %1$s: %2$s%%"
+
+#: includes/class-admin.php:128
+msgid "Sign in to Dropbox in the window that opened, then paste the code Dropbox shows you:"
+msgstr "Hyni në Dropbox te dritarja që u hap, mandej ngjiteni kodin që ju shfaq Dropbox-i:"
+
+#: includes/class-admin.php:129
+msgid "Saved."
+msgstr "U ruajt."
+
+#: includes/class-admin.php:130
+msgid "Remove this destination from the plugin? The backups stored in it are not deleted."
+msgstr "Të hiqet ky destinacion nga shtojca? Kopjet rezervë të ruajtura në të nuk fshihen."
+
+#: includes/class-admin.php:131
+msgid "Reload the page to see the restored site."
+msgstr "Ringarkojeni faqen që të shihni sajtin e rikthyer."
+
+#: includes/class-admin.php:175
+msgid "Storage"
+msgstr "Hapësira e ruajtjes"
+
+#: includes/class-admin.php:176
+msgid "Import & migrate"
+msgstr "Importoni & migroni"
+
+#: includes/class-admin.php:177
+msgid "Settings"
+msgstr "Cilësimet"
+
+#: includes/class-admin.php:203
+msgid "Sections"
+msgstr "Seksionet"
+
+#: includes/class-admin.php:251
+msgid "Google Drive is connected."
+msgstr "Google Drive është i lidhur."
+
+#: includes/class-admin.php:255
+msgid "Google Drive could not be connected."
+msgstr "Google Drive nuk mund të lidhej."
+
+#: includes/class-admin.php:270
+msgid "Details"
+msgstr "Hollësi"
+
+#: includes/class-admin.php:283
+#: includes/class-admin.php:302
+msgid "Back up now"
+msgstr "Krijo kopje rezervë tani"
+
+#. translators: %s: link to the Storage tab.
+#: includes/class-admin.php:288
+#, php-format
+msgid "Backups go to your own storage, not this server. <a href=\"%s\">Connect your storage</a> first."
+msgstr "Kopjet rezervë shkojnë në hapësirën tuaj të ruajtjes, jo në këtë server. Së pari <a href=\"%s\">lidhni hapësirën tuaj të ruajtjes</a>."
+
+#: includes/class-admin.php:296
+msgid "What to back up"
+msgstr "Çfarë të kopjohet rezervë"
+
+#: includes/class-admin.php:297
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files and database"
+msgstr "Skedarët dhe baza e të dhënave"
+
+#: includes/class-admin.php:298
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Database only"
+msgstr "Vetëm baza e të dhënave"
+
+#: includes/class-admin.php:299
+#: includes/class-admin.php:313
+#: includes/class-admin.php:456
+msgid "Files only"
+msgstr "Vetëm skedarët"
+
+#: includes/class-admin.php:301
+msgid "Note (optional)"
+msgstr "Shënim (opsionale)"
+
+#: includes/class-admin.php:304
+msgid "Each part is uploaded to your storage and removed from this server before the next one is made, so the backup never takes up room on your hosting."
+msgstr "Çdo pjesë ngarkohet në hapësirën tuaj ruajtëse dhe hiqet nga ky server përpara se të krijohet tjetra, kështu që kopja rezervë nuk zë kurrë vend në pritjen tuaj."
+
+#: includes/class-admin.php:307
+msgid "Your backups"
+msgstr "Kopjet tuaja rezervë"
+
+#: includes/class-admin.php:307
+msgid "Refresh"
+msgstr "Rifresko"
+
+#: includes/class-admin.php:311
+msgid "Restore this backup"
+msgstr "Rikthejeni këtë kopje rezervë"
+
+#: includes/class-admin.php:314
+msgid "Passphrase"
+msgstr "Frazëkalim"
+
+#: includes/class-admin.php:315
+msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
+msgstr "E kuptoj se kjo zëvendëson skedarët dhe bazën e të dhënave të kësaj faqeje me ato të kopjes rezervë. Skedarët që nuk janë në kopjen rezervë ruhen."
+
+#: includes/class-admin.php:321
+msgid "Recent activity"
+msgstr "Veprimtaria së fundmi"
+
+#: includes/class-admin.php:327
+#: includes/class-backup-job.php:104
+msgid "Backup"
+msgstr "Kopje rezervë"
+
+#: includes/class-admin.php:327
+msgid "Restore / import"
+msgstr "Rikthe / importo"
+
+#: includes/class-admin.php:348
+msgid "Running"
+msgstr "Në ekzekutim"
+
+#: includes/class-admin.php:360
+msgid "Your storage"
+msgid_plural "Your storage destinations"
+msgstr[0] "Hapësira juaj ruajtëse"
+msgstr[1] "Destinacionet tuaja të ruajtjes"
+
+#: includes/class-admin.php:362
+msgid "No storage yet. Choose where your backups go below."
+msgstr "Ende nuk ka hapësirë ruajtëse. Zgjidhni më poshtë se ku do të shkojnë kopjet tuaja rezervë."
+
+#: includes/class-admin.php:372
+msgid "Ready"
+msgstr "Gati"
+
+#: includes/class-admin.php:372
+msgid "Not connected"
+msgstr "I palidhur"
+
+#: includes/class-admin.php:373
+msgid "Connect"
+msgstr "Lidhu"
+
+#: includes/class-admin.php:374
+msgid "Test"
+msgstr "Testo"
+
+#: includes/class-admin.php:375
+msgid "Edit"
+msgstr "Përpunoni"
+
+#: includes/class-admin.php:376
+msgid "Remove"
+msgstr "Hiq"
+
+#: includes/class-admin.php:382
+msgid "Add storage"
+msgstr "Shtoni hapësirë ruajtëse"
+
+#: includes/class-admin.php:386
+msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
+msgstr "Kopjet rezervë shkojnë në një destinacion të vetëm depozitimi. Për të përdorur një tjetër, modifikoni ose hiqni atë më sipër."
+
+#: includes/class-admin.php:397
+msgid "Kind of storage"
+msgstr "Lloji i hapësirës ruajtëse"
+
+#: includes/class-admin.php:402
+msgid "Name (for you)"
+msgstr "Emri (për ju)"
+
+#: includes/class-admin.php:404
+msgid "Provider"
+msgstr "Ofruesi"
+
+#: includes/class-admin.php:409
+msgid "Cloudflare account id"
+msgstr "ID llogarie Cloudflare"
+
+#: includes/class-admin.php:410
+msgid "Endpoint address"
+msgstr "Adresa e pikës përfundimtare"
+
+#: includes/class-admin.php:411
+msgid "Region"
+msgstr "Rajoni"
+
+#: includes/class-admin.php:412
+msgid "Bucket"
+msgstr "Kovë"
+
+#: includes/class-admin.php:413
+msgid "Access key id"
+msgstr "ID-ja e çelësit të hyrjes"
+
+#: includes/class-admin.php:414
+msgid "Secret access key"
+msgstr "Çelës sekret aksesi"
+
+#: includes/class-admin.php:414
+msgid "Leave empty to keep the saved key"
+msgstr "Lëreni bosh për të mbajtur çelësin e ruajtur"
+
+#: includes/class-admin.php:415
+msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
+msgstr "Për Cloudflare R2: në panelin e Cloudflare hapni R2, krijoni një bucket, më pas “Manage R2 API tokens” → krijoni një token me leje Object Read & Write për atë bucket, dhe kopjoni këtu ID-në e çelësit të hyrjes (access key id) dhe sekretin."
+
+#: includes/class-admin.php:418
+msgid "Dropbox app key"
+msgstr "Çelësi i aplikacionit Dropbox"
+
+#: includes/class-admin.php:419
+msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
+msgstr "Krijoni një aplikacion te dropbox.com/developers/apps (Scoped access, App folder) me lejet files.content.read, files.content.write dhe files.metadata.read, dhe kopjoni këtu çelësin e aplikacionit të tij. Ruajeni, pastaj shtypni Lidh."
+
+#: includes/class-admin.php:421
+msgid "OAuth client id"
+msgstr "ID klienti OAuth"
+
+#: includes/class-admin.php:422
+msgid "OAuth client secret"
+msgstr "Sekreti i klientit OAuth"
+
+#: includes/class-admin.php:422
+msgid "Leave empty to keep the saved secret"
+msgstr "Lëreni bosh për të ruajtur sekretin e ruajtur"
+
+#: includes/class-admin.php:423
+msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
+msgstr "Në Google Cloud Console, aktivizoni Google Drive API, më pas krijoni një klient OAuth të llojit “Web application” me këtë adresë si URI të autorizuar ridrejtimi:"
+
+#: includes/class-admin.php:423
+msgid "Save, then press Connect. The plugin only sees the files it creates."
+msgstr "Ruajeni, mandej shtypni Lidhu. Shtojca sheh vetëm kartelat që krijon vetë."
+
+#: includes/class-admin.php:425
+msgid "Folder inside the storage (optional)"
+msgstr "Dosje brenda hapësirës së ruajtjes (opsionale)"
+
+#: includes/class-admin.php:426
+msgid "Save storage"
+msgstr "Kurseni hapësirë ruajtëse"
+
+#: includes/class-admin.php:436
+msgid "Import a backup from another plugin or host"
+msgstr "Importoni një kopje rezervë nga një shtojcë ose pritës tjetër"
+
+#: includes/class-admin.php:437
+msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
+msgstr "Importoni një faqe nga një kopje rezervë e krijuar nga UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, ose çdo arkivë zip/tar e një faqeje WordPress me skedarin e saj .sql dump. Përmbajtja shkon te wp-content dhe baza e të dhënave zëvendëson atë të kësaj faqeje; adresat ndryshohen automatikisht në ato të kësaj faqeje."
+
+#: includes/class-admin.php:439
+msgid "Upload from your computer"
+msgstr "Ngarkoni nga kompjuteri juaj"
+
+#: includes/class-admin.php:439
+msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
+msgstr "Zgjidhni çdo skedar të kopjes rezervë menjëherë (UpdraftPlus krijon disa). Skedarët e mëdhenj dërgohen në pjesë të vogla, kështu që kufiri i ngarkimit të pritësit tuaj nuk zbatohet."
+
+#: includes/class-admin.php:440
+msgid "Or from links (Google Drive, Dropbox or any download address)"
+msgstr "Ose nga lidhje (Google Drive, Dropbox ose çfarëdo adrese shkarkimi)"
+
+#: includes/class-admin.php:440
+msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
+msgstr "Një lidhje për rresht. Për Google Drive dhe Dropbox, ndajeni skedarin me \"këdo që ka lidhjen\" dhe ngjiteni atë lidhje; çaktivizojeni sërish ndarjen më pas."
+
+#: includes/class-admin.php:442
+msgid "Or a file already on this server"
+msgstr "Ose një skedar tashmë në këtë server"
+
+#. translators: %s: folder path.
+#: includes/class-admin.php:450
+#, php-format
+msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
+msgstr "Ngarkoni arkivat përmes FTP-së ose përgjegjësit të kartelave të strehuesit tuaj te %s dhe ringarkojeni këtë faqe."
+
+#: includes/class-admin.php:455
+msgid "Or a deploy code from another site"
+msgstr "Ose një kod shpërndarjeje nga një sajt tjetër"
+
+#: includes/class-admin.php:455
+msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
+msgstr "Nëse një faqe tjetër ju dha një kod shpërndarjeje të Zinn® Backups, ngjiteni këtu për ta kopjuar atë kopje rezervë në këtë faqe pa ndarë çelësat e saj të ruajtjes. Një kod funksionon për disa orë; trajtojeni atë si një fjalëkalim."
+
+#: includes/class-admin.php:455
+msgid "Passphrase (only if that backup is encrypted)"
+msgstr "Frazëkalim (vetëm nëse ajo kopje rezervë është e koduar)"
+
+#: includes/class-admin.php:456
+#: includes/class-admin.php:458
+msgid "Import"
+msgstr "Importo"
+
+#: includes/class-admin.php:457
+msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
+msgstr "E kuptoj që importimi zëvendëson përmbajtjen dhe bazën e të dhënave të kësaj faqeje. Pas kësaj, hyni me një llogari nga faqja e importuar."
+
+#: includes/class-admin.php:460
+msgid "Moving to Zinn® hosting?"
+msgstr "Po kaloni te hostimi Zinn®?"
+
+#: includes/class-admin.php:460
+msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
+msgstr "Zinn Digital® mund ta transferojë faqen tuaj nga host-i juaj i vjetër. Nëse host-i juaj i vjetër nuk ju jep qasje në FTP, SSH apo panel kontrolli, instaloni Zinn® Migrate në faqen e vjetër; ai krijon një arkivë të vetme të cilën mund ta importoni këtu ose t'ia dorëzoni Zinn®."
+
+#: includes/class-admin.php:470
+msgid "What goes into a backup"
+msgstr "Çfarë përfshihet në një kopje rezervë"
+
+#: includes/class-admin.php:471
+msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
+msgstr "Përfshini kartelat vetjake të WordPress-it (wp-admin, wp-includes). Zakonisht s’është e nevojshme: WordPress-i mund të riinstalohet përherë."
+
+#: includes/class-admin.php:472
+msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
+msgstr "Gjithashtu lini jashtë këto dosje ose skedarë (një për rresht, në lidhje me dosjen e WordPress)"
+
+#: includes/class-admin.php:473
+msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
+msgstr "Përjashtohen gjithmonë: fshehtinat, hapësira e përkohshme e përditësimit dhe dosjet vetiake të arkivave të shtojcave të tjera të kopjeve rezervë:"
+
+#: includes/class-admin.php:474
+msgid "Size of each part (MB)"
+msgstr "Madhësia e secilës pjesë (MB)"
+
+#: includes/class-admin.php:479
+msgid "Save settings"
+msgstr "Ruaji rregullimet"
+
+#: includes/class-archiver.php:52
+msgid "A backup part could not be opened for writing. Check that wp-content has free space."
+msgstr "Një pjesë e kopjes rezervë nuk mund të hapej për shkrim. Kontrolloni nëse wp-content ka hapësirë të lirë."
+
+#: includes/class-archiver.php:113
+msgid "A backup part could not be written. Check that wp-content has free space."
+msgstr "Një pjesë e kopjes rezervë nuk mund të shkruhej. Kontrolloni nëse wp-content ka hapësirë të lirë."
+
+#: includes/class-backup-job.php:42
+msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
+msgstr "Lidhni së pari një destinacion ruajtjeje te skeda Storage: kopjet rezervë ruhen në hapësirën tuaj, jo në këtë server."
+
+#: includes/class-backup-job.php:45
+#: includes/class-restore-job.php:108
+msgid "Multisite networks are not supported yet."
+msgstr "Rrjetet me shumë faqe (multisite) nuk mbështeten ende."
+
+#: includes/class-backup-job.php:48
+msgid "This server’s PHP has no ZipArchive extension. Ask your host to enable it."
+msgstr "PHP-ja e këtij serveri nuk ka shtojcën ZipArchive. Kërkojini presuesit tuaj ta aktivizojë atë."
+
+#: includes/class-backup-job.php:98
+msgid "Starting"
+msgstr "Po niset"
+
+#: includes/class-backup-job.php:99
+msgid "Listing files"
+msgstr "Po listohen skedarët"
+
+#: includes/class-backup-job.php:100
+msgid "Backing up the database"
+msgstr "Po krijohet kopje rezervë e bazës së të dhënave"
+
+#: includes/class-backup-job.php:101
+msgid "Packing files"
+msgstr "Duke paketuar skedarët"
+
+#: includes/class-backup-job.php:102
+msgid "Uploading to your storage"
+msgstr "Po ngarkohet te hapësira juaj e ruajtjes"
+
+#: includes/class-backup-job.php:103
+msgid "Finishing"
+msgstr "Po përfundon"
+
+#: includes/class-backup-job.php:123
+msgid "The backup reached an unknown stage."
+msgstr "Kopja rezervë arriti një fazë të panjohur."
+
+#. translators: %s: backup id.
+#: includes/class-backup-job.php:143
+#, php-format
+msgid "Backup %s started."
+msgstr "Kopjimi rezervë i %s filloi."
+
+#. translators: 1: number of files, 2: total size.
+#: includes/class-backup-job.php:168
+#, php-format
+msgid "Found %1$s files (%2$s)."
+msgstr "U gjetën %1$s skedarë (%2$s)."
+
+#. translators: 1: number of tables, 2: number of rows, 3: size.
+#: includes/class-backup-job.php:209
+#, php-format
+msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
+msgstr "Baza e të dhënave: %1$d tabela, %2$s rreshta, %3$s e ngjeshur."
+
+#. translators: 1: size of the backup, 2: number of destinations.
+#: includes/class-backup-job.php:473
+#, php-format
+msgid "Backup complete: %1$s stored in %2$d destination."
+msgid_plural "Backup complete: %1$s stored in %2$d destinations."
+msgstr[0] "Kopja rezervë përfundoi: %1$s u ruajt në %2$d destinacion."
+msgstr[1] "Rezervimi përfundoi: %1$s u ruajt në %2$d destinacione."
+
+#: includes/class-backup-job.php:503
+msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
+msgstr "Disa pjesë të ngarkuara tashmë nuk mund të hiqeshin nga hapësira juaj e ruajtjes; ato ndodhen në një dosje kopjimi rezervë të paplotë dhe nuk ofrohen kurrë për rikthim."
+
+#: includes/class-backup-job.php:520
+msgid "A storage destination was removed while the backup was running."
+msgstr "Një vendmbërritje depozitimi u hoq ndërkohë që kopja rezervë po ekzekutohej."
+
+#: includes/class-catalog.php:134
+msgid "That is not a backup folder."
+msgstr "Ajo nuk është dosje kopjeje rezervë."
+
+#: includes/class-catalog.php:138
+#: includes/class-restore-job.php:186
+msgid "That storage destination is no longer saved on this site."
+msgstr "Ky destinacion depozitimi nuk është më i ruajtur në këtë faqe."
+
+#: includes/class-catalog.php:141
+msgid "Later incremental backups are built on this one. Delete those first."
+msgstr "Kopjet e mëvonshme shtuese rezervë janë të bazuara në këtë. Fshijini ato më parë."
+
+#: includes/class-crypto.php:88
+msgid "This file is not an encrypted Zinn® Backups file."
+msgstr "Ky skedar nuk është një skedar i koduar Zinn® Backups."
+
+#: includes/class-crypto.php:103
+msgid "The backup could not be decrypted: the passphrase is wrong or the file is damaged."
+msgstr "Kopja rezervë nuk mund të deshifrohej: fraza e kalimit është e pasaktë ose skedari është i dëmtuar."
+
+#: includes/class-crypto.php:112
+msgid "The encrypted backup file is incomplete."
+msgstr "Skedari i kopjes rezervë të koduar nuk është i plotë."
+
+#: includes/class-database-dumper.php:67
+msgid "The database file could not be written. Check that wp-content has free space."
+msgstr "Skedari i bazës së të dhënave nuk mund të shkruhej. Kontrolloni që wp-content të ketë hapësirë të lirë."
+
+#: includes/class-deploy-code.php:41
+msgid "That is not a deploy code. A deploy code starts with zbdeploy1."
+msgstr "Ky nuk është një kod shpërndarjeje. Një kod shpërndarjeje fillon me zbdeploy1."
+
+#: includes/class-deploy-code.php:46
+#: includes/class-deploy-code.php:67
+#: includes/class-deploy-code.php:76
+msgid "That deploy code is damaged. Copy it again from the other site."
+msgstr "Ai kod instalimi është i dëmtuar. Kopjojeni përsëri nga sajti tjetër."
+
+#: includes/class-deploy-code.php:56
+msgid "The deploy code has expired or its backup was deleted. Make a new code on the other site."
+msgstr "Kodi i vendosjes ka skaduar ose kopja rezervë e tij është fshirë. Krijoni një kod të ri në sajtin tjetër."
+
+#: includes/class-deploy-code.php:60
+msgid "That deploy code does not point at a Zinn® Backups backup."
+msgstr "Ky kod vendosjeje nuk tregon një kopje rezervë të Zinn® Backups."
+
+#: includes/class-deploy-code.php:63
+msgid "The deploy code has expired. Make a new code on the other site."
+msgstr "Kodi i vendosjes ka skaduar. Krijoni një kod të ri në faqen tjetër."
+
+#: includes/class-downloader.php:83
+msgid "The server stopped honouring partial downloads. Start the import again."
+msgstr "Shërbyesi nuk pranon më shkarkime të pjesshme. Ju lutemi, rifilloni importimin."
+
+#: includes/class-downloader.php:87
+msgid "The link opened a web page instead of a file. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link."
+msgstr "Lidhja hapi një faqe uebi në vend të një skedari. Për Google Drive dhe Dropbox, ndani skedarin me \"këdo që ka lidhjen\" dhe ngjiteni atë lidhje."
+
+#. translators: %d: HTTP status code.
+#: includes/class-downloader.php:96
+#, php-format
+msgid "The link answered with HTTP %d."
+msgstr "Lidhja u përgjigj me HTTP %d."
+
+#: includes/class-file-scanner.php:53
+msgid "The file list could not be written."
+msgstr "Lista e skedarëve nuk mund të shkruhej."
+
+#. translators: %s: the network error message.
+#: includes/class-http.php:46
+#, php-format
+msgid "The storage service could not be reached: %s"
+msgstr "Shërbimi i depozitimit nuk u arrit dot: %s"
+
+#. translators: 1: service name, 2: HTTP status code, 3: the service's own error text.
+#: includes/class-http.php:78
+#, php-format
+msgid "%1$s answered with HTTP %2$d: %3$s"
+msgstr "%1$s u përgjigj me HTTP %2$d: %3$s"
+
+#: includes/class-http.php:113
+msgid "no details given"
+msgstr "Nuk janë dhënë hollësi"
+
+#: includes/class-plugin.php:96
+msgid "You are not allowed to manage backups."
+msgstr "Nuk ju lejohet të administroni kopje rezervë."
+
+#: includes/class-plugin.php:196
+msgid "Tick the box to confirm that the restore replaces this site’s files and database."
+msgstr "Caktoni kutinë për të konfirmuar se rikthimi zëvendëson skedarët dhe bazën e të dhënave të këtij sajti."
+
+#: includes/class-plugin.php:271
+#: includes/class-plugin.php:290
+msgid "Save the destination first."
+msgstr "Ruani fillimisht destinacionin."
+
+#: includes/class-plugin.php:274
+msgid "Connected: a test file was written and removed."
+msgstr "U lidh: një skedar prove u shkrua dhe u hoq."
+
+#: includes/class-plugin.php:306
+msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
+msgstr "Vendosni fillimisht çelësin e aplikacionit tuaj Dropbox (shihni hapat pranë formularit)."
+
+#: includes/class-plugin.php:319
+msgid "This kind of storage does not sign in."
+msgstr "Ky lloj ruajtjeje nuk identifikohet."
+
+#: includes/class-plugin.php:336
+msgid "The sign-in expired. Press Connect again."
+msgstr "Hyrja skadoi. Shtypni sërish Lidhu."
+
+#: includes/class-plugin.php:342
+msgid "Dropbox is connected."
+msgstr "Dropbox është i lidhur."
+
+#: includes/class-plugin.php:411
+msgid "Settings saved."
+msgstr "Rregullimet u ruajtën."
+
+#: includes/class-plugin.php:427
+#: includes/class-runner.php:64
+msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
+msgstr "Një tjetër kopje rezervë, rikthim ose importim është duke u kryer. Prisni që të përfundojë, ose anulojeni."
+
+#: includes/class-plugin.php:453
+msgid "The upload was not started properly. Start again."
+msgstr "Ngarkimi nuk filloi siç duhet. Filloni përsëri."
+
+#: includes/class-plugin.php:457
+msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
+msgstr "Pjesa nuk mbërriti. Serveri juaj mund të kufizojë madhësitë e ngarkimit; provoni përsëri."
+
+#: includes/class-plugin.php:481
+msgid "Tick the box to confirm that the import replaces this site’s content and database."
+msgstr "Shënoni kutinë për të konfirmuar se importimi zëvendëson përmbajtjen dhe bazën e të dhënave të kësaj faqeje."
+
+#: includes/class-plugin.php:535
+msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
+msgstr "Zgjidhni një arkiv për të importuar: ngarkojeni atë, ngjitni një lidhje ose zgjidhni një nga dosja e importit."
+
+#. translators: 1: a percentage, e.g. 50. 2: a Pro plugin's name.
+#: includes/class-pro-discount.php:132
+#, php-format
+msgid "Hosting customer? Get %1$d%% off %2$s"
+msgstr "Klient i pritjes? Merrni %1$d%% zbritje në %2$s"
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:141
+#, php-format
+msgid "As a Zinn Digital® hosting customer you get a personal code for %d%% off your first payment. Renewals are at the normal price."
+msgstr "Si klient i shërbimit të pritjes Zinn Digital®, ju merrni një kod personal për %d%% zbritje në pagesën tuaj të parë. Rinovimet bëhen me çmimin e zakonshëm."
+
+#. translators: %d: a percentage, e.g. 50.
+#: includes/class-pro-discount.php:156
+#, php-format
+msgid "Get my %d%% code and go to checkout"
+msgstr "Merrni kodin tim prej %d%% dhe shkoni te pagesa"
+
+#: includes/class-pro-discount.php:171
+msgid "Sorry, you are not allowed to do that."
+msgstr "Na vjen keq, nuk ju lejohet ta bëni këtë."
+
+#: includes/class-pro-discount.php:222
+msgid "This discount is for customers with a paid hosting plan in good standing. Free trials do not qualify."
+msgstr "Kjo zbritje është për klientët me një plan pritjeje me pagesë në gjendje të mirë. Provat falas nuk kualifikohen."
+
+#: includes/class-pro-discount.php:225
+msgid "You have already used your hosting-customer discount for this plugin."
+msgstr "E keni përdorur tashmë zbritjen tuaj të klientit të pritjes për këtë shtojcë."
+
+#: includes/class-pro-discount.php:228
+msgid "We could not get your code just now. Please try again in a few minutes."
+msgstr "Nuk mundëm ta merrnim kodin tuaj tani. Ju lutemi provoni përsëri pas disa minutash."
+
+#: includes/class-restore-job.php:128
+msgid "Reading the backup"
+msgstr "Duke lexuar kopjen rezervë"
+
+#: includes/class-restore-job.php:129
+msgid "Downloading the archive"
+msgstr "Po shkarkohet arkiva"
+
+#: includes/class-restore-job.php:130
+msgid "Recognising the archive"
+msgstr "Po njihet arkivi"
+
+#: includes/class-restore-job.php:131
+msgid "Restoring files"
+msgstr "Duke rikthyer skedarët"
+
+#: includes/class-restore-job.php:132
+msgid "Downloading the database"
+msgstr "Po shkarkohet baza e të dhënave"
+
+#: includes/class-restore-job.php:133
+msgid "Restoring the database"
+msgstr "Po rikthehet baza e të dhënave"
+
+#: includes/class-restore-job.php:134
+msgid "Updating the site address"
+msgstr "Po përditësohet adresa e sajtit"
+
+#: includes/class-restore-job.php:135
+msgid "Switching to the restored database"
+msgstr "Po kalohet te baza e të dhënave e rikthyer"
+
+#: includes/class-restore-job.php:158
+msgid "The restore reached an unknown stage."
+msgstr "Rikthimi arriti një fazë të panjohur."
+
+#: includes/class-restore-job.php:201
+msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
+msgstr "Kjo dosje nuk përmban asnjë kopje rezervë të plotë të Zinn® Backups (manifesti mungon)."
+
+#: includes/class-restore-job.php:204
+msgid "This backup is encrypted. Enter its passphrase to restore it."
+msgstr "Kjo kopje rezervë është e koduar. Futni frazëkalimin e saj për ta rikthyer."
+
+#. translators: %s: backup id.
+#: includes/class-restore-job.php:219
+#, php-format
+msgid "This incremental backup needs backup %s, which is no longer in the storage."
+msgstr "Kjo kopje rezervë inkrementale ka nevojë për kopjen rezervë %s, e cila nuk gjendet më në hapësirën e ruajtjes."
+
+#. translators: 1: backup date, 2: number of parts.
+#: includes/class-restore-job.php:266
+#, php-format
+msgid "Restoring the backup of %1$s (%2$d file parts)."
+msgstr "Po rikthehet kopja rezervë e %1$s (%2$d pjesë skedari)."
+
+#. translators: 1: number of files, 2: example paths.
+#: includes/class-restore-job.php:340
+#, php-format
+msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
+msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
+msgstr[0] "Skedari %1$s nuk mund të mbishkruhej sepse ky sajti nuk lejohet ta ndryshojë atë, dhe u la ashtu siç është: %2$s"
+msgstr[1] "%1$s skedarë nuk mund të mbishkruheshin sepse kjo faqe nuk lejohet t'i ndryshojë ata, dhe u lanë ashtu siç janë: %2$s"
+
+#. translators: %s: number of files.
+#: includes/class-restore-job.php:359
+#, php-format
+msgid "Restored %s files."
+msgstr "U rikthyen %s skedarë."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:422
+#, php-format
+msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
+msgstr "%s nuk përputhej me checksum-in e vet pas shkarkimit. Kopja në ruajtje mund të jetë e dëmtuar."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:493
+#, php-format
+msgid "%s did not arrive. Upload it again."
+msgstr "%s nuk mbërriti. Ju lutemi, ngarkojeni përsëri."
+
+#. translators: %s: list of backup formats.
+#: includes/class-restore-job.php:515
+#, php-format
+msgid "Recognised: %s."
+msgstr "U njoh: %s."
+
+#. translators: 1: number of files, 2: number of files skipped.
+#: includes/class-restore-job.php:542
+#, php-format
+msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
+msgstr "U importuan %1$s skedarë në wp-content (%2$s u lanë jashtë: fshehtinat, drop-ins dhe dosjet e shtojcave të tjera të kopjeve rezervë)."
+
+#: includes/class-restore-job.php:588
+msgid "The archive has no database dump, so only files were imported."
+msgstr "Arkiva nuk përmban ndonjë kopje të bazës së të dhënave, ndaj u importuan vetëm skedarët."
+
+#. translators: %d: number of tables.
+#: includes/class-restore-job.php:598
+#, php-format
+msgid "Database restored into %d temporary tables."
+msgstr "Baza e të dhënave u rikthye në %d tabela të përkohshme."
+
+#. translators: %s: file name.
+#: includes/class-restore-job.php:615
+#, php-format
+msgid "%s has no WordPress tables in it and was skipped."
+msgstr "%s nuk përmban tabela të WordPress-it dhe u kapërcye."
+
+#: includes/class-restore-job.php:653
+#: includes/class-table-swap.php:237
+msgid "The backup’s database has no WordPress tables, so nothing was replaced."
+msgstr "Baza e të dhënave e kopjes rezervë nuk përmban tabela të WordPress-it, ndaj nuk u zëvendësua asgjë."
+
+#: includes/class-restore-job.php:658
+msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
+msgstr "Kjo kopje rezervë është e një rrjeti me shumë faqe (multisite). Rikthimi i një rrjeti në një faqe të vetme nuk mbështetet."
+
+#. translators: 1: old address, 2: this site's address.
+#: includes/class-restore-job.php:683
+#, php-format
+msgid "Moving the content from %1$s to %2$s."
+msgstr "Po zhvendoset përmbajtja nga %1$s te %2$s."
+
+#: includes/class-restore-job.php:809
+msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
+msgstr "Rikthimi përfundoi. Nëse jeni çidentifikuar, identifikohuni me një llogari nga sajti i rikthyer."
+
+#: includes/class-restore-job.php:810
+msgid "Restore complete."
+msgstr "Rikthimi përfundoi."
+
+#. translators: 1: error message, 2: seconds until the retry.
+#: includes/class-runner.php:160
+#, php-format
+msgid "%1$s — trying again in %2$d seconds."
+msgstr "%1$s — po provohet sërish pas %2$d sekondash."
+
+#: includes/class-runner.php:189
+msgid "Cancelled."
+msgstr "U anulua."
+
+#: includes/class-settings.php:145
+msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
+msgstr "Kopjet rezervë shkojnë në një destinacion ruajtjeje. Redaktoni ose hiqni atë që keni për të përdorur një tjetër."
+
+#: includes/class-sql-importer.php:84
+msgid "The database file could not be opened."
+msgstr "Skedari i bazës së të dhënave nuk mund të hapej."
+
+#. translators: 1: database error, 2: start of the statement.
+#: includes/class-sql-importer.php:262
+#, php-format
+msgid "The database refused a statement from the backup: %1$s (%2$s…)"
+msgstr "Baza e të dhënave refuzoi një deklaratë nga kopja rezervë: %1$s (%2$s…)"
+
+#. translators: %s: database error.
+#: includes/class-table-swap.php:256
+#, php-format
+msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
+msgstr "Tabelat e rikthyera nuk mund të ndërroheshin: %s. Sajti juaj mbetet i pandryshuar."
+
+#: includes/class-work-dir.php:43
+msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
+msgstr "Nuk ka dosje të shkrueshme për skedarët e përkohshëm të kopjeve rezervë. Bëjeni wp-content të shkrueshme dhe provoni përsëri."
+
+#: includes/class-work-dir.php:90
+msgid "Could not create a folder for this job."
+msgstr "Nuk mund të krijohej një dosje për këtë punë."
+
+#. translators: %s: the Zinn Digital trade mark, which is not translated.
+#: includes/class-zinn-backups-promo.php:349
+#: includes/class-zinn-backups-promo.php:407
+#, php-format
+msgid "%s — guides and services"
+msgstr "%s — udhëzues dhe shërbime"
+
+#: includes/class-zinn-backups-promo.php:364
+msgid "User guides"
+msgstr "Udhëzuesit e përdoruesit"
+
+#. translators: %s: this plugin's name, e.g. "Zinn® Cache".
+#: includes/class-zinn-backups-promo.php:414
+#, php-format
+msgid "Read the %s user guide"
+msgstr "Lexoni udhëzuesin e përdoruesit për %s"
+
+#: includes/class-zinn-backups-promo.php:422
+msgid "Hide this"
+msgstr "Fshiheni këtë"
+
+#: includes/class-zinn-backups-promo.php:535
+msgid "Zinn® hosting for WordPress"
+msgstr "Pritje Zinn® për WordPress"
+
+#: includes/class-zinn-backups-promo.php:536
+msgid "LiteSpeed, daily backups, free migration and a control panel built for people who run more than one site."
+msgstr "LiteSpeed, kopje rezervë të përditshme, migrim falas dhe një panel kontrolli i krijuar për njerëzit që menaxhojnë më shumë se një faqe."
+
+#: includes/class-zinn-backups-promo.php:542
+msgid "The Zinn® marketplace"
+msgstr "Tregu i Zinn®"
+
+#: includes/class-zinn-backups-promo.php:543
+msgid "Buy and sell established sites, domains and link placements, with the money held safely until both sides are happy."
+msgstr "Blini dhe shisni sajte të konsoliduara, domene dhe vendosje lidhjesh, me paratë e ruajtura të sigurta derisa të dyja palët të jenë të kënaqura."
+
+#: includes/class-zinn-backups-promo.php:590
+msgid "Zinn Hub® — hire people who do this for a living"
+msgstr "Zinn Hub® — punësoni njerëz që e bëjnë këtë si profesion"
+
+#: includes/class-zinn-backups-promo.php:591
+msgid "Our global freelance marketplace: browse over 10,000 ready-made services from writers, designers, developers and SEOs, or post a project and let them bid."
+msgstr "Tregu ynë global i profesionistëve të pavarur: shfletoni mbi 10.000 shërbime të gatshme nga shkrimtarë, stilistë, zhvillues dhe ekspertë të SEO-së, ose postoni një projekt dhe lërini të bëjnë oferta."
+
+#: includes/class-zinn-backups-updater.php:253
+msgid "See the Zinn Digital® release notes."
+msgstr "Shihni shënimet e versionit të Zinn Digital®."
+
+#: includes/class-zinn-backups-updater.php:302
+msgid "The Zinn® update service did not issue a download link for this update. Check that this site can reach the Zinn® platform, then try again."
+msgstr "Shërbimi i përditësimeve të Zinn® nuk lëshoi një lidhje shkarkimi për këtë përditësim. Kontrolloni nëse ky sajti mund të lidhet me platformën Zinn®, pastaj provoni përsëri."
+
+#. translators: %s: the download error reported by WordPress.
+#: includes/class-zinn-backups-updater.php:316
+#, php-format
+msgid "The update could not be downloaded from the Zinn® update service (%s). Try again in a few minutes."
+msgstr "Përditësimi nuk mund të shkarkohej nga shërbimi i përditësimeve Zinn® (%s). Ju lutemi provoni përsëri pas disa minutash."
+
+#: includes/class-zinn-backups-updater.php:330
+msgid "The downloaded update failed its integrity check and was not installed."
+msgstr "Përditësimi i shkarkuar dështoi në kontrollin e integritetit dhe nuk u instalua."
+
+#: includes/import/class-archive-reader.php:147
+msgid "The zip archive could not be opened. It may be damaged or incomplete."
+msgstr "Arkiva zip nuk mund të hapej. Mund të jetë e dëmtuar ose e paplotë."
+
+#: includes/import/class-archive-reader.php:311
+msgid "This .wpress file uses a format we cannot read (it may be compressed or encrypted by All-in-One WP Migration). Export it again without encryption."
+msgstr "Kjo skedar .wpress përdor një format që nuk mund ta lexojmë (mund të jetë ngjeshur ose koduar nga All-in-One WP Migration). Ju lutemi eksportojeni përsëri pa kodim."
+
+#: includes/import/class-formats.php:66
+msgid "This is a Duplicator “DupArchive” (.daf) file. In Duplicator, build the package again with the archive format set to ZIP, then import that."
+msgstr "Kjo është një skedar Duplicator “DupArchive” (.daf). Te Duplicator, ndërtojeni paketën sërish me formatin e arkivit të caktuar në ZIP, pastaj importojeni atë."
+
+#: includes/import/class-formats.php:69
+msgid "This UpdraftPlus database backup is encrypted. Decrypt it in UpdraftPlus (or turn off database encryption and back up again), then import it."
+msgstr "Kjo kopje rezervë e bazës së të dhënave nga UpdraftPlus është e koduar. Çkodojeni atë në UpdraftPlus (ose çaktivizoni kodimin e bazës së të dhënave dhe bëni përsëri një kopje rezervë), pastaj importojeni."
+
+#: includes/import/class-formats.php:76
+msgid "Database dump"
+msgstr "Dump i bazës së të dhënave"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:93
+#, php-format
+msgid "%s is not a backup archive we can read (zip, tar, tar.gz, .wpress, .sql or .sql.gz)."
+msgstr "%s nuk është një arkiv kopjeje rezervë që mund ta lexojmë (zip, tar, tar.gz, .wpress, .sql ose .sql.gz)."
+
+#: includes/import/class-formats.php:99
+msgid "Website archive"
+msgstr "Arkiva e faqes së internetit"
+
+#. translators: %s: file name.
+#: includes/import/class-formats.php:123
+#, php-format
+msgid "%s has no WordPress content (no wp-content folder and no database dump) in it."
+msgstr "%s nuk përmban përmbajtje të WordPress-it (asnjë dosje wp-content dhe asnjë kopje të bazës së të dhënave)."
+
+#: includes/import/class-formats.php:155
+msgid "This .wpress file is encrypted or compressed by All-in-One WP Migration. Export it again with encryption and compression switched off, then import that."
+msgstr "Ky skedar .wpress është i koduar ose i ngjeshur nga All-in-One WP Migration. Ju lutemi eksportojeni sërish me kodimin dhe ngjeshjen të çaktivizuar, më pas importojeni atë."
+
+#: includes/storage/class-destinations.php:62
+msgid "Other S3-compatible storage"
+msgstr "Hapësirë tjetër ruajtjeje e përputhshme me S3"
+
+#: includes/storage/class-destinations.php:77
+msgid "Cloudflare R2, Amazon S3 or S3-compatible"
+msgstr "Cloudflare R2, Amazon S3 ose i përputhshëm me S3"
+
+#: includes/storage/class-destinations.php:100
+msgid "The storage keys could not be read on this site. Enter the secret key again on the Storage tab."
+msgstr "Çelësat e ruajtjes nuk mund të lexoheshin në këtë faqe. Vendosni përsëri çelësin sekret te skeda Ruajtja."
+
+#: includes/storage/class-destinations.php:116
+msgid "This kind of storage is not known."
+msgstr "Ky lloj depozitimi nuk njihet."
+
+#: includes/storage/class-destinations.php:168
+msgid "Choose a kind of storage."
+msgstr "Zgjidhni një lloj hapësire ruajtëse."
+
+#: includes/storage/class-destinations.php:187
+msgid "Enter the bucket name and the access key."
+msgstr "Futni emrin e bucket-it dhe çelësin e hyrjes."
+
+#: includes/storage/class-destinations.php:190
+msgid "Enter your Cloudflare account id (or the full R2 endpoint)."
+msgstr "Futni ID-në e llogarisë suaj Cloudflare (ose pikën fundore të plotë R2)."
+
+#: includes/storage/class-destinations.php:193
+msgid "Enter the endpoint address of your storage."
+msgstr "Futni adresën e pikës fundore të hapësirës suaj të ruajtjes."
+
+#: includes/storage/class-destinations.php:202
+msgid "Enter the OAuth client id from your Google Cloud project."
+msgstr "Vendosni OAuth client id nga projekti juaj në Google Cloud."
+
+#: includes/storage/class-dropbox.php:94
+msgid "Dropbox did not return a refresh token. Start the connection again."
+msgstr "Dropbox nuk ktheu një token rifreskimi. Niseni lidhjen sërish."
+
+#: includes/storage/class-dropbox.php:369
+msgid "Dropbox is not connected. Connect it again on the Storage tab."
+msgstr "Dropbox nuk është i lidhur. Lidheni sërish te skeda e Hapësirës Ruajtëse."
+
+#: includes/storage/class-google-drive.php:114
+msgid "Google did not return a refresh token. Remove this site from your Google account’s third-party access and connect again."
+msgstr "Google nuk ktheu një token rifreskimi. Hiqeni këtë faqe nga aksesi i palëve të treta në llogarinë tuaj Google dhe lidhuni përsëri."
+
+#: includes/storage/class-google-drive.php:308
+msgid "That file is not in Google Drive any more."
+msgstr "Ajo skedar nuk gjendet më në Google Drive."
+
+#: includes/storage/class-google-drive.php:477
+msgid "Google Drive is not connected. Connect it again on the Storage tab."
+msgstr "Google Drive nuk është i lidhur. Lidheni përsëri në skedën Depozitimi."
+
+#: includes/storage/class-s3.php:85
+msgid "The storage service did not start the upload."
+msgstr "Shërbimi i ruajtjes nuk e nisi ngarkimin."
+
+#: includes/storage/class-s3.php:352
+msgid "The storage service sent a reply that could not be read."
+msgstr "Shërbimi i ruajtjes dërgoi një përgjigje që nuk mund të lexohej."
+
+#: includes/storage/class-s3.php:380
+msgid "A temporary backup file could not be read."
+msgstr "Nuk mund të lexohej një kartelë e përkohshme kopjeruajtjeje."
+
+#: includes/storage/class-url-source.php:71
+msgid "A deploy link is read-only."
+msgstr "Një lidhje shpërndarjeje është vetëm për lexim."
+
+#: includes/storage/class-url-source.php:106
+msgid "The deploy code has no link for a file this backup needs."
+msgstr "Kodi i vendosjes nuk ka lidhje për një skedar që i nevojitet kësaj kopjeje rezervë."
+
+#: includes/storage/class-url-source.php:115
+msgid "The deploy link"
+msgstr "Lidhja e vendosjes"
