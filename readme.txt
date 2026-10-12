@@ -7,11 +7,11 @@ Tags: backup, restore, migration, dropbox, google drive
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Back up files and database to your own Dropbox, Google Drive, R2 or S3, restore safely, and import backups from other plugins.
+Back up files and database to your own cloud storage (Google Drive, R2, S3 and more), restore safely, and import backups from other plugins.
 
 == Description ==
 
@@ -117,6 +117,9 @@ They are kept. A restore writes the backup's files over the site's; it never del
 3. Importing an UpdraftPlus backup.
 
 == Changelog ==
+
+= 1.0.3 =
+* The plugin summary now describes where backups go as your own cloud storage (Google Drive, R2, S3 and more).
 
 = 1.0.2 =
 * Zinn® Backups Pro is out: a link to it on the Plugins screen, and the hosting-customer discount card on sites Zinn Digital® hosts.

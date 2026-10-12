@@ -1,6 +1,6 @@
 # Zinn® Backups
 
-Back up files and database to your own Dropbox, Google Drive, R2 or S3, restore safely, and import backups from other plugins.
+Back up files and database to your own cloud storage (Google Drive, R2, S3 and more), restore safely, and import backups from other plugins.
 
 Built and maintained by **Neil Lock — CEO, Zinn Digital® Ltd** — https://zinndigital.com
 
@@ -23,7 +23,7 @@ Everything in Zinn® Backups keeps working without it.
 
 | | |
 |---|---|
-| Version | `1.0.2` |
+| Version | `1.0.3` |
 | Requires WordPress | 6.6 or later |
 | Tested up to | WordPress **7.1** |
 | Requires PHP | 8.2 or later |
