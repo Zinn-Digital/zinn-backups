@@ -7,7 +7,7 @@ Tags: backup, restore, migration, dropbox, google drive
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -117,6 +117,9 @@ They are kept. A restore writes the backup's files over the site's; it never del
 3. Importing an UpdraftPlus backup.
 
 == Changelog ==
+
+= 1.0.4 =
+* Security: importing from the import folder now only accepts archives that are actually in that folder.
 
 = 1.0.3 =
 * The plugin summary now describes where backups go as your own cloud storage (Google Drive, R2, S3 and more).

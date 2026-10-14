@@ -520,10 +520,22 @@ final class Plugin {
 					}
 				}
 				$server = isset( $_POST['server'] ) && is_array( $_POST['server'] ) ? array_map( 'sanitize_file_name', wp_unslash( $_POST['server'] ) ) : array(); // phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- guard() checked the nonce; sanitize_file_name on each.
-				foreach ( $server as $index => $name ) {
-					$from = self::inbox() . '/' . $name;
-					if ( '' !== $name && is_file( $from ) ) {
+				// Only a file the import folder itself lists can be picked, and every path below is
+				// built from that listing and a counter — never from request text. That also stops a
+				// crafted name (or the folder's own index.php / .htaccess seal) being moved, and a
+				// request KEY (`server[../x]`, which array_map keeps) reaching the target path.
+				$picked = array_flip( array_map( 'strval', array_values( $server ) ) );
+				$inbox  = self::inbox();
+				$index  = 0;
+				foreach ( self::inbox_files() as $file ) {
+					$name = (string) $file['name'];
+					if ( ! isset( $picked[ $name ] ) ) {
+						continue;
+					}
+					$from = $inbox . '/' . $name;
+					if ( is_file( $from ) ) {
 						$to = $dir . '/server-' . $index . '-' . $name;
+						++$index;
 						rename( $from, $to ); // phpcs:ignore WordPress.WP.AlternativeFunctions.rename_rename -- moving the person's archive into the job folder (same disk).
 						$inputs[] = array(
 							'path' => $to,

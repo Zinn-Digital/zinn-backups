@@ -23,7 +23,7 @@ Everything in Zinn® Backups keeps working without it.
 
 | | |
 |---|---|
-| Version | `1.0.3` |
+| Version | `1.0.4` |
 | Requires WordPress | 6.6 or later |
 | Tested up to | WordPress **7.1** |
 | Requires PHP | 8.2 or later |
