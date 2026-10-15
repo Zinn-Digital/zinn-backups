@@ -3,7 +3,7 @@
  * Plugin Name:       Zinn® Backups
  * Plugin URI:        https://zinndigital.com/wordpress-plugins/zinn-backups
  * Description:       Backs up your WordPress files and database to your own storage — Dropbox, Google Drive, Cloudflare R2, Amazon S3 or any S3-compatible bucket — restores them in one go, and imports backups made by other backup and migration plugins.
- * Version:           1.0.4
+ * Version:           1.0.5
  * Requires at least: 6.6
  * Requires PHP:      8.2
  * Author:            Neil Lock — CEO, Zinn Digital® Ltd
@@ -31,7 +31,7 @@ declare( strict_types=1 );
 
 defined( 'ABSPATH' ) || exit;
 
-const ZINN_BACKUPS_VERSION = '1.0.4';
+const ZINN_BACKUPS_VERSION = '1.0.5';
 const ZINN_BACKUPS_FILE    = __FILE__;
 
 require_once __DIR__ . '/includes/class-autoloader.php';

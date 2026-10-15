@@ -30,6 +30,12 @@ final class Sql_Importer {
 	/** Bytes read per read call. */
 	private const READ = 1048576;
 
+	/** Bytes the scanner may look ahead of the current one (D43102). */
+	private const LOOKAHEAD = 3;
+
+	/** The sql_mode flags that change how a quoted string ends, and so where a statement ends (D43102). */
+	private const UNSAFE_MODES = array( 'NO_BACKSLASH_ESCAPES', 'ANSI_QUOTES' );
+
 	/**
 	 * Find the table prefix a dump was written with.
 	 *
@@ -102,12 +108,20 @@ final class Sql_Importer {
 			$chunk = $gz ? gzread( $in, self::READ ) : fread( $in, self::READ ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fread -- see above.
 			if ( false === $chunk || '' === $chunk ) {
 				$eof = true;
-				break;
+				if ( '' === $buffer ) {
+					break;
+				}
+			} else {
+				$buffer .= $chunk;
 			}
-			$buffer .= $chunk;
-			$start   = 0;
-			$length  = strlen( $buffer );
-			for ( $i = 0; $i < $length; $i++ ) {
+			$start  = 0;
+			$length = strlen( $buffer );
+			// ⛔⛔ D43102: the scanner looks up to two bytes ahead (`\'`, `-- `, `/*`, `*/`). The
+			// last LOOKAHEAD bytes of a read wait for the next one, so a pair is never split by
+			// the read boundary — before 1.0.5 a `\'` split across two 1 MB reads closed the quote
+			// on the escaped `'`, and a large crafted cell turned the rest of itself into SQL.
+			$limit = $eof ? $length : max( 0, $length - self::LOOKAHEAD );
+			for ( $i = 0; $i < $limit; $i++ ) {
 				$c = $buffer[ $i ];
 				if ( '' !== $state['comment'] ) {
 					if ( ( 'line' === $state['comment'] && "\n" === $c ) || ( 'block' === $state['comment'] && '*' === $c && '/' === ( $buffer[ $i + 1 ] ?? '' ) ) ) {
@@ -148,10 +162,14 @@ final class Sql_Importer {
 					}
 				}
 			}
-			// Keep the unfinished statement; drop what was consumed.
-			$statement .= substr( $buffer, $start );
-			$offset    += strlen( $buffer );
-			$buffer     = '';
+			// Keep the unfinished statement and the unscanned tail; drop what was consumed.
+			$scanned    = min( $i, $length );
+			$statement .= substr( $buffer, $start, $scanned - $start );
+			$offset    += $scanned;
+			$buffer     = (string) substr( $buffer, $scanned );
+			if ( $eof ) {
+				break;
+			}
 		}
 		if ( $gz ) {
 			gzclose( $in );
@@ -219,10 +237,14 @@ final class Sql_Importer {
 		}
 		switch ( $verb ) {
 			case 'SET':
-				if ( preg_match( '/SQL_LOG_BIN|GTID_PURGED|@@GLOBAL/i', $sql ) ) {
+				// Only session settings: never the server's (GLOBAL/PERSIST), a password or a role.
+				if ( preg_match( '/SQL_LOG_BIN|GTID_PURGED|@@GLOBAL|@@PERSIST|\bGLOBAL\b|\bPERSIST(?:_ONLY)?\b|\bPASSWORD\b|\bROLE\b/i', $sql ) ) {
 					return;
 				}
 				$wpdb->query( $sql ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery,PluginCheck.Security.DirectDB.UnescapedDBParameter -- a session SET from the dump the administrator chose to restore.
+				if ( false !== stripos( $sql, 'sql_mode' ) ) {
+					self::safe_sql_mode();
+				}
 				return;
 			case 'CREATE':
 				if ( ! preg_match( '/^CREATE\s+TABLE/i', $sql ) ) {
@@ -321,6 +343,23 @@ final class Sql_Importer {
 		$wpdb->query( 'SET foreign_key_checks = 0' ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery -- restore session.
 		$wpdb->query( "SET SESSION sql_mode = 'NO_AUTO_VALUE_ON_ZERO'" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery -- restore session.
 		$wpdb->query( 'SET NAMES utf8mb4' ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery -- restore session.
+	}
+
+	/**
+	 * Take NO_BACKSLASH_ESCAPES and ANSI_QUOTES back out of the session after a dump's own
+	 * `SET sql_mode`. The scanner splits statements reading `\'` as an escaped quote and `"` as a
+	 * string quote — MySQL's default. With either flag on, MySQL would end a string where the
+	 * scanner does not, and text inside a cell would run as SQL (D43102; the class UpdraftPlus
+	 * 1.26.9 fixed).
+	 */
+	private static function safe_sql_mode(): void {
+		global $wpdb;
+		$mode  = (string) $wpdb->get_var( 'SELECT @@SESSION.sql_mode' ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery -- restore session.
+		$flags = array_filter( array_map( 'trim', explode( ',', $mode ) ) );
+		$safe  = array_values( array_diff( array_map( 'strtoupper', $flags ), self::UNSAFE_MODES ) );
+		if ( count( $safe ) !== count( $flags ) ) {
+			$wpdb->query( $wpdb->prepare( 'SET SESSION sql_mode = %s', implode( ',', $safe ) ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery -- restore session.
+		}
 	}
 
 	/**
