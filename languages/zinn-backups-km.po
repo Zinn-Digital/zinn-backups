@@ -659,7 +659,7 @@ msgid "Settings saved."
 msgstr "បានរក្សាទុកការកំណត់។"
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "ការបម្រុងទុក ការស្តារ ឬការនាំចូលផ្សេងទៀតកំពុងដំណើរការ។ សូមរង់ចាំរហូតដល់វាបញ្ចប់ ឬបោះបង់វា។"
 
@@ -675,7 +675,7 @@ msgstr "ដុំទិន្នន័យមិនបានមកដល់ទេ
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "គូសធីកប្រអប់ដើម្បីបញ្ជាក់ថាការនាំចូលនឹងជំនួសមាតិកា និងមូលដ្ឋានទិន្នន័យនៃគេហទំព័រនេះ។"
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "ជ្រើសរើសប័ណ្ណសារមួយដើម្បីនាំចូល៖ ផ្ទុកវាឡើង បិទភ្ជាប់តំណ ឬជ្រើសរើសមួយពីថតនាំចូល។"
 
@@ -846,12 +846,12 @@ msgid "Restore complete."
 msgstr "ការស្តារឡើងវិញបានបញ្ចប់។"
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — កំពុងព្យាយាមម្ដងទៀតក្នុងរយៈពេល %2$d វិនាទី។"
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "បានបោះបង់។"
 
@@ -859,12 +859,12 @@ msgstr "បានបោះបង់។"
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "ការបម្រុងទុកទៅកាន់ទិសដៅផ្ទុកតែមួយ។ កែសម្រួល ឬលុបអ្វីដែលអ្នកមាន ដើម្បីប្រើប្រាស់មួយផ្សេងទៀត។"
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "មិនអាចបើកឯកសារមូលដ្ឋានទិន្នន័យបានទេ។"
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "មូលដ្ឋានទិន្នន័យបានបដិសេធសេចក្តីថ្លែងការណ៍ពីការបម្រុងទុក៖ %1$s (%2$s…)"

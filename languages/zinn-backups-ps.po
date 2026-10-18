@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "تنظیمات خوندي شول."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "بله شاته‌ګري، بیا رغونه یا واردول روان دي. د هغې پای ته رسیدو ته انتظار وکړئ، یا یې لغوه کړئ."
 
@@ -677,7 +677,7 @@ msgstr "ټوټه ونه رسېده. ستاسو سرور ممکن د اپلوډ �
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "د دې تایید لپاره چې واردول د دې سایټ مینځپانګه او ډیټابیس بدلوي، بکس په نښه کړئ."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "د واردولو لپاره یو آرشیف وټاکئ: پورته یې کړئ، یو لینک ورټومبئ، یا د واردولو له پوښۍ څخه یو وټاکئ."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "بیا رغونه بشپړه شوه."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — په %2$d ثانیو کې بیا هڅه کیږي."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "لغوه شو."
 
@@ -862,12 +862,12 @@ msgstr "لغوه شو."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "شاته‌نيسې یو زېرمتون ځای ته ځي. د بل کارولو لپاره هغه ایډیټ یا لرې کړئ چې تاسو یې لرئ."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "د ډیټابیس دوتنه پرانیستل نشوه."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "ډیټابیس د بیک اپ څخه یو بیان رد کړ: %1$s (%2$s…)"

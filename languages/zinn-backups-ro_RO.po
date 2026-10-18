@@ -529,8 +529,8 @@ msgstr "Bază de date: %1$d tabele, %2$s rânduri, %3$s comprimat."
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Copie de siguranță finalizată: %1$s stocat în %2$d destinație."
-msgstr[1] "Copie de rezervă finalizată: %1$s salvat în %2$d destinații."
-msgstr[2] "Copie de rezervă finalizată: %1$s salvat în %2$d destinații."
+msgstr[1] "Copie de siguranță finalizată: %1$s stocat în %2$d destinații."
+msgstr[2] "Copie de rezervă finalizată: %1$s stocat în %2$d de destinații."
 
 #: includes/class-backup-job.php:503
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
@@ -663,7 +663,7 @@ msgid "Settings saved."
 msgstr "Setări salvate."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "O altă copie de rezervă, restaurare sau importare este în curs de desfășurare. Așteaptă să se finalizeze sau anuleaz-o."
 
@@ -679,7 +679,7 @@ msgstr "Fragmentul nu a sosit. Este posibil ca serverul tău să limiteze dimens
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Bifează căsuța pentru a confirma că importul înlocuiește conținutul și baza de date ale acestui site."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Alege o arhivă de importat: încarc-o, lipește un link sau alege una din dosarul de import."
 
@@ -774,13 +774,14 @@ msgid "Restoring the backup of %1$s (%2$d file parts)."
 msgstr "Se restaurează copia de siguranță pentru %1$s (%2$d părți de fișier)."
 
 #. translators: 1: number of files, 2: example paths.
+#. zinn-i18n: human translation — a person corrected the machine translation
 #: includes/class-restore-job.php:340
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
 msgstr[0] "Fișierul %1$s nu a putut fi suprascris deoarece acest site nu are permisiunea de a-l modifica și a fost lăsat așa cum este: %2$s"
 msgstr[1] "%1$s fișiere nu au putut fi suprascrise deoarece acest site nu are permisiunea de a le modifica și au fost lăsate așa cum sunt: %2$s"
-msgstr[2] "%1$s fișiere nu au putut fi suprascrise deoarece acest site nu are permisiunea de a le modifica și au fost lăsate așa cum sunt: %2$s"
+msgstr[2] "%1$s de fișiere nu au putut fi suprascrise deoarece acest site nu are permisiunea de a le modifica și au fost lăsate așa cum sunt: %2$s"
 
 #. translators: %s: number of files.
 #: includes/class-restore-job.php:359
@@ -852,12 +853,12 @@ msgid "Restore complete."
 msgstr "Restaurare finalizată."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — se reîncearcă în %2$d secunde."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Anulat."
 
@@ -865,12 +866,12 @@ msgstr "Anulat."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Copiile de rezervă merg la o singură destinație de stocare. Editează-o sau elimin-o pe cea pe care o ai pentru a folosi una diferită."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Fișierul bazei de date nu a putut fi deschis."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Baza de date a refuzat o instrucțiune din copia de siguranță: %1$s (%2$s…)"

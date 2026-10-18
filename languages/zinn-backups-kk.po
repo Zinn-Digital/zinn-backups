@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "Баптаулар сақталды."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Басқа сақтық көшірме жасау, қалпына келтіру немесе импорттау орындалып жатыр. Оның аяқталуын күтіңіз немесе одан бас тартыңыз."
 
@@ -677,7 +677,7 @@ msgstr "Бөлік жетпеді. Серверіңіз жүктеу өлшем�
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Импорт осы сайттың мазмұны мен дерекқорын ауыстыратынын растау үшін құсбелгіні қойыңыз."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Импорттау үшін архивті таңдаңыз: оны жүктеп салыңыз, сілтемені қойыңыз немесе импорт қалтасынан біреуін таңдаңыз."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "Қалпына келтіру аяқталды."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d секундтан кейін қайта әрекет жасалады."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Бас тартылды."
 
@@ -862,12 +862,12 @@ msgstr "Бас тартылды."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Резервтік көшірмелер бір сақтау орнына жіберіледі. Басқасын пайдалану үшін барын өңдеңіз немесе жойыңыз."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Дерекқор файлын ашу мүмкін болмады."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Дерекқор сақтық көшірмеден алынған нұсқауды қабылдамады: %1$s (%2$s…)"

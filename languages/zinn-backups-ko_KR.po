@@ -659,7 +659,7 @@ msgid "Settings saved."
 msgstr "설정이 저장되었습니다."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "다른 백업, 복원 또는 가져오기가 실행 중입니다. 완료될 때까지 기다리거나 취소하세요."
 
@@ -675,7 +675,7 @@ msgstr "청크가 도착하지 않았습니다. 서버에서 업로드 크기를
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "가져오기가 이 사이트의 콘텐츠와 데이터베이스를 대체함을 확인하려면 확인란을 선택하세요."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "가져올 아카이브를 선택하세요. 업로드하거나 링크를 붙여넣거나 가져오기 폴더에서 선택하세요."
 
@@ -846,12 +846,12 @@ msgid "Restore complete."
 msgstr "복원이 완료되었습니다."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d초 후에 다시 시도합니다."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "취소됨."
 
@@ -859,12 +859,12 @@ msgstr "취소됨."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "백업은 하나의 저장 위치로 전송됩니다. 다른 위치를 사용하려면 기존 위치를 편집하거나 제거하세요."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "데이터베이스 파일을 열 수 없습니다."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "데이터베이스가 백업의 구문을 거부했습니다: %1$s (%2$s…)"

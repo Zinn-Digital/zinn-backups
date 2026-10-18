@@ -659,7 +659,7 @@ msgid "Settings saved."
 msgstr "Đã lưu cài đặt."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Một tiến trình sao lưu, khôi phục hoặc nhập khác đang chạy. Hãy đợi tiến trình hoàn tất hoặc hủy bỏ tiến trình đó."
 
@@ -675,7 +675,7 @@ msgstr "Phần dữ liệu đã không đến. Máy chủ của bạn có thể 
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Đánh dấu vào ô để xác nhận rằng quá trình nhập sẽ thay thế nội dung và cơ sở dữ liệu của trang web này."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Chọn một tệp lưu trữ để nhập: tải lên, dán liên kết hoặc chọn một tệp từ thư mục nhập."
 
@@ -846,12 +846,12 @@ msgid "Restore complete."
 msgstr "Khôi phục hoàn tất."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — đang thử lại sau %2$d giây."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Đã hủy."
 
@@ -859,12 +859,12 @@ msgstr "Đã hủy."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Bản sao lưu chuyển đến một đích lưu trữ. Chỉnh sửa hoặc xóa đích bạn có để sử dụng một đích khác."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Không thể mở tệp cơ sở dữ liệu."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Cơ sở dữ liệu đã từ chối một câu lệnh từ bản sao lưu: %1$s (%2$s…)"

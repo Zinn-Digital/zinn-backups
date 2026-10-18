@@ -528,8 +528,8 @@ msgstr "Baza podataka: %1$d tablica, %2$s redaka, %3$s sažeto."
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
-msgstr[0] "Sigurnosna kopija dovršena: %1$s pohranjeno na %2$d odredištu."
-msgstr[1] "Sigurnosno kopiranje je dovršeno: %1$s pohranjeno na %2$d odredišta."
+msgstr[0] "Sigurnosna kopija dovršena: %1$s pohranjeno na %2$d odredište."
+msgstr[1] "Sigurnosna kopija dovršena: %1$s pohranjeno na %2$d odredišta."
 msgstr[2] "Sigurnosno kopiranje je dovršeno: %1$s pohranjeno na %2$d odredišta."
 
 #: includes/class-backup-job.php:503
@@ -663,7 +663,7 @@ msgid "Settings saved."
 msgstr "Postavke spremljene."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Drugo sigurnosno kopiranje, vraćanje ili uvoz je u tijeku. Pričekajte da završi ili ga otkažite."
 
@@ -679,7 +679,7 @@ msgstr "Dio nije stigao. Vaš poslužitelj možda ograničava veličinu prijenos
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Označite okvir kako biste potvrdili da uvoz zamjenjuje sadržaj i bazu podataka ove web-stranice."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Odaberite arhivu za uvoz: prenesite je, zalijepite poveznicu ili odaberite arhivu iz mape za uvoz."
 
@@ -774,13 +774,14 @@ msgid "Restoring the backup of %1$s (%2$d file parts)."
 msgstr "Vraćanje sigurnosne kopije stavke %1$s (%2$d dijelova datoteke)."
 
 #. translators: 1: number of files, 2: example paths.
+#. zinn-i18n: human translation — a person corrected the machine translation
 #: includes/class-restore-job.php:340
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
-msgstr[0] "Nije moguće prebrisati datoteku %1$s jer ovom web-mjestu nije dopušteno mijenjati je, te je ostavljena takva kakva jest: %2$s"
-msgstr[1] "%1$s datoteka nije se moglo prepisati jer ovoj web-stranici nije dopušteno mijenjati ih, te su ostavljene kakve jesu: %2$s"
-msgstr[2] "%1$s datoteka nije se moglo prepisati jer ovoj web-stranici nije dopušteno mijenjati ih, te su ostavljene kakve jesu: %2$s"
+msgstr[0] "Datoteku %1$s nije bilo moguće prepisati jer ovo web-mjesto nema dopuštenje mijenjati je, te je ostavljena takva kakva jest: %2$s"
+msgstr[1] "%1$s datoteke nije bilo moguće prepisati jer ovo web-mjesto nema dopuštenje za njihovu izmjenu te su ostavljene kakve jesu: %2$s"
+msgstr[2] "%1$s datoteka nije bilo moguće prepisati jer ovo web-mjesto nema dopuštenje za njihovu izmjenu te su ostavljene kakve jesu: %2$s"
 
 #. translators: %s: number of files.
 #: includes/class-restore-job.php:359
@@ -852,12 +853,12 @@ msgid "Restore complete."
 msgstr "Vraćanje dovršeno."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — ponovni pokušaj za %2$d sekundi."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Otkazano."
 
@@ -865,12 +866,12 @@ msgstr "Otkazano."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Sigurnosne kopije idu na jedno odredište za pohranu. Uredite ili uklonite postojeće kako biste koristili drugo."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Datoteku baze podataka nije moguće otvoriti."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Baza podataka odbila je naredbu iz sigurnosne kopije: %1$s (%2$s…)"

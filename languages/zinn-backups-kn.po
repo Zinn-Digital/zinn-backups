@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "ಸಂಯೋಜನೆಗಳನ್ನು ಉಳಿಸಲಾಗಿದೆ."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "ಮತ್ತೊಂದು ಬ್ಯಾಕಪ್, ಮರುಸ್ಥಾಪನೆ ಅಥವಾ ಆಮದು ಪ್ರಕ್ರಿಯೆ ಚಾಲನೆಯಲ್ಲಿದೆ. ಅದು ಮುಗಿಯುವವರೆಗೆ ಕಾಯಿರಿ, ಅಥವಾ ಅದನ್ನು ರದ್ದುಮಾಡಿ."
 
@@ -677,7 +677,7 @@ msgstr "ತುಣುಕು ತಲುಪಲಿಲ್ಲ. ನಿಮ್ಮ ಸರ�
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "ಆಮದು ಈ ಸೈಟ್‌ನ ವಿಷಯ ಮತ್ತು ಡೇಟಾಬೇಸ್ ಅನ್ನು ಬದಲಾಯಿಸುತ್ತದೆ ಎಂದು ಖಚಿತಪಡಿಸಲು ಪೆಟ್ಟಿಗೆಯನ್ನು ಟಿಕ್ ಮಾಡಿ."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "ಆಮದು ಮಾಡಲು ಆರ್ಕೈವ್ ಆಯ್ಕೆಮಾಡಿ: ಅದನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ, ಲಿಂಕ್ ಅನ್ನು ಅಂಟಿಸಿ ಅಥವಾ ಆಮದು ಫೋಲ್ಡರ್‌ನಿಂದ ಒಂದನ್ನು ಆರಿಸಿ."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "ಮರುಸ್ಥಾಪನೆ ಪೂರ್ಣಗೊಂಡಿದೆ."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d ಸೆಕೆಂಡುಗಳಲ್ಲಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಲಾಗುತ್ತಿದೆ."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ."
 
@@ -862,12 +862,12 @@ msgstr "ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "ಬ್ಯಾಕಪ್‌ಗಳು ಒಂದು ಸಂಗ್ರಹಣಾ ತಾಣಕ್ಕೆ ಹೋಗುತ್ತವೆ. ಬೇರೊಂದನ್ನು ಬಳಸಲು ನಿಮ್ಮಲ್ಲಿರುವುದನ್ನು ಸಂಪಾದಿಸಿ ಅಥವಾ ತೆಗೆದುಹಾಕಿ."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "ಡೇಟಾಬೇಸ್ ಕಡತವನ್ನು ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "ಡೇಟಾಬೇಸ್ ಬ್ಯಾಕಪ್‌ನಿಂದ ಹೇಳಿಕೆಯನ್ನು ನಿರಾಕರಿಸಿದೆ: %1$s (%2$s…)"

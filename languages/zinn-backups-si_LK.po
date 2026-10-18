@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "සැකසුම් සුරකින ලදි."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "තවත් උපස්ථයක්, ප්‍රතිසාධනයක් හෝ ආයාත කිරීමක් ක්‍රියාත්මක වෙමින් පවතී. එය අවසන් වන තෙක් රැඳී සිටින්න, නැතහොත් එය අවලංගු කරන්න."
 
@@ -677,7 +677,7 @@ msgstr "කොටස නොපැමිණියේය. ඔබගේ සේව�
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "ආයාත කිරීම මඟින් මෙම වෙබ් අඩවියේ අන්තර්ගතය සහ දත්ත සමුදාය ප්‍රතිස්ථාපනය කරන බව තහවුරු කිරීමට කොටුව සලකුණු කරන්න."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "ආයාත කිරීමට සංරක්ෂිතයක් තෝරන්න: එය උඩුගත කරන්න, සබැඳියක් අලවන්න, නැතහොත් ආයාත ෆෝල්ඩරයෙන් එකක් තෝරන්න."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "ප්‍රතිසාධනය සම්පූර්ණයි."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — තත්පර %2$d කින් නැවත උත්සාහ කෙරේ."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "අවලංගු කරන ලදි."
 
@@ -862,12 +862,12 @@ msgstr "අවලංගු කරන ලදි."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "උපස්ථ එක් ගබඩා ගමනාන්තයකට යයි. වෙනත් එකක් භාවිතා කිරීමට ඔබ සතුව ඇති එක සංස්කරණය කරන්න හෝ ඉවත් කරන්න."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "දත්ත සමුදා ගොනුව විවෘත කිරීමට නොහැකි විය."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "දත්ත සමුදාය උපස්ථයෙන් ප්‍රකාශයක් ප්‍රතික්ෂේප කළේය: %1$s (%2$s…)"

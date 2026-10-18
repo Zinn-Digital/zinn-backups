@@ -659,7 +659,7 @@ msgid "Settings saved."
 msgstr "設定を保存しました。"
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "別のバックアップ、復元、またはインポートが実行中です。完了するまで待つか、キャンセルしてください。"
 
@@ -675,7 +675,7 @@ msgstr "チャンクが届きませんでした。サーバーがアップロー
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "インポートによってこのサイトのコンテンツとデータベースが上書きされることを確認するには、チェックボックスをオンにしてください。"
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "インポートするアーカイブを選択してください: アップロードするか、リンクを貼り付けるか、インポートフォルダーから選択します。"
 
@@ -846,12 +846,12 @@ msgid "Restore complete."
 msgstr "復元が完了しました。"
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d秒後に再試行します。"
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "キャンセルされました。"
 
@@ -859,12 +859,12 @@ msgstr "キャンセルされました。"
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "バックアップは1つの保存先に送られます。別の保存先を使用するには、既存の保存先を編集または削除してください。"
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "データベースファイルを開くことができませんでした。"
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "データベースがバックアップからのステートメントを拒否しました: %1$s (%2$s…)"

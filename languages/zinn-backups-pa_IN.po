@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "ਸੈਟਿੰਗਾਂ ਸੰਭਾਲੀਆਂ ਗਈਆਂ।"
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "ਇੱਕ ਹੋਰ ਬੈਕਅੱਪ, ਪੁਨਰ-ਸਥਾਪਨਾ ਜਾਂ ਆਯਾਤ ਚੱਲ ਰਿਹਾ ਹੈ। ਇਸਦੇ ਸਮਾਪਤ ਹੋਣ ਦੀ ਉਡੀਕ ਕਰੋ, ਜਾਂ ਇਸਨੂੰ ਰੱਦ ਕਰੋ।"
 
@@ -677,7 +677,7 @@ msgstr "ਟੁਕੜਾ ਨਹੀਂ ਪਹੁੰਚਿਆ। ਤੁਹਾਡਾ
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "ਇਹ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਬਾਕਸ ਨੂੰ ਚੁਣੋ ਕਿ ਆਯਾਤ ਇਸ ਸਾਈਟ ਦੀ ਸਮੱਗਰੀ ਅਤੇ ਡਾਟਾਬੇਸ ਨੂੰ ਬਦਲ ਦੇਵੇਗਾ।"
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "ਆਯਾਤ ਕਰਨ ਲਈ ਇੱਕ ਪੁਰਾਲੇਖ ਚੁਣੋ: ਇਸਨੂੰ ਅੱਪਲੋਡ ਕਰੋ, ਇੱਕ ਲਿੰਕ ਪੇਸਟ ਕਰੋ, ਜਾਂ ਆਯਾਤ ਫ਼ੋਲਡਰ ਵਿੱਚੋਂ ਇੱਕ ਚੁਣੋ।"
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "ਮੁੜ-ਬਹਾਲੀ ਪੂਰੀ ਹੋਈ।"
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d ਸਕਿੰਟਾਂ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ।"
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "ਰੱਦ ਕੀਤਾ।"
 
@@ -862,12 +862,12 @@ msgstr "ਰੱਦ ਕੀਤਾ।"
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "ਬੈਕਅੱਪ ਇੱਕ ਸਟੋਰੇਜ ਟਿਕਾਣੇ 'ਤੇ ਜਾਂਦੇ ਹਨ। ਕੋਈ ਵੱਖਰਾ ਵਰਤਣ ਲਈ ਆਪਣੇ ਮੌਜੂਦਾ ਟਿਕਾਣੇ ਨੂੰ ਸੰਪਾਦਿਤ ਕਰੋ ਜਾਂ ਹਟਾਓ।"
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "ਡੈਟਾਬੇਸ ਫ਼ਾਈਲ ਖੋਲ੍ਹੀ ਨਹੀਂ ਜਾ ਸਕੀ।"
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "ਡੇਟਾਬੇਸ ਨੇ ਬੈਕਅੱਪ ਤੋਂ ਇੱਕ ਸਟੇਟਮੈਂਟ ਨੂੰ ਰੱਦ ਕਰ ਦਿੱਤਾ: %1$s (%2$s…)"

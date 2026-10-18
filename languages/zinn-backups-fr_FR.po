@@ -529,7 +529,7 @@ msgstr "Base de données : %1$d tables, %2$s lignes, %3$s compressées."
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Sauvegarde terminée : %1$s stocké dans %2$d destination."
-msgstr[1] "Sauvegarde terminée : %1$s stocké dans %2$d destinations."
+msgstr[1] "Sauvegarde terminée : %1$s stockée dans %2$d destinations."
 msgstr[2] "Sauvegarde terminée : %1$s stocké dans %2$d destinations."
 
 #: includes/class-backup-job.php:503
@@ -663,7 +663,7 @@ msgid "Settings saved."
 msgstr "Réglages enregistrés."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Une autre sauvegarde, restauration ou importation est en cours. Veuillez attendre qu’elle se termine ou l’annuler."
 
@@ -679,7 +679,7 @@ msgstr "Le fragment n’est pas arrivé. Votre serveur limite peut-être la tail
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Cochez la case pour confirmer que l’importation remplace le contenu et la base de données de ce site."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Choisissez une archive à importer : téléversez-la, collez un lien ou choisissez-en une dans le dossier d’importation."
 
@@ -779,8 +779,8 @@ msgstr "Restauration de la sauvegarde de %1$s (%2$d parties de fichier)."
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
 msgstr[0] "Le fichier %1$s n’a pas pu être écrasé car ce site n’est pas autorisé à le modifier, et il a été laissé en l’état : %2$s"
-msgstr[1] "%1$s fichiers n’ont pas pu être écrasés car ce site n’est pas autorisé à les modifier, et ont été laissés tels quels : %2$s"
-msgstr[2] "%1$s fichiers n’ont pas pu être écrasés car ce site n’est pas autorisé à les modifier, et ont été laissés tels quels : %2$s"
+msgstr[1] "Impossible d’écraser %1$s fichiers car ce site n’est pas autorisé à les modifier, et ils ont été laissés tels quels : %2$s"
+msgstr[2] "Impossible d’écraser %1$s fichiers car ce site n’est pas autorisé à les modifier, et ils ont été laissés tels quels : %2$s"
 
 #. translators: %s: number of files.
 #: includes/class-restore-job.php:359
@@ -852,12 +852,12 @@ msgid "Restore complete."
 msgstr "Restauration terminée."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — nouvelle tentative dans %2$d secondes."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Annulé."
 
@@ -865,12 +865,12 @@ msgstr "Annulé."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Les sauvegardes vont vers une seule destination de stockage. Modifiez ou supprimez celle que vous avez pour en utiliser une autre."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Impossible d’ouvrir le fichier de base de données."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "La base de données a refusé une instruction de la sauvegarde : %1$s (%2$s…)"

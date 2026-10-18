@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "ക്രമീകരണങ്ങൾ സംരക്ഷിച്ചു."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "മറ്റൊരു ബാക്കപ്പ്, പുനഃസ്ഥാപിക്കൽ അല്ലെങ്കിൽ ഇറക്കുമതി പ്രക്രിയ നടക്കുന്നു. അത് പൂർത്തിയാകുന്നതുവരെ കാത്തിരിക്കുക, അല്ലെങ്കിൽ അത് റദ്ദാക്കുക."
 
@@ -677,7 +677,7 @@ msgstr "ഭാഗം എത്തിച്ചേർന്നില്ല. നി
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "ഇറക്കുമതി ഈ സൈറ്റിന്റെ ഉള്ളടക്കവും ഡാറ്റാബേസും മാറ്റിസ്ഥാപിക്കുമെന്ന് സ്ഥിരീകരിക്കാൻ ബോക്സിൽ ടിക്ക് ചെയ്യുക."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "ഇമ്പോർട്ടുചെയ്യുന്നതിന് ഒരു ആർക്കൈവ് തിരഞ്ഞെടുക്കുക: അത് അപ്‌ലോഡ് ചെയ്യുക, ഒരു ലിങ്ക് ഒട്ടിക്കുക, അല്ലെങ്കിൽ ഇമ്പോർട്ട് ഫോൾഡറിൽ നിന്ന് ഒരെണ്ണം തിരഞ്ഞെടുക്കുക."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "പുനഃസ്ഥാപിക്കൽ പൂർത്തിയായി."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d സെക്കൻഡിനുള്ളിൽ വീണ്ടും ശ്രമിക്കുന്നു."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "റദ്ദാക്കി."
 
@@ -862,12 +862,12 @@ msgstr "റദ്ദാക്കി."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "ബാക്കപ്പുകൾ ഒരൊറ്റ സംഭരണ ലക്ഷ്യസ്ഥാനത്തേക്ക് പോകുന്നു. മറ്റൊന്ന് ഉപയോഗിക്കുന്നതിന് നിലവിലുള്ളത് എഡിറ്റ് ചെയ്യുകയോ നീക്കം ചെയ്യുകയോ ചെയ്യുക."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "ഡാറ്റാബേസ് ഫയൽ തുറക്കാൻ കഴിഞ്ഞില്ല."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "ഡാറ്റാബേസ് ബാക്കപ്പിൽ നിന്നുള്ള ഒരു പ്രസ്താവന നിരസിച്ചു: %1$s (%2$s…)"

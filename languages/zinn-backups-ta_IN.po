@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "அமைப்புகள் சேமிக்கப்பட்டன."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "மற்றொரு காப்புப்பிரதி, மீட்டமைத்தல் அல்லது இறக்குமதி செயல்பாட்டில் உள்ளது. அது முடியும் வரை காத்திருக்கவும், அல்லது அதை ரத்துசெய்யவும்."
 
@@ -677,7 +677,7 @@ msgstr "துண்டு வரவில்லை. உங்கள் சே�
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "இறக்குமதியானது இந்தத் தளத்தின் உள்ளடக்கம் மற்றும் தரவுத்தளத்தை மாற்றியமைக்கும் என்பதை உறுதிப்படுத்த பெட்டியைத் தேர்வுசெய்யவும்."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "இறக்குமதி செய்ய காப்பகத்தைத் தேர்வுசெய்யவும்: அதைப் பதிவேற்றவும், இணைப்பை ஒட்டவும், அல்லது இறக்குமதி கோப்புறையிலிருந்து ஒன்றைத் தேர்ந்தெடுக்கவும்."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "மீட்டமைத்தல் முடிந்தது."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d வினாடிகளில் மீண்டும் முயற்சிக்கிறது."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "ரத்துசெய்யப்பட்டது."
 
@@ -862,12 +862,12 @@ msgstr "ரத்துசெய்யப்பட்டது."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "காப்புப்பிரதிகள் ஒரு சேமிப்பக இலக்கிற்குச் செல்கின்றன. வேறு ஒன்றைப் பயன்படுத்த உங்களிடம் உள்ளதைத் திருத்தவும் அல்லது அகற்றவும்."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "தரவுத்தளக் கோப்பைத் திறக்க முடியவில்லை."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "காப்புப்பிரதியிலிருந்து ஒரு கூற்றை தரவுத்தளம் நிராகரித்தது: %1$s (%2$s…)"

@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "Οι ρυθμίσεις αποθηκεύτηκαν."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Μια άλλη διαδικασία αντιγράφου ασφαλείας, επαναφοράς ή εισαγωγής βρίσκεται σε εξέλιξη. Περιμένετε να ολοκληρωθεί ή ακυρώστε την."
 
@@ -677,7 +677,7 @@ msgstr "Το τμήμα δεν έφτασε. Ο διακομιστής σας ε
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Επιλέξτε το πλαίσιο για να επιβεβαιώσετε ότι η εισαγωγή αντικαθιστά το περιεχόμενο και τη βάση δεδομένων αυτού του ιστότοπου."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Επιλέξτε ένα αρχείο συμπίεσης για εισαγωγή: μεταφορτώστε το, επικολλήστε έναν σύνδεσμο ή επιλέξτε ένα από τον φάκελο εισαγωγής."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "Η επαναφορά ολοκληρώθηκε."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — νέα προσπάθεια σε %2$d δευτερόλεπτα."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Ακυρώθηκε."
 
@@ -862,12 +862,12 @@ msgstr "Ακυρώθηκε."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Τα αντίγραφα ασφαλείας πηγαίνουν σε έναν προορισμό αποθήκευσης. Επεξεργαστείτε ή αφαιρέστε αυτόν που έχετε για να χρησιμοποιήσετε άλλον."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Δεν ήταν δυνατό το άνοιγμα του αρχείου της βάσης δεδομένων."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Η βάση δεδομένων απέρριψε μια εντολή από το αντίγραφο ασφαλείας: %1$s (%2$s…)"

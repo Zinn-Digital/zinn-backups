@@ -659,7 +659,7 @@ msgid "Settings saved."
 msgstr "Tetapan disimpan."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Satu lagi sandaran, pemulihan atau import sedang berjalan. Tunggu sehingga ia selesai, atau batalkannya."
 
@@ -675,7 +675,7 @@ msgstr "Ketulan data tidak tiba. Pelayan anda mungkin mengehadkan saiz muat naik
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Tandakan kotak untuk mengesahkan bahawa import menggantikan kandungan dan pangkalan data tapak ini."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Pilih arkib untuk diimport: muat naiknya, tampal pautan, atau pilih satu daripada folder import."
 
@@ -846,12 +846,12 @@ msgid "Restore complete."
 msgstr "Pemulihan selesai."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — mencuba semula dalam %2$d saat."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Dibatalkan."
 
@@ -859,12 +859,12 @@ msgstr "Dibatalkan."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Sandaran pergi ke satu destinasi storan. Edit atau alih keluar yang anda miliki untuk menggunakan yang lain."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Fail pangkalan data tidak dapat dibuka."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Pangkalan data menolak pernyataan daripada sandaran: %1$s (%2$s…)"

@@ -529,8 +529,8 @@ msgstr "Baza danych: %1$d tabel, %2$s wierszy, %3$s skompresowano."
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Kopia zapasowa ukończona: %1$s zapisano w %2$d miejscu docelowym."
-msgstr[1] "Kopia zapasowa ukończona: %1$s zapisano w %2$d lokalizacjach."
-msgstr[2] "Kopia zapasowa ukończona: %1$s zapisano w %2$d lokalizacjach."
+msgstr[1] "Kopia zapasowa ukończona: %1$s zapisano w %2$d miejscach docelowych."
+msgstr[2] "Kopia zapasowa ukończona: %1$s zapisano w %2$d miejscach docelowych."
 
 #: includes/class-backup-job.php:503
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
@@ -663,7 +663,7 @@ msgid "Settings saved."
 msgstr "Ustawienia zapisane."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Inna kopia zapasowa, przywracanie lub importowanie jest w toku. Poczekaj, aż się zakończy, lub anuluj operację."
 
@@ -679,7 +679,7 @@ msgstr "Fragment nie dotarł. Twój serwer może ograniczać rozmiar przesyłany
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Zaznacz to pole, aby potwierdzić, że import zastąpi zawartość i bazę danych tej witryny."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Wybierz archiwum do zaimportowania: prześlij je, wklej link lub wybierz plik z folderu importu."
 
@@ -778,9 +778,9 @@ msgstr "Przywracanie kopii zapasowej %1$s (%2$d części pliku)."
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
-msgstr[0] "Nie udało się zastąpić pliku %1$s, ponieważ ta witryna nie ma uprawnień do jego modyfikacji, i został pozostawiony w obecnym stanie: %2$s"
-msgstr[1] "Nie udało się nadpisać %1$s plików, ponieważ ta witryna nie ma uprawnień do ich modyfikacji, i zostały one pozostawione bez zmian: %2$s"
-msgstr[2] "Nie udało się nadpisać %1$s plików, ponieważ ta witryna nie ma uprawnień do ich modyfikacji, i zostały one pozostawione bez zmian: %2$s"
+msgstr[0] "Nie udało się zastąpić pliku %1$s, ponieważ ta witryna nie ma uprawnień do jego modyfikacji, i pozostawiono go bez zmian: %2$s"
+msgstr[1] "Nie udało się nadpisać %1$s plików, ponieważ ta witryna nie ma uprawnień do ich zmiany, i zostały one pozostawione bez zmian: %2$s"
+msgstr[2] "Nie udało się nadpisać %1$s plików, ponieważ ta witryna nie ma uprawnień do ich zmiany, i zostały one pozostawione bez zmian: %2$s"
 
 #. translators: %s: number of files.
 #: includes/class-restore-job.php:359
@@ -852,12 +852,12 @@ msgid "Restore complete."
 msgstr "Przywracanie zakończone."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — ponowna próba za %2$d s."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Anulowano."
 
@@ -865,12 +865,12 @@ msgstr "Anulowano."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Kopie zapasowe trafiają do jednego miejsca docelowego. Edytuj lub usuń istniejące, aby użyć innego."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Nie udało się otworzyć pliku bazy danych."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Baza danych odrzuciła instrukcję z kopii zapasowej: %1$s (%2$s…)"

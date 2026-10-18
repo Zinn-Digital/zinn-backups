@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "Настройките са запазени."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "В момента се изпълнява друго резервно копие, възстановяване или импортиране. Изчакайте да завърши или го отменете."
 
@@ -677,7 +677,7 @@ msgstr "Частта не пристигна. Вашият сървър може
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Поставете отметка в квадратчето, за да потвърдите, че импортирането ще замени съдържанието и базата данни на този сайт."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Изберете архив за импортиране: качете го, поставете връзка или изберете такъв от папката за импортиране."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "Възстановяването завърши."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — повторен опит след %2$d секунди."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Отменено."
 
@@ -862,12 +862,12 @@ msgstr "Отменено."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Резервните копия отиват в едно местоназначение за съхранение. Редактирайте или премахнете съществуващото, за да използвате друго."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Файлът на базата данни не можа да бъде отворен."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Базата данни отхвърли заявка от резервното копие: %1$s (%2$s…)"

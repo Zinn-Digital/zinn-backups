@@ -659,7 +659,7 @@ msgid "Settings saved."
 msgstr "ບັນທຶກການຕັ້ງຄ່າແລ້ວ."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "ການສຳຮອງຂໍ້ມູນ, ການກູ້ຄືນ ຫຼື ການນຳເຂົ້າອື່ນກຳລັງເຮັດວຽກຢູ່. ລໍຖ້າໃຫ້ມັນສຳເລັດ, ຫຼື ຍົກເລີກມັນ."
 
@@ -675,7 +675,7 @@ msgstr "ສ່ວນຂໍ້ມູນບໍ່ມາຮອດ. ເຊີບເ�
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "ໝາຍຕິກໃສ່ຫ້ອງເພື່ອຢືນຢັນວ່າການນຳເຂົ້າຈະປ່ຽນແທນເນື້ອຫາ ແລະ ຖານຂໍ້ມູນຂອງເວັບໄຊນີ້."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "ເລືອກບ່ອນຈັດເກັບຂໍ້ມູນເພື່ອຕື່ມເຂົ້າ: ອັບໂຫຼດມັນ, ວາງລິ້ງ, ຫຼື ເລືອກອັນໜຶ່ງຈາກໂຟນເດີຕື່ມເຂົ້າ."
 
@@ -846,12 +846,12 @@ msgid "Restore complete."
 msgstr "ການກູ້ຄືນສຳເລັດແລ້ວ."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — ກຳລັງລອງໃໝ່ອີກຄັ້ງໃນ %2$d ວິນາທີ."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "ຍົກເລີກແລ້ວ."
 
@@ -859,12 +859,12 @@ msgstr "ຍົກເລີກແລ້ວ."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "ການສຳຮອງຂໍ້ມູນຈະໄປຍັງບ່ອນເກັບຂໍ້ມູນດຽວ. ແກ້ໄຂ ຫຼື ລຶບອັນທີ່ທ່ານມີເພື່ອໃຊ້ອັນອື່ນ."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "ບໍ່ສາມາດເປີດໄຟລ໌ຖານຂໍ້ມູນໄດ້."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "ຖານຂໍ້ມູນປະຕິເສດຄຳສັ່ງຈາກການສຳຮອງຂໍ້ມູນ: %1$s (%2$s…)"

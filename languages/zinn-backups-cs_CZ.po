@@ -250,9 +250,9 @@ msgstr "Spuštěno"
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "Vaše úložiště"
-msgstr[1] "Vaše úložiště"
-msgstr[2] "Vaše úložiště"
-msgstr[3] "Vaše úložiště"
+msgstr[1] "Vaše cíle úložiště"
+msgstr[2] "Vaše cíle úložiště"
+msgstr[3] "Vaše cíle úložiště"
 
 #: includes/class-admin.php:362
 msgid "No storage yet. Choose where your backups go below."
@@ -529,10 +529,10 @@ msgstr "Databáze: %1$d tabulek, %2$s řádků, %3$s komprimováno."
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
-msgstr[0] "Záloha dokončena: %1$s uloženo v %2$d cíli."
-msgstr[1] "Zálohování dokončeno: %1$s uloženo v %2$d umístěních."
-msgstr[2] "Zálohování dokončeno: %1$s uloženo v %2$d umístěních."
-msgstr[3] "Zálohování dokončeno: %1$s uloženo v %2$d umístěních."
+msgstr[0] "Záloha byla dokončena: %1$s uloženo v %2$d cíli."
+msgstr[1] "Zálohování dokončeno: %1$s uloženo v %2$d cílech."
+msgstr[2] "Zálohování dokončeno: %1$s uloženo v %2$d cílech."
+msgstr[3] "Zálohování dokončeno: %1$s uloženo v %2$d cílech."
 
 #: includes/class-backup-job.php:503
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
@@ -665,7 +665,7 @@ msgid "Settings saved."
 msgstr "Nastavení uloženo."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Právě probíhá jiná záloha, obnovení nebo import. Počkejte na dokončení, nebo operaci zrušte."
 
@@ -681,7 +681,7 @@ msgstr "Část nedorazila. Váš server může omezovat velikost nahrávaných s
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Zaškrtnutím políčka potvrďte, že import nahradí obsah a databázi tohoto webu."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Vyberte archiv k importu: nahrajte jej, vložte odkaz nebo vyberte soubor ze složky pro import."
 
@@ -780,10 +780,10 @@ msgstr "Obnovuje se záloha %1$s (%2$d částí souboru)."
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
-msgstr[0] "Soubor %1$s nelze přepsat, protože tento web nemá oprávnění jej měnit, a byl ponechán ve stávajícím stavu: %2$s"
-msgstr[1] "Soubory (%1$s) nebylo možné přepsat, protože tento web nemá oprávnění je měnit, a byly ponechány beze změny: %2$s"
-msgstr[2] "Soubory (%1$s) nebylo možné přepsat, protože tento web nemá oprávnění je měnit, a byly ponechány beze změny: %2$s"
-msgstr[3] "Soubory (%1$s) nebylo možné přepsat, protože tento web nemá oprávnění je měnit, a byly ponechány beze změny: %2$s"
+msgstr[0] "Soubor %1$s se nepodařilo přepsat, protože tento web nemá oprávnění jej upravovat, a byl ponechán ve stávajícím stavu: %2$s"
+msgstr[1] "Soubory (%1$s) nebylo možné přepsat, protože tento web nemá oprávnění k jejich změně, a byly ponechány beze změny: %2$s"
+msgstr[2] "Soubory (%1$s) nebylo možné přepsat, protože tento web nemá oprávnění k jejich změně, a byly ponechány beze změny: %2$s"
+msgstr[3] "Soubory (%1$s) nebylo možné přepsat, protože tento web nemá oprávnění k jejich změně, a byly ponechány beze změny: %2$s"
 
 #. translators: %s: number of files.
 #: includes/class-restore-job.php:359
@@ -855,12 +855,12 @@ msgid "Restore complete."
 msgstr "Obnovení dokončeno."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — opakovaný pokus za %2$d sekund."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Zrušeno."
 
@@ -868,12 +868,12 @@ msgstr "Zrušeno."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Zálohy směřují do jednoho cílového úložiště. Chcete-li použít jiné, upravte nebo odstraňte to stávající."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Soubor databáze se nepodařilo otevřít."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Databáze odmítla příkaz ze zálohy: %1$s (%2$s…)"

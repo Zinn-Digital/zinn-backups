@@ -663,7 +663,7 @@ msgid "Settings saved."
 msgstr "Configurações salvas."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Outro backup, restauração ou importação está em execução. Aguarde a conclusão ou cancele o processo."
 
@@ -679,7 +679,7 @@ msgstr "O fragmento não chegou. O seu servidor pode limitar os tamanhos de envi
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Marque a caixa para confirmar que a importação substitui o conteúdo e o banco de dados deste site."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Escolha um arquivo para importar: envie-o, cole um link ou escolha um da pasta de importação."
 
@@ -778,9 +778,9 @@ msgstr "Restaurando o backup de %1$s (%2$d partes do arquivo)."
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
-msgstr[0] "Não foi possível sobrescrever o arquivo %1$s porque este site não tem permissão para alterá-lo, e ele foi mantido como está: %2$s"
-msgstr[1] "%1$s arquivos não puderam ser sobrescritos porque este site não tem permissão para alterá-los, e foram mantidos como estão: %2$s"
-msgstr[2] "%1$s arquivos não puderam ser sobrescritos porque este site não tem permissão para alterá-los, e foram mantidos como estão: %2$s"
+msgstr[0] "O arquivo %1$s não pôde ser substituído porque este site não tem permissão para alterá-lo e foi mantido como está: %2$s"
+msgstr[1] "%1$s arquivos não puderam ser sobrescritos porque este site não tem permissão para alterá-los e foram mantidos como estão: %2$s"
+msgstr[2] "%1$s arquivos não puderam ser sobrescritos porque este site não tem permissão para alterá-los e foram mantidos como estão: %2$s"
 
 #. translators: %s: number of files.
 #: includes/class-restore-job.php:359
@@ -852,12 +852,12 @@ msgid "Restore complete."
 msgstr "Restauração concluída."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — tentando novamente em %2$d segundos."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Cancelado."
 
@@ -865,12 +865,12 @@ msgstr "Cancelado."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Os backups vão para um destino de armazenamento. Edite ou remova o que você tem para usar um diferente."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Não foi possível abrir o arquivo do banco de dados."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "O banco de dados recusou uma instrução do backup: %1$s (%2$s…)"

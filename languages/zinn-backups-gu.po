@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "સેટિંગ્સ સચવાઈ ગયા."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "અન્ય બેકઅપ, પુનઃસ્થાપિત અથવા આયાત ચાલી રહી છે. તે પૂર્ણ થાય ત્યાં સુધી રાહ જુઓ અથવા તેને રદ કરો."
 
@@ -677,7 +677,7 @@ msgstr "ભાગ પહોંચ્યો નથી. તમારું સર�
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "આયાત આ સાઇટની સામગ્રી અને ડેટાબેઝને બદલે છે તેની પુષ્ટિ કરવા માટે બોક્સને ટિક કરો."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "આયાત કરવા માટે એક આર્કાઇવ પસંદ કરો: તેને અપલોડ કરો, લિંક પેસ્ટ કરો અથવા આયાત ફોલ્ડરમાંથી એક પસંદ કરો."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "પુનઃસ્થાપિત પૂર્ણ થયું."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d સેકન્ડમાં ફરી પ્રયાસ કરી રહ્યાં છીએ."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "રદ કર્યું."
 
@@ -862,12 +862,12 @@ msgstr "રદ કર્યું."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "બેકઅપ એક સ્ટોરેજ ગંતવ્ય પર જાય છે. અન્યનો ઉપયોગ કરવા માટે તમારી પાસે જે છે તેમાં ફેરફાર કરો અથવા તેને દૂર કરો."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "ડેટાબેઝ ફાઇલ ખોલી શકાઈ નથી."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "ડેટાબેઝે બેકઅપમાંથી સ્ટેટમેન્ટ નકારી કાઢ્યું: %1$s (%2$s…)"

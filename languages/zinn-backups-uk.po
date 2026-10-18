@@ -250,8 +250,8 @@ msgstr "Виконується"
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "Ваше сховище"
-msgstr[1] "Ваші місця збереження"
-msgstr[2] "Ваші місця збереження"
+msgstr[1] "Ваші місця призначення сховища"
+msgstr[2] "Ваші місця призначення сховища"
 
 #: includes/class-admin.php:362
 msgid "No storage yet. Choose where your backups go below."
@@ -529,8 +529,8 @@ msgstr "База даних: таблиць — %1$d, рядків — %2$s, с�
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Резервне копіювання завершено: %1$s збережено в %2$d місці призначення."
-msgstr[1] "Резервне копіювання завершено: %1$s збережено в %2$d місцях призначення."
-msgstr[2] "Резервне копіювання завершено: %1$s збережено в %2$d місцях призначення."
+msgstr[1] "Резервне копіювання завершено: %1$s збережено в такій кількості місць призначення: %2$d."
+msgstr[2] "Резервне копіювання завершено: %1$s збережено у %2$d місцях призначення."
 
 #: includes/class-backup-job.php:503
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
@@ -663,7 +663,7 @@ msgid "Settings saved."
 msgstr "Налаштування збережено."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Виконується інше резервне копіювання, відновлення або імпорт. Зачекайте завершення або скасуйте його."
 
@@ -679,7 +679,7 @@ msgstr "Частина не надійшла. Ваш сервер може об�
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Поставте прапорець, щоб підтвердити, що імпорт замінить вміст і базу даних цього сайту."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Виберіть архів для імпорту: завантажте його, вставте посилання або виберіть файл із папки імпорту."
 
@@ -778,9 +778,9 @@ msgstr "Відновлення резервної копії %1$s (%2$d част
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
-msgstr[0] "Файл %1$s не вдалося перезаписати, оскільки цей сайт не має дозволу на його зміну, і його залишено без змін: %2$s"
-msgstr[1] "%1$s файлів не вдалося перезаписати, оскільки цей сайт не має дозволу на їх зміну, і їх залишено без змін: %2$s"
-msgstr[2] "%1$s файлів не вдалося перезаписати, оскільки цей сайт не має дозволу на їх зміну, і їх залишено без змін: %2$s"
+msgstr[0] "Файл %1$s не вдалося перезаписати, оскільки цей сайт не має дозволу на його зміну, і його було залишено без змін: %2$s"
+msgstr[1] "Файли (%1$s) не вдалося перезаписати, оскільки цей сайт не має дозволу на їх зміну, тому їх залишено без змін: %2$s"
+msgstr[2] "Файли (%1$s) не вдалося перезаписати, оскільки цей сайт не має дозволу на їх зміну, тому їх залишено без змін: %2$s"
 
 #. translators: %s: number of files.
 #: includes/class-restore-job.php:359
@@ -852,12 +852,12 @@ msgid "Restore complete."
 msgstr "Відновлення завершено."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — повторна спроба через %2$d с."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Скасовано."
 
@@ -865,12 +865,12 @@ msgstr "Скасовано."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Резервні копії надсилаються в одне місце призначення сховища. Відредагуйте або видаліть наявне, щоб використати інше."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Не вдалося відкрити файл бази даних."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "База даних відхилила запит із резервної копії: %1$s (%2$s…)"

@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "Habsocodka waa la keydiyay."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Kayd kale, soo celin ama soo dejin ayaa socota. Sug inta ay ka dhammaanayso, ama jooji."
 
@@ -677,7 +677,7 @@ msgstr "Qaybtu ma soo gaarin. Seerfarkaagu waxa laga yaabaa inuu xaddido cabbirk
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Calaamadee sanduuqa si aad u xaqiijiso in soo dejintu beddelayso nuxurka iyo xog-ururinta boggan."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Dooro kayd aad soo dejiso: soo geli, dheji xiriiriye, ama mid ka dooro galka soo dejinta."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "Soo celintii waa dhammaatay."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — mar labaad la isku dayayaa %2$d ilbidhiqsi gudahood."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Waa la joojiyay."
 
@@ -862,12 +862,12 @@ msgstr "Waa la joojiyay."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Koobiyada kaydka ah waxay aadaan hal meel oo kaydin ah. Wax ka beddel ama ka saar kan aad haysato si aad mid kale u isticmaasho."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Faylka kaydka xogta lama furi karin."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Xog-ururintu waxay diidday bayaan ka yimid kaydka: %1$s (%2$s…)"

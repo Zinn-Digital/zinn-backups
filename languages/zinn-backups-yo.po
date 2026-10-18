@@ -659,7 +659,7 @@ msgid "Settings saved."
 msgstr "A ti fi àwọn ètò pamọ́."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Afẹyinti, mimu-pada-bọsipo tabi gbigbe-wọle miiran n lọ lọwọ. Duro ki o pari, tabi fagilee rẹ."
 
@@ -675,7 +675,7 @@ msgstr "Apá náà kò dé. Olùpèsè rẹ le dín ìwọ̀n ìrùsókè kù; g
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Ṣayẹwo apoti naa lati jẹrisi pe akowọle naa rọpo akoonu aaye yii ati data data."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Yan ibi ipamọ lati gbe wọle: gbe e si ori ayelujara, lẹ ọna asopọ kan, tabi yan ọkan lati inu folda agbewọle."
 
@@ -846,12 +846,12 @@ msgid "Restore complete."
 msgstr "Ìmúpadàbọ̀sípò ti parí."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — n gbiyanju lẹẹkansi ni iṣẹju-aaya %2$d."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Fagilee."
 
@@ -859,12 +859,12 @@ msgstr "Fagilee."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Awọn afẹyinti lọ si ibi ipamọ kan. Ṣatunkọ tabi yọ eyi ti o ni kuro lati lo ọkan ti o yatọ."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "A ko le ṣí fáìlì ibi-ìpamọ́ dátà náà."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Aaye data kọ alaye kan lati inu afẹyinti: %1$s (%2$s…)"

@@ -529,8 +529,8 @@ msgstr "Database: %1$d tabelle, %2$s righe, %3$s compresso."
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Backup completato: %1$s archiviato in %2$d destinazione."
-msgstr[1] "Backup completato: %1$s memorizzato in %2$d destinazioni."
-msgstr[2] "Backup completato: %1$s memorizzato in %2$d destinazioni."
+msgstr[1] "Backup completato: %1$s archiviato in %2$d destinazioni."
+msgstr[2] "Backup completato: %1$s archiviato in %2$d destinazioni."
 
 #: includes/class-backup-job.php:503
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
@@ -663,7 +663,7 @@ msgid "Settings saved."
 msgstr "Impostazioni salvate."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Un altro backup, ripristino o importazione è in corso. Attendi che finisca oppure annullalo."
 
@@ -679,7 +679,7 @@ msgstr "Il frammento non è arrivato. Il tuo server potrebbe limitare le dimensi
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Seleziona la casella per confermare che l'importazione sostituisce i contenuti e il database di questo sito."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Scegli un archivio da importare: caricalo, incolla un link o scegline uno dalla cartella di importazione."
 
@@ -778,9 +778,9 @@ msgstr "Ripristino del backup di %1$s (%2$d parti del file)."
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
-msgstr[0] "Impossibile sovrascrivere il file %1$s perché questo sito non è autorizzato a modificarlo, ed è stato lasciato così com'è: %2$s"
-msgstr[1] "Non è stato possibile sovrascrivere %1$s file perché questo sito non è autorizzato a modificarli, e sono stati lasciati invariati: %2$s"
-msgstr[2] "Non è stato possibile sovrascrivere %1$s file perché questo sito non è autorizzato a modificarli, e sono stati lasciati invariati: %2$s"
+msgstr[0] "Impossibile sovrascrivere il file %1$s poiché questo sito non dispone dei permessi per modificarlo, ed è stato lasciato così com'è: %2$s"
+msgstr[1] "Impossibile sovrascrivere %1$s file perché questo sito non dispone dei permessi per modificarli, pertanto sono stati lasciati invariati: %2$s"
+msgstr[2] "Impossibile sovrascrivere %1$s file perché questo sito non dispone dei permessi per modificarli, pertanto sono stati lasciati invariati: %2$s"
 
 #. translators: %s: number of files.
 #: includes/class-restore-job.php:359
@@ -852,12 +852,12 @@ msgid "Restore complete."
 msgstr "Ripristino completato."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — nuovo tentativo tra %2$d secondi."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Annullato."
 
@@ -865,12 +865,12 @@ msgstr "Annullato."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "I backup vanno verso una sola destinazione di archiviazione. Modifica o rimuovi quella attuale per usarne una diversa."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Impossibile aprire il file del database."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Il database ha rifiutato un'istruzione dal backup: %1$s (%2$s…)"

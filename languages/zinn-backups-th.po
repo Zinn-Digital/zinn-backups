@@ -659,7 +659,7 @@ msgid "Settings saved."
 msgstr "บันทึกการตั้งค่าแล้ว"
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "กำลังสำรองข้อมูล กู้คืน หรือนำเข้าข้อมูลอื่นอยู่ โปรดรอจนกว่าจะเสร็จสิ้น หรือยกเลิกการทำงาน"
 
@@ -675,7 +675,7 @@ msgstr "ข้อมูลส่วนนี้มาไม่ถึง เซ�
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "ทำเครื่องหมายในช่องเพื่อยืนยันว่าการนำเข้าจะแทนที่เนื้อหาและฐานข้อมูลของไซต์นี้"
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "เลือกไฟล์เก็บถาวรที่จะนำเข้า: อัปโหลด วางลิงก์ หรือเลือกจากโฟลเดอร์นำเข้า"
 
@@ -846,12 +846,12 @@ msgid "Restore complete."
 msgstr "กู้คืนเสร็จสมบูรณ์"
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — กำลังลองอีกครั้งในอีก %2$d วินาที"
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "ยกเลิกแล้ว"
 
@@ -859,12 +859,12 @@ msgstr "ยกเลิกแล้ว"
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "ข้อมูลสำรองจะไปยังปลายทางจัดเก็บข้อมูลเดียว แก้ไขหรือลบปลายทางที่คุณมีเพื่อใช้อันอื่น"
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "ไม่สามารถเปิดไฟล์ฐานข้อมูลได้"
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "ฐานข้อมูลปฏิเสธคำสั่งจากข้อมูลสำรอง: %1$s (%2$s…)"

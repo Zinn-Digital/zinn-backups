@@ -7,7 +7,7 @@ Tags: backup, restore, migration, dropbox, google drive
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -117,6 +117,9 @@ They are kept. A restore writes the backup's files over the site's; it never del
 3. Importing an UpdraftPlus backup.
 
 == Changelog ==
+
+= 1.0.6 =
+* Plural forms in every language now follow that language's own plural rules (Russian, Polish, Czech, Croatian, Serbian, Arabic, Hebrew, French and others), re-filled by the translator with a human check on the forms it could not tell apart.
 
 = 1.0.5 =
 * Security hardening: a database value of any size, with any quotes, backslashes or semicolons, can never turn into SQL when a backup is restored, whatever the server's SQL mode; a restore never runs server-wide or account settings from a backup file.

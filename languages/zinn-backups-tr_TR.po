@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "Ayarlar kaydedildi."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Başka bir yedekleme, geri yükleme veya içe aktarma işlemi çalışıyor. Tamamlanmasını bekleyin veya işlemi iptal edin."
 
@@ -677,7 +677,7 @@ msgstr "Parça ulaşmadı. Sunucunuz yükleme boyutlarını sınırlıyor olabil
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "İçe aktarmanın bu sitenin içeriğini ve veritabanını değiştireceğini onaylamak için kutuyu işaretleyin."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "İçe aktarmak için bir arşiv seçin: yükleyin, bir bağlantı yapıştırın veya içe aktarma klasöründen birini seçin."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "Geri yükleme tamamlandı."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d saniye içinde tekrar deneniyor."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "İptal edildi."
 
@@ -862,12 +862,12 @@ msgstr "İptal edildi."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Yedeklemeler tek bir depolama hedefine gider. Farklı bir tane kullanmak için mevcut olanı düzenleyin veya kaldırın."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Veritabanı dosyası açılamadı."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Veritabanı, yedekten gelen bir ifadeyi reddetti: %1$s (%2$s…)"

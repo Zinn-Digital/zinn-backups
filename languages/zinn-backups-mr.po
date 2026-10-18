@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "सेटिंग्ज जतन केल्या."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "दुसरा बॅकअप, पुनर्संचयित करणे किंवा आयात करणे चालू आहे. ते पूर्ण होण्याची प्रतीक्षा करा किंवा ते रद्द करा."
 
@@ -677,7 +677,7 @@ msgstr "तुकडा पोहोचला नाही. तुमचा स�
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "आयात या साइटची सामग्री आणि डेटाबेस पुनर्स्थित करते याची पुष्टी करण्यासाठी बॉक्सवर खूण करा."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "आयात करण्यासाठी एक संग्रह निवडा: तो अपलोड करा, लिंक पेस्ट करा किंवा आयात फोल्डरमधून एक निवडा."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "पुनर्संचयन पूर्ण झाले."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d सेकंदांत पुन्हा प्रयत्न करत आहे."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "रद्द केले."
 
@@ -862,12 +862,12 @@ msgstr "रद्द केले."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "बॅकअप एका स्टोरेज गंतव्यावर जातात. वेगळे वापरण्यासाठी तुमच्याकडे असलेले संपादित करा किंवा काढून टाका."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "डेटाबेस फाइल उघडता आली नाही."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "डेटाबेसने बॅकअपमधील स्टेटमेंट नाकारले: %1$s (%2$s…)"

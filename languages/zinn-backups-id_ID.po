@@ -659,7 +659,7 @@ msgid "Settings saved."
 msgstr "Pengaturan disimpan."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Pencadangan, pemulihan, atau impor lain sedang berjalan. Harap tunggu hingga selesai, atau batalkan."
 
@@ -675,7 +675,7 @@ msgstr "Potongan data tidak sampai. Server Anda mungkin membatasi ukuran unggaha
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Centang kotak untuk mengonfirmasi bahwa impor mengganti konten dan basis data situs ini."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Pilih arsip untuk diimpor: unggah arsip, tempelkan tautan, atau pilih salah satu dari folder impor."
 
@@ -846,12 +846,12 @@ msgid "Restore complete."
 msgstr "Pemulihan selesai."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — mencoba lagi dalam %2$d detik."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Dibatalkan."
 
@@ -859,12 +859,12 @@ msgstr "Dibatalkan."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Cadangan disimpan ke satu tujuan penyimpanan. Edit atau hapus yang Anda miliki untuk menggunakan yang berbeda."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Berkas basis data tidak dapat dibuka."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Basis data menolak pernyataan dari cadangan: %1$s (%2$s…)"

@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "Beállítások elmentve."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Egy másik biztonsági mentés, visszaállítás vagy importálás van folyamatban. Várjon, amíg befejeződik, vagy szakítsa meg a folyamatot."
 
@@ -677,7 +677,7 @@ msgstr "A darab nem érkezett meg. A szerver korlátozhatja a feltöltési mére
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Jelölje be a négyzetet annak megerősítéséhez, hogy az importálás felülírja a webhely tartalmát és adatbázisát."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Archívum kiválasztása az importáláshoz: feltöltés, hivatkozás beillesztése vagy választás az importálási mappából."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "Visszaállítás kész."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — újrapróbálkozás %2$d másodperc múlva."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Törölve."
 
@@ -862,12 +862,12 @@ msgstr "Törölve."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "A biztonsági mentések egyetlen tárhelycélra kerülnek. Másik használatához szerkeszteni vagy törölni kell a meglévőt."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Az adatbázisfájlt nem sikerült megnyitni."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Az adatbázis elutasított egy utasítást a biztonsági mentésből: %1$s (%2$s…)"

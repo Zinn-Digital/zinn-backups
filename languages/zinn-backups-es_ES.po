@@ -528,9 +528,9 @@ msgstr "Base de datos: %1$d tablas, %2$s filas, %3$s comprimido."
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
-msgstr[0] "Copia de seguridad completada: %1$s guardado en %2$d destino."
-msgstr[1] "Copia de seguridad completada: %1$s guardado en %2$d destinos."
-msgstr[2] "Copia de seguridad completada: %1$s guardado en %2$d destinos."
+msgstr[0] "Copia de seguridad completada: %1$s almacenado en %2$d destino."
+msgstr[1] "Copia de seguridad completada: %1$s almacenada en %2$d destinos."
+msgstr[2] "Copia de seguridad completada: %1$s almacenada en %2$d destinos."
 
 #: includes/class-backup-job.php:503
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
@@ -663,7 +663,7 @@ msgid "Settings saved."
 msgstr "Ajustes guardados."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Se está ejecutando otra copia de seguridad, restauración o importación. Espera a que termine o cancela el proceso."
 
@@ -679,7 +679,7 @@ msgstr "El fragmento no llegó. Es posible que tu servidor límite el tamaño de
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Marca la casilla para confirmar que la importación sustituye el contenido y la base de datos de este sitio."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Elige un archivo para importar: súbelo, pega un enlace o elige uno de la carpeta de importación."
 
@@ -778,9 +778,9 @@ msgstr "Restaurando la copia de seguridad de %1$s (%2$d partes de archivo)."
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
-msgstr[0] "No se pudo sobrescribir el archivo %1$s porque este sitio no tiene permiso para modificarlo, y se dejó tal como está: %2$s"
-msgstr[1] "No se han podido sobrescribir %1$s archivos porque este sitio no tiene permiso para modificarlos, y se han dejado tal como están: %2$s"
-msgstr[2] "No se han podido sobrescribir %1$s archivos porque este sitio no tiene permiso para modificarlos, y se han dejado tal como están: %2$s"
+msgstr[0] "No se ha podido sobrescribir el archivo %1$s porque este sitio no tiene permisos para modificarlo, y se ha dejado tal como está: %2$s"
+msgstr[1] "No se han podido sobrescribir %1$s archivos porque este sitio no tiene permisos para cambiarlos y se han dejado tal como están: %2$s"
+msgstr[2] "No se han podido sobrescribir %1$s archivos porque este sitio no tiene permisos para cambiarlos y se han dejado tal como están: %2$s"
 
 #. translators: %s: number of files.
 #: includes/class-restore-job.php:359
@@ -852,12 +852,12 @@ msgid "Restore complete."
 msgstr "Restauración completada."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s: reintentando en %2$d segundos."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Cancelado."
 
@@ -865,12 +865,12 @@ msgstr "Cancelado."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Las copias de seguridad van a un destino de almacenamiento. Edita o elimina el que tienes para usar uno diferente."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "No se pudo abrir el archivo de la base de datos."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "La base de datos rechazó una sentencia de la copia de seguridad: %1$s (%2$s…)"

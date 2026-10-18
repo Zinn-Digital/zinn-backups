@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "सेटिङहरू सुरक्षित गरियो।"
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "अर्को ब्याकअप, पुनर्स्थापना वा आयात कार्य भइरहेको छ। यो समाप्त हुनको लागि पर्खनुहोस्, वा यसलाई रद्द गर्नुहोस्।"
 
@@ -677,7 +677,7 @@ msgstr "टुक्रा आइपुगेन। तपाईंको सर
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "आयातले यस साइटको सामग्री र डाटाबेस प्रतिस्थापन गर्दछ भनी पुष्टि गर्न बाकसमा चिन्ह लगाउनुहोस्।"
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "आयात गर्नको लागि एउटा सङ्ग्रह छान्नुहोस्: यसलाई अपलोड गर्नुहोस्, लिङ्क टाँस्नुहोस्, वा आयात फोल्डरबाट एउटा छान्नुहोस्।"
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "पुनर्स्थापना पूरा भयो।"
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d सेकेन्डमा पुन: प्रयास गर्दैछ।"
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "रद्द गरियो।"
 
@@ -862,12 +862,12 @@ msgstr "रद्द गरियो।"
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "ब्याकअपहरू एउटा भण्डारण गन्तव्यमा जान्छन्। फरक प्रयोग गर्नका लागि तपाईंसँग भएकोलाई सम्पादन गर्नुहोस् वा हटाउनुहोस्।"
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "डेटाबेस फाइल खोल्न सकिएन।"
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "डाटाबेसले ब्याकअपबाट एक स्टेटमेन्ट अस्वीकार गर्‍यो: %1$s (%2$s…)"

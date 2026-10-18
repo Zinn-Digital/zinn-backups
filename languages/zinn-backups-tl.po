@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "Nai-save ang mga setting."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "May isa pang backup, restore, o import na kasalukuyang tumatakbo. Maghintay hanggang sa matapos ito, o kanselahin ito."
 
@@ -677,7 +677,7 @@ msgstr "Hindi nakarating ang piraso. Maaaring nililimitahan ng iyong server ang 
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Lagyan ng tsek ang kahon upang kumpirmahing papalitan ng pag-import ang nilalaman at database ng site na ito."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Pumili ng archive na ii-import: i-upload ito, mag-paste ng link, o pumili mula sa folder ng pag-import."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "Kumpleto na ang pag-restore."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — sinusubukang muli sa loob ng %2$d segundo."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Kinansela."
 
@@ -862,12 +862,12 @@ msgstr "Kinansela."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Pumupunta ang mga backup sa isang destinasyon ng imbakan. I-edit o alisin ang mayroon ka upang gumamit ng iba."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Hindi mabuksan ang database file."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Tinanggihan ng database ang isang pahayag mula sa backup: %1$s (%2$s…)"

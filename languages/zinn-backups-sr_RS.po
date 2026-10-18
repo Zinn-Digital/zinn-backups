@@ -663,7 +663,7 @@ msgid "Settings saved."
 msgstr "Подешавања су сачувана."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "У току је друго прављење резервне копије, враћање или увоз. Сачекајте да се заврши или га откажите."
 
@@ -679,7 +679,7 @@ msgstr "Део није стигао. Ваш сервер можда огран�
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Означите поље да потврдите да увоз замењује садржај и базу података овог веб-места."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Изаберите архиву за увоз: отпремите је, налепите везу или изаберите неку из фасцикле за увоз."
 
@@ -774,13 +774,14 @@ msgid "Restoring the backup of %1$s (%2$d file parts)."
 msgstr "Враћање резервне копије за %1$s (%2$d делова датотеке)."
 
 #. translators: 1: number of files, 2: example paths.
+#. zinn-i18n: human translation — a person corrected the machine translation
 #: includes/class-restore-job.php:340
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
-msgstr[0] "Датотека %1$s није могла бити преписана јер овом месту није дозвољено да је мења, па је остављена таква каква јесте: %2$s"
-msgstr[1] "%1$s датотека није могло бити преписано јер овом месту није дозвољено да их мења, те су остављене такве какве јесу: %2$s"
-msgstr[2] "%1$s датотека није могло бити преписано јер овом месту није дозвољено да их мења, те су остављене такве какве јесу: %2$s"
+msgstr[0] "Датотека %1$s није могла бити преписана јер овом веб-месту није дозвољено да је мења, па је остављена у постојећем стању: %2$s"
+msgstr[1] "%1$s датотеке није било могуће преписати јер овом веб-месту није дозвољено да их мења, те су остављене какве јесу: %2$s"
+msgstr[2] "%1$s датотека није било могуће преписати јер овом веб-месту није дозвољено да их мења, те су остављене какве јесу: %2$s"
 
 #. translators: %s: number of files.
 #: includes/class-restore-job.php:359
@@ -852,12 +853,12 @@ msgid "Restore complete."
 msgstr "Враћање је завршено."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — поновни покушај за %2$d секунди."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Отказано."
 
@@ -865,12 +866,12 @@ msgstr "Отказано."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Резервне копије иду на једно одредиште за складиштење. Уредите или уклоните постојеће да бисте користили друго."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Датотека базе података није могла бити отворена."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "База података је одбила наредбу из резервне копије: %1$s (%2$s…)"

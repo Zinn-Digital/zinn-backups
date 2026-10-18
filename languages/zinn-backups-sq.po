@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "Rregullimet u ruajtën."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Një tjetër kopje rezervë, rikthim ose importim është duke u kryer. Prisni që të përfundojë, ose anulojeni."
 
@@ -677,7 +677,7 @@ msgstr "Pjesa nuk mbërriti. Serveri juaj mund të kufizojë madhësitë e ngark
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Shënoni kutinë për të konfirmuar se importimi zëvendëson përmbajtjen dhe bazën e të dhënave të kësaj faqeje."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Zgjidhni një arkiv për të importuar: ngarkojeni atë, ngjitni një lidhje ose zgjidhni një nga dosja e importit."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "Rikthimi përfundoi."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — po provohet sërish pas %2$d sekondash."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "U anulua."
 
@@ -862,12 +862,12 @@ msgstr "U anulua."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Kopjet rezervë shkojnë në një destinacion ruajtjeje. Redaktoni ose hiqni atë që keni për të përdorur një tjetër."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Skedari i bazës së të dhënave nuk mund të hapej."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Baza e të dhënave refuzoi një deklaratë nga kopja rezervë: %1$s (%2$s…)"

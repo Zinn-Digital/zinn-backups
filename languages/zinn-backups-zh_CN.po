@@ -659,7 +659,7 @@ msgid "Settings saved."
 msgstr "设置已保存。"
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "另一个备份、恢复或导入正在运行。请等待其完成，或将其取消。"
 
@@ -675,7 +675,7 @@ msgstr "分块未送达。您的服务器可能会限制上传大小；请重试
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "勾选该框以确认导入将替换本站点的所有内容和数据库。"
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "选择要导入的归档：上传它、粘贴链接或从导入文件夹中选取。"
 
@@ -846,12 +846,12 @@ msgid "Restore complete."
 msgstr "恢复完成。"
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — 将在 %2$d 秒后重试。"
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "已取消。"
 
@@ -859,12 +859,12 @@ msgstr "已取消。"
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "备份会发送到一个存储目的地。请编辑或移除您现有的目的地以使用其他目的地。"
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "无法打开数据库文件。"
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "数据库拒绝了来自备份的语句：%1$s（%2$s…）"

@@ -529,8 +529,8 @@ msgstr "База данных: таблиц: %1$d, строк: %2$s, сжато:
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Резервное копирование завершено: %1$s сохранено в %2$d месте назначения."
-msgstr[1] "Резервное копирование завершено: %1$s сохранено в %2$d местах."
-msgstr[2] "Резервное копирование завершено: %1$s сохранено в %2$d местах."
+msgstr[1] "Резервное копирование завершено: %1$s сохранено в %2$d местах назначения."
+msgstr[2] "Резервное копирование завершено: %1$s сохранено в %2$d местах назначения."
 
 #: includes/class-backup-job.php:503
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
@@ -663,7 +663,7 @@ msgid "Settings saved."
 msgstr "Настройки сохранены."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Выполняется другое резервное копирование, восстановление или импорт. дождитесь его завершения или отмените его."
 
@@ -679,7 +679,7 @@ msgstr "Фрагмент не был получен. Возможно, ваш с
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Установите этот флажок, чтобы подтвердить, что импорт заменит содержимое и базу данных этого сайта."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Выберите архив для импорта: загрузите его, вставьте ссылку или выберите файл из папки импорта."
 
@@ -778,9 +778,9 @@ msgstr "Восстановление резервной копии %1$s (%2$d ч
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
-msgstr[0] "Файл %1$s не удалось перезаписать, так как этому сайту не разрешено изменять его, и он был оставлен без изменений: %2$s"
-msgstr[1] "Не удалось перезаписать %1$s файлов, так как этот сайт не имеет разрешения на их изменение, и они были оставлены без изменений: %2$s"
-msgstr[2] "Не удалось перезаписать %1$s файлов, так как этот сайт не имеет разрешения на их изменение, и они были оставлены без изменений: %2$s"
+msgstr[0] "Файл %1$s не удалось перезаписать, так как у этого сайта нет разрешения на его изменение, и он был оставлен без изменений: %2$s"
+msgstr[1] "Файлы (%1$s) не удалось перезаписать, так как у этого сайта нет разрешения на их изменение, и они были оставлены без изменений: %2$s"
+msgstr[2] "Файлы (%1$s) не удалось перезаписать, так как у этого сайта нет разрешения на их изменение, и они были оставлены без изменений: %2$s"
 
 #. translators: %s: number of files.
 #: includes/class-restore-job.php:359
@@ -852,12 +852,12 @@ msgid "Restore complete."
 msgstr "Восстановление завершено."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — повторная попытка через %2$d с."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Отменено."
 
@@ -865,12 +865,12 @@ msgstr "Отменено."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Резервные копии отправляются в одно хранилище. Отредактируйте или удалите существующее, чтобы использовать другое."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Не удалось открыть файл базы данных."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "База данных отклонила запрос из резервной копии: %1$s (%2$s…)"

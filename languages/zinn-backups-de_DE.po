@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "Einstellungen gespeichert."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Eine andere Sicherung, Wiederherstellung oder ein Import wird gerade ausgeführt. Warte, bis der Vorgang abgeschlossen ist, oder brich ihn ab."
 
@@ -677,7 +677,7 @@ msgstr "Das Teilstück ist nicht angekommen. Dein Server beschränkt möglicherw
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Aktiviere das Kontrollkästchen, um zu bestätigen, dass der Import die Inhalte und die Datenbank dieser Website ersetzt."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Wähle ein Archiv zum Importieren aus: Lade es hoch, füge einen Link ein oder wähle eines aus dem Import-Ordner."
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "Wiederherstellung abgeschlossen."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s – erneuter Versuch in %2$d Sekunden."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "Abgebrochen."
 
@@ -862,12 +862,12 @@ msgstr "Abgebrochen."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Backups gehen an einen Speicherort. Bearbeite oder entferne deinen vorhandenen, um einen anderen zu verwenden."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "Die Datenbankdatei konnte nicht geöffnet werden."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "Die Datenbank hat eine Anweisung aus dem Backup abgelehnt: %1$s (%2$s…)"

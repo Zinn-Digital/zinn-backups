@@ -249,8 +249,8 @@ msgstr "قيد التشغيل"
 #: includes/class-admin.php:360
 msgid "Your storage"
 msgid_plural "Your storage destinations"
-msgstr[0] "مساحة التخزين الخاصة بك"
-msgstr[1] "وجهات التخزين الخاصة بك"
+msgstr[0] "وجهات التخزين الخاصة بك"
+msgstr[1] "سعة التخزين الخاصة بك"
 msgstr[2] "وجهات التخزين الخاصة بك"
 msgstr[3] "وجهات التخزين الخاصة بك"
 msgstr[4] "وجهات التخزين الخاصة بك"
@@ -532,11 +532,11 @@ msgstr "قاعدة البيانات: %1$d جداول، %2$s صفوف، %3$s مض
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d وجهة."
-msgstr[1] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d من الوجهات."
+msgstr[1] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d وجهة."
 msgstr[2] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d من الوجهات."
-msgstr[3] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d من الوجهات."
-msgstr[4] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d من الوجهات."
-msgstr[5] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d من الوجهات."
+msgstr[3] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d وجهات."
+msgstr[4] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d وجهة."
+msgstr[5] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d وجهة."
 
 #: includes/class-backup-job.php:503
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
@@ -669,7 +669,7 @@ msgid "Settings saved."
 msgstr "تم حفظ الإعدادات."
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "هناك عملية نسخ احتياطي أو استعادة أو استيراد أخرى قيد التشغيل. انتظر حتى تنتهي، أو قم بإلغائها."
 
@@ -685,7 +685,7 @@ msgstr "لم يصل الجزء. قد يحدد خادمك أحجام الرفع؛
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "حدد المربع لتأكيد أن الاستيراد سيستبدل محتوى هذا الموقع وقاعدة بياناته."
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "اختر أرشيفًا لاستيراده: قم برفعه، أو الصق رابطًا، أو اختر واحدًا من مجلد الاستيراد."
 
@@ -784,12 +784,12 @@ msgstr "تجري استعادة النسخة الاحتياطية لـ %1$s (%2$
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
-msgstr[0] "تعذر استبدال ملف %1$s لأن هذا الموقع غير مسموح له بتغييره، وتم تركه كما هو: %2$s"
-msgstr[1] "تعذر استبدال %1$s ملفات لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
-msgstr[2] "تعذر استبدال %1$s ملفات لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
-msgstr[3] "تعذر استبدال %1$s ملفات لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
-msgstr[4] "تعذر استبدال %1$s ملفات لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
-msgstr[5] "تعذر استبدال %1$s ملفات لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
+msgstr[0] "تعذر استبدال ملفات %1$s لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
+msgstr[1] "تعذر استبدال ملف %1$s لأن هذا الموقع غير مسموح له بتعديله، وتم تركه كما هو: %2$s"
+msgstr[2] "تعذر استبدال ملفات %1$s لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
+msgstr[3] "تعذر استبدال ملفات %1$s لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
+msgstr[4] "تعذر استبدال ملفات %1$s لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
+msgstr[5] "تعذر استبدال ملفات %1$s لأن هذا الموقع غير مسموح له بتعديلها، وتُركت كما هي: %2$s"
 
 #. translators: %s: number of files.
 #: includes/class-restore-job.php:359
@@ -861,12 +861,12 @@ msgid "Restore complete."
 msgstr "اكتملت الاستعادة."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — ستتم إعادة المحاولة بعد %2$d ثوانٍ."
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "أُلغي."
 
@@ -874,12 +874,12 @@ msgstr "أُلغي."
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "تنتقل النسخ الاحتياطية إلى وجهة تخزين واحدة. قم بتحرير الوجهة الحالية أو إزالتها لاستخدام وجهة أخرى."
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "تعذر فتح ملف قاعدة البيانات."
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "رفضت قاعدة البيانات عبارة من النسخة الاحتياطية: %1$s (%2$s…)"

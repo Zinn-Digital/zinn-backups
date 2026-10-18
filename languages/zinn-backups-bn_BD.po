@@ -661,7 +661,7 @@ msgid "Settings saved."
 msgstr "সেটিংস সংরক্ষিত হয়েছে।"
 
 #: includes/class-plugin.php:427
-#: includes/class-runner.php:64
+#: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "অন্য একটি ব্যাকআপ, পুনরুদ্ধার বা আমদানির কাজ চলছে। এটি শেষ হওয়া পর্যন্ত অপেক্ষা করুন, অথবা এটি বাতিল করুন।"
 
@@ -677,7 +677,7 @@ msgstr "অংশটি পৌঁছায়নি। আপনার সার
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "আমদানি এই সাইটের বিষয়বস্তু এবং ডেটাবেস প্রতিস্থাপন করবে তা নিশ্চিত করতে বাক্সটি টিক দিন।"
 
-#: includes/class-plugin.php:535
+#: includes/class-plugin.php:547
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "ইম্পোর্ট করার জন্য একটি আর্কাইভ বেছে নিন: এটি আপলোড করুন, একটি লিঙ্ক পেস্ট করুন, অথবা ইম্পোর্ট ফোল্ডার থেকে একটি বেছে নিন।"
 
@@ -849,12 +849,12 @@ msgid "Restore complete."
 msgstr "পুনরুদ্ধার সম্পন্ন হয়েছে।"
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:160
+#: includes/class-runner.php:165
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d সেকেন্ডের মধ্যে আবার চেষ্টা করা হচ্ছে।"
 
-#: includes/class-runner.php:189
+#: includes/class-runner.php:194
 msgid "Cancelled."
 msgstr "বাতিল করা হয়েছে।"
 
@@ -862,12 +862,12 @@ msgstr "বাতিল করা হয়েছে।"
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "ব্যাকআপগুলো একটি সংরক্ষণের গন্তব্যে যায়। অন্য একটি ব্যবহার করতে আপনার বর্তমানটি সম্পাদনা বা অপসারণ করুন।"
 
-#: includes/class-sql-importer.php:84
+#: includes/class-sql-importer.php:90
 msgid "The database file could not be opened."
 msgstr "ডাটাবেস ফাইলটি খোলা যায়নি।"
 
 #. translators: 1: database error, 2: start of the statement.
-#: includes/class-sql-importer.php:262
+#: includes/class-sql-importer.php:284
 #, php-format
 msgid "The database refused a statement from the backup: %1$s (%2$s…)"
 msgstr "ডাটাবেস ব্যাকআপ থেকে একটি স্টেটমেন্ট প্রত্যাখ্যান করেছে: %1$s (%2$s…)"
