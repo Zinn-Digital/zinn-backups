@@ -452,7 +452,20 @@ msgstr "תמיד מוחרגים: מטמונים, שטח טיוטה לעדכונ�
 msgid "Size of each part (MB)"
 msgstr "גודל כל חלק (MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "המשך הפעלת הגיבויים כאשר התוסף כבוי"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "כבוי אלא אם כן תפעיל אותו. שומר על גיבויים, שחזורים ופקודות WP-CLI פעילים אם תוסף זה כבוי, או אם מסד נתונים ששוחזר אינו מציג אותו עוד כפעיל. פעולה זו מציבה טוען קטן בתיקיית תוספי החובה (must-use plugins)."
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "הטוען אינו במקומו. שמרו את ההגדרות כדי להחזירו."
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "שמור הגדרות"
 
@@ -553,6 +566,81 @@ msgstr "יעד אחסון זה אינו שמור עוד באתר זה."
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "גיבויים מצטברים מאוחרים יותר מבוססים על גיבוי זה. יש למחוק אותם קודם."
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "שימוש: wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "אין להזין מפתח בשורת הפקודה. העבירו אותו בצינור דרך STDIN, או ציינו משתנה סביבה באמצעות --from-env."
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "%1$s נשמר עבור היעד %2$s: %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "להסיר את %1$s מיעד %2$s? הגיבויים אליו יופסקו עד שיוגדר יעד חדש."
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "הפריט %1$s הוסר מהיעד %2$s."
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "הטוען נמצא במקומו."
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "הטוען הוסר."
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "שימוש: wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "משתנה סביבה זה אינו מוגדר או שהוא ריק."
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "ליעד זה אין מפתח בשם \"%1$s\". המפתחות שלו: %2$s."
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "לא סופק מפתח. העבירו אותו דרך STDIN או ציינו משתנה סביבה באמצעות --from-env."
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "זה לא נראה כמו %s תקין (אורך שגוי, או תווים שמפתח מסוג זה לעולם אינו מכיל). דבר לא נשמר."
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "אין יעד עם מזהה זה. ראה: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "עדיין אין יעד אחסון. יש להוסיף אחד תחילה: wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "יש יותר מיעד אחד: בחר אחד באמצעות --id. ראה: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(לא הוגדר)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "קובץ זה אינו קובץ Zinn® Backups מוצפן."
@@ -625,61 +713,111 @@ msgstr "%1$s השיב עם HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "לא סופקו פרטים"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "ברשת אתרים, הטוען משמש רק כאשר Zinn® Backups מופעל בכל הרשת, מכיוון שתוסף חובה פועל בכל אתר."
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "קובץ נוסף בשם zinn-backups-loader.php כבר קיים בתיקיית תוספי החובה (must-use plugins); הוא הושאר ללא שינוי."
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "לא ניתן היה ליצור את תיקיית תוספי החובה (Must-Use)."
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "תיקיית תוספי החובה (must-use) אינה ניתנת לכתיבה."
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "לא ניתן היה למקם את הטוען במקומו."
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "לא ניתן היה להסיר את הטוען."
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "התוסף Zinn® Backups יכול להמשיך להריץ גיבוי או שחזור שנמצאים בעיצומם, ואת פקודות ה-WP-CLI שלו, גם אם התוסף כבוי. הוא עושה זאת באמצעות טוען קטן בתיקיית must-use plugins, שמתווסף רק אם תבקש."
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "לא, תודה"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "אין לך הרשאה לנהל גיבויים."
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "התוסף Zinn® Backups כבוי, אך מנגנון הטעינה שלו בתיקיית תוספי החובה (must-use plugins) משאיר פעילים כל גיבוי או שחזור שמתבצעים כעת, וכך גם את פקודות ה-WP-CLI שלו."
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "הפסקת הפעולה ברקע"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "סמן את התיבה כדי לאשר שהשחזור מחליף את הקבצים ומסד הנתונים של אתר זה."
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "יש לשמור תחילה את היעד."
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "מחובר: קובץ בדיקה נכתב והוסר."
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "הזן תחילה את מפתח היישום של יישום ה-Dropbox שלך (ראה את השלבים לצד הטופס)."
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "סוג אחסון זה אינו מתחבר."
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "תוקף הכניסה פג. לחץ שוב על התחבר."
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox מחובר."
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "ההגדרות נשמרו, אך טוען הרקע לא השתנה: %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "ההגדרות נשמרו."
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "גיבוי, שחזור או ייבוא אחר פועל כעת. המתן לסיומו, או בטל אותו."
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "ההעלאה לא התחילה כראוי. יש להתחיל שוב."
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "המקטע לא הגיע. ייתכן שהשרת שלך מגביל את נפח ההעלאות; כדאי לנסות שוב."
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "סמן את התיבה כדי לאשר שהייבוא מחליף את התוכן ואת מסד הנתונים של אתר זה."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "יש לבחור ארכיון לייבוא: להעלות אותו, להדביק קישור, או לבחור קובץ מתיקיית הייבוא."
 
@@ -861,7 +999,7 @@ msgstr "%1$s — מנסה שוב בעוד %2$d שניות."
 msgid "Cancelled."
 msgstr "בוטל."
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "גיבויים נשמרים ביעד אחסון אחד. יש לערוך או להסיר את היעד הקיים כדי להשתמש ביעד אחר."
 

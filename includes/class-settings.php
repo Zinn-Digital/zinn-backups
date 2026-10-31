@@ -42,7 +42,11 @@ final class Settings {
 	/**
 	 * All settings, with defaults filled in.
 	 *
-	 * @return array{destinations: array<int,array<string,mixed>>, include_core: bool, leave_out: string, part_mb: int}
+	 * `keep_running` (default OFF — opt-in, s1014 ruling 2026-10-31, docs/977 §10): the must-use
+	 * loader keeps backups, restores and WP-CLI working when the plugin is switched off
+	 * ({@see Mu_Loader}). A plugin writes outside its own folder only on the site owner's action.
+	 *
+	 * @return array{destinations: array<int,array<string,mixed>>, include_core: bool, leave_out: string, part_mb: int, keep_running: bool}
 	 */
 	public static function all(): array {
 		$saved = get_option( self::OPTION, array() );
@@ -52,6 +56,7 @@ final class Settings {
 			'include_core' => ! empty( $saved['include_core'] ),
 			'leave_out'    => isset( $saved['leave_out'] ) ? (string) $saved['leave_out'] : '',
 			'part_mb'      => isset( $saved['part_mb'] ) ? max( 10, min( 2000, (int) $saved['part_mb'] ) ) : 100,
+			'keep_running' => ! empty( $saved['keep_running'] ),
 		);
 	}
 
@@ -66,6 +71,21 @@ final class Settings {
 		$all['include_core'] = ! empty( $input['include_core'] );
 		$all['leave_out']    = implode( "\n", self::clean_lines( (string) ( $input['leave_out'] ?? '' ) ) );
 		$all['part_mb']      = max( 10, min( 2000, (int) ( $input['part_mb'] ?? 100 ) ) );
+		if ( array_key_exists( 'keep_running', $input ) ) {
+			$all['keep_running'] = ! empty( $input['keep_running'] );
+		}
+		update_option( self::OPTION, $all, false );
+	}
+
+	/**
+	 * Switch the must-use loader setting on or off (the loader itself is synced by the caller).
+	 *
+	 * @param bool $on Whether the loader should be installed.
+	 * @return void
+	 */
+	public static function set_keep_running( bool $on ): void {
+		$all                 = self::all();
+		$all['keep_running'] = $on;
 		update_option( self::OPTION, $all, false );
 	}
 
@@ -178,6 +198,47 @@ final class Settings {
 				return;
 			}
 		}
+	}
+
+	/**
+	 * Set or remove one connection key of a destination ({@see Connection_Keys}).
+	 *
+	 * @param string      $id     Destination id.
+	 * @param string      $store  'secret' (sealed) or 'config'.
+	 * @param string      $field  Field name.
+	 * @param string|null $value  New value, or null to remove it.
+	 * @param string[]    $forget Sealed values to drop with it (tokens minted with the old key).
+	 * @return void
+	 * @throws \InvalidArgumentException When there is no such destination.
+	 */
+	public static function put_key( string $id, string $store, string $field, ?string $value, array $forget = array() ): void {
+		$all = self::all();
+		foreach ( $all['destinations'] as $index => $row ) {
+			if ( ( $row['id'] ?? '' ) !== $id ) {
+				continue;
+			}
+			$secrets = Secrets::open( (string) ( $row['secret'] ?? '' ) );
+			$config  = is_array( $row['config'] ?? null ) ? $row['config'] : array();
+			foreach ( $forget as $stale ) {
+				unset( $secrets[ $stale ] );
+			}
+			if ( 'secret' === $store ) {
+				unset( $secrets[ $field ] );
+				if ( null !== $value ) {
+					$secrets[ $field ] = $value;
+				}
+			} else {
+				unset( $config[ $field ] );
+				if ( null !== $value ) {
+					$config[ $field ] = $value;
+				}
+			}
+			$all['destinations'][ $index ]['config'] = $config;
+			$all['destinations'][ $index ]['secret'] = Secrets::seal( $secrets );
+			update_option( self::OPTION, $all, false );
+			return;
+		}
+		throw new \InvalidArgumentException( esc_html__( 'No destination with that id. See: wp zinn-backups destination list', 'zinn-backups' ) );
 	}
 
 	/**

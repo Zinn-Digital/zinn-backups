@@ -450,7 +450,20 @@ msgstr "始终排除：缓存、更新暂存空间以及其他备份插件自身
 msgid "Size of each part (MB)"
 msgstr "每个分卷的大小 (MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "在插件关闭时继续运行备份"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "除非您将其开启，否则处于关闭状态。如果此插件被停用，或者恢复的数据库不再将其列为已启用，它将使备份、恢复和 WP-CLI 命令保持运行。这会在必用插件（must-use plugins）文件夹中放置一个小型加载器。"
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "加载器不在原位。请保存设置以将其恢复。"
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "保存设置"
 
@@ -549,6 +562,81 @@ msgstr "该存储目标已不再保存在此站点上。"
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "后续的增量备份基于此备份构建。请先删除这些备份。"
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "用法：wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "请勿在命令行中输入密钥。请通过 STDIN 传递，或使用 --from-env 指定环境变量。"
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "已为目标 %2$s 保存 %1$s：%3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "从目标 %2$s 中移除 %1$s 吗？在设置新目标之前，备份到该目标的任务将停止。"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "已从目的地 %2$s 中移除 %1$s。"
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "加载器已就位。"
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "加载器已移除。"
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "用法：wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "该环境变量未设置或为空。"
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "该目标没有名为“%1$s”的键。它的键包括：%2$s。"
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "未提供密钥。请通过 STDIN 导入，或使用 --from-env 指定环境变量。"
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "这看起来不是有效的 %s（长度错误，或包含此类密钥绝不会包含的字符）。未保存任何内容。"
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "没有具有该 ID 的目标。请参阅：wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "尚无存储目标。请先添加一个：wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "存在多个目标位置：请使用 --id 选择一个。请参阅：wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(未设置)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "此文件不是加密的 Zinn® Backups 文件。"
@@ -621,61 +709,111 @@ msgstr "%1$s 返回了 HTTP %2$d：%3$s"
 msgid "no details given"
 msgstr "未提供详细信息"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "在多站点网络中，仅当 Zinn® Backups 在网络上启用时才使用加载器，因为必须使用的插件会在每个站点上运行。"
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "必用插件（must-use plugins）文件夹中已存在另一个名为 zinn-backups-loader.php 的文件；该文件未作修改。"
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "无法创建必用插件文件夹。"
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "必用插件（must-use plugins）目录不可写。"
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "无法将加载程序放置到位。"
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "无法移除加载器。"
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "即使插件已关闭，Zinn® Backups 也可以保持正在进行的备份或恢复及其 WP-CLI 命令继续运行。它是通过在 must-use 插件文件夹中添加一个小型加载程序来实现此功能的，且仅在您要求时才会添加。"
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "不，谢谢"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "您无权管理备份。"
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups 已关闭，但其在必须使用的插件（must-use plugins）文件夹中的加载器仍会保持任何正在进行的备份或恢复操作以及其 WP-CLI 命令正常运行。"
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "停止在后台运行"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "勾选该复选框以确认恢复操作将替换此站点的文件和数据库。"
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "请先保存目标地址。"
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "已连接：测试文件已写入并删除。"
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "请先输入您的 Dropbox 应用的应用密钥（请参阅表单旁边的步骤）。"
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "此类存储不进行登录。"
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "登录已过期。请再次点击连接。"
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox 已连接。"
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "设置已保存，但后台加载器未更改：%s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "设置已保存。"
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "另一个备份、恢复或导入正在运行。请等待其完成，或将其取消。"
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "上传未正常开始。请重新开始。"
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "分块未送达。您的服务器可能会限制上传大小；请重试。"
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "勾选该框以确认导入将替换本站点的所有内容和数据库。"
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "选择要导入的归档：上传它、粘贴链接或从导入文件夹中选取。"
 
@@ -855,7 +993,7 @@ msgstr "%1$s — 将在 %2$d 秒后重试。"
 msgid "Cancelled."
 msgstr "已取消。"
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "备份会发送到一个存储目的地。请编辑或移除您现有的目的地以使用其他目的地。"
 

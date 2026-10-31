@@ -450,7 +450,20 @@ msgstr "ຖືກຍົກເວັ້ນສະເໝີ: ແຄຊ໌, ພື�
 msgid "Size of each part (MB)"
 msgstr "ຂະໜາດຂອງແຕ່ລະສ່ວນ (MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "ສືບຕໍ່ສຳຮອງຂໍ້ມູນໄວ້ເມື່ອປລັກອິນຖືກປິດ"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "ປິດຢູ່ ນອກຈາກທ່ານຈະເປີດມັນ. ຮັກສາການສຳຮອງຂໍ້ມູນ, ການກູ້ຄືນ ແລະ ຄຳສັ່ງ WP-CLI ໃຫ້ເຮັດວຽກຕໍ່ໄປ ຖ້າປລັກອິນນີ້ຖືກປິດໄວ້, ຫຼື ຖ້າຖານຂໍ້ມູນທີ່ກູ້ຄືນມາບໍ່ໄດ້ລະບຸວ່າມັນເປີດໃຊ້ງານອີກຕໍ່ໄປ. ສິ່ງນີ້ຈະວາງຕົວໂຫລດຂະໜາດນ້ອຍໄວ້ໃນໂຟນເດີ must-use plugins."
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "ຕົວໂຫຼດບໍ່ໄດ້ຢູ່ບ່ອນເກົ່າ. ບັນທຶກການຕັ້ງຄ່າເພື່ອເອົາມັນກັບຄືນມາ."
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "ບັນທຶກການຕັ້ງຄ່າ"
 
@@ -549,6 +562,81 @@ msgstr "ຈຸດໝາຍປາຍທາງບ່ອນເກັບຂໍ້ມ
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "ການສຳຮອງຂໍ້ມູນແບບເພີ່ມຂຶ້ນໃນພາຍຫຼັງແມ່ນສ້າງຂຶ້ນຈາກອັນນີ້. ກະລຸນາລຶບຂໍ້ມູນເຫຼົ່ານັ້ນກ່ອນ."
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "ວິທີໃຊ້: wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "ຢ່າໃສ່ຄີໃນແຖວຄຳສັ່ງ. ສົ່ງມັນຜ່ານ STDIN, ຫຼື ຕັ້ງຊື່ຕົວປ່ຽນສະພາບແວດລ້ອມດ້ວຍ --from-env."
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "ບັນທຶກ %1$s ສຳລັບປາຍທາງ %2$s ແລ້ວ: %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "ລຶບ %1$s ອອກຈາກປາຍທາງ %2$s ບໍ່? ການສຳຮອງຂໍ້ມູນໄປຍັງມັນຈະຢຸດຈົນກວ່າຈະຕັ້ງຄ່າໃໝ່."
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "ລຶບ %1$s ອອກຈາກປາຍທາງ %2$s ແລ້ວ."
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "ຕົວໂຫຼດຢູ່ໃນຕຳແໜ່ງແລ້ວ."
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "ຕົວໂຫຼດຖືກລຶບອອກແລ້ວ."
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "ວິທີໃຊ້: wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "ຕົວແປສະພາບແວດລ້ອມນັ້ນບໍ່ໄດ້ຖືກຕັ້ງຄ່າ ຫຼື ຫວ່າງເປົ່າ."
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "ປາຍທາງນີ້ບໍ່ມີຄີທີ່ຊື່ວ່າ “%1$s”. ຄີຂອງມັນ: %2$s."
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "ບໍ່ມີຄີຖືກລະບຸ. ສົ່ງມັນຜ່ານ STDIN ຫຼື ລະບຸຕົວປ່ຽນສະພາບແວດລ້ອມດ້ວຍ --from-env."
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "ນັ້ນເບິ່ງຄືວ່າບໍ່ແມ່ນ %s ທີ່ຖືກຕ້ອງ (ຄວາມຍາວບໍ່ຖືກຕ້ອງ, ຫຼືມີຕົວອັກສອນທີ່ຄີປະເພດນີ້ບໍ່ເຄີຍມີ). ບໍ່ມີຫຍັງຖືກບັນທຶກໄວ້."
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "ບໍ່ມີປາຍທາງທີ່ມີ ID ນັ້ນ. ເບິ່ງ: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "ຍັງບໍ່ມີປາຍທາງບ່ອນເກັບຂໍ້ມູນເທື່ອ. ກະລຸນາເພີ່ມກ່ອນ: wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "ມີປາຍທາງຫຼາຍກວ່າໜຶ່ງບ່ອນ: ເລືອກອັນໜຶ່ງດ້ວຍ --id. ເບິ່ງ: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(ບໍ່ໄດ້ຕັ້ງຄ່າ)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "ໄຟລ໌ນີ້ບໍ່ແມ່ນໄຟລ໌ Zinn® Backups ທີ່ຖືກເຂົ້າລະຫັດໄວ້."
@@ -621,61 +709,111 @@ msgstr "%1$s ຕອບກັບດ້ວຍ HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "ບໍ່ມີລາຍລະອຽດທີ່ລະບຸ"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "ຢູ່ໃນເຄືອຂ່າຍຫຼາຍເວັບໄຊ, ຕົວໂຫຼດຈະຖືກນຳໃຊ້ເມື່ອ Zinn® Backups ຖືກເປີດໃຊ້ງານໃນເຄືອຂ່າຍເທົ່ານັ້ນ, ເນື່ອງຈາກປລັກອິນທີ່ຕ້ອງໃຊ້ຈະເຮັດວຽກຢູ່ໃນທຸກໆ ເວັບໄຊ."
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "ມີໄຟລ໌ອື່ນທີ່ມີຊື່ວ່າ zinn-backups-loader.php ຢູ່ໃນໂຟນເດີ must-use plugins ແລ້ວ; ມັນຖືກປະໄວ້ຄືເກົ່າໂດຍບໍ່ມີການປ່ຽນແປງ."
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "ບໍ່ສາມາດສ້າງໂຟນເດີປລັກອິນທີ່ຈຳເປັນຕ້ອງໃຊ້ໄດ້."
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "ໂຟນເດີປລັກອິນທີ່ຈຳເປັນຕ້ອງໃຊ້ (must-use plugins) ບໍ່ສາມາດຂຽນໄດ້."
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "ບໍ່ສາມາດວາງຕົວໂຫລດໄວ້ໃນບ່ອນໄດ້."
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "ບໍ່ສາມາດລຶບຕົວໂຫລດໄດ້."
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "Zinn® Backups ສາມາດຮັກສາການສຳຮອງຂໍ້ມູນ ຫຼື ການກູ້ຄືນທີ່ກຳລັງດຳເນີນຢູ່, ລວມທັງຄຳສັ່ງ WP-CLI ຂອງມັນ, ໃຫ້ເຮັດວຽກຕໍ່ໄປໄດ້ ເຖິງແມ່ນວ່າປລັກອິນຈະຖືກປິດຢູ່ກໍຕາມ. ລະບົບເຮັດສິ່ງນີ້ດ້ວຍຕົວໂຫຼດຂະໜາດນ້ອຍໃນໂຟນເດີ must-use plugins, ເຊິ່ງຈະຖືກເພີ່ມເຂົ້າເມື່ອທ່ານຮ້ອງຂໍເທົ່ານັ້ນ."
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "ບໍ່, ຂອບໃຈ"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ຈັດການການສຳຮອງຂໍ້ມູນ."
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups ຖືກປິດໄວ້, ແຕ່ຕົວໂຫລດຂອງມັນຢູ່ໃນໂຟນເດີປລັກອິນ must-use ຍັງຄົງຮັກສາການສຳຮອງຂໍ້ມູນ ຫຼື ການກູ້ຄືນທີ່ກຳລັງດຳເນີນຢູ່, ພ້ອມທັງຄຳສັ່ງ WP-CLI ຂອງມັນ, ໃຫ້ເຮັດວຽກຕໍ່ໄປ."
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "ຢຸດການເຮັດວຽກຂອງມັນຢູ່ໃນພື້ນຫຼັງ"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "ໝາຍຕິກໃສ່ຫ້ອງເພື່ອຢືນຢັນວ່າການກູ້ຄືນຈະປ່ຽນແທນໄຟລ໌ ແລະ ຖານຂໍ້ມູນຂອງເວັບໄຊນີ້."
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "ບັນທຶກປາຍທາງກ່ອນ."
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "ເຊື່ອມຕໍ່ແລ້ວ: ໄຟລ໌ທົດສອບຖືກຂຽນ ແລະ ລຶບອອກແລ້ວ."
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "ກະລຸນາປ້ອນຄີແອັບຂອງ Dropbox ແອັບຂອງທ່ານກ່ອນ (ເບິ່ງຂັ້ນຕອນຢູ່ຂ້າງແບບຟອມ)."
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "ບ່ອນຈັດເກັບຂໍ້ມູນປະເພດນີ້ບໍ່ໄດ້ເຂົ້າສູ່ລະບົບ."
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "ໝົດເວລາເຂົ້າສູ່ລະບົບແລ້ວ. ກະລຸນາກົດ ເຊື່ອມຕໍ່ ອີກຄັ້ງ."
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox ເຊື່ອມຕໍ່ແລ້ວ."
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "ບັນທຶກການຕັ້ງຄ່າແລ້ວ, ແຕ່ບໍ່ໄດ້ປ່ຽນຕົວໂຫລດພື້ນຫຼັງ: %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "ບັນທຶກການຕັ້ງຄ່າແລ້ວ."
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "ການສຳຮອງຂໍ້ມູນ, ການກູ້ຄືນ ຫຼື ການນຳເຂົ້າອື່ນກຳລັງເຮັດວຽກຢູ່. ລໍຖ້າໃຫ້ມັນສຳເລັດ, ຫຼື ຍົກເລີກມັນ."
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "ການອັບໂຫຼດບໍ່ໄດ້ເລີ່ມຕົ້ນຢ່າງຖືກຕ້ອງ. ກະລຸນາເລີ່ມຕົ້ນໃໝ່."
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "ສ່ວນຂໍ້ມູນບໍ່ມາຮອດ. ເຊີບເວີຂອງທ່ານອາດຈະຈຳກັດຂະໜາດການອັບໂຫຼດ; ກະລຸນາລອງໃໝ່ອີກຄັ້ງ."
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "ໝາຍຕິກໃສ່ຫ້ອງເພື່ອຢືນຢັນວ່າການນຳເຂົ້າຈະປ່ຽນແທນເນື້ອຫາ ແລະ ຖານຂໍ້ມູນຂອງເວັບໄຊນີ້."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "ເລືອກບ່ອນຈັດເກັບຂໍ້ມູນເພື່ອຕື່ມເຂົ້າ: ອັບໂຫຼດມັນ, ວາງລິ້ງ, ຫຼື ເລືອກອັນໜຶ່ງຈາກໂຟນເດີຕື່ມເຂົ້າ."
 
@@ -855,7 +993,7 @@ msgstr "%1$s — ກຳລັງລອງໃໝ່ອີກຄັ້ງໃນ %2
 msgid "Cancelled."
 msgstr "ຍົກເລີກແລ້ວ."
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "ການສຳຮອງຂໍ້ມູນຈະໄປຍັງບ່ອນເກັບຂໍ້ມູນດຽວ. ແກ້ໄຂ ຫຼື ລຶບອັນທີ່ທ່ານມີເພື່ອໃຊ້ອັນອື່ນ."
 

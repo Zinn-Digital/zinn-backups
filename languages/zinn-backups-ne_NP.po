@@ -451,7 +451,20 @@ msgstr "सधैँ बाहिर राखिएका: क्यासह�
 msgid "Size of each part (MB)"
 msgstr "प्रत्येक भागको आकार (MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "प्लगइन बन्द हुँदा पनि ब्याकअप जारी राख्नुहोस्"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "तपाईंले यसलाई सक्रिय नगरेसम्म बन्द रहन्छ। यदि यो प्लगइन बन्द गरिएको छ, वा पुनर्स्थापित डाटाबेसले यसलाई सक्रिय रूपमा सूचीबद्ध गर्दैन भने पनि ब्याकअपहरू, पुनर्स्थापनाहरू र WP-CLI आदेशहरू चालु राख्छ। यसले must-use plugins फोल्डरमा एउटा सानो लोडर राख्छ।"
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "लोडर आफ्नो ठाउँमा छैन। यसलाई फिर्ता राख्न सेटिङहरू बचत गर्नुहोस्।"
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "सेटिङहरू सुरक्षित गर्नुहोस्"
 
@@ -551,6 +564,81 @@ msgstr "त्यो भण्डारण गन्तव्य अब यस �
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "पछिल्ला वृद्धिशील ब्याकअपहरू यसैमा आधारित छन्। पहिले ती मेटाउनुहोस्।"
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "प्रयोग: wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "कमान्ड लाइनमा कुञ्जी नराख्नुहोस्। यसलाई STDIN मार्फत पाइप गर्नुहोस्, वा --from-env मार्फत वातावरण चरको नाम दिनुहोस्।"
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "गन्तव्य %2$s का लागि %1$s बचत गरियो: %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "गन्तव्य %2$s बाट %1$s हटाउनुहोस्? नयाँ सेट नगरेसम्म यसमा ब्याकअपहरू रोकिन्छन्।"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "%2$s गन्तव्यबाट %1$s हटाइयो।"
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "लोडर ठाउँमा छ।"
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "लोडर हटाइयो।"
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "प्रयोग: wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "त्यो वातावरण चर सेट गरिएको छैन वा खाली छ।"
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "यो गन्तव्यमा “%1$s” नामक कुनै कुञ्जी छैन। यसका कुञ्जीहरू: %2$s।"
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "कुनै कुञ्जी दिइएको थिएन। यसलाई STDIN मा पाइप गर्नुहोस् वा --from-env मार्फत वातावरण चरको नाम दिनुहोस्।"
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "त्यो मान्य %s जस्तो देखिँदैन (गलत लम्बाइ, वा क्यारेक्टरहरू जुन यस प्रकारको कुञ्जीमा कहिल्यै हुँदैन)। केही पनि सुरक्षित गरिएको छैन।"
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "त्यो ID भएको कुनै गन्तव्य छैन। हेर्नुहोस्: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "अहिलेसम्म कुनै भण्डारण गन्तव्य छैन। पहिले एउटा थप्नुहोस्: wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "एक भन्दा बढी गन्तव्यहरू छन्: --id प्रयोग गरी एउटा छान्नुहोस्। हेर्नुहोस्: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(सेट गरिएको छैन)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "यो फाइल इन्क्रिप्ट गरिएको Zinn® Backups फाइल होइन।"
@@ -623,61 +711,111 @@ msgstr "%1$s ले HTTP %2$d सँग प्रतिक्रिया दि
 msgid "no details given"
 msgstr "कुनै विवरण दिइएको छैन"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "मल्टिसाइज नेटवर्कमा लोडर केवल Zinn® Backups नेटवर्क-सक्रिय हुँदा मात्र प्रयोग गरिन्छ, किनकि अनिवार्य प्लगइन प्रत्येक साइटमा चल्छ।"
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "must-use plugins फोल्डरमा zinn-backups-loader.php नामको अर्को फाइल पहिले नै अवस्थित छ; यसलाई त्यत्तिकै छोडिएको थियो।"
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "अनिवार्य प्लगइनहरूको फोल्डर सिर्जना गर्न सकिएन।"
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "अनिवार्य प्लगइन (must-use plugins) फोल्डर लेख्न योग्य छैन।"
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "लोडरलाई ठाउँमा राख्न सकिएन।"
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "लोडर हटाउन सकिएन।"
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "प्लगइन बन्द गरिएको भए तापनि Zinn® Backups ले प्रगतिमा रहेको ब्याकअप वा पुनर्स्थापना, र यसका WP-CLI आदेशहरूलाई काम गरिरहन मद्दत गर्न सक्छ। यसले must-use plugins फोल्डरमा रहेको एउटा सानो लोडरमार्फत यसो गर्दछ, जुन तपाईंले अनुरोध गरेमा मात्र थपिन्छ।"
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "होइन, धन्यवाद"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "तपाईँलाई ब्याकअपहरू व्यवस्थापन गर्न अनुमति छैन।"
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups बन्द गरिएको छ, तर must-use प्लगइन फोल्डरमा रहेको यसको लोडरले प्रगतिमा रहेको कुनै पनि ब्याकअप वा पुनर्स्थापना, र यसका WP-CLI आदेशहरूलाई कार्यशील राख्छ।"
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "यसलाई पृष्ठभूमिमा चल्नबाट रोक्नुहोस्"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "पुनर्स्थापनाले यस साइटका फाइलहरू र डाटाबेस बदल्छ भनी पुष्टि गर्न बाकसमा चिन्ह लगाउनुहोस्।"
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "पहिले गन्तव्य बचत गर्नुहोस्।"
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "जडान भयो: परीक्षण फाइल लेखियो र हटाइयो।"
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "पहिले तपाईंको Dropbox एपको एप कुञ्जी प्रविष्ट गर्नुहोस् (फारमको छेउमा रहेका चरणहरू हेर्नुहोस्)।"
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "यस प्रकारको भण्डारण साइन इन गर्दैन।"
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "साइन-इनको समय समाप्त भयो। पुन: जडान गर्नुहोस् थिच्नुहोस्।"
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox जोडिएको छ।"
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "सेटिङहरू सुरक्षित गरियो, तर पृष्ठभूमि लोडर परिवर्तन भएन: %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "सेटिङहरू सुरक्षित गरियो।"
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "अर्को ब्याकअप, पुनर्स्थापना वा आयात कार्य भइरहेको छ। यो समाप्त हुनको लागि पर्खनुहोस्, वा यसलाई रद्द गर्नुहोस्।"
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "अपलोड ठीकसँग सुरु भएन। पुन: सुरु गर्नुहोस्।"
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "टुक्रा आइपुगेन। तपाईंको सर्भरले अपलोड आकार सीमित गर्न सक्छ; फेरि प्रयास गर्नुहोस्।"
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "आयातले यस साइटको सामग्री र डाटाबेस प्रतिस्थापन गर्दछ भनी पुष्टि गर्न बाकसमा चिन्ह लगाउनुहोस्।"
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "आयात गर्नको लागि एउटा सङ्ग्रह छान्नुहोस्: यसलाई अपलोड गर्नुहोस्, लिङ्क टाँस्नुहोस्, वा आयात फोल्डरबाट एउटा छान्नुहोस्।"
 
@@ -858,7 +996,7 @@ msgstr "%1$s — %2$d सेकेन्डमा पुन: प्रयास 
 msgid "Cancelled."
 msgstr "रद्द गरियो।"
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "ब्याकअपहरू एउटा भण्डारण गन्तव्यमा जान्छन्। फरक प्रयोग गर्नका लागि तपाईंसँग भएकोलाई सम्पादन गर्नुहोस् वा हटाउनुहोस्।"
 

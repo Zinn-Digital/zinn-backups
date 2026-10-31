@@ -450,7 +450,20 @@ msgstr "အမြဲတမ်းချန်လှပ်ထားသည်မျ
 msgid "Size of each part (MB)"
 msgstr "အပိုင်းတစ်ခုစီ၏ အရွယ်အစား (MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "ပလပ်အင်ကို ပိတ်ထားချိန်တွင်လည်း အရန်သိမ်းဆည်းမှုများကို ဆက်လက်လုပ်ဆောင်ပါ"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "သင်ဖွင့်မထားပါက ပိတ်ထားပါမည်။ ဤပလပ်အင်ကို ပိတ်ထားလျှင် သို့မဟုတ် ပြန်လည်ရယူထားသော ဒေတာဘေ့စ်တွင် ၎င်းကို အသုံးပြုနေသည်ဟု စာရင်းမသွင်းထားတော့လျှင်လည်း အရန်ကူးယူမှုများ၊ ပြန်လည်ရယူမှုများနှင့် WP-CLI အမိန့်များကို ဆက်လက်လုပ်ဆောင်စေပါသည်။ ၎င်းသည် must-use ပလပ်အင်များဖိုဒါထဲသို့ loader အသေးစားတစ်ခုကို ထည့်သွင်းပေးပါသည်။"
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "လုဒ်လုပ်ပေးသည့်အရာသည် မူလနေရာတွင် မရှိပါ။ ၎င်းကို ပြန်ထားရန် ဆက်တင်များကို သိမ်းဆည်းပါ။"
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "ဆက်တင်များကို သိမ်းဆည်းရန်"
 
@@ -549,6 +562,81 @@ msgstr "ထိုသိုလှောင်ရာနေရာကို ဤဆ�
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "နောက်ပိုင်းအဆင့်တိုးအရန်ကူးယူမှုများသည် ဤအရာပေါ်တွင် အခြေခံထားပါသည်။ ၎င်းတို့ကို ဦးစွာပယ်ဖျက်ပါ။"
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "အသုံးပြုပုံ- wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "command line တွင် ကီးကို မထည့်ပါနှင့်။ ၎င်းကို STDIN ဖြင့် ပိုက်လိုင်းမှတစ်ဆင့် ပေးပို့ပါ သို့မဟုတ် --from-env ဖြင့် ပတ်ဝန်းကျင် ပြောင်းလဲနိုင်သောတန်ဖိုးကို သတ်မှတ်ပါ။"
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "ဦးတည်ရာ %2$s အတွက် %1$s ကို သိမ်းဆည်းပြီးပါပြီ- %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "ဦးတည်ရာ %2$s မှ %1$s ကို ဖယ်ရှားမလား။ အသစ်တစ်ခု မသတ်မှတ်မချင်း ၎င်းသို့ အရန်ကူးယူမှုများ ရပ်တန့်သွားပါမည်။"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "%1$s ကို ဦးတည်ရာ %2$s မှ ဖယ်ရှားလိုက်ပါပြီ။"
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "လုဒ်လုပ်ပေးသည့်အရာ နေရာတကျရှိနေပါပြီ။"
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "လုဒ်ဒါကို ဖယ်ရှားလိုက်ပါပြီ။"
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "အသုံးပြုပုံ- wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "ထိုပတ်ဝန်းကျင်ပြောင်းလဲနိုင်သောတန်ဖိုးကို မသတ်မှတ်ရသေးပါ သို့မဟုတ် ဗလာဖြစ်နေပါသည်။"
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "ဤဦးတည်ရာတွင် “%1$s” အမည်ရှိသော ကီး မရှိပါ။ ၎င်း၏ ကီးများ- %2$s။"
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "ကီး မပေးထားပါ။ ၎င်းကို STDIN တွင် ပိုက်ထည့်ပါ သို့မဟုတ် --from-env ဖြင့် ပတ်ဝန်းကျင် ပြောင်းလဲနိုင်သော ကိန်း အမည်ပေးပါ။"
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "၎င်းသည် တရားဝင်သော %s မဟုတ်ပုံရပါသည် (အလျား မှားယွင်းနေခြင်း သို့မဟုတ် ဤကဲ့သို့သော သော့တွင် လုံးဝမပါဝင်သည့် စာလုံးများ ဖြစ်နေခြင်း)။ မည်သည့်အရာမျှ သိမ်းဆည်းမထားပါ။"
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "ထို ID ဖြင့် ဦးတည်ရာ မရှိပါ။ ကြည့်ရှုရန်: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "သိုလှောင်ရာနေရာ မရှိသေးပါ။ ဦးစွာ တစ်ခု ထည့်ပါ- wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "ဦးတည်ရာတစ်ခုထက်မက ရှိနေသည်- --id ဖြင့် တစ်ခုကို ရွေးချယ်ပါ။ ကြည့်ရှုရန်- wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(မသတ်မှတ်ထားပါ)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "ဤဖိုင်သည် ကုဒ်ဝှက်ထားသော Zinn® Backups ဖိုင် မဟုတ်ပါ။"
@@ -621,61 +709,111 @@ msgstr "%1$s သည် HTTP %2$d ဖြင့် ပြန်လည်ဖြေ�
 msgid "no details given"
 msgstr "အသေးစိတ် ဖော်ပြမထားပါ"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "ဆိုက်ပေါင်းစုံကွန်ရက်တစ်ခုတွင် မဖြစ်မနေသုံးရမည့် ပလပ်အင်တစ်ခုသည် ဆိုက်တိုင်းတွင် အလုပ်လုပ်သောကြောင့် Zinn® Backups ကို ကွန်ရက်တစ်ခုလုံးအတိုင်းအတာဖြင့် ဖွင့်ထားမှသာ တင်ပေးသည့်စနစ်ကို အသုံးပြုပါသည်။"
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "must-use plugins ဖိုဒါထဲတွင် zinn-backups-loader.php အမည်ရှိ အခြားဖိုင်တစ်ခု ရှိနှင့်ပြီးဖြစ်သည်၊ ၎င်းကို မူလအတိုင်း ထားရှိခဲ့သည်။"
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "မဖြစ်မနေသုံး ပလပ်အင် ဖိုဒါကို ဖန်တီး၍မရပါ။"
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "မဖြစ်မနေသုံးရမည့် ပလပ်အင်ဖိုဒါ (must-use plugins) သို့ ရေးသား၍မရပါ။"
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "လုဒ်ဒါကို နေရာချ၍မရပါ။"
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "လုဒ်ဒါကို ဖယ်ရှား၍ မရပါ။"
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "ပလပ်အင်ကို ပိတ်ထားသည့်တိုင် Zinn® Backups သည် လုပ်ဆောင်ဆဲဖြစ်သော အရန်သိမ်းခြင်း သို့မဟုတ် ပြန်လည်ရယူခြင်းနှင့် ၎င်း၏ WP-CLI ညွှန်ကြားချက်များကို ဆက်လက်အလုပ်လုပ်စေနိုင်သည်။ ၎င်းကို သင်တောင်းဆိုမှသာ ထည့်သွင်းပေးသည့် must-use plugins ဖိုဒါအတွင်းရှိ သေးငယ်သော လိုဒါတစ်ခုဖြင့် လုပ်ဆောင်ပါသည်။"
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "မလုပ်ပါ၊ ကျေးဇူးတင်ပါသည်"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "သင့်တွင် အရန်သိမ်းဆည်းမှုများကို စီမံခန့်ခွဲရန် ခွင့်ပြုချက်မရှိပါ။"
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups ကို ပိတ်ထားသော်လည်း must-use ပလဂ်အင်များ ဖိုဒါထဲရှိ ၎င်း၏ လုဒ်ဒါက လုပ်ဆောင်ဆဲဖြစ်သော မည်သည့် အရန်သိမ်းဆည်းမှု သို့မဟုတ် ပြန်လည်ရယူမှုကိုမဆို ဆက်လက်အလုပ်လုပ်စေပြီး ၎င်း၏ WP-CLI ညွှန်ကြားချက်များကိုလည်း ဆက်လက်အလုပ်လုပ်စေပါသည်။"
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "နောက်ခံတွင် အလုပ်လုပ်နေခြင်းကို ရပ်တန့်ပါ"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "ပြန်လည်ရယူခြင်းသည် ဤဝဘ်ဆိုက်၏ ဖိုင်များနှင့် ဒေတာဘေ့စ်ကို အစားထိုးမည်ဖြစ်ကြောင်း အတည်ပြုရန် အကွက်ကို အမှန်ခြစ်ပါ။"
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "ဦးစွာ ဦးတည်ရာကို သိမ်းဆည်းပါ။"
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "ချိတ်ဆက်ပြီးပါပြီ- စမ်းသပ်ဖိုင်တစ်ခုကို ရေးသားပြီး ဖယ်ရှားခဲ့သည်။"
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "ပထမဦးစွာ သင်၏ Dropbox အက်ပ်၏ အက်ပ်ကီးကို ထည့်ပါ (ဖောင်ဘေးရှိ အဆင့်များကို ကြည့်ပါ)။"
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "ဤကဲ့သို့သော သိုလှောင်မှုသည် အကောင့်သို့ မဝင်ရောက်ပါ။"
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "အကောင့်ဝင်ရောက်မှု သက်တမ်းကုန်ဆုံးသွားပါပြီ။ ချိတ်ဆက်ရန် ကို ထပ်မံနှိပ်ပါ။"
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox ကို ချိတ်ဆက်ထားသည်။"
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "ဆက်တင်များကို သိမ်းဆည်းပြီးဖြစ်သော်လည်း နောက်ခံဖွင့်ကိရိယာကို ပြောင်းလဲခြင်း မရှိပါ- %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "ဆက်တင်များကို သိမ်းဆည်းပြီးပါပြီ။"
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "အခြား အရန်သိမ်းဆည်းမှု၊ ပြန်လည်ရယူမှု သို့မဟုတ် ထည့်သွင်းမှု လုပ်ဆောင်နေပါသည်။ ၎င်းပြီးဆုံးသည်အထိ စောင့်ပါ သို့မဟုတ် ၎င်းကို ပယ်ဖျက်ပါ။"
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "အပ်လုဒ်တင်ခြင်း ကောင်းမွန်စွာ မစတင်ခဲ့ပါ။ ထပ်မံစတင်ပါ။"
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "အပိုင်းအစ မရောက်ရှိပါ။ သင့်ဆာဗာသည် အပ်လုဒ်အရွယ်အစားများကို ကန့်သတ်ထားနိုင်သည်၊ ထပ်မံကြိုးစားပါ။"
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "တင်သွင်းမှုသည် ဤဆိုဒ်၏ အကြောင်းအရာနှင့် ဒေတာဘေ့စ်ကို အစားထိုးမည်ဖြစ်ကြောင်း အတည်ပြုရန် အကွက်ကို အမှန်ခြစ်ပါ။"
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "တင်သွင်းရန် မော်ကွန်းတိုက်တစ်ခုကို ရွေးချယ်ပါ- ၎င်းကို တင်ပါ၊ လင့်ခ်တစ်ခုကို ကူးထည့်ပါ၊ သို့မဟုတ် တင်သွင်းမှုဖိုင်တွဲမှ တစ်ခုကို ရွေးပါ။"
 
@@ -855,7 +993,7 @@ msgstr "%1$s — %2$d စက္ကန့်အတွင်း ထပ်မံက
 msgid "Cancelled."
 msgstr "ပယ်ဖျက်ပြီးပါပြီ။"
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "အရန်သိမ်းဆည်းမှုများသည် သိုလှောင်ရာနေရာတစ်ခုတည်းသို့ ရောက်ရှိပါသည်။ အခြားတစ်ခုကို အသုံးပြုရန် သင့်တွင်ရှိသောအရာကို တည်းဖြတ်ပါ သို့မဟုတ် ဖယ်ရှားပါ။"
 

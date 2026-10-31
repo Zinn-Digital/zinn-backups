@@ -450,7 +450,20 @@ msgstr "항상 제외됨: 캐시, 업데이트 임시 공간, 다른 백업 플�
 msgid "Size of each part (MB)"
 msgstr "각 부분의 크기(MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "플러그인이 꺼져 있을 때도 백업 계속 실행"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "직접 켜지 않는 한 꺼져 있습니다. 이 플러그인이 꺼져 있거나 복원된 데이터베이스에 더 이상 활성 상태로 표시되지 않더라도 백업, 복원 및 WP-CLI 명령이 계속 실행되도록 유지합니다. 이렇게 하면 must-use 플러그인 폴더에 작은 로더가 배치됩니다."
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "로더가 제자리에 있지 않습니다. 설정을 저장하여 다시 배치하십시오."
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "설정 저장"
 
@@ -549,6 +562,81 @@ msgstr "해당 저장 위치는 더 이상 이 사이트에 저장되지 않습�
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "이후의 증분 백업은 이 백업을 기반으로 작성되었습니다. 해당 백업을 먼저 삭제하십시오."
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "사용법: wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "명령줄에 키를 입력하지 마십시오. STDIN을 통해 전달하거나 --from-env를 사용하여 환경 변수를 지정하십시오."
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "대상 %2$s에 대한 %1$s을(를) 저장했습니다: %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "%2$s 대상에서 %1$s을(를) 제거하시겠습니까? 새 대상이 설정될 때까지 해당 대상에 대한 백업이 중지됩니다."
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "대상 %2$s에서 %1$s을(를) 삭제했습니다."
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "로더가 제자리에 있습니다."
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "로더가 제거되었습니다."
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "사용법: wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "해당 환경 변수가 설정되지 않았거나 비어 있습니다."
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "이 대상에는 “%1$s”라는 키가 없습니다. 포함된 키: %2$s."
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "키가 제공되지 않았습니다. STDIN을 통해 파이프로 전달하거나 --from-env 옵션으로 환경 변수 이름을 지정하십시오."
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "유효한 %s(으)로 보이지 않습니다(길이가 잘못되었거나 이러한 유형의 키에 포함될 수 없는 문자가 있습니다). 저장된 내용이 없습니다."
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "해당 ID를 가진 대상이 없습니다. 다음을 참조하세요: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "아직 저장 위치가 없습니다. 먼저 하나를 추가하세요: wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "대상이 둘 이상 있습니다. --id(으)로 하나를 선택하십시오. 참고: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(설정되지 않음)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "이 파일은 암호화된 Zinn® Backups 파일이 아닙니다."
@@ -621,61 +709,111 @@ msgstr "%1$s이(가) HTTP %2$d(으)로 응답했습니다: %3$s"
 msgid "no details given"
 msgstr "세부 정보가 제공되지 않음"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "다중 사이트 네트워크에서는 필수 플러그인이 모든 사이트에서 실행되므로 Zinn® Backups가 네트워크 전체에서 활성화된 경우에만 로더가 사용됩니다."
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "zinn-backups-loader.php라는 이름의 다른 파일이 이미 필수 플러그인(must-use plugins) 폴더에 있습니다. 해당 파일은 그대로 유지되었습니다."
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "필수 사용 플러그인 폴더를 생성할 수 없습니다."
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "필수 플러그인(must-use) 폴더에 쓸 수 없습니다."
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "로더를 배치할 수 없습니다."
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "로더를 제거할 수 없습니다."
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "Zinn® Backups는 플러그인이 꺼져 있더라도 진행 중인 백업 또는 복원과 해당 WP-CLI 명령이 계속 작동하도록 유지할 수 있습니다. 이는 사용자가 요청한 경우에만 추가되는 must-use plugins 폴더의 작은 로더를 통해 수행됩니다."
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "아니요, 괜찮습니다"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "백업을 관리할 권한이 없습니다."
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups가 꺼져 있지만, must-use 플러그인 폴더에 있는 로더 덕분에 진행 중인 백업 또는 복원 작업과 해당 WP-CLI 명령이 계속 작동합니다."
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "백그라운드에서 실행되지 않도록 중지"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "복원 시 이 사이트의 파일과 데이터베이스가 대체됨을 확인하려면 확인란을 선택하세요."
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "대상을 먼저 저장하세요."
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "연결됨: 테스트 파일이 작성된 후 삭제되었습니다."
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "먼저 Dropbox 앱의 앱 키를 입력하세요(양식 옆의 단계 참조)."
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "이러한 유형의 스토리지는 로그인하지 않습니다."
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "로그인 시간이 만료되었습니다. 다시 연결을 누르세요."
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox가 연결되었습니다."
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "설정이 저장되었지만 백그라운드 로더는 변경되지 않았습니다: %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "설정이 저장되었습니다."
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "다른 백업, 복원 또는 가져오기가 실행 중입니다. 완료될 때까지 기다리거나 취소하세요."
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "업로드가 제대로 시작되지 않았습니다. 다시 시작해 주세요."
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "청크가 도착하지 않았습니다. 서버에서 업로드 크기를 제한할 수 있습니다. 다시 시도해 주세요."
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "가져오기가 이 사이트의 콘텐츠와 데이터베이스를 대체함을 확인하려면 확인란을 선택하세요."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "가져올 아카이브를 선택하세요. 업로드하거나 링크를 붙여넣거나 가져오기 폴더에서 선택하세요."
 
@@ -855,7 +993,7 @@ msgstr "%1$s — %2$d초 후에 다시 시도합니다."
 msgid "Cancelled."
 msgstr "취소됨."
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "백업은 하나의 저장 위치로 전송됩니다. 다른 위치를 사용하려면 기존 위치를 편집하거나 제거하세요."
 

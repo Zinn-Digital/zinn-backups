@@ -451,7 +451,20 @@ msgstr "ఎల్లప్పుడూ మినహాయించబడిన�
 msgid "Size of each part (MB)"
 msgstr "ప్రతి భాగం యొక్క పరిమాణం (MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "ప్లగిన్ ఆఫ్‌లో ఉన్నప్పుడు కూడా బ్యాకప్‌లను రన్ చేస్తూ ఉండండి"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "మీరు దీన్ని ఆన్ చేస్తే తప్ప ఆఫ్‌లో ఉంటుంది. ఈ ప్లగిన్ ఆఫ్ చేయబడినా లేదా పునరుద్ధరించబడిన డేటాబేస్ దీన్ని సక్రియంగా ఉన్నట్లు జాబితా చేయకపోయినా, బ్యాకప్‌లు, పునరుద్ధరణలు మరియు WP-CLI ఆదేశాలు రన్ అవుతూ ఉండేలా చేస్తుంది. ఇది తప్పనిసరిగా ఉపయోగించాల్సిన (must-use) ప్లగిన్‌ల ఫోల్డర్‌లో చిన్న లోడర్‌ను ఉంచుతుంది."
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "లోడర్ సరైన స్థానంలో లేదు. దానిని తిరిగి ఉంచడానికి అమరికలను భద్రపరచండి."
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "అమరికలను భద్రపరచండి"
 
@@ -551,6 +564,81 @@ msgstr "ఆ నిల్వ గమ్యస్థానం ఇకపై ఈ స�
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "తదుపరి ఇంక్రిమెంటల్ బ్యాకప్‌లు దీనిపై ఆధారపడి ఉంటాయి. ముందుగా వాటిని తొలగించండి."
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "వినియోగం: wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "కమాండ్ లైన్‌లో కీని నమోదు చేయవద్దు. దాన్ని STDIN ద్వారా పైప్ చేయండి లేదా --from-envతో ఎన్విరాన్‌మెంట్ వేరియబుల్‌ను పేర్కొనండి."
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "%2$s గమ్యస్థానం కోసం %1$s సేవ్ చేయబడింది: %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "గమ్యస్థానం %2$s నుండి %1$sని తీసివేయాలా? కొత్తది సెట్ చేసే వరకు దీనికి బ్యాకప్‌లు ఆగిపోతాయి."
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "%2$s గమ్యస్థానం నుండి %1$s తీసివేయబడింది."
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "లోడర్ సరైన స్థానంలో ఉంది."
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "లోడర్ తీసివేయబడింది."
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "వాడుక: wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "ఆ ఎన్విరాన్మెంట్ వేరియబుల్ సెట్ చేయబడలేదు లేదా ఖాళీగా ఉంది."
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "ఈ గమ్యస్థానంలో “%1$s” అనే కీ లేదు. దీని కీలు: %2$s."
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "కీ ఏదీ ఇవ్వబడలేదు. దీన్ని STDIN ద్వారా పైప్ చేయండి లేదా --from-envతో ఎన్విరాన్మెంట్ వేరియబుల్‌ను పేర్కొనండి."
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "అది చెల్లుబాటు అయ్యే %s వలె కనిపించడం లేదు (తప్పు పొడవు, లేదా ఈ రకమైన కీ ఎప్పుడూ కలిగి ఉండని అక్షరాలు). ఏదీ సేవ్ చేయబడలేదు."
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "ఆ IDతో గమ్యస్థానం ఏదీ లేదు. చూడండి: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "ఇంకా నిల్వ గమ్యస్థానం లేదు. ముందుగా ఒకదాన్ని జోడించండి: wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "ఒకటి కంటే ఎక్కువ గమ్యస్థానాలు ఉన్నాయి: --idతో ఒకదాన్ని ఎంచుకోండి. చూడండి: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(సెట్ చేయలేదు)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "ఈ ఫైల్ ఎన్‌క్రిప్ట్ చేయబడిన Zinn® Backups ఫైల్ కాదు."
@@ -623,61 +711,111 @@ msgstr "%1$s HTTP %2$d తో ప్రతిస్పందించింద�
 msgid "no details given"
 msgstr "ఎలాంటి వివరాలు అందించబడలేదు"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "మల్టీసైట్ నెట్‌వర్క్‌లో లోడర్ కేవలం Zinn® Backups నెట్‌వర్క్-యాక్టివేట్ చేయబడినప్పుడు మాత్రమే ఉపయోగించబడుతుంది, ఎందుకంటే తప్పనిసరిగా ఉపయోగించాల్సిన ప్లగిన్ ప్రతి సైట్‌లో రన్ అవుతుంది."
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "తప్పనిసరి ప్లగిన్‌ల (must-use plugins) ఫోల్డర్‌లో zinn-backups-loader.php పేరుతో మరొక ఫైల్ ఇప్పటికే ఉంది; అది అలాగే ఉంచబడింది."
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "తప్పనిసరి ప్లగిన్‌ల ఫోల్డర్‌ను సృష్టించడం సాధ్యపడలేదు."
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "తప్పనిసరి ప్లగిన్‌ల (must-use plugins) ఫోల్డర్ రాయడానికి వీలుగా లేదు."
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "లోడర్‌ను సరైన స్థానంలో ఉంచడం సాధ్యపడలేదు."
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "లోడర్ తీసివేయబడలేదు."
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "ప్లగ్ఇన్ నిలిపివేయబడినప్పటికీ, Zinn® Backups ప్రోగ్రెస్‌లో ఉన్న బ్యాకప్ లేదా పునరుద్ధరణను మరియు దాని WP-CLI ఆదేశాలను పనిచేసేలా ఉంచగలదు. మీరు అభ్యర్థిస్తే మాత్రమే జోడించబడే, తప్పనిసరిగా ఉపయోగించాల్సిన (must-use) ప్లగిన్‌ల ఫోల్డర్‌లోని చిన్న లోడర్‌తో ఇది దీన్ని చేస్తుంది."
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "వద్దు, ధన్యవాదాలు"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "బ్యాకప్‌లను నిర్వహించడానికి మీకు అనుమతి లేదు."
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups నిలిపివేయబడింది, కానీ must-use ప్లగిన్‌ల ఫోల్డర్‌లోని దాని లోడర్ పురోగతిలో ఉన్న ఏదైనా బ్యాకప్ లేదా పునరుద్ధరణను మరియు దాని WP-CLI ఆదేశాలను పనిచేసేలా ఉంచుతుంది."
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "ఇది నేపథ్యంలో రన్ కాకుండా ఆపండి"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "పునరుద్ధరణ ఈ సైట్ యొక్క ఫైల్‌లను మరియు డేటాబేస్‌ను భర్తీ చేస్తుందని నిర్ధారించడానికి పెట్టెను ఎంచుకోండి."
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "ముందుగా గమ్యస్థానాన్ని భద్రపరచండి."
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "కనెక్ట్ అయింది: ఒక టెస్ట్ ఫైల్ వ్రాయబడింది మరియు తీసివేయబడింది."
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "ముందుగా మీ Dropbox యాప్ యొక్క యాప్ కీని నమోదు చేయండి (ఫారమ్ పక్కన ఉన్న దశలను చూడండి)."
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "ఈ రకమైన నిల్వ సైన్ ఇన్ చేయదు."
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "సైన్-ఇన్ గడువు ముగిసింది. మళ్లీ కనెక్ట్ చేయండి నొక్కండి."
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox కనెక్ట్ చేయబడింది."
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "సెట్టింగ్‌లు భద్రపరచబడ్డాయి, కానీ బ్యాక్‌గ్రౌండ్ లోడర్ మార్చబడలేదు: %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "సెట్టింగ్‌లు భద్రపరచబడ్డాయి."
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "మరొక బ్యాకప్, పునరుద్ధరణ లేదా దిగుమతి ప్రక్రియ నడుస్తోంది. అది పూర్తయ్యే వరకు వేచి ఉండండి, లేదా దానిని రద్దు చేయండి."
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "అప్‌లోడ్ సరిగ్గా ప్రారంభం కాలేదు. మళ్లీ ప్రారంభించండి."
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "భాగం అందలేదు. మీ సర్వర్ అప్‌లోడ్ పరిమాణాలను పరిమితం చేయవచ్చు; మళ్ళీ ప్రయత్నించండి."
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "దిగుమతి ఈ సైట్ యొక్క కంటెంట్ మరియు డేటాబేస్‌ను భర్తీ చేస్తుందని నిర్ధారించడానికి పెట్టెను ఎంచుకోండి."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "దిగుమతి చేయడానికి ఒక ఆర్కైవ్‌ను ఎంచుకోండి: దాన్ని అప్‌లోడ్ చేయండి, లింక్‌ను అతికించండి లేదా దిగుమతి ఫోల్డర్ నుండి ఒకదాన్ని ఎంచుకోండి."
 
@@ -858,7 +996,7 @@ msgstr "%1$s — %2$d సెకన్లలో మళ్లీ ప్రయత�
 msgid "Cancelled."
 msgstr "రద్దు చేయబడింది."
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "బ్యాకప్‌లు ఒక నిల్వ గమ్యస్థానానికి వెళ్తాయి. వేరొకదాన్ని ఉపయోగించడానికి మీ వద్ద ఉన్నదాన్ని సవరించండి లేదా తీసివేయండి."
 

@@ -23,6 +23,9 @@ defined( 'ABSPATH' ) || exit;
  *     wp zinn-backups list
  *     wp zinn-backups restore zinn-backups/example-com-1a2b3c/20261008-101500-0a1b2c3d --yes
  *     wp zinn-backups import ./backup_2026-10-01-1200_Site_abc-db.gz ./backup_2026-10-01-1200_Site_abc-uploads.zip --yes
+ *     printf '%s' "$R2_SECRET" | wp zinn-backups key set secret-key
+ *     wp zinn-backups key get
+ *     wp zinn-backups loader status
  */
 final class Cli {
 
@@ -306,6 +309,178 @@ final class Cli {
 					array( 'id', 'type', 'label', 'ready' )
 				);
 		}
+	}
+
+	/**
+	 * Set, show or remove the keys that connect a storage destination.
+	 *
+	 * The value of `set` is read from STDIN (a hidden prompt on a terminal) or from the
+	 * environment variable named by --from-env — never from the command line, where it would stay
+	 * in the shell history. It is checked before it is saved. `get` never prints a key in full:
+	 * only its last four characters (none at all for a short key).
+	 *
+	 * Keys: s3 — access-key, secret-key. dropbox — app-key, refresh-token. gdrive — client-id,
+	 * client-secret, refresh-token.
+	 *
+	 * ## OPTIONS
+	 *
+	 * <action>
+	 * : set, get or remove.
+	 *
+	 * [<name>]
+	 * : Key name (required for set and remove; get shows every key when it is left out).
+	 *
+	 * [<value>...]
+	 * : Refused. A key is never taken as an argument (see above); listed only so the refusal
+	 * does not repeat the value back.
+	 *
+	 * [--id=<id>]
+	 * : Destination id. May be left out when the site has one destination.
+	 *
+	 * [--from-env=<variable>]
+	 * : set: read the value from this environment variable instead of STDIN.
+	 *
+	 * [--format=<format>]
+	 * : get: table or json.
+	 * ---
+	 * default: table
+	 * ---
+	 *
+	 * [--yes]
+	 * : remove: do not ask for confirmation.
+	 *
+	 * ## EXAMPLES
+	 *
+	 *     printf '%s' "$R2_SECRET" | wp zinn-backups key set secret-key
+	 *     wp zinn-backups key set access-key --from-env=R2_ACCESS_KEY --id=d1a2b3c4d5e6
+	 *     wp zinn-backups key get
+	 *     wp zinn-backups key remove refresh-token --yes
+	 *
+	 * @param array<int,string>    $args  Positional.
+	 * @param array<string,string> $assoc Options.
+	 * @return void
+	 */
+	public function key( array $args, array $assoc ): void {
+		$action = (string) ( $args[0] ?? '' );
+		$name   = (string) ( $args[1] ?? '' );
+		if ( ! in_array( $action, array( 'set', 'get', 'remove' ), true ) ) {
+			\WP_CLI::error( __( 'Use: wp zinn-backups key set|get|remove [<name>]', 'zinn-backups' ) );
+		}
+		if ( isset( $args[2] ) ) {
+			// A value typed as an argument is already in the shell history: refuse it, say why.
+			\WP_CLI::error( __( 'Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env.', 'zinn-backups' ) );
+		}
+		try {
+			$record = Connection_Keys::destination( (string) ( $assoc['id'] ?? '' ) );
+			$type   = (string) $record['type'];
+			switch ( $action ) {
+				case 'get':
+					$rows = Connection_Keys::shown( $record );
+					if ( '' !== $name ) {
+						Connection_Keys::definition( $type, $name );
+						$rows = array_values( array_filter( $rows, static fn( array $row ): bool => $row['key'] === $name ) );
+					}
+					\WP_CLI\Utils\format_items( 'json' === ( $assoc['format'] ?? 'table' ) ? 'json' : 'table', $rows, array( 'key', 'kind', 'value' ) );
+					return;
+				case 'set':
+					Connection_Keys::definition( $type, $name );
+					$masked = Connection_Keys::set( $record, $name, $this->read_key( $assoc, $name ) );
+					Catalog::flush();
+					/* translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden. */
+					\WP_CLI::success( sprintf( __( 'Saved %1$s for destination %2$s: %3$s', 'zinn-backups' ), $name, (string) $record['id'], $masked ) );
+					return;
+				default:
+					Connection_Keys::definition( $type, $name );
+					if ( ! isset( $assoc['yes'] ) ) {
+						/* translators: 1: key name, 2: destination id. */
+						\WP_CLI::confirm( sprintf( __( 'Remove %1$s from destination %2$s? Backups to it stop until a new one is set.', 'zinn-backups' ), $name, (string) $record['id'] ) );
+					}
+					Connection_Keys::remove( $record, $name );
+					Catalog::flush();
+					/* translators: 1: key name, 2: destination id. */
+					\WP_CLI::success( sprintf( __( 'Removed %1$s from destination %2$s.', 'zinn-backups' ), $name, (string) $record['id'] ) );
+			}
+		} catch ( \InvalidArgumentException $e ) {
+			\WP_CLI::error( $e->getMessage() );
+		}
+	}
+
+	/**
+	 * Show, install or remove the must-use loader that keeps backups running when the plugin is off.
+	 *
+	 * ## OPTIONS
+	 *
+	 * <action>
+	 * : status, install or remove. install and remove also switch the "Keep running" setting.
+	 *
+	 * ## EXAMPLES
+	 *
+	 *     wp zinn-backups loader status
+	 *     wp zinn-backups loader remove
+	 *
+	 * @param array<int,string> $args Positional.
+	 * @return void
+	 */
+	public function loader( array $args ): void {
+		switch ( $args[0] ?? 'status' ) {
+			case 'install':
+			case 'remove':
+				Settings::set_keep_running( 'install' === $args[0] );
+				$result = Mu_Loader::sync();
+				if ( true !== $result ) {
+					\WP_CLI::error( $result );
+				}
+				\WP_CLI::success( 'install' === $args[0] ? __( 'The loader is in place.', 'zinn-backups' ) : __( 'The loader is removed.', 'zinn-backups' ) );
+				return;
+			case 'status':
+				$rows = array(
+					array(
+						'field' => 'setting',
+						'value' => Mu_Loader::wanted() ? 'on' : 'off',
+					),
+					array(
+						'field' => 'installed',
+						'value' => Mu_Loader::installed() ? 'yes' : 'no',
+					),
+					array(
+						'field' => 'path',
+						'value' => Mu_Loader::path(),
+					),
+					array(
+						'field' => 'loaded_by',
+						'value' => Mu_Loader::loaded_by_mu() ? 'mu-loader' : 'plugin',
+					),
+					array(
+						'field' => 'blocked',
+						'value' => Mu_Loader::blocked_reason(),
+					),
+				);
+				\WP_CLI\Utils\format_items( 'table', $rows, array( 'field', 'value' ) );
+				return;
+			default:
+				\WP_CLI::error( __( 'Use: wp zinn-backups loader status|install|remove', 'zinn-backups' ) );
+		}
+	}
+
+	/**
+	 * Read a key for `key set`: an environment variable, a hidden prompt, or STDIN.
+	 *
+	 * @param array<string,string> $assoc Options.
+	 * @param string               $name  Key name (for the prompt).
+	 * @return string
+	 */
+	private function read_key( array $assoc, string $name ): string {
+		if ( isset( $assoc['from-env'] ) ) {
+			$value = getenv( (string) $assoc['from-env'] );
+			if ( false === $value || '' === $value ) {
+				\WP_CLI::error( __( 'That environment variable is not set or is empty.', 'zinn-backups' ) );
+			}
+			return (string) $value;
+		}
+		if ( function_exists( 'stream_isatty' ) && stream_isatty( STDIN ) ) {
+			return (string) \cli\prompt( $name, false, ': ', true );
+		}
+		return (string) stream_get_contents( STDIN, 4096 );
 	}
 
 	/**

@@ -451,7 +451,20 @@ msgstr "Әрқашан шығарылып тасталады: кэштер, жа
 msgid "Size of each part (MB)"
 msgstr "Әрбір бөліктің өлшемі (МБ)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "Плагин өшірілген кезде сақтық көшірме жасауды жалғастыру"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "Қоспасаңыз, өшірулі болады. Егер бұл плагин өшірулі болса немесе қалпына келтірілген дерекқор оны белсенді ретінде көрсетпесе де, сақтық көшірмелердің, қалпына келтірулердің және WP-CLI пәрмендерінің орындалуын жалғастырады. Бұл must-use плагиндер қалтасына шағын жүктегішті орналастырады."
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "Жүктеуіш орнында емес. Оны қалпына келтіру үшін баптауларды сақтаңыз."
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "Баптауларды сақтау"
 
@@ -551,6 +564,81 @@ msgstr "Бұл сақтау орны бұл сайтта енді сақталм
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "Кейінгі өсімді сақтық көшірмелер осыған негізделген. Алдымен соларды жойыңыз."
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "Қолданылуы: wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "Кілтті командалық жолға қоймаңыз. Оны STDIN арқылы өткізіңіз немесе --from-env арқылы орта айнымалысының атын көрсетіңіз."
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "%2$s тағайындалған орны үшін %1$s сақталды: %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "%1$s нысаны %2$s тағайындалған орнынан жойылсын ба? Жаңасы орнатылғанша оған резервтік көшіру тоқтатылады."
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "%1$s %2$s тағайындалған орнынан жойылды."
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "Жүктеуіш орнында тұр."
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "Жүктеуіш жойылды."
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "Қолданылуы: wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "Бұл орта айнымалысы орнатылмаған немесе бос."
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "Бұл тағайындалған орында «%1$s» атты кілт жоқ. Оның кілттері: %2$s."
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "Кілт көрсетілмеді. Оны STDIN арқылы жіберіңіз немесе --from-env көмегімен орта айнымалысын атаңыз."
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "Бұл жарамды %s сияқты емес (қате ұзындық немесе мұндай кілтте ешқашан болмайтын таңбалар бар). Ештеңе сақталмады."
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "Мұндай идентификаторы бар тағайындау орны жоқ. Қараңыз: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "Әзірге сақтау орны жоқ. Алдымен біреуін қосыңыз: wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "Бірнеше тағайындалған орын бар: --id арқылы біреуін таңдаңыз. Қараңыз: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(орнатылмаған)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "Бұл файл шифрланған Zinn® Backups файлы емес."
@@ -623,61 +711,111 @@ msgstr "%1$s келесі HTTP %2$d кодымен жауап берді: %3$s"
 msgid "no details given"
 msgstr "Мәліметтер берілмеген"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "Көпсайтты желіде жүктеуіш Zinn® Backups бүкіл желі бойынша іске қосылғанда ғана пайдаланылады, себебі міндетті плагин әрбір сайтта жұмыс істейді."
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "Міндетті пайдаланылатын плагиндер (must-use plugins) бумасында zinn-backups-loader.php атты басқа файл бұрыннан бар; ол өзгеріссіз қалдырылды."
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "Міндетті пайдаланылатын плагиндер қалтасын жасау мүмкін болмады."
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "Міндетті түрде қолданылатын плагиндер (must-use plugins) бумасына жазу мүмкін емес."
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "Жүктегішті орнына қою мүмкін болмады."
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "Жүктеуішті жою мүмкін болмады."
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "Zinn® Backups плагин өшірулі болса да, орындалып жатқан сақтық көшірмені немесе қалпына келтіруді, сондай-ақ өзінің WP-CLI пәрмендерін жұмыс күйінде сақтай алады. Бұл must-use plugins қалтасындағы шағын жүктегіш арқылы жасалады және ол тек сұрауыңыз бойынша қосылады."
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "Жоқ, рақмет"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "Сізде сақтық көшірмелерді басқаруға рұқсат жоқ."
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups өшірулі, бірақ must-use плагиндер қалтасындағы оның жүктеуіші орындалып жатқан кез келген сақтық көшірме жасау немесе қалпына келтіру процесін және оның WP-CLI пәрмендерін жұмыс күйінде сақтайды."
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "Оның фонда жұмыс істеуін тоқтату"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Қалпына келтіру осы сайттың файлдары мен дерекқорын ауыстыратынын растау үшін құсбелгіні қойыңыз."
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "Алдымен мақсатты орынды сақтаңыз."
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "Қосылды: сынақ файлы жазылып, жойылды."
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Алдымен Dropbox қолданбаңыздың қолданба кілтін енгізіңіз (пішіннің жанындағы қадамдарды қараңыз)."
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "Бұл сақтау түрі жүйеге кірмейді."
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "Кіру мерзімі аяқталды. Қайта қосылу түймесін басыңыз."
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox қосылған."
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "Параметрлер сақталды, бірақ фондық жүктеуіш өзгертілмеді: %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "Баптаулар сақталды."
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Басқа сақтық көшірме жасау, қалпына келтіру немесе импорттау орындалып жатыр. Оның аяқталуын күтіңіз немесе одан бас тартыңыз."
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "Жүктеп салу дұрыс басталмады. Қайта бастаңыз."
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Бөлік жетпеді. Серверіңіз жүктеу өлшемін шектеуі мүмкін; қайталап көріңіз."
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Импорт осы сайттың мазмұны мен дерекқорын ауыстыратынын растау үшін құсбелгіні қойыңыз."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Импорттау үшін архивті таңдаңыз: оны жүктеп салыңыз, сілтемені қойыңыз немесе импорт қалтасынан біреуін таңдаңыз."
 
@@ -858,7 +996,7 @@ msgstr "%1$s — %2$d секундтан кейін қайта әрекет жа
 msgid "Cancelled."
 msgstr "Бас тартылды."
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Резервтік көшірмелер бір сақтау орнына жіберіледі. Басқасын пайдалану үшін барын өңдеңіз немесе жойыңыз."
 

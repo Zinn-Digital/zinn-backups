@@ -452,7 +452,20 @@ msgstr "Увек изостављено: кеш меморије, приврем
 msgid "Size of each part (MB)"
 msgstr "Величина сваког дела (MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "Наставите са прављењем резервних копија када је прикључак искључен"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "Искључено осим ако га не укључите. Омогућава несметан рад резервних копија, враћања података и WP-CLI наредби ако се овај прикључак искључи или ако га враћена база података више не наводи као активног. Ово смешта мали учитавач у фасциклу обавезних прикључака (must-use plugins)."
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "Учитавач није на свом месту. Сачувајте подешавања да бисте га вратили."
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "Сачувај подешавања"
 
@@ -553,6 +566,81 @@ msgstr "То одредиште за складиштење више није с
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "Касније инкременталне резервне копије су изграђене на овој. Прво обришите њих."
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "Употреба: wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "Не уносите кључ у командну линију. Проследите га преко STDIN-а или наведите променљиву окружења помоћу --from-env."
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "Сачувано %1$s за одредиште %2$s: %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "Уклонити %1$s са одредишта %2$s? Прављење резервних копија на њега се прекида док се не постави ново."
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "%1$s је уклоњено из одредишта %2$s."
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "Учитавач је на месту."
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "Учитавач је уклоњен."
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "Употреба: wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "Та променљива окружења није постављена или је празна."
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "Ово одредиште нема кључ под називом „%1$s“. Његови кључеви: %2$s."
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "Није наведен ниједан кључ. Проследите га преко STDIN-а или наведите променљиву окружења помоћу --from-env."
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "То не изгледа као ваљан %s (погрешна дужина или знакови које кључ ове врсте никада не садржи). Ништа није сачувано."
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "Нема одредишта са тим ID-јем. Погледајте: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "Још увек нема одредишта за складиштење. Прво додајте једно: wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "Постоји више од једног одредишта: изаберите једно помоћу --id. Погледајте: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(није постављено)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "Ова датотека није шифрована Zinn® Backups датотека."
@@ -625,61 +713,111 @@ msgstr "%1$s је одговорио са HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "Детаљи нису наведени"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "На мрежи сајтова, учитавач се користи само када је Zinn® Backups активиран на нивоу мреже, јер се обавезни додатак покреће на сваком сајту."
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "Друга датотека под називом zinn-backups-loader.php се већ налази у фасцикли обавезних додатака (must-use plugins); остављена је нетакнута."
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "Фасцикла неопходних прикључака се не може направити."
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "Фасцикла неопходних прикључака (must-use) нема дозволу за уписивање."
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "Учитавач није могао бити постављен на место."
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "Учитавач није могао бити уклоњен."
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "Zinn® Backups може одржати прављење резервне копије или враћање података у току, као и своје WP-CLI наредбе, у раду чак и ако је додатак искључен. То чини помоћу малог учитавача у фасцикли обавезних додатака (must-use plugins), који се додаје само ако ви то затражите."
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "Не, хвала"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "Није вам дозвољено да управљате резервним копијама."
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups је искључен, али његов учитавалац у фасцикли обавезних додатака (must-use) одржава у раду свако прављење резервне копије или враћање које је у току, као и његове WP-CLI наредбе."
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "Зауставите рад у позадини"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Означите поље да потврдите да враћање резервне копије замењује датотеке и базу података овог веб-места."
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "Прво сачувајте одредиште."
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "Повезано: тест датотека је уписана и уклоњена."
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Прво унесите кључ апликације ваше Dropbox апликације (погледајте кораке поред обрасца)."
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "Ова врста складишта се не пријављује."
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "Пријављивање је истекло. Притисните Повежи поново."
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox је повезан."
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "Подешавања су сачувана, али учитавач у позадини није промењен: %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "Подешавања су сачувана."
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "У току је друго прављење резервне копије, враћање или увоз. Сачекајте да се заврши или га откажите."
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "Отпремање није почело правилно. Почните поново."
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Део није стигао. Ваш сервер можда ограничава величину отпремања; покушајте поново."
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Означите поље да потврдите да увоз замењује садржај и базу података овог веб-места."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Изаберите архиву за увоз: отпремите је, налепите везу или изаберите неку из фасцикле за увоз."
 
@@ -862,7 +1000,7 @@ msgstr "%1$s — поновни покушај за %2$d секунди."
 msgid "Cancelled."
 msgstr "Отказано."
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Резервне копије иду на једно одредиште за складиштење. Уредите или уклоните постојеће да бисте користили друго."
 

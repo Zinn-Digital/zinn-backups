@@ -1,6 +1,7 @@
 <?php
 /**
- * Uninstall: remove the settings, the job history, the work folder and the schedule.
+ * Uninstall: remove the settings, the job history, the work folder, the schedule and the
+ * must-use loader.
  *
  * ⛔ Backups in the customer's own storage are NOT touched: they belong to the customer and
  * are exactly what they may need after removing the plugin (a restore with a fresh install).
@@ -20,6 +21,11 @@ defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
 function zinn_backups_uninstall(): void {
 	global $wpdb;
 	wp_clear_scheduled_hook( 'zinn_backups_continue' );
+	// The must-use loader (only a file this plugin wrote: it carries the marker line).
+	$loader = ( defined( 'WPMU_PLUGIN_DIR' ) ? (string) WPMU_PLUGIN_DIR : WP_CONTENT_DIR . '/mu-plugins' ) . '/zinn-backups-loader.php';
+	if ( is_file( $loader ) && str_contains( (string) file_get_contents( $loader ), "\n * Marker: zinn-backups-mu-loader\n" ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- a local file.
+		wp_delete_file( $loader );
+	}
 	$work_name = (string) get_option( 'zinn_backups_work_dir', '' );
 	if ( defined( 'AUTH_KEY' ) && defined( 'SECURE_AUTH_KEY' ) && strlen( (string) AUTH_KEY . (string) SECURE_AUTH_KEY ) > 40 ) {
 		$work_name = 'zinn-backups-' . substr( hash_hmac( 'sha256', 'zinn-backups-work', (string) AUTH_KEY . (string) SECURE_AUTH_KEY ), 0, 32 );

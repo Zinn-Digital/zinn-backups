@@ -36,13 +36,24 @@ final class Plugin {
 	 */
 	public static function boot(): void {
 		Runner::register();
+		Mu_Loader::register();
 		if ( defined( 'WP_CLI' ) && WP_CLI ) {
 			\WP_CLI::add_command( 'zinn-backups', Cli::class );
 		}
 		if ( ! is_admin() ) {
 			return;
 		}
+		if ( Mu_Loader::loaded_by_mu() ) {
+			// Switched off, kept running by the loader: background work and WP-CLI only, plus one
+			// notice on the Plugins screen saying so, with the way to stop it.
+			add_action( 'admin_notices', array( self::class, 'loader_notice' ) );
+			add_action( 'admin_post_zinn_backups_loader_off', array( self::class, 'loader_off' ) );
+			return;
+		}
 		Admin::register();
+		add_action( 'admin_notices', array( self::class, 'loader_offer' ) );
+		add_action( 'admin_post_zinn_backups_loader_on', array( self::class, 'loader_on' ) );
+		add_action( 'admin_post_zinn_backups_loader_dismiss', array( self::class, 'loader_dismiss' ) );
 		// HOSTDISC — offered only on a site Zinn hosts, and never to a site already on Pro.
 		Pro_Discount::register(
 			self::PAGE,
@@ -72,11 +83,114 @@ final class Plugin {
 	}
 
 	/**
+	 * On activation: never write the must-use loader. It is opt-in (the "Keep backups running when
+	 * the plugin is switched off" setting, or the one-time offer notice): a plugin writes outside its
+	 * own folder only on the site owner's action. Activation only clears a stale loader of ours that
+	 * the setting no longer wants.
+	 *
+	 * @return void
+	 */
+	public static function activate(): void {
+		if ( ! Mu_Loader::wanted() ) {
+			Mu_Loader::remove();
+		}
+	}
+
+	/**
+	 * Offer the loader once (Plugins screen and this plugin's own page), as a one-click opt-in.
+	 * Not shown once taken, dismissed, or where the loader cannot be used.
+	 *
+	 * @return void
+	 */
+	public static function loader_offer(): void {
+		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+		if ( null === $screen || ! current_user_can( self::CAP ) ) {
+			return;
+		}
+		$ours = in_array( $screen->id, array( 'plugins', 'plugins-network' ), true ) || str_contains( (string) $screen->id, self::PAGE );
+		if ( ! $ours || Mu_Loader::wanted() || '' !== (string) get_option( Mu_Loader::OFFERED, '' ) || '' !== Mu_Loader::blocked_reason() ) {
+			return;
+		}
+		$on   = wp_nonce_url( admin_url( 'admin-post.php?action=zinn_backups_loader_on' ), 'zinn_backups_loader_on' );
+		$skip = wp_nonce_url( admin_url( 'admin-post.php?action=zinn_backups_loader_dismiss' ), 'zinn_backups_loader_dismiss' );
+		echo '<div class="notice notice-info"><p>' . esc_html__( 'Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask.', 'zinn-backups' ) . '</p><p><a class="button button-primary" href="' . esc_url( $on ) . '">' . esc_html__( 'Keep backups running when the plugin is switched off', 'zinn-backups' ) . '</a> <a class="button" href="' . esc_url( $skip ) . '">' . esc_html__( 'No thanks', 'zinn-backups' ) . '</a></p></div>';
+	}
+
+	/**
+	 * The one-click opt-in from the offer notice: turn the setting on and put the loader in place.
+	 *
+	 * @return void
+	 */
+	public static function loader_on(): void {
+		if ( ! current_user_can( self::CAP ) ) {
+			wp_die( esc_html__( 'You are not allowed to manage backups.', 'zinn-backups' ), 403 );
+		}
+		check_admin_referer( 'zinn_backups_loader_on' );
+		update_option( Mu_Loader::OFFERED, 'taken', false );
+		Settings::set_keep_running( true );
+		Mu_Loader::sync();
+		wp_safe_redirect( wp_get_referer() ? wp_get_referer() : admin_url( 'admin.php?page=' . self::PAGE ) );
+		exit;
+	}
+
+	/**
+	 * Dismiss the offer for good (the setting stays available on the Settings tab).
+	 *
+	 * @return void
+	 */
+	public static function loader_dismiss(): void {
+		if ( ! current_user_can( self::CAP ) ) {
+			wp_die( esc_html__( 'You are not allowed to manage backups.', 'zinn-backups' ), 403 );
+		}
+		check_admin_referer( 'zinn_backups_loader_dismiss' );
+		update_option( Mu_Loader::OFFERED, 'dismissed', false );
+		wp_safe_redirect( wp_get_referer() ? wp_get_referer() : admin_url( 'plugins.php' ) );
+		exit;
+	}
+
+	/**
+	 * On the Plugins screen, while switched off but kept running by the loader: say so.
+	 *
+	 * @return void
+	 */
+	public static function loader_notice(): void {
+		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+		if ( null === $screen || ! in_array( $screen->id, array( 'plugins', 'plugins-network' ), true ) || ! current_user_can( self::CAP ) ) {
+			return;
+		}
+		$url = wp_nonce_url( admin_url( 'admin-post.php?action=zinn_backups_loader_off' ), 'zinn_backups_loader_off' );
+		echo '<div class="notice notice-info"><p>' . esc_html__( 'Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working.', 'zinn-backups' ) . ' <a href="' . esc_url( $url ) . '">' . esc_html__( 'Stop it running in the background', 'zinn-backups' ) . '</a></p></div>';
+	}
+
+	/**
+	 * Remove the loader (from the Plugins-screen notice) and turn the setting off.
+	 *
+	 * @return void
+	 */
+	public static function loader_off(): void {
+		if ( ! current_user_can( self::CAP ) ) {
+			wp_die( esc_html__( 'You are not allowed to manage backups.', 'zinn-backups' ), 403 );
+		}
+		check_admin_referer( 'zinn_backups_loader_off' );
+		Settings::set_keep_running( false );
+		Mu_Loader::sync();
+		wp_safe_redirect( admin_url( 'plugins.php' ) );
+		exit;
+	}
+
+	/**
 	 * On deactivation: stop any job and forget the background event. Settings stay.
+	 *
+	 * ⛔ Not while the must-use loader is in place: it exists so that a backup or restore carries
+	 * on with the plugin switched off (the owner switches it off for good from the notice it shows,
+	 * or the "Keep running" setting).
 	 *
 	 * @return void
 	 */
 	public static function deactivate(): void {
+		if ( Mu_Loader::installed() ) {
+			return;
+		}
 		try {
 			Runner::cancel();
 		} catch ( \Throwable $e ) {
@@ -400,14 +514,20 @@ final class Plugin {
 						'include_core' => '1' === self::post( 'include_core' ),
 						'leave_out'    => isset( $_POST['leave_out'] ) ? sanitize_textarea_field( wp_unslash( (string) $_POST['leave_out'] ) ) : '', // phpcs:ignore WordPress.Security.NonceVerification.Missing -- guard() ran.
 						'part_mb'      => (int) self::post( 'part_mb' ),
+						'keep_running' => '1' === self::post( 'keep_running' ),
 					)
 				);
+				$loader = Mu_Loader::sync();
 				/**
 				 * Fires when the settings form is saved, so Zinn® Backups Pro can save its own fields.
 				 *
 				 * @param array<string,mixed> $post The submitted form (unslashed, not sanitised).
 				 */
 				do_action( 'zinn_backups_save_settings', wp_unslash( $_POST ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- guard() ran; each listener sanitises its own fields.
+				if ( true !== $loader ) {
+					/* translators: %s: why the must-use loader could not be written or removed. */
+					return array( 'message' => sprintf( __( 'Settings saved, but the background loader was not changed: %s', 'zinn-backups' ), $loader ) );
+				}
 				return array( 'message' => __( 'Settings saved.', 'zinn-backups' ) );
 			}
 		);

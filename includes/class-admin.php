@@ -472,6 +472,14 @@ final class Admin {
 		echo '<p><label>' . esc_html__( 'Also leave out these folders or files (one per line, relative to the WordPress folder)', 'zinn-backups' ) . '<br><textarea name="leave_out" rows="5" class="large-text" dir="ltr">' . esc_textarea( $all['leave_out'] ) . '</textarea></label></p>';
 		echo '<p class="description">' . esc_html__( 'Always left out: caches, update scratch space, and other backup plugins’ own archive folders:', 'zinn-backups' ) . ' <code dir="ltr">' . esc_html( implode( ', ', Settings::DEFAULT_EXCLUDES ) ) . '</code></p>';
 		echo '<p><label>' . esc_html__( 'Size of each part (MB)', 'zinn-backups' ) . ' <input type="number" name="part_mb" min="10" max="2000" value="' . esc_attr( (string) $all['part_mb'] ) . '"></label></p>';
+		echo '<p><label><input type="checkbox" name="keep_running" value="1"' . checked( $all['keep_running'], true, false ) . '> ' . esc_html__( 'Keep backups running when the plugin is switched off', 'zinn-backups' ) . '</label></p>';
+		echo '<p class="description">' . esc_html__( 'Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder.', 'zinn-backups' ) . '</p>';
+		$blocked = Mu_Loader::blocked_reason();
+		if ( '' !== $blocked ) {
+			echo '<p class="description">' . esc_html( $blocked ) . '</p>';
+		} elseif ( $all['keep_running'] && ! Mu_Loader::installed() ) {
+			echo '<p class="description">' . esc_html__( 'The loader is not in place. Save the settings to put it back.', 'zinn-backups' ) . '</p>';
+		}
 		/**
 		 * Prints extra settings fields (Zinn® Backups Pro adds schedules, retention and encryption).
 		 */

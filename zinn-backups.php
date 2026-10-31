@@ -3,7 +3,7 @@
  * Plugin Name:       Zinn® Backups
  * Plugin URI:        https://zinndigital.com/wordpress-plugins/zinn-backups
  * Description:       Backs up your WordPress files and database to your own storage — Dropbox, Google Drive, Cloudflare R2, Amazon S3 or any S3-compatible bucket — restores them in one go, and imports backups made by other backup and migration plugins.
- * Version:           1.0.6
+ * Version:           1.0.7
  * Requires at least: 6.6
  * Requires PHP:      8.2
  * Author:            Neil Lock — CEO, Zinn Digital® Ltd
@@ -31,7 +31,13 @@ declare( strict_types=1 );
 
 defined( 'ABSPATH' ) || exit;
 
-const ZINN_BACKUPS_VERSION = '1.0.6';
+// ⛔ Loaded already — by the must-use loader (mu-loader/zinn-backups-loader.php) while the plugin
+// was switched off, and now included again by WordPress's activation check. One copy only.
+if ( defined( 'ZINN_BACKUPS_VERSION' ) ) {
+	return;
+}
+
+const ZINN_BACKUPS_VERSION = '1.0.7';
 const ZINN_BACKUPS_FILE    = __FILE__;
 
 require_once __DIR__ . '/includes/class-autoloader.php';
@@ -47,7 +53,10 @@ add_action(
 	}
 );
 
-add_action( 'plugins_loaded', array( 'Zinn_Backups_Promo', 'register' ) );
+if ( ! defined( 'ZINN_BACKUPS_LOADED_BY_MU' ) ) {
+	// Switched off but kept running by the loader: no promotions from a plugin the owner switched off.
+	add_action( 'plugins_loaded', array( 'Zinn_Backups_Promo', 'register' ) );
+}
 add_action( 'plugins_loaded', array( \ZinnDigital\Backups\Plugin::class, 'boot' ) );
 add_action(
 	'plugins_loaded',
@@ -56,4 +65,5 @@ add_action(
 	}
 );
 
+register_activation_hook( __FILE__, array( \ZinnDigital\Backups\Plugin::class, 'activate' ) );
 register_deactivation_hook( __FILE__, array( \ZinnDigital\Backups\Plugin::class, 'deactivate' ) );

@@ -452,7 +452,20 @@ msgstr "Întotdeauna excluse: fișierele cache, spațiul temporar pentru actuali
 msgid "Size of each part (MB)"
 msgstr "Dimensiunea fiecărei părți (MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "Continuă rularea copiilor de siguranță când modulul este dezactivat"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "Dezactivat, cu excepția cazului în care îl activezi. Menține funcționale copiile de rezervă, restaurările și comenzile WP-CLI dacă acest modul este dezactivat sau dacă o bază de date restaurată nu îl mai indică drept activ. Aceasta plasează un mic încărcător în dosarul modulelor obligatorii (must-use)."
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "Încărcătorul nu este la locul lui. Salvează setările pentru a-l pune înapoi."
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "Salvează setările"
 
@@ -553,6 +566,81 @@ msgstr "Acea destinație de stocare nu mai este salvată pe acest site."
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "Copiile de rezervă incrementale ulterioare sunt bazate pe aceasta. Șterge-le mai întâi pe acelea."
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "Utilizare: wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "Nu introduce o cheie în linia de comandă. Trimite-o prin STDIN sau specifică o variabilă de mediu cu --from-env."
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "S-a salvat %1$s pentru destinația %2$s: %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "Elimini %1$s din destinația %2$s? Copiile de rezervă către aceasta se opresc până când setezi una nouă."
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "%1$s a fost eliminat din destinația %2$s."
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "Încărcătorul este la locul lui."
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "Încărcătorul a fost eliminat."
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "Utilizare: wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "Acea variabilă de mediu nu este setată sau este goală."
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "Această destinație nu are nicio cheie numită „%1$s”. Cheile sale: %2$s."
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "Nu a fost furnizată nicio cheie. Trimite-o prin STDIN sau denumește o variabilă de mediu cu --from-env."
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "Acesta nu pare a fi un %s valid (lungime greșită sau caractere pe care o cheie de acest tip nu le conține niciodată). Nu s-a salvat nimic."
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "Nicio destinație cu acel ID. Vezi: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "Nu există încă o destinație de stocare. Adaugă mai întâi una: wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "Există mai mult de o destinație: alege una cu --id. Vezi: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(nesetat)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "Acest fișier nu este un fișier Zinn® Backups criptat."
@@ -625,61 +713,111 @@ msgstr "%1$s a răspuns cu HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "Nu au fost furnizate detalii"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "Într-o rețea multisite, încărcătorul este utilizat numai atunci când Zinn® Backups este activat pe rețea, deoarece un modul must-use rulează pe fiecare site."
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "Un alt fișier numit zinn-backups-loader.php există deja în dosarul de module obligatorii (must-use plugins); a fost lăsat neatins."
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "Dosarul pentru module obligatorii nu a putut fi creat."
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "Dosarul pentru module obligatorii (must-use) nu poate fi scris."
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "Încărcătorul nu a putut fi pus la punct."
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "Încărcătorul nu a putut fi eliminat."
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "Zinn® Backups poate menține o copie de rezervă sau o restaurare în curs de desfășurare, precum și comenzile sale WP-CLI, funcționând chiar dacă modulul este dezactivat. Face acest lucru cu un mic încărcător în dosarul de module must-use, adăugat numai dacă ceri tu."
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "Nu, mulțumesc"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "Nu ai permisiunea de a gestiona copiile de rezervă."
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups este dezactivat, dar încărcătorul său din dosarul de module must-use menține în funcțiune orice copie de rezervă sau restaurare în curs, precum și comenzile sale WP-CLI."
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "Oprește rularea în fundal"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Bifează caseta pentru a confirma că restaurarea înlocuiește fișierele și baza de date ale acestui site."
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "Salvează mai întâi destinația."
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "Conectat: un fișier de test a fost scris și șters."
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Introdu mai întâi cheia aplicației tale Dropbox (vezi pașii de lângă formular)."
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "Acest tip de stocare nu se conectează."
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "Autentificarea a expirat. Apasă din nou Conectare."
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox este conectat."
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "Setările au fost salvate, dar încărcătorul de fundal nu a fost modificat: %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "Setări salvate."
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "O altă copie de rezervă, restaurare sau importare este în curs de desfășurare. Așteaptă să se finalizeze sau anuleaz-o."
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "Încărcarea nu a început corect. Începe din nou."
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Fragmentul nu a sosit. Este posibil ca serverul tău să limiteze dimensiunile de încărcare; încearcă din nou."
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Bifează căsuța pentru a confirma că importul înlocuiește conținutul și baza de date ale acestui site."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Alege o arhivă de importat: încarc-o, lipește un link sau alege una din dosarul de import."
 
@@ -862,7 +1000,7 @@ msgstr "%1$s — se reîncearcă în %2$d secunde."
 msgid "Cancelled."
 msgstr "Anulat."
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Copiile de rezervă merg la o singură destinație de stocare. Editează-o sau elimin-o pe cea pe care o ai pentru a folosi una diferită."
 

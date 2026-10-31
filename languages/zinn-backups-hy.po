@@ -451,7 +451,20 @@ msgstr "Միշտ բացառված են՝ քեշերը, թարմացման ժամ
 msgid "Size of each part (MB)"
 msgstr "Յուրաքանչյուր մասի չափը (ՄԲ)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "Շարունակել կրկնօրինակումների կատարումը, երբ փլագինն անջատված է"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "Անջատված է, քանի դեռ չեք միացրել այն: Ապահովում է պահուստային պատճենների, վերականգնումների և WP-CLI հրամանների անխափան աշխատանքը, եթե այս փլագինն անջատված է, կամ եթե վերականգնված տվյալների բազան այն այլևս չի նշում որպես ակտիվ: Սա տեղադրում է փոքր բեռնիչ must-use plugins պանակում:"
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "Բեռնիչն իր տեղում չէ: Պահպանեք կարգավորումները՝ այն վերականգնելու համար:"
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "Պահպանել կարգավորումները"
 
@@ -551,6 +564,81 @@ msgstr "Պահպանման այդ վայրն այլևս պահպանված չէ 
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "Հետագա աճող պահուստային պատճենները հիմնված են սրա վրա: Նախ ջնջեք դրանք:"
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "Կիրառություն՝ wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "Մի տեղադրեք բանալին հրամանի տողում: Փոխանցեք այն STDIN-ի միջոցով կամ նշեք միջավայրի փոփոխական --from-env-ով:"
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "Պահպանվել է %1$s-ը %2$s նպատակակետի համար՝ %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "Հեռացնե՞լ %1$s-ը %2$s նպատակակետից: Դեպի այն պահուստավորումները կդադարեն, մինչև նորը չսահմանվի:"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "%1$s-ը հեռացվել է %2$s նպատակակետից:"
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "Բեռնիչը տեղում է:"
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "Բեռնիչը հեռացված է:"
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "Կիրառում՝ wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "Այդ միջավայրի փոփոխականը սահմանված չէ կամ դատարկ է:"
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "Այս նպատակակետը չունի «%1$s» անունով բանալի: Դրա բանալիները՝ %2$s:"
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "Ոչ մի բանալի չի տրամադրվել: Փոխանցեք այն STDIN-ի միջոցով կամ նշեք միջավայրի փոփոխական --from-env-ով:"
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "Սա նման չէ վավեր %s-ի (սխալ երկարություն կամ նիշեր, որոնք այս տեսակի բանալին երբեք չի պարունակում): Ոչինչ չի պահպանվել:"
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "Այդ նույնացուցիչով նպատակակետ չկա: Տեսեք՝ wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "Դեռևս պահպանման վայր չկա: Նախ ավելացրեք մեկը՝ wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "Գոյություն ունի մեկից ավելի նպատակակետ․ ընտրեք մեկը --id-ի միջոցով։ Տե՛ս․ wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(սահմանված չէ)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "Այս ֆայլը կոդավորված Zinn® Backups ֆայլ չէ:"
@@ -623,61 +711,111 @@ msgstr "%1$s-ը պատասխանել է HTTP %2$d-ով՝ %3$s"
 msgid "no details given"
 msgstr "Մանրամասներ նշված չեն"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "Բազմակայք ցանցում բեռնիչն օգտագործվում է միայն այն դեպքում, երբ Zinn® Backups-ն ակտիվացված է ամբողջ ցանցի համար, քանի որ պարտադիր օգտագործվող փլագինն աշխատում է յուրաքանչյուր կայքում։"
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "zinn-backups-loader.php անունով մեկ այլ ֆայլ արդեն գտնվում է պարտադիր փլագինների (must-use plugins) պանակում․ այն մնացել է անփոփոխ։"
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "Չհաջողվեց ստեղծել պարտադիր օգտագործվող փլագինների թղթապանակը։"
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "Անհրաժեշտ փլագինների (must-use plugins) թղթապանակը գրառելի չէ:"
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "Բեռնիչը չհաջողվեց տեղադրել իր տեղում։"
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "Բեռնիչը չհաջողվեց հեռացնել:"
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "Zinn® Backups-ը կարող է պահպանել ընթացիկ պահուստավորումը կամ վերականգնումը, ինչպես նաև իր WP-CLI հրամանների աշխատանքը, նույնիսկ եթե փլագինն անջատված է: Դա կատարվում է must-use plugins թղթապանակում գտնվող փոքր բեռնիչի միջոցով, որն ավելացվում է միայն ձեր ցանկությամբ:"
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "Ոչ, շնորհակալություն"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "Ձեզ չի թույլատրվում կառավարել պահուստային պատճենները:"
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups-ն անջատված է, սակայն must-use փլագինների պանակում գտնվող դրա բեռնիչը շարունակում է ապահովել ընթացքի մեջ գտնվող ցանկացած պահուստավորման կամ վերականգնման, ինչպես նաև դրա WP-CLI հրամանների աշխատանքը:"
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "Դադարեցրեք դրա աշխատանքը հետին պլանում"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Նշեք վանդակը՝ հաստատելու համար, որ վերականգնումը փոխարինում է այս կայքի ֆայլերը և տվյալների բազան։"
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "Սկզբում պահպանեք նպատակակետը:"
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "Միացված է. թեստային ֆայլը գրվել և հեռացվել է:"
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Նախ մուտքագրեք ձեր Dropbox հավելվածի բանալին (տեսեք ձևաթղթի կողքի քայլերը)։"
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "Պահեստավորման այս տեսակը չի մուտքագրվում համակարգ:"
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "Մուտք գործելու ժամկետը լրացել է: Կրկին սեղմեք Միանալ:"
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox-ը միացված է:"
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "Կարգավորումները պահպանվեցին, սակայն ֆոնային բեռնիչը չփոխվեց․ %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "Կարգավորումները պահպանված են:"
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Մեկ այլ պահուստավորում, վերականգնում կամ ներմուծում ընթացքի մեջ է։ Սպասեք, մինչև այն ավարտվի, կամ չեղարկեք այն։"
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "Վերբեռնումը ճիշտ չի սկսվել: Սկսեք նորից:"
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Հատվածը չի հասել: Ձեր սերվերը կարող է սահմանափակել վերբեռնման չափերը, նորից փորձեք:"
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Նշեք վանդակը՝ հաստատելու համար, որ ներմուծումը փոխարինում է այս կայքի բովանդակությունը և տվյալների բազան։"
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Ընտրեք ներմուծման ենթակա արխիվը՝ վերբեռնեք այն, տեղադրեք հղում կամ ընտրեք որևէ մեկը ներմուծման թղթապանակից։"
 
@@ -858,7 +996,7 @@ msgstr "%1$s — կրկին փորձ %2$d վայրկյանից։"
 msgid "Cancelled."
 msgstr "Չեղարկված է:"
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Պահուստային պատճենները գնում են դեպի պահպանման մեկ վայր: Խմբագրեք կամ հեռացրեք ունեցածը՝ այլ վայր օգտագործելու համար:"
 

@@ -7,7 +7,7 @@ Tags: backup, restore, migration, dropbox, google drive
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,7 +66,13 @@ Pro costs $49 a year for one site, $99 for five sites and $199 for unlimited sit
 
 = WP-CLI =
 
-`wp zinn-backups backup`, `list`, `restore`, `import`, `destination`, `status` and `cancel`. Secrets are read from environment variables, never from the command line.
+`wp zinn-backups backup`, `list`, `restore`, `import`, `destination`, `key`, `loader`, `status` and `cancel`. Secrets are read from environment variables or STDIN, never from the command line.
+
+`wp zinn-backups key set|get|remove` sets, shows and removes the keys that connect your storage (for S3 and R2: `access-key` and `secret-key`). A new key is checked before it is saved, and a key is never printed in full: `get` shows only its last four characters.
+
+= Keeps running when the plugin is switched off =
+
+If you turn on "Keep backups running when the plugin is switched off" (Zinn® Backups → Settings, or the one-time offer after activation), Zinn® Backups puts a small loader in your must-use plugins folder. It is off until you turn it on. If the plugin is then switched off — by you, by another plugin, or because a restored database no longer lists it as active — a backup or restore in progress carries on and the WP-CLI commands keep working. It never loads the plugin twice, stays out of WordPress's recovery mode, and turns itself off if loading the plugin ever fails. Switch it off under Zinn® Backups → Settings (or `wp zinn-backups loader remove`); deleting the plugin removes it.
 
 == Installation ==
 
@@ -102,6 +108,10 @@ WordPress's own files (wp-admin and wp-includes) unless you tick the option, cac
 
 Yes. Connect the same storage on the other site, find the backup under **Backups** (it is marked "From another site"), and restore it. Addresses are rewritten to the new site's.
 
+= What is the zinn-backups-loader.php file in my must-use plugins? =
+
+The loader that keeps backups and restores running if Zinn® Backups is switched off. It does nothing while the plugin is active. It is only there if you turned on "Keep backups running when the plugin is switched off". Untick that under Settings to remove it; deleting Zinn® Backups removes it too.
+
 = Does it support multisite? =
 
 Not yet. The plugin refuses to run on a multisite network rather than make a backup it cannot restore.
@@ -117,6 +127,9 @@ They are kept. A restore writes the backup's files over the site's; it never del
 3. Importing an UpdraftPlus backup.
 
 == Changelog ==
+
+= 1.0.7 =
+* Keeps running when switched off: a must-use loader carries a backup or restore on, and keeps the WP-CLI commands working, if the plugin is switched off or a restored database no longer lists it (opt-in under Settings, off until you turn it on; never loads it twice). New: wp zinn-backups key set|get|remove for the storage keys, checked before saving and never printed in full; wp zinn-backups loader status|install|remove.
 
 = 1.0.6 =
 * Plural forms in every language now follow that language's own plural rules (Russian, Polish, Czech, Croatian, Serbian, Arabic, Hebrew, French and others), re-filled by the translator with a human check on the forms it could not tell apart.

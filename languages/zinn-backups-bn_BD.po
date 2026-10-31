@@ -451,7 +451,20 @@ msgstr "সর্বদা বাদ দেওয়া হয়: ক্যা�
 msgid "Size of each part (MB)"
 msgstr "প্রতিটি অংশের আকার (MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "প্লাগইনটি বন্ধ থাকা অবস্থাতেও ব্যাকআপ চালু রাখুন"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "আপনি এটি সক্রিয় না করা পর্যন্ত বন্ধ থাকবে। এই প্লাগইনটি বন্ধ থাকলে, অথবা পুনরুদ্ধার করা ডাটাবেসে এটি আর সক্রিয় হিসেবে তালিকাভুক্ত না থাকলেও ব্যাকআপ, পুনরুদ্ধার এবং WP-CLI কমান্ড চালু রাখে। এটি must-use plugins ফোল্ডারে একটি ছোট লোডার রাখে।"
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "লোডারটি যথাস্থানে নেই। এটি ফিরিয়ে আনতে সেটিংস সংরক্ষণ করুন।"
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "সেটিংস সংরক্ষণ করুন"
 
@@ -551,6 +564,81 @@ msgstr "সেই স্টোরেজ গন্তব্যটি এই স�
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "পরবর্তী ক্রমবর্ধমান ব্যাকআপগুলি এর উপর ভিত্তি করে তৈরি করা হয়েছে। প্রথমে সেগুলি মুছুন।"
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "ব্যবহার: wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "কমান্ড লাইনে কোনো কী রাখবেন না। এটি STDIN-এর মাধ্যমে পাইপ করুন, অথবা --from-env দিয়ে একটি এনভায়রনমেন্ট ভেরিয়েবল নির্দিষ্ট করুন।"
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "%2$s গন্তব্যের জন্য %1$s সংরক্ষিত হয়েছে: %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "%2$s গন্তব্য থেকে %1$s অপসারণ করবেন? একটি নতুন সেট না করা পর্যন্ত এতে ব্যাকআপ নেওয়া বন্ধ থাকবে।"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "%2$s গন্তব্য থেকে %1$s সরানো হয়েছে।"
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "লোডারটি যথাস্থানে রয়েছে।"
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "লোডারটি সরানো হয়েছে।"
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "ব্যবহার: wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "সেই এনভায়রনমেন্ট ভ্যারিয়েবলটি সেট করা নেই অথবা খালি।"
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "এই গন্তব্যে “%1$s” নামের কোনো কী (key) নেই। এর কীগুলি: %2$s।"
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "কোনো কী প্রদান করা হয়নি। এটি STDIN-এ পাইপ করুন বা --from-env দিয়ে একটি এনভায়রনমেন্ট ভেরিয়েবলের নাম উল্লেখ করুন।"
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "এটি একটি বৈধ %s বলে মনে হচ্ছে না (ভুল দৈর্ঘ্য, অথবা এমন অক্ষর যা এই ধরনের কী-তে কখনোই থাকে না)। কিছুই সংরক্ষণ করা হয়নি।"
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "ঐ আইডি বিশিষ্ট কোনো গন্তব্য নেই। দেখুন: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "এখনো কোনো স্টোরেজ গন্তব্য নেই। প্রথমে একটি যোগ করুন: wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "একাধিক গন্তব্য রয়েছে: --id দিয়ে একটি বেছে নিন। দেখুন: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(নির্ধারণ করা হয়নি)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "এই ফাইলটি কোনো এনক্রিপ্ট করা Zinn® Backups ফাইল নয়।"
@@ -623,61 +711,111 @@ msgstr "%1$s HTTP %2$d দিয়ে উত্তর দিয়েছে: %3
 msgid "no details given"
 msgstr "কোন বিবরণ দেওয়া হয়নি"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "একটি মাল্টিসাইট নেটওয়ার্কে লোডারটি কেবল তখনই ব্যবহৃত হয় যখন Zinn® Backups নেটওয়ার্ক-সক্রিয় থাকে, কারণ একটি আবশ্যক প্লাগইন প্রতিটি সাইটে চলে।"
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "আবশ্যিক প্লাগইন (must-use plugins) ফোল্ডারে zinn-backups-loader.php নামের আরেকটি ফাইল ইতিমধ্যে বিদ্যমান; এটি অপরিবর্তিত রাখা হয়েছে।"
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "অবশ্য-ব্যবহার্য প্লাগইন ফোল্ডারটি তৈরি করা যায়নি।"
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "আবশ্যিক প্লাগইন (must-use plugins) ফোল্ডারটি লিখনযোগ্য নয়।"
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "লোডারটি যথাস্থানে স্থাপন করা যায়নি।"
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "লোডারটি সরানো যায়নি।"
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "প্লাগইনটি বন্ধ থাকা অবস্থাতেও Zinn® Backups চলমান ব্যাকআপ বা পুনরুদ্ধার এবং এর WP-CLI কমান্ডগুলি সচল রাখতে পারে। এটি must-use plugins ফোল্ডারে থাকা একটি ছোট লোডারের সাহায্যে করে, যা কেবলমাত্র আপনি চাইলে যোগ করা হয়।"
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "না, ধন্যবাদ"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "আপনার ব্যাকআপ পরিচালনা করার অনুমতি নেই।"
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups বন্ধ করা আছে, তবে must-use প্লাগইন ফোল্ডারে থাকা এর লোডার চলমান যেকোনো ব্যাকআপ বা পুনরুদ্ধার এবং এর WP-CLI কমান্ডসমূহ সচল রাখে।"
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "পটভূমিতে এটি চলা বন্ধ করুন"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "পুনরুদ্ধারটি এই সাইটের ফাইল এবং ডাটাবেস প্রতিস্থাপন করবে তা নিশ্চিত করতে বাক্সে টিক দিন।"
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "প্রথমে গন্তব্য সংরক্ষণ করুন।"
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "সংযুক্ত হয়েছে: একটি পরীক্ষামূলক ফাইল লেখা এবং মুছে ফেলা হয়েছে।"
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "প্রথমে আপনার Dropbox অ্যাপের অ্যাপ কী লিখুন (ফর্মের পাশের ধাপগুলি দেখুন)।"
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "এই ধরনের স্টোরেজ সাইন ইন করে না।"
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "সাইন-ইনের মেয়াদ শেষ হয়ে গেছে। পুনরায় সংযোগ করুন চাপুন।"
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox সংযুক্ত রয়েছে।"
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "সেটিংস সংরক্ষিত হয়েছে, কিন্তু পটভূমি লোডার পরিবর্তিত হয়নি: %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "সেটিংস সংরক্ষিত হয়েছে।"
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "অন্য একটি ব্যাকআপ, পুনরুদ্ধার বা আমদানির কাজ চলছে। এটি শেষ হওয়া পর্যন্ত অপেক্ষা করুন, অথবা এটি বাতিল করুন।"
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "আপলোডটি সঠিকভাবে শুরু হয়নি। আবার শুরু করুন।"
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "অংশটি পৌঁছায়নি। আপনার সার্ভার আপলোডের আকার সীমিত করতে পারে; আবার চেষ্টা করুন।"
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "আমদানি এই সাইটের বিষয়বস্তু এবং ডেটাবেস প্রতিস্থাপন করবে তা নিশ্চিত করতে বাক্সটি টিক দিন।"
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "ইম্পোর্ট করার জন্য একটি আর্কাইভ বেছে নিন: এটি আপলোড করুন, একটি লিঙ্ক পেস্ট করুন, অথবা ইম্পোর্ট ফোল্ডার থেকে একটি বেছে নিন।"
 
@@ -858,7 +996,7 @@ msgstr "%1$s — %2$d সেকেন্ডের মধ্যে আবার �
 msgid "Cancelled."
 msgstr "বাতিল করা হয়েছে।"
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "ব্যাকআপগুলো একটি সংরক্ষণের গন্তব্যে যায়। অন্য একটি ব্যবহার করতে আপনার বর্তমানটি সম্পাদনা বা অপসারণ করুন।"
 

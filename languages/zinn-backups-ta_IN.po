@@ -451,7 +451,20 @@ msgstr "எப்போதும் தவிர்க்கப்படுப�
 msgid "Size of each part (MB)"
 msgstr "ஒவ்வொரு பகுதியின் அளவு (MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "செருகுநிரல் முடக்கப்பட்டிருக்கும்போதும் காப்புப்பிரதிகளைத் தொடர்ந்து இயக்கவும்"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "நீங்கள் இதை இயக்கும் வரை முடக்கப்பட்டிருக்கும். இந்தச் செருகுநிரல் முடக்கப்பட்டிருந்தாலும், அல்லது மீட்டமைக்கப்பட்ட தரவுத்தளம் இதை இனி செயலில் உள்ளதாகப் பட்டியலிடவில்லை என்றாலும், காப்புப்பிரதிகள், மீட்டமைப்புகள் மற்றும் WP-CLI கட்டளைகள் தொடர்ந்து இயங்குவதை இது உறுதிசெய்கிறது. இது must-use செருகுநிரல்கள் கோப்புறையில் ஒரு சிறிய ஏற்றியைய் (loader) வைக்கும்."
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "ஏற்றி சரியான இடத்தில் இல்லை. அதை மீண்டும் வைக்க அமைப்புகளைச் சேமிக்கவும்."
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "அமைப்புகளைச் சேமிக்கவும்"
 
@@ -551,6 +564,81 @@ msgstr "அந்தச் சேமிப்பக இலக்கு இந்
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "பிந்தைய கூடுதல் காப்புப்பிரதிகள் இதன் அடிப்படையில் கட்டமைக்கப்பட்டுள்ளன. முதலில் அவற்றை நீக்கவும்."
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "பயன்பாடு: wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "கட்டளை வரியில் விசையை இட வேண்டாம். அதை STDIN வழியாக அனுப்பவும், அல்லது --from-env மூலம் சூழல் மாறியைக் குறிப்பிடவும்."
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "%2$s இலக்குக்காக %1$s சேமிக்கப்பட்டது: %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "இலக்கு %2$s இலிருந்து %1$s ஐ அகற்றவா? புதிய ஒன்று அமைக்கப்படும் வரை அதற்கான காப்புப் பிரதிகள் நிறுத்தப்படும்."
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "%2$s இலக்கிலிருந்து %1$s நீக்கப்பட்டது."
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "ஏற்றி அதன் இடத்தில் உள்ளது."
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "ஏற்றி அகற்றப்பட்டது."
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "பயன்பாடு: wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "அந்த சூழல் மாறி அமைக்கப்படவில்லை அல்லது காலியாக உள்ளது."
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "இந்த இலக்கில் “%1$s” என்ற பெயரில் விசை எதுவும் இல்லை. அதன் விசைகள்: %2$s."
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "விசை எதுவும் வழங்கப்படவில்லை. STDIN வழியே செலுத்தவும் அல்லது --from-env மூலம் சூழல் மாறியின் பெயரை குறிப்பிடவும்."
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "இது சரியான %s போல் தெரியவில்லை (தவறான நீளம் அல்லது இந்த வகையான விசையைக் கொண்டிருக்காத எழுத்துருக்கள்). எதுவும் சேமிக்கப்படவில்லை."
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "அந்த ஐடியுடன் இலக்கு எதுவும் இல்லை. பார்க்க: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "இன்னும் சேமிப்பக இலக்கு எதுவும் இல்லை. முதலில் ஒன்றைச் சேர்க்கவும்: wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "ஒன்றுக்கும் மேற்பட்ட இலக்குகள் உள்ளன: --id மூலம் ஒன்றைத் தேர்ந்தெடுக்கவும். பார்க்க: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(அமைக்கப்படவில்லை)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "இந்தக் கோப்பு என்க்ரிப்ட் செய்யப்பட்ட Zinn® Backups கோப்பு அல்ல."
@@ -623,61 +711,111 @@ msgstr "%1$s HTTP %2$d உடன் பதிலளித்தது: %3$s"
 msgid "no details given"
 msgstr "விவரங்கள் எதுவும் வழங்கப்படவில்லை"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "பல தள நெட்வொர்க்கில், Zinn® Backups நெட்வொர்க் அளவில் செயல்படுத்தப்படும் போது மட்டுமே ஏற்றி பயன்படுத்தப்படுகிறது, ஏனெனில் கட்டாயம் பயன்படுத்த வேண்டிய செருகுநிரல் ஒவ்வொரு தளத்திலும் இயங்குகிறது."
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "கட்டாயச் செருகுநிரல்கள் (must-use plugins) கோப்புறையில் zinn-backups-loader.php என்ற பெயரில் மற்றொரு கோப்பு ஏற்கனவே உள்ளது; அது மாற்றப்படாமல் அப்படியே விடப்பட்டது."
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "கட்டாயமாகப் பயன்படுத்த வேண்டிய செருகுநிரல்கள் கோப்புறையை உருவாக்க முடியவில்லை."
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "கட்டாயமாகப் பயன்படுத்த வேண்டிய செருகுநிரல்கள் (must-use plugins) கோப்புறை எழுதக்கூடியதாக இல்லை."
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "ஏற்றியை இடத்தில் வைக்க முடியவில்லை."
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "ஏற்றி அகற்றப்பட முடியவில்லை."
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "செருகுநிரல் முடக்கப்பட்டிருந்தாலும், Zinn® Backups செயல்முறையிலுள்ள காப்புநகல் அல்லது மீட்டமைப்பையும் அதன் WP-CLI கட்டளைகளையும் தொடர்ந்து இயங்க வைக்க முடியும். நீங்கள் கோரினால் மட்டுமே சேர்க்கப்படும், must-use செருகுநிரல்கள் கோப்புறையிலுள்ள ஒரு சிறிய ஏற்றி மூலம் இது இதைச் செய்கிறது."
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "இல்லை, நன்றி"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "காப்புப்பிரதிகளை நிர்வகிக்க உங்களுக்கு அனுமதியில்லை."
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups முடக்கப்பட்டுள்ளது, ஆனால் must-use செருகுநிரல்கள் கோப்புறையில் உள்ள அதன் ஏற்றி, செயல்பாட்டில் உள்ள எந்தவொரு காப்புநகல் அல்லது மீட்டமைப்பையும், அதன் WP-CLI கட்டளைகளையும் தொடர்ந்து செயல்பட வைக்கிறது."
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "இது பின்னணியில் இயங்குவதை நிறுத்துங்கள்"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "மீட்டமைப்பானது இந்தத் தளத்தின் கோப்புகளையும் தரவுத்தளத்தையும் மாற்றியமைக்கும் என்பதை உறுதிப்படுத்த பெட்டியைத் தேர்வுசெய்யவும்."
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "முதலில் சேருமிடத்தைச் சேமிக்கவும்."
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "இணைக்கப்பட்டது: ஒரு சோதனை கோப்பு எழுதப்பட்டு நீக்கப்பட்டது."
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "முதலில் உங்கள் Dropbox செயலியின் செயலி சாவியை உள்ளிடவும் (படிவத்தின் அருகிலுள்ள படிகளைப் பார்க்கவும்)."
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "இந்த வகை சேமிப்பகம் உள்நுழையாது."
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "உள்நுழைவு காலாவதியானது. மீண்டும் இணை என்பதை அழுத்தவும்."
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox இணைக்கப்பட்டுள்ளது."
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "அமைப்புகள் சேமிக்கப்பட்டன, ஆனால் பின்னணி ஏற்றி மாற்றப்படவில்லை: %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "அமைப்புகள் சேமிக்கப்பட்டன."
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "மற்றொரு காப்புப்பிரதி, மீட்டமைத்தல் அல்லது இறக்குமதி செயல்பாட்டில் உள்ளது. அது முடியும் வரை காத்திருக்கவும், அல்லது அதை ரத்துசெய்யவும்."
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "பதிவேற்றம் சரியாகத் தொடங்கவில்லை. மீண்டும் தொடங்கவும்."
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "துண்டு வரவில்லை. உங்கள் சேவையகம் பதிவேற்ற அளவுகளைக் கட்டுப்படுத்தக்கூடும்; மீண்டும் முயற்சிக்கவும்."
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "இறக்குமதியானது இந்தத் தளத்தின் உள்ளடக்கம் மற்றும் தரவுத்தளத்தை மாற்றியமைக்கும் என்பதை உறுதிப்படுத்த பெட்டியைத் தேர்வுசெய்யவும்."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "இறக்குமதி செய்ய காப்பகத்தைத் தேர்வுசெய்யவும்: அதைப் பதிவேற்றவும், இணைப்பை ஒட்டவும், அல்லது இறக்குமதி கோப்புறையிலிருந்து ஒன்றைத் தேர்ந்தெடுக்கவும்."
 
@@ -858,7 +996,7 @@ msgstr "%1$s — %2$d வினாடிகளில் மீண்டும்
 msgid "Cancelled."
 msgstr "ரத்துசெய்யப்பட்டது."
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "காப்புப்பிரதிகள் ஒரு சேமிப்பக இலக்கிற்குச் செல்கின்றன. வேறு ஒன்றைப் பயன்படுத்த உங்களிடம் உள்ளதைத் திருத்தவும் அல்லது அகற்றவும்."
 

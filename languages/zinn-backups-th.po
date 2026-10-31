@@ -450,7 +450,20 @@ msgstr "ละเว้นเสมอ: แคช, พื้นที่ชั�
 msgid "Size of each part (MB)"
 msgstr "ขนาดของแต่ละส่วน (MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "สำรองข้อมูลต่อไปแม้ปลั๊กอินจะปิดอยู่"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "ปิดอยู่จนกว่าคุณจะเปิดใช้งาน ช่วยให้การสำรองข้อมูล การกู้คืน และคำสั่ง WP-CLI ทำงานต่อไปได้หากปลั๊กอินนี้ถูกปิดใช้งาน หรือหากฐานข้อมูลที่กู้คืนไม่ได้ระบุว่าปลั๊กอินนี้เปิดใช้งานอยู่อีกต่อไป การดำเนินการนี้จะวางตัวโหลดขนาดเล็กไว้ในโฟลเดอร์ปลั๊กอินที่จำเป็นต้องใช้ (must-use plugins)"
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "ตัวโหลดไม่ได้อยู่ในตำแหน่งที่ถูกต้อง บันทึกการตั้งค่าเพื่อนำกลับมา"
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "บันทึกการตั้งค่า"
 
@@ -549,6 +562,81 @@ msgstr "ปลายทางการจัดเก็บข้อมูลน
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "การสำรองข้อมูลส่วนเพิ่มในภายหลังจะสร้างขึ้นบนชุดนี้ โปรดลบชุดเหล่านั้นก่อน"
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "วิธีใช้: wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "อย่าวางคีย์บนบรรทัดคำสั่ง ให้ส่งผ่านทาง STDIN หรือระบุตัวแปรสภาพแวดล้อมด้วย --from-env"
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "บันทึก %1$s สำหรับปลายทาง %2$s แล้ว: %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "ลบ %1$s ออกจากปลายทาง %2$s หรือไม่? การสำรองข้อมูลไปยังปลายทางนี้จะหยุดชั่วคราว จนกว่าจะตั้งค่าปลายทางใหม่"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "ลบ %1$s ออกจากปลายทาง %2$s แล้ว"
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "ตัวโหลดอยู่ในตำแหน่งแล้ว"
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "ตัวโหลดถูกลบออกแล้ว"
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "วิธีใช้: wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "ตัวแปรสภาพแวดล้อมนั้นไม่ได้ถูกตั้งค่าหรือว่างเปล่า"
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "ปลายทางนี้ไม่มีคีย์ชื่อ “%1$s” คีย์ที่มี: %2$s"
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "ไม่ได้ระบุคีย์ ส่งผ่านทาง STDIN หรือระบุตัวแปรสภาพแวดล้อมด้วย --from-env"
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "ดูเหมือนไม่ใช่ %s ที่ถูกต้อง (ความยาวไม่ถูกต้อง หรือมีอักขระที่คีย์ประเภทนี้ไม่เคยมี) ไม่มีการบันทึกสิ่งใดไว้"
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "ไม่มีปลายทางที่มี ID ดังกล่าว ดูที่: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "ยังไม่มีปลายทางที่จัดเก็บข้อมูล โปรดเพิ่มก่อน: wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "มีปลายทางมากกว่าหนึ่งแห่ง: เลือกปลายทางด้วย --id ดู: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(ไม่ได้ตั้งค่า)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "ไฟล์นี้ไม่ใช่ไฟล์ Zinn® Backups ที่เข้ารหัสไว้"
@@ -621,61 +709,111 @@ msgstr "%1$s ตอบกลับด้วย HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "ไม่ได้ระบุรายละเอียด"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "บนเครือข่ายหลายไซต์ ตัวโหลดจะถูกใช้เมื่อ Zinn® Backups ถูกเปิดใช้งานทั้งเครือข่ายเท่านั้น เนื่องจากปลั๊กอินที่ต้องใช้งานจะทำงานในทุกไซต์"
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "มีไฟล์อื่นที่ชื่อ zinn-backups-loader.php อยู่ในโฟลเดอร์ must-use plugins แล้ว ไฟล์ดังกล่าวจึงถูกปล่อยไว้ตามเดิม"
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "ไม่สามารถสร้างโฟลเดอร์ปลั๊กอินที่จำเป็นต้องใช้ได้"
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "โฟลเดอร์ปลั๊กอินที่ต้องใช้งาน (must-use plugins) ไม่สามารถเขียนได้"
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "ไม่สามารถวางตัวโหลดลงในตำแหน่งได้"
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "ไม่สามารถลบตัวโหลดได้"
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "Zinn® Backups สามารถทำให้การสำรองข้อมูลหรือการกู้คืนที่กำลังดำเนินการอยู่ รวมถึงคำสั่ง WP-CLI ยังคงทำงานได้แม้ว่าปลั๊กอินจะถูกปิดใช้งานอยู่ก็ตาม ซึ่งทำได้โดยใช้ตัวโหลดขนาดเล็กในโฟลเดอร์ปลั๊กอินที่ต้องใช้งาน (must-use plugins) โดยจะเพิ่มเข้ามาก็ต่อเมื่อคุณร้องขอเท่านั้น"
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "ไม่ ขอบคุณ"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "คุณไม่ได้รับอนุญาตให้จัดการการสำรองข้อมูล"
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups ถูกปิดใช้งานอยู่ แต่ตัวโหลดในโฟลเดอร์ปลั๊กอิน must-use จะยังคงช่วยให้การสำรองข้อมูลหรือการกู้คืนที่กำลังดำเนินการอยู่ รวมถึงคำสั่ง WP-CLI ทำงานต่อไปได้"
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "หยุดการทำงานในเบื้องหลัง"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "ทำเครื่องหมายในช่องเพื่อยืนยันว่าการกู้คืนจะแทนที่ไฟล์และฐานข้อมูลของไซต์นี้"
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "บันทึกปลายทางก่อน"
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "เชื่อมต่อแล้ว: มีการเขียนและลบไฟล์ทดสอบแล้ว"
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "ป้อนคีย์แอปของแอป Dropbox ของคุณก่อน (ดูขั้นตอนข้างแบบฟอร์ม)"
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "ที่จัดเก็บข้อมูลประเภทนี้ไม่ได้ลงชื่อเข้าใช้"
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "การลงชื่อเข้าใช้หมดอายุแล้ว กดเชื่อมต่ออีกครั้ง"
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "เชื่อมต่อ Dropbox แล้ว"
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "บันทึกการตั้งค่าแล้ว แต่ไม่ได้เปลี่ยนตัวโหลดเบื้องหลัง: %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "บันทึกการตั้งค่าแล้ว"
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "กำลังสำรองข้อมูล กู้คืน หรือนำเข้าข้อมูลอื่นอยู่ โปรดรอจนกว่าจะเสร็จสิ้น หรือยกเลิกการทำงาน"
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "การอัปโหลดไม่ได้เริ่มต้นอย่างถูกต้อง โปรดเริ่มต้นใหม่อีกครั้ง"
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "ข้อมูลส่วนนี้มาไม่ถึง เซิร์ฟเวอร์ของคุณอาจจำกัดขนาดการอัปโหลด โปรดลองอีกครั้ง"
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "ทำเครื่องหมายในช่องเพื่อยืนยันว่าการนำเข้าจะแทนที่เนื้อหาและฐานข้อมูลของไซต์นี้"
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "เลือกไฟล์เก็บถาวรที่จะนำเข้า: อัปโหลด วางลิงก์ หรือเลือกจากโฟลเดอร์นำเข้า"
 
@@ -855,7 +993,7 @@ msgstr "%1$s — กำลังลองอีกครั้งในอีก
 msgid "Cancelled."
 msgstr "ยกเลิกแล้ว"
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "ข้อมูลสำรองจะไปยังปลายทางจัดเก็บข้อมูลเดียว แก้ไขหรือลบปลายทางที่คุณมีเพื่อใช้อันอื่น"
 

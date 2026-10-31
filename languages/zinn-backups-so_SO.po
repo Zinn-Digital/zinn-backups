@@ -451,7 +451,20 @@ msgstr "Had iyo jeer laga tagay: kaydadka xusuusta (caches), goobta ku meel gaar
 msgid "Size of each part (MB)"
 msgstr "Cabirka qayb kasta (MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "Sii wad kaydinta xogta marka furaha la damiyo"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "Waa damisan yahay ilaa aad shido mooyee. Waxay sii waddaa shaqada koobiyeynta, dib-u-soo-celinta iyo amarrada WP-CLI haddii furintan la damiyo, ama haddii xog-ururin dib loo soo celiyay aysan hadda u qorin mid shaqaynaysa. Tani waxay soo-rariye yar gelinaysaa galalka furimaha khasabka ah (must-use plugins)."
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "Soo-dejiyaha meeshiisii ma yaallo. Keydi habaynta si aad dib ugu celiso."
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "Kaydi habaynta"
 
@@ -551,6 +564,81 @@ msgstr "Goobtaas wax lagu kaydiyo dib dambe looguma kaydinayo goobtan."
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "Koobiyada dambe ee kordhinta ah waxay ku dhisan yihiin kan. Marka hore tirtir kuwaas."
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "Adeegsiga: wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "Ha gelin furaha khadka taliska. Ku dhex dhuumi STDIN, ama ku magacow doorsoomaha deegaanka --from-env."
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "Waxa loo keydiyey %1$s meesha loo socdo ee %2$s: %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "Ma ka saartaa %1$s barta loo socdo ee %2$s? Nuqul kaydinta lagu sameeyo halkaas way joogsanaysaa ilaa mid cusub laga dejiyo."
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "%1$s laga saaray meesha loo socday ee %2$s."
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "Rarka ayaa yaalla goobtiisa."
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "Soorareha waa laga saaray."
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "Adeegsiga: wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "Doorsoomaha deegaankaas lama dejin ama waa maran yahay."
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "Meesha loo socdo ma laha fure la yiraahdo “%1$s”. Furayaasheeda: %2$s."
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "Furaha lama bixin. Ku gudbi STDIN ama ku sheeg doorsoomaha deegaanka --from-env."
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "Taasi uma eka %s sax ah (dherer qaldan, ama xarfo uusan noocaan furaha ahi weligiis koobneyn). Waxba lama keydin."
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "Ma jirto meel leh aqoonsigaas. Eeg: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "Weli ma jirto meel wax lagu kaydiyo. Marka hore ku dar mid: wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "Waxaa jira wax ka badan hal goob: ku dooro mid leh --id. Eeg: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(lama cayimin)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "Faylkan ma aha fayl Zinn® Backups ah oo la siray."
@@ -623,61 +711,111 @@ msgstr "%1$s wuxuu kaga jawaabay HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "Faahfaahin lama bixin"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "Shabakadda multisite ah dhexdeeda, raraha waxaa la isticmaalaa oo keliya marka Zinn® Backups laga hawlgeliyo shabakadda oo dhan, sababtoo ah furin qasab ah ayaa ka shaqeysa goob kasta."
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "Fayl kale oo la yiraahdo zinn-backups-loader.php ayaa horey ugu jiray galalka must-use plugins; waa laga tagay siduu ahaa."
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "Fayl-galka wax-ku-kordhinta qasabka ah lama abuuri karin."
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "Galka wax-ku-kordinta qasabka ah (must-use plugins) ma aha mid wax lagu qori karo."
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "Sooraha lama gelin karin goobta."
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "Soo-dejiyaha lama saari karin."
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "Zinn® Backups waxay sii wadi kartaa kaydinta ama soo celinta socota, iyo amarradeeda WP-CLI, inay shaqeeyaan xitaa haddii furaha la demiyo. Waxay tan ku samaysaa soo-raaciye yar oo ku jira galalka furayaasha must-use, kaas oo lagu daro kaliya haddii aad codsato."
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "Maya, mahadsanid"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "Laguma oggola inaad maamusho koobiyada kaydka ah."
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Zinn® Backups waa la damiyay, laakiin raraha ku jira faylka must-use plugins wuxuu ka dhigayaa mid shaqaynaya kayd kasta ama soo celin kasta oo socota, iyo sidoo kale amarradiisa WP-CLI."
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "Jooji inay gadaal ka socoto"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Calaamadee sanduuqa si aad u xaqiijiso in dib-u-soo-celintu ay beddelayso faylasha iyo xog-ururinta boggan."
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "Marka hore kaydi halka loo socdo."
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "Waa ku xidhan yahay: fayl tijaabo ah ayaa la qoray oo meesha laga saaray."
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Marka hore geli furaha app-ka ee Dropbox-kaaga (eeg tillaabooyinka ku xiga foomka)."
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "Kaydkan noocan ah ma galo."
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "Galitaanku wuu dhacay. Mar kale riix Ku xidh."
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Dropbox waa ku xiran yahay."
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "Dejinta waa la keydiyay, laakiin raraha gunta lama beddelin: %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "Habsocodka waa la keydiyay."
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Kayd kale, soo celin ama soo dejin ayaa socota. Sug inta ay ka dhammaanayso, ama jooji."
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "Soo-gelintu si sax ah uma bilaaban. Dib u bilow."
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Qaybtu ma soo gaarin. Seerfarkaagu waxa laga yaabaa inuu xaddido cabbirka soo gelinta; mar kale isku day."
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Calaamadee sanduuqa si aad u xaqiijiso in soo dejintu beddelayso nuxurka iyo xog-ururinta boggan."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Dooro kayd aad soo dejiso: soo geli, dheji xiriiriye, ama mid ka dooro galka soo dejinta."
 
@@ -858,7 +996,7 @@ msgstr "%1$s — mar labaad la isku dayayaa %2$d ilbidhiqsi gudahood."
 msgid "Cancelled."
 msgstr "Waa la joojiyay."
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Koobiyada kaydka ah waxay aadaan hal meel oo kaydin ah. Wax ka beddel ama ka saar kan aad haysato si aad mid kale u isticmaasho."
 

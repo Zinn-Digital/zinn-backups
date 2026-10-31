@@ -451,7 +451,20 @@ msgstr "Palaging hindi kasama: mga cache, espasyo para sa update scratch, at sar
 msgid "Size of each part (MB)"
 msgstr "Laki ng bawat bahagi (MB)"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:475
+#: includes/class-plugin.php:116
+msgid "Keep backups running when the plugin is switched off"
+msgstr "Panatilihing tumatakbo ang mga backup kapag naka-off ang plugin"
+
+#: includes/class-admin.php:476
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
+msgstr "Naka-off maliban kung i-on mo ito. Pinapanatiling gumagana ang mga backup, pagpapanumbalik, at mga command ng WP-CLI kung naka-off ang plugin na ito, o kung hindi na ito nakalista bilang aktibo sa isang naipanumbalik na database. Naglalagay ito ng maliit na loader sa folder ng mga must-use plugin."
+
+#: includes/class-admin.php:481
+msgid "The loader is not in place. Save the settings to put it back."
+msgstr "Wala sa tamang lugar ang loader. I-save ang mga setting upang ibalik ito."
+
+#: includes/class-admin.php:487
 msgid "Save settings"
 msgstr "I-save ang mga setting"
 
@@ -551,6 +564,81 @@ msgstr "Hindi na naka-save sa site na ito ang destinasyon ng imbakan na iyon."
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "Ang mga susunod na incremental backup ay nakabatay dito. Burahin muna ang mga iyon."
 
+#: includes/class-cli.php:367
+msgid "Use: wp zinn-backups key set|get|remove [<name>]"
+msgstr "Paggamit: wp zinn-backups key set|get|remove [<name>]"
+
+#: includes/class-cli.php:371
+msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
+msgstr "Huwag maglagay ng key sa command line. I-pipe ito sa STDIN, o pangalanan ang isang environment variable gamit ang --from-env."
+
+#. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
+#: includes/class-cli.php:390
+#, php-format
+msgid "Saved %1$s for destination %2$s: %3$s"
+msgstr "Nai-save ang %1$s para sa destinasyong %2$s: %3$s"
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:396
+#, php-format
+msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
+msgstr "Alisin ang %1$s mula sa destinasyong %2$s? Hihinto ang mga backup dito hanggang sa makapagtakda ka ng bago."
+
+#. translators: 1: key name, 2: destination id.
+#: includes/class-cli.php:401
+#, php-format
+msgid "Removed %1$s from destination %2$s."
+msgstr "Inalis ang %1$s mula sa destinasyong %2$s."
+
+#: includes/class-cli.php:433
+msgid "The loader is in place."
+msgstr "Nasa tamang lugar ang loader."
+
+#: includes/class-cli.php:433
+msgid "The loader is removed."
+msgstr "Inalis ang loader."
+
+#: includes/class-cli.php:461
+msgid "Use: wp zinn-backups loader status|install|remove"
+msgstr "Paggamit: wp zinn-backups loader status|install|remove"
+
+#: includes/class-cli.php:476
+msgid "That environment variable is not set or is empty."
+msgstr "Ang environment variable na iyon ay hindi nakatakda o walang laman."
+
+#. translators: 1: key name typed, 2: the valid key names, comma separated.
+#: includes/class-connection-keys.php:107
+#, php-format
+msgid "This destination has no key called “%1$s”. Its keys: %2$s."
+msgstr "Walang susi ang destinasyong ito na may pangalang “%1$s”. Ang mga susi nito: %2$s."
+
+#: includes/class-connection-keys.php:142
+msgid "No key was given. Pipe it in on STDIN or name an environment variable with --from-env."
+msgstr "Walang ibinigay na key. I-pipe ito sa STDIN o magtakda ng environment variable gamit ang --from-env."
+
+#. translators: %s: key name, e.g. secret-key.
+#: includes/class-connection-keys.php:148
+#, php-format
+msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
+msgstr "Hindi iyon mukhang wastong %s (maling haba, o mga character na hindi kailanman nilalaman ng ganitong uri ng key). Walang na-save."
+
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "Walang destinasyon na may ganyang ID. Tingnan ang: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:191
+msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
+msgstr "Wala pang imbakan na destinasyon. Magdagdag muna ng isa: wp zinn-backups destination add"
+
+#: includes/class-connection-keys.php:193
+msgid "There is more than one destination: choose one with --id. See: wp zinn-backups destination list"
+msgstr "May higit sa isang destinasyon: pumili ng isa gamit ang --id. Tingnan: wp zinn-backups destination list"
+
+#: includes/class-connection-keys.php:212
+msgid "(not set)"
+msgstr "(hindi nakatakda)"
+
 #: includes/class-crypto.php:88
 msgid "This file is not an encrypted Zinn® Backups file."
 msgstr "Ang file na ito ay hindi isang naka-encrypt na Zinn® Backups file."
@@ -623,61 +711,111 @@ msgstr "Sumagot ang %1$s nang may HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "Walang ibinigay na detalye"
 
-#: includes/class-plugin.php:96
+#: includes/class-mu-loader.php:148
+msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
+msgstr "Sa isang multisite network, ginagamit lang ang loader kapag ang Zinn® Backups ay naka-activate sa network, dahil ang isang must-use plugin ay tumatakbo sa bawat site."
+
+#: includes/class-mu-loader.php:153
+msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
+msgstr "Mayroon nang isa pang file na nagngangalang zinn-backups-loader.php sa folder ng must-use plugins; hindi ito ginalaw."
+
+#: includes/class-mu-loader.php:187
+msgid "The must-use plugins folder could not be created."
+msgstr "Hindi malikha ang folder ng must-use plugins."
+
+#: includes/class-mu-loader.php:190
+#: includes/class-mu-loader.php:195
+msgid "The must-use plugins folder is not writable."
+msgstr "Hindi maaaring sulatan ang folder ng must-use na mga plugin."
+
+#: includes/class-mu-loader.php:199
+msgid "The loader could not be put in place."
+msgstr "Hindi mailagay sa pwesto ang loader."
+
+#: includes/class-mu-loader.php:230
+msgid "The loader could not be removed."
+msgstr "Hindi maalis ang loader."
+
+#: includes/class-plugin.php:116
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
+msgstr "Maaaring panatilihin ng Zinn® Backups ang isang kasalukuyang backup o pag-restore, at ang mga WP-CLI command nito, na gumagana kahit na naka-off ang plugin. Ginagawa nito ito gamit ang isang maliit na loader sa folder ng must-use plugins, na idinagdag lamang kung hihilingin mo."
+
+#: includes/class-plugin.php:116
+msgid "No thanks"
+msgstr "Hindi na, salamat"
+
+#: includes/class-plugin.php:126
+#: includes/class-plugin.php:143
+#: includes/class-plugin.php:172
+#: includes/class-plugin.php:210
 msgid "You are not allowed to manage backups."
 msgstr "Wala kang pahintulot na mamahala ng mga backup."
 
-#: includes/class-plugin.php:196
+#: includes/class-plugin.php:162
+msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
+msgstr "Naka-off ang Zinn® Backups, ngunit pinapanatili ng loader nito sa folder ng must-use na mga plugin na gumagana ang anumang kasalukuyang backup o pag-restore, gayundin ang mga command nito sa WP-CLI."
+
+#: includes/class-plugin.php:162
+msgid "Stop it running in the background"
+msgstr "Itigil ang pagpapatakbo nito sa background"
+
+#: includes/class-plugin.php:310
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Lagyan ng tsek ang kahon upang kumpirmahing papalitan ng pag-restore ang mga file at database ng site na ito."
 
-#: includes/class-plugin.php:271
-#: includes/class-plugin.php:290
+#: includes/class-plugin.php:385
+#: includes/class-plugin.php:404
 msgid "Save the destination first."
 msgstr "I-save muna ang destinasyon."
 
-#: includes/class-plugin.php:274
+#: includes/class-plugin.php:388
 msgid "Connected: a test file was written and removed."
 msgstr "Konektado: naisulat at naalis ang isang pansubok na file."
 
-#: includes/class-plugin.php:306
+#: includes/class-plugin.php:420
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Ilagay muna ang app key ng iyong Dropbox app (tingnan ang mga hakbang sa tabi ng form)."
 
-#: includes/class-plugin.php:319
+#: includes/class-plugin.php:433
 msgid "This kind of storage does not sign in."
 msgstr "Ang ganitong uri ng storage ay hindi nag-sa-sign in."
 
-#: includes/class-plugin.php:336
+#: includes/class-plugin.php:450
 msgid "The sign-in expired. Press Connect again."
 msgstr "Nag-expire ang pag-sign in. Pindutin muli ang Ikonekta."
 
-#: includes/class-plugin.php:342
+#: includes/class-plugin.php:456
 msgid "Dropbox is connected."
 msgstr "Konektado ang Dropbox."
 
-#: includes/class-plugin.php:411
+#. translators: %s: why the must-use loader could not be written or removed.
+#: includes/class-plugin.php:529
+#, php-format
+msgid "Settings saved, but the background loader was not changed: %s"
+msgstr "Nai-save ang mga setting, ngunit hindi binago ang background loader: %s"
+
+#: includes/class-plugin.php:531
 msgid "Settings saved."
 msgstr "Nai-save ang mga setting."
 
-#: includes/class-plugin.php:427
+#: includes/class-plugin.php:547
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "May isa pang backup, restore, o import na kasalukuyang tumatakbo. Maghintay hanggang sa matapos ito, o kanselahin ito."
 
-#: includes/class-plugin.php:453
+#: includes/class-plugin.php:573
 msgid "The upload was not started properly. Start again."
 msgstr "Hindi nagsimula nang maayos ang pag-upload. Magsimula muli."
 
-#: includes/class-plugin.php:457
+#: includes/class-plugin.php:577
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Hindi nakarating ang piraso. Maaaring nililimitahan ng iyong server ang laki ng pag-upload; subukang muli."
 
-#: includes/class-plugin.php:481
+#: includes/class-plugin.php:601
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Lagyan ng tsek ang kahon upang kumpirmahing papalitan ng pag-import ang nilalaman at database ng site na ito."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:667
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Pumili ng archive na ii-import: i-upload ito, mag-paste ng link, o pumili mula sa folder ng pag-import."
 
@@ -858,7 +996,7 @@ msgstr "%1$s — sinusubukang muli sa loob ng %2$d segundo."
 msgid "Cancelled."
 msgstr "Kinansela."
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:165
 msgid "Backups go to one storage destination. Edit or remove the one you have to use a different one."
 msgstr "Pumupunta ang mga backup sa isang destinasyon ng imbakan. I-edit o alisin ang mayroon ka upang gumamit ng iba."
 
