@@ -46,15 +46,19 @@ final class Cli {
 	 * @return void
 	 */
 	public function backup( array $args, array $assoc ): void {
-		$job = Backup_Job::create(
-			array(
-				'database' => ! isset( $assoc['files-only'] ),
-				'files'    => ! isset( $assoc['database-only'] ),
-				'note'     => (string) ( $assoc['note'] ?? '' ),
-				'trigger'  => 'cli',
-			)
-		);
-		$this->run( $job );
+		try {
+			$job = Backup_Job::create(
+				array(
+					'database' => ! isset( $assoc['files-only'] ),
+					'files'    => ! isset( $assoc['database-only'] ),
+					'note'     => (string) ( $assoc['note'] ?? '' ),
+					'trigger'  => 'cli',
+				)
+			);
+			$this->run( $job );
+		} catch ( \InvalidArgumentException | \RuntimeException $e ) {
+			self::fail( $e );
+		}
 	}
 
 	/**
@@ -71,19 +75,23 @@ final class Cli {
 	 * @return void
 	 */
 	public function list( array $args, array $assoc ): void {
-		$rows = array_map(
-			static fn( array $b ): array => array(
-				'remote'      => $b['remote'],
-				'created'     => gmdate( 'Y-m-d H:i:s', (int) $b['created'] ) . ' UTC',
-				'type'        => $b['type'],
-				'size'        => size_format( (int) $b['size'] ),
-				'encrypted'   => $b['encrypted'] ? 'yes' : 'no',
-				'destination' => $b['destination'],
-				'site'        => $b['site'],
-			),
-			Catalog::all( true )
-		);
-		\WP_CLI\Utils\format_items( (string) ( $assoc['format'] ?? 'table' ), $rows, array( 'remote', 'created', 'type', 'size', 'encrypted', 'destination', 'site' ) );
+		try {
+			$rows = array_map(
+				static fn( array $b ): array => array(
+					'remote'      => $b['remote'],
+					'created'     => gmdate( 'Y-m-d H:i:s', (int) $b['created'] ) . ' UTC',
+					'type'        => $b['type'],
+					'size'        => size_format( (int) $b['size'] ),
+					'encrypted'   => $b['encrypted'] ? 'yes' : 'no',
+					'destination' => $b['destination'],
+					'site'        => $b['site'],
+				),
+				Catalog::all( true )
+			);
+			\WP_CLI\Utils\format_items( (string) ( $assoc['format'] ?? 'table' ), $rows, array( 'remote', 'created', 'type', 'size', 'encrypted', 'destination', 'site' ) );
+		} catch ( \InvalidArgumentException | \RuntimeException $e ) {
+			self::fail( $e );
+		}
 	}
 
 	/**
@@ -112,31 +120,35 @@ final class Cli {
 	 * @return void
 	 */
 	public function restore( array $args, array $assoc ): void {
-		$remote      = trim( $args[0], '/' );
-		$destination = (string) ( $assoc['destination'] ?? '' );
-		if ( '' === $destination ) {
-			foreach ( Catalog::all( true ) as $backup ) {
-				if ( $backup['remote'] === $remote ) {
-					$destination = $backup['destination'];
-					break;
+		try {
+			$remote      = trim( $args[0], '/' );
+			$destination = (string) ( $assoc['destination'] ?? '' );
+			if ( '' === $destination ) {
+				foreach ( Catalog::all( true ) as $backup ) {
+					if ( $backup['remote'] === $remote ) {
+						$destination = $backup['destination'];
+						break;
+					}
 				}
 			}
-		}
-		if ( '' === $destination ) {
-			\WP_CLI::error( 'No saved destination holds that backup.' );
-		}
-		\WP_CLI::confirm( 'This replaces this site\'s files and database. Continue?', $assoc );
-		$this->run(
-			Restore_Job::from_backup(
-				array(
-					'destination' => $destination,
-					'remote'      => $remote,
-					'files'       => ! isset( $assoc['database-only'] ),
-					'database'    => ! isset( $assoc['files-only'] ),
-					'passphrase'  => isset( $assoc['passphrase-env'] ) ? (string) getenv( (string) $assoc['passphrase-env'] ) : '',
+			if ( '' === $destination ) {
+				\WP_CLI::error( 'No saved destination holds that backup.' );
+			}
+			\WP_CLI::confirm( 'This replaces this site\'s files and database. Continue?', $assoc );
+			$this->run(
+				Restore_Job::from_backup(
+					array(
+						'destination' => $destination,
+						'remote'      => $remote,
+						'files'       => ! isset( $assoc['database-only'] ),
+						'database'    => ! isset( $assoc['files-only'] ),
+						'passphrase'  => isset( $assoc['passphrase-env'] ) ? (string) getenv( (string) $assoc['passphrase-env'] ) : '',
+					)
 				)
-			)
-		);
+			);
+		} catch ( \InvalidArgumentException | \RuntimeException $e ) {
+			self::fail( $e );
+		}
 	}
 
 	/**
@@ -165,56 +177,60 @@ final class Cli {
 	 * @return void
 	 */
 	public function import( array $args, array $assoc ): void {
-		\WP_CLI::confirm( 'This replaces this site\'s content and database. Continue?', $assoc );
-		if ( isset( $assoc['deploy-env'] ) ) {
-			$code = Deploy_Code::read( (string) getenv( (string) $assoc['deploy-env'] ) );
+		try {
+			\WP_CLI::confirm( 'This replaces this site\'s content and database. Continue?', $assoc );
+			if ( isset( $assoc['deploy-env'] ) ) {
+				$code = Deploy_Code::read( (string) getenv( (string) $assoc['deploy-env'] ) );
+				$this->run(
+					Restore_Job::from_backup(
+						array(
+							'urls'       => $code['urls'],
+							'remote'     => $code['remote'],
+							'files'      => ! isset( $assoc['database-only'] ),
+							'database'   => ! isset( $assoc['files-only'] ),
+							'passphrase' => isset( $assoc['passphrase-env'] ) ? (string) getenv( (string) $assoc['passphrase-env'] ) : '',
+						)
+					)
+				);
+				return;
+			}
+			if ( ! $args ) {
+				\WP_CLI::error( 'Give an archive file or link, or --deploy-env.' );
+			}
+			$id     = Job::new_id();
+			$dir    = Work_Dir::job( $id );
+			$inputs = array();
+			foreach ( $args as $index => $source ) {
+				if ( preg_match( '#^https?://#', $source ) ) {
+					$inputs[] = array(
+						'url'  => Downloader::normalize( $source ),
+						'name' => Downloader::name_for( $source ),
+					);
+					continue;
+				}
+				if ( ! is_readable( $source ) ) {
+					\WP_CLI::error( "Cannot read {$source}." );
+				}
+				$target = $dir . '/upload-' . $index . '-' . sanitize_file_name( basename( $source ) );
+				copy( $source, $target );
+				$inputs[] = array(
+					'path' => $target,
+					'name' => basename( $source ),
+				);
+			}
 			$this->run(
-				Restore_Job::from_backup(
+				Restore_Job::from_import(
+					$inputs,
 					array(
-						'urls'       => $code['urls'],
-						'remote'     => $code['remote'],
-						'files'      => ! isset( $assoc['database-only'] ),
-						'database'   => ! isset( $assoc['files-only'] ),
-						'passphrase' => isset( $assoc['passphrase-env'] ) ? (string) getenv( (string) $assoc['passphrase-env'] ) : '',
+						'id'       => $id,
+						'files'    => ! isset( $assoc['database-only'] ),
+						'database' => ! isset( $assoc['files-only'] ),
 					)
 				)
 			);
-			return;
+		} catch ( \InvalidArgumentException | \RuntimeException $e ) {
+			self::fail( $e );
 		}
-		if ( ! $args ) {
-			\WP_CLI::error( 'Give an archive file or link, or --deploy-env.' );
-		}
-		$id     = Job::new_id();
-		$dir    = Work_Dir::job( $id );
-		$inputs = array();
-		foreach ( $args as $index => $source ) {
-			if ( preg_match( '#^https?://#', $source ) ) {
-				$inputs[] = array(
-					'url'  => Downloader::normalize( $source ),
-					'name' => Downloader::name_for( $source ),
-				);
-				continue;
-			}
-			if ( ! is_readable( $source ) ) {
-				\WP_CLI::error( "Cannot read {$source}." );
-			}
-			$target = $dir . '/upload-' . $index . '-' . sanitize_file_name( basename( $source ) );
-			copy( $source, $target );
-			$inputs[] = array(
-				'path' => $target,
-				'name' => basename( $source ),
-			);
-		}
-		$this->run(
-			Restore_Job::from_import(
-				$inputs,
-				array(
-					'id'       => $id,
-					'files'    => ! isset( $assoc['database-only'] ),
-					'database' => ! isset( $assoc['files-only'] ),
-				)
-			)
-		);
 	}
 
 	/**
@@ -261,53 +277,61 @@ final class Cli {
 	 * @return void
 	 */
 	public function destination( array $args, array $assoc ): void {
-		switch ( $args[0] ?? 'list' ) {
-			case 'add':
-				list( $record, $secrets ) = Destinations::from_input(
-					array(
-						'id'            => $assoc['id'] ?? '',
-						'type'          => $assoc['type'] ?? 's3',
-						'provider'      => $assoc['provider'] ?? 'r2',
-						'account'       => $assoc['account'] ?? '',
-						'endpoint'      => $assoc['endpoint'] ?? '',
-						'region'        => $assoc['region'] ?? '',
-						'bucket'        => $assoc['bucket'] ?? '',
-						'folder'        => $assoc['folder'] ?? '',
-						'access_key'    => $assoc['access-key'] ?? '',
-						'access_secret' => isset( $assoc['secret-key-env'] ) ? (string) getenv( (string) $assoc['secret-key-env'] ) : '',
-						'label'         => $assoc['label'] ?? '',
-					)
-				);
-				$saved                    = Settings::put_destination( $record, $secrets );
-				Catalog::flush();
-				\WP_CLI::success( 'Saved destination ' . $saved['id'] . '.' );
-				return;
-			case 'test':
-				$record = Settings::destination( (string) ( $assoc['id'] ?? '' ) ) ?? ( Settings::destinations()[0] ?? null );
-				if ( null === $record ) {
-					\WP_CLI::error( 'No such destination.' );
-				}
-				Destinations::client( $record )->test();
-				\WP_CLI::success( 'Connected: a test file was written and removed.' );
-				return;
-			case 'remove':
-				Settings::delete_destination( (string) ( $assoc['id'] ?? '' ) );
-				\WP_CLI::success( 'Removed.' );
-				return;
-			default:
-				\WP_CLI\Utils\format_items(
-					'table',
-					array_map(
-						static fn( array $r ): array => array(
-							'id'    => $r['id'],
-							'type'  => $r['type'],
-							'label' => $r['label'],
-							'ready' => Destinations::is_ready( $r ) ? 'yes' : 'no',
+		try {
+			switch ( $args[0] ?? 'list' ) {
+				case 'add':
+					list( $record, $secrets ) = Destinations::from_input(
+						array(
+							'id'            => $assoc['id'] ?? '',
+							'type'          => $assoc['type'] ?? 's3',
+							'provider'      => $assoc['provider'] ?? 'r2',
+							'account'       => $assoc['account'] ?? '',
+							'endpoint'      => $assoc['endpoint'] ?? '',
+							'region'        => $assoc['region'] ?? '',
+							'bucket'        => $assoc['bucket'] ?? '',
+							'folder'        => $assoc['folder'] ?? '',
+							'access_key'    => $assoc['access-key'] ?? '',
+							'access_secret' => isset( $assoc['secret-key-env'] ) ? (string) getenv( (string) $assoc['secret-key-env'] ) : '',
+							'label'         => $assoc['label'] ?? '',
+						)
+					);
+					$saved                    = Settings::put_destination( $record, $secrets );
+					Catalog::flush();
+					\WP_CLI::success( 'Saved destination ' . $saved['id'] . '.' );
+					return;
+				case 'test':
+					$record = Settings::destination( (string) ( $assoc['id'] ?? '' ) ) ?? ( Settings::destinations()[0] ?? null );
+					if ( null === $record ) {
+						\WP_CLI::error( 'No such destination.' );
+					}
+					Destinations::client( $record )->test();
+					\WP_CLI::success( 'Connected: a test file was written and removed.' );
+					return;
+				case 'remove':
+					if ( null === Settings::destination( (string) ( $assoc['id'] ?? '' ) ) ) {
+						// It said "Removed." for an id that was never there (a typo removed nothing).
+						\WP_CLI::error( __( 'No destination with that id. See: wp zinn-backups destination list', 'zinn-backups' ) );
+					}
+					Settings::delete_destination( (string) ( $assoc['id'] ?? '' ) );
+					\WP_CLI::success( 'Removed.' );
+					return;
+				default:
+					\WP_CLI\Utils\format_items(
+						'table',
+						array_map(
+							static fn( array $r ): array => array(
+								'id'    => $r['id'],
+								'type'  => $r['type'],
+								'label' => $r['label'],
+								'ready' => Destinations::is_ready( $r ) ? 'yes' : 'no',
+							),
+							Settings::destinations()
 						),
-						Settings::destinations()
-					),
-					array( 'id', 'type', 'label', 'ready' )
-				);
+						array( 'id', 'type', 'label', 'ready' )
+					);
+			}
+		} catch ( \InvalidArgumentException | \RuntimeException $e ) {
+			self::fail( $e );
 		}
 	}
 
@@ -400,8 +424,8 @@ final class Cli {
 					/* translators: 1: key name, 2: destination id. */
 					\WP_CLI::success( sprintf( __( 'Removed %1$s from destination %2$s.', 'zinn-backups' ), $name, (string) $record['id'] ) );
 			}
-		} catch ( \InvalidArgumentException $e ) {
-			\WP_CLI::error( $e->getMessage() );
+		} catch ( \InvalidArgumentException | \RuntimeException $e ) {
+			self::fail( $e );
 		}
 	}
 
@@ -422,43 +446,47 @@ final class Cli {
 	 * @return void
 	 */
 	public function loader( array $args ): void {
-		switch ( $args[0] ?? 'status' ) {
-			case 'install':
-			case 'remove':
-				Settings::set_keep_running( 'install' === $args[0] );
-				$result = Mu_Loader::sync();
-				if ( true !== $result ) {
-					\WP_CLI::error( $result );
-				}
-				\WP_CLI::success( 'install' === $args[0] ? __( 'The loader is in place.', 'zinn-backups' ) : __( 'The loader is removed.', 'zinn-backups' ) );
-				return;
-			case 'status':
-				$rows = array(
-					array(
-						'field' => 'setting',
-						'value' => Mu_Loader::wanted() ? 'on' : 'off',
-					),
-					array(
-						'field' => 'installed',
-						'value' => Mu_Loader::installed() ? 'yes' : 'no',
-					),
-					array(
-						'field' => 'path',
-						'value' => Mu_Loader::path(),
-					),
-					array(
-						'field' => 'loaded_by',
-						'value' => Mu_Loader::loaded_by_mu() ? 'mu-loader' : 'plugin',
-					),
-					array(
-						'field' => 'blocked',
-						'value' => Mu_Loader::blocked_reason(),
-					),
-				);
-				\WP_CLI\Utils\format_items( 'table', $rows, array( 'field', 'value' ) );
-				return;
-			default:
-				\WP_CLI::error( __( 'Use: wp zinn-backups loader status|install|remove', 'zinn-backups' ) );
+		try {
+			switch ( $args[0] ?? 'status' ) {
+				case 'install':
+				case 'remove':
+					Settings::set_keep_running( 'install' === $args[0] );
+					$result = Mu_Loader::sync();
+					if ( true !== $result ) {
+						\WP_CLI::error( $result );
+					}
+					\WP_CLI::success( 'install' === $args[0] ? __( 'The loader is in place.', 'zinn-backups' ) : __( 'The loader is removed.', 'zinn-backups' ) );
+					return;
+				case 'status':
+					$rows = array(
+						array(
+							'field' => 'setting',
+							'value' => Mu_Loader::wanted() ? 'on' : 'off',
+						),
+						array(
+							'field' => 'installed',
+							'value' => Mu_Loader::installed() ? 'yes' : 'no',
+						),
+						array(
+							'field' => 'path',
+							'value' => Mu_Loader::path(),
+						),
+						array(
+							'field' => 'loaded_by',
+							'value' => Mu_Loader::loaded_by_mu() ? 'mu-loader' : 'plugin',
+						),
+						array(
+							'field' => 'blocked',
+							'value' => Mu_Loader::blocked_reason(),
+						),
+					);
+					\WP_CLI\Utils\format_items( 'table', $rows, array( 'field', 'value' ) );
+					return;
+				default:
+					\WP_CLI::error( __( 'Use: wp zinn-backups loader status|install|remove', 'zinn-backups' ) );
+			}
+		} catch ( \InvalidArgumentException | \RuntimeException $e ) {
+			self::fail( $e );
 		}
 	}
 
@@ -489,8 +517,12 @@ final class Cli {
 	 * @return void
 	 */
 	public function status(): void {
-		$job = Runner::current();
-		\WP_CLI::line( null === $job ? 'No job.' : (string) wp_json_encode( $job->summary(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) );
+		try {
+			$job = Runner::current();
+			\WP_CLI::line( null === $job ? 'No job.' : (string) wp_json_encode( $job->summary(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) );
+		} catch ( \InvalidArgumentException | \RuntimeException $e ) {
+			self::fail( $e );
+		}
 	}
 
 	/**
@@ -499,8 +531,28 @@ final class Cli {
 	 * @return void
 	 */
 	public function cancel(): void {
-		Runner::cancel();
-		\WP_CLI::success( 'Cancelled.' );
+		try {
+			Runner::cancel();
+			\WP_CLI::success( 'Cancelled.' );
+		} catch ( \InvalidArgumentException | \RuntimeException $e ) {
+			self::fail( $e );
+		}
+	}
+
+	/**
+	 * Report a refused or failed command as a WP-CLI error (exit 1) instead of a PHP fatal.
+	 *
+	 * Bad input (InvalidArgumentException) and a refusal or storage failure (RuntimeException,
+	 * which Remote_Error extends) both carry a message written for the person at the terminal;
+	 * uncaught, PHP printed a fatal with a stack trace instead (`destination add` with no
+	 * --bucket, 1.0.6-1.0.7).
+	 *
+	 * @param \Exception $e The refusal.
+	 * @return void
+	 */
+	private static function fail( \Exception $e ): void {
+		// The messages are escaped for an admin page; a terminal wants the plain text.
+		\WP_CLI::error( html_entity_decode( $e->getMessage(), ENT_QUOTES, 'UTF-8' ) );
 	}
 
 	/**

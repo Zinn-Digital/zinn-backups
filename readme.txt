@@ -7,7 +7,7 @@ Tags: backup, restore, migration, dropbox, google drive
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -127,6 +127,9 @@ They are kept. A restore writes the backup's files over the site's; it never del
 3. Importing an UpdraftPlus backup.
 
 == Changelog ==
+
+= 1.0.8 =
+* Fix: a WP-CLI command given input it must refuse (for example destination add with no bucket) now prints the reason as an error instead of stopping with a PHP fatal error; destination remove with an unknown id is refused instead of reporting success.
 
 = 1.0.7 =
 * Keeps running when switched off: a must-use loader carries a backup or restore on, and keeps the WP-CLI commands working, if the plugin is switched off or a restored database no longer lists it (opt-in under Settings, off until you turn it on; never loads it twice). New: wp zinn-backups key set|get|remove for the storage keys, checked before saving and never printed in full; wp zinn-backups loader status|install|remove.
