@@ -41,6 +41,7 @@ On a site we host this plugin keeps itself up to date. On your own WordPress it 
 
 ## Our other WordPress plugins
 
+- **[zinn-ads](https://github.com/Zinn-Digital/zinn-ads)** — Connect a WordPress site to Zinn® Ads: conversion tracking with no code for WooCommerce, Easy Digital Downloads and the common form plugins, a Consent Mode v2 banner, an optional Cloudflare Zaraz mode, and click-fraud checks for paid clicks.
 - **[zinn-cache](https://github.com/Zinn-Digital/zinn-cache)** — A page cache and a Redis object cache for any WordPress site: the LiteSpeed server cache where there is one and its own disk cache everywhere else, smart auto-purge and a Redis cache that proves it works. Zinn® Cache Pro is an add-on on top of it. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-cache/)
 - **[zinn-chat](https://github.com/Zinn-Digital/zinn-chat)** — A complete help desk and AI assistant that runs on your own WordPress: answers visitors from your own pages with links using your own AI key, live chat with a multi-chat inbox, and support tickets in wp-admin, on a submit-a-ticket page and in the WooCommerce account area. Under 10 KB on the page, and no requests at all until a visitor opens it.
 - **[zinn-connector](https://github.com/Zinn-Digital/zinn-connector)** — Connect any WordPress site to Zinn Digital® so scheduled articles publish to it. Pair with a code from your dashboard. · [Install from WordPress.org](https://wordpress.org/plugins/zinn-connector/)
