@@ -642,7 +642,7 @@ final class Plugin {
 				$server = isset( $_POST['server'] ) && is_array( $_POST['server'] ) ? array_map( 'sanitize_file_name', wp_unslash( $_POST['server'] ) ) : array(); // phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- guard() checked the nonce; sanitize_file_name on each.
 				// Only a file the import folder itself lists can be picked, and every path below is
 				// built from that listing and a counter — never from request text. That also stops a
-				// crafted name (or the folder's own index.php / .htaccess seal) being moved, and a
+				// crafted name (or the folder's own index.html / .htaccess seal) being moved, and a
 				// request KEY (`server[../x]`, which array_map keeps) reaching the target path.
 				$picked = array_flip( array_map( 'strval', array_values( $server ) ) );
 				$inbox  = self::inbox();
@@ -689,8 +689,11 @@ final class Plugin {
 	public static function inbox(): string {
 		$dir = self::inbox_path();
 		if ( ! is_dir( $dir ) && wp_mkdir_p( $dir ) ) {
-			file_put_contents( $dir . '/index.php', "<?php\n// Silence is golden.\n" ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents -- sealing the import folder.
+			// ⛔ Never an index.php: a PHP file in uploads is a webshell's shape (Work_Dir::seal()).
+			file_put_contents( $dir . '/index.html', '' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents -- sealing the import folder.
 			file_put_contents( $dir . '/.htaccess', "Require all denied\nDeny from all\n" ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents -- see above.
+		} elseif ( is_dir( $dir ) ) {
+			Work_Dir::drop_legacy_index( $dir );
 		}
 		return $dir;
 	}
@@ -715,7 +718,7 @@ final class Plugin {
 		$dir = self::inbox_path();
 		foreach ( (array) glob( $dir . '/*' ) as $path ) {
 			$name = basename( $path );
-			if ( is_file( $path ) && ! in_array( $name, array( 'index.php', '.htaccess' ), true ) ) {
+			if ( is_file( $path ) && ! in_array( $name, array( 'index.php', 'index.html', '.htaccess' ), true ) ) {
 				$out[] = array(
 					'name' => $name,
 					'size' => (int) filesize( $path ),

@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 /**
  * ⛔ The folder name carries 32 hex characters of randomness AND is sealed (deny-all
- * `.htaccess`, `web.config`, empty `index.php`/`index.html`): a part of a backup is a copy of
+ * `.htaccess`, `web.config`, empty `index.html`; never a PHP file, see seal()): a part of a backup is a copy of
  * the site's files or database, and on nginx the `.htaccess` does nothing, so the name is the
  * control that works everywhere.
  *
@@ -163,12 +163,19 @@ final class Work_Dir {
 	/**
 	 * Make a folder unlistable and unservable.
 	 *
+	 * ⛔ NO PHP FILE. An `index.php` "Silence is golden" here is a PHP file written into
+	 * `uploads/`, the exact shape of a webshell: it fired our own CRITICAL Falco rule
+	 * FalcoWebshellIndicator on 2026-11-05 22:23Z, and a host's scanner would flag every
+	 * customer of this plugin the same way. `index.html` stops a listing, `.htaccess` and
+	 * `web.config` deny serving, and the random name is the control on every server.
+	 * A copy written by an older version is removed, only when its bytes are exactly ours.
+	 *
 	 * @param string $dir Absolute path.
 	 * @return void
 	 */
 	private static function seal( string $dir ): void {
+		self::drop_legacy_index( $dir );
 		$files = array(
-			'index.php'  => "<?php\n// Silence is golden.\n",
 			'index.html' => '',
 			'.htaccess'  => "Require all denied\nDeny from all\nOptions -Indexes\n",
 			'web.config' => "<?xml version=\"1.0\"?>\n<configuration><system.webServer><authorization><deny users=\"*\" /></authorization></system.webServer></configuration>\n",
@@ -178,6 +185,25 @@ final class Work_Dir {
 			if ( ! file_exists( $path ) ) {
 				file_put_contents( $path, $body ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents -- sealing our own private folder.
 			}
+		}
+	}
+
+	/**
+	 * The `index.php` an older version wrote into a sealed folder, byte for byte.
+	 */
+	public const LEGACY_INDEX = "<?php\n// Silence is golden.\n";
+
+	/**
+	 * Remove an `index.php` that an older version wrote, and nothing else: a file whose bytes
+	 * differ is not ours and stays where it is.
+	 *
+	 * @param string $dir Absolute path.
+	 * @return void
+	 */
+	public static function drop_legacy_index( string $dir ): void {
+		$path = $dir . '/index.php';
+		if ( is_file( $path ) && ! is_link( $path ) && filesize( $path ) === strlen( self::LEGACY_INDEX ) && self::LEGACY_INDEX === file_get_contents( $path ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- a local file.
+			wp_delete_file( $path );
 		}
 	}
 }
