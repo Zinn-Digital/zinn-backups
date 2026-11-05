@@ -700,6 +700,14 @@ msgstr "இணைப்பு HTTP %d உடன் பதிலளித்த�
 msgid "The file list could not be written."
 msgstr "கோப்புப் பட்டியலை எழுத முடியவில்லை."
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "இந்தத் தளத்தின் PHP-யால் சுருக்கப்பட்ட கோப்புகளைப் படிக்கவோ எழுதவோ முடியவில்லை (zlib இல்லை அல்லது ஹோஸ்ட்டால் gzopen முடக்கப்பட்டுள்ளது), எனவே இந்த காப்புப் பிரதி படிநிலையை இயக்க முடியவில்லை."
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "சுருக்கப்பட்ட காப்புப் பிரதி கோப்பைத் திறக்க முடியவில்லை. wp-content கோப்பகத்தில் போதுமான இடம் உள்ளதா எனச் சரிபார்க்கவும்."
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1006,12 +1014,12 @@ msgid "Restore complete."
 msgstr "மீட்டமைத்தல் முடிந்தது."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d வினாடிகளில் மீண்டும் முயற்சிக்கிறது."
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "ரத்துசெய்யப்பட்டது."
 

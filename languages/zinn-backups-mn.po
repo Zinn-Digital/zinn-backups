@@ -700,6 +700,14 @@ msgstr "Холбоос HTTP %d хариу өглөө."
 msgid "The file list could not be written."
 msgstr "Файлын жагсаалтыг бичиж чадсангүй."
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "Энэ сайтын PHP нь шахагдсан файлуудыг унших эсвэл бичих боломжгүй байна (zlib дутуу эсвэл хост gzopen-ийг идэвхгүй болгосон), тиймээс энэхүү нөөцлөлтийн алхмыг ажиллуулах боломжгүй байлаа."
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "Шахсан нөөц хуулбарын файлыг нээж чадсангүй. wp-content хавтсанд сул зай байгаа эсэхийг шалгана уу."
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1006,12 +1014,12 @@ msgid "Restore complete."
 msgstr "Сэргээж дууслаа."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d секундийн дараа дахин оролдоно."
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "Цуцлагдсан."
 

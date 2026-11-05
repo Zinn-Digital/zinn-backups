@@ -700,6 +700,14 @@ msgstr "లింక్ HTTP %d తో ప్రతిస్పందించ�
 msgid "The file list could not be written."
 msgstr "ఫైల్ జాబితా రాయడం సాధ్యపడలేదు."
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "ఈ సైట్ యొక్క PHP కంప్రెస్ చేసిన ఫైల్‌లను చదవలేదు లేదా రాయలేదు (zlib లేదు లేదా హోస్ట్ ద్వారా gzopen నిలిపివేయబడింది), కాబట్టి ఈ బ్యాకప్ దశను అమలు చేయడం సాధ్యపడలేదు."
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "కుదించబడిన బ్యాకప్ ఫైల్‌ను తెరవడం సాధ్యం కాలేదు. wp-content లో ఖాళీ స్థలం ఉందో లేదో తనిఖీ చేయండి."
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1006,12 +1014,12 @@ msgid "Restore complete."
 msgstr "పునరుద్ధరణ పూర్తయింది."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d సెకన్లలో మళ్లీ ప్రయత్నిస్తోంది."
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "రద్దు చేయబడింది."
 

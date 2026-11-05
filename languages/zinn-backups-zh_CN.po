@@ -698,6 +698,14 @@ msgstr "链接返回了 HTTP %d。"
 msgid "The file list could not be written."
 msgstr "无法写入文件列表。"
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "该站点的 PHP 无法读取或写入压缩文件（缺少 zlib 或主机禁用了 gzopen），因此无法运行此备份步骤。"
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "无法打开压缩的备份文件。请检查 wp-content 是否有可用空间。"
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1003,12 +1011,12 @@ msgid "Restore complete."
 msgstr "恢复完成。"
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — 将在 %2$d 秒后重试。"
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "已取消。"
 

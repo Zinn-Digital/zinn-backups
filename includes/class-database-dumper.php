@@ -62,7 +62,7 @@ final class Database_Dumper {
 	public static function dump( string $file, array $cursor, float $deadline ): array {
 		global $wpdb;
 		$tables = (array) $cursor['tables'];
-		$gz     = gzopen( $file, 'ab6' );
+		$gz     = Gz::open( $file, 'ab6' );
 		if ( false === $gz ) {
 			throw new \RuntimeException( esc_html__( 'The database file could not be written. Check that wp-content has free space.', 'zinn-backups' ) );
 		}

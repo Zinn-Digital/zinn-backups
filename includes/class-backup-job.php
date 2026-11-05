@@ -533,7 +533,7 @@ final class Backup_Job extends Job {
 	 */
 	public static function gzip( string $from, string $to ): void {
 		$in  = fopen( $from, 'rb' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- streaming compression of our own work file.
-		$out = gzopen( $to, 'wb6' );
+		$out = Gz::open( $to, 'wb6' );
 		while ( ! feof( $in ) ) {
 			gzwrite( $out, (string) fread( $in, 1048576 ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fread -- see above.
 		}

@@ -78,7 +78,7 @@ final class Uploads_Pruner {
 	 * @throws \RuntimeException When the index cannot be read (nothing is deleted then).
 	 */
 	public static function keep_set( string $index_gz ): array {
-		$gz = is_readable( $index_gz ) ? gzopen( $index_gz, 'rb' ) : false;
+		$gz = ( zinn_backups_can_call( 'gzopen' ) && is_readable( $index_gz ) ) ? gzopen( $index_gz, 'rb' ) : false;
 		if ( false === $gz ) {
 			throw new \RuntimeException( esc_html__( 'The backup’s file list could not be read, so no leftover uploads were deleted.', 'zinn-backups' ) );
 		}

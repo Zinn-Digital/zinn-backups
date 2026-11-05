@@ -700,6 +700,14 @@ msgstr "ലിങ്ക് HTTP %d ഉപയോഗിച്ച് മറുപ�
 msgid "The file list could not be written."
 msgstr "ഫയൽ ലിസ്റ്റ് എഴുതാൻ കഴിഞ്ഞില്ല."
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "ഈ സൈറ്റിന്റെ PHP-ക്ക് കംപ്രസ്സ് ചെയ്ത ഫയലുകൾ വായിക്കാനോ എഴുതാനോ കഴിയില്ല (zlib ലഭ്യമല്ല അല്ലെങ്കിൽ ഹോസ്റ്റ് gzopen പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു), അതിനാൽ ഈ ബാക്കപ്പ് ഘട്ടം പ്രവർത്തിപ്പിക്കാൻ കഴിഞ്ഞില്ല."
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "കംപ്രസ് ചെയ്‌ത ബാക്കപ്പ് ഫയൽ തുറക്കാൻ കഴിഞ്ഞില്ല. wp-content-ൽ ആവശ്യത്തിന് ഇടമുണ്ടോയെന്ന് പരിശോധിക്കുക."
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1006,12 +1014,12 @@ msgid "Restore complete."
 msgstr "പുനഃസ്ഥാപിക്കൽ പൂർത്തിയായി."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d സെക്കൻഡിനുള്ളിൽ വീണ്ടും ശ്രമിക്കുന്നു."
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "റദ്ദാക്കി."
 

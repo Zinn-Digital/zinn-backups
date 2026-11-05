@@ -700,6 +700,14 @@ msgstr "Sumagot ang link gamit ang HTTP %d."
 msgid "The file list could not be written."
 msgstr "Hindi maisulat ang listahan ng file."
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "Hindi mabasa o maisulat ng PHP ng site na ito ang mga na-compress na file (nawawala ang zlib o hindi pinapagana ng host ang gzopen), kaya hindi maipatakbo ang hakbang na ito sa backup."
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "Hindi mabuksan ang isang naka-compress na backup file. Suriin kung may libreng espasyo ang wp-content."
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1006,12 +1014,12 @@ msgid "Restore complete."
 msgstr "Kumpleto na ang pag-restore."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — sinusubukang muli sa loob ng %2$d segundo."
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "Kinansela."
 

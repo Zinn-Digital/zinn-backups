@@ -698,6 +698,14 @@ msgstr "ລິ້ງຕອບກັບດ້ວຍ HTTP %d."
 msgid "The file list could not be written."
 msgstr "ບໍ່ສາມາດຂຽນລາຍການໄຟລ໌ໄດ້."
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "PHP ຂອງເວັບໄຊນີ້ບໍ່ສາມາດອ່ານ ຫຼື ຂຽນໄຟລ໌ທີ່ຖືກບີບອັດໄດ້ (zlib ຂາດຫາຍໄປ ຫຼື gzopen ຖືກປິດໃຊ້ງານໂດຍໂຮສຕ໌), ດັ່ງນັ້ນຂັ້ນຕອນການສຳຮອງຂໍ້ມູນນີ້ຈຶ່ງບໍ່ສາມາດດຳເນີນການໄດ້."
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "ບໍ່ສາມາດເປີດໄຟລ໌ສຳຮອງທີ່ຖືກບີບອັດໄດ້. ກະລຸນາກວດສອບວ່າມີພື້ນທີ່ຫວ່າງໃນ wp-content."
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1003,12 +1011,12 @@ msgid "Restore complete."
 msgstr "ການກູ້ຄືນສຳເລັດແລ້ວ."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — ກຳລັງລອງໃໝ່ອີກຄັ້ງໃນ %2$d ວິນາທີ."
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "ຍົກເລີກແລ້ວ."
 

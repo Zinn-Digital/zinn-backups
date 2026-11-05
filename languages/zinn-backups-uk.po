@@ -702,6 +702,14 @@ msgstr "Посилання відповіло з HTTP %d."
 msgid "The file list could not be written."
 msgstr "Не вдалося записати список файлів."
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "PHP цього сайту не може читати або записувати стислі файли (відсутній zlib або gzopen вимкнено хостингом), тому цей крок резервного копіювання не вдалося виконати."
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "Не вдалося відкрити стиснутий файл резервної копії. Перевірте, чи є вільне місце у wp-content."
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1009,12 +1017,12 @@ msgid "Restore complete."
 msgstr "Відновлення завершено."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — повторна спроба через %2$d с."
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "Скасовано."
 

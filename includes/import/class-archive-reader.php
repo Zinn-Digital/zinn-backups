@@ -38,7 +38,7 @@ final class Archive_Reader {
 			return 'zip';
 		}
 		if ( str_starts_with( $head, "\x1f\x8b" ) ) {
-			$gz    = gzopen( $file, 'rb' );
+			$gz    = \ZinnDigital\Backups\Gz::open( $file, 'rb' );
 			$inner = (string) gzread( $gz, 512 );
 			gzclose( $gz );
 			if ( strlen( $inner ) >= 262 && 'ustar' === substr( $inner, 257, 5 ) ) {
@@ -190,7 +190,7 @@ final class Archive_Reader {
 	 * @return array
 	 */
 	private static function walk_tar( string $file, bool $gz, array $cursor, callable $route, float $deadline, int $max ): array {
-		$in     = $gz ? gzopen( $file, 'rb' ) : fopen( $file, 'rb' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- streaming an archive.
+		$in     = $gz ? \ZinnDigital\Backups\Gz::open( $file, 'rb' ) : fopen( $file, 'rb' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- streaming an archive.
 		$offset = (int) ( $cursor['offset'] ?? 0 );
 		$read   = static fn( int $n ): string => (string) ( $gz ? gzread( $in, $n ) : fread( $in, $n ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fread -- see above.
 		if ( $gz ) {

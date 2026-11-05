@@ -698,6 +698,14 @@ msgstr "ลิงก์ตอบกลับด้วย HTTP %d"
 msgid "The file list could not be written."
 msgstr "ไม่สามารถเขียนรายการไฟล์ได้"
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "PHP ของไซต์นี้ไม่สามารถอ่านหรือเขียนไฟล์ที่บีบอัดได้ (ไม่มี zlib หรือ gzopen ถูกปิดใช้งานโดยโฮสต์) ดังนั้นขั้นตอนการสำรองข้อมูลนี้จึงไม่สามารถทำงานได้"
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "ไม่สามารถเปิดไฟล์สำรองข้อมูลที่ถูกบีบอัดได้ โปรดตรวจสอบว่า wp-content มีพื้นที่ว่างเพียงพอ"
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1003,12 +1011,12 @@ msgid "Restore complete."
 msgstr "กู้คืนเสร็จสมบูรณ์"
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — กำลังลองอีกครั้งในอีก %2$d วินาที"
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "ยกเลิกแล้ว"
 

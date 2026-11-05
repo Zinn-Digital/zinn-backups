@@ -229,7 +229,7 @@ final class Restore_Job extends Job {
 			}
 			// Group the wanted entries by the part that holds their current copy.
 			$want = array();
-			$gz   = gzopen( $index, 'rb' );
+			$gz   = Gz::open( $index, 'rb' );
 			while ( ! gzeof( $gz ) ) {
 				$line = gzgets( $gz );
 				$row  = is_string( $line ) ? json_decode( $line, true ) : null;

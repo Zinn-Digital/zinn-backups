@@ -85,7 +85,7 @@ final class Sql_Importer {
 	public static function import( string $file, array $cursor, float $deadline ): array {
 		global $wpdb;
 		$gz = self::is_gzip( $file );
-		$in = $gz ? gzopen( $file, 'rb' ) : fopen( $file, 'rb' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- streaming a database dump.
+		$in = $gz ? Gz::open( $file, 'rb' ) : fopen( $file, 'rb' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- streaming a database dump.
 		if ( false === $in ) {
 			throw new \RuntimeException( esc_html__( 'The database file could not be opened.', 'zinn-backups' ) );
 		}
@@ -382,7 +382,7 @@ final class Sql_Importer {
 	 */
 	private static function head( string $file, int $bytes ): string {
 		if ( self::is_gzip( $file ) ) {
-			$gz   = gzopen( $file, 'rb' );
+			$gz   = Gz::open( $file, 'rb' );
 			$data = (string) gzread( $gz, $bytes );
 			gzclose( $gz );
 			return $data;

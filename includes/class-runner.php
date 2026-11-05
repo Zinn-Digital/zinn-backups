@@ -151,7 +151,9 @@ final class Runner {
 	 */
 	private static function run( Job $job, float $deadline ): void {
 		wp_raise_memory_limit( 'admin' );
-		ignore_user_abort( true );
+		if ( zinn_backups_can_call( 'ignore_user_abort' ) ) { // Hosts may disable it; a fatal here would stop every backup (docs/72).
+			ignore_user_abort( true );
+		}
 		while ( $job->running() && microtime( true ) < $deadline ) {
 			try {
 				$job->step( $deadline );

@@ -700,6 +700,14 @@ msgstr "Հղումը պատասխանեց HTTP %d-ով:"
 msgid "The file list could not be written."
 msgstr "Չհաջողվեց գրանցել ֆայլերի ցանկը:"
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "Այս կայքի PHP-ն չի կարող կարդալ կամ գրել սեղմված ֆայլեր (zlib-ը բացակայում է կամ gzopen-ը անջատված է հոսթի կողմից), ուստի պահուստավորման այս քայլը չհաջողվեց գործարկել։"
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "Չհաջողվեց բացել սեղմված պահուստային ֆայլը: Ստուգեք, որ wp-content-ն ունենա ազատ տարածություն:"
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1006,12 +1014,12 @@ msgid "Restore complete."
 msgstr "Վերականգնումն ավարտվեց:"
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — կրկին փորձ %2$d վայրկյանից։"
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "Չեղարկված է:"
 

@@ -698,6 +698,14 @@ msgstr "តំណភ្ជាប់បានឆ្លើយតបជាមួយ
 msgid "The file list could not be written."
 msgstr "មិនអាចសរសេរបញ្ជីឯកសារបានទេ។"
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "PHP របស់គេហទំព័រនេះមិនអាចអាន ឬសរសេរឯកសារដែលបានបង្ហាប់បានទេ (បាត់ zlib ឬ gzopen ត្រូវបានបិទដោយម៉ាស៊ីនមេ) ដូច្នេះជំហានបម្រុងទុកនេះមិនអាចដំណើរការបានទេ។"
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "មិនអាចបើកឯកសារបម្រុងទុកដែលបានបង្ហាប់បានទេ។ សូមពិនិត្យមើលថា wp-content មានទំហំទំនេរ។"
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1003,12 +1011,12 @@ msgid "Restore complete."
 msgstr "ការស្តារឡើងវិញបានបញ្ចប់។"
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — កំពុងព្យាយាមម្ដងទៀតក្នុងរយៈពេល %2$d វិនាទី។"
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "បានបោះបង់។"
 

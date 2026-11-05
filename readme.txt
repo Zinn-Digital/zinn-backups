@@ -7,7 +7,7 @@ Tags: backup, restore, migration, dropbox, google drive
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -129,6 +129,9 @@ If you want the uploads folder to match the backup exactly (for example to remov
 3. Importing an UpdraftPlus backup.
 
 == Changelog ==
+
+= 1.0.10 =
+* Fix: no longer crashes on hosts that disable PHP functions such as gzopen or ignore_user_abort; each call is checked first and a backup step that cannot run says why.
 
 = 1.0.9 =
 * New: the ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS constant deletes, after a files restore, the uploads files that are not in the backup (off by default; left-out folders and symbolic links are never touched).

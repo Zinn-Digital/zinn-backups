@@ -700,6 +700,14 @@ msgstr "लिङ्कले HTTP %d मार्फत प्रतिक्�
 msgid "The file list could not be written."
 msgstr "फाइल सूची लेख्न सकिएन।"
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "यस साइटको PHP ले कम्प्रेस गरिएका फाइलहरू पढ्न वा लेख्न सक्दैन (zlib हराइरहेको छ वा होस्टद्वारा gzopen असक्षम गरिएको छ), त्यसैले यो ब्याकअप चरण चलाउन सकिएन।"
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "सङ्कुचित ब्याकअप फाइल खोल्न सकिएन। wp-content मा खाली ठाउँ छ कि छैन जाँच गर्नुहोस्।"
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1006,12 +1014,12 @@ msgid "Restore complete."
 msgstr "पुनर्स्थापना पूरा भयो।"
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d सेकेन्डमा पुन: प्रयास गर्दैछ।"
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "रद्द गरियो।"
 

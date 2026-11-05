@@ -700,6 +700,14 @@ msgstr "ربط نے HTTP %d کے ساتھ جواب دیا۔"
 msgid "The file list could not be written."
 msgstr "فائلوں کی فہرست لکھی نہیں جا سکی۔"
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "اس سائٹ کا PHP کمپریسڈ فائلوں کو پڑھ یا لکھ نہیں سکتا (zlib غائب ہے یا ہوسٹ نے gzopen کو غیر فعال کر دیا ہے)، اس لیے بیک اپ کا یہ مرحلہ نہیں چل سکا۔"
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "دبائی گئی بیک اپ فائل کھولی نہیں جا سکی۔ براہ کرم چیک کریں کہ wp-content میں خالی جگہ موجود ہے۔"
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1006,12 +1014,12 @@ msgid "Restore complete."
 msgstr "بحالی مکمل ہو گئی۔"
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — %2$d سیکنڈ میں دوبارہ کوشش کی جا رہی ہے۔"
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "منسوخ کر دیا گیا۔"
 

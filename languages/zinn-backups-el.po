@@ -700,6 +700,14 @@ msgstr "Ο σύνδεσμος απάντησε με HTTP %d."
 msgid "The file list could not be written."
 msgstr "Δεν ήταν δυνατή η εγγραφή της λίστας αρχείων."
 
+#: includes/class-gz.php:32
+msgid "This site's PHP cannot read or write compressed files (zlib is missing or gzopen is disabled by the host), so this backup step could not run."
+msgstr "Η PHP αυτού του ιστότοπου δεν μπορεί να διαβάσει ή να γράψει συμπιεσμένα αρχεία (λείπει το zlib ή το gzopen είναι απενεργοποιημένο από τον πάροχο φιλοξενίας), επομένως αυτό το βήμα αντιγράφου ασφαλείας δεν ήταν δυνατό να εκτελεστεί."
+
+#: includes/class-gz.php:36
+msgid "A compressed backup file could not be opened. Check that wp-content has free space."
+msgstr "Δεν ήταν δυνατό το άνοιγμα ενός συμπιεσμένου αρχείου αντιγράφου ασφαλείας. Ελέγξτε εάν υπάρχει ελεύθερος χώρος στον φάκελο wp-content."
+
 #. translators: %s: the network error message.
 #: includes/class-http.php:46
 #, php-format
@@ -1006,12 +1014,12 @@ msgid "Restore complete."
 msgstr "Η επαναφορά ολοκληρώθηκε."
 
 #. translators: 1: error message, 2: seconds until the retry.
-#: includes/class-runner.php:165
+#: includes/class-runner.php:167
 #, php-format
 msgid "%1$s — trying again in %2$d seconds."
 msgstr "%1$s — νέα προσπάθεια σε %2$d δευτερόλεπτα."
 
-#: includes/class-runner.php:194
+#: includes/class-runner.php:196
 msgid "Cancelled."
 msgstr "Ακυρώθηκε."
 
