@@ -49,30 +49,30 @@ msgid "Working…"
 msgstr "処理中…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:345
+#: includes/class-admin.php:348
 msgid "Finished"
 msgstr "完了"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:346
+#: includes/class-admin.php:349
 msgid "Failed"
 msgstr "失敗"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:347
+#: includes/class-admin.php:350
 msgid "Cancelled"
 msgstr "キャンセル済み"
 
 #: includes/class-admin.php:114
 #: includes/class-admin.php:271
-#: includes/class-admin.php:316
+#: includes/class-admin.php:319
 msgid "Cancel"
 msgstr "キャンセル"
 
 #: includes/class-admin.php:115
 #: includes/class-admin.php:313
-#: includes/class-admin.php:316
-#: includes/class-restore-job.php:136
+#: includes/class-admin.php:319
+#: includes/class-restore-job.php:139
 msgid "Restore"
 msgstr "復元"
 
@@ -185,19 +185,19 @@ msgstr "バックアップの対象"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files and database"
 msgstr "ファイルとデータベース"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Database only"
 msgstr "データベースのみ"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files only"
 msgstr "ファイルのみ"
 
@@ -225,245 +225,249 @@ msgstr "このバックアップを復元"
 msgid "Passphrase"
 msgstr "パスフレーズ"
 
-#: includes/class-admin.php:315
+#: includes/class-admin.php:316
+msgid "I understand this replaces this site’s files and database with the backup’s. Files in the uploads folder that are not in the backup are DELETED (ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS is set); other files that are not in the backup are kept."
+msgstr "これにより、このサイトのファイルとデータベースがバックアップのものに置き換わることを理解しています。バックアップに含まれていない uploads フォルダー内のファイルは削除されます (ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS が設定されています)。バックアップに含まれていないその他のファイルは保持されます。"
+
+#: includes/class-admin.php:317
 msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
 msgstr "これにより、このサイトのファイルとデータベースがバックアップのものに置き換わることを理解しています。バックアップに含まれていないファイルは保持されます。"
 
-#: includes/class-admin.php:321
+#: includes/class-admin.php:324
 msgid "Recent activity"
 msgstr "最近のアクティビティ"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 #: includes/class-backup-job.php:104
 msgid "Backup"
 msgstr "バックアップ"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 msgid "Restore / import"
 msgstr "復元 / インポート"
 
-#: includes/class-admin.php:348
+#: includes/class-admin.php:351
 msgid "Running"
 msgstr "実行中"
 
-#: includes/class-admin.php:360
+#: includes/class-admin.php:363
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "ストレージ"
 
-#: includes/class-admin.php:362
+#: includes/class-admin.php:365
 msgid "No storage yet. Choose where your backups go below."
 msgstr "まだストレージがありません。バックアップの保存先を以下から選択してください。"
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Ready"
 msgstr "準備完了"
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Not connected"
 msgstr "未接続"
 
-#: includes/class-admin.php:373
+#: includes/class-admin.php:376
 msgid "Connect"
 msgstr "接続"
 
-#: includes/class-admin.php:374
+#: includes/class-admin.php:377
 msgid "Test"
 msgstr "テスト"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:378
 msgid "Edit"
 msgstr "編集"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:379
 msgid "Remove"
 msgstr "削除"
 
-#: includes/class-admin.php:382
+#: includes/class-admin.php:385
 msgid "Add storage"
 msgstr "ストレージを追加"
 
-#: includes/class-admin.php:386
+#: includes/class-admin.php:389
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "バックアップは1つの保存先に送信されます。別の保存先を使用するには、上記の設定を編集または削除してください。"
 
-#: includes/class-admin.php:397
+#: includes/class-admin.php:400
 msgid "Kind of storage"
 msgstr "ストレージの種類"
 
-#: includes/class-admin.php:402
+#: includes/class-admin.php:405
 msgid "Name (for you)"
 msgstr "名前 (自分用)"
 
-#: includes/class-admin.php:404
+#: includes/class-admin.php:407
 msgid "Provider"
 msgstr "プロバイダー"
 
-#: includes/class-admin.php:409
+#: includes/class-admin.php:412
 msgid "Cloudflare account id"
 msgstr "Cloudflare アカウント ID"
 
-#: includes/class-admin.php:410
+#: includes/class-admin.php:413
 msgid "Endpoint address"
 msgstr "エンドポイントアドレス"
 
-#: includes/class-admin.php:411
+#: includes/class-admin.php:414
 msgid "Region"
 msgstr "リージョン"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:415
 msgid "Bucket"
 msgstr "バケット"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:416
 msgid "Access key id"
 msgstr "アクセスキー ID"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Secret access key"
 msgstr "シークレットアクセスキー"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Leave empty to keep the saved key"
 msgstr "保存されたキーを保持するには空のままにしてください"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:418
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "Cloudflare R2 の場合: Cloudflare ダッシュボードで R2 を開き、バケットを作成したら、「Manage R2 API tokens」→ そのバケット用の Object Read & Write 権限を持つトークンを作成し、access key id と secret をここにコピーしてください。"
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:421
 msgid "Dropbox app key"
 msgstr "Dropbox アプリキー"
 
-#: includes/class-admin.php:419
+#: includes/class-admin.php:422
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "dropbox.com/developers/apps で files.content.read、files.content.write、files.metadata.read のアクセス権を持つアプリを作成し (Scoped access、App folder)、その App key をここにコピーしてください。保存してから Connect を押します。"
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:424
 msgid "OAuth client id"
 msgstr "OAuth クライアント ID"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "OAuth client secret"
 msgstr "OAuth クライアントシークレット"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "Leave empty to keep the saved secret"
 msgstr "保存されたシークレットを維持する場合は空欄のままにしてください"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "Google Cloud Console で Google Drive API を有効にし、このアドレスを承認済みのリダイレクト URI として「Web application」タイプの OAuth クライアントを作成してください:"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "保存してから、「接続」を押してください。プラグインは自身が作成したファイルのみを参照します。"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:428
 msgid "Folder inside the storage (optional)"
 msgstr "ストレージ内のフォルダー (オプション)"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:429
 msgid "Save storage"
 msgstr "ストレージを節約"
 
-#: includes/class-admin.php:436
+#: includes/class-admin.php:439
 msgid "Import a backup from another plugin or host"
 msgstr "別のプラグインまたはホストからバックアップをインポート"
 
-#: includes/class-admin.php:437
+#: includes/class-admin.php:440
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "UpdraftPlus、All-in-One WP Migration (.wpress)、Duplicator (zip)、BackWPup、WPvivid、Jetpack VaultPress Backup、BlogVault、Zinn® Migrate で作成されたバックアップ、または .sql ダンプを含む WordPress サイトの zip/tar アーカイブからサイトをインポートします。コンテンツは wp-content に配置され、データベースはこのサイトのデータベースと置き換わります。アドレスはこのサイトのアドレスに自動的に変更されます。"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Upload from your computer"
 msgstr "コンピューターからアップロード"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "バックアップのすべてのファイルを一度に選択してください (UpdraftPlus は複数のファイルを作成します)。大きなファイルは小さな断片に分割して送信されるため、ホストのアップロード制限は適用されません。"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "またはリンクから (Google Drive、Dropbox、または任意のダウンロードアドレス)"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "1行につき1つのリンク。Google Drive および Dropbox の場合は、ファイルを「リンクを知っている全員」と共有してそのリンクを貼り付け、後で共有を再度オフにしてください。"
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:445
 msgid "Or a file already on this server"
 msgstr "または、このサーバー上に既にあるファイル"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:450
+#: includes/class-admin.php:453
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "FTP またはホストのファイルマネージャーを使用してアーカイブを %s にアップロードし、このページを再読み込みしてください。"
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Or a deploy code from another site"
 msgstr "または別のサイトからのデプロイコード"
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "別のサイトから Zinn® Backups のデプロイコードを取得した場合は、ストレージキーを共有することなくそのバックアップをこのサイトにコピーするために、ここに貼り付けてください。コードの有効期間は数時間です。パスワードのように扱ってください。"
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "パスフレーズ (そのバックアップが暗号化されている場合のみ)"
 
-#: includes/class-admin.php:456
-#: includes/class-admin.php:458
+#: includes/class-admin.php:459
+#: includes/class-admin.php:461
 msgid "Import"
 msgstr "インポート"
 
-#: includes/class-admin.php:457
+#: includes/class-admin.php:460
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "インポートによってこのサイトのコンテンツとデータベースが置き換えられることを理解しています。完了後は、インポート元のサイトのアカウントでサインインしてください。"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Moving to Zinn® hosting?"
 msgstr "Zinn®ホスティングへ移行中ですか ?"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "Zinn Digital®はお客様のサイトを以前のホストから代わりに移行できます。以前のホストで FTP、SSH、コントロールパネルへのアクセス権がない場合は、以前のサイトに Zinn® Migrate をインストールしてください。ここへインポートするか Zinn®に渡すことができる単一のアーカイブが作成されます。"
 
-#: includes/class-admin.php:470
+#: includes/class-admin.php:473
 msgid "What goes into a backup"
 msgstr "バックアップに含まれるもの"
 
-#: includes/class-admin.php:471
+#: includes/class-admin.php:474
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "WordPress 自身のファイル (wp-admin、wp-includes) を含める。通常は不要です: WordPress はいつでも再インストールできます。"
 
-#: includes/class-admin.php:472
+#: includes/class-admin.php:475
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "これらのフォルダーまたはファイルも除外してください (1行に1つ、WordPress フォルダーからの相対パス)"
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:476
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "常に除外されるもの: キャッシュ、更新用の一時作業領域、他のバックアッププラグイン独自のアドオンアーカイブフォルダー:"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:477
 msgid "Size of each part (MB)"
 msgstr "各パーツのサイズ (MB)"
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:478
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "プラグインがオフのときもバックアップを継続する"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:479
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "有効化しない限りオフになります。このプラグインが無効化されている場合や、復元されたデータベースでアクティブとしてリストされなくなった場合でも、バックアップ、復元、および WP-CLI コマンドを実行し続けます。これにより、must-use プラグインフォルダーに小さなローダーが配置されます。"
 
-#: includes/class-admin.php:481
+#: includes/class-admin.php:484
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "ローダーが配置されていません。元に戻すには設定を保存してください。"
 
-#: includes/class-admin.php:487
+#: includes/class-admin.php:490
 msgid "Save settings"
 msgstr "設定を保存"
 
@@ -480,7 +484,7 @@ msgid "Connect a storage destination on the Storage tab first: backups are kept 
 msgstr "まず Storage タブでストレージの保存先を接続してください。バックアップはこのサーバー上ではなく、お客様ご自身のストレージに保持されます。"
 
 #: includes/class-backup-job.php:45
-#: includes/class-restore-job.php:108
+#: includes/class-restore-job.php:110
 msgid "Multisite networks are not supported yet."
 msgstr "マルチサイトネットワークはまだサポートされていません。"
 
@@ -554,7 +558,7 @@ msgid "That is not a backup folder."
 msgstr "それはバックアップフォルダーではありません。"
 
 #: includes/class-catalog.php:138
-#: includes/class-restore-job.php:186
+#: includes/class-restore-job.php:190
 msgid "That storage destination is no longer saved on this site."
 msgstr "その保存先はこのサイトに保存されていません。"
 
@@ -562,45 +566,51 @@ msgstr "その保存先はこのサイトに保存されていません。"
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "それ以降の増分バックアップはこのバックアップに基づいています。先にそれらを削除してください。"
 
-#: includes/class-cli.php:367
+#: includes/class-cli.php:313
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "その ID の宛先はありません。次を参照してください: wp zinn-backups destination list"
+
+#: includes/class-cli.php:391
 msgid "Use: wp zinn-backups key set|get|remove [<name>]"
 msgstr "使用法: wp zinn-backups key set|get|remove [<name>]"
 
-#: includes/class-cli.php:371
+#: includes/class-cli.php:395
 msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
 msgstr "コマンドラインにキーを入力しないでください。STDIN 経由でパイプするか、--from-env で環境変数を指定してください。"
 
 #. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
-#: includes/class-cli.php:390
+#: includes/class-cli.php:414
 #, php-format
 msgid "Saved %1$s for destination %2$s: %3$s"
 msgstr "宛先 %2$s の %1$s を保存しました: %3$s"
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:396
+#: includes/class-cli.php:420
 #, php-format
 msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
 msgstr "送信先 %2$s から %1$s を削除しますか ?新しい送信先が設定されるまで、そこへのバックアップは停止します。"
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:401
+#: includes/class-cli.php:425
 #, php-format
 msgid "Removed %1$s from destination %2$s."
 msgstr "送信先 %2$s から %1$s を削除しました。"
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is in place."
 msgstr "ローダーは配置されています。"
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is removed."
 msgstr "ローダーが削除されました。"
 
-#: includes/class-cli.php:461
+#: includes/class-cli.php:486
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "使用法: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:476
+#: includes/class-cli.php:504
 msgid "That environment variable is not set or is empty."
 msgstr "その環境変数が設定されていないか、空です。"
 
@@ -619,11 +629,6 @@ msgstr "キーが指定されていません。STDIN からパイプで渡すか
 #, php-format
 msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
 msgstr "これは有効な %s ではないようです (長さが正しくないか、この種のキーには含まれない文字が含まれています)。何も保存されませんでした。"
-
-#: includes/class-connection-keys.php:182
-#: includes/class-settings.php:241
-msgid "No destination with that id. See: wp zinn-backups destination list"
-msgstr "その ID の宛先はありません。次を参照してください: wp zinn-backups destination list"
 
 #: includes/class-connection-keys.php:191
 msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
@@ -851,135 +856,149 @@ msgstr "このプラグインに対するホスティング利用者向け割引
 msgid "We could not get your code just now. Please try again in a few minutes."
 msgstr "今すぐコードを取得できませんでした。数分後にもう一度お試しください。"
 
-#: includes/class-restore-job.php:128
+#: includes/class-restore-job.php:130
 msgid "Reading the backup"
 msgstr "バックアップを読み込んでいます"
 
-#: includes/class-restore-job.php:129
+#: includes/class-restore-job.php:131
 msgid "Downloading the archive"
 msgstr "アーカイブをダウンロード中"
 
-#: includes/class-restore-job.php:130
+#: includes/class-restore-job.php:132
 msgid "Recognising the archive"
 msgstr "アーカイブを認識中"
 
-#: includes/class-restore-job.php:131
+#: includes/class-restore-job.php:133
 msgid "Restoring files"
 msgstr "ファイルを復元中"
 
-#: includes/class-restore-job.php:132
+#: includes/class-restore-job.php:134
+msgid "Deleting uploads that are not in the backup"
+msgstr "バックアップに含まれていないアップロードを削除しています"
+
+#: includes/class-restore-job.php:135
 msgid "Downloading the database"
 msgstr "データベースをダウンロードしています"
 
-#: includes/class-restore-job.php:133
+#: includes/class-restore-job.php:136
 msgid "Restoring the database"
 msgstr "データベースを復元しています"
 
-#: includes/class-restore-job.php:134
+#: includes/class-restore-job.php:137
 msgid "Updating the site address"
 msgstr "サイトアドレスを更新中"
 
-#: includes/class-restore-job.php:135
+#: includes/class-restore-job.php:138
 msgid "Switching to the restored database"
 msgstr "復元されたデータベースに切り替えています"
 
-#: includes/class-restore-job.php:158
+#: includes/class-restore-job.php:162
 msgid "The restore reached an unknown stage."
 msgstr "復元が不明な段階に達しました。"
 
-#: includes/class-restore-job.php:201
+#: includes/class-restore-job.php:205
 msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
 msgstr "このフォルダーには完全な Zinn® Backups バックアップが含まれていません (マニフェストが見つかりません)。"
 
-#: includes/class-restore-job.php:204
+#: includes/class-restore-job.php:208
 msgid "This backup is encrypted. Enter its passphrase to restore it."
 msgstr "このバックアップは暗号化されています。復元するにはパスフレーズを入力してください。"
 
 #. translators: %s: backup id.
-#: includes/class-restore-job.php:219
+#: includes/class-restore-job.php:223
 #, php-format
 msgid "This incremental backup needs backup %s, which is no longer in the storage."
 msgstr "この増分バックアップにはバックアップ %s が必要ですが、ストレージ内にもう存在しません。"
 
 #. translators: 1: backup date, 2: number of parts.
-#: includes/class-restore-job.php:266
+#: includes/class-restore-job.php:270
 #, php-format
 msgid "Restoring the backup of %1$s (%2$d file parts)."
 msgstr "%1$s のバックアップを復元しています (%2$d 個のファイルパーツ)。"
 
+#: includes/class-restore-job.php:342
+msgid "Leftover uploads were not deleted: the uploads folder is outside the WordPress folder."
+msgstr "残りのアップロードは削除されませんでした: アップロードフォルダーが WordPress フォルダーの外にあります。"
+
+#. translators: 1: number of files deleted, 2: number that could not be deleted.
+#: includes/class-restore-job.php:365
+#, php-format
+msgid "Deleted %1$d file(s) from the uploads folder that are not in the backup (%2$d could not be deleted)."
+msgstr "バックアップに含まれていない %1$d 件のファイルをアップロードフォルダーから削除しました (%2$d 件を削除できませんでした)。"
+
 #. translators: 1: number of files, 2: example paths.
-#: includes/class-restore-job.php:340
+#: includes/class-restore-job.php:388
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
 msgstr[0] "このサイトには変更する権限がないため %1$s ファイルを上書きできませんでした。そのままの状態になっています: %2$s"
 
 #. translators: %s: number of files.
-#: includes/class-restore-job.php:359
+#: includes/class-restore-job.php:407
 #, php-format
 msgid "Restored %s files."
 msgstr "%s個のファイルを復元しました。"
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:422
+#: includes/class-restore-job.php:470
 #, php-format
 msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
 msgstr "%s はダウンロード後にチェックサムと一致しませんでした。ストレージ内のコピーが破損している可能性があります。"
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:493
+#: includes/class-restore-job.php:541
 #, php-format
 msgid "%s did not arrive. Upload it again."
 msgstr "%s が届きませんでした。もう一度アップロードしてください。"
 
 #. translators: %s: list of backup formats.
-#: includes/class-restore-job.php:515
+#: includes/class-restore-job.php:563
 #, php-format
 msgid "Recognised: %s."
 msgstr "認識済み: %s"
 
 #. translators: 1: number of files, 2: number of files skipped.
-#: includes/class-restore-job.php:542
+#: includes/class-restore-job.php:590
 #, php-format
 msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
 msgstr "wp-content に %1$s 個のファイルをインポートしました (%2$s 個を除外: キャッシュ、ドロップイン、その他のバックアッププラグインのフォルダー)。"
 
-#: includes/class-restore-job.php:588
+#: includes/class-restore-job.php:636
 msgid "The archive has no database dump, so only files were imported."
 msgstr "アーカイブにデータベースダンプが含まれていないため、ファイルのみがインポートされました。"
 
 #. translators: %d: number of tables.
-#: includes/class-restore-job.php:598
+#: includes/class-restore-job.php:646
 #, php-format
 msgid "Database restored into %d temporary tables."
 msgstr "データベースが %d 個の一時テーブルに復元されました。"
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:615
+#: includes/class-restore-job.php:663
 #, php-format
 msgid "%s has no WordPress tables in it and was skipped."
 msgstr "%s には WordPress のテーブルが含まれていないため、スキップされました。"
 
-#: includes/class-restore-job.php:653
+#: includes/class-restore-job.php:701
 #: includes/class-table-swap.php:237
 msgid "The backup’s database has no WordPress tables, so nothing was replaced."
 msgstr "バックアップのデータベースに WordPress のテーブルが存在しないため、何も置換されませんでした。"
 
-#: includes/class-restore-job.php:658
+#: includes/class-restore-job.php:706
 msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
 msgstr "このバックアップはマルチサイトネットワークのものです。ネットワークを単一のサイトに復元することはサポートされていません。"
 
 #. translators: 1: old address, 2: this site's address.
-#: includes/class-restore-job.php:683
+#: includes/class-restore-job.php:731
 #, php-format
 msgid "Moving the content from %1$s to %2$s."
 msgstr "コンテンツを %1$s から %2$s に移動しています。"
 
-#: includes/class-restore-job.php:809
+#: includes/class-restore-job.php:857
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "復元が完了しました。ログアウトした場合は、復元されたサイトのアカウントでログインしてください。"
 
-#: includes/class-restore-job.php:810
+#: includes/class-restore-job.php:858
 msgid "Restore complete."
 msgstr "復元が完了しました。"
 
@@ -1012,6 +1031,10 @@ msgstr "データベースがバックアップからのステートメントを
 #, php-format
 msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
 msgstr "復元されたテーブルをスワップできませんでした: %s。サイトは変更されていません。"
+
+#: includes/class-uploads-pruner.php:83
+msgid "The backup’s file list could not be read, so no leftover uploads were deleted."
+msgstr "バックアップのファイル一覧を読み取れなかったため、残ったアップロードファイルは削除されませんでした。"
 
 #: includes/class-work-dir.php:43
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."

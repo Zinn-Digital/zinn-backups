@@ -7,7 +7,7 @@ Tags: backup, restore, migration, dropbox, google drive
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -118,7 +118,9 @@ Not yet. The plugin refuses to run on a multisite network rather than make a bac
 
 = What happens to files that are not in the backup? =
 
-They are kept. A restore writes the backup's files over the site's; it never deletes anything.
+They are kept. A restore writes the backup's files over the site's; it never deletes anything by default.
+
+If you want the uploads folder to match the backup exactly (for example to remove media added after the backup, or a file someone dropped into uploads), add `define( 'ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS', true );` to wp-config.php. After the files are restored, every file in the uploads folder that the backup does not list is deleted. Files outside the uploads folder, symbolic links and every folder a backup leaves out (caches, the plugin's own work folder, your "leave out" list) are never touched, and the restore dialog says so before you start.
 
 == Screenshots ==
 
@@ -127,6 +129,9 @@ They are kept. A restore writes the backup's files over the site's; it never del
 3. Importing an UpdraftPlus backup.
 
 == Changelog ==
+
+= 1.0.9 =
+* New: the ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS constant deletes, after a files restore, the uploads files that are not in the backup (off by default; left-out folders and symbolic links are never touched).
 
 = 1.0.8 =
 * Fix: a WP-CLI command given input it must refuse (for example destination add with no bucket) now prints the reason as an error instead of stopping with a PHP fatal error; destination remove with an unknown id is refused instead of reporting success.

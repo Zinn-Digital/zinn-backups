@@ -49,30 +49,30 @@ msgid "Working…"
 msgstr "လုပ်ဆောင်နေသည်…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:345
+#: includes/class-admin.php:348
 msgid "Finished"
 msgstr "ပြီးဆုံးပါပြီ"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:346
+#: includes/class-admin.php:349
 msgid "Failed"
 msgstr "မအောင်မြင်ပါ"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:347
+#: includes/class-admin.php:350
 msgid "Cancelled"
 msgstr "ပယ်ဖျက်ပြီး"
 
 #: includes/class-admin.php:114
 #: includes/class-admin.php:271
-#: includes/class-admin.php:316
+#: includes/class-admin.php:319
 msgid "Cancel"
 msgstr "မလုပ်တော့ပါ"
 
 #: includes/class-admin.php:115
 #: includes/class-admin.php:313
-#: includes/class-admin.php:316
-#: includes/class-restore-job.php:136
+#: includes/class-admin.php:319
+#: includes/class-restore-job.php:139
 msgid "Restore"
 msgstr "ပြန်လည်ရယူရန်"
 
@@ -185,19 +185,19 @@ msgstr "အရန်သိမ်းဆည်းမည့်အရာ"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files and database"
 msgstr "ဖိုင်များနှင့် ဒေတာဘေ့စ်"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Database only"
 msgstr "ဒေတာဘေ့စ်သာ"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files only"
 msgstr "ဖိုင်များသာ"
 
@@ -225,245 +225,249 @@ msgstr "ဤအရန်ကူးကို ပြန်လည်ရယူပါ"
 msgid "Passphrase"
 msgstr "စကားဝှက်အထားအသို"
 
-#: includes/class-admin.php:315
+#: includes/class-admin.php:316
+msgid "I understand this replaces this site’s files and database with the backup’s. Files in the uploads folder that are not in the backup are DELETED (ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS is set); other files that are not in the backup are kept."
+msgstr "ဤလုပ်ဆောင်ချက်သည် ဤဆိုက်၏ ဖိုင်များနှင့် ဒေတာဘေ့စ်ကို အရန်သိမ်းဆည်းမှုမှ အရာများဖြင့် အစားထိုးမည်ဖြစ်ကြောင်း ကျွန်ုပ်နားလည်ပါသည်။ အရန်သိမ်းဆည်းမှုတွင် မပါဝင်သော uploads ဖိုဒါထဲရှိ ဖိုင်များကို ပယ်ဖျက်ပါမည် (ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS ကို သတ်မှတ်ထားသည်)။ အရန်သိမ်းဆည်းမှုတွင် မပါဝင်သော အခြားဖိုင်များကို ဆက်လက်သိမ်းဆည်းထားမည်ဖြစ်သည်။"
+
+#: includes/class-admin.php:317
 msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
 msgstr "ဤလုပ်ဆောင်ချက်သည် ဤဆိုက်၏ ဖိုင်များနှင့် ဒေတာဘေ့စ်ကို အရန်သိမ်းဆည်းမှုမှ ဖိုင်များ၊ ဒေတာဘေ့စ်တို့ဖြင့် အစားထိုးမည်ဖြစ်ကြောင်း နားလည်ပါသည်။ အရန်သိမ်းဆည်းမှုတွင် မပါဝင်သော ဖိုင်များကို ဆက်လက်ထိန်းသိမ်းထားမည်ဖြစ်ပါသည်။"
 
-#: includes/class-admin.php:321
+#: includes/class-admin.php:324
 msgid "Recent activity"
 msgstr "လတ်တလော လုပ်ဆောင်ချက်"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 #: includes/class-backup-job.php:104
 msgid "Backup"
 msgstr "အရန်သိမ်းဆည်းမှု"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 msgid "Restore / import"
 msgstr "ပြန်လည်ရယူရန် / တင်သွင်းရန်"
 
-#: includes/class-admin.php:348
+#: includes/class-admin.php:351
 msgid "Running"
 msgstr "အလုပ်လုပ်နေသည်"
 
-#: includes/class-admin.php:360
+#: includes/class-admin.php:363
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "သင့်သိုလှောင်မှု"
 
-#: includes/class-admin.php:362
+#: includes/class-admin.php:365
 msgid "No storage yet. Choose where your backups go below."
 msgstr "သိုလှောင်ခန်း မရှိသေးပါ။ သင်၏ အရန်သိမ်းဆည်းမှုများ မည်သည့်နေရာသို့ သွားမည်ကို အောက်တွင် ရွေးချယ်ပါ။"
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Ready"
 msgstr "အဆင်သင့်ဖြစ်ပါပြီ"
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Not connected"
 msgstr "ချိတ်ဆက်မထားပါ"
 
-#: includes/class-admin.php:373
+#: includes/class-admin.php:376
 msgid "Connect"
 msgstr "ချိတ်ဆက်ပါ"
 
-#: includes/class-admin.php:374
+#: includes/class-admin.php:377
 msgid "Test"
 msgstr "စမ်းသပ်ရန်"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:378
 msgid "Edit"
 msgstr "ပြင်ဆင်ရန်"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:379
 msgid "Remove"
 msgstr "ဖယ်ရှားရန်"
 
-#: includes/class-admin.php:382
+#: includes/class-admin.php:385
 msgid "Add storage"
 msgstr "သိုလှောင်မှု ထည့်ရန်"
 
-#: includes/class-admin.php:386
+#: includes/class-admin.php:389
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "အရန်သိမ်းဆည်းမှုများသည် သိုလှောင်ရာနေရာတစ်ခုတည်းသို့ ရောက်ရှိသည်။ အခြားတစ်ခုကို အသုံးပြုရန် အထက်ပါတစ်ခုကို တည်းဖြတ်ပါ သို့မဟုတ် ဖယ်ရှားပါ။"
 
-#: includes/class-admin.php:397
+#: includes/class-admin.php:400
 msgid "Kind of storage"
 msgstr "သိုလှောင်မှု အမျိုးအစား"
 
-#: includes/class-admin.php:402
+#: includes/class-admin.php:405
 msgid "Name (for you)"
 msgstr "အမည် (သင့်အတွက်)"
 
-#: includes/class-admin.php:404
+#: includes/class-admin.php:407
 msgid "Provider"
 msgstr "ဝန်ဆောင်မှုပေးသူ"
 
-#: includes/class-admin.php:409
+#: includes/class-admin.php:412
 msgid "Cloudflare account id"
 msgstr "Cloudflare အကောင့် ID"
 
-#: includes/class-admin.php:410
+#: includes/class-admin.php:413
 msgid "Endpoint address"
 msgstr "အဆုံးမှတ် လိပ်စာ"
 
-#: includes/class-admin.php:411
+#: includes/class-admin.php:414
 msgid "Region"
 msgstr "ဒေသ"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:415
 msgid "Bucket"
 msgstr "ဘာကက်"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:416
 msgid "Access key id"
 msgstr "အသုံးပြုခွင့်ကီး ID"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Secret access key"
 msgstr "လျှို့ဝှက်အသုံးပြုခွင့်ကီး"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Leave empty to keep the saved key"
 msgstr "သိမ်းဆည်းထားသော သော့ကို ဆက်ထားရန် ကွက်လပ်ထားခဲ့ပါ"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:418
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "Cloudflare R2 အတွက်- Cloudflare ဒက်ရှ်ဘုတ်တွင် R2 ကို ဖွင့်ပါ၊ bucket တစ်ခု ဖန်တီးပါ၊ ထို့နောက် “Manage R2 API tokens” → ထို bucket အတွက် Object Read & Write ပါရှိသော တိုကင်တစ်ခု ဖန်တီးပြီး access key id နှင့် secret ကို ဤနေရာတွင် ကူးယူပါ။"
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:421
 msgid "Dropbox app key"
 msgstr "Dropbox အက်ပ်ကီး"
 
-#: includes/class-admin.php:419
+#: includes/class-admin.php:422
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "dropbox.com/developers/apps တွင် files.content.read၊ files.content.write နှင့် files.metadata.read ခွင့်ပြုချက်များပါရှိသော အက်ပ်တစ်ခုကို ဖန်တီးပါ (Scoped access, App folder)၊ ၎င်း၏ App key ကို ဤနေရာတွင် ကူးယူပါ။ သိမ်းဆည်းပါ၊ ထို့နောက် Connect ကို နှိပ်ပါ။"
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:424
 msgid "OAuth client id"
 msgstr "OAuth သုံးစွဲသူ ID"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "OAuth client secret"
 msgstr "OAuth သုံးစွဲသူ လျှို့ဝှက်ချက်"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "Leave empty to keep the saved secret"
 msgstr "သိမ်းဆည်းထားသော လျှို့ဝှက်ကုဒ်ကို ဆက်ထားရန် ကွက်လပ်ထားပါ"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "Google Cloud Console တွင် Google Drive API ကို ဖွင့်ပါ၊ ထို့နောက် ဤလိပ်စာကို ခွင့်ပြုထားသော ပြန်လည်ညွှန်းဆိုမှု URI အဖြစ် အသုံးပြု၍ \"Web application\" အမျိုးအစား OAuth client တစ်ခုကို ဖန်တီးပါ-"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "သိမ်းဆည်းပါ၊ ထို့နောက် ချိတ်ဆက်ရန်ကို နှိပ်ပါ။ ပလပ်အင်သည် ၎င်းကိုယ်တိုင် ဖန်တီးထားသော ဖိုင်များကိုသာ မြင်တွေ့နိုင်သည်။"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:428
 msgid "Folder inside the storage (optional)"
 msgstr "သိုလှောင်ခန်းအတွင်းရှိ ဖိုဒါ (စိတ်ကြိုက်)"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:429
 msgid "Save storage"
 msgstr "သိုလှောင်ခန်း နေရာချွေတာပါ"
 
-#: includes/class-admin.php:436
+#: includes/class-admin.php:439
 msgid "Import a backup from another plugin or host"
 msgstr "အခြား ပလပ်အင် သို့မဟုတ် ဟို့စ်ထံမှ အရန်သိမ်းဆည်းမှုကို ထည့်သွင်းပါ"
 
-#: includes/class-admin.php:437
+#: includes/class-admin.php:440
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "UpdraftPlus၊ All-in-One WP Migration (.wpress)၊ Duplicator (zip)၊ BackWPup၊ WPvivid၊ Jetpack VaultPress Backup၊ BlogVault၊ Zinn® Migrate သို့မဟုတ် ၎င်း၏ .sql dump ပါရှိသော WordPress ဝဘ်ဆိုက်၏ မည်သည့် zip/tar မော်ကွန်းတိုက်မှမဆို ပြုလုပ်ထားသော အရန်သိမ်းဆည်းမှုမှ ဝဘ်ဆိုက်တစ်ခုကို ထည့်သွင်းပါ။ အကြောင်းအရာသည် wp-content ထဲသို့ ရောက်ရှိသွားမည်ဖြစ်ပြီး ဒေတာဘေ့စ်သည် ဤဆိုက်၏ဒေတာဘေ့စ်ကို အစားထိုးမည်ဖြစ်သည်၊ လိပ်စာများကို ဤဆိုက်၏လိပ်စာများသို့ အလိုအလျောက် ပြောင်းလဲပေးမည်ဖြစ်သည်။"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Upload from your computer"
 msgstr "သင့်ကွန်ပျူတာမှ တင်ရန်"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "အရန်သိမ်းဆည်းမှု၏ ဖိုင်အားလုံးကို တစ်ပြိုင်နက် ရွေးချယ်ပါ (UpdraftPlus သည် ဖိုင်များစွာ ပြုလုပ်ပါသည်)။ ဖိုင်ကြီးများကို အပိုင်းငယ်များဖြင့် ပေးပို့သောကြောင့် သင့်ဟို့စ်၏ အပ်လုဒ်ကန့်သတ်ချက် အကျုံးမဝင်ပါ။"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "သို့မဟုတ် လင့်ခ်များမှ (Google Drive၊ Dropbox သို့မဟုတ် မည်သည့်ဒေါင်းလုဒ်လိပ်စာမဆို)"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "တစ်လိုင်းလျှင် လင့်ခ်တစ်ခု။ Google Drive နှင့် Dropbox အတွက် ဖိုင်ကို \"လင့်ခ်ရှိသူ မည်သူမဆို\" နှင့် မျှဝေပြီး ထိုလင့်ခ်ကို ကူးထည့်ပါ၊ ပြီးနောက် မျှဝေခြင်းကို ပြန်ပိတ်ပါ။"
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:445
 msgid "Or a file already on this server"
 msgstr "သို့မဟုတ် ဤဆာဗာပေါ်တွင် ရှိပြီးသားဖိုင်တစ်ခု"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:450
+#: includes/class-admin.php:453
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "FTP သို့မဟုတ် သင်၏ဟို့စ်၏ ဖိုင်မန်နေဂျာမှတစ်ဆင့် မော်ကွန်းတိုက်များကို %s သို့ အပ်လုဒ်တင်ပြီး ဤစာမျက်နှာကို ပြန်လည်စတင်ပါ။"
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Or a deploy code from another site"
 msgstr "သို့မဟုတ် အခြားဆိုက်တစ်ခုမှ ဖြန့်ကျက်မှုကုဒ်"
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "အခြားဆိုဒ်တစ်ခုက သင့်အား Zinn® Backups ဖြန့်ကျက်မှုကုဒ် ပေးထားပါက ၎င်း၏သိုလှောင်မှုကီးများကို မျှဝေခြင်းမရှိဘဲ ထိုအရန်ကူးယူမှုကို ဤဆိုဒ်သို့ ကူးယူရန် ဤနေရာတွင် ကူးထည့်ပါ။ ကုဒ်သည် နာရီအနည်းငယ်သာ အလုပ်လုပ်ပါသည်၊ ၎င်းကို စကားဝှက်တစ်ခုကဲ့သို့ သဘောထားပါ။"
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "စကားဝှက်အသုံးအနှုန်း (ထိုအရန်ကူးယူမှုအား ကုဒ်ဝှက်ထားမှသာ)"
 
-#: includes/class-admin.php:456
-#: includes/class-admin.php:458
+#: includes/class-admin.php:459
+#: includes/class-admin.php:461
 msgid "Import"
 msgstr "ထည့်သွင်းရန်"
 
-#: includes/class-admin.php:457
+#: includes/class-admin.php:460
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "တင်သွင်းခြင်းသည် ဤဆိုဒ်၏ အကြောင်းအရာနှင့် ဒေတာဘေ့စ်ကို အစားထိုးမည်ဖြစ်ကြောင်း ကျွန်ုပ်နားလည်ပါသည်။ ထို့နောက် တင်သွင်းထားသော ဆိုဒ်မှ အကောင့်တစ်ခုဖြင့် အကောင့်ဝင်ပါ။"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Moving to Zinn® hosting?"
 msgstr "Zinn® ဟိုစတင်းသို့ ပြောင်းရွှေ့နေပါသလား။"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "Zinn Digital® သည် သင့်အတွက် သင့်ဆိုက်ကို ယခင်ဟို့စ်မှ ပြောင်းရွှေ့ပေးနိုင်ပါသည်။ သင့်ယခင်ဟို့စ်က သင့်အား FTP၊ SSH သို့မဟုတ် ထိန်းချုပ်နေရာ အသုံးပြုခွင့် မပေးပါက မူလဆိုက်တွင် Zinn® Migrate ကို ထည့်သွင်းပါ၊ ၎င်းသည် ဤနေရာသို့ ထည့်သွင်းနိုင်သော သို့မဟုတ် Zinn® ထံ လွှဲပြောင်းပေးနိုင်သော မော်ကွန်းတွဲတစ်ခုကို ပြုလုပ်ပေးပါသည်။"
 
-#: includes/class-admin.php:470
+#: includes/class-admin.php:473
 msgid "What goes into a backup"
 msgstr "အရန်သိမ်းဆည်းမှုတစ်ခုတွင် အဘယ်အရာများ ပါဝင်သနည်း"
 
-#: includes/class-admin.php:471
+#: includes/class-admin.php:474
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "WordPress ၏ ကိုယ်ပိုင်ဖိုင်များ (wp-admin, wp-includes) ကို ထည့်သွင်းပါ။ ပုံမှန်အားဖြင့် မလိုအပ်ပါ- WordPress ကို အချိန်မရွေး ပြန်လည်ထည့်သွင်းနိုင်ပါသည်။"
 
-#: includes/class-admin.php:472
+#: includes/class-admin.php:475
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "ဤဖိုဒါများ သို့မဟုတ် ဖိုင်များကိုလည်း ချန်လှပ်ထားပါ (WordPress ဖိုဒါနှင့် နှိုင်းယှဉ်၍ တစ်ကြောင်းလျှင် တစ်ခု)"
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:476
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "အမြဲတမ်းချန်လှပ်ထားသည်များ- ကက်ရှ်များ၊ အပ်ဒိတ်ယာယီနေရာနှင့် အခြားအရန်ကူးယူသည့် ပလပ်အင်များ၏ ကိုယ်ပိုင် မော်ကွန်းတိုက်ဖိုဒါများ-"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:477
 msgid "Size of each part (MB)"
 msgstr "အပိုင်းတစ်ခုစီ၏ အရွယ်အစား (MB)"
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:478
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "ပလပ်အင်ကို ပိတ်ထားချိန်တွင်လည်း အရန်သိမ်းဆည်းမှုများကို ဆက်လက်လုပ်ဆောင်ပါ"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:479
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "သင်ဖွင့်မထားပါက ပိတ်ထားပါမည်။ ဤပလပ်အင်ကို ပိတ်ထားလျှင် သို့မဟုတ် ပြန်လည်ရယူထားသော ဒေတာဘေ့စ်တွင် ၎င်းကို အသုံးပြုနေသည်ဟု စာရင်းမသွင်းထားတော့လျှင်လည်း အရန်ကူးယူမှုများ၊ ပြန်လည်ရယူမှုများနှင့် WP-CLI အမိန့်များကို ဆက်လက်လုပ်ဆောင်စေပါသည်။ ၎င်းသည် must-use ပလပ်အင်များဖိုဒါထဲသို့ loader အသေးစားတစ်ခုကို ထည့်သွင်းပေးပါသည်။"
 
-#: includes/class-admin.php:481
+#: includes/class-admin.php:484
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "လုဒ်လုပ်ပေးသည့်အရာသည် မူလနေရာတွင် မရှိပါ။ ၎င်းကို ပြန်ထားရန် ဆက်တင်များကို သိမ်းဆည်းပါ။"
 
-#: includes/class-admin.php:487
+#: includes/class-admin.php:490
 msgid "Save settings"
 msgstr "ဆက်တင်များကို သိမ်းဆည်းရန်"
 
@@ -480,7 +484,7 @@ msgid "Connect a storage destination on the Storage tab first: backups are kept 
 msgstr "ပထမဦးစွာ Storage တက်ဘ်တွင် သိမ်းဆည်းမည့်နေရာကို ချိတ်ဆက်ပါ- အရန်သိမ်းဆည်းမှုများကို ဤဆာဗာပေါ်တွင်မဟုတ်ဘဲ သင့်ကိုယ်ပိုင်သိုလှောင်ခန်းတွင် သိမ်းဆည်းထားသည်။"
 
 #: includes/class-backup-job.php:45
-#: includes/class-restore-job.php:108
+#: includes/class-restore-job.php:110
 msgid "Multisite networks are not supported yet."
 msgstr "ဆိုက်များစွာကွန်ရက်များကို လောလောဆယ် မပံ့ပိုးသေးပါ။"
 
@@ -554,7 +558,7 @@ msgid "That is not a backup folder."
 msgstr "ထိုအရာသည် အရန်သိမ်းဆည်းမှုဖိုင်တွဲ မဟုတ်ပါ။"
 
 #: includes/class-catalog.php:138
-#: includes/class-restore-job.php:186
+#: includes/class-restore-job.php:190
 msgid "That storage destination is no longer saved on this site."
 msgstr "ထိုသိုလှောင်ရာနေရာကို ဤဆိုက်တွင် သိမ်းဆည်းထားခြင်း မရှိတော့ပါ။"
 
@@ -562,45 +566,51 @@ msgstr "ထိုသိုလှောင်ရာနေရာကို ဤဆ�
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "နောက်ပိုင်းအဆင့်တိုးအရန်ကူးယူမှုများသည် ဤအရာပေါ်တွင် အခြေခံထားပါသည်။ ၎င်းတို့ကို ဦးစွာပယ်ဖျက်ပါ။"
 
-#: includes/class-cli.php:367
+#: includes/class-cli.php:313
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "ထို ID ဖြင့် ဦးတည်ရာ မရှိပါ။ ကြည့်ရှုရန်: wp zinn-backups destination list"
+
+#: includes/class-cli.php:391
 msgid "Use: wp zinn-backups key set|get|remove [<name>]"
 msgstr "အသုံးပြုပုံ- wp zinn-backups key set|get|remove [<name>]"
 
-#: includes/class-cli.php:371
+#: includes/class-cli.php:395
 msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
 msgstr "command line တွင် ကီးကို မထည့်ပါနှင့်။ ၎င်းကို STDIN ဖြင့် ပိုက်လိုင်းမှတစ်ဆင့် ပေးပို့ပါ သို့မဟုတ် --from-env ဖြင့် ပတ်ဝန်းကျင် ပြောင်းလဲနိုင်သောတန်ဖိုးကို သတ်မှတ်ပါ။"
 
 #. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
-#: includes/class-cli.php:390
+#: includes/class-cli.php:414
 #, php-format
 msgid "Saved %1$s for destination %2$s: %3$s"
 msgstr "ဦးတည်ရာ %2$s အတွက် %1$s ကို သိမ်းဆည်းပြီးပါပြီ- %3$s"
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:396
+#: includes/class-cli.php:420
 #, php-format
 msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
 msgstr "ဦးတည်ရာ %2$s မှ %1$s ကို ဖယ်ရှားမလား။ အသစ်တစ်ခု မသတ်မှတ်မချင်း ၎င်းသို့ အရန်ကူးယူမှုများ ရပ်တန့်သွားပါမည်။"
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:401
+#: includes/class-cli.php:425
 #, php-format
 msgid "Removed %1$s from destination %2$s."
 msgstr "%1$s ကို ဦးတည်ရာ %2$s မှ ဖယ်ရှားလိုက်ပါပြီ။"
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is in place."
 msgstr "လုဒ်လုပ်ပေးသည့်အရာ နေရာတကျရှိနေပါပြီ။"
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is removed."
 msgstr "လုဒ်ဒါကို ဖယ်ရှားလိုက်ပါပြီ။"
 
-#: includes/class-cli.php:461
+#: includes/class-cli.php:486
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "အသုံးပြုပုံ- wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:476
+#: includes/class-cli.php:504
 msgid "That environment variable is not set or is empty."
 msgstr "ထိုပတ်ဝန်းကျင်ပြောင်းလဲနိုင်သောတန်ဖိုးကို မသတ်မှတ်ရသေးပါ သို့မဟုတ် ဗလာဖြစ်နေပါသည်။"
 
@@ -619,11 +629,6 @@ msgstr "ကီး မပေးထားပါ။ ၎င်းကို STDIN တ
 #, php-format
 msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
 msgstr "၎င်းသည် တရားဝင်သော %s မဟုတ်ပုံရပါသည် (အလျား မှားယွင်းနေခြင်း သို့မဟုတ် ဤကဲ့သို့သော သော့တွင် လုံးဝမပါဝင်သည့် စာလုံးများ ဖြစ်နေခြင်း)။ မည်သည့်အရာမျှ သိမ်းဆည်းမထားပါ။"
-
-#: includes/class-connection-keys.php:182
-#: includes/class-settings.php:241
-msgid "No destination with that id. See: wp zinn-backups destination list"
-msgstr "ထို ID ဖြင့် ဦးတည်ရာ မရှိပါ။ ကြည့်ရှုရန်: wp zinn-backups destination list"
 
 #: includes/class-connection-keys.php:191
 msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
@@ -851,135 +856,149 @@ msgstr "ဤပလပ်အင်အတွက် သင်၏ hosting ဝယ်�
 msgid "We could not get your code just now. Please try again in a few minutes."
 msgstr "ကျွန်ုပ်တို့သည် သင်၏ကုဒ်ကို ယခုလေးတင် မရရှိနိုင်ခဲ့ပါ။ မိနစ်အနည်းငယ်အတွင်း ထပ်မံကြိုးစားပါ။"
 
-#: includes/class-restore-job.php:128
+#: includes/class-restore-job.php:130
 msgid "Reading the backup"
 msgstr "အရန်သိမ်းဆည်းမှုကို ဖတ်နေသည်"
 
-#: includes/class-restore-job.php:129
+#: includes/class-restore-job.php:131
 msgid "Downloading the archive"
 msgstr "မော်ကွန်းတိုက်ကို ဒေါင်းလုဒ်လုပ်နေသည်"
 
-#: includes/class-restore-job.php:130
+#: includes/class-restore-job.php:132
 msgid "Recognising the archive"
 msgstr "မော်ကွန်းတိုက်ကို အသိအမှတ်ပြုနေသည်"
 
-#: includes/class-restore-job.php:131
+#: includes/class-restore-job.php:133
 msgid "Restoring files"
 msgstr "ဖိုင်များကို ပြန်လည်ရယူနေသည်"
 
-#: includes/class-restore-job.php:132
+#: includes/class-restore-job.php:134
+msgid "Deleting uploads that are not in the backup"
+msgstr "အရံသိမ်းဆည်းမှုတွင် မပါဝင်သော အပ်လုဒ်များကို ဖျက်နေသည်"
+
+#: includes/class-restore-job.php:135
 msgid "Downloading the database"
 msgstr "ဒေတာဘေ့စ်ကို ဒေါင်းလုဒ်လုပ်နေသည်"
 
-#: includes/class-restore-job.php:133
+#: includes/class-restore-job.php:136
 msgid "Restoring the database"
 msgstr "ဒေတာဘေ့စ်ကို ပြန်လည်ရယူနေသည်"
 
-#: includes/class-restore-job.php:134
+#: includes/class-restore-job.php:137
 msgid "Updating the site address"
 msgstr "ဝက်ဘ်ဆိုက်လိပ်စာကို အပ်ဒိတ်လုပ်နေသည်"
 
-#: includes/class-restore-job.php:135
+#: includes/class-restore-job.php:138
 msgid "Switching to the restored database"
 msgstr "ပြန်လည်ရယူထားသော ဒေတာဘေ့စ်သို့ ပြောင်းနေသည်"
 
-#: includes/class-restore-job.php:158
+#: includes/class-restore-job.php:162
 msgid "The restore reached an unknown stage."
 msgstr "ပြန်လည်ရယူခြင်းသည် မသိရသေးသော အဆင့်သို့ ရောက်ရှိသွားပါသည်။"
 
-#: includes/class-restore-job.php:201
+#: includes/class-restore-job.php:205
 msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
 msgstr "ဤဖိုင်တွဲထဲတွင် ပြီးပြည့်စုံသော Zinn® Backups အရန်သိမ်းဆည်းမှု မရှိပါ (manifest ဖိုင် ပျောက်ဆုံးနေပါသည်)။"
 
-#: includes/class-restore-job.php:204
+#: includes/class-restore-job.php:208
 msgid "This backup is encrypted. Enter its passphrase to restore it."
 msgstr "ဤအရန်ကူးယူမှုကို ကုဒ်ဝှက်ထားသည်။ ၎င်းကို ပြန်လည်ရယူရန် လျှို့ဝှက်စာစုကို ထည့်သွင်းပါ။"
 
 #. translators: %s: backup id.
-#: includes/class-restore-job.php:219
+#: includes/class-restore-job.php:223
 #, php-format
 msgid "This incremental backup needs backup %s, which is no longer in the storage."
 msgstr "ဤတိုးပွားအရန်သိမ်းဆည်းမှုသည် သိုလှောင်ခန်းထဲတွင် မရှိတော့သည့် အရန်သိမ်းဆည်းမှု %s လိုအပ်ပါသည်။"
 
 #. translators: 1: backup date, 2: number of parts.
-#: includes/class-restore-job.php:266
+#: includes/class-restore-job.php:270
 #, php-format
 msgid "Restoring the backup of %1$s (%2$d file parts)."
 msgstr "%1$s ၏ အရန်ကူးယူထားမှုကို ပြန်လည်ရယူနေသည် (%2$d ဖိုင်အပိုင်းများ)။"
 
+#: includes/class-restore-job.php:342
+msgid "Leftover uploads were not deleted: the uploads folder is outside the WordPress folder."
+msgstr "ကျန်ရှိနေသော တင်ထားသည့်ဖိုင်များကို မဖျက်ခဲ့ပါ- ဖိုင်တင်သည့်ဖိုဒါသည် WordPress ဖိုဒါ၏ ပြင်ပတွင် ရှိနေပါသည်။"
+
+#. translators: 1: number of files deleted, 2: number that could not be deleted.
+#: includes/class-restore-job.php:365
+#, php-format
+msgid "Deleted %1$d file(s) from the uploads folder that are not in the backup (%2$d could not be deleted)."
+msgstr "အရန်သိမ်းဆည်းမှုတွင် မပါရှိသော ဖိုင် %1$d ဖိုင်ကို တင်ထားသည့် ဖိုင်တွဲမှ ဖျက်ပြီးပါပြီ (%2$d ဖိုင်ကို ဖျက်၍မရပါ)။"
+
 #. translators: 1: number of files, 2: example paths.
-#: includes/class-restore-job.php:340
+#: includes/class-restore-job.php:388
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
 msgstr[0] "ဤဆိုဒ်သည် ပြောင်းလဲရန် ခွင့်မပြုထားသောကြောင့် %1$s ဖိုင်ကို ထပ်ရေး၍မရဘဲ မူလအတိုင်း ထားရှိခဲ့သည်- %2$s"
 
 #. translators: %s: number of files.
-#: includes/class-restore-job.php:359
+#: includes/class-restore-job.php:407
 #, php-format
 msgid "Restored %s files."
 msgstr "ဖိုင် %s ခု ပြန်လည်ရယူပြီးပါပြီ။"
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:422
+#: includes/class-restore-job.php:470
 #, php-format
 msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
 msgstr "%s သည် ဒေါင်းလုဒ်လုပ်ပြီးနောက် ၎င်း၏ checksum နှင့် မကိုက်ညီပါ။ သိုလှောင်ခန်းထဲရှိ မိတ္တူသည် ပျက်စီးနေပုံရသည်။"
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:493
+#: includes/class-restore-job.php:541
 #, php-format
 msgid "%s did not arrive. Upload it again."
 msgstr "%s မရောက်ရှိပါ။ ၎င်းကို နောက်တစ်ကြိမ် ပြန်လည်အပ်လုဒ်လုပ်ပါ။"
 
 #. translators: %s: list of backup formats.
-#: includes/class-restore-job.php:515
+#: includes/class-restore-job.php:563
 #, php-format
 msgid "Recognised: %s."
 msgstr "အသိအမှတ်ပြုထားသည်- %s။"
 
 #. translators: 1: number of files, 2: number of files skipped.
-#: includes/class-restore-job.php:542
+#: includes/class-restore-job.php:590
 #, php-format
 msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
 msgstr "%1$s ဖိုင်များကို wp-content ထဲသို့ ထည့်သွင်းပြီးပါပြီ (%2$s ချန်လှပ်ထားသည်- ကက်ရှ်များ၊ drop-ins များနှင့် အခြားသော အရန်ကူးယူသည့် ပလပ်အင် ဖိုင်တွဲများ)။"
 
-#: includes/class-restore-job.php:588
+#: includes/class-restore-job.php:636
 msgid "The archive has no database dump, so only files were imported."
 msgstr "မော်ကွန်းတိုက်တွင် ဒေတာဘေ့စ် ဒမ့်ပ် မပါဝင်သောကြောင့် ဖိုင်များကိုသာ ထည့်သွင်းခဲ့ပါသည်။"
 
 #. translators: %d: number of tables.
-#: includes/class-restore-job.php:598
+#: includes/class-restore-job.php:646
 #, php-format
 msgid "Database restored into %d temporary tables."
 msgstr "ဒေတာဘေ့စ်ကို ယာယီဇယား %d ခုသို့ ပြန်လည်ရယူပြီးပါပြီ။"
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:615
+#: includes/class-restore-job.php:663
 #, php-format
 msgid "%s has no WordPress tables in it and was skipped."
 msgstr "%s တွင် မည်သည့် WordPress ဇယားမျှ မပါဝင်သဖြင့် ကျော်သွားခဲ့သည်။"
 
-#: includes/class-restore-job.php:653
+#: includes/class-restore-job.php:701
 #: includes/class-table-swap.php:237
 msgid "The backup’s database has no WordPress tables, so nothing was replaced."
 msgstr "အရန်သိမ်းဆည်းမှု၏ ဒေတာဘေ့စ်တွင် WordPress ဇယားများ မပါရှိသောကြောင့် မည်သည့်အရာကိုမျှ အစားထိုးမထားပါ။"
 
-#: includes/class-restore-job.php:658
+#: includes/class-restore-job.php:706
 msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
 msgstr "ဤအရန်ကူးယူမှုသည် multisite ကွန်ရက်တစ်ခု၏ အရန်ကူးယူမှု ဖြစ်သည်။ ကွန်ရက်တစ်ခုကို ဆိုက်တစ်ခုတည်းသို့ ပြန်လည်ရယူခြင်းအား မပံ့ပိုးပါ။"
 
 #. translators: 1: old address, 2: this site's address.
-#: includes/class-restore-job.php:683
+#: includes/class-restore-job.php:731
 #, php-format
 msgid "Moving the content from %1$s to %2$s."
 msgstr "အကြောင်းအရာကို %1$s မှ %2$s သို့ ရွှေ့နေသည်။"
 
-#: includes/class-restore-job.php:809
+#: includes/class-restore-job.php:857
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "ပြန်လည်ရယူခြင်း ပြီးပါပြီ။ သင် အကောင့်ထွက်ထားပါက ပြန်လည်ရယူထားသော ဝဘ်ဆိုက်မှ အကောင့်တစ်ခုဖြင့် အကောင့်ဝင်ပါ။"
 
-#: includes/class-restore-job.php:810
+#: includes/class-restore-job.php:858
 msgid "Restore complete."
 msgstr "ပြန်လည်ရယူခြင်း ပြီးပါပြီ။"
 
@@ -1012,6 +1031,10 @@ msgstr "ဒေတာဘေ့စ်သည် အရန်သိမ်းဆည�
 #, php-format
 msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
 msgstr "ပြန်လည်ရယူထားသော ဇယားများကို လဲလှယ်၍မရပါ- %s။ သင့်ဆိုဒ် ပြောင်းလဲမှုမရှိပါ။"
+
+#: includes/class-uploads-pruner.php:83
+msgid "The backup’s file list could not be read, so no leftover uploads were deleted."
+msgstr "အရန်သိမ်းဆည်းမှု၏ ဖိုင်စာရင်းကို ဖတ်၍မရပါ၊ ထို့ကြောင့် ကျန်ရှိနေသော အပ်လုဒ်များကို မဖျက်ခဲ့ပါ။"
 
 #: includes/class-work-dir.php:43
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."

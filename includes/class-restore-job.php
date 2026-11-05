@@ -28,7 +28,9 @@ defined( 'ABSPATH' ) || exit;
  * one atomic `RENAME TABLE` puts them in place at the very end ({@see Table_Swap}). A failed
  * or cancelled restore drops the temporary tables and the site's database is untouched.
  * Files are written in place as each part is unpacked (there is no room on a small host for
- * a second copy of the site); a restore never deletes files that are not in the backup.
+ * a second copy of the site); a restore never deletes files that are not in the backup,
+ * unless the site owner defines ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS: then the uploads
+ * files the backup does not list are deleted after the files stage ({@see Uploads_Pruner}).
  */
 final class Restore_Job extends Job {
 
@@ -129,6 +131,7 @@ final class Restore_Job extends Job {
 			'receive'  => __( 'Downloading the archive', 'zinn-backups' ),
 			'detect'   => __( 'Recognising the archive', 'zinn-backups' ),
 			'files', 'extract' => __( 'Restoring files', 'zinn-backups' ),
+			'prune'    => __( 'Deleting uploads that are not in the backup', 'zinn-backups' ),
 			'db-fetch' => __( 'Downloading the database', 'zinn-backups' ),
 			'database' => __( 'Restoring the database', 'zinn-backups' ),
 			'replace'  => __( 'Updating the site address', 'zinn-backups' ),
@@ -148,6 +151,7 @@ final class Restore_Job extends Job {
 		match ( $this->state['stage'] ) {
 			'fetch'    => $this->do_fetch(),
 			'files'    => $this->do_files( $deadline ),
+			'prune'    => $this->do_prune( $deadline ),
 			'db-fetch' => $this->do_db_fetch( $deadline ),
 			'receive'  => $this->do_receive( $deadline ),
 			'detect'   => $this->do_detect(),
@@ -281,7 +285,7 @@ final class Restore_Job extends Job {
 		$parts = (array) $this->state['parts'];
 		$i     = (int) $this->state['part'];
 		if ( $i >= count( $parts ) ) {
-			$this->stage( 'db-fetch' );
+			$this->begin_prune();
 			return;
 		}
 		$part  = $parts[ $i ];
@@ -320,6 +324,50 @@ final class Restore_Job extends Job {
 			$this->state['part_ready'] = false;
 			$this->state['part']       = $i + 1;
 		}
+	}
+
+	/**
+	 * After the files: go on to delete leftover uploads when the site owner asked for it
+	 * (Uploads_Pruner::CONSTANT in wp-config.php), otherwise straight to the database.
+	 *
+	 * @return void
+	 */
+	private function begin_prune(): void {
+		if ( ! Uploads_Pruner::enabled() || empty( $this->state['manifest']['index'] ) ) {
+			$this->stage( 'db-fetch' );
+			return;
+		}
+		$uploads = Uploads_Pruner::relative_uploads( ABSPATH, (string) ( wp_upload_dir( null, false )['basedir'] ?? '' ) );
+		if ( '' === $uploads ) {
+			$this->log( __( 'Leftover uploads were not deleted: the uploads folder is outside the WordPress folder.', 'zinn-backups' ), 'warning' );
+			$this->stage( 'db-fetch' );
+			return;
+		}
+		$this->state['prune'] = Uploads_Pruner::begin( $uploads );
+		$this->stage( 'prune' );
+	}
+
+	/**
+	 * Delete, until the deadline, the uploads files the backup's file index does not list.
+	 *
+	 * @param float $deadline Deadline.
+	 * @return void
+	 */
+	private function do_prune( float $deadline ): void {
+		$keep                 = Uploads_Pruner::keep_set( $this->dir() . '/files-index.ndjson.gz' );
+		$this->state['prune'] = Uploads_Pruner::step( ABSPATH, (array) $this->state['prune'], $keep, Settings::excludes(), $deadline );
+		if ( empty( $this->state['prune']['done'] ) ) {
+			return;
+		}
+		$this->log(
+			sprintf(
+				/* translators: 1: number of files deleted, 2: number that could not be deleted. */
+				__( 'Deleted %1$d file(s) from the uploads folder that are not in the backup (%2$d could not be deleted).', 'zinn-backups' ),
+				(int) $this->state['prune']['deleted'],
+				(int) $this->state['prune']['failed']
+			)
+		);
+		$this->stage( 'db-fetch' );
 	}
 
 	/**

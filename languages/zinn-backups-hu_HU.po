@@ -49,30 +49,30 @@ msgid "Working…"
 msgstr "Feldolgozás…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:345
+#: includes/class-admin.php:348
 msgid "Finished"
 msgstr "Befejezve"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:346
+#: includes/class-admin.php:349
 msgid "Failed"
 msgstr "Sikertelen"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:347
+#: includes/class-admin.php:350
 msgid "Cancelled"
 msgstr "Törölve"
 
 #: includes/class-admin.php:114
 #: includes/class-admin.php:271
-#: includes/class-admin.php:316
+#: includes/class-admin.php:319
 msgid "Cancel"
 msgstr "Mégse"
 
 #: includes/class-admin.php:115
 #: includes/class-admin.php:313
-#: includes/class-admin.php:316
-#: includes/class-restore-job.php:136
+#: includes/class-admin.php:319
+#: includes/class-restore-job.php:139
 msgid "Restore"
 msgstr "Visszaállítás"
 
@@ -185,19 +185,19 @@ msgstr "Biztonsági mentés tartalma"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files and database"
 msgstr "Fájlok és adatbázis"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Database only"
 msgstr "Csak adatbázis"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files only"
 msgstr "Csak fájlok"
 
@@ -225,246 +225,250 @@ msgstr "Biztonsági mentés visszaállítása"
 msgid "Passphrase"
 msgstr "Jelmondat"
 
-#: includes/class-admin.php:315
+#: includes/class-admin.php:316
+msgid "I understand this replaces this site’s files and database with the backup’s. Files in the uploads folder that are not in the backup are DELETED (ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS is set); other files that are not in the backup are kept."
+msgstr "Tudomásul veszem, hogy ez a művelet a webhely fájljait és adatbázisát felülírja a biztonsági mentésben lévőkkel. Az uploads mappában lévő, a biztonsági mentésben nem szereplő fájlok TÖRLÉSRE kerülnek (a ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS be van állítva); a mentésben nem szereplő egyéb fájlok megmaradnak."
+
+#: includes/class-admin.php:317
 msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
 msgstr "Tudomásul veszem, hogy ez a művelet lecseréli a webhely fájljait és adatbázisát a biztonsági mentésben lévőkre. A biztonsági mentésben nem szereplő fájlok megmaradnak."
 
-#: includes/class-admin.php:321
+#: includes/class-admin.php:324
 msgid "Recent activity"
 msgstr "Legutóbbi tevékenység"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 #: includes/class-backup-job.php:104
 msgid "Backup"
 msgstr "Biztonsági mentés"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 msgid "Restore / import"
 msgstr "Visszaállítás / importálás"
 
-#: includes/class-admin.php:348
+#: includes/class-admin.php:351
 msgid "Running"
 msgstr "Fut"
 
-#: includes/class-admin.php:360
+#: includes/class-admin.php:363
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "Tárhely"
 msgstr[1] "Tárolási célhelyek"
 
-#: includes/class-admin.php:362
+#: includes/class-admin.php:365
 msgid "No storage yet. Choose where your backups go below."
 msgstr "Még nincs tárhely. Válassza ki alább, hová kerüljenek a biztonsági mentések."
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Ready"
 msgstr "Kész"
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Not connected"
 msgstr "Nincs kapcsolódva"
 
-#: includes/class-admin.php:373
+#: includes/class-admin.php:376
 msgid "Connect"
 msgstr "Kapcsolódás"
 
-#: includes/class-admin.php:374
+#: includes/class-admin.php:377
 msgid "Test"
 msgstr "Teszt"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:378
 msgid "Edit"
 msgstr "Szerkesztés"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:379
 msgid "Remove"
 msgstr "Eltávolítás"
 
-#: includes/class-admin.php:382
+#: includes/class-admin.php:385
 msgid "Add storage"
 msgstr "Tárhely hozzáadása"
 
-#: includes/class-admin.php:386
+#: includes/class-admin.php:389
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "A biztonsági mentések egy tárolási helyre kerülnek. Másik használatához módosítani vagy törölni kell a fentit."
 
-#: includes/class-admin.php:397
+#: includes/class-admin.php:400
 msgid "Kind of storage"
 msgstr "Tárhely típusa"
 
-#: includes/class-admin.php:402
+#: includes/class-admin.php:405
 msgid "Name (for you)"
 msgstr "Név (saját részre)"
 
-#: includes/class-admin.php:404
+#: includes/class-admin.php:407
 msgid "Provider"
 msgstr "Szolgáltató"
 
-#: includes/class-admin.php:409
+#: includes/class-admin.php:412
 msgid "Cloudflare account id"
 msgstr "Cloudflare fiókazonosító"
 
-#: includes/class-admin.php:410
+#: includes/class-admin.php:413
 msgid "Endpoint address"
 msgstr "Végpont címe"
 
-#: includes/class-admin.php:411
+#: includes/class-admin.php:414
 msgid "Region"
 msgstr "Régió"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:415
 msgid "Bucket"
 msgstr "Tároló"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:416
 msgid "Access key id"
 msgstr "Hozzáférési kulcs azonosítója"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Secret access key"
 msgstr "Titkos hozzáférési kulcs"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Leave empty to keep the saved key"
 msgstr "Hagyja üresen a mentett kulcs megtartásához"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:418
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "Cloudflare R2 esetén: a Cloudflare vezérlőpultján nyissuk meg az R2-t, hozzunk létre egy bucketet, majd „Manage R2 API tokens” → hozzunk létre egy tokent Object Read & Write jogosultsággal ahhoz a buckethez, és másoljuk ide az access key id-t és a secretet."
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:421
 msgid "Dropbox app key"
 msgstr "Dropbox-alkalmazáskulcs"
 
-#: includes/class-admin.php:419
+#: includes/class-admin.php:422
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "Hozzon létre egy alkalmazást a dropbox.com/developers/apps címen (Scoped access, App folder) a files.content.read, files.content.write és files.metadata.read jogosultságokkal, és másolja ide az App key értékét. Mentse, majd nyomja meg a Connect gombot."
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:424
 msgid "OAuth client id"
 msgstr "OAuth kliensazonosító"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "OAuth client secret"
 msgstr "OAuth ügyféltitok"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "Leave empty to keep the saved secret"
 msgstr "Hagyja üresen a mentett titok megtartásához"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "A Google Cloud Console felületén engedélyezze a Google Drive API-t, majd hozzon létre egy „Web application” típusú OAuth-klienst ezzel a címmel mint engedélyezett átirányítási URI-val:"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "Mentés, majd kattintás a Csatlakozás gombra. A bővítmény csak az általa létrehozott fájlokat látja."
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:428
 msgid "Folder inside the storage (optional)"
 msgstr "Mappa a tárhelyen belül (nem kötelező)"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:429
 msgid "Save storage"
 msgstr "Tárhely megtakarítása"
 
-#: includes/class-admin.php:436
+#: includes/class-admin.php:439
 msgid "Import a backup from another plugin or host"
 msgstr "Biztonsági mentés importálása másik bővítményből vagy tárhelyről"
 
-#: includes/class-admin.php:437
+#: includes/class-admin.php:440
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "Honlap importálása az UpdraftPlus, az All-in-One WP Migration (.wpress), a Duplicator (zip), a BackWPup, a WPvivid, a Jetpack VaultPress Backup, a BlogVault, a Zinn® Migrate által készített biztonsági mentésből, vagy egy WordPress honlap .sql dump fájlt tartalmazó bármely zip/tar archívumából. A tartalom a wp-content könyvtárba kerül, az adatbázis pedig felváltja az ezen a honlapon lévőt; a címek automatikusan az ezen a honlapon lévőkre módosulnak."
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Upload from your computer"
 msgstr "Feltöltés a számítógépről"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "Válasszuk ki a biztonsági mentés minden fájlját egyszerre (az UpdraftPlus többet is készít). A nagy fájlok kis darabokban kerülnek elküldésre, így a tárhely feltöltési korlátja nem érvényesül."
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "Vagy hivatkozásokból (Google Drive, Dropbox vagy bármilyen letöltési cím)"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "Soronként egy hivatkozás. Google Drive és Dropbox esetén a fájlt a „bárki, aki rendelkezik a linkkel” beállítással kell megosztani, és beilleszteni a hivatkozást; a megosztást utána kapcsolja ki újra."
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:445
 msgid "Or a file already on this server"
 msgstr "Vagy egy, a kiszolgálón már megtalálható fájl"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:450
+#: includes/class-admin.php:453
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "Töltsön fel archívumokat FTP-n vagy a tárhely fájlkezelőjén keresztül a(z) %s mappába, majd frissítse ezt az oldalt."
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Or a deploy code from another site"
 msgstr "Vagy egy telepítési kód egy másik webhelyről"
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "Ha egy másik webhelyről származik egy Zinn® Backups telepítési kód, illessze be ide a biztonsági mentés átmásolásához a tárhelykulcsok megosztása nélkül. A kód néhány óráig érvényes; kezelje jelszóként."
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "Jelmondat (csak akkor, ha a biztonsági mentés titkosított)"
 
-#: includes/class-admin.php:456
-#: includes/class-admin.php:458
+#: includes/class-admin.php:459
+#: includes/class-admin.php:461
 msgid "Import"
 msgstr "Importálás"
 
-#: includes/class-admin.php:457
+#: includes/class-admin.php:460
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "Tudomásul veszem, hogy az importálás felülírja a webhely tartalmát és adatbázisát. Ezt követően bejelentkezés szükséges az importált webhely egyik fiókjával."
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Moving to Zinn® hosting?"
 msgstr "Átköltözés a Zinn® webtárhelyére?"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "A Zinn Digital® át tudja költöztetni a webhelyet a régi tárhelyszolgáltatótól. Ha a régi szolgáltató nem biztosít FTP-, SSH- vagy vezérlőpult-hozzáférést, telepíteni kell a Zinn® Migrate bővítményt a régi webhelyre; ez létrehoz egy archívumot, amelyet importálni lehet ide, vagy át lehet adni a Zinn® csapatának."
 
-#: includes/class-admin.php:470
+#: includes/class-admin.php:473
 msgid "What goes into a backup"
 msgstr "Mit tartalmaz a biztonsági mentés"
 
-#: includes/class-admin.php:471
+#: includes/class-admin.php:474
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "A WordPress saját fájljainak belefoglalása (wp-admin, wp-includes). Általában nem szükséges: a WordPress bármikor újratelepíthető."
 
-#: includes/class-admin.php:472
+#: includes/class-admin.php:475
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "Hagyja ki ezeket a mappákat vagy fájlokat is (soronként egyet, a WordPress mappához viszonyítva)"
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:476
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "Mindig kimarad: gyorsítótárak, frissítési ideiglenes terület és más biztonsági mentési bővítmények saját archívum mappái:"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:477
 msgid "Size of each part (MB)"
 msgstr "Az egyes részek mérete (MB)"
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:478
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "Biztonsági mentések futtatása a bővítmény kikapcsolt állapotában is"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:479
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "Kikapcsolva, hacsak nem kapcsolják be. A biztonsági mentések, a visszaállítások és a WP-CLI parancsok futását biztosítja akkor is, ha ez a bővítmény ki van kapcsolva, vagy ha egy visszaállított adatbázis már nem sorolja fel aktívként. Ez egy kis betöltőt helyez el a must-use bővítmények mappájában."
 
-#: includes/class-admin.php:481
+#: includes/class-admin.php:484
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "A betöltő nincs a helyén. Visszaállításához menteni kell a beállításokat."
 
-#: includes/class-admin.php:487
+#: includes/class-admin.php:490
 msgid "Save settings"
 msgstr "Beállítások mentése"
 
@@ -481,7 +485,7 @@ msgid "Connect a storage destination on the Storage tab first: backups are kept 
 msgstr "Először csatlakoztasson egy tárolási célhelyet a Storage lapon: a biztonsági mentések a saját tárhelyen tárolódnak, nem ezen a kiszolgálón."
 
 #: includes/class-backup-job.php:45
-#: includes/class-restore-job.php:108
+#: includes/class-restore-job.php:110
 msgid "Multisite networks are not supported yet."
 msgstr "A többhelyes (Multisite) hálózatok még nem támogatottak."
 
@@ -556,7 +560,7 @@ msgid "That is not a backup folder."
 msgstr "Ez nem biztonsági mentési mappa."
 
 #: includes/class-catalog.php:138
-#: includes/class-restore-job.php:186
+#: includes/class-restore-job.php:190
 msgid "That storage destination is no longer saved on this site."
 msgstr "Ez a tárolási célhely már nincs elmentve ezen az oldalon."
 
@@ -564,45 +568,51 @@ msgstr "Ez a tárolási célhely már nincs elmentve ezen az oldalon."
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "A későbbi növekményes biztonsági mentések erre épülnek. Először azokat törölje."
 
-#: includes/class-cli.php:367
+#: includes/class-cli.php:313
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "Nincs ilyen azonosítójú célállomás. Lásd: wp zinn-backups destination list"
+
+#: includes/class-cli.php:391
 msgid "Use: wp zinn-backups key set|get|remove [<name>]"
 msgstr "Használat: wp zinn-backups key set|get|remove [<name>]"
 
-#: includes/class-cli.php:371
+#: includes/class-cli.php:395
 msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
 msgstr "Ne adjon meg kulcsot a parancssorban. Továbbítsa STDIN-en keresztül, vagy nevezzen meg egy környezeti változót a --from-env segítségével."
 
 #. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
-#: includes/class-cli.php:390
+#: includes/class-cli.php:414
 #, php-format
 msgid "Saved %1$s for destination %2$s: %3$s"
 msgstr "%1$s mentve a(z) %2$s célhelyhez: %3$s"
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:396
+#: includes/class-cli.php:420
 #, php-format
 msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
 msgstr "%1$s eltávolítása innen: %2$s célhely? A rá készülő biztonsági mentések leállnak, amíg új nem lesz beállítva."
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:401
+#: includes/class-cli.php:425
 #, php-format
 msgid "Removed %1$s from destination %2$s."
 msgstr "%1$s eltávolítva a(z) %2$s célhelyről."
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is in place."
 msgstr "A betöltő a helyén van."
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is removed."
 msgstr "A betöltő eltávolítva."
 
-#: includes/class-cli.php:461
+#: includes/class-cli.php:486
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Használat: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:476
+#: includes/class-cli.php:504
 msgid "That environment variable is not set or is empty."
 msgstr "Ez a környezeti változó nincs beállítva vagy üres."
 
@@ -621,11 +631,6 @@ msgstr "Nem lett megadva kulcs. Irányítsa át STDIN-en, vagy adjon meg egy kö
 #, php-format
 msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
 msgstr "Ez nem tűnik érvényes %s értéknek (helytelen hosszúság, vagy olyan karakterek, amelyeket egy ilyen típusú kulcs soha nem tartalmaz). Semmi sem került mentésre."
-
-#: includes/class-connection-keys.php:182
-#: includes/class-settings.php:241
-msgid "No destination with that id. See: wp zinn-backups destination list"
-msgstr "Nincs ilyen azonosítójú célállomás. Lásd: wp zinn-backups destination list"
 
 #: includes/class-connection-keys.php:191
 msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
@@ -853,64 +858,78 @@ msgstr "A tárhelyügyfél-kedvezmény már fel lett használva ehhez a bővítm
 msgid "We could not get your code just now. Please try again in a few minutes."
 msgstr "A kód lekérése jelenleg nem sikerült. Kérjük, próbálja meg újra néhány perc múlva."
 
-#: includes/class-restore-job.php:128
+#: includes/class-restore-job.php:130
 msgid "Reading the backup"
 msgstr "Biztonsági másolat beolvasása"
 
-#: includes/class-restore-job.php:129
+#: includes/class-restore-job.php:131
 msgid "Downloading the archive"
 msgstr "Archívum letöltése"
 
-#: includes/class-restore-job.php:130
+#: includes/class-restore-job.php:132
 msgid "Recognising the archive"
 msgstr "Archívum felismerése"
 
-#: includes/class-restore-job.php:131
+#: includes/class-restore-job.php:133
 msgid "Restoring files"
 msgstr "Fájlok visszaállítása"
 
-#: includes/class-restore-job.php:132
+#: includes/class-restore-job.php:134
+msgid "Deleting uploads that are not in the backup"
+msgstr "A biztonsági mentésben nem szereplő feltöltések törlése"
+
+#: includes/class-restore-job.php:135
 msgid "Downloading the database"
 msgstr "Adatbázis letöltése folyamatban"
 
-#: includes/class-restore-job.php:133
+#: includes/class-restore-job.php:136
 msgid "Restoring the database"
 msgstr "Az adatbázis visszaállítása folyamatban"
 
-#: includes/class-restore-job.php:134
+#: includes/class-restore-job.php:137
 msgid "Updating the site address"
 msgstr "A webhely címének frissítése"
 
-#: includes/class-restore-job.php:135
+#: includes/class-restore-job.php:138
 msgid "Switching to the restored database"
 msgstr "Átváltás a visszaállított adatbázisra"
 
-#: includes/class-restore-job.php:158
+#: includes/class-restore-job.php:162
 msgid "The restore reached an unknown stage."
 msgstr "A visszaállítás ismeretlen szakaszba ért."
 
-#: includes/class-restore-job.php:201
+#: includes/class-restore-job.php:205
 msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
 msgstr "Ez a mappa nem tartalmaz teljes Zinn® Backups biztonsági mentést (a jegyzék hiányzik)."
 
-#: includes/class-restore-job.php:204
+#: includes/class-restore-job.php:208
 msgid "This backup is encrypted. Enter its passphrase to restore it."
 msgstr "Ez a biztonsági mentés titkosított. A visszaállításhoz meg kell adni a jelmondatot."
 
 #. translators: %s: backup id.
-#: includes/class-restore-job.php:219
+#: includes/class-restore-job.php:223
 #, php-format
 msgid "This incremental backup needs backup %s, which is no longer in the storage."
 msgstr "Ehhez a növekményes biztonsági mentéshez a(z) %s biztonsági mentés szükséges, amely már nincs a tárhelyen."
 
 #. translators: 1: backup date, 2: number of parts.
-#: includes/class-restore-job.php:266
+#: includes/class-restore-job.php:270
 #, php-format
 msgid "Restoring the backup of %1$s (%2$d file parts)."
 msgstr "%1$s biztonsági másolatának visszaállítása (%2$d fájlrész)."
 
+#: includes/class-restore-job.php:342
+msgid "Leftover uploads were not deleted: the uploads folder is outside the WordPress folder."
+msgstr "A fennmaradó feltöltések nem lettek törölve: a feltöltések mappa a WordPress mappán kívül található."
+
+#. translators: 1: number of files deleted, 2: number that could not be deleted.
+#: includes/class-restore-job.php:365
+#, php-format
+msgid "Deleted %1$d file(s) from the uploads folder that are not in the backup (%2$d could not be deleted)."
+msgstr "Törlésre került a feltöltések mappából %1$d olyan fájl, amely nem szerepel a biztonsági mentésben (%2$d törlése nem sikerült)."
+
 #. translators: 1: number of files, 2: example paths.
-#: includes/class-restore-job.php:340
+#: includes/class-restore-job.php:388
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
@@ -918,71 +937,71 @@ msgstr[0] "A(z) %1$s fájlt nem sikerült felülírni, mert ez az oldal nem jogo
 msgstr[1] "%1$s fájlt nem sikerült felülírni, mert a webhelynek nincs jogosultsága módosítani azokat, így változatlanul maradtak: %2$s"
 
 #. translators: %s: number of files.
-#: includes/class-restore-job.php:359
+#: includes/class-restore-job.php:407
 #, php-format
 msgid "Restored %s files."
 msgstr "%s fájl visszaállítva."
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:422
+#: includes/class-restore-job.php:470
 #, php-format
 msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
 msgstr "A(z) %s a letöltés után nem egyezett az ellenőrző összegével. Lehet, hogy a tárolóban lévő példány sérült."
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:493
+#: includes/class-restore-job.php:541
 #, php-format
 msgid "%s did not arrive. Upload it again."
 msgstr "A(z) %s nem érkezett meg. Kérjük, töltse fel újra."
 
 #. translators: %s: list of backup formats.
-#: includes/class-restore-job.php:515
+#: includes/class-restore-job.php:563
 #, php-format
 msgid "Recognised: %s."
 msgstr "Felismerve: %s."
 
 #. translators: 1: number of files, 2: number of files skipped.
-#: includes/class-restore-job.php:542
+#: includes/class-restore-job.php:590
 #, php-format
 msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
 msgstr "%1$s fájl importálva a wp-content mappába (%2$s kihagyva: gyorsítótárak, drop-in fájlok és más biztonsági mentési bővítmények mappái)."
 
-#: includes/class-restore-job.php:588
+#: includes/class-restore-job.php:636
 msgid "The archive has no database dump, so only files were imported."
 msgstr "Az archívum nem tartalmaz adatbázis-mentést, így csak a fájlok importálása történt meg."
 
 #. translators: %d: number of tables.
-#: includes/class-restore-job.php:598
+#: includes/class-restore-job.php:646
 #, php-format
 msgid "Database restored into %d temporary tables."
 msgstr "Az adatbázis visszaállítva %d ideiglenes táblába."
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:615
+#: includes/class-restore-job.php:663
 #, php-format
 msgid "%s has no WordPress tables in it and was skipped."
 msgstr "A(z) %s nem tartalmaz WordPress táblákat, ezért ki lett hagyva."
 
-#: includes/class-restore-job.php:653
+#: includes/class-restore-job.php:701
 #: includes/class-table-swap.php:237
 msgid "The backup’s database has no WordPress tables, so nothing was replaced."
 msgstr "A biztonsági mentés adatbázisa nem tartalmaz WordPress táblákat, így semmi sem került lecserélésre."
 
-#: includes/class-restore-job.php:658
+#: includes/class-restore-job.php:706
 msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
 msgstr "Ez a biztonsági mentés egy többhelyes (multisite) hálózatról készült. A hálózat visszaállítása egyetlen webhelyre nem támogatott."
 
 #. translators: 1: old address, 2: this site's address.
-#: includes/class-restore-job.php:683
+#: includes/class-restore-job.php:731
 #, php-format
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Tartalom áthelyezése innen: %1$s ide: %2$s."
 
-#: includes/class-restore-job.php:809
+#: includes/class-restore-job.php:857
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "A visszaállítás befejeződött. Kijelentkezés esetén jelentkezzünk be a visszaállított webhely valamelyik fiókjával."
 
-#: includes/class-restore-job.php:810
+#: includes/class-restore-job.php:858
 msgid "Restore complete."
 msgstr "Visszaállítás kész."
 
@@ -1015,6 +1034,10 @@ msgstr "Az adatbázis elutasított egy utasítást a biztonsági mentésből: %1
 #, php-format
 msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
 msgstr "Nem sikerült felcserélni a helyreállított táblákat: %s. A webhely változatlan maradt."
+
+#: includes/class-uploads-pruner.php:83
+msgid "The backup’s file list could not be read, so no leftover uploads were deleted."
+msgstr "A biztonsági mentés fájllistáját nem sikerült beolvasni, így a megmaradt feltöltések nem lettek törölve."
 
 #: includes/class-work-dir.php:43
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."

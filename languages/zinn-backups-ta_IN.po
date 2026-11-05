@@ -49,30 +49,30 @@ msgid "Working…"
 msgstr "செயல்பாட்டில் உள்ளது…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:345
+#: includes/class-admin.php:348
 msgid "Finished"
 msgstr "முடிந்தது"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:346
+#: includes/class-admin.php:349
 msgid "Failed"
 msgstr "தோல்வியடைந்தது"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:347
+#: includes/class-admin.php:350
 msgid "Cancelled"
 msgstr "ரத்து செய்யப்பட்டது"
 
 #: includes/class-admin.php:114
 #: includes/class-admin.php:271
-#: includes/class-admin.php:316
+#: includes/class-admin.php:319
 msgid "Cancel"
 msgstr "ரத்துசெய்"
 
 #: includes/class-admin.php:115
 #: includes/class-admin.php:313
-#: includes/class-admin.php:316
-#: includes/class-restore-job.php:136
+#: includes/class-admin.php:319
+#: includes/class-restore-job.php:139
 msgid "Restore"
 msgstr "மீட்டமை"
 
@@ -185,19 +185,19 @@ msgstr "எதை காப்பெடுக்க வேண்டும்"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files and database"
 msgstr "கோப்புகள் மற்றும் தரவுத்தளம்"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Database only"
 msgstr "தரவுத்தளம் மட்டும்"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files only"
 msgstr "கோப்புகள் மட்டும்"
 
@@ -225,246 +225,250 @@ msgstr "இந்தக் காப்புப் பிரதியை மீ
 msgid "Passphrase"
 msgstr "கடவுச்சொற்றொடர்"
 
-#: includes/class-admin.php:315
+#: includes/class-admin.php:316
+msgid "I understand this replaces this site’s files and database with the backup’s. Files in the uploads folder that are not in the backup are DELETED (ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS is set); other files that are not in the backup are kept."
+msgstr "இது இந்தத் தளத்தின் கோப்புகளையும் தரவுத்தளத்தையும் காப்பகத்தில் உள்ளவற்றால் மாற்றியமைக்கும் என்பதை நான் புரிந்துகொள்கிறேன். காப்பகத்தில் இல்லாத uploads கோப்புறையில் உள்ள கோப்புகள் நீக்கப்படும் (ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS அமைக்கப்பட்டுள்ளது); காப்பகத்தில் இல்லாத பிற கோப்புகள் தக்கவைக்கப்படும்."
+
+#: includes/class-admin.php:317
 msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
 msgstr "இது இந்த தளத்தின் கோப்புகள் மற்றும் தரவுத்தளத்தை காப்புப் பிரதியின் மூலம் மாற்றியமைக்கும் என்பதை நான் புரிந்துகொள்கிறேன். காப்புப் பிரதியில் இல்லாத கோப்புகள் அப்படியே வைத்திருக்கப்படும்."
 
-#: includes/class-admin.php:321
+#: includes/class-admin.php:324
 msgid "Recent activity"
 msgstr "சமீபத்திய செயல்பாடு"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 #: includes/class-backup-job.php:104
 msgid "Backup"
 msgstr "காப்புப்பிரதி"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 msgid "Restore / import"
 msgstr "மீட்டமை / இறக்குமதி செய்"
 
-#: includes/class-admin.php:348
+#: includes/class-admin.php:351
 msgid "Running"
 msgstr "இயங்குகிறது"
 
-#: includes/class-admin.php:360
+#: includes/class-admin.php:363
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "உங்கள் சேமிப்பகம்"
 msgstr[1] "உங்கள் சேமிப்பக இலக்குகள்"
 
-#: includes/class-admin.php:362
+#: includes/class-admin.php:365
 msgid "No storage yet. Choose where your backups go below."
 msgstr "இன்னும் சேமிப்பகம் இல்லை. உங்கள் காப்புப்பிரதிகள் எங்கு செல்ல வேண்டும் என்பதை கீழே தேர்வுசெய்யவும்."
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Ready"
 msgstr "தயார்"
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Not connected"
 msgstr "இணைக்கப்படவில்லை"
 
-#: includes/class-admin.php:373
+#: includes/class-admin.php:376
 msgid "Connect"
 msgstr "இணைக்கவும்"
 
-#: includes/class-admin.php:374
+#: includes/class-admin.php:377
 msgid "Test"
 msgstr "சோதனை"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:378
 msgid "Edit"
 msgstr "திருத்து"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:379
 msgid "Remove"
 msgstr "நீக்கு"
 
-#: includes/class-admin.php:382
+#: includes/class-admin.php:385
 msgid "Add storage"
 msgstr "சேமிப்பகத்தைச் சேர்"
 
-#: includes/class-admin.php:386
+#: includes/class-admin.php:389
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "காப்புப்பிரதிகள் ஒரு சேமிப்பக இலக்குக்குச் செல்கின்றன. வேறு ஒன்றைப் பயன்படுத்த, மேலே உள்ளதைத் திருத்தவும் அல்லது அகற்றவும்."
 
-#: includes/class-admin.php:397
+#: includes/class-admin.php:400
 msgid "Kind of storage"
 msgstr "சேமிப்பக வகை"
 
-#: includes/class-admin.php:402
+#: includes/class-admin.php:405
 msgid "Name (for you)"
 msgstr "பெயர் (உங்களுக்காக)"
 
-#: includes/class-admin.php:404
+#: includes/class-admin.php:407
 msgid "Provider"
 msgstr "வழங்குநர்"
 
-#: includes/class-admin.php:409
+#: includes/class-admin.php:412
 msgid "Cloudflare account id"
 msgstr "Cloudflare கணக்கு ஐடி"
 
-#: includes/class-admin.php:410
+#: includes/class-admin.php:413
 msgid "Endpoint address"
 msgstr "இறுதிப்புள்ளி முகவரி"
 
-#: includes/class-admin.php:411
+#: includes/class-admin.php:414
 msgid "Region"
 msgstr "பிராந்தியம்"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:415
 msgid "Bucket"
 msgstr "பக்கெட்"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:416
 msgid "Access key id"
 msgstr "அணுகல் விசை ஐடி"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Secret access key"
 msgstr "ரகசிய அணுகல் விசை"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Leave empty to keep the saved key"
 msgstr "சேமிக்கப்பட்ட விசையை வைத்திருக்க காலியாக விடவும்"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:418
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "Cloudflare R2-க்கு: Cloudflare கட்டுப்பாட்டுப் பலகத்தில் R2-ஐத் திறந்து, ஒரு பக்கெட்டை (bucket) உருவாக்கவும், பின்னர் “Manage R2 API tokens” → அந்த பக்கெட்டிற்கு Object Read & Write அனுமதியுடன் ஒரு டோக்கனை உருவாக்கி, அணுகல் விசை ஐடி (access key id) மற்றும் ரகசியத்தை இங்கே நகலெடுக்கவும்."
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:421
 msgid "Dropbox app key"
 msgstr "Dropbox ஆப் சாவி"
 
-#: includes/class-admin.php:419
+#: includes/class-admin.php:422
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "dropbox.com/developers/apps (Scoped access, App folder) இல் files.content.read, files.content.write மற்றும் files.metadata.read அனுமதிகளுடன் ஒரு செயலியை உருவாக்கி, அதன் App key-ஐ இங்கே நகலெடுக்கவும். சேமிக்கவும், பின்னர் Connect என்பதை அழுத்தவும்."
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:424
 msgid "OAuth client id"
 msgstr "OAuth கிளையண்ட் ஐடி"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "OAuth client secret"
 msgstr "OAuth கிளையண்ட் ரகசியம்"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "Leave empty to keep the saved secret"
 msgstr "சேமிக்கப்பட்ட ரகசியத்தை வைத்திருக்க காலியாக விடவும்"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "Google Cloud Console இல், Google Drive API ஐச் செயல்படுத்தவும், பின்னர் இந்த முகவரியை அங்கீகரிக்கப்பட்ட திசைதிருப்புதல் URI ஆகக் கொண்டு \"Web application\" வகையிலான OAuth கிளையண்டை உருவாக்கவும்:"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "சேமிக்கவும், பின்னர் இணை என்பதை அழுத்தவும். இந்தச் செருகுநிரல் தான் உருவாக்கும் கோப்புகளை மட்டுமே பார்க்கும்."
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:428
 msgid "Folder inside the storage (optional)"
 msgstr "சேமிப்பகத்திற்குள் உள்ள கோப்புறை (விருப்பத்தேர்வு)"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:429
 msgid "Save storage"
 msgstr "சேமிப்பகத்தை சேமிக்கவும்"
 
-#: includes/class-admin.php:436
+#: includes/class-admin.php:439
 msgid "Import a backup from another plugin or host"
 msgstr "மற்றொரு செருகுநிரல் அல்லது ஹோஸ்டிலிருந்து காப்புப்பிரதியை இறக்குமதி செய்யவும்"
 
-#: includes/class-admin.php:437
+#: includes/class-admin.php:440
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate அல்லது .sql dump கொண்டுள்ள WordPress தளத்தின் ஏதேனும் ஒரு zip/tar காப்பகத்தின் காப்புப் பிரதியிலிருந்து ஒரு தளத்தைக் கொண்டு வாருங்கள். உள்ளடக்கம் wp-content-க்குச் செல்லும் மற்றும் தரவுத்தளம் இந்தத் தளத்தின் தரவுத்தளத்தை மாற்றும்; முகவரிகள் தானாகவே இந்தத் தளத்தின் முகவரிகளுக்கு மாற்றப்படும்."
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Upload from your computer"
 msgstr "உங்கள் கணினியிலிருந்து பதிவேற்றவும்"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "காப்புப்பிரதியின் ஒவ்வொரு கோப்பையும் ஒரே நேரத்தில் தேர்ந்தெடுக்கவும் (UpdraftPlus பலவற்றை உருவாக்குகிறது). பெரிய கோப்புகள் சிறிய துண்டுகளாக அனுப்பப்படுகின்றன, எனவே உங்கள் ஹோஸ்ட்டின் பதிவேற்ற வரம்பு பொருந்தாது."
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "அல்லது இணைப்புகளிலிருந்து (Google Drive, Dropbox அல்லது ஏதேனும் பதிவிறக்க முகவரி)"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "ஒரு வரிக்கு ஒரு இணைப்பு. Google Drive மற்றும் Dropbox ஆகியவற்றிற்கு, கோப்பை \"இணைப்பைக் கொண்ட எவருடனும்\" பகிர்வதுடன் அந்த இணைப்பை ஒட்டவும்; பின்னர் பகிர்வதை மீண்டும் முடக்கவும்."
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:445
 msgid "Or a file already on this server"
 msgstr "அல்லது ஏற்கனவே இந்த சேவையகத்தில் உள்ள ஒரு கோப்பு"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:450
+#: includes/class-admin.php:453
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "FTP அல்லது உங்கள் ஹோஸ்ட்டின் கோப்பு மேலாளர் வழியாக காப்பகங்களை %s இல் பதிவேற்றி இந்தப் பக்கத்தை மீண்டும் ஏற்றவும்."
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Or a deploy code from another site"
 msgstr "அல்லது மற்றொரு தளத்திலிருந்து ஒரு வரிசைப்படுத்தல் குறியீடு"
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "மற்றொரு தளம் உங்களுக்கு Zinn® Backups பயன்பாட்டுக் குறியீட்டை (deploy code) வழங்கியிருந்தால், அதன் சேமிப்பக விசைகளைப் பகிராமல் அந்த காப்புப்பிரதியை இந்தத் தளத்திற்கு நகலெடுக்க அதை இங்கே ஒட்டவும். ஒரு குறியீடு சில மணிநேரங்களுக்கு மட்டுமே செயல்படும்; அதை கடவுச்சொல் போல பாதுகாப்பாகக் கையாளவும்."
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "கடவுச்சொற்றொடர் (அந்தக் காப்புப்பிரதி மறைகுறியாக்கப்பட்டிருந்தால் மட்டுமே)"
 
-#: includes/class-admin.php:456
-#: includes/class-admin.php:458
+#: includes/class-admin.php:459
+#: includes/class-admin.php:461
 msgid "Import"
 msgstr "இறக்குமதி செய்"
 
-#: includes/class-admin.php:457
+#: includes/class-admin.php:460
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "இறக்குமதி இந்த தளத்தின் உள்ளடக்கம் மற்றும் தரவுத்தளத்தை மாற்றியமைக்கிறது என்பதை நான் புரிந்துகொள்கிறேன். அதன் பிறகு, இறக்குமதி செய்யப்பட்ட தளத்தின் கணக்கைக் கொண்டு உள்நுழையவும்."
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Moving to Zinn® hosting?"
 msgstr "Zinn® ஹோஸ்டிங்கிற்கு மாறுகிறீர்களா?"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "Zinn Digital® உங்கள் பழைய ஹோஸ்டிலிருந்து உங்கள் தளத்தை உங்களுக்காக நகர்த்த முடியும். உங்கள் பழைய ஹோஸ்ட் உங்களுக்கு FTP, SSH அல்லது கட்டுப்பாட்டுப் பலக அணுகலை வழங்கவில்லை என்றால், பழைய தளத்தில் Zinn® Migrate-ஐ நிறுவுங்கள்; இது நீங்கள் இங்கு இறக்குமதி செய்யக்கூடிய அல்லது Zinn®-இடம் ஒப்படைக்கக்கூடிய ஒரு காப்பகத்தை உருவாக்குகிறது."
 
-#: includes/class-admin.php:470
+#: includes/class-admin.php:473
 msgid "What goes into a backup"
 msgstr "காப்புப்பிரதியில் என்ன அடங்கும்"
 
-#: includes/class-admin.php:471
+#: includes/class-admin.php:474
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "WordPress-இன் சொந்தக் கோப்புகளை (wp-admin, wp-includes) சேர்க்கவும். வழக்கமாகத் தேவையில்லை: WordPress-ஐ எப்போதும் மீண்டும் நிறுவ முடியும்."
 
-#: includes/class-admin.php:472
+#: includes/class-admin.php:475
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "இந்தக் கோப்புறைகள் அல்லது கோப்புகளையும் தவிர்க்கவும் (ஒரு வரிக்கு ஒன்று, WordPress கோப்புறைக்கு தொடர்புடையதாக)"
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:476
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "எப்போதும் தவிர்க்கப்படுபவை: தற்காலிக நினைவகங்கள் (caches), புதுப்பித்தல் தற்காலிக இடம் மற்றும் பிற காப்புநகல் செருகுநிரல்களின் சொந்த காப்பகக் கோப்புறைகள்:"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:477
 msgid "Size of each part (MB)"
 msgstr "ஒவ்வொரு பகுதியின் அளவு (MB)"
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:478
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "செருகுநிரல் முடக்கப்பட்டிருக்கும்போதும் காப்புப்பிரதிகளைத் தொடர்ந்து இயக்கவும்"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:479
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "நீங்கள் இதை இயக்கும் வரை முடக்கப்பட்டிருக்கும். இந்தச் செருகுநிரல் முடக்கப்பட்டிருந்தாலும், அல்லது மீட்டமைக்கப்பட்ட தரவுத்தளம் இதை இனி செயலில் உள்ளதாகப் பட்டியலிடவில்லை என்றாலும், காப்புப்பிரதிகள், மீட்டமைப்புகள் மற்றும் WP-CLI கட்டளைகள் தொடர்ந்து இயங்குவதை இது உறுதிசெய்கிறது. இது must-use செருகுநிரல்கள் கோப்புறையில் ஒரு சிறிய ஏற்றியைய் (loader) வைக்கும்."
 
-#: includes/class-admin.php:481
+#: includes/class-admin.php:484
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "ஏற்றி சரியான இடத்தில் இல்லை. அதை மீண்டும் வைக்க அமைப்புகளைச் சேமிக்கவும்."
 
-#: includes/class-admin.php:487
+#: includes/class-admin.php:490
 msgid "Save settings"
 msgstr "அமைப்புகளைச் சேமிக்கவும்"
 
@@ -481,7 +485,7 @@ msgid "Connect a storage destination on the Storage tab first: backups are kept 
 msgstr "முதலில் Storage தாவலில் ஒரு சேமிப்பக இலக்கை இணைக்கவும்: காப்புப்பிரதிகள் இந்த சேவையகத்தில் அல்ல, உங்களுடைய சொந்த சேமிப்பகத்திலேயே வைக்கப்படும்."
 
 #: includes/class-backup-job.php:45
-#: includes/class-restore-job.php:108
+#: includes/class-restore-job.php:110
 msgid "Multisite networks are not supported yet."
 msgstr "மல்டிசைட் நெட்வொர்க்குகள் இன்னும் ஆதரிக்கப்படவில்லை."
 
@@ -556,7 +560,7 @@ msgid "That is not a backup folder."
 msgstr "அது காப்புப் பிரதி கோப்புறை அல்ல."
 
 #: includes/class-catalog.php:138
-#: includes/class-restore-job.php:186
+#: includes/class-restore-job.php:190
 msgid "That storage destination is no longer saved on this site."
 msgstr "அந்தச் சேமிப்பக இலக்கு இந்தத் தளத்தில் இனி சேமிக்கப்படாது."
 
@@ -564,45 +568,51 @@ msgstr "அந்தச் சேமிப்பக இலக்கு இந்
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "பிந்தைய கூடுதல் காப்புப்பிரதிகள் இதன் அடிப்படையில் கட்டமைக்கப்பட்டுள்ளன. முதலில் அவற்றை நீக்கவும்."
 
-#: includes/class-cli.php:367
+#: includes/class-cli.php:313
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "அந்த ஐடியுடன் இலக்கு எதுவும் இல்லை. பார்க்க: wp zinn-backups destination list"
+
+#: includes/class-cli.php:391
 msgid "Use: wp zinn-backups key set|get|remove [<name>]"
 msgstr "பயன்பாடு: wp zinn-backups key set|get|remove [<name>]"
 
-#: includes/class-cli.php:371
+#: includes/class-cli.php:395
 msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
 msgstr "கட்டளை வரியில் விசையை இட வேண்டாம். அதை STDIN வழியாக அனுப்பவும், அல்லது --from-env மூலம் சூழல் மாறியைக் குறிப்பிடவும்."
 
 #. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
-#: includes/class-cli.php:390
+#: includes/class-cli.php:414
 #, php-format
 msgid "Saved %1$s for destination %2$s: %3$s"
 msgstr "%2$s இலக்குக்காக %1$s சேமிக்கப்பட்டது: %3$s"
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:396
+#: includes/class-cli.php:420
 #, php-format
 msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
 msgstr "இலக்கு %2$s இலிருந்து %1$s ஐ அகற்றவா? புதிய ஒன்று அமைக்கப்படும் வரை அதற்கான காப்புப் பிரதிகள் நிறுத்தப்படும்."
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:401
+#: includes/class-cli.php:425
 #, php-format
 msgid "Removed %1$s from destination %2$s."
 msgstr "%2$s இலக்கிலிருந்து %1$s நீக்கப்பட்டது."
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is in place."
 msgstr "ஏற்றி அதன் இடத்தில் உள்ளது."
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is removed."
 msgstr "ஏற்றி அகற்றப்பட்டது."
 
-#: includes/class-cli.php:461
+#: includes/class-cli.php:486
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "பயன்பாடு: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:476
+#: includes/class-cli.php:504
 msgid "That environment variable is not set or is empty."
 msgstr "அந்த சூழல் மாறி அமைக்கப்படவில்லை அல்லது காலியாக உள்ளது."
 
@@ -621,11 +631,6 @@ msgstr "விசை எதுவும் வழங்கப்படவில�
 #, php-format
 msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
 msgstr "இது சரியான %s போல் தெரியவில்லை (தவறான நீளம் அல்லது இந்த வகையான விசையைக் கொண்டிருக்காத எழுத்துருக்கள்). எதுவும் சேமிக்கப்படவில்லை."
-
-#: includes/class-connection-keys.php:182
-#: includes/class-settings.php:241
-msgid "No destination with that id. See: wp zinn-backups destination list"
-msgstr "அந்த ஐடியுடன் இலக்கு எதுவும் இல்லை. பார்க்க: wp zinn-backups destination list"
 
 #: includes/class-connection-keys.php:191
 msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
@@ -853,64 +858,78 @@ msgstr "இந்த செருகுநிரலுக்கான உங்�
 msgid "We could not get your code just now. Please try again in a few minutes."
 msgstr "இப்போது உங்கள் குறியீட்டைப் பெற முடியவில்லை. சில நிமிடங்கள் கழித்து மீண்டும் முயற்சிக்கவும்."
 
-#: includes/class-restore-job.php:128
+#: includes/class-restore-job.php:130
 msgid "Reading the backup"
 msgstr "காப்புப்பிரதியைப் படிக்கிறது"
 
-#: includes/class-restore-job.php:129
+#: includes/class-restore-job.php:131
 msgid "Downloading the archive"
 msgstr "காப்பகம் பதிவிறக்கப்படுகிறது"
 
-#: includes/class-restore-job.php:130
+#: includes/class-restore-job.php:132
 msgid "Recognising the archive"
 msgstr "காப்பகத்தை அடையாளம் காண்கிறது"
 
-#: includes/class-restore-job.php:131
+#: includes/class-restore-job.php:133
 msgid "Restoring files"
 msgstr "கோப்புகளை மீட்டமைக்கிறது"
 
-#: includes/class-restore-job.php:132
+#: includes/class-restore-job.php:134
+msgid "Deleting uploads that are not in the backup"
+msgstr "காப்பகத்தில் இல்லாத பதிவேற்றங்கள் நீக்கப்படுகின்றன"
+
+#: includes/class-restore-job.php:135
 msgid "Downloading the database"
 msgstr "தரவுத்தளத்தைப் பதிவிறக்குகிறது"
 
-#: includes/class-restore-job.php:133
+#: includes/class-restore-job.php:136
 msgid "Restoring the database"
 msgstr "தரவுத்தளத்தை மீட்டமைக்கிறது"
 
-#: includes/class-restore-job.php:134
+#: includes/class-restore-job.php:137
 msgid "Updating the site address"
 msgstr "தள முகவரியைப் புதுப்பிக்கிறது"
 
-#: includes/class-restore-job.php:135
+#: includes/class-restore-job.php:138
 msgid "Switching to the restored database"
 msgstr "மீட்டமைக்கப்பட்ட தரவுத்தளத்திற்கு மாறுகிறது"
 
-#: includes/class-restore-job.php:158
+#: includes/class-restore-job.php:162
 msgid "The restore reached an unknown stage."
 msgstr "மீட்டெடுப்பு அறியப்படாத நிலையை அடைந்தது."
 
-#: includes/class-restore-job.php:201
+#: includes/class-restore-job.php:205
 msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
 msgstr "இந்தக் கோப்புறையில் முழுமையான Zinn® Backups காப்புப்பிரதி இல்லை (மேனிஃபெஸ்ட் விடுபட்டுள்ளது)."
 
-#: includes/class-restore-job.php:204
+#: includes/class-restore-job.php:208
 msgid "This backup is encrypted. Enter its passphrase to restore it."
 msgstr "இந்தக் காப்பகம் குறியாக்கம் செய்யப்பட்டுள்ளது. அதை மீட்டமைக்க அதன் கடவுத்தொடரை உள்ளிடவும்."
 
 #. translators: %s: backup id.
-#: includes/class-restore-job.php:219
+#: includes/class-restore-job.php:223
 #, php-format
 msgid "This incremental backup needs backup %s, which is no longer in the storage."
 msgstr "இந்த அதிகரிப்பு காப்புப்பிரதிக்கு காப்புப்பிரதி %s தேவைப்படுகிறது, அது சேமிப்பகத்தில் இப்போது இல்லை."
 
 #. translators: 1: backup date, 2: number of parts.
-#: includes/class-restore-job.php:266
+#: includes/class-restore-job.php:270
 #, php-format
 msgid "Restoring the backup of %1$s (%2$d file parts)."
 msgstr "%1$s இன் காப்புப்பிரதியை மீட்டமைக்கிறது (%2$d கோப்புப் பகுதிகள்)."
 
+#: includes/class-restore-job.php:342
+msgid "Leftover uploads were not deleted: the uploads folder is outside the WordPress folder."
+msgstr "மீதமுள்ள பதிவேற்றங்கள் நீக்கப்படவில்லை: பதிவேற்றங்கள் கோப்புறை WordPress கோப்புறைக்கு வெளியே உள்ளது."
+
+#. translators: 1: number of files deleted, 2: number that could not be deleted.
+#: includes/class-restore-job.php:365
+#, php-format
+msgid "Deleted %1$d file(s) from the uploads folder that are not in the backup (%2$d could not be deleted)."
+msgstr "காப்புப்பிரதியில் இல்லாத %1$d கோப்பு(கள்) பதிவேற்றங்கள் கோப்புறையிலிருந்து நீக்கப்பட்டன (%2$d கோப்புகளை நீக்க முடியவில்லை)."
+
 #. translators: 1: number of files, 2: example paths.
-#: includes/class-restore-job.php:340
+#: includes/class-restore-job.php:388
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
@@ -918,71 +937,71 @@ msgstr[0] "%1$s கோப்பை மேலெழுத முடியவி�
 msgstr[1] "%1$s கோப்புகளை மேலெழுத முடியவில்லை, ஏனெனில் இந்த தளத்திற்கு அவற்றை மாற்றுவதற்கு அனுமதி இல்லை, மேலும் அவை இருந்தபடியே விடப்பட்டன: %2$s"
 
 #. translators: %s: number of files.
-#: includes/class-restore-job.php:359
+#: includes/class-restore-job.php:407
 #, php-format
 msgid "Restored %s files."
 msgstr "%s கோப்புகள் மீட்டமைக்கப்பட்டன."
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:422
+#: includes/class-restore-job.php:470
 #, php-format
 msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
 msgstr "%s பதிவிறக்கிய பிறகு அதன் செக்சம்முடன் பொருந்தவில்லை. சேமிப்பகத்தில் உள்ள நகல் சேதமடைந்திருக்கலாம்."
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:493
+#: includes/class-restore-job.php:541
 #, php-format
 msgid "%s did not arrive. Upload it again."
 msgstr "%s வந்து சேரவில்லை. தயவுசெய்து அதை மீண்டும் பதிவேற்றவும்."
 
 #. translators: %s: list of backup formats.
-#: includes/class-restore-job.php:515
+#: includes/class-restore-job.php:563
 #, php-format
 msgid "Recognised: %s."
 msgstr "அடையாளம் காணப்பட்டது: %s."
 
 #. translators: 1: number of files, 2: number of files skipped.
-#: includes/class-restore-job.php:542
+#: includes/class-restore-job.php:590
 #, php-format
 msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
 msgstr "wp-content இல் %1$s கோப்புகள் இறக்குமதி செய்யப்பட்டன (%2$s தவிர்க்கப்பட்டன: தற்காலிகச் சேமிப்புகள் (caches), drop-ins மற்றும் பிற காப்புநகல் செருகுநிரல்களின் கோப்புறைகள்)."
 
-#: includes/class-restore-job.php:588
+#: includes/class-restore-job.php:636
 msgid "The archive has no database dump, so only files were imported."
 msgstr "காப்பகத்தில் தரவுத்தள டம்ப் இல்லை, எனவே கோப்புகள் மட்டுமே இறக்குமதி செய்யப்பட்டன."
 
 #. translators: %d: number of tables.
-#: includes/class-restore-job.php:598
+#: includes/class-restore-job.php:646
 #, php-format
 msgid "Database restored into %d temporary tables."
 msgstr "தரவுத்தளம் %d தற்காலிக அட்டவணைகளில் மீட்டமைக்கப்பட்டது."
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:615
+#: includes/class-restore-job.php:663
 #, php-format
 msgid "%s has no WordPress tables in it and was skipped."
 msgstr "%s-ல் எந்த WordPress அட்டவணைகளும் இல்லை, எனவே தவிர்க்கப்பட்டது."
 
-#: includes/class-restore-job.php:653
+#: includes/class-restore-job.php:701
 #: includes/class-table-swap.php:237
 msgid "The backup’s database has no WordPress tables, so nothing was replaced."
 msgstr "காப்புப்பிரதியின் தரவுத்தளத்தில் WordPress அட்டவணைகள் எதுவும் இல்லை, எனவே எதுவும் மாற்றப்படவில்லை."
 
-#: includes/class-restore-job.php:658
+#: includes/class-restore-job.php:706
 msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
 msgstr "இந்த காப்புநகல் ஒரு பலதள வலைப்பின்னலைச் (multisite network) சார்ந்தது. ஒரு வலைப்பின்னலை ஒற்றைத் தளத்தில் மீட்டமைப்பது ஆதரிக்கப்படவில்லை."
 
 #. translators: 1: old address, 2: this site's address.
-#: includes/class-restore-job.php:683
+#: includes/class-restore-job.php:731
 #, php-format
 msgid "Moving the content from %1$s to %2$s."
 msgstr "%1$s இலிருந்து %2$s இற்கு உள்ளடக்கத்தை நகர்த்துகிறது."
 
-#: includes/class-restore-job.php:809
+#: includes/class-restore-job.php:857
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "மீட்டமைப்பு முடிந்தது. நீங்கள் வெளியேறியிருந்தால், மீட்டமைக்கப்பட்ட தளத்தின் கணக்கைக் கொண்டு உள்நுழையவும்."
 
-#: includes/class-restore-job.php:810
+#: includes/class-restore-job.php:858
 msgid "Restore complete."
 msgstr "மீட்டமைத்தல் முடிந்தது."
 
@@ -1015,6 +1034,10 @@ msgstr "காப்புப்பிரதியிலிருந்து �
 #, php-format
 msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
 msgstr "மீட்டமைக்கப்பட்ட அட்டவணைகளை மாற்ற முடியவில்லை: %s. உங்கள் தளம் மாறாமல் உள்ளது."
+
+#: includes/class-uploads-pruner.php:83
+msgid "The backup’s file list could not be read, so no leftover uploads were deleted."
+msgstr "காப்புப் பிரதியின் கோப்புப் பட்டியலைப் படிக்க முடியவில்லை, எனவே எஞ்சிய பதிவேற்றங்கள் எதுவும் நீக்கப்படவில்லை."
 
 #: includes/class-work-dir.php:43
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."

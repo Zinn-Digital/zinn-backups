@@ -49,30 +49,30 @@ msgid "Working…"
 msgstr "Đang xử lý…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:345
+#: includes/class-admin.php:348
 msgid "Finished"
 msgstr "Đã hoàn thành"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:346
+#: includes/class-admin.php:349
 msgid "Failed"
 msgstr "Thất bại"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:347
+#: includes/class-admin.php:350
 msgid "Cancelled"
 msgstr "Đã hủy"
 
 #: includes/class-admin.php:114
 #: includes/class-admin.php:271
-#: includes/class-admin.php:316
+#: includes/class-admin.php:319
 msgid "Cancel"
 msgstr "Hủy"
 
 #: includes/class-admin.php:115
 #: includes/class-admin.php:313
-#: includes/class-admin.php:316
-#: includes/class-restore-job.php:136
+#: includes/class-admin.php:319
+#: includes/class-restore-job.php:139
 msgid "Restore"
 msgstr "Khôi phục"
 
@@ -185,19 +185,19 @@ msgstr "Nội dung cần sao lưu"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files and database"
 msgstr "Tệp và cơ sở dữ liệu"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Database only"
 msgstr "Chỉ cơ sở dữ liệu"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files only"
 msgstr "Chỉ tệp tin"
 
@@ -225,245 +225,249 @@ msgstr "Khôi phục bản sao lưu này"
 msgid "Passphrase"
 msgstr "Cụm mật khẩu"
 
-#: includes/class-admin.php:315
+#: includes/class-admin.php:316
+msgid "I understand this replaces this site’s files and database with the backup’s. Files in the uploads folder that are not in the backup are DELETED (ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS is set); other files that are not in the backup are kept."
+msgstr "Tôi hiểu rằng thao tác này sẽ thay thế các tệp và cơ sở dữ liệu của trang web này bằng các tệp và cơ sở dữ liệu từ bản sao lưu. Các tệp trong thư mục uploads không có trong bản sao lưu sẽ bị XÓA (ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS đã được thiết lập); các tệp khác không có trong bản sao lưu sẽ được giữ lại."
+
+#: includes/class-admin.php:317
 msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
 msgstr "Tôi hiểu rằng thao tác này sẽ thay thế các tệp và cơ sở dữ liệu của trang web này bằng các tệp và cơ sở dữ liệu từ bản sao lưu. Các tệp không có trong bản sao lưu sẽ được giữ lại."
 
-#: includes/class-admin.php:321
+#: includes/class-admin.php:324
 msgid "Recent activity"
 msgstr "Hoạt động gần đây"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 #: includes/class-backup-job.php:104
 msgid "Backup"
 msgstr "Sao lưu"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 msgid "Restore / import"
 msgstr "Khôi phục / nhập"
 
-#: includes/class-admin.php:348
+#: includes/class-admin.php:351
 msgid "Running"
 msgstr "Đang chạy"
 
-#: includes/class-admin.php:360
+#: includes/class-admin.php:363
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "Dung lượng lưu trữ của bạn"
 
-#: includes/class-admin.php:362
+#: includes/class-admin.php:365
 msgid "No storage yet. Choose where your backups go below."
 msgstr "Chưa có bộ nhớ. Chọn nơi lưu bản sao lưu của bạn bên dưới."
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Ready"
 msgstr "Sẵn sàng"
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Not connected"
 msgstr "Chưa kết nối"
 
-#: includes/class-admin.php:373
+#: includes/class-admin.php:376
 msgid "Connect"
 msgstr "Kết nối"
 
-#: includes/class-admin.php:374
+#: includes/class-admin.php:377
 msgid "Test"
 msgstr "Kiểm tra"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:378
 msgid "Edit"
 msgstr "Chỉnh sửa"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:379
 msgid "Remove"
 msgstr "Xóa"
 
-#: includes/class-admin.php:382
+#: includes/class-admin.php:385
 msgid "Add storage"
 msgstr "Thêm dung lượng lưu trữ"
 
-#: includes/class-admin.php:386
+#: includes/class-admin.php:389
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "Bản sao lưu được chuyển đến một đích lưu trữ. Để sử dụng đích khác, hãy chỉnh sửa hoặc xóa đích ở trên."
 
-#: includes/class-admin.php:397
+#: includes/class-admin.php:400
 msgid "Kind of storage"
 msgstr "Loại lưu trữ"
 
-#: includes/class-admin.php:402
+#: includes/class-admin.php:405
 msgid "Name (for you)"
 msgstr "Tên (cho bạn)"
 
-#: includes/class-admin.php:404
+#: includes/class-admin.php:407
 msgid "Provider"
 msgstr "Nhà cung cấp"
 
-#: includes/class-admin.php:409
+#: includes/class-admin.php:412
 msgid "Cloudflare account id"
 msgstr "ID tài khoản Cloudflare"
 
-#: includes/class-admin.php:410
+#: includes/class-admin.php:413
 msgid "Endpoint address"
 msgstr "Địa chỉ điểm cuối"
 
-#: includes/class-admin.php:411
+#: includes/class-admin.php:414
 msgid "Region"
 msgstr "Khu vực"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:415
 msgid "Bucket"
 msgstr "Bucket"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:416
 msgid "Access key id"
 msgstr "ID khóa truy cập"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Secret access key"
 msgstr "Khóa truy cập bí mật"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Leave empty to keep the saved key"
 msgstr "Để trống để giữ lại khóa đã lưu"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:418
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "Đối với Cloudflare R2: trong bảng điều khiển Cloudflare, hãy mở R2, tạo một bucket, sau đó chọn “Manage R2 API tokens” → tạo mã token có quyền Object Read & Write cho bucket đó và sao chép id khóa truy cập (access key id) cùng mã bí mật (secret) vào đây."
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:421
 msgid "Dropbox app key"
 msgstr "Khóa ứng dụng Dropbox"
 
-#: includes/class-admin.php:419
+#: includes/class-admin.php:422
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "Tạo một ứng dụng tại dropbox.com/developers/apps (Scoped access, App folder) với các quyền files.content.read, files.content.write và files.metadata.read, rồi sao chép Khóa ứng dụng vào đây. Lưu, sau đó nhấn Kết nối."
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:424
 msgid "OAuth client id"
 msgstr "ID máy khách OAuth"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "OAuth client secret"
 msgstr "Mật khẩu máy khách OAuth"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "Leave empty to keep the saved secret"
 msgstr "Để trống để giữ lại khóa bí mật đã lưu"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "Trong Google Cloud Console, hãy bật Google Drive API, sau đó tạo một OAuth client thuộc loại “Ứng dụng web” với địa chỉ này làm URI chuyển hướng được ủy quyền:"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "Lưu, sau đó nhấn Kết nối. Plugin chỉ nhìn thấy các tệp do chính nó tạo ra."
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:428
 msgid "Folder inside the storage (optional)"
 msgstr "Thư mục bên trong bộ nhớ (tùy chọn)"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:429
 msgid "Save storage"
 msgstr "Tiết kiệm dung lượng lưu trữ"
 
-#: includes/class-admin.php:436
+#: includes/class-admin.php:439
 msgid "Import a backup from another plugin or host"
 msgstr "Nhập bản sao lưu từ một plugin hoặc máy chủ khác"
 
-#: includes/class-admin.php:437
+#: includes/class-admin.php:440
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "Đưa một trang web vào từ bản sao lưu được tạo bởi UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate hoặc bất kỳ kho lưu trữ zip/tar nào của trang web WordPress cùng với bản kết xuất .sql của nó. Nội dung sẽ được chuyển vào wp-content và cơ sở dữ liệu sẽ thay thế cơ sở dữ liệu của trang web này; các địa chỉ được tự động đổi thành địa chỉ của trang web này."
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Upload from your computer"
 msgstr "Tải lên từ máy tính của bạn"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "Hãy chọn tất cả các tệp của bản sao lưu cùng một lúc (UpdraftPlus tạo ra nhiều tệp). Các tệp lớn được gửi thành từng phần nhỏ, do đó giới hạn tải lên của máy chủ lưu trữ sẽ không áp dụng."
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "Hoặc từ các liên kết (Google Drive, Dropbox hoặc bất kỳ địa chỉ tải xuống nào)"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "Mỗi dòng một liên kết. Đối với Google Drive và Dropbox, hãy chia sẻ tệp với “bất kỳ ai có liên kết” rồi dán liên kết đó; sau đó hãy tắt tính năng chia sẻ lại."
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:445
 msgid "Or a file already on this server"
 msgstr "Hoặc một tệp đã có sẵn trên máy chủ này"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:450
+#: includes/class-admin.php:453
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "Tải lên các bản lưu trữ bằng FTP hoặc trình quản lý tệp của máy chủ lưu trữ vào %s và tải lại trang này."
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Or a deploy code from another site"
 msgstr "Hoặc mã triển khai từ một trang web khác"
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "Nếu một trang web khác đã cung cấp cho bạn mã triển khai Zinn® Backups, hãy dán mã đó vào đây để sao chép bản sao lưu đó sang trang web này mà không cần chia sẻ các khóa lưu trữ của nó. Mã này chỉ hoạt động trong vài giờ; hãy coi nó như một mật khẩu."
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "Cụm mật khẩu (chỉ khi bản sao lưu đó được mã hóa)"
 
-#: includes/class-admin.php:456
-#: includes/class-admin.php:458
+#: includes/class-admin.php:459
+#: includes/class-admin.php:461
 msgid "Import"
 msgstr "Nhập"
 
-#: includes/class-admin.php:457
+#: includes/class-admin.php:460
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "Tôi hiểu rằng việc nhập dữ liệu sẽ thay thế nội dung và cơ sở dữ liệu của trang web này. Sau đó, hãy đăng nhập bằng tài khoản từ trang web đã nhập."
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Moving to Zinn® hosting?"
 msgstr "Đang chuyển sang dịch vụ lưu trữ của Zinn®?"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "Zinn Digital® có thể chuyển trang web của bạn từ nhà cung cấp dịch vụ lưu trữ cũ. Nếu nhà cung cấp dịch vụ lưu trữ cũ không cấp cho bạn quyền truy cập FTP, SSH hoặc bảng điều khiển, hãy cài đặt Zinn® Migrate trên trang web cũ; công cụ này sẽ tạo một tệp lưu trữ duy nhất mà bạn có thể nhập vào đây hoặc giao cho Zinn®."
 
-#: includes/class-admin.php:470
+#: includes/class-admin.php:473
 msgid "What goes into a backup"
 msgstr "Những gì có trong bản sao lưu"
 
-#: includes/class-admin.php:471
+#: includes/class-admin.php:474
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "Bao gồm các tệp riêng của WordPress (wp-admin, wp-includes). Thường không cần thiết: WordPress luôn có thể được cài đặt lại."
 
-#: includes/class-admin.php:472
+#: includes/class-admin.php:475
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "Đồng thời bỏ qua các thư mục hoặc tệp này (mỗi mục một dòng, tương đối với thư mục WordPress)"
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:476
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "Luôn được loại trừ: bộ nhớ đệm, vùng tạm thời để cập nhật và các thư mục lưu trữ riêng của các plugin sao lưu khác:"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:477
 msgid "Size of each part (MB)"
 msgstr "Kích thước của mỗi phần (MB)"
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:478
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "Tiếp tục chạy sao lưu khi gói mở rộng bị tắt"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:479
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "Tắt trừ khi bạn bật nó. Giúp các thao tác sao lưu, khôi phục và lệnh WP-CLI tiếp tục chạy nếu plugin này bị tắt hoặc nếu cơ sở dữ liệu đã khôi phục không còn liệt kê nó là đang hoạt động. Thao tác này sẽ đặt một trình tải nhỏ vào thư mục plugin bắt buộc sử dụng (must-use plugins)."
 
-#: includes/class-admin.php:481
+#: includes/class-admin.php:484
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "Trình tải không ở đúng vị trí. Hãy lưu các cài đặt để đặt lại."
 
-#: includes/class-admin.php:487
+#: includes/class-admin.php:490
 msgid "Save settings"
 msgstr "Lưu cài đặt"
 
@@ -480,7 +484,7 @@ msgid "Connect a storage destination on the Storage tab first: backups are kept 
 msgstr "Trước tiên hãy kết nối đích lưu trữ trên thẻ Storage: các bản sao lưu được lưu trữ trên bộ nhớ của riêng bạn chứ không phải trên máy chủ này."
 
 #: includes/class-backup-job.php:45
-#: includes/class-restore-job.php:108
+#: includes/class-restore-job.php:110
 msgid "Multisite networks are not supported yet."
 msgstr "Mạng đa trang web (multisite) hiện chưa được hỗ trợ."
 
@@ -554,7 +558,7 @@ msgid "That is not a backup folder."
 msgstr "Đó không phải là thư mục sao lưu."
 
 #: includes/class-catalog.php:138
-#: includes/class-restore-job.php:186
+#: includes/class-restore-job.php:190
 msgid "That storage destination is no longer saved on this site."
 msgstr "Đích lưu trữ đó không còn được lưu trên trang web này nữa."
 
@@ -562,45 +566,51 @@ msgstr "Đích lưu trữ đó không còn được lưu trên trang web này n�
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "Các bản sao lưu gia tăng sau này được xây dựng trên bản này. Hãy xóa các bản đó trước."
 
-#: includes/class-cli.php:367
+#: includes/class-cli.php:313
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "Không có đích đến nào với ID đó. Xem: wp zinn-backups destination list"
+
+#: includes/class-cli.php:391
 msgid "Use: wp zinn-backups key set|get|remove [<name>]"
 msgstr "Cách dùng: wp zinn-backups key set|get|remove [<name>]"
 
-#: includes/class-cli.php:371
+#: includes/class-cli.php:395
 msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
 msgstr "Không đặt khóa trên dòng lệnh. Hãy chuyển khóa qua STDIN hoặc đặt tên cho biến môi trường bằng --from-env."
 
 #. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
-#: includes/class-cli.php:390
+#: includes/class-cli.php:414
 #, php-format
 msgid "Saved %1$s for destination %2$s: %3$s"
 msgstr "Đã lưu %1$s cho đích đến %2$s: %3$s"
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:396
+#: includes/class-cli.php:420
 #, php-format
 msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
 msgstr "Xóa %1$s khỏi đích đến %2$s? Việc sao lưu tới đó sẽ dừng lại cho đến khi một đích mới được thiết lập."
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:401
+#: includes/class-cli.php:425
 #, php-format
 msgid "Removed %1$s from destination %2$s."
 msgstr "Đã xóa %1$s khỏi đích đến %2$s."
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is in place."
 msgstr "Trình tải đã sẵn sàng."
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is removed."
 msgstr "Trình tải đã bị xóa."
 
-#: includes/class-cli.php:461
+#: includes/class-cli.php:486
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Cách dùng: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:476
+#: includes/class-cli.php:504
 msgid "That environment variable is not set or is empty."
 msgstr "Biến môi trường đó chưa được thiết lập hoặc đang trống."
 
@@ -619,11 +629,6 @@ msgstr "Chưa có khóa nào được cung cấp. Hãy chuyển tiếp qua STDIN
 #, php-format
 msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
 msgstr "Đó dường như không phải là một %s hợp lệ (độ dài không đúng hoặc chứa các ký tự mà loại khóa này không bao giờ có). Không có gì được lưu."
-
-#: includes/class-connection-keys.php:182
-#: includes/class-settings.php:241
-msgid "No destination with that id. See: wp zinn-backups destination list"
-msgstr "Không có đích đến nào với ID đó. Xem: wp zinn-backups destination list"
 
 #: includes/class-connection-keys.php:191
 msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
@@ -851,135 +856,149 @@ msgstr "Bạn đã sử dụng giảm giá dành cho khách hàng dịch vụ l�
 msgid "We could not get your code just now. Please try again in a few minutes."
 msgstr "Chúng tôi không thể lấy mã của bạn vào lúc này. Vui lòng thử lại sau vài phút."
 
-#: includes/class-restore-job.php:128
+#: includes/class-restore-job.php:130
 msgid "Reading the backup"
 msgstr "Đang đọc bản sao lưu"
 
-#: includes/class-restore-job.php:129
+#: includes/class-restore-job.php:131
 msgid "Downloading the archive"
 msgstr "Đang tải xuống tệp lưu trữ"
 
-#: includes/class-restore-job.php:130
+#: includes/class-restore-job.php:132
 msgid "Recognising the archive"
 msgstr "Đang nhận dạng tệp lưu trữ"
 
-#: includes/class-restore-job.php:131
+#: includes/class-restore-job.php:133
 msgid "Restoring files"
 msgstr "Đang khôi phục tệp"
 
-#: includes/class-restore-job.php:132
+#: includes/class-restore-job.php:134
+msgid "Deleting uploads that are not in the backup"
+msgstr "Đang xóa các tệp tải lên không có trong bản sao lưu"
+
+#: includes/class-restore-job.php:135
 msgid "Downloading the database"
 msgstr "Đang tải xuống cơ sở dữ liệu"
 
-#: includes/class-restore-job.php:133
+#: includes/class-restore-job.php:136
 msgid "Restoring the database"
 msgstr "Đang khôi phục cơ sở dữ liệu"
 
-#: includes/class-restore-job.php:134
+#: includes/class-restore-job.php:137
 msgid "Updating the site address"
 msgstr "Đang cập nhật địa chỉ trang web"
 
-#: includes/class-restore-job.php:135
+#: includes/class-restore-job.php:138
 msgid "Switching to the restored database"
 msgstr "Đang chuyển sang cơ sở dữ liệu đã khôi phục"
 
-#: includes/class-restore-job.php:158
+#: includes/class-restore-job.php:162
 msgid "The restore reached an unknown stage."
 msgstr "Quá trình khôi phục đã đạt đến một giai đoạn không xác định."
 
-#: includes/class-restore-job.php:201
+#: includes/class-restore-job.php:205
 msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
 msgstr "Thư mục này không có bản sao lưu Zinn® Backups hoàn chỉnh (thiếu manifest)."
 
-#: includes/class-restore-job.php:204
+#: includes/class-restore-job.php:208
 msgid "This backup is encrypted. Enter its passphrase to restore it."
 msgstr "Bản sao lưu này đã được mã hóa. Nhập cụm mật khẩu để khôi phục."
 
 #. translators: %s: backup id.
-#: includes/class-restore-job.php:219
+#: includes/class-restore-job.php:223
 #, php-format
 msgid "This incremental backup needs backup %s, which is no longer in the storage."
 msgstr "Bản sao lưu gia tăng này cần bản sao lưu %s, vốn không còn trong bộ lưu trữ."
 
 #. translators: 1: backup date, 2: number of parts.
-#: includes/class-restore-job.php:266
+#: includes/class-restore-job.php:270
 #, php-format
 msgid "Restoring the backup of %1$s (%2$d file parts)."
 msgstr "Đang khôi phục bản sao lưu của %1$s (%2$d phần tệp)."
 
+#: includes/class-restore-job.php:342
+msgid "Leftover uploads were not deleted: the uploads folder is outside the WordPress folder."
+msgstr "Các tệp tải lên còn lại chưa được xóa: thư mục tải lên nằm ngoài thư mục WordPress."
+
+#. translators: 1: number of files deleted, 2: number that could not be deleted.
+#: includes/class-restore-job.php:365
+#, php-format
+msgid "Deleted %1$d file(s) from the uploads folder that are not in the backup (%2$d could not be deleted)."
+msgstr "Đã xóa %1$d tệp khỏi thư mục tải lên không có trong bản sao lưu (%2$d tệp không thể xóa)."
+
 #. translators: 1: number of files, 2: example paths.
-#: includes/class-restore-job.php:340
+#: includes/class-restore-job.php:388
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
 msgstr[0] "Không thể ghi đè tập tin %1$s vì trang web này không được phép thay đổi nó, và đã được giữ nguyên: %2$s"
 
 #. translators: %s: number of files.
-#: includes/class-restore-job.php:359
+#: includes/class-restore-job.php:407
 #, php-format
 msgid "Restored %s files."
 msgstr "Đã khôi phục %s tệp."
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:422
+#: includes/class-restore-job.php:470
 #, php-format
 msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
 msgstr "%s không khớp với mã tổng kiểm tra sau khi tải xuống. Bản sao trong bộ lưu trữ có thể đã bị hỏng."
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:493
+#: includes/class-restore-job.php:541
 #, php-format
 msgid "%s did not arrive. Upload it again."
 msgstr "%s đã không đến. Vui lòng tải lên lại."
 
 #. translators: %s: list of backup formats.
-#: includes/class-restore-job.php:515
+#: includes/class-restore-job.php:563
 #, php-format
 msgid "Recognised: %s."
 msgstr "Đã nhận dạng: %s."
 
 #. translators: 1: number of files, 2: number of files skipped.
-#: includes/class-restore-job.php:542
+#: includes/class-restore-job.php:590
 #, php-format
 msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
 msgstr "Đã nhập %1$s tệp vào wp-content (bỏ qua %2$s: bộ nhớ đệm, drop-in và thư mục của các tiện ích mở rộng sao lưu khác)."
 
-#: includes/class-restore-job.php:588
+#: includes/class-restore-job.php:636
 msgid "The archive has no database dump, so only files were imported."
 msgstr "Kho lưu trữ không có bản kết xuất cơ sở dữ liệu, vì vậy chỉ có các tệp được nhập."
 
 #. translators: %d: number of tables.
-#: includes/class-restore-job.php:598
+#: includes/class-restore-job.php:646
 #, php-format
 msgid "Database restored into %d temporary tables."
 msgstr "Cơ sở dữ liệu đã được khôi phục vào %d bảng tạm thời."
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:615
+#: includes/class-restore-job.php:663
 #, php-format
 msgid "%s has no WordPress tables in it and was skipped."
 msgstr "%s không có bảng WordPress nào bên trong và đã bị bỏ qua."
 
-#: includes/class-restore-job.php:653
+#: includes/class-restore-job.php:701
 #: includes/class-table-swap.php:237
 msgid "The backup’s database has no WordPress tables, so nothing was replaced."
 msgstr "Cơ sở dữ liệu của bản sao lưu không có bảng WordPress nào, vì vậy không có gì được thay thế."
 
-#: includes/class-restore-job.php:658
+#: includes/class-restore-job.php:706
 msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
 msgstr "Bản sao lưu này là của một mạng đa trang web (multisite). Việc khôi phục mạng vào một trang web đơn lẻ không được hỗ trợ."
 
 #. translators: 1: old address, 2: this site's address.
-#: includes/class-restore-job.php:683
+#: includes/class-restore-job.php:731
 #, php-format
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Đang di chuyển nội dung từ %1$s sang %2$s."
 
-#: includes/class-restore-job.php:809
+#: includes/class-restore-job.php:857
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "Khôi phục hoàn tất. Nếu bạn đã đăng xuất, hãy đăng nhập bằng tài khoản từ trang web đã khôi phục."
 
-#: includes/class-restore-job.php:810
+#: includes/class-restore-job.php:858
 msgid "Restore complete."
 msgstr "Khôi phục hoàn tất."
 
@@ -1012,6 +1031,10 @@ msgstr "Cơ sở dữ liệu đã từ chối một câu lệnh từ bản sao l
 #, php-format
 msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
 msgstr "Không thể hoán đổi các bảng đã phục hồi: %s. Trang web của bạn vẫn được giữ nguyên."
+
+#: includes/class-uploads-pruner.php:83
+msgid "The backup’s file list could not be read, so no leftover uploads were deleted."
+msgstr "Không thể đọc danh sách tệp của bản sao lưu, vì vậy không có tệp tải lên còn sót lại nào bị xóa."
 
 #: includes/class-work-dir.php:43
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."

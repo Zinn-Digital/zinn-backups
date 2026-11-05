@@ -312,7 +312,10 @@ final class Admin {
 		echo '<p class="zb-restore-what"></p>';
 		echo '<p><label>' . esc_html__( 'Restore', 'zinn-backups' ) . ' <select name="what"><option value="all">' . esc_html__( 'Files and database', 'zinn-backups' ) . '</option><option value="database">' . esc_html__( 'Database only', 'zinn-backups' ) . '</option><option value="files">' . esc_html__( 'Files only', 'zinn-backups' ) . '</option></select></label></p>';
 		echo '<p class="zb-passphrase" hidden><label>' . esc_html__( 'Passphrase', 'zinn-backups' ) . ' <input type="password" name="passphrase" autocomplete="off"></label></p>';
-		echo '<p><label><input type="checkbox" name="confirm" value="yes" required> ' . esc_html__( 'I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept.', 'zinn-backups' ) . '</label></p>';
+		$confirm = Uploads_Pruner::enabled()
+			? __( 'I understand this replaces this site’s files and database with the backup’s. Files in the uploads folder that are not in the backup are DELETED (ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS is set); other files that are not in the backup are kept.', 'zinn-backups' )
+			: __( 'I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept.', 'zinn-backups' );
+		echo '<p><label><input type="checkbox" name="confirm" value="yes" required> ' . esc_html( $confirm ) . '</label></p>';
 		echo '<p class="zb-actions"><button value="cancel" class="button">' . esc_html__( 'Cancel', 'zinn-backups' ) . '</button> <button value="go" class="button button-primary">' . esc_html__( 'Restore', 'zinn-backups' ) . '</button></p>';
 		echo '</form></dialog>';
 

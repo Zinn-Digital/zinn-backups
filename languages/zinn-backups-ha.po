@@ -49,30 +49,30 @@ msgid "Working…"
 msgstr "Ana aiki…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:345
+#: includes/class-admin.php:348
 msgid "Finished"
 msgstr "Gama"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:346
+#: includes/class-admin.php:349
 msgid "Failed"
 msgstr "Ya faskara"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:347
+#: includes/class-admin.php:350
 msgid "Cancelled"
 msgstr "An soke"
 
 #: includes/class-admin.php:114
 #: includes/class-admin.php:271
-#: includes/class-admin.php:316
+#: includes/class-admin.php:319
 msgid "Cancel"
 msgstr "Soke"
 
 #: includes/class-admin.php:115
 #: includes/class-admin.php:313
-#: includes/class-admin.php:316
-#: includes/class-restore-job.php:136
+#: includes/class-admin.php:319
+#: includes/class-restore-job.php:139
 msgid "Restore"
 msgstr "Mayar"
 
@@ -185,19 +185,19 @@ msgstr "Abin da za a ajiye"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files and database"
 msgstr "Fayiloli da rumbun adana bayanai"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Database only"
 msgstr "Taskar bayanai kawai"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files only"
 msgstr "Fayiloli kawai"
 
@@ -225,246 +225,250 @@ msgstr "Mayar da wannan ajiyar"
 msgid "Passphrase"
 msgstr "Kalmar sirri"
 
-#: includes/class-admin.php:315
+#: includes/class-admin.php:316
+msgid "I understand this replaces this site’s files and database with the backup’s. Files in the uploads folder that are not in the backup are DELETED (ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS is set); other files that are not in the backup are kept."
+msgstr "Na fahimci wannan zai maye gurbin fayiloli da rumbun adana bayanai na wannan rukunin yanar gizo da na ma'ajiyar kariya. Fayilolin da ke cikin babban fayil na uploads waɗanda ba sa cikin ma'ajiyar kariya ZA A GOGE SU (an saita ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS); sauran fayilolin da ba sa cikin ma'ajiyar kariya za a bar su."
+
+#: includes/class-admin.php:317
 msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
 msgstr "Na fahimci wannan zai maye gurbin fayiloli da rumbun adana bayanai na wannan shafi da na madadin. Fayilolin da ba sa cikin madadin za a ajiye su."
 
-#: includes/class-admin.php:321
+#: includes/class-admin.php:324
 msgid "Recent activity"
 msgstr "Ayyukan kwanan nan"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 #: includes/class-backup-job.php:104
 msgid "Backup"
 msgstr "Ajiye bayanai"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 msgid "Restore / import"
 msgstr "Mayar / shigo da"
 
-#: includes/class-admin.php:348
+#: includes/class-admin.php:351
 msgid "Running"
 msgstr "Yana aiki"
 
-#: includes/class-admin.php:360
+#: includes/class-admin.php:363
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "Wurin ajiyarka"
 msgstr[1] "Wuraren ajiyarka"
 
-#: includes/class-admin.php:362
+#: includes/class-admin.php:365
 msgid "No storage yet. Choose where your backups go below."
 msgstr "Babu ma'aji tukuna. Zaɓi inda adananku zai tafi a ƙasa."
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Ready"
 msgstr "A shirye"
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Not connected"
 msgstr "Ba a haɗa ba"
 
-#: includes/class-admin.php:373
+#: includes/class-admin.php:376
 msgid "Connect"
 msgstr "Haɗa"
 
-#: includes/class-admin.php:374
+#: includes/class-admin.php:377
 msgid "Test"
 msgstr "Gwaji"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:378
 msgid "Edit"
 msgstr "Gyara"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:379
 msgid "Remove"
 msgstr "Cire"
 
-#: includes/class-admin.php:382
+#: includes/class-admin.php:385
 msgid "Add storage"
 msgstr "Ƙara ma'ajiya"
 
-#: includes/class-admin.php:386
+#: includes/class-admin.php:389
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "Ajiyar bayanan na tafiya zuwa wurin ajiya ɗaya. Don amfani da wani daban, gyara ko cire na saman."
 
-#: includes/class-admin.php:397
+#: includes/class-admin.php:400
 msgid "Kind of storage"
 msgstr "Nau'in ajiya"
 
-#: includes/class-admin.php:402
+#: includes/class-admin.php:405
 msgid "Name (for you)"
 msgstr "Suna (na ka)"
 
-#: includes/class-admin.php:404
+#: includes/class-admin.php:407
 msgid "Provider"
 msgstr "Mai bayarwa"
 
-#: includes/class-admin.php:409
+#: includes/class-admin.php:412
 msgid "Cloudflare account id"
 msgstr "ID na asusun Cloudflare"
 
-#: includes/class-admin.php:410
+#: includes/class-admin.php:413
 msgid "Endpoint address"
 msgstr "Adireshin endpoint"
 
-#: includes/class-admin.php:411
+#: includes/class-admin.php:414
 msgid "Region"
 msgstr "Yanki"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:415
 msgid "Bucket"
 msgstr "Kofi"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:416
 msgid "Access key id"
 msgstr "ID na maɓallin shiga"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Secret access key"
 msgstr "Kulle na sirri na samun dama"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Leave empty to keep the saved key"
 msgstr "Bar shi a wofi don adana maɓallin da aka ajiye"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:418
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "Don Cloudflare R2: a cikin dashboard na Cloudflare buɗe R2, ƙirƙiri bucket, sannan “Manage R2 API tokens” → ƙirƙiri token mai Object Read & Write don wannan bucket ɗin, sannan kwafi access key id da secret a nan."
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:421
 msgid "Dropbox app key"
 msgstr "Mabuɗin manhajar Dropbox"
 
-#: includes/class-admin.php:419
+#: includes/class-admin.php:422
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "Ƙirƙiri manhaja a dropbox.com/developers/apps (Scoped access, App folder) tare da izinin files.content.read, files.content.write da files.metadata.read, sannan kwafi App key ɗin sa a nan. Ajiye, sannan danna Connect."
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:424
 msgid "OAuth client id"
 msgstr "ID na abokin ciniki na OAuth"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "OAuth client secret"
 msgstr "Sirrin abokin ciniki na OAuth"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "Leave empty to keep the saved secret"
 msgstr "Bar shi a wofi don adana asirin da aka ajiye"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "A cikin Google Cloud Console, kunna Google Drive API, sannan ƙirƙiri abokin ciniki na OAuth na nau'in \"Web application\" tare da wannan adireshin azaman izini na turawa URI:"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "Ajiye, sannan ka danna Haɗa. Manhajar tana ganin fayilolin da ta ƙirƙira ne kawai."
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:428
 msgid "Folder inside the storage (optional)"
 msgstr "Foda a cikin ma'ajiya (na zaɓi)"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:429
 msgid "Save storage"
 msgstr "Ajiye ma'ajiya"
 
-#: includes/class-admin.php:436
+#: includes/class-admin.php:439
 msgid "Import a backup from another plugin or host"
 msgstr "Shigo da ajiye na baya daga wani plugin ko mai masauki"
 
-#: includes/class-admin.php:437
+#: includes/class-admin.php:440
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "Shigo da shafi daga ma'ajiyar da aka yi ta hanyar UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, ko kowane tarihin zip/tar na shafin WordPress tare da zubar da .sql dinsa. Abun cikin yana shiga wp-content kuma rumbun adana bayanai yana maye gurbin na wannan shafin; ana sauya adiresoshin zuwa na wannan shafin kai tsaye."
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Upload from your computer"
 msgstr "Loda daga kwamfutarka"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "Zaɓi kowane fayil na ma'ajiyar kariya a lokaci ɗaya (UpdraftPlus yana yin da yawa). Ana aika manyan fayiloli a ƙananan guntu, don haka iyakar lodawa ta mai masaukin ku ba ta aiki."
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "Ko daga hanyoyin haɗi (Google Drive, Dropbox ko kowane adireshin saukewa)"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "Hanyar haɗi ɗaya a kowane layi. Don Google Drive da Dropbox, raba fayil ɗin tare da \"duk wanda ke da hanyar haɗin\" sannan liƙa wannan hanyar haɗin; sake kashe rabawa daga baya."
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:445
 msgid "Or a file already on this server"
 msgstr "Ko fayil ɗin da ya riga ya kasance a kan wannan sabar"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:450
+#: includes/class-admin.php:453
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "Loda rumbunan adana bayanai ta hanyar FTP ko manajan fayil na mai masaukin ku zuwa %s sannan ku sake loda wannan shafi."
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Or a deploy code from another site"
 msgstr "Ko lambar tura aiki daga wani shafin"
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "Idan wani shafi ya ba ku lambar tura Zinn® Backups, manna ta anan don kwafi wannan ma'ajiyar zuwa wannan shafin ba tare da raba makullin ajiyar sa ba. Lambar tana aiki na 'yan sa'o'i; ɗauke ta kamar kalmar sirri."
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "Kalmar sirri (kawai idan an ɓoye bayanan ajiya)"
 
-#: includes/class-admin.php:456
-#: includes/class-admin.php:458
+#: includes/class-admin.php:459
+#: includes/class-admin.php:461
 msgid "Import"
 msgstr "Shigo da"
 
-#: includes/class-admin.php:457
+#: includes/class-admin.php:460
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "Na fahimci shigo da bayanan zai maye gurbin abubuwan da ke cikin wannan rukunin yanar gizon da kuma rumbun adana bayanai. Bayan haka, shiga da asusu daga shafin da aka shigo da shi."
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Moving to Zinn® hosting?"
 msgstr "Kuna komawa zuwa karɓar baƙuncin Zinn®?"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "Zinn Digital® na iya ƙaura da rukunin yanar gizonku daga tsohon mahallin ku dominku. Idan tsohon mahallin ku bai ba ku damar shiga FTP, SSH ko rukunin sarrafawa ba, shigar da Zinn® Migrate a tsohon rukunin yanar gizon; yana ƙirƙirar rumbun adana bayanai ɗaya wanda za ku iya shigo da shi anan ko mika shi ga Zinn®."
 
-#: includes/class-admin.php:470
+#: includes/class-admin.php:473
 msgid "What goes into a backup"
 msgstr "Abin da ke shiga cikin ma'ajiyar wucin gadi"
 
-#: includes/class-admin.php:471
+#: includes/class-admin.php:474
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "Haɗa fayilolin WordPress na asali (wp-admin, wp-includes). Yawanci ba a buƙata: ana iya sake shigar da WordPress a kowane lokaci."
 
-#: includes/class-admin.php:472
+#: includes/class-admin.php:475
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "Kuma bar waɗannan manyan fayiloli ko fayiloli (ɗaya a kowane layi, dangane da babban fayil na WordPress)"
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:476
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "Koyaushe ana barin su: ma'ajiyar cache, sararin aiki na sabuntawa, da kuma manyan fayilolin ajiya na sauran kayan aikin madadin kansu:"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:477
 msgid "Size of each part (MB)"
 msgstr "Girmar kowane sashi (MB)"
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:478
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "Ci gaba da yin ajiyar waje lokacin da aka kashe manhajar"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:479
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "A kashe yake sai dai idan ka kunna shi. Yana sa ajiyar bayanai, maido da bayanai da kuma umarnin WP-CLI ci gaba da aiki idan an kashe wannan manhaja, ko kuma idan ma'adanar bayanai da aka maido ba ta sake nuna shi a matsayin mai aiki ba. Wannan yana sanya wani karamin makaran bayanai a cikin babban fayil din manhajoji na dole (must-use plugins)."
 
-#: includes/class-admin.php:481
+#: includes/class-admin.php:484
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "Manhajar ɗora bayanai ba ta nan. Ajiye saitunan domin mayar da ita."
 
-#: includes/class-admin.php:487
+#: includes/class-admin.php:490
 msgid "Save settings"
 msgstr "Ajiye saituna"
 
@@ -481,7 +485,7 @@ msgid "Connect a storage destination on the Storage tab first: backups are kept 
 msgstr "Fara haɗa wurin ajiya a shafin Storage tukunna: ana adana kwafin bayanan a cikin ma'ajiyarku ne, ba a kan wannan uwar garken ba."
 
 #: includes/class-backup-job.php:45
-#: includes/class-restore-job.php:108
+#: includes/class-restore-job.php:110
 msgid "Multisite networks are not supported yet."
 msgstr "Ba a goyi bayan hanyoyin sadarwa na multisite ba tukuna."
 
@@ -556,7 +560,7 @@ msgid "That is not a backup folder."
 msgstr "Wannan ba babban fayil ɗin ajiya ba ne."
 
 #: includes/class-catalog.php:138
-#: includes/class-restore-job.php:186
+#: includes/class-restore-job.php:190
 msgid "That storage destination is no longer saved on this site."
 msgstr "Wannan wurin ajiyar ba a sake adana shi a wannan rukunin yanar gizon ba."
 
@@ -564,45 +568,51 @@ msgstr "Wannan wurin ajiyar ba a sake adana shi a wannan rukunin yanar gizon ba.
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "Karin madadin ajiyar bayanan na baya sun dogara ne a kan wannan. Da farko share wadannan."
 
-#: includes/class-cli.php:367
+#: includes/class-cli.php:313
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "Babu makoma mai wannan ID. Duba: wp zinn-backups destination list"
+
+#: includes/class-cli.php:391
 msgid "Use: wp zinn-backups key set|get|remove [<name>]"
 msgstr "Amfani: wp zinn-backups key set|get|remove [<name>]"
 
-#: includes/class-cli.php:371
+#: includes/class-cli.php:395
 msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
 msgstr "Kada a saka mabudi a layin umarni. Shigar da shi ta STDIN, ko kuma saka sunan canjin muhalli tare da --from-env."
 
 #. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
-#: includes/class-cli.php:390
+#: includes/class-cli.php:414
 #, php-format
 msgid "Saved %1$s for destination %2$s: %3$s"
 msgstr "An ajiye %1$s domin makoma %2$s: %3$s"
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:396
+#: includes/class-cli.php:420
 #, php-format
 msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
 msgstr "Cire %1$s daga manufa %2$s? Ajiyar bayanan baya zuwa gare shi zai tsaya har sai an saita sabo."
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:401
+#: includes/class-cli.php:425
 #, php-format
 msgid "Removed %1$s from destination %2$s."
 msgstr "An cire %1$s daga makoma %2$s."
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is in place."
 msgstr "Manhajar lodawa tana wurin."
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is removed."
 msgstr "An cire mai lodawa."
 
-#: includes/class-cli.php:461
+#: includes/class-cli.php:486
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Amfani: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:476
+#: includes/class-cli.php:504
 msgid "That environment variable is not set or is empty."
 msgstr "Wannan canjin yanayi ba a saita shi ba ko kuma babu komai a ciki."
 
@@ -621,11 +631,6 @@ msgstr "Ba a ba da mabuɗi ba. Tura shi ta STDIN ko sanya sunan canjin muhalli t
 #, php-format
 msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
 msgstr "Wannan ba ya kama da ingantaccen %s (tsawon da ba daidai ba, ko haruffan da irin wannan kewayen bai taɓa ƙunsa ba). Ba a ajiye komai ba."
-
-#: includes/class-connection-keys.php:182
-#: includes/class-settings.php:241
-msgid "No destination with that id. See: wp zinn-backups destination list"
-msgstr "Babu makoma mai wannan ID. Duba: wp zinn-backups destination list"
 
 #: includes/class-connection-keys.php:191
 msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
@@ -853,64 +858,78 @@ msgstr "Kun riga kun yi amfani da rangwamen abokin ciniki na bakuncin don wannan
 msgid "We could not get your code just now. Please try again in a few minutes."
 msgstr "Ba mu iya samun lambar ku a yanzu ba. Da fatan za a sake gwadawa nan da 'yan mintuna."
 
-#: includes/class-restore-job.php:128
+#: includes/class-restore-job.php:130
 msgid "Reading the backup"
 msgstr "Ana karanta madadin"
 
-#: includes/class-restore-job.php:129
+#: includes/class-restore-job.php:131
 msgid "Downloading the archive"
 msgstr "Ana sauke rumbun adana bayanai"
 
-#: includes/class-restore-job.php:130
+#: includes/class-restore-job.php:132
 msgid "Recognising the archive"
 msgstr "Ana gane ma'adanar bayanai"
 
-#: includes/class-restore-job.php:131
+#: includes/class-restore-job.php:133
 msgid "Restoring files"
 msgstr "Ana maido da fayiloli"
 
-#: includes/class-restore-job.php:132
+#: includes/class-restore-job.php:134
+msgid "Deleting uploads that are not in the backup"
+msgstr "Ana share abubuwan da aka loda waɗanda ba sa cikin ma'ajiyar kariya"
+
+#: includes/class-restore-job.php:135
 msgid "Downloading the database"
 msgstr "Ana sauke rumbun adana bayanai"
 
-#: includes/class-restore-job.php:133
+#: includes/class-restore-job.php:136
 msgid "Restoring the database"
 msgstr "Ana maido da rumbun adana bayanai"
 
-#: includes/class-restore-job.php:134
+#: includes/class-restore-job.php:137
 msgid "Updating the site address"
 msgstr "Ana sabunta adireshin shafin"
 
-#: includes/class-restore-job.php:135
+#: includes/class-restore-job.php:138
 msgid "Switching to the restored database"
 msgstr "Ana canzawa zuwa ma'adanar bayanai da aka dawo da ita"
 
-#: includes/class-restore-job.php:158
+#: includes/class-restore-job.php:162
 msgid "The restore reached an unknown stage."
 msgstr "Mayarwar ta kai wani mataki da ba a sani ba."
 
-#: includes/class-restore-job.php:201
+#: includes/class-restore-job.php:205
 msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
 msgstr "Wannan babban fayil ɗin ba shi da cikakken madadin Zinn® Backups a ciki (bayanin bayyanawa ya ɓace)."
 
-#: includes/class-restore-job.php:204
+#: includes/class-restore-job.php:208
 msgid "This backup is encrypted. Enter its passphrase to restore it."
 msgstr "Wannan ajiyar an ɓoye ta. Shigar da kalmar sirrinta don dawo da ita."
 
 #. translators: %s: backup id.
-#: includes/class-restore-job.php:219
+#: includes/class-restore-job.php:223
 #, php-format
 msgid "This incremental backup needs backup %s, which is no longer in the storage."
 msgstr "Wannan ajiyar wucin-gadi tana buƙatar ajiyar %s, wacce ba ta nan a rumbun ajiya."
 
 #. translators: 1: backup date, 2: number of parts.
-#: includes/class-restore-job.php:266
+#: includes/class-restore-job.php:270
 #, php-format
 msgid "Restoring the backup of %1$s (%2$d file parts)."
 msgstr "Ana mayar da ma'ajiyar %1$s (%2$d sassan fayil)."
 
+#: includes/class-restore-job.php:342
+msgid "Leftover uploads were not deleted: the uploads folder is outside the WordPress folder."
+msgstr "Ba a share fayilolin da aka loda da suka rage ba: babban fayil ɗin lodawa yana wajen babban fayil ɗin WordPress."
+
+#. translators: 1: number of files deleted, 2: number that could not be deleted.
+#: includes/class-restore-job.php:365
+#, php-format
+msgid "Deleted %1$d file(s) from the uploads folder that are not in the backup (%2$d could not be deleted)."
+msgstr "An goge fayiloli %1$d daga babban fayil ɗin lodawa waɗanda ba sa cikin madadin (ba a iya goge %2$d ba)."
+
 #. translators: 1: number of files, 2: example paths.
-#: includes/class-restore-job.php:340
+#: includes/class-restore-job.php:388
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
@@ -918,71 +937,71 @@ msgstr[0] "Ba a iya sake rubuta fayil ɗin %1$s ba saboda wannan rukunin yanar g
 msgstr[1] "Ba a iya sake rubuta fayiloli %1$s ba saboda ba a ba wannan rukunin yanar gizon izinin canza su ba, kuma an bar su yadda suke: %2$s"
 
 #. translators: %s: number of files.
-#: includes/class-restore-job.php:359
+#: includes/class-restore-job.php:407
 #, php-format
 msgid "Restored %s files."
 msgstr "An maido da fayiloli %s."
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:422
+#: includes/class-restore-job.php:470
 #, php-format
 msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
 msgstr "%s bai yi daidai da lambar bincikensa ba bayan saukarwa. Kofin da ke ajiye zai iya zama ya lalace."
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:493
+#: includes/class-restore-job.php:541
 #, php-format
 msgid "%s did not arrive. Upload it again."
 msgstr "%s bai iso ba. Sake loda shi."
 
 #. translators: %s: list of backup formats.
-#: includes/class-restore-job.php:515
+#: includes/class-restore-job.php:563
 #, php-format
 msgid "Recognised: %s."
 msgstr "An gane: %s."
 
 #. translators: 1: number of files, 2: number of files skipped.
-#: includes/class-restore-job.php:542
+#: includes/class-restore-job.php:590
 #, php-format
 msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
 msgstr "An shigo da fayiloli %1$s zuwa wp-content (an bar %2$s: caches, drop-ins da manyan fayilolin sauran plugins na ajiyar gani)."
 
-#: includes/class-restore-job.php:588
+#: includes/class-restore-job.php:636
 msgid "The archive has no database dump, so only files were imported."
 msgstr "Rumbun adana bayanan ba shi da juji na rumbun bayanai (database dump), don haka fayiloli kawai aka shigo da su."
 
 #. translators: %d: number of tables.
-#: includes/class-restore-job.php:598
+#: includes/class-restore-job.php:646
 #, php-format
 msgid "Database restored into %d temporary tables."
 msgstr "An maido da rumbun adana bayanai zuwa jadawalan wucin gadi guda %d."
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:615
+#: includes/class-restore-job.php:663
 #, php-format
 msgid "%s has no WordPress tables in it and was skipped."
 msgstr "%s ba shi da kowane teburan WordPress a cikinsa kuma an tsallake shi."
 
-#: includes/class-restore-job.php:653
+#: includes/class-restore-job.php:701
 #: includes/class-table-swap.php:237
 msgid "The backup’s database has no WordPress tables, so nothing was replaced."
 msgstr "Rumbun adana bayanan ajiyar ba shi da teburan WordPress, don haka ba a canza komai ba."
 
-#: includes/class-restore-job.php:658
+#: includes/class-restore-job.php:706
 msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
 msgstr "Wannan ajiyar na hanyar sadarwa ce ta shafuka da yawa (multisite). Ba a goyi bayan maido da hanyar sadarwa zuwa shafi guda ɗaya ba."
 
 #. translators: 1: old address, 2: this site's address.
-#: includes/class-restore-job.php:683
+#: includes/class-restore-job.php:731
 #, php-format
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Ana matsar da abun ciki daga %1$s zuwa %2$s."
 
-#: includes/class-restore-job.php:809
+#: includes/class-restore-job.php:857
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "An kammala mayarwa. Idan an fitar da ku, shiga tare da asusu daga shafin da aka mayar."
 
-#: includes/class-restore-job.php:810
+#: includes/class-restore-job.php:858
 msgid "Restore complete."
 msgstr "An kammala maido da aiki."
 
@@ -1015,6 +1034,10 @@ msgstr "Taskar bayanai ta ki amincewa da wata sanarwa daga madadin: %1$s (%2$s�
 #, php-format
 msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
 msgstr "Ba a iya canza teburan da aka dawo da su ba: %s. Shafinku bai canza ba."
+
+#: includes/class-uploads-pruner.php:83
+msgid "The backup’s file list could not be read, so no leftover uploads were deleted."
+msgstr "Ba a iya karanta jerin fayilolin ajiyar ba, don haka ba a goge sauran fayilolin da aka dora ba."
 
 #: includes/class-work-dir.php:43
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."

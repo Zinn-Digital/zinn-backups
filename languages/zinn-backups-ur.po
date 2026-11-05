@@ -49,30 +49,30 @@ msgid "Working…"
 msgstr "کام جاری ہے…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:345
+#: includes/class-admin.php:348
 msgid "Finished"
 msgstr "مکمل"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:346
+#: includes/class-admin.php:349
 msgid "Failed"
 msgstr "ناکام رہا"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:347
+#: includes/class-admin.php:350
 msgid "Cancelled"
 msgstr "منسوخ"
 
 #: includes/class-admin.php:114
 #: includes/class-admin.php:271
-#: includes/class-admin.php:316
+#: includes/class-admin.php:319
 msgid "Cancel"
 msgstr "منسوخ کریں"
 
 #: includes/class-admin.php:115
 #: includes/class-admin.php:313
-#: includes/class-admin.php:316
-#: includes/class-restore-job.php:136
+#: includes/class-admin.php:319
+#: includes/class-restore-job.php:139
 msgid "Restore"
 msgstr "بحال کریں"
 
@@ -185,19 +185,19 @@ msgstr "کس چیز کا بیک اپ بنانا ہے"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files and database"
 msgstr "فائلیں اور ڈیٹا بیس"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Database only"
 msgstr "صرف ڈیٹا بیس"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:456
+#: includes/class-admin.php:459
 msgid "Files only"
 msgstr "صرف فائلیں"
 
@@ -225,246 +225,250 @@ msgstr "یہ بیک اپ بحال کریں"
 msgid "Passphrase"
 msgstr "پاس فقرہ"
 
-#: includes/class-admin.php:315
+#: includes/class-admin.php:316
+msgid "I understand this replaces this site’s files and database with the backup’s. Files in the uploads folder that are not in the backup are DELETED (ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS is set); other files that are not in the backup are kept."
+msgstr "میں سمجھتا ہوں کہ یہ اس سائٹ کی فائلوں اور ڈیٹا بیس کو بیک اپ کی فائلوں اور ڈیٹا بیس سے بدل دیتا ہے۔ uploads فولڈر میں موجود فائلیں جو بیک اپ میں نہیں ہیں حذف کر دی جاتی ہیں (ZINN_BACKUPS_RESTORE_DELETE_LEFTOVER_UPLOADS سیٹ ہے)؛ بیک اپ میں شامل نہ ہونے والی دیگر فائلیں محفوظ رکھی جاتی ہیں۔"
+
+#: includes/class-admin.php:317
 msgid "I understand this replaces this site’s files and database with the backup’s. Files that are not in the backup are kept."
 msgstr "میں سمجھتا ہوں کہ یہ اس سائٹ کی فائلوں اور ڈیٹا بیس کو بیک اپ کی فائلوں اور ڈیٹا بیس سے بدل دیتا ہے۔ وہ فائلیں جو بیک اپ میں نہیں ہیں برقرار رکھی جاتی ہیں۔"
 
-#: includes/class-admin.php:321
+#: includes/class-admin.php:324
 msgid "Recent activity"
 msgstr "حالیہ سرگرمی"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 #: includes/class-backup-job.php:104
 msgid "Backup"
 msgstr "بیک اپ"
 
-#: includes/class-admin.php:327
+#: includes/class-admin.php:330
 msgid "Restore / import"
 msgstr "بحال کریں / درآمد کریں"
 
-#: includes/class-admin.php:348
+#: includes/class-admin.php:351
 msgid "Running"
 msgstr "چل رہا ہے"
 
-#: includes/class-admin.php:360
+#: includes/class-admin.php:363
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "آپ کا اسٹوریج"
 msgstr[1] "آپ کی اسٹوریج کی منزلیں"
 
-#: includes/class-admin.php:362
+#: includes/class-admin.php:365
 msgid "No storage yet. Choose where your backups go below."
 msgstr "ابھی تک کوئی اسٹوریج نہیں ہے۔ نیچے منتخب کریں کہ آپ کے بیک اپ کہاں جائیں۔"
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Ready"
 msgstr "تیار"
 
-#: includes/class-admin.php:372
+#: includes/class-admin.php:375
 msgid "Not connected"
 msgstr "منسلک نہیں ہے"
 
-#: includes/class-admin.php:373
+#: includes/class-admin.php:376
 msgid "Connect"
 msgstr "منسلک کریں"
 
-#: includes/class-admin.php:374
+#: includes/class-admin.php:377
 msgid "Test"
 msgstr "ٹیسٹ"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:378
 msgid "Edit"
 msgstr "ترمیم کریں"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:379
 msgid "Remove"
 msgstr "ہٹائیں"
 
-#: includes/class-admin.php:382
+#: includes/class-admin.php:385
 msgid "Add storage"
 msgstr "اسٹوریج شامل کریں"
 
-#: includes/class-admin.php:386
+#: includes/class-admin.php:389
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "بیک اپ ایک اسٹوریج منزل پر جاتے ہیں۔ کوئی مختلف استعمال کرنے کے لیے، اوپر والے میں ترمیم کریں یا اسے ہٹا دیں۔"
 
-#: includes/class-admin.php:397
+#: includes/class-admin.php:400
 msgid "Kind of storage"
 msgstr "اسٹوریج کی قسم"
 
-#: includes/class-admin.php:402
+#: includes/class-admin.php:405
 msgid "Name (for you)"
 msgstr "نام (آپ کے لیے)"
 
-#: includes/class-admin.php:404
+#: includes/class-admin.php:407
 msgid "Provider"
 msgstr "فراہم کنندہ"
 
-#: includes/class-admin.php:409
+#: includes/class-admin.php:412
 msgid "Cloudflare account id"
 msgstr "Cloudflare اکاؤنٹ آئی ڈی"
 
-#: includes/class-admin.php:410
+#: includes/class-admin.php:413
 msgid "Endpoint address"
 msgstr "اینڈ پوائنٹ کا پتہ"
 
-#: includes/class-admin.php:411
+#: includes/class-admin.php:414
 msgid "Region"
 msgstr "خطہ"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:415
 msgid "Bucket"
 msgstr "بکٹ"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:416
 msgid "Access key id"
 msgstr "رسائی کلید کا شناختی نمبر"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Secret access key"
 msgstr "خفیہ رسائی کلید"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:417
 msgid "Leave empty to keep the saved key"
 msgstr "محفوظ کردہ کلید کو برقرار رکھنے کے لیے خالی چھوڑیں"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:418
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "Cloudflare R2 کے لیے: Cloudflare ڈیش بورڈ میں R2 کھولیں، ایک بالٹی (bucket) بنائیں، پھر “Manage R2 API tokens” → اس بالٹی کے لیے Object Read & Write کے ساتھ ایک ٹوکن بنائیں، اور رسائی کلید کی شناخت (access key id) اور خفیہ کوڈ یہاں کاپی کریں۔"
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:421
 msgid "Dropbox app key"
 msgstr "Dropbox ایپ کلید"
 
-#: includes/class-admin.php:419
+#: includes/class-admin.php:422
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "files.content.read، files.content.write اور files.metadata.read اجازتوں کے ساتھ dropbox.com/developers/apps (Scoped access, App folder) پر ایک ایپ بنائیں، اور اس کی App key یہاں کاپی کریں۔ محفوظ کریں، پھر Connect دبائیں۔"
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:424
 msgid "OAuth client id"
 msgstr "OAuth کلائنٹ کی شناخت"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "OAuth client secret"
 msgstr "OAuth کلائنٹ خفیہ راز"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:425
 msgid "Leave empty to keep the saved secret"
 msgstr "محفوظ شدہ راز کو برقرار رکھنے کے لیے خالی چھوڑیں"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "Google Cloud Console میں، Google Drive API کو فعال کریں، پھر اس پتے کو بطور مجاز ری ڈائریکٹ URI رکھتے ہوئے \"Web application\" قسم کا ایک OAuth کلائنٹ بنائیں:"
 
-#: includes/class-admin.php:423
+#: includes/class-admin.php:426
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "محفوظ کریں، پھر مربوط کریں پر دبائیں۔ پلگ ان صرف وہی فائلیں دیکھتا ہے جو وہ خود بناتا ہے۔"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:428
 msgid "Folder inside the storage (optional)"
 msgstr "اسٹوریج کے اندر فولڈر (اختیاری)"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:429
 msgid "Save storage"
 msgstr "اسٹوریج کی بچت کریں"
 
-#: includes/class-admin.php:436
+#: includes/class-admin.php:439
 msgid "Import a backup from another plugin or host"
 msgstr "کسی دوسرے پلگ ان یا ہوسٹ سے بیک اپ درآمد کریں"
 
-#: includes/class-admin.php:437
+#: includes/class-admin.php:440
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "UpdraftPlus، All-in-One WP Migration (.wpress)، Duplicator (zip)، BackWPup، WPvivid، Jetpack VaultPress Backup، BlogVault، Zinn® Migrate، یا اپنے .sql ڈمپ کے ساتھ کسی WordPress سائٹ کے کسی بھی zip/tar آرکائیو کے ذریعے بنائے گئے بیک اپ سے سائٹ درآمد کریں۔ مواد wp-content میں جاتا ہے اور ڈیٹابیس اس سائٹ کے ڈیٹابیس کی جگہ لے لیتا ہے؛ پتے خودکار طور پر اس سائٹ کے پتوں میں تبدیل ہو جاتے ہیں۔"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Upload from your computer"
 msgstr "اپنے کمپیوٹر سے اپ لوڈ کریں"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:442
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "بیک اپ کی ہر فائل کو ایک ساتھ منتخب کریں (UpdraftPlus کئی فائلیں بناتا ہے)۔ بڑی فائلیں چھوٹے ٹکڑوں میں بھیجی جاتی ہیں، اس لیے آپ کے ہوسٹ کی اپ لوڈ کی حد لاگو نہیں ہوتی۔"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "یا لنکس سے (Google Drive، Dropbox یا کوئی بھی ڈاؤن لوڈ ایڈریس)"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:443
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "ہر سطر پر ایک لنک۔ Google Drive اور Dropbox کے لیے، فائل کو \"لنک رکھنے والے کسی بھی فرد\" کے ساتھ شیئر کریں اور وہ لنک پیسٹ کریں؛ بعد میں شیئرنگ کو دوبارہ بند کر دیں۔"
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:445
 msgid "Or a file already on this server"
 msgstr "یا اس سرور پر پہلے سے موجود کوئی فائل"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:450
+#: includes/class-admin.php:453
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "FTP یا اپنے ہوسٹ کے فائل مینیجر کے ذریعے آرکائیوز کو %s میں اپ لوڈ کریں اور اس صفحے کو دوبارہ لوڈ کریں۔"
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Or a deploy code from another site"
 msgstr "یا کسی دوسری سائٹ سے تعیناتی کا کوڈ"
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "اگر کسی دوسری سائٹ نے آپ کو Zinn® Backups تعیناتی کوڈ دیا ہے، تو اس کے اسٹوریج کیز کا اشتراک کیے بغیر اس بیک اپ کو اس سائٹ پر کاپی کرنے کے لیے اسے یہاں چسپاں کریں۔ ایک کوڈ چند گھنٹوں کے لیے کام کرتا ہے؛ اسے پاس ورڈ کی طرح سمجھیں۔"
 
-#: includes/class-admin.php:455
+#: includes/class-admin.php:458
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "پاس فریز (صرف اس صورت میں جب وہ بیک اپ خفیہ کردہ ہو)"
 
-#: includes/class-admin.php:456
-#: includes/class-admin.php:458
+#: includes/class-admin.php:459
+#: includes/class-admin.php:461
 msgid "Import"
 msgstr "درآمد کریں"
 
-#: includes/class-admin.php:457
+#: includes/class-admin.php:460
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "میں سمجھتا ہوں کہ درآمد اس سائٹ کے مواد اور ڈیٹابیس کو تبدیل کر دیتی ہے۔ اس کے بعد، درآمد شدہ سائٹ کے اکاؤنٹ سے سائن ان کریں۔"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Moving to Zinn® hosting?"
 msgstr "Zinn® ہوسٹنگ پر منتقل ہو رہے ہیں؟"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:463
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "Zinn Digital® آپ کی سائٹ کو آپ کے پرانے ہوسٹ سے منتقل کر سکتا ہے۔ اگر آپ کا پرانا ہوسٹ آپ کو FTP، SSH یا کنٹرول پینل تک رسائی نہیں دیتا ہے، تو پرانی سائٹ پر Zinn® Migrate انسٹال کریں؛ یہ ایک محفوظ شدہ دستاویز (آرکائیو) بناتا ہے جسے آپ یہاں درآمد کر سکتے ہیں یا Zinn® کے حوالے کر سکتے ہیں۔"
 
-#: includes/class-admin.php:470
+#: includes/class-admin.php:473
 msgid "What goes into a backup"
 msgstr "بیک اپ میں کیا شامل ہوتا ہے"
 
-#: includes/class-admin.php:471
+#: includes/class-admin.php:474
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "WordPress کی اپنی فائلیں (wp-admin, wp-includes) شامل کریں۔ عام طور پر ضرورت نہیں ہوتی: WordPress کو ہمیشہ دوبارہ انسٹال کیا جا سکتا ہے۔"
 
-#: includes/class-admin.php:472
+#: includes/class-admin.php:475
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "ان فولڈرز یا فائلوں کو بھی چھوڑ دیں (فی سطر ایک، WordPress فولڈر کے لحاظ سے)"
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:476
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "ہمیشہ خارج کیے جاتے ہیں: کیشز، اپ ڈیٹ کا عارضی اسپیس، اور دیگر بیک اپ پلگ انز کے اپنے آرکائیو فولڈرز:"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:477
 msgid "Size of each part (MB)"
 msgstr "ہر حصے کا سائز (MB)"
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:478
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "پلگ ان بند ہونے پر بھی بیک اپ چلتا رکھیں"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:479
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "بند ہے جب تک کہ آپ اسے آن نہ کریں۔ اگر یہ پلگ ان بند ہو جائے، یا اگر بحال شدہ ڈیٹا بیس اب اسے فعال کے طور پر درج نہ کرے، تب بھی بیک اپس، بحالی اور WP-CLI کمانڈز کو فعال رکھتا ہے۔ یہ must-use پلگ انز کے فولڈر میں ایک چھوٹا لوڈر ڈالتا ہے۔"
 
-#: includes/class-admin.php:481
+#: includes/class-admin.php:484
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "لوڈر اپنی جگہ پر نہیں ہے۔ اسے واپس لانے کے لیے ترتیبات محفوظ کریں۔"
 
-#: includes/class-admin.php:487
+#: includes/class-admin.php:490
 msgid "Save settings"
 msgstr "ترتیبات محفوظ کریں"
 
@@ -481,7 +485,7 @@ msgid "Connect a storage destination on the Storage tab first: backups are kept 
 msgstr "پہلے Storage ٹیب پر اسٹوریج کی منزل منسلک کریں: بیک اپ اس سرور پر نہیں بلکہ آپ کے اپنے اسٹوریج میں رکھے جاتے ہیں۔"
 
 #: includes/class-backup-job.php:45
-#: includes/class-restore-job.php:108
+#: includes/class-restore-job.php:110
 msgid "Multisite networks are not supported yet."
 msgstr "ملٹی سائٹ نیٹ ورکس ابھی تعاون یافتہ نہیں ہیں۔"
 
@@ -556,7 +560,7 @@ msgid "That is not a backup folder."
 msgstr "وہ بیک اپ فولڈر نہیں ہے۔"
 
 #: includes/class-catalog.php:138
-#: includes/class-restore-job.php:186
+#: includes/class-restore-job.php:190
 msgid "That storage destination is no longer saved on this site."
 msgstr "وہ اسٹوریج منزل اب اس سائٹ پر محفوظ نہیں ہے۔"
 
@@ -564,45 +568,51 @@ msgstr "وہ اسٹوریج منزل اب اس سائٹ پر محفوظ نہیں
 msgid "Later incremental backups are built on this one. Delete those first."
 msgstr "بعد کے انکریمنٹل بیک اپ اس پر بنائے گئے ہیں۔ پہلے انہیں حذف کریں۔"
 
-#: includes/class-cli.php:367
+#: includes/class-cli.php:313
+#: includes/class-connection-keys.php:182
+#: includes/class-settings.php:241
+msgid "No destination with that id. See: wp zinn-backups destination list"
+msgstr "اس شناخت کے ساتھ کوئی منزل نہیں ہے۔ ملاحظہ کریں: wp zinn-backups destination list"
+
+#: includes/class-cli.php:391
 msgid "Use: wp zinn-backups key set|get|remove [<name>]"
 msgstr "استعمال: wp zinn-backups key set|get|remove [<name>]"
 
-#: includes/class-cli.php:371
+#: includes/class-cli.php:395
 msgid "Do not put a key on the command line. Pipe it in on STDIN, or name an environment variable with --from-env."
 msgstr "کمانڈ لائن پر کوئی کلید نہ رکھیں۔ اسے STDIN کے ذریعے پائپ کریں، یا --from-env کے ساتھ ماحولیاتی متغیر کا نام دیں۔"
 
 #. translators: 1: key name, 2: destination id, 3: the key with all but its last characters hidden.
-#: includes/class-cli.php:390
+#: includes/class-cli.php:414
 #, php-format
 msgid "Saved %1$s for destination %2$s: %3$s"
 msgstr "منزل %2$s کے لیے %1$s محفوظ کر لیا گیا: %3$s"
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:396
+#: includes/class-cli.php:420
 #, php-format
 msgid "Remove %1$s from destination %2$s? Backups to it stop until a new one is set."
 msgstr "منزل %2$s سے %1$s کو ہٹا دیں؟ نئی منزل مقرر ہونے تک اس پر بیک اپ رک جائیں گے۔"
 
 #. translators: 1: key name, 2: destination id.
-#: includes/class-cli.php:401
+#: includes/class-cli.php:425
 #, php-format
 msgid "Removed %1$s from destination %2$s."
 msgstr "%1$s کو منزل %2$s سے ہٹا دیا گیا۔"
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is in place."
 msgstr "لوڈر اپنی جگہ پر ہے۔"
 
-#: includes/class-cli.php:433
+#: includes/class-cli.php:458
 msgid "The loader is removed."
 msgstr "لوڈر ہٹا دیا گیا ہے۔"
 
-#: includes/class-cli.php:461
+#: includes/class-cli.php:486
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "استعمال: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:476
+#: includes/class-cli.php:504
 msgid "That environment variable is not set or is empty."
 msgstr "وہ ماحولیاتی متغیر سیٹ نہیں ہے یا خالی ہے۔"
 
@@ -621,11 +631,6 @@ msgstr "کوئی کلید فراہم نہیں کی گئی۔ اسے STDIN پر پ
 #, php-format
 msgid "That does not look like a valid %s (wrong length, or characters a key of this kind never contains). Nothing was saved."
 msgstr "یہ ایک درست %s معلوم نہیں ہوتا (غلط لمبائی، یا وہ حروف جو اس قسم کی کلید میں کبھی نہیں ہوتے ہیں)۔ کچھ بھی محفوظ نہیں کیا گیا تھا۔"
-
-#: includes/class-connection-keys.php:182
-#: includes/class-settings.php:241
-msgid "No destination with that id. See: wp zinn-backups destination list"
-msgstr "اس شناخت کے ساتھ کوئی منزل نہیں ہے۔ ملاحظہ کریں: wp zinn-backups destination list"
 
 #: includes/class-connection-keys.php:191
 msgid "There is no storage destination yet. Add one first: wp zinn-backups destination add"
@@ -853,64 +858,78 @@ msgstr "آپ اس پلگ ان کے لیے اپنے ہوسٹنگ کسٹمر ڈس�
 msgid "We could not get your code just now. Please try again in a few minutes."
 msgstr "ہم ابھی آپ کا کوڈ حاصل نہیں کر سکے۔ براہ کرم چند منٹوں میں دوبارہ کوشش کریں۔"
 
-#: includes/class-restore-job.php:128
+#: includes/class-restore-job.php:130
 msgid "Reading the backup"
 msgstr "بیک اپ پڑھا جا رہا ہے"
 
-#: includes/class-restore-job.php:129
+#: includes/class-restore-job.php:131
 msgid "Downloading the archive"
 msgstr "محفوظہ ڈاؤن لوڈ ہو رہا ہے"
 
-#: includes/class-restore-job.php:130
+#: includes/class-restore-job.php:132
 msgid "Recognising the archive"
 msgstr "محفوظہ کو پہچانا جا رہا ہے"
 
-#: includes/class-restore-job.php:131
+#: includes/class-restore-job.php:133
 msgid "Restoring files"
 msgstr "فائلیں بحال کی جا رہی ہیں"
 
-#: includes/class-restore-job.php:132
+#: includes/class-restore-job.php:134
+msgid "Deleting uploads that are not in the backup"
+msgstr "بیک اپ میں موجود نہ ہونے والے اپ لوڈز کو حذف کیا جا رہا ہے"
+
+#: includes/class-restore-job.php:135
 msgid "Downloading the database"
 msgstr "ڈیٹا بیس ڈاؤن لوڈ ہو رہا ہے"
 
-#: includes/class-restore-job.php:133
+#: includes/class-restore-job.php:136
 msgid "Restoring the database"
 msgstr "ڈیٹا بیس بحال کیا جا رہا ہے"
 
-#: includes/class-restore-job.php:134
+#: includes/class-restore-job.php:137
 msgid "Updating the site address"
 msgstr "سائٹ کا پتہ اپ ڈیٹ کیا جا رہا ہے"
 
-#: includes/class-restore-job.php:135
+#: includes/class-restore-job.php:138
 msgid "Switching to the restored database"
 msgstr "بحال شدہ ڈیٹا بیس پر منتقل ہو رہا ہے"
 
-#: includes/class-restore-job.php:158
+#: includes/class-restore-job.php:162
 msgid "The restore reached an unknown stage."
 msgstr "بحالی ایک نامعلوم مرحلے پر پہنچ گئی۔"
 
-#: includes/class-restore-job.php:201
+#: includes/class-restore-job.php:205
 msgid "This folder has no complete Zinn® Backups backup in it (the manifest is missing)."
 msgstr "اس فولڈر میں کوئی مکمل Zinn® Backups بیک اپ موجود نہیں ہے (مینی فیسٹ غائب ہے)۔"
 
-#: includes/class-restore-job.php:204
+#: includes/class-restore-job.php:208
 msgid "This backup is encrypted. Enter its passphrase to restore it."
 msgstr "یہ بیک اپ خفیہ کردہ ہے۔ اسے بحال کرنے کے لیے اس کا پاس فریز درج کریں۔"
 
 #. translators: %s: backup id.
-#: includes/class-restore-job.php:219
+#: includes/class-restore-job.php:223
 #, php-format
 msgid "This incremental backup needs backup %s, which is no longer in the storage."
 msgstr "اس انکریمنٹل بیک اپ کو بیک اپ %s کی ضرورت ہے، جو اب اسٹوریج میں موجود نہیں ہے۔"
 
 #. translators: 1: backup date, 2: number of parts.
-#: includes/class-restore-job.php:266
+#: includes/class-restore-job.php:270
 #, php-format
 msgid "Restoring the backup of %1$s (%2$d file parts)."
 msgstr "%1$s کا بیک اپ بحال کیا جا رہا ہے (%2$d فائل کے حصے)۔"
 
+#: includes/class-restore-job.php:342
+msgid "Leftover uploads were not deleted: the uploads folder is outside the WordPress folder."
+msgstr "باقی رہ جانے والے اپ لوڈز حذف نہیں کیے گئے: اپ لوڈز کا فولڈر WordPress فولڈر کے باہر ہے۔"
+
+#. translators: 1: number of files deleted, 2: number that could not be deleted.
+#: includes/class-restore-job.php:365
+#, php-format
+msgid "Deleted %1$d file(s) from the uploads folder that are not in the backup (%2$d could not be deleted)."
+msgstr "اپ لوڈز کے فولڈر سے %1$d فائلیں حذف کر دی گئیں جو بیک اپ میں نہیں ہیں (%2$d حذف نہیں کی جا سکیں)۔"
+
 #. translators: 1: number of files, 2: example paths.
-#: includes/class-restore-job.php:340
+#: includes/class-restore-job.php:388
 #, php-format
 msgid "%1$s file could not be overwritten because this site is not allowed to change it, and was left as it is: %2$s"
 msgid_plural "%1$s files could not be overwritten because this site is not allowed to change them, and were left as they are: %2$s"
@@ -918,71 +937,71 @@ msgstr[0] "فائل %1$s پر دوبارہ نہیں لکھا جا سکا کیو�
 msgstr[1] "%1$s فائلیں اوور رائٹ نہیں کی جا سکیں کیونکہ اس سائٹ کو انہیں تبدیل کرنے کی اجازت نہیں ہے، اور انہیں ویسا ہی چھوڑ دیا گیا جیسا کہ وہ ہیں: %2$s"
 
 #. translators: %s: number of files.
-#: includes/class-restore-job.php:359
+#: includes/class-restore-job.php:407
 #, php-format
 msgid "Restored %s files."
 msgstr "%s فائلیں بحال ہو گئیں۔"
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:422
+#: includes/class-restore-job.php:470
 #, php-format
 msgid "%s did not match its checksum after downloading. The copy in storage may be damaged."
 msgstr "ڈاؤن لوڈ کرنے کے بعد %s اس کے چیک سم سے مطابقت نہیں رکھتا تھا۔ اسٹوریج میں موجود کاپی خراب ہو سکتی ہے۔"
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:493
+#: includes/class-restore-job.php:541
 #, php-format
 msgid "%s did not arrive. Upload it again."
 msgstr "%s موصول نہیں ہوا۔ براہ کرم اسے دوبارہ اپ لوڈ کریں۔"
 
 #. translators: %s: list of backup formats.
-#: includes/class-restore-job.php:515
+#: includes/class-restore-job.php:563
 #, php-format
 msgid "Recognised: %s."
 msgstr "تسلیم شدہ: %s۔"
 
 #. translators: 1: number of files, 2: number of files skipped.
-#: includes/class-restore-job.php:542
+#: includes/class-restore-job.php:590
 #, php-format
 msgid "Imported %1$s files into wp-content (%2$s left out: caches, drop-ins and other backup plugins’ folders)."
 msgstr "wp-content میں %1$s فائلیں درآمد کی گئیں (%2$s چھوڑ دی گئیں: کیشز، drop-ins اور دیگر بیک اپ پلگ انز کے فولڈرز)۔"
 
-#: includes/class-restore-job.php:588
+#: includes/class-restore-job.php:636
 msgid "The archive has no database dump, so only files were imported."
 msgstr "محفوظ شدہ دستاویز میں کوئی ڈیٹا بیس ڈمپ نہیں ہے، اس لیے صرف فائلیں درآمد کی گئیں۔"
 
 #. translators: %d: number of tables.
-#: includes/class-restore-job.php:598
+#: includes/class-restore-job.php:646
 #, php-format
 msgid "Database restored into %d temporary tables."
 msgstr "ڈیٹا بیس کو %d عارضی ٹیبلز میں بحال کر دیا گیا۔"
 
 #. translators: %s: file name.
-#: includes/class-restore-job.php:615
+#: includes/class-restore-job.php:663
 #, php-format
 msgid "%s has no WordPress tables in it and was skipped."
 msgstr "%s میں کوئی WordPress ٹیبلز نہیں ہیں اور اسے چھوڑ دیا گیا تھا۔"
 
-#: includes/class-restore-job.php:653
+#: includes/class-restore-job.php:701
 #: includes/class-table-swap.php:237
 msgid "The backup’s database has no WordPress tables, so nothing was replaced."
 msgstr "بیک اپ کے ڈیٹا بیس میں کوئی WordPress ٹیبلز نہیں ہیں، لہذا کچھ بھی تبدیل نہیں کیا گیا۔"
 
-#: includes/class-restore-job.php:658
+#: includes/class-restore-job.php:706
 msgid "This backup is of a multisite network. Restoring a network into a single site is not supported."
 msgstr "یہ بیک اپ ملٹی سائٹ نیٹ ورک کا ہے۔ کسی نیٹ ورک کو سنگل سائٹ میں بحال کرنا تعاون یافتہ نہیں ہے۔"
 
 #. translators: 1: old address, 2: this site's address.
-#: includes/class-restore-job.php:683
+#: includes/class-restore-job.php:731
 #, php-format
 msgid "Moving the content from %1$s to %2$s."
 msgstr "مواد %1$s سے %2$s میں منتقل کیا جا رہا ہے۔"
 
-#: includes/class-restore-job.php:809
+#: includes/class-restore-job.php:857
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "بحالی مکمل ہو گئی۔ اگر آپ سائن آؤٹ ہو چکے ہیں تو بحال شدہ سائٹ کے اکاؤنٹ سے سائن ان کریں۔"
 
-#: includes/class-restore-job.php:810
+#: includes/class-restore-job.php:858
 msgid "Restore complete."
 msgstr "بحالی مکمل ہو گئی۔"
 
@@ -1015,6 +1034,10 @@ msgstr "ڈیٹا بیس نے بیک اپ سے ایک بیان مسترد کر د
 #, php-format
 msgid "The restored tables could not be swapped in: %s. Your site is unchanged."
 msgstr "بحال شدہ جداول تبدیل نہیں کیے جا سکے: %s۔ آپ کی سائٹ غیر تبدیل شدہ ہے۔"
+
+#: includes/class-uploads-pruner.php:83
+msgid "The backup’s file list could not be read, so no leftover uploads were deleted."
+msgstr "بیک اپ کی فائلوں کی فہرست پڑھی نہیں جا سکی، اس لیے باقی ماندہ اپ لوڈز میں سے کچھ بھی حذف نہیں کیا گیا۔"
 
 #: includes/class-work-dir.php:43
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
