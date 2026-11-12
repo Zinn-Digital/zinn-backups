@@ -7,7 +7,7 @@ Tags: backup, restore, migration, dropbox, google drive
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.11
+Stable tag: 1.0.12
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -129,6 +129,9 @@ If you want the uploads folder to match the backup exactly (for example to remov
 3. Importing an UpdraftPlus backup.
 
 == Changelog ==
+
+= 1.0.12 =
+* Shows the Zinn® Pro Membership offer in the plugin's Zinn® panel.
 
 = 1.0.11 =
 * Fix: no PHP file is written into the uploads folder any more. The private work and import folders are sealed with index.html, .htaccess and web.config, and an index.php an older version wrote there is removed (only when it is exactly ours), so security scanners no longer see a script in uploads.
