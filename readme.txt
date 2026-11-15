@@ -7,7 +7,7 @@ Tags: backup, restore, migration, dropbox, google drive
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.12
+Stable tag: 1.0.13
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,10 @@ Pro costs $49 a year for one site, $99 for five sites and $199 for unlimited sit
 
 If you turn on "Keep backups running when the plugin is switched off" (Zinn® Backups → Settings, or the one-time offer after activation), Zinn® Backups puts a small loader in your must-use plugins folder. It is off until you turn it on. If the plugin is then switched off — by you, by another plugin, or because a restored database no longer lists it as active — a backup or restore in progress carries on and the WP-CLI commands keep working. It never loads the plugin twice, stays out of WordPress's recovery mode, and turns itself off if loading the plugin ever fails. Switch it off under Zinn® Backups → Settings (or `wp zinn-backups loader remove`); deleting the plugin removes it.
 
+= Source code =
+
+The complete source is public at https://github.com/Zinn-Digital/zinn-backups
+
 == Installation ==
 
 1. Install and activate the plugin.
@@ -129,6 +133,9 @@ If you want the uploads folder to match the backup exactly (for example to remov
 3. Importing an UpdraftPlus backup.
 
 == Changelog ==
+
+= 1.0.13 =
+* The readme links the plugin's public source repository.
 
 = 1.0.12 =
 * Shows the Zinn® Pro Membership offer in the plugin's Zinn® panel.
