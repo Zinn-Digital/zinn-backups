@@ -325,16 +325,57 @@ final class Admin {
 			foreach ( array_slice( $history, 0, 10 ) as $row ) {
 				$when = (int) ( ! empty( $row['finished'] ) ? $row['finished'] : $row['started'] );
 				printf(
-					'<li class="zb-history__%1$s"><strong>%2$s</strong> · %3$s · %4$s%5$s</li>',
+					'<li class="zb-history__%1$s"><strong>%2$s</strong> · %3$s · %4$s%5$s',
 					esc_attr( (string) $row['status'] ),
 					esc_html( 'backup' === $row['type'] ? __( 'Backup', 'zinn-backups' ) : __( 'Restore / import', 'zinn-backups' ) ),
 					esc_html( self::status_label( (string) $row['status'] ) ),
 					esc_html( wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $when ) ),
 					'' !== (string) $row['error'] ? ' — ' . esc_html( (string) $row['error'] ) : ''
 				);
+				self::skipped_files( (array) ( $row['result'] ?? array() ) );
+				echo '</li>';
 			}
 			echo '</ul></section>';
 		}
+	}
+
+	/**
+	 * Under a finished backup: the files it had to leave out, and what to do about them.
+	 *
+	 * @param array<string,mixed> $result The job's result.
+	 * @return void
+	 */
+	private static function skipped_files( array $result ): void {
+		$count = (int) ( $result['skipped'] ?? 0 );
+		if ( $count < 1 ) {
+			return;
+		}
+		$named = array_slice( array_map( 'strval', (array) ( $result['skipped_files'] ?? array() ) ), 0, Archiver::SKIPPED_NAMED );
+		echo '<details class="zb-skipped"><summary><span class="zb-badge zb-badge--warn">' . esc_html(
+			sprintf(
+				/* translators: %s: number of files. */
+				_n( '%s file left out', '%s files left out', $count, 'zinn-backups' ),
+				number_format_i18n( $count )
+			)
+		) . '</span></summary>';
+		echo '<p>' . esc_html__( 'These files could not be read, so they are not in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again.', 'zinn-backups' ) . '</p>';
+		if ( $named ) {
+			echo '<ul class="zb-skipped__list">';
+			foreach ( $named as $path ) {
+				echo '<li><code>' . esc_html( $path ) . '</code></li>';
+			}
+			echo '</ul>';
+		}
+		if ( $count > count( $named ) ) {
+			echo '<p>' . esc_html(
+				sprintf(
+					/* translators: %s: number of further files not listed. */
+					_n( 'And %s more file.', 'And %s more files.', $count - count( $named ), 'zinn-backups' ),
+					number_format_i18n( $count - count( $named ) )
+				)
+			) . '</p>';
+		}
+		echo '</details>';
 	}
 
 	/**

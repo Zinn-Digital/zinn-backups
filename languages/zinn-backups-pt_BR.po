@@ -49,17 +49,17 @@ msgid "Working…"
 msgstr "Trabalhando…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:348
+#: includes/class-admin.php:389
 msgid "Finished"
 msgstr "Concluído"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:349
+#: includes/class-admin.php:390
 msgid "Failed"
 msgstr "Falhou"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:350
+#: includes/class-admin.php:391
 msgid "Cancelled"
 msgstr "Cancelado"
 
@@ -185,19 +185,19 @@ msgstr "O que incluir no backup"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files and database"
 msgstr "Arquivos e banco de dados"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Database only"
 msgstr "Apenas banco de dados"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files only"
 msgstr "Apenas arquivos"
 
@@ -246,240 +246,286 @@ msgstr "Backup"
 msgid "Restore / import"
 msgstr "Restaurar / importar"
 
-#: includes/class-admin.php:351
+#. translators: %s: number of files.
+#: includes/class-admin.php:357
+#, php-format
+msgid "%s file left out"
+msgid_plural "%s files left out"
+msgstr[0] "%s arquivo ignorado"
+msgstr[1] "%s arquivos deixados de fora"
+msgstr[2] "%s arquivos deixados de fora"
+
+#: includes/class-admin.php:361
+msgid "These files could not be read, so they are not in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr "Estes arquivos não puderam ser lidos, portanto não estão neste backup. Geralmente, as permissões deles impedem que o WordPress os leia, ou eles foram excluídos enquanto o backup estava em execução. Peça à sua hospedagem (ou use o seu gerenciador de arquivos) para torná-los legíveis pelo servidor web e, em seguida, faça o backup novamente."
+
+#. translators: %s: number of further files not listed.
+#: includes/class-admin.php:373
+#, php-format
+msgid "And %s more file."
+msgid_plural "And %s more files."
+msgstr[0] "E mais %s arquivo."
+msgstr[1] "E mais %s arquivos."
+msgstr[2] "E mais %s arquivos."
+
+#: includes/class-admin.php:392
 msgid "Running"
 msgstr "Em execução"
 
-#: includes/class-admin.php:363
+#: includes/class-admin.php:404
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "Seu armazenamento"
 msgstr[1] "Seus destinos de armazenamento"
 msgstr[2] "Seus destinos de armazenamento"
 
-#: includes/class-admin.php:365
+#: includes/class-admin.php:406
 msgid "No storage yet. Choose where your backups go below."
 msgstr "Ainda não há armazenamento. Escolha abaixo para onde vão seus backups."
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Ready"
 msgstr "Pronto"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Not connected"
 msgstr "Não conectado"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:417
 msgid "Connect"
 msgstr "Conectar"
 
-#: includes/class-admin.php:377
+#: includes/class-admin.php:418
 msgid "Test"
 msgstr "Testar"
 
-#: includes/class-admin.php:378
+#: includes/class-admin.php:419
 msgid "Edit"
 msgstr "Editar"
 
-#: includes/class-admin.php:379
+#: includes/class-admin.php:420
 msgid "Remove"
 msgstr "Remover"
 
-#: includes/class-admin.php:385
+#: includes/class-admin.php:426
 msgid "Add storage"
 msgstr "Adicionar armazenamento"
 
-#: includes/class-admin.php:389
+#: includes/class-admin.php:430
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "Os backups vão para um destino de armazenamento. Para usar outro diferente, edite ou remova o acima."
 
-#: includes/class-admin.php:400
+#: includes/class-admin.php:441
 msgid "Kind of storage"
 msgstr "Tipo de armazenamento"
 
-#: includes/class-admin.php:405
+#: includes/class-admin.php:446
 msgid "Name (for you)"
 msgstr "Nome (para você)"
 
-#: includes/class-admin.php:407
+#: includes/class-admin.php:448
 msgid "Provider"
 msgstr "Provedor"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:453
 msgid "Cloudflare account id"
 msgstr "ID da conta do Cloudflare"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:454
 msgid "Endpoint address"
 msgstr "Endereço do endpoint"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:455
 msgid "Region"
 msgstr "Região"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:456
 msgid "Bucket"
 msgstr "Bucket"
 
-#: includes/class-admin.php:416
+#: includes/class-admin.php:457
 msgid "Access key id"
 msgstr "ID da chave de acesso"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Secret access key"
 msgstr "Chave de acesso secreta"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Leave empty to keep the saved key"
 msgstr "Deixe em branco para manter a chave salva"
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:459
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "Para o Cloudflare R2: no painel do Cloudflare, abra o R2, crie um bucket, depois vá em “Manage R2 API tokens” → crie um token com Object Read & Write para esse bucket e copie o access key id e o secret aqui."
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:462
 msgid "Dropbox app key"
 msgstr "Chave do aplicativo Dropbox"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:463
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "Crie um aplicativo em dropbox.com/developers/apps (Scoped access, App folder) com as permissões files.content.read, files.content.write e files.metadata.read e copie a chave do aplicativo aqui. Salve e pressione Conectar."
 
-#: includes/class-admin.php:424
+#: includes/class-admin.php:465
 msgid "OAuth client id"
 msgstr "ID do cliente OAuth"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "OAuth client secret"
 msgstr "Segredo do cliente OAuth"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "Leave empty to keep the saved secret"
 msgstr "Deixe em branco para manter o segredo salvo"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "No Google Cloud Console, ative a Google Drive API e, em seguida, crie um cliente OAuth do tipo \"Web application\" com este endereço como um URI de redirecionamento autorizado:"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "Salve e, em seguida, pressione Conectar. O plugin só visualiza os arquivos que ele próprio cria."
 
-#: includes/class-admin.php:428
+#: includes/class-admin.php:469
 msgid "Folder inside the storage (optional)"
 msgstr "Pasta dentro do armazenamento (opcional)"
 
-#: includes/class-admin.php:429
+#: includes/class-admin.php:470
 msgid "Save storage"
 msgstr "Economizar armazenamento"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:480
 msgid "Import a backup from another plugin or host"
 msgstr "Importe um backup de outro plugin ou hospedagem"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:481
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "Importe um site a partir de um backup feito pelo UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate ou qualquer arquivo zip/tar de um site WordPress com seu dump .sql. O conteúdo vai para wp-content e o banco de dados substitui o deste site; os endereços são alterados automaticamente para os deste site."
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Upload from your computer"
 msgstr "Enviar do seu computador"
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "Escolha todos os arquivos do backup de uma só vez (o UpdraftPlus cria vários). Arquivos grandes são enviados em partes pequenas, portanto o limite de envio do seu provedor de hospedagem não se aplica."
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "Ou de links (Google Drive, Dropbox ou qualquer endereço de download)"
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "Um link por linha. Para o Google Drive e o Dropbox, compartilhe o arquivo com \"qualquer pessoa com o link\" e cole esse link; depois, desative o compartilhamento novamente."
 
-#: includes/class-admin.php:445
+#: includes/class-admin.php:486
 msgid "Or a file already on this server"
 msgstr "Ou um arquivo já presente neste servidor"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:453
+#: includes/class-admin.php:494
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "Envie arquivos compactados por FTP ou pelo gerenciador de arquivos da sua hospedagem para %s e recarregue esta página."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Or a deploy code from another site"
 msgstr "Ou um código de implantação de outro site"
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "Se outro site forneceu a você um código de implantação do Zinn® Backups, cole-o aqui para copiar esse backup para este site sem compartilhar as chaves de armazenamento. O código funciona por algumas horas; trate-o como uma senha."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "Frase secreta (apenas se esse backup estiver criptografado)"
 
-#: includes/class-admin.php:459
-#: includes/class-admin.php:461
+#: includes/class-admin.php:500
+#: includes/class-admin.php:502
 msgid "Import"
 msgstr "Importar"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:501
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "Entendo que a importação substitui o conteúdo e o banco de dados deste site. Depois disso, faça login com uma conta do site importado."
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Moving to Zinn® hosting?"
 msgstr "Mudando para a hospedagem Zinn®?"
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "A Zinn Digital® pode migrar seu site da sua hospedagem antiga. Se sua hospedagem antiga não fornecer acesso a FTP, SSH ou ao painel de controle, instale o Zinn® Migrate no site antigo; ele cria um único arquivo compactado que você pode importar aqui ou entregar à Zinn®."
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:514
 msgid "What goes into a backup"
 msgstr "O que está incluído em um backup"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:515
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "Incluir os próprios arquivos do WordPress (wp-admin, wp-includes). Geralmente não é necessário: o WordPress sempre pode ser reinstalado."
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:516
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "Deixe de fora também estas pastas ou arquivos (um por linha, relativo à pasta do WordPress)"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:517
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "Sempre excluídos: caches, espaço temporário de atualização e pastas de arquivo próprias de outros plugins de backup:"
 
-#: includes/class-admin.php:477
+#: includes/class-admin.php:518
 msgid "Size of each part (MB)"
 msgstr "Tamanho de cada parte (MB)"
 
-#: includes/class-admin.php:478
+#: includes/class-admin.php:519
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "Manter os backups em execução quando o plugin estiver desativado"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:520
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "Desativado, a menos que você o ative. Mantém backups, restaurações e comandos WP-CLI em execução se este plugin for desativado ou se um banco de dados restaurado não o listar mais como ativo. Isso coloca um pequeno carregador na pasta de plugins obrigatórios (must-use plugins)."
 
-#: includes/class-admin.php:484
+#: includes/class-admin.php:525
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "O carregador não está no lugar. Salve as configurações para colocá-lo de volta."
 
-#: includes/class-admin.php:490
+#: includes/class-admin.php:531
 msgid "Save settings"
 msgstr "Salvar alterações"
 
-#: includes/class-archiver.php:52
+#: includes/class-archiver.php:59
 msgid "A backup part could not be opened for writing. Check that wp-content has free space."
 msgstr "Não foi possível abrir uma parte do backup para gravação. Verifique se o wp-content possui espaço livre."
 
-#: includes/class-archiver.php:113
+#: includes/class-archiver.php:123
 msgid "A backup part could not be written. Check that wp-content has free space."
 msgstr "Não foi possível gravar uma parte do backup. Verifique se o wp-content possui espaço livre."
+
+#. translators: %s: number of files.
+#: includes/class-archiver.php:161
+#, php-format
+msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
+msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr[0] "O arquivo %s não pôde ser lido e NÃO está neste backup. Normalmente, suas permissões impedem o WordPress de lê-lo, ou ele foi excluído enquanto o backup era executado. Peça à sua hospedagem (ou use o seu gerenciador de arquivos) para torná-lo legível pelo servidor web e, em seguida, faça o backup novamente."
+msgstr[1] "%s arquivos não puderam ser lidos e NÃO estão neste backup. Geralmente, as permissões impedem que o WordPress os leia ou eles foram excluídos durante a execução do backup. Solicite à sua hospedagem (ou use seu gerenciador de arquivos) para torná-los legíveis pelo servidor web e, em seguida, faça o backup novamente."
+msgstr[2] "%s arquivos não puderam ser lidos e NÃO estão neste backup. Geralmente, as permissões impedem que o WordPress os leia ou eles foram excluídos durante a execução do backup. Solicite à sua hospedagem (ou use seu gerenciador de arquivos) para torná-los legíveis pelo servidor web e, em seguida, faça o backup novamente."
+
+#. translators: 1: comma-separated file paths, 2: number of further files not named.
+#: includes/class-archiver.php:176
+#, php-format
+msgid "Left out: %1$s (and %2$s more file)."
+msgid_plural "Left out: %1$s (and %2$s more files)."
+msgstr[0] "Omitido: %1$s (e mais %2$s arquivo)."
+msgstr[1] "Omitidos: %1$s (e mais %2$s arquivos)."
+msgstr[2] "Omitidos: %1$s (e mais %2$s arquivos)."
+
+#. translators: %s: comma-separated file paths.
+#: includes/class-archiver.php:182
+#, php-format
+msgid "Left out: %s."
+msgstr "Omitido: %s."
 
 #: includes/class-backup-job.php:42
 msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
@@ -541,7 +587,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Banco de dados: %1$d tabelas, %2$s linhas, %3$s compactado."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:473
+#: includes/class-backup-job.php:479
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -549,11 +595,20 @@ msgstr[0] "Backup concluído: %1$s armazenado em %2$d destino."
 msgstr[1] "Backup concluído: %1$s armazenado em %2$d destinos."
 msgstr[2] "Backup concluído: %1$s armazenado em %2$d destinos."
 
-#: includes/class-backup-job.php:503
+#. translators: %s: number of files.
+#: includes/class-backup-job.php:486
+#, php-format
+msgid "%s file was left out because it could not be read; see Details."
+msgid_plural "%s files were left out because they could not be read; see Details."
+msgstr[0] "O arquivo %s foi deixado de fora porque não pôde ser lido; consulte Detalhes."
+msgstr[1] "%s arquivos foram deixados de fora porque não puderam ser lidos; consulte Detalhes."
+msgstr[2] "%s arquivos foram deixados de fora porque não puderam ser lidos; consulte Detalhes."
+
+#: includes/class-backup-job.php:516
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Não foi possível remover do seu armazenamento algumas partes já enviadas; elas estão em uma pasta de backup incompleto e nunca são disponibilizadas para restauração."
 
-#: includes/class-backup-job.php:520
+#: includes/class-backup-job.php:533
 msgid "A storage destination was removed while the backup was running."
 msgstr "Um destino de armazenamento foi removido enquanto o backup estava em execução."
 

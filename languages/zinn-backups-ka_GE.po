@@ -49,17 +49,17 @@ msgid "Working…"
 msgstr "მუშავდება…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:348
+#: includes/class-admin.php:389
 msgid "Finished"
 msgstr "დასრულებულია"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:349
+#: includes/class-admin.php:390
 msgid "Failed"
 msgstr "ვერ შესრულდა"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:350
+#: includes/class-admin.php:391
 msgid "Cancelled"
 msgstr "გაუქმებულია"
 
@@ -185,19 +185,19 @@ msgstr "რა შევინახოთ მარქაფში"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files and database"
 msgstr "ფაილები და მონაცემთა ბაზა"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Database only"
 msgstr "მხოლოდ მონაცემთა ბაზა"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files only"
 msgstr "მხოლოდ ფაილები"
 
@@ -246,239 +246,281 @@ msgstr "სარეზერვო ასლი"
 msgid "Restore / import"
 msgstr "აღდგენა / იმპორტი"
 
-#: includes/class-admin.php:351
+#. translators: %s: number of files.
+#: includes/class-admin.php:357
+#, php-format
+msgid "%s file left out"
+msgid_plural "%s files left out"
+msgstr[0] "გამოტოვებულია %s ფაილი"
+msgstr[1] "%s ფაილი გამოტოვებულია"
+
+#: includes/class-admin.php:361
+msgid "These files could not be read, so they are not in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr "ამ ფაილების წაკითხვა ვერ მოხერხდა, ამიტომ ისინი ამ სარეზერვო ასლში არ არის. ჩვეულებრივ, მათი ნებართვები უშლის ხელს WordPress-ს მათ წაკითხვაში, ან ისინი წაიშალა სარეზერვო ასლის შექმნის პროცესში. სთხოვეთ თქვენს ჰოსტინგს (ან გამოიყენეთ თქვენი ფაილების მენეჯერი), რათა ისინი ვებ-სერვერისთვის წაკითხვადი გახადოს, შემდეგ კი ხელახლა შექმენით სარეზერვო ასლი."
+
+#. translators: %s: number of further files not listed.
+#: includes/class-admin.php:373
+#, php-format
+msgid "And %s more file."
+msgid_plural "And %s more files."
+msgstr[0] "და კიდევ %s ფაილი."
+msgstr[1] "და კიდევ %s ფაილი."
+
+#: includes/class-admin.php:392
 msgid "Running"
 msgstr "მუშაობს"
 
-#: includes/class-admin.php:363
+#: includes/class-admin.php:404
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "თქვენი საცავი"
 msgstr[1] "თქვენი საცავის დანიშნულების ადგილები"
 
-#: includes/class-admin.php:365
+#: includes/class-admin.php:406
 msgid "No storage yet. Choose where your backups go below."
 msgstr "საცავი ჯერ არ არის. აირჩიეთ ქვემოთ, სად შეინახოს თქვენი სარეზერვო ასლები."
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Ready"
 msgstr "მზადაა"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Not connected"
 msgstr "არ არის დაკავშირებული"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:417
 msgid "Connect"
 msgstr "დაკავშირება"
 
-#: includes/class-admin.php:377
+#: includes/class-admin.php:418
 msgid "Test"
 msgstr "ტესტი"
 
-#: includes/class-admin.php:378
+#: includes/class-admin.php:419
 msgid "Edit"
 msgstr "რედაქტირება"
 
-#: includes/class-admin.php:379
+#: includes/class-admin.php:420
 msgid "Remove"
 msgstr "წაშლა"
 
-#: includes/class-admin.php:385
+#: includes/class-admin.php:426
 msgid "Add storage"
 msgstr "საცავის დამატება"
 
-#: includes/class-admin.php:389
+#: includes/class-admin.php:430
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "სარეზერვო ასლები იგზავნება შენახვის ერთ დანიშნულების ადგილას. სხვის გამოსაყენებლად, შეცვალეთ ან წაშალეთ ზემოთ მოცემული."
 
-#: includes/class-admin.php:400
+#: includes/class-admin.php:441
 msgid "Kind of storage"
 msgstr "საცავის ტიპი"
 
-#: includes/class-admin.php:405
+#: includes/class-admin.php:446
 msgid "Name (for you)"
 msgstr "სახელი (თქვენთვის)"
 
-#: includes/class-admin.php:407
+#: includes/class-admin.php:448
 msgid "Provider"
 msgstr "პროვაიდერი"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:453
 msgid "Cloudflare account id"
 msgstr "Cloudflare ანგარიშის ID"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:454
 msgid "Endpoint address"
 msgstr "ბოლო წერტილის მისამართი"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:455
 msgid "Region"
 msgstr "რეგიონი"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:456
 msgid "Bucket"
 msgstr "ბაკეტი"
 
-#: includes/class-admin.php:416
+#: includes/class-admin.php:457
 msgid "Access key id"
 msgstr "წვდომის გასაღების ID"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Secret access key"
 msgstr "წვდომის საიდუმლო გასაღები"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Leave empty to keep the saved key"
 msgstr "დატოვეთ ცარიელი შენახული გასაღების შესანარჩუნებლად"
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:459
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "Cloudflare R2-ისთვის: Cloudflare-ის მართვის პანელში გახსენით R2, შექმენით bucket-ი, შემდეგ „Manage R2 API tokens“ → შექმენით ტოკენი Object Read & Write ნებართვით ამ bucket-ისთვის და დააკოპირეთ access key id და secret აქ."
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:462
 msgid "Dropbox app key"
 msgstr "Dropbox-ის აპლიკაციის გასაღები"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:463
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "შექმენით აპი მისამართზე dropbox.com/developers/apps (Scoped access, App folder) ნებართვებით files.content.read, files.content.write და files.metadata.read, და დააკოპირეთ მისი App key აქ. შეინახეთ, შემდეგ დააჭირეთ Connect-ს."
 
-#: includes/class-admin.php:424
+#: includes/class-admin.php:465
 msgid "OAuth client id"
 msgstr "OAuth კლიენტის ID"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "OAuth client secret"
 msgstr "OAuth კლიენტის საიდუმლო"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "Leave empty to keep the saved secret"
 msgstr "დატოვეთ ცარიელი შენახული საიდუმლოს შესანარჩუნებლად"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "Google Cloud Console-ში გაააქტიურეთ Google Drive API, შემდეგ შექმენით „Web application“ ტიპის OAuth კლიენტი ამ მისამართით, როგორც ავტორიზებული გადამისამართების URI:"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "შეინახეთ, შემდეგ დააჭირეთ დაკავშირებას. მოდული მხოლოდ მის მიერ შექმნილ ფაილებს ხედავს."
 
-#: includes/class-admin.php:428
+#: includes/class-admin.php:469
 msgid "Folder inside the storage (optional)"
 msgstr "საქაღალდე საცავში (არასავალდებულო)"
 
-#: includes/class-admin.php:429
+#: includes/class-admin.php:470
 msgid "Save storage"
 msgstr "მეხსიერების დაზოგვა"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:480
 msgid "Import a backup from another plugin or host"
 msgstr "სარეზერვო ასლის იმპორტი სხვა მოდულიდან ან ჰოსტინგიდან"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:481
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "შემოიტანეთ საიტი სარეზერვო ასლიდან, რომელიც შექმნილია UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate-ის ან WordPress საიტის ნებისმიერი zip/tar არქივის მიერ მისი .sql ნაგავსაყრელით (dump). შიგთავსი გადადის wp-content-ში და მონაცემთა ბაზა ჩაანაცვლებს ამ საიტისას; მისამართები ავტომატურად შეიცვლება ამ საიტის მისამართებით."
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Upload from your computer"
 msgstr "თქვენი კომპიუტერიდან ატვირთვა"
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "აირჩიეთ სარეზერვო ასლის ყველა ფაილი ერთდროულად (UpdraftPlus ქმნის რამდენიმეს). დიდი ფაილები იგზავნება მცირე ნაწილებად, ამიტომ თქვენი ჰოსტის ატვირთვის ლიმიტი არ მოქმედებს."
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "ან ბმულებიდან (Google Drive, Dropbox ან ჩამოტვირთვის ნებისმიერი მისამართი)"
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "თითო ბმული თითო ხაზზე. Google Drive-ისა და Dropbox-ისთვის გააზიარეთ ფაილი „ყველასთან, ვისაც აქვს ბმული“ და ჩასვით ეს ბმული; შემდეგ კვლავ გამორთეთ გაზიარება."
 
-#: includes/class-admin.php:445
+#: includes/class-admin.php:486
 msgid "Or a file already on this server"
 msgstr "ან ფაილი, რომელიც უკვე არის ამ სერვერზე"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:453
+#: includes/class-admin.php:494
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "ატვირთეთ არქივები FTP-ით ან თქვენი ჰოსტის ფაილების მენეჯერით %s-ში და გადატვირთეთ ეს გვერდი."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Or a deploy code from another site"
 msgstr "ან განთავსების კოდი სხვა საიტიდან"
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "თუ სხვა საიტმა მოგცათ Zinn® Backups-ის განთავსების კოდი, ჩასვით ის აქ, რათა დააკოპიროთ ეს სარეზერვო ასლი ამ საიტზე მისი საცავის გასაღებების გაზიარების გარეშე. კოდი მუშაობს რამდენიმე საათის განმავლობაში; მოექეცით მას ისე, როგორც პაროლს."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "საკვანძო ფრაზა (მხოლოდ იმ შემთხვევაში, თუ ეს სარეზერვო ასლი დაშიფრულია)"
 
-#: includes/class-admin.php:459
-#: includes/class-admin.php:461
+#: includes/class-admin.php:500
+#: includes/class-admin.php:502
 msgid "Import"
 msgstr "იმპორტი"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:501
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "მე მესმის, რომ იმპორტი ჩაანაცვლებს ამ საიტის შინაარსსა და მონაცემთა ბაზას. ამის შემდეგ შედით იმპორტირებული საიტის ანგარიშით."
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Moving to Zinn® hosting?"
 msgstr "გადადიხართ Zinn®-ის ჰოსტინგზე?"
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "Zinn Digital®-ს შეუძლია თქვენთვის გადმოიტანოს თქვენი საიტი ძველი ჰოსტინგიდან. თუ თქვენი ძველი ჰოსტინგი არ გაძლევთ FTP, SSH ან საკონტროლო პანელის წვდომას, დააინსტალირეთ Zinn® Migrate ძველ საიტზე; ის ქმნის ერთ არქივს, რომლის იმპორტიც შეგიძლიათ აქ ან გადაცემა Zinn®-ისთვის."
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:514
 msgid "What goes into a backup"
 msgstr "რას მოიცავს სარეზერვო ასლი"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:515
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "WordPress-ის საკუთარი ფაილების ჩართვა (wp-admin, wp-includes). როგორც წესი, საჭირო არ არის: WordPress-ის ხელახალი ინსტალაცია ყოველთვის შესაძლებელია."
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:516
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "ასევე გამოტოვეთ ეს საქაღალდეები ან ფაილები (თითო ხაზზე, WordPress-ის საქაღალდის მიმართ)"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:517
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "ყოველთვის გამორიცხულია: ქეშები, განახლების დროებითი სივრცე და სარეზერვო ასლების სხვა მოდულების საკუთარი არქივის საქაღალდეები:"
 
-#: includes/class-admin.php:477
+#: includes/class-admin.php:518
 msgid "Size of each part (MB)"
 msgstr "თითოეული ნაწილის ზომა (MB)"
 
-#: includes/class-admin.php:478
+#: includes/class-admin.php:519
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "სარეზერვო ასლების შექმნის გაგრძელება, როდესაც პლაგინი გამორთულია"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:520
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "გამორთულია, თუ არ ჩართავთ. უზრუნველყოფს მარქაფების, აღდგენებისა და WP-CLI ბრძანებების მუშაობას, თუ ეს მოდული გამორთულია ან თუ აღდგენილი მონაცემთა ბაზა მას აღარ აჩვენებს აქტიურად. ეს ათავსებს პატარა ჩამტვირთაველს must-use მოდულების საქაღალდეში."
 
-#: includes/class-admin.php:484
+#: includes/class-admin.php:525
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "ჩამტვირთველი თავის ადგილზე არ არის. მის დასაბრუნებლად შეინახეთ პარამეტრები."
 
-#: includes/class-admin.php:490
+#: includes/class-admin.php:531
 msgid "Save settings"
 msgstr "პარამეტრების შენახვა"
 
-#: includes/class-archiver.php:52
+#: includes/class-archiver.php:59
 msgid "A backup part could not be opened for writing. Check that wp-content has free space."
 msgstr "სარეზერვო ასლის ნაწილის გახსნა ჩასაწერად ვერ მოხერხდა. შეამოწმეთ, არის თუ არა თავისუფალი ადგილი wp-content-ში."
 
-#: includes/class-archiver.php:113
+#: includes/class-archiver.php:123
 msgid "A backup part could not be written. Check that wp-content has free space."
 msgstr "სარეზერვო ასლის ნაწილის ჩაწერა ვერ მოხერხდა. შეამოწმეთ, რომ wp-content-ს აქვს თავისუფალი ადგილი."
+
+#. translators: %s: number of files.
+#: includes/class-archiver.php:161
+#, php-format
+msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
+msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr[0] "%s ფაილის წაკითხვა ვერ მოხერხდა და ის არ არის ამ სარეზერვო ასლში. ჩვეულებრივ, მისი წვდომის უფლებები ხელს უშლის WordPress-ს მის წაკითხვაში, ან ის წაიშალა სარეზერვო ასლის შექმნის პროცესში. სთხოვეთ თქვენს ჰოსტინგს (ან გამოიყენეთ თქვენი ფაილების მენეჯერი), რათა ის ვებ სერვერისთვის წაკითხვადი გახადოს, შემდეგ კი ხელახლა შექმენით სარეზერვო ასლი."
+msgstr[1] "%s ფაილის წაკითხვა ვერ მოხერხდა და ისინი არ არის ამ სარეზერვო ასლში. ჩვეულებრივ, მათი ნებართვები უშლის ხელს WordPress-ს მათ წაკითხვაში, ან ისინი წაიშალა სარეზერვო ასლის შექმნის პროცესში. სთხოვეთ თქვენს ჰოსტინგ პროვაიდერს (ან გამოიყენეთ თქვენი ფაილების მენეჯერი), რათა ისინი ხელმისაწვდომი გახდეს ვებ-სერვერისთვის წასაკითხად, შემდეგ კი ხელახლა შექმენით სარეზერვო ასლი."
+
+#. translators: 1: comma-separated file paths, 2: number of further files not named.
+#: includes/class-archiver.php:176
+#, php-format
+msgid "Left out: %1$s (and %2$s more file)."
+msgid_plural "Left out: %1$s (and %2$s more files)."
+msgstr[0] "გამოტოვებული: %1$s (და კიდევ %2$s ფაილი)."
+msgstr[1] "გამოტოვებული: %1$s (და კიდევ %2$s ფაილი)."
+
+#. translators: %s: comma-separated file paths.
+#: includes/class-archiver.php:182
+#, php-format
+msgid "Left out: %s."
+msgstr "გამოტოვებული: %s."
 
 #: includes/class-backup-job.php:42
 msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
@@ -540,18 +582,26 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "მონაცემთა ბაზა: %1$d ცხრილი, %2$s მწკრივი, %3$s შეკუმშული."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:473
+#: includes/class-backup-job.php:479
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "სარეზერვო ასლი დასრულებულია: %1$s შენახულია %2$d დანიშნულების ადგილას."
 msgstr[1] "სარეზერვო ასლი დასრულდა: %1$s შენახულია %2$d დანიშნულების ადგილას."
 
-#: includes/class-backup-job.php:503
+#. translators: %s: number of files.
+#: includes/class-backup-job.php:486
+#, php-format
+msgid "%s file was left out because it could not be read; see Details."
+msgid_plural "%s files were left out because they could not be read; see Details."
+msgstr[0] "%s ფაილი გამოტოვებული იქნა, რადგან მისი წაკითხვა ვერ მოხერხდა; იხილეთ დეტალები."
+msgstr[1] "%s ფაილი გამოტოვებული იქნა, რადგან მათი წაკითხვა ვერ მოხერხდა; იხილეთ დეტალები."
+
+#: includes/class-backup-job.php:516
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "უკვე ატვირთული ზოგიერთი ნაწილის წაშლა თქვენი საცავიდან ვერ მოხერხდა; ისინი არასრული სარეზერვო ასლის საქაღალდეშია და აღსადგენად არასდროს შემოგთავაზებენ."
 
-#: includes/class-backup-job.php:520
+#: includes/class-backup-job.php:533
 msgid "A storage destination was removed while the backup was running."
 msgstr "სარეზერვო ასლის შექმნის პროცესში მეხსიერების სამიზნე ადგილი წაიშალა."
 

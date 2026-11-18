@@ -49,17 +49,17 @@ msgid "Working…"
 msgstr "Өңделуде…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:348
+#: includes/class-admin.php:389
 msgid "Finished"
 msgstr "Аяқталды"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:349
+#: includes/class-admin.php:390
 msgid "Failed"
 msgstr "Сәтсіз аяқталды"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:350
+#: includes/class-admin.php:391
 msgid "Cancelled"
 msgstr "Бас тартылды"
 
@@ -185,19 +185,19 @@ msgstr "Ненің сақтық көшірмесін жасау керек"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files and database"
 msgstr "Файлдар мен дерекқор"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Database only"
 msgstr "Тек дерекқор"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files only"
 msgstr "Тек файлдар"
 
@@ -246,239 +246,281 @@ msgstr "Резервтік көшірме"
 msgid "Restore / import"
 msgstr "Қалпына келтіру / импорттау"
 
-#: includes/class-admin.php:351
+#. translators: %s: number of files.
+#: includes/class-admin.php:357
+#, php-format
+msgid "%s file left out"
+msgid_plural "%s files left out"
+msgstr[0] "%s файл қалдырылды"
+msgstr[1] "%s файл өткізіп жіберілді"
+
+#: includes/class-admin.php:361
+msgid "These files could not be read, so they are not in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr "Бұл файлдарды оқу мүмкін болмады, сондықтан олар осы сақтық көшірмеде жоқ. Әдетте олардың рұқсаттары WordPress-ке оларды оқуға кедергі келтіреді немесе олар сақтық көшірме жасау кезінде жойылған. Оларды веб-сервер оқи алатындай ету үшін хостингіңізден сұраңыз (немесе файл менеджеріңізді пайдаланыңыз), содан кейін сақтық көшірмені қайта жасаңыз."
+
+#. translators: %s: number of further files not listed.
+#: includes/class-admin.php:373
+#, php-format
+msgid "And %s more file."
+msgid_plural "And %s more files."
+msgstr[0] "Және тағы %s файл."
+msgstr[1] "Және тағы %s файл."
+
+#: includes/class-admin.php:392
 msgid "Running"
 msgstr "Іске қосылған"
 
-#: includes/class-admin.php:363
+#: includes/class-admin.php:404
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "Сақтау орныңыз"
 msgstr[1] "Сақтау орындарыңыз"
 
-#: includes/class-admin.php:365
+#: includes/class-admin.php:406
 msgid "No storage yet. Choose where your backups go below."
 msgstr "Әзірге қойма жоқ. Төменде сақтық көшірмелеріңіз қайда сақталатынын таңдаңыз."
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Ready"
 msgstr "Дайын"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Not connected"
 msgstr "Қосылмаған"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:417
 msgid "Connect"
 msgstr "Қосылу"
 
-#: includes/class-admin.php:377
+#: includes/class-admin.php:418
 msgid "Test"
 msgstr "Тексеру"
 
-#: includes/class-admin.php:378
+#: includes/class-admin.php:419
 msgid "Edit"
 msgstr "Өңдеу"
 
-#: includes/class-admin.php:379
+#: includes/class-admin.php:420
 msgid "Remove"
 msgstr "Жою"
 
-#: includes/class-admin.php:385
+#: includes/class-admin.php:426
 msgid "Add storage"
 msgstr "Жады қосу"
 
-#: includes/class-admin.php:389
+#: includes/class-admin.php:430
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "Резервтік көшірмелер бір сақтау орнына жіберіледі. Басқасын пайдалану үшін жоғарыдағыны өңдеңіз немесе жойыңыз."
 
-#: includes/class-admin.php:400
+#: includes/class-admin.php:441
 msgid "Kind of storage"
 msgstr "Сақтау қоймасының түрі"
 
-#: includes/class-admin.php:405
+#: includes/class-admin.php:446
 msgid "Name (for you)"
 msgstr "Атауы (сіз үшін)"
 
-#: includes/class-admin.php:407
+#: includes/class-admin.php:448
 msgid "Provider"
 msgstr "Провайдер"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:453
 msgid "Cloudflare account id"
 msgstr "Cloudflare тіркелгі идентификаторы"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:454
 msgid "Endpoint address"
 msgstr "Соңғы нүкте мекенжайы"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:455
 msgid "Region"
 msgstr "Аймақ"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:456
 msgid "Bucket"
 msgstr "Бакет"
 
-#: includes/class-admin.php:416
+#: includes/class-admin.php:457
 msgid "Access key id"
 msgstr "Қол жеткізу кілтінің идентификаторы"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Secret access key"
 msgstr "Құпия қатынасу кілті"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Leave empty to keep the saved key"
 msgstr "Сақталған кілтті қалдыру үшін бос қалдырыңыз"
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:459
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "Cloudflare R2 үшін: Cloudflare басқару тақтасында R2 бөлімін ашыңыз, бакет жасаңыз, содан кейін «Manage R2 API tokens» → сол бакет үшін Object Read & Write рұқсаты бар токен жасаңыз және access key id мен secret мәндерін осында көшіріңіз."
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:462
 msgid "Dropbox app key"
 msgstr "Dropbox қолданбасының кілті"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:463
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "dropbox.com/developers/apps мекенжайында files.content.read, files.content.write және files.metadata.read рұқсаттары бар қолданба жасаңыз (Scoped access, App folder) және оның App key мәнін осында көшіріңіз. Сақтаңыз, содан кейін Connect түймесін басыңыз."
 
-#: includes/class-admin.php:424
+#: includes/class-admin.php:465
 msgid "OAuth client id"
 msgstr "OAuth клиент идентификаторы"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "OAuth client secret"
 msgstr "OAuth клиентінің құпия кілті"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "Leave empty to keep the saved secret"
 msgstr "Сақталған құпияны қалдыру үшін бос қалдырыңыз"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "Google Cloud Console ішінде Google Drive API қосыңыз, содан кейін осы мекенжайды рұқсат етілген қайта бағыттау URI ретінде көрсетіп, түрі «Web application» болатын OAuth клиентін жасаңыз:"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "Сақтаңыз, содан кейін «Қосылу» түймесін басыңыз. Плагин тек өзі жасаған файлдарды көреді."
 
-#: includes/class-admin.php:428
+#: includes/class-admin.php:469
 msgid "Folder inside the storage (optional)"
 msgstr "Жоғалғыштың ішіндегі бума (қосымша)"
 
-#: includes/class-admin.php:429
+#: includes/class-admin.php:470
 msgid "Save storage"
 msgstr "Жадыны үнемдеу"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:480
 msgid "Import a backup from another plugin or host"
 msgstr "Сақтық көшірмені басқа плагиннен немесе хостингтен импорттау"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:481
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "Сайтты UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate немесе .sql дампы бар WordPress сайтының кез келген zip/tar архиві арқылы жасалған резервтік көшірмеден импорттаңыз. Мазмұны wp-content ішіне орналастырылады және дерекқор осы сайттың дерекқорын ауыстырады; мекенжайлар автоматты түрде осы сайттың мекенжайларына өзгертіледі."
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Upload from your computer"
 msgstr "Компьютеріңізден жүктеп салу"
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "Резервтік көшірменің барлық файлын бірден таңдаңыз (UpdraftPlus бірнешеуін жасайды). Үлкен файлдар шағын бөліктермен жіберіледі, сондықтан хостингіңіздің жүктеп салу шектеуі қолданылмайды."
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "Немесе сілтемелерден (Google Drive, Dropbox немесе кез келген жүктеп алу мекенжайы)"
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "Әр жолға бір сілтеме. Google Drive және Dropbox үшін файлды «сілтемесі бар кез келген адаммен» бөлісіп, сол сілтемені қойыңыз; содан кейін бөлісуді қайта өшіріңіз."
 
-#: includes/class-admin.php:445
+#: includes/class-admin.php:486
 msgid "Or a file already on this server"
 msgstr "Немесе осы серверде бұрыннан бар файл"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:453
+#: includes/class-admin.php:494
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "Архивтерді FTP немесе хостингіңіздің файл менеджері арқылы %s ішіне жүктеп, бұл бетті қайта жүктеңіз."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Or a deploy code from another site"
 msgstr "Немесе басқа сайттан алынған орналастыру коды"
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "Егер басқа сайт сізге Zinn® Backups орналастыру кодын берген болса, оның жад кілттерін бөліспей-ақ сол сақтық көшірмені осы сайтқа көшіру үшін оны осында қойыңыз. Код бірнеше сағат бойы жарамды болады; оған құпия сөз ретінде қараңыз."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "Құпия сөз тіркесі (егер сол сақтық көшірме шифрланған болса ғана)"
 
-#: includes/class-admin.php:459
-#: includes/class-admin.php:461
+#: includes/class-admin.php:500
+#: includes/class-admin.php:502
 msgid "Import"
 msgstr "Импорттау"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:501
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "Импорт осы сайттың мазмұны мен дерекқорын ауыстыратынын түсінемін. Содан кейін импортталған сайттың тіркелгісімен кіріңіз."
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Moving to Zinn® hosting?"
 msgstr "Zinn® хостингіне ауысасыз ба?"
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "Zinn Digital® сайтыңызды ескі хостингіңізден сіз үшін көшіре алады. Егер ескі хостингіңіз сізге FTP, SSH немесе басқару панеліне кіру рұқсатын бермесе, ескі сайтқа Zinn® Migrate орнатыңыз; ол осында импорттауға немесе Zinn®-ге тапсыруға болатын бір мұрағат жасайды."
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:514
 msgid "What goes into a backup"
 msgstr "Резервтік көшірмеге не кіреді"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:515
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "WordPress-тің жеке файлдарын қосу (wp-admin, wp-includes). Әдетте қажет емес: WordPress-ті әрқашан қайта орнатуға болады."
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:516
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "Сондай-ақ мына қапшықтарды немесе файлдарды өткізіп жіберіңіз (әр жолға бір, WordPress қапшығына қатысты)"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:517
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "Әрқашан шығарылып тасталады: кэштер, жаңартудың уақытша орны және басқа сақтық көшірме плагиндерінің жеке мұрағат қалталары:"
 
-#: includes/class-admin.php:477
+#: includes/class-admin.php:518
 msgid "Size of each part (MB)"
 msgstr "Әрбір бөліктің өлшемі (МБ)"
 
-#: includes/class-admin.php:478
+#: includes/class-admin.php:519
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "Плагин өшірілген кезде сақтық көшірме жасауды жалғастыру"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:520
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "Қоспасаңыз, өшірулі болады. Егер бұл плагин өшірулі болса немесе қалпына келтірілген дерекқор оны белсенді ретінде көрсетпесе де, сақтық көшірмелердің, қалпына келтірулердің және WP-CLI пәрмендерінің орындалуын жалғастырады. Бұл must-use плагиндер қалтасына шағын жүктегішті орналастырады."
 
-#: includes/class-admin.php:484
+#: includes/class-admin.php:525
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "Жүктеуіш орнында емес. Оны қалпына келтіру үшін баптауларды сақтаңыз."
 
-#: includes/class-admin.php:490
+#: includes/class-admin.php:531
 msgid "Save settings"
 msgstr "Баптауларды сақтау"
 
-#: includes/class-archiver.php:52
+#: includes/class-archiver.php:59
 msgid "A backup part could not be opened for writing. Check that wp-content has free space."
 msgstr "Резервтік көшірменің бір бөлігін жазу үшін ашу мүмкін болмады. wp-content ішінде бос орын бар-жоғын тексеріңіз."
 
-#: includes/class-archiver.php:113
+#: includes/class-archiver.php:123
 msgid "A backup part could not be written. Check that wp-content has free space."
 msgstr "Резервтік көшірменің бір бөлігі жазылмады. wp-content ішінде бос орын бар-жоғын тексеріңіз."
+
+#. translators: %s: number of files.
+#: includes/class-archiver.php:161
+#, php-format
+msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
+msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr[0] "%s файлы оқылмады және бұл сақтық көшірмеде ЖОҚ. Әдетте оның рұқсаттары WordPress-тің оны оқуына кедергі келтіреді немесе ол сақтық көшірме жасалып жатқан кезде жойылған. Веб-сервер оқи алатындай ету үшін хостингіңізден сұраңыз (немесе файл менеджерін пайдаланыңыз), содан кейін қайтадан сақтық көшірме жасаңыз."
+msgstr[1] "%s файл оқылмады және олар бұл сақтық көшірмеде ЖОҚ. Әдетте олардың рұқсаттары WordPress-ке оларды оқуға кедергі келтіреді немесе сақтық көшірме жасалып жатқан кезде жойылған. Оларды веб-сервер оқи алатындай етуді хостингіңізден сұраңыз (немесе файлдар менеджерін пайдаланыңыз), содан кейін сақтық көшірмені қайта жасаңыз."
+
+#. translators: 1: comma-separated file paths, 2: number of further files not named.
+#: includes/class-archiver.php:176
+#, php-format
+msgid "Left out: %1$s (and %2$s more file)."
+msgid_plural "Left out: %1$s (and %2$s more files)."
+msgstr[0] "Қалдырылған: %1$s (және тағы %2$s файл)."
+msgstr[1] "Қалдырылған: %1$s (және тағы %2$s файл)."
+
+#. translators: %s: comma-separated file paths.
+#: includes/class-archiver.php:182
+#, php-format
+msgid "Left out: %s."
+msgstr "Қалдырылған: %s."
 
 #: includes/class-backup-job.php:42
 msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
@@ -540,18 +582,26 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Дерекқор: %1$d кесте, %2$s жол, %3$s қысылған."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:473
+#: includes/class-backup-job.php:479
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Резервтік көшіру аяқталды: %1$s %2$d межелі орында сақталды."
 msgstr[1] "Резервтік көшіру аяқталды: %1$s %2$d бағытта сақталды."
 
-#: includes/class-backup-job.php:503
+#. translators: %s: number of files.
+#: includes/class-backup-job.php:486
+#, php-format
+msgid "%s file was left out because it could not be read; see Details."
+msgid_plural "%s files were left out because they could not be read; see Details."
+msgstr[0] "%s файлы оқылмағандықтан өткізіліп жіберілді; Толығырақ бөлімін қараңыз."
+msgstr[1] "%s файл оқылмағандықтан өткізіп жіберілді; Мәліметтерді қараңыз."
+
+#: includes/class-backup-job.php:516
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Жүктеліп қойған кейбір бөліктерді жад қоймаңыздан жою мүмкін болмады; олар толық емес резервтік көшірме қалтасында орналасқан және қалпына келтіру үшін ешқашан ұсынылмайды."
 
-#: includes/class-backup-job.php:520
+#: includes/class-backup-job.php:533
 msgid "A storage destination was removed while the backup was running."
 msgstr "Резервтік көшіру орындалып жатқан кезде сақтау орны жойылды."
 

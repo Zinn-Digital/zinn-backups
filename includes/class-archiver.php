@@ -26,6 +26,13 @@ final class Archiver {
 	/** Bytes of input added per step before the part is closed (bounds the time `close()` takes). */
 	private const STEP_BYTES = 67108864;
 
+	/**
+	 * How many left-out paths a backup names. The count is always exact; past this many the
+	 * names stop (a site whose whole uploads folder is unreadable must not grow the job state
+	 * without bound).
+	 */
+	public const SKIPPED_NAMED = 200;
+
 	/** Already-compressed formats, stored rather than deflated. */
 	private const STORED = array( 'jpg', 'jpeg', 'png', 'gif', 'webp', 'avif', 'heic', 'mp4', 'm4v', 'mov', 'webm', 'mp3', 'm4a', 'ogg', 'zip', 'gz', 'tgz', 'bz2', 'xz', '7z', 'rar', 'woff', 'woff2', 'pdf', 'wpress' );
 
@@ -58,6 +65,7 @@ final class Archiver {
 		$current = file_exists( $part_path ) ? (int) filesize( $part_path ) : 0;
 		$safe    = ! empty( $cursor['safe'] );
 		$skipped = 0;
+		$missed  = array();
 		while ( microtime( true ) < $deadline - 3 && $added < self::STEP_BYTES && $current + $added < $part_max ) {
 			$line = fgets( $in );
 			if ( false === $line ) {
@@ -86,12 +94,14 @@ final class Archiver {
 			$absolute = $root . $relative;
 			if ( ! is_readable( $absolute ) ) {
 				++$skipped;
+				$missed[] = (string) $relative;
 				continue;
 			}
 			if ( $safe ) {
 				$data = file_get_contents( $absolute ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- re-reading after a failed close; see the class comment.
 				if ( false === $data ) {
 					++$skipped;
+					$missed[] = (string) $relative;
 					continue;
 				}
 				$zip->addFromString( $relative, $data );
@@ -123,12 +133,56 @@ final class Archiver {
 			fclose( $out ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose -- see above.
 		}
 		clearstatcache( true, $part_path );
-		$cursor['offset']    = $offset;
-		$cursor['safe']      = false;
-		$cursor['skipped']   = (int) ( $cursor['skipped'] ?? 0 ) + $skipped;
-		$cursor['done']      = $at_end && $offset >= (int) filesize( $list_file );
-		$cursor['part_full'] = $has_files && file_exists( $part_path ) && ( (int) filesize( $part_path ) >= $part_max || $cursor['done'] );
-		$cursor['part_has']  = $has_files && file_exists( $part_path );
+		$cursor['offset']        = $offset;
+		$cursor['safe']          = false;
+		$cursor['skipped']       = (int) ( $cursor['skipped'] ?? 0 ) + $skipped;
+		$named                   = (array) ( $cursor['skipped_files'] ?? array() );
+		$cursor['skipped_files'] = array_slice( array_merge( $named, $missed ), 0, self::SKIPPED_NAMED );
+		$cursor['done']          = $at_end && $offset >= (int) filesize( $list_file );
+		$cursor['part_full']     = $has_files && file_exists( $part_path ) && ( (int) filesize( $part_path ) >= $part_max || $cursor['done'] );
+		$cursor['part_has']      = $has_files && file_exists( $part_path );
 		return $cursor;
+	}
+
+	/**
+	 * The log lines that tell the site owner which files a backup left out and what to do.
+	 *
+	 * @param int      $count Files left out (exact).
+	 * @param string[] $named The first of them, relative to the WordPress root.
+	 * @return string[] Nothing when no file was left out.
+	 */
+	public static function skipped_report( int $count, array $named ): array {
+		if ( $count < 1 ) {
+			return array();
+		}
+		$lines = array(
+			sprintf(
+				/* translators: %s: number of files. */
+				_n(
+					'%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again.',
+					'%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again.',
+					$count,
+					'zinn-backups'
+				),
+				number_format_i18n( $count )
+			),
+		);
+		$named = array_slice( array_map( 'strval', $named ), 0, self::SKIPPED_NAMED );
+		if ( $named ) {
+			$more    = $count - count( $named );
+			$lines[] = $more > 0
+				? sprintf(
+					/* translators: 1: comma-separated file paths, 2: number of further files not named. */
+					_n( 'Left out: %1$s (and %2$s more file).', 'Left out: %1$s (and %2$s more files).', $more, 'zinn-backups' ),
+					implode( ', ', $named ),
+					number_format_i18n( $more )
+				)
+				: sprintf(
+					/* translators: %s: comma-separated file paths. */
+					__( 'Left out: %s.', 'zinn-backups' ),
+					implode( ', ', $named )
+				);
+		}
+		return $lines;
 	}
 }

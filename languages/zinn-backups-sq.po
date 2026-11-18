@@ -49,17 +49,17 @@ msgid "Working…"
 msgstr "Po punohet…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:348
+#: includes/class-admin.php:389
 msgid "Finished"
 msgstr "Përfunduar"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:349
+#: includes/class-admin.php:390
 msgid "Failed"
 msgstr "Dështoi"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:350
+#: includes/class-admin.php:391
 msgid "Cancelled"
 msgstr "Anuluar"
 
@@ -185,19 +185,19 @@ msgstr "Çfarë të kopjohet rezervë"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files and database"
 msgstr "Skedarët dhe baza e të dhënave"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Database only"
 msgstr "Vetëm baza e të dhënave"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files only"
 msgstr "Vetëm skedarët"
 
@@ -246,239 +246,281 @@ msgstr "Kopje rezervë"
 msgid "Restore / import"
 msgstr "Rikthe / importo"
 
-#: includes/class-admin.php:351
+#. translators: %s: number of files.
+#: includes/class-admin.php:357
+#, php-format
+msgid "%s file left out"
+msgid_plural "%s files left out"
+msgstr[0] "%s skedar i lënë jashtë"
+msgstr[1] "%s skedarë të lënë jashtë"
+
+#: includes/class-admin.php:361
+msgid "These files could not be read, so they are not in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr "Këto skedarë nuk mund të lexoheshin, prandaj nuk janë në këtë kopje rezervë. Zakonisht lejet e tyre e pengojnë WordPress t'i lexojë, ose ato u fshinë gjatë kryerjes së kopjes rezervë. Kërkojini pritësit tuaj (ose përdorni menaxherin tuaj të skedarëve) që t'i bëjë të lexueshëm nga serveri i uebit, pastaj bëni përsëri kopje rezervë."
+
+#. translators: %s: number of further files not listed.
+#: includes/class-admin.php:373
+#, php-format
+msgid "And %s more file."
+msgid_plural "And %s more files."
+msgstr[0] "Dhe %s skedar tjetër."
+msgstr[1] "Dhe %s skedarë të tjerë."
+
+#: includes/class-admin.php:392
 msgid "Running"
 msgstr "Në ekzekutim"
 
-#: includes/class-admin.php:363
+#: includes/class-admin.php:404
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "Hapësira juaj ruajtëse"
 msgstr[1] "Destinacionet tuaja të ruajtjes"
 
-#: includes/class-admin.php:365
+#: includes/class-admin.php:406
 msgid "No storage yet. Choose where your backups go below."
 msgstr "Ende nuk ka hapësirë ruajtëse. Zgjidhni më poshtë se ku do të shkojnë kopjet tuaja rezervë."
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Ready"
 msgstr "Gati"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Not connected"
 msgstr "I palidhur"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:417
 msgid "Connect"
 msgstr "Lidhu"
 
-#: includes/class-admin.php:377
+#: includes/class-admin.php:418
 msgid "Test"
 msgstr "Testo"
 
-#: includes/class-admin.php:378
+#: includes/class-admin.php:419
 msgid "Edit"
 msgstr "Përpunoni"
 
-#: includes/class-admin.php:379
+#: includes/class-admin.php:420
 msgid "Remove"
 msgstr "Hiq"
 
-#: includes/class-admin.php:385
+#: includes/class-admin.php:426
 msgid "Add storage"
 msgstr "Shtoni hapësirë ruajtëse"
 
-#: includes/class-admin.php:389
+#: includes/class-admin.php:430
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "Kopjet rezervë shkojnë në një destinacion të vetëm depozitimi. Për të përdorur një tjetër, modifikoni ose hiqni atë më sipër."
 
-#: includes/class-admin.php:400
+#: includes/class-admin.php:441
 msgid "Kind of storage"
 msgstr "Lloji i hapësirës ruajtëse"
 
-#: includes/class-admin.php:405
+#: includes/class-admin.php:446
 msgid "Name (for you)"
 msgstr "Emri (për ju)"
 
-#: includes/class-admin.php:407
+#: includes/class-admin.php:448
 msgid "Provider"
 msgstr "Ofruesi"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:453
 msgid "Cloudflare account id"
 msgstr "ID llogarie Cloudflare"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:454
 msgid "Endpoint address"
 msgstr "Adresa e pikës përfundimtare"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:455
 msgid "Region"
 msgstr "Rajoni"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:456
 msgid "Bucket"
 msgstr "Kovë"
 
-#: includes/class-admin.php:416
+#: includes/class-admin.php:457
 msgid "Access key id"
 msgstr "ID-ja e çelësit të hyrjes"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Secret access key"
 msgstr "Çelës sekret aksesi"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Leave empty to keep the saved key"
 msgstr "Lëreni bosh për të mbajtur çelësin e ruajtur"
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:459
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "Për Cloudflare R2: në panelin e Cloudflare hapni R2, krijoni një bucket, më pas “Manage R2 API tokens” → krijoni një token me leje Object Read & Write për atë bucket, dhe kopjoni këtu ID-në e çelësit të hyrjes (access key id) dhe sekretin."
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:462
 msgid "Dropbox app key"
 msgstr "Çelësi i aplikacionit Dropbox"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:463
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "Krijoni një aplikacion te dropbox.com/developers/apps (Scoped access, App folder) me lejet files.content.read, files.content.write dhe files.metadata.read, dhe kopjoni këtu çelësin e aplikacionit të tij. Ruajeni, pastaj shtypni Lidh."
 
-#: includes/class-admin.php:424
+#: includes/class-admin.php:465
 msgid "OAuth client id"
 msgstr "ID klienti OAuth"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "OAuth client secret"
 msgstr "Sekreti i klientit OAuth"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "Leave empty to keep the saved secret"
 msgstr "Lëreni bosh për të ruajtur sekretin e ruajtur"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "Në Google Cloud Console, aktivizoni Google Drive API, më pas krijoni një klient OAuth të llojit “Web application” me këtë adresë si URI të autorizuar ridrejtimi:"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "Ruajeni, mandej shtypni Lidhu. Shtojca sheh vetëm kartelat që krijon vetë."
 
-#: includes/class-admin.php:428
+#: includes/class-admin.php:469
 msgid "Folder inside the storage (optional)"
 msgstr "Dosje brenda hapësirës së ruajtjes (opsionale)"
 
-#: includes/class-admin.php:429
+#: includes/class-admin.php:470
 msgid "Save storage"
 msgstr "Kurseni hapësirë ruajtëse"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:480
 msgid "Import a backup from another plugin or host"
 msgstr "Importoni një kopje rezervë nga një shtojcë ose pritës tjetër"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:481
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "Importoni një faqe nga një kopje rezervë e krijuar nga UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, ose çdo arkivë zip/tar e një faqeje WordPress me skedarin e saj .sql dump. Përmbajtja shkon te wp-content dhe baza e të dhënave zëvendëson atë të kësaj faqeje; adresat ndryshohen automatikisht në ato të kësaj faqeje."
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Upload from your computer"
 msgstr "Ngarkoni nga kompjuteri juaj"
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "Zgjidhni çdo skedar të kopjes rezervë menjëherë (UpdraftPlus krijon disa). Skedarët e mëdhenj dërgohen në pjesë të vogla, kështu që kufiri i ngarkimit të pritësit tuaj nuk zbatohet."
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "Ose nga lidhje (Google Drive, Dropbox ose çfarëdo adrese shkarkimi)"
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "Një lidhje për rresht. Për Google Drive dhe Dropbox, ndajeni skedarin me \"këdo që ka lidhjen\" dhe ngjiteni atë lidhje; çaktivizojeni sërish ndarjen më pas."
 
-#: includes/class-admin.php:445
+#: includes/class-admin.php:486
 msgid "Or a file already on this server"
 msgstr "Ose një skedar tashmë në këtë server"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:453
+#: includes/class-admin.php:494
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "Ngarkoni arkivat përmes FTP-së ose përgjegjësit të kartelave të strehuesit tuaj te %s dhe ringarkojeni këtë faqe."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Or a deploy code from another site"
 msgstr "Ose një kod shpërndarjeje nga një sajt tjetër"
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "Nëse një faqe tjetër ju dha një kod shpërndarjeje të Zinn® Backups, ngjiteni këtu për ta kopjuar atë kopje rezervë në këtë faqe pa ndarë çelësat e saj të ruajtjes. Një kod funksionon për disa orë; trajtojeni atë si një fjalëkalim."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "Frazëkalim (vetëm nëse ajo kopje rezervë është e koduar)"
 
-#: includes/class-admin.php:459
-#: includes/class-admin.php:461
+#: includes/class-admin.php:500
+#: includes/class-admin.php:502
 msgid "Import"
 msgstr "Importo"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:501
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "E kuptoj që importimi zëvendëson përmbajtjen dhe bazën e të dhënave të kësaj faqeje. Pas kësaj, hyni me një llogari nga faqja e importuar."
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Moving to Zinn® hosting?"
 msgstr "Po kaloni te hostimi Zinn®?"
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "Zinn Digital® mund ta transferojë faqen tuaj nga host-i juaj i vjetër. Nëse host-i juaj i vjetër nuk ju jep qasje në FTP, SSH apo panel kontrolli, instaloni Zinn® Migrate në faqen e vjetër; ai krijon një arkivë të vetme të cilën mund ta importoni këtu ose t'ia dorëzoni Zinn®."
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:514
 msgid "What goes into a backup"
 msgstr "Çfarë përfshihet në një kopje rezervë"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:515
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "Përfshini kartelat vetjake të WordPress-it (wp-admin, wp-includes). Zakonisht s’është e nevojshme: WordPress-i mund të riinstalohet përherë."
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:516
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "Gjithashtu lini jashtë këto dosje ose skedarë (një për rresht, në lidhje me dosjen e WordPress)"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:517
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "Përjashtohen gjithmonë: fshehtinat, hapësira e përkohshme e përditësimit dhe dosjet vetiake të arkivave të shtojcave të tjera të kopjeve rezervë:"
 
-#: includes/class-admin.php:477
+#: includes/class-admin.php:518
 msgid "Size of each part (MB)"
 msgstr "Madhësia e secilës pjesë (MB)"
 
-#: includes/class-admin.php:478
+#: includes/class-admin.php:519
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "Vazhdoni kryerjen e kopjeve rezervë kur shtojca është e çaktivizuar"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:520
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "E çaktivizuar, përveç nëse e aktivizoni. Mban në punë kopjet rezervë, rikthimet dhe komandat WP-CLI nëse kjo shtojcë çaktivizohet, ose nëse një bazë të dhënash e rikthyer nuk e liston më atë si aktive. Kjo vendos një ngarkues të vogël në dosjen e shtojcave të domosdoshme (must-use plugins)."
 
-#: includes/class-admin.php:484
+#: includes/class-admin.php:525
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "Ngarkuesi nuk është në vendin e vet. Ruani rregullimet për ta rikthyer."
 
-#: includes/class-admin.php:490
+#: includes/class-admin.php:531
 msgid "Save settings"
 msgstr "Ruaji rregullimet"
 
-#: includes/class-archiver.php:52
+#: includes/class-archiver.php:59
 msgid "A backup part could not be opened for writing. Check that wp-content has free space."
 msgstr "Një pjesë e kopjes rezervë nuk mund të hapej për shkrim. Kontrolloni nëse wp-content ka hapësirë të lirë."
 
-#: includes/class-archiver.php:113
+#: includes/class-archiver.php:123
 msgid "A backup part could not be written. Check that wp-content has free space."
 msgstr "Një pjesë e kopjes rezervë nuk mund të shkruhej. Kontrolloni nëse wp-content ka hapësirë të lirë."
+
+#. translators: %s: number of files.
+#: includes/class-archiver.php:161
+#, php-format
+msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
+msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr[0] "Skedari %s nuk mund të lexohej dhe NUK ndodhet në këtë kopje rezervë. Zakonisht lejet e tij pengojnë WordPress ta lexojë atë, ose është fshirë gjatë kryerjes së kopjes rezervë. Kërkojini pritësit tuaj (ose përdorni menaxherin tuaj të skedarëve) ta bëjë atë të lexueshëm nga serveri i uebit, pastaj bëni përsëri një kopje rezervë."
+msgstr[1] "%s skedarë nuk mund të lexoheshin dhe NUK janë në këtë kopje rezervë. Zakonisht lejet e tyre e pengojnë WordPress-in t'i lexojë ata, ose janë fshirë gjatë kryerjes së kopjes rezervë. Kërkojini pritësit tuaj (ose përdorni menaxherin tuaj të skedarëve) që t'i bëjë ata të lexueshëm nga serveri i uebit, pastaj bëni përsëri një kopje rezervë."
+
+#. translators: 1: comma-separated file paths, 2: number of further files not named.
+#: includes/class-archiver.php:176
+#, php-format
+msgid "Left out: %1$s (and %2$s more file)."
+msgid_plural "Left out: %1$s (and %2$s more files)."
+msgstr[0] "U lënë jashtë: %1$s (dhe %2$s skedar tjetër)."
+msgstr[1] "Të lëna jashtë: %1$s (dhe %2$s skedarë të tjerë)."
+
+#. translators: %s: comma-separated file paths.
+#: includes/class-archiver.php:182
+#, php-format
+msgid "Left out: %s."
+msgstr "U lë jashtë: %s."
 
 #: includes/class-backup-job.php:42
 msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
@@ -540,18 +582,26 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Baza e të dhënave: %1$d tabela, %2$s rreshta, %3$s e ngjeshur."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:473
+#: includes/class-backup-job.php:479
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Kopja rezervë përfundoi: %1$s u ruajt në %2$d destinacion."
 msgstr[1] "Rezervimi përfundoi: %1$s u ruajt në %2$d destinacione."
 
-#: includes/class-backup-job.php:503
+#. translators: %s: number of files.
+#: includes/class-backup-job.php:486
+#, php-format
+msgid "%s file was left out because it could not be read; see Details."
+msgid_plural "%s files were left out because they could not be read; see Details."
+msgstr[0] "Skedari %s u la jashtë sepse nuk mund të lexohej; shihni Hollësitë."
+msgstr[1] "%s skedarë u lanë jashtë sepse nuk mund të lexoheshin; shihni Hollësitë."
+
+#: includes/class-backup-job.php:516
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Disa pjesë të ngarkuara tashmë nuk mund të hiqeshin nga hapësira juaj e ruajtjes; ato ndodhen në një dosje kopjimi rezervë të paplotë dhe nuk ofrohen kurrë për rikthim."
 
-#: includes/class-backup-job.php:520
+#: includes/class-backup-job.php:533
 msgid "A storage destination was removed while the backup was running."
 msgstr "Një vendmbërritje depozitimi u hoq ndërkohë që kopja rezervë po ekzekutohej."
 

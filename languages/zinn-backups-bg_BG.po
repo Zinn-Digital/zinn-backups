@@ -49,17 +49,17 @@ msgid "Working…"
 msgstr "Обработва се…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:348
+#: includes/class-admin.php:389
 msgid "Finished"
 msgstr "Завършено"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:349
+#: includes/class-admin.php:390
 msgid "Failed"
 msgstr "Неуспешно"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:350
+#: includes/class-admin.php:391
 msgid "Cancelled"
 msgstr "Отказан"
 
@@ -185,19 +185,19 @@ msgstr "Какво да се архивира"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files and database"
 msgstr "Файлове и база данни"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Database only"
 msgstr "Само база данни"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files only"
 msgstr "Само файлове"
 
@@ -246,239 +246,281 @@ msgstr "Резервно копие"
 msgid "Restore / import"
 msgstr "Възстановяване / импортиране"
 
-#: includes/class-admin.php:351
+#. translators: %s: number of files.
+#: includes/class-admin.php:357
+#, php-format
+msgid "%s file left out"
+msgid_plural "%s files left out"
+msgstr[0] "%s пропуснат файл"
+msgstr[1] "%s пропуснати файла"
+
+#: includes/class-admin.php:361
+msgid "These files could not be read, so they are not in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr "Тези файлове не можаха да бъдат прочетени, затова не са включени в това архивно копие. Обикновено правата им за достъп пречат на WordPress да ги прочете или са били изтрити по време на архивирането. Обърнете се към Вашия хостинг доставчик (или използвайте Вашия файлов мениджър), за да ги направите четими за уеб сървъра, след което архивирайте отново."
+
+#. translators: %s: number of further files not listed.
+#: includes/class-admin.php:373
+#, php-format
+msgid "And %s more file."
+msgid_plural "And %s more files."
+msgstr[0] "И още %s файл."
+msgstr[1] "И още %s файла."
+
+#: includes/class-admin.php:392
 msgid "Running"
 msgstr "Работи"
 
-#: includes/class-admin.php:363
+#: includes/class-admin.php:404
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "Вашето хранилище"
 msgstr[1] "Вашите дестинации за съхранение"
 
-#: includes/class-admin.php:365
+#: includes/class-admin.php:406
 msgid "No storage yet. Choose where your backups go below."
 msgstr "Все още няма хранилище. Изберете по-долу къде да отиват вашите резервни копия."
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Ready"
 msgstr "Готово"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Not connected"
 msgstr "Няма връзка"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:417
 msgid "Connect"
 msgstr "Свързване"
 
-#: includes/class-admin.php:377
+#: includes/class-admin.php:418
 msgid "Test"
 msgstr "Тест"
 
-#: includes/class-admin.php:378
+#: includes/class-admin.php:419
 msgid "Edit"
 msgstr "Редактиране"
 
-#: includes/class-admin.php:379
+#: includes/class-admin.php:420
 msgid "Remove"
 msgstr "Премахване"
 
-#: includes/class-admin.php:385
+#: includes/class-admin.php:426
 msgid "Add storage"
 msgstr "Добавяне на хранилище"
 
-#: includes/class-admin.php:389
+#: includes/class-admin.php:430
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "Резервните копия се изпращат до едно местоназначение за съхранение. За да използвате друго, редактирайте или премахнете горното."
 
-#: includes/class-admin.php:400
+#: includes/class-admin.php:441
 msgid "Kind of storage"
 msgstr "Вид хранилище"
 
-#: includes/class-admin.php:405
+#: includes/class-admin.php:446
 msgid "Name (for you)"
 msgstr "Име (за вас)"
 
-#: includes/class-admin.php:407
+#: includes/class-admin.php:448
 msgid "Provider"
 msgstr "Доставчик"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:453
 msgid "Cloudflare account id"
 msgstr "Идент. номер на акаунт в Cloudflare"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:454
 msgid "Endpoint address"
 msgstr "Адрес на крайна точка"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:455
 msgid "Region"
 msgstr "Регион"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:456
 msgid "Bucket"
 msgstr "Бъкет"
 
-#: includes/class-admin.php:416
+#: includes/class-admin.php:457
 msgid "Access key id"
 msgstr "Идент. на ключ за достъп"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Secret access key"
 msgstr "Таен ключ за достъп"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Leave empty to keep the saved key"
 msgstr "Оставете празно, за да запазите записания ключ"
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:459
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "За Cloudflare R2: в таблото за управление на Cloudflare отворете R2, създайте кофа (bucket), след това „Manage R2 API tokens“ → създайте токен с Object Read & Write за тази кофа и копирайте тук access key id и secret."
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:462
 msgid "Dropbox app key"
 msgstr "Ключ на приложението в Dropbox"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:463
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "Създайте приложение на dropbox.com/developers/apps (Scoped access, App folder) с разрешенията files.content.read, files.content.write и files.metadata.read и копирайте неговия App key тук. Запазете, след което натиснете Connect."
 
-#: includes/class-admin.php:424
+#: includes/class-admin.php:465
 msgid "OAuth client id"
 msgstr "Идент. номер на OAuth клиент"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "OAuth client secret"
 msgstr "Тайна на OAuth клиента"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "Leave empty to keep the saved secret"
 msgstr "Оставете празно, за да запазите записаната тайна"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "В Google Cloud Console активирайте Google Drive API, след което създайте OAuth клиент от тип „Web application“ с този адрес като упълномощен URI за пренасочване:"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "Запазете, след което натиснете „Свързване“. Разширението вижда само файловете, които самото то създава."
 
-#: includes/class-admin.php:428
+#: includes/class-admin.php:469
 msgid "Folder inside the storage (optional)"
 msgstr "Папка в хранилището (по избор)"
 
-#: includes/class-admin.php:429
+#: includes/class-admin.php:470
 msgid "Save storage"
 msgstr "Спестете дисково пространство"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:480
 msgid "Import a backup from another plugin or host"
 msgstr "Импортиране на резервно копие от друго разширение или хостинг"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:481
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "Внесете сайт от резервно копие, направено с UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate или всеки zip/tar архив на WordPress сайт с неговия .sql дъмп. Съдържанието отива в wp-content, а базата данни заменя тази на този сайт; адресите се променят към тези на този сайт автоматично."
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Upload from your computer"
 msgstr "Качване от вашия компютър"
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "Изберете всички файлове от резервното копие наведнъж (UpdraftPlus създава няколко). Големите файлове се изпращат на малки части, така че лимитът за качване на Вашия хостинг не се прилага."
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "Или от връзки (Google Drive, Dropbox или друг адрес за изтегляне)"
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "По една връзка на ред. За Google Drive и Dropbox споделете файла с „всеки с връзката“ и поставете тази връзка; след това изключете споделянето отново."
 
-#: includes/class-admin.php:445
+#: includes/class-admin.php:486
 msgid "Or a file already on this server"
 msgstr "Или файл, който вече е на този сървър"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:453
+#: includes/class-admin.php:494
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "Качете архивите чрез FTP или файловия мениджър на вашия хостинг в %s и презаредете тази страница."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Or a deploy code from another site"
 msgstr "Или код за внедряване от друг сайт"
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "Ако друг сайт ви е предоставил код за внедряване от Zinn® Backups, поставете го тук, за да копирате това резервно копие на този сайт, без да споделяте ключовете му за съхранение. Кодът е валиден няколко часа; отнасяйте се към него като към парола."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "Парола (само ако това резервно копие е криптирано)"
 
-#: includes/class-admin.php:459
-#: includes/class-admin.php:461
+#: includes/class-admin.php:500
+#: includes/class-admin.php:502
 msgid "Import"
 msgstr "Импортиране"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:501
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "Разбирам, че внасянето заменя съдържанието и базата данни на този сайт. След това влезте с акаунт от внесения сайт."
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Moving to Zinn® hosting?"
 msgstr "Премествате се към хостинг на Zinn®?"
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "Zinn Digital® може да премести сайта Ви от стария Ви хост вместо Вас. Ако старият Ви хост не Ви предоставя достъп до FTP, SSH или контролния панел, инсталирайте Zinn® Migrate на стария сайт; тя създава един архив, който можете да импортирате тук или да предадете на Zinn®."
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:514
 msgid "What goes into a backup"
 msgstr "Какво съдържа резервното копие"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:515
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "Включване на собствените файлове на WordPress (wp-admin, wp-includes). Обикновено не е необходимо: WordPress винаги може да бъде преинсталиран."
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:516
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "Също така изключете тези папки или файлове (по един на ред, относително спрямо папката на WordPress)"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:517
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "Винаги се изключват: кешове, работно пространство за обновления и собствените архивни папки на други разширения за резервни копия:"
 
-#: includes/class-admin.php:477
+#: includes/class-admin.php:518
 msgid "Size of each part (MB)"
 msgstr "Размер на всяка част (MB)"
 
-#: includes/class-admin.php:478
+#: includes/class-admin.php:519
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "Продължаване на архивирането при деактивиране на разширението"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:520
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "Изключено, освен ако не го включите. Поддържа архивирането, възстановяването и командите на WP-CLI работещи, ако тази приставка е изключена или ако възстановената база от данни вече не я показва като активна. Това поставя малък зареждащ модул в папката за задължителни приставки (must-use plugins)."
 
-#: includes/class-admin.php:484
+#: includes/class-admin.php:525
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "Зареждачът не е на мястото си. Запазете настройките, за да го върнете."
 
-#: includes/class-admin.php:490
+#: includes/class-admin.php:531
 msgid "Save settings"
 msgstr "Запазване на настройките"
 
-#: includes/class-archiver.php:52
+#: includes/class-archiver.php:59
 msgid "A backup part could not be opened for writing. Check that wp-content has free space."
 msgstr "Част от резервното копие не можа да бъде отворена за запис. Проверете дали в wp-content има свободно място."
 
-#: includes/class-archiver.php:113
+#: includes/class-archiver.php:123
 msgid "A backup part could not be written. Check that wp-content has free space."
 msgstr "Част от резервното копие не можа да бъде записана. Проверете дали има свободно място в wp-content."
+
+#. translators: %s: number of files.
+#: includes/class-archiver.php:161
+#, php-format
+msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
+msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr[0] "Файлът %s не можа да бъде прочетен и НЕ Е включен в това резервно копие. Обикновено правата му за достъп пречат на WordPress да го прочете или е бил изтрит по време на създаването на резервното копие. Помолете Вашия хостинг доставчик (или използвайте Вашия файлов мениджър) да го направи четим за уеб сървъра, след което архивирайте отново."
+msgstr[1] "%s файла не можаха да бъдат прочетени и НЕ са включени в това резервно копие. Обикновено правата им за достъп пречат на WordPress да ги прочете или са били изтрити по време на архивирането. Помолете вашия хостинг доставчик (или използвайте вашия файлов мениджър) да ги направи четими за уеб сървъра, след което архивирайте отново."
+
+#. translators: 1: comma-separated file paths, 2: number of further files not named.
+#: includes/class-archiver.php:176
+#, php-format
+msgid "Left out: %1$s (and %2$s more file)."
+msgid_plural "Left out: %1$s (and %2$s more files)."
+msgstr[0] "Пропуснати: %1$s (и още %2$s файл)."
+msgstr[1] "Пропуснати: %1$s (и още %2$s файла)."
+
+#. translators: %s: comma-separated file paths.
+#: includes/class-archiver.php:182
+#, php-format
+msgid "Left out: %s."
+msgstr "Пропуснати: %s."
 
 #: includes/class-backup-job.php:42
 msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
@@ -540,18 +582,26 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "База от данни: %1$d таблици, %2$s реда, %3$s компресирани."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:473
+#: includes/class-backup-job.php:479
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Резервното копие е завършено: %1$s се съхранява в %2$d дестинация."
 msgstr[1] "Архивирането завърши: %1$s се съхранява в %2$d дестинации."
 
-#: includes/class-backup-job.php:503
+#. translators: %s: number of files.
+#: includes/class-backup-job.php:486
+#, php-format
+msgid "%s file was left out because it could not be read; see Details."
+msgid_plural "%s files were left out because they could not be read; see Details."
+msgstr[0] "Файлът %s беше пропуснат, тъй като не можа да бъде прочетен; вижте Подробности."
+msgstr[1] "%s файла бяха пропуснати, тъй като не можаха да бъдат прочетени; вижте „Подробности“."
+
+#: includes/class-backup-job.php:516
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Някои вече качени части не можаха да бъдат премахнати от вашето хранилище; те се намират в папка за незавършени резервни копия и никога не се предлагат за възстановяване."
 
-#: includes/class-backup-job.php:520
+#: includes/class-backup-job.php:533
 msgid "A storage destination was removed while the backup was running."
 msgstr "Целта за съхранение беше премахната, докато архивирането се изпълняваше."
 

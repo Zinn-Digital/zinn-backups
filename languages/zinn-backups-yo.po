@@ -49,17 +49,17 @@ msgid "Working…"
 msgstr "Ń ṣiṣẹ́…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:348
+#: includes/class-admin.php:389
 msgid "Finished"
 msgstr "Ti parí"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:349
+#: includes/class-admin.php:390
 msgid "Failed"
 msgstr "Kùnà"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:350
+#: includes/class-admin.php:391
 msgid "Cancelled"
 msgstr "Fagilee"
 
@@ -185,19 +185,19 @@ msgstr "Kí ni láti ṣàfipamọ́"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files and database"
 msgstr "Àwọn fáìlì àti ibi-ìpamo-dátà"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Database only"
 msgstr "Ibùdó dátà nìkan"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files only"
 msgstr "Awọn faili nikan"
 
@@ -246,238 +246,276 @@ msgstr "Afẹyinti"
 msgid "Restore / import"
 msgstr "Múpadàbọ̀sípò / kawọlé"
 
-#: includes/class-admin.php:351
+#. translators: %s: number of files.
+#: includes/class-admin.php:357
+#, php-format
+msgid "%s file left out"
+msgid_plural "%s files left out"
+msgstr[0] "A yọ faili %s kuro"
+
+#: includes/class-admin.php:361
+msgid "These files could not be read, so they are not in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr "A kò le ka àwọn fáìlì wọ̀nyí, nítorí náà wọn kò sí nínú àwọn ẹ̀dà afipamọ́ yìí. Ní gbogbogbò, àwọn àṣẹ wọn ń dènà WordPress láti kà wọ́n, tàbí a ti pa wọ́n rẹ́ nígbà tí àtìlẹyìn ń lọ lọ́wọ́. Béèrè lọ́wọ́ olùgbàlejò rẹ (tàbí lo olùṣàkóso fáìlì rẹ) láti jẹ́ kí wọ́n ṣeé kà nípasẹ̀ olupin wẹ́ẹ̀bù, lẹ́yìn náà ṣe àtìlẹyìn lẹ́ẹ̀kan síi."
+
+#. translators: %s: number of further files not listed.
+#: includes/class-admin.php:373
+#, php-format
+msgid "And %s more file."
+msgid_plural "And %s more files."
+msgstr[0] "Ati faili %s sii."
+
+#: includes/class-admin.php:392
 msgid "Running"
 msgstr "Ó ń ṣiṣẹ́"
 
-#: includes/class-admin.php:363
+#: includes/class-admin.php:404
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "Ibùdó ìpamọ́ rẹ"
 
-#: includes/class-admin.php:365
+#: includes/class-admin.php:406
 msgid "No storage yet. Choose where your backups go below."
 msgstr "Kò sí ibi ipamọ́ síbẹ̀. Yan ibi tí àwọn àfipamọ́ rẹ yóò lọ ní ìsàlẹ̀."
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Ready"
 msgstr "Ṣetan"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Not connected"
 msgstr "A kò sopọ̀"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:417
 msgid "Connect"
 msgstr "So pọ̀"
 
-#: includes/class-admin.php:377
+#: includes/class-admin.php:418
 msgid "Test"
 msgstr "Idanwo"
 
-#: includes/class-admin.php:378
+#: includes/class-admin.php:419
 msgid "Edit"
 msgstr "Ṣatunkọ"
 
-#: includes/class-admin.php:379
+#: includes/class-admin.php:420
 msgid "Remove"
 msgstr "Yọ kúrò"
 
-#: includes/class-admin.php:385
+#: includes/class-admin.php:426
 msgid "Add storage"
 msgstr "Fi ibi-ipamọ kun"
 
-#: includes/class-admin.php:389
+#: includes/class-admin.php:430
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "Awọn afẹyinti lọ si ibi ipamọ kan. Lati lo eyi ti o yatọ, ṣatunkọ tabi yọ eyi ti o wa loke kuro."
 
-#: includes/class-admin.php:400
+#: includes/class-admin.php:441
 msgid "Kind of storage"
 msgstr "Iru ibi ipamọ"
 
-#: includes/class-admin.php:405
+#: includes/class-admin.php:446
 msgid "Name (for you)"
 msgstr "Orukọ (fun ọ)"
 
-#: includes/class-admin.php:407
+#: includes/class-admin.php:448
 msgid "Provider"
 msgstr "Olùpèsè"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:453
 msgid "Cloudflare account id"
 msgstr "ID àkọọ́lẹ̀ Cloudflare"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:454
 msgid "Endpoint address"
 msgstr "Àdírẹ́ẹ̀sì ojú-ọ̀nà"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:455
 msgid "Region"
 msgstr "Agbègbè"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:456
 msgid "Bucket"
 msgstr "Koto"
 
-#: includes/class-admin.php:416
+#: includes/class-admin.php:457
 msgid "Access key id"
 msgstr "ID kọ́kọ́rọ́ iwọle"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Secret access key"
 msgstr "Kókó àwọlé àsírí"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Leave empty to keep the saved key"
 msgstr "Fi sílẹ̀ ní òfo láti tọ́jú kọ́kọ́rọ́ tí a ti fipamọ́"
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:459
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "Fún Cloudflare R2: nínú dashboard Cloudflare ṣí R2, dá bucket kan sílẹ̀, lẹ́yìn náà “Manage R2 API tokens” → dá token kan pẹ̀lú Object Read & Write fún bucket yẹn, kí o sì da access key id àti secret kọ síbí."
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:462
 msgid "Dropbox app key"
 msgstr "Kọ́kọ́rọ́ àwọn ohun èlò Dropbox"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:463
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "Ṣẹda ohun-elo kan ni dropbox.com/developers/apps (Scoped access, App folder) pẹlu awọn aṣẹ files.content.read, files.content.write ati files.metadata.read, ki o si daakọ App key rẹ si ibi. Fi pamọ́, lẹhinna tẹ Connect."
 
-#: includes/class-admin.php:424
+#: includes/class-admin.php:465
 msgid "OAuth client id"
 msgstr "ID alabara OAuth"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "OAuth client secret"
 msgstr "Aṣiri onibara OAuth"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "Leave empty to keep the saved secret"
 msgstr "Fi silẹ ni ofifo lati tọju aṣiri ti a fipamọ"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "Ní Google Cloud Console, mu Google Drive API ṣiṣẹ́, lẹ́yìn náà ṣẹ̀dá oníbàárà OAuth kan tí irú rẹ̀ jẹ́ “Web application” pẹ̀lú àdírẹ́sì yìí gẹ́gẹ́ bí URI àtúnṣe amọ̀nà tí a fún láṣẹ:"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "Fipamọ́, lẹ́yìn náà tẹ Sopọ̀. Àfikún náà nikan rí àwọn fáìlì tí ó dá sílẹ̀."
 
-#: includes/class-admin.php:428
+#: includes/class-admin.php:469
 msgid "Folder inside the storage (optional)"
 msgstr "Folda inu ibi ipamọ (aṣayan)"
 
-#: includes/class-admin.php:429
+#: includes/class-admin.php:470
 msgid "Save storage"
 msgstr "Fipamọ́ aaye ipamọ"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:480
 msgid "Import a backup from another plugin or host"
 msgstr "Gbe àwòkọ afẹ́yìntì wọle lati orí ohun-afikun tabi agbalejo miiran"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:481
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "Mú ojúlé wẹ́ẹ̀bù wọlé láti inú àfipamọ́ tí a ṣe nípasẹ̀ UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, tàbí àpótí zip/tar èyíkéyìí ti ojúlé wẹ́ẹ̀bù WordPress kan pẹ̀lú .sql dump rẹ̀. Àkóónú náà yóò lọ sínú wp-content àti pé ibi-ìpamọ́ dátà náà yóò rọ́pò ti ojúlé wẹ́ẹ̀bù yìí; a máa yí àwọn àdírẹ́sì padà sí ti ojúlé wẹ́ẹ̀bù yìí fúnra rẹ̀."
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Upload from your computer"
 msgstr "Gbejade lati kọmputa rẹ"
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "Yan gbogbo fáìlì àfipamọ́ náà lẹ́ẹ̀kan ṣoṣo (UpdraftPlus máa ń ṣe mélòó kan). Àwọn fáìlì ńlá ni a ń fi ránṣẹ́ ní àwọn ègé kéékèèké, nítorí náà ààlà ìrùsókè ti agbàlejò yín kò kan èyí."
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "Tabi lati awọn ọna asopọ (Google Drive, Dropbox tabi adirẹsi igbasilẹ eyikeyi)"
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "Ọ̀kọ̀ọ̀kan àjápọ̀ lórí ìlà kọ̀ọ̀kan. Fún Google Drive àti Dropbox, pín fáìlì náà pẹ̀lú “ẹnikẹ́ni tí ó ní àjápọ̀ náà” kí o sì lẹ àjápọ̀ yẹn; pa pípín náà lẹ́yìn náà lẹ́ẹ̀kan síi."
 
-#: includes/class-admin.php:445
+#: includes/class-admin.php:486
 msgid "Or a file already on this server"
 msgstr "Tabi faili ti o wa lori olupin yii tẹlẹ"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:453
+#: includes/class-admin.php:494
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "Gbe awọn àpò-ìwé sí %s nípasẹ̀ FTP tàbí olùṣàkóso fáìlì agbàlejò rẹ kí o sì tún ojú-ewé yìí gbé jáde."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Or a deploy code from another site"
 msgstr "Tabi koodu imuṣiṣẹ lati aaye miiran"
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "Ti aaye ayelujara miiran ba fun ọ ni koodu imuṣiṣẹ Zinn® Backups, lẹ mọ ibi lati da ẹda afẹyinti yẹn kọ si aaye yii laisi pinpin awọn kọkọrọ ibi-ipamọ rẹ. Koodu kan n ṣiṣẹ fun awọn wakati diẹ; ṣe itọju rẹ bi ọrọ igbaniwọle."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "Gbolohun ọrọ igbaniwọle (ti afẹyinti yẹn ba jẹ fifi ẹnukọ nikan)"
 
-#: includes/class-admin.php:459
-#: includes/class-admin.php:461
+#: includes/class-admin.php:500
+#: includes/class-admin.php:502
 msgid "Import"
 msgstr "Kó wọlé"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:501
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "Mo loye pe agbewọle rọpo akoonu aaye yii ati ibi ipamọ data. Lẹhin rẹ, wọle pẹlu akọọlẹ kan lati aaye ti a ko wọle."
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Moving to Zinn® hosting?"
 msgstr "Ṣe o n gbe lọ si gbigbalejo Zinn®?"
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "Zinn Digital® le gbe aaye rẹ fun ọ lati ibi ti o ti gbalejo rẹ tẹlẹ. Ti olupese iṣẹ alejo gbigba rẹ atijọ ko ba fun ọ ni iwọle si FTP, SSH tabi igbimọ iṣakoso, fi Zinn® Migrate sori aaye atijọ naa; o n ṣe ibi ipamọ kan ti o le gbe wọle si ibi tabi fi le Zinn® lọwọ."
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:514
 msgid "What goes into a backup"
 msgstr "Kini nkan ti o wa ninu afẹyinti"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:515
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "Pẹlu awọn faili ti WordPress funrararẹ (wp-admin, wp-includes). Nigbagbogbo ko nilo: A le tun fi WordPress sori ẹrọ nigbagbogbo."
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:516
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "Tun fi awọn folda tabi awọn faili wọnyi silẹ (ọkan fun ila kan, ni ibatan si folda WordPress)"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:517
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "A máa ń yọ kúrò nígbà gbogbo: àwọn káṣì, àyè àkókò ìgbàgbé fún ìmúdàgbàsókè, àti àwọn fódà àkójọpọ̀ ti àwọn àfikún àtìlẹ́yìn míràn fúnra wọn:"
 
-#: includes/class-admin.php:477
+#: includes/class-admin.php:518
 msgid "Size of each part (MB)"
 msgstr "Iwọn apakan kọọkan (MB)"
 
-#: includes/class-admin.php:478
+#: includes/class-admin.php:519
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "Tesiwaju lati ma se afẹyinti nigbati a ba pa afikun na"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:520
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "Paa ayafi ti o ba tan-an. N pa awọn afẹyinti, awọn imupadabọ ati awọn aṣẹ WP-CLI mọ lati ma ṣiṣẹ ti o ba jẹ pe a pa afikun yii, tabi ti ibi ipamọ data ti a mu pada ko ba ṣe atokọ rẹ mọ gẹgẹbi eyiti n ṣiṣẹ. Eyi fi olutẹwọle kekere kan si folda awọn afikun ti o gbọdọ lo."
 
-#: includes/class-admin.php:484
+#: includes/class-admin.php:525
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "Olùgbékalẹ̀ kò sí ní ààyè rẹ̀. Fi àwọn ètò pamọ́ láti dá a padà síbẹ̀."
 
-#: includes/class-admin.php:490
+#: includes/class-admin.php:531
 msgid "Save settings"
 msgstr "Fipamọ́ àwọn ètò"
 
-#: includes/class-archiver.php:52
+#: includes/class-archiver.php:59
 msgid "A backup part could not be opened for writing. Check that wp-content has free space."
 msgstr "A kò lè ṣí apá kan àwọn ẹ̀dà afipamọ́ láti kọ sí i. Ṣàyẹ̀wò pé wp-content ní ààyè tí ó ṣófo."
 
-#: includes/class-archiver.php:113
+#: includes/class-archiver.php:123
 msgid "A backup part could not be written. Check that wp-content has free space."
 msgstr "A kò le kọ apá kan àwọn ẹ̀dà-ipamọ́. Ṣàyẹ̀wò bóyá wp-content ní àyè ọ̀fẹ́."
+
+#. translators: %s: number of files.
+#: includes/class-archiver.php:161
+#, php-format
+msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
+msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr[0] "Kò le ka faili %s àti pé KÒ sí nínú àfẹ́yìntì yìí. Nígbà púpọ̀, àwọn àṣẹ rẹ̀ máa ń dí WordPress lọ́wọ́ láti kà á, tàbí wọ́n ti pa á rẹ́ nígbà tí àfẹ́yìntì náà ń lọ lọ́wọ́. Béèrè lọ́wọ́ agbàlejò rẹ (tàbí lo olùṣàkóso faili rẹ) láti jẹ́ kí olupin ayélujára le kà á, lẹ́yìn náà tún ṣe àfẹ́yìntì."
+
+#. translators: 1: comma-separated file paths, 2: number of further files not named.
+#: includes/class-archiver.php:176
+#, php-format
+msgid "Left out: %1$s (and %2$s more file)."
+msgid_plural "Left out: %1$s (and %2$s more files)."
+msgstr[0] "Foju fò: %1$s (ati faili %2$s siwaju sii)."
+
+#. translators: %s: comma-separated file paths.
+#: includes/class-archiver.php:182
+#, php-format
+msgid "Left out: %s."
+msgstr "A fi silẹ: %s."
 
 #: includes/class-backup-job.php:42
 msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
@@ -539,17 +577,24 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Àkójọ-ìpìlẹ̀ data: %1$d àwọn tábìlì, %2$s àwọn ìlà, %3$s titebi."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:473
+#: includes/class-backup-job.php:479
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Aṣẹ-afẹyinti ti pari: %1$s ti wa ni ipamọ si ibi %2$d."
 
-#: includes/class-backup-job.php:503
+#. translators: %s: number of files.
+#: includes/class-backup-job.php:486
+#, php-format
+msgid "%s file was left out because it could not be read; see Details."
+msgid_plural "%s files were left out because they could not be read; see Details."
+msgstr[0] "A fi faili %s silẹ nitori a ko le ka a; wo Awọn alaye."
+
+#: includes/class-backup-job.php:516
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Àwọn apá kan tí a ti gbé sára kò ṣeé yọ kúrò nínú ibi-ìpamọ́ rẹ; wọ́n wà nínú àpò àtìlẹ́yìn tí kò pé, a kì í sì í pèsè wọn fún ìmúbọ̀sípò láéláé."
 
-#: includes/class-backup-job.php:520
+#: includes/class-backup-job.php:533
 msgid "A storage destination was removed while the backup was running."
 msgstr "A yọ ibi ipamọ kuro lakoko ti afẹyinti n lọ lọwọ."
 

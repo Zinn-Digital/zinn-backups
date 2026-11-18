@@ -49,17 +49,17 @@ msgid "Working…"
 msgstr "ක්‍රියාත්මක වෙමින් පවතී…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:348
+#: includes/class-admin.php:389
 msgid "Finished"
 msgstr "අවසන් විය"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:349
+#: includes/class-admin.php:390
 msgid "Failed"
 msgstr "අසාර්ථක විය"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:350
+#: includes/class-admin.php:391
 msgid "Cancelled"
 msgstr "අවලංගු කරන ලදි"
 
@@ -185,19 +185,19 @@ msgstr "බැකප් කළ යුත්තේ මොනවාද"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files and database"
 msgstr "ගොනු සහ දත්ත සමුදාය"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Database only"
 msgstr "දත්ත සමුදාය පමණි"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files only"
 msgstr "ගොනු පමණි"
 
@@ -246,239 +246,281 @@ msgstr "උපස්ථය"
 msgid "Restore / import"
 msgstr "ප්‍රතිසාධනය / ආයාත කරන්න"
 
-#: includes/class-admin.php:351
+#. translators: %s: number of files.
+#: includes/class-admin.php:357
+#, php-format
+msgid "%s file left out"
+msgid_plural "%s files left out"
+msgstr[0] "%s ගොනුව මඟ හැරිණි"
+msgstr[1] "ගොනු %sක් ඉවත් කර ඇත"
+
+#: includes/class-admin.php:361
+msgid "These files could not be read, so they are not in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr "මෙම ගොනු කියවිය නොහැකි වූ බැවින් ඒවා මෙම උපස්ථයේ අඩංගු නොවේ. සාමාන්‍යයෙන් ඒවායේ අවසර මඟින් WordPress ඒවා කියවීම වළක්වයි, නැතහොත් උපස්ථය ක්‍රියාත්මක වන අතරතුර ඒවා මකා දමා ඇත. වෙබ් සේවාදායකයට ඒවා කියවිය හැකි වන පරිදි සකසන ලෙස ඔබේ සත්කාරකයාගෙන් ඉල්ලන්න (නැතහොත් ඔබේ ගොනු කළමනාකරු භාවිතා කරන්න), ඉන්පසු නැවත උපස්ථ කරන්න."
+
+#. translators: %s: number of further files not listed.
+#: includes/class-admin.php:373
+#, php-format
+msgid "And %s more file."
+msgid_plural "And %s more files."
+msgstr[0] "සහ තවත් ගොනු %s."
+msgstr[1] "සහ තවත් ගොනු %sක්."
+
+#: includes/class-admin.php:392
 msgid "Running"
 msgstr "ක්‍රියාත්මක වෙමින් පවතී"
 
-#: includes/class-admin.php:363
+#: includes/class-admin.php:404
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "ඔබගේ ආචයනය"
 msgstr[1] "ඔබගේ ගබඩා ගමනාන්ත"
 
-#: includes/class-admin.php:365
+#: includes/class-admin.php:406
 msgid "No storage yet. Choose where your backups go below."
 msgstr "තවමත් ආචයනයක් නැත. ඔබගේ උපස්ථ සුරැකිය යුතු ස්ථානය පහතින් තෝරන්න."
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Ready"
 msgstr "සූදානම්"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Not connected"
 msgstr "සම්බන්ධ වී නැත"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:417
 msgid "Connect"
 msgstr "සම්බන්ධ වන්න"
 
-#: includes/class-admin.php:377
+#: includes/class-admin.php:418
 msgid "Test"
 msgstr "පරීක්ෂාව"
 
-#: includes/class-admin.php:378
+#: includes/class-admin.php:419
 msgid "Edit"
 msgstr "සංස්කරණය කරන්න"
 
-#: includes/class-admin.php:379
+#: includes/class-admin.php:420
 msgid "Remove"
 msgstr "ඉවත් කරන්න"
 
-#: includes/class-admin.php:385
+#: includes/class-admin.php:426
 msgid "Add storage"
 msgstr "ආචයනය එක් කරන්න"
 
-#: includes/class-admin.php:389
+#: includes/class-admin.php:430
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "උපස්ථ එක් ගබඩා ගමනාන්තයකට යයි. වෙනත් එකක් භාවිතා කිරීමට, ඉහත ඇති එක සංස්කරණය කරන්න හෝ ඉවත් කරන්න."
 
-#: includes/class-admin.php:400
+#: includes/class-admin.php:441
 msgid "Kind of storage"
 msgstr "ගබඩා වර්ගය"
 
-#: includes/class-admin.php:405
+#: includes/class-admin.php:446
 msgid "Name (for you)"
 msgstr "නම (ඔබ සඳහා)"
 
-#: includes/class-admin.php:407
+#: includes/class-admin.php:448
 msgid "Provider"
 msgstr "සපයන්නා"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:453
 msgid "Cloudflare account id"
 msgstr "Cloudflare ගිණුම් හැඳුනුම්පත"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:454
 msgid "Endpoint address"
 msgstr "අන්ත ලක්ෂ්‍ය ලිපිනය"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:455
 msgid "Region"
 msgstr "කලාපය"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:456
 msgid "Bucket"
 msgstr "බකට්"
 
-#: includes/class-admin.php:416
+#: includes/class-admin.php:457
 msgid "Access key id"
 msgstr "ප්‍රවේශ යතුරු හැඳුනුම්පත"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Secret access key"
 msgstr "රහස්‍ය ප්‍රවේශ යතුර"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Leave empty to keep the saved key"
 msgstr "සුරකින ලද යතුර තබා ගැනීමට හිස්ව තබන්න"
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:459
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "Cloudflare R2 සඳහා: Cloudflare පාලක පුවරුවේ R2 විවෘත කරන්න, බකට් එකක් සාදන්න, පසුව “Manage R2 API tokens” → එම බකට් එක සඳහා Object Read & Write සහිත ටෝකනයක් සාදා, ප්‍රවේශ යතුරු හැඳුනුම්පත (access key id) සහ රහස්‍යය (secret) මෙහි පිටපත් කරන්න."
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:462
 msgid "Dropbox app key"
 msgstr "Dropbox යෙදුම් යතුර"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:463
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "dropbox.com/developers/apps (Scoped access, App folder) හි files.content.read, files.content.write සහ files.metadata.read අවසරයන් සහිතව යෙදුමක් සාදා, එහි App key මෙහි පිටපත් කරන්න. සුරකින්න, ඉන්පසු Connect ඔබන්න."
 
-#: includes/class-admin.php:424
+#: includes/class-admin.php:465
 msgid "OAuth client id"
 msgstr "OAuth සේවාලාභී හැඳුනුම්පත"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "OAuth client secret"
 msgstr "OAuth සේවාලාභී රහස"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "Leave empty to keep the saved secret"
 msgstr "සුරකින ලද රහස තබා ගැනීමට හිස්ව තබන්න"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "Google Cloud Console තුළ, Google Drive API සබල කරන්න, ඉන්පසු මෙම ලිපිනය බලයලත් යළි-යොමු කිරීමේ URI ලෙස යොදා ගනිමින් \"Web application\" වර්ගයේ OAuth සේවාලාභියෙකු සාදන්න:"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "සුරකින්න, ඉන්පසු සම්බන්ධ කරන්න ඔබන්න. ප්ලගිනයට පෙනෙන්නේ එය විසින් සාදන ලද ගොනු පමණි."
 
-#: includes/class-admin.php:428
+#: includes/class-admin.php:469
 msgid "Folder inside the storage (optional)"
 msgstr "ආචයනය තුළ ඇති ෆෝල්ඩරය (විකල්ප)"
 
-#: includes/class-admin.php:429
+#: includes/class-admin.php:470
 msgid "Save storage"
 msgstr "ආචයනය ඉතිරි කරන්න"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:480
 msgid "Import a backup from another plugin or host"
 msgstr "වෙනත් ප්ලගිනයකින් හෝ සත්කාරකයකින් උපස්ථයක් ආයාත කරන්න"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:481
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, හෝ එහි .sql ඩම්ප් එක සහිත WordPress අඩවියක ඕනෑම zip/tar සංරක්ෂිතයකින් සාදන ලද උපස්ථයකින් අඩවියක් රැගෙන එන්න. අන්තර්ගතය wp-content වෙත යන අතර දත්ත සමුදාය මෙම අඩවියේ දත්ත සමුදාය ප්‍රතිස්ථාපනය කරයි; ලිපින ස්වයංක්‍රීයව මෙම අඩවියේ ලිපිනවලට වෙනස් වේ."
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Upload from your computer"
 msgstr "ඔබගේ පරිගණකයෙන් උඩුගත කරන්න"
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "උපස්ථයේ සෑම ගොනුවක්ම එකවර තෝරන්න (UpdraftPlus ගොනු කිහිපයක් සාදයි). විශාල ගොනු කුඩා කොටස් වශයෙන් යවනු ලැබේ, එබැවින් ඔබේ සත්කාරකයේ උඩුගත කිරීමේ සීමාව අදාළ නොවේ."
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "හෝ සබැඳි වලින් (Google Drive, Dropbox හෝ ඕනෑම බාගැනීම් ලිපිනයක්)"
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "පේළියකට එක් සබැඳියක් බැගින්. Google Drive සහ Dropbox සඳහා, ගොනුව \"සබැඳිය ඇති ඕනෑම අයෙකු\" සමඟ බෙදාගෙන එම සබැඳිය අලවන්න; පසුව නැවත බෙදාගැනීම අක්‍රිය කරන්න."
 
-#: includes/class-admin.php:445
+#: includes/class-admin.php:486
 msgid "Or a file already on this server"
 msgstr "හෝ දැනටමත් මෙම සේවාදායකයේ ඇති ගොනුවක්"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:453
+#: includes/class-admin.php:494
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "FTP හෝ ඔබේ සත්කාරකයේ ගොනු කළමනාකරු මඟින් ලේඛනාගාර %s වෙත උඩුගත කර මෙම පිටුව නැවත පූරණය කරන්න."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Or a deploy code from another site"
 msgstr "හෝ වෙනත් අඩවියකින් යෙදවුම් කේතයක්"
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "වෙනත් වෙබ් අඩවියකින් ඔබට Zinn® Backups යෙදවුම් කේතයක් (deploy code) ලබා දුන්නේ නම්, එහි ගබඩා යතුරු බෙදා නොගෙන එම උපස්ථය මෙම අඩවියට පිටපත් කිරීමට එය මෙහි අලවන්න. කේතයක් ක්‍රියාත්මක වන්නේ පැය කිහිපයක් පමණි; එය මුරපදයක් ලෙස සලකන්න."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "මුරවැකිය (එම උපස්ථය සංකේතනය කර ඇත්නම් පමණි)"
 
-#: includes/class-admin.php:459
-#: includes/class-admin.php:461
+#: includes/class-admin.php:500
+#: includes/class-admin.php:502
 msgid "Import"
 msgstr "ආයාත කරන්න"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:501
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "ආයාත කිරීම මඟින් මෙම අඩවියේ අන්තර්ගතය සහ දත්ත සමුදාය ප්‍රතිස්ථාපනය කරන බව මට වැටහේ. ඉන්පසු, ආයාත කළ අඩවියේ ගිණුමකින් පුරනය වන්න."
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Moving to Zinn® hosting?"
 msgstr "Zinn® සත්කාරකත්වය වෙත මාරු වෙනවාද?"
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "Zinn Digital® හට ඔබගේ පැරණි සත්කාරකයෙන් ඔබගේ වෙබ් අඩවිය ඔබ වෙනුවෙන් ගෙන යා හැක. ඔබගේ පැරණි සත්කාරකයෙන් ඔබට FTP, SSH හෝ පාලක පුවරු ප්‍රවේශය ලබා නොදෙන්නේ නම්, පැරණි වෙබ් අඩවියේ Zinn® Migrate ස්ථාපනය කරන්න; එය ඔබට මෙහි ආයාත කිරීමට හෝ Zinn® වෙත භාර දීමට හැකි එක් සංරක්ෂිතයක් සාදයි."
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:514
 msgid "What goes into a backup"
 msgstr "උපස්ථයකට ඇතුළත් වන්නේ මොනවාද"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:515
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "WordPress හිම ගොනු (wp-admin, wp-includes) ඇතුළත් කරන්න. සාමාන්‍යයෙන් අවශ්‍ය නොවේ: WordPress සැමවිටම නැවත ස්ථාපනය කළ හැක."
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:516
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "මෙම ෆෝල්ඩර හෝ ගොනු ද බැහැර කරන්න (පේළියකට එකක්, WordPress ෆෝල්ඩරයට සාපේක්ෂව)"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:517
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "සෑම විටම බැහැර කරනු ලැබේ: හැඹිලි, යාවත්කාලීන තාවකාලික ඉඩ, සහ අනෙකුත් උපස්ථ ප්ලගීනවලම සංරක්ෂිත ෆෝල්ඩර:"
 
-#: includes/class-admin.php:477
+#: includes/class-admin.php:518
 msgid "Size of each part (MB)"
 msgstr "එක් එක් කොටසේ ප්‍රමාණය (MB)"
 
-#: includes/class-admin.php:478
+#: includes/class-admin.php:519
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "ප්ලගිනය ක්‍රියාවිරහිත කර ඇති විටද උපස්ථ ධාවනය වෙමින් පවතින්න"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:520
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "ඔබ එය සක්‍රිය කරන තුරු ක්‍රියා විරහිතයි. මෙම ප්ලගිනය ක්‍රියා විරහිත කර ඇත්නම්, හෝ ප්‍රතිසාධනය කළ දත්ත සමුදායක් තවදුරටත් එය සක්‍රිය ලෙස ලැයිස්තුගත නොකරන්නේ නම්, උපස්ථ, ප්‍රතිසාධන සහ WP-CLI විධානයන් අඛණ්ඩව ක්‍රියාත්මක කර තබයි. මෙයින් අත්‍යවශ්‍ය (must-use) ප්ලගීන ෆෝල්ඩරය තුළ කුඩා ලෝඩරයක් තැන්පත් කෙරේ."
 
-#: includes/class-admin.php:484
+#: includes/class-admin.php:525
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "පූරකය නියමිත ස්ථානයේ නොමැත. එය නැවත සැකසීමට සැකසීම් සුරකින්න."
 
-#: includes/class-admin.php:490
+#: includes/class-admin.php:531
 msgid "Save settings"
 msgstr "සැකසුම් සුරකින්න"
 
-#: includes/class-archiver.php:52
+#: includes/class-archiver.php:59
 msgid "A backup part could not be opened for writing. Check that wp-content has free space."
 msgstr "ලිවීම සඳහා උපස්ථ කොටසක් විවෘත කිරීමට නොහැකි විය. wp-content හි නිදහස් ඉඩක් ඇත්දැයි පරීක්ෂා කරන්න."
 
-#: includes/class-archiver.php:113
+#: includes/class-archiver.php:123
 msgid "A backup part could not be written. Check that wp-content has free space."
 msgstr "උපස්ථ කොටසක් ලිවීමට නොහැකි විය. wp-content හි හිස් ඉඩක් ඇත්දැයි පරීක්ෂා කරන්න."
+
+#. translators: %s: number of files.
+#: includes/class-archiver.php:161
+#, php-format
+msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
+msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr[0] "%s ගොනුව කියවීමට නොහැකි වූ අතර එය මෙම උපස්ථයේ අඩංගු නොවේ. සාමාන්‍යයෙන් එහි අවසර සැකසුම් මඟින් WordPress වෙත එය කියවීම වළක්වයි, නැතහොත් උපස්ථය ක්‍රියාත්මක වන අතරතුර එය මැකී ගොස් ඇත. එය වෙබ් සේවාදායකයට කියවිය හැකි වන පරිදි සකසන ලෙස ඔබේ සත්කාරකයෙන් (host) ඉල්ලන්න (නැතහොත් ඔබේ ගොනු කළමනාකරු භාවිතා කරන්න), ඉන්පසු නැවත උපස්ථ කරන්න."
+msgstr[1] "ගොනු %sක් කියවීමට නොහැකි වූ අතර මෙම උපස්ථයේ ඇතුළත් නොවේ. සාමාන්‍යයෙන් ඒවායේ අවසර මඟින් WordPress වෙත ඒවා කියවීම වළක්වයි, නැතහොත් උපස්ථය ක්‍රියාත්මක වන අතරතුර ඒවා මකා දමා ඇත. ඒවා වෙබ් සේවාදායකයට කියවිය හැකි පරිදි සකසන ලෙස ඔබේ සත්කාරකයෙන් ඉල්ලා සිටින්න (හෝ ඔබේ ගොනු කළමනාකරු භාවිතා කරන්න), පසුව නැවත උපස්ථ කරන්න."
+
+#. translators: 1: comma-separated file paths, 2: number of further files not named.
+#: includes/class-archiver.php:176
+#, php-format
+msgid "Left out: %1$s (and %2$s more file)."
+msgid_plural "Left out: %1$s (and %2$s more files)."
+msgstr[0] "හැර දැමූ: %1$s (සහ තවත් ගොනු %2$s)."
+msgstr[1] "හැර දැමූ: %1$s (සහ තවත් ගොනු %2$sක්)."
+
+#. translators: %s: comma-separated file paths.
+#: includes/class-archiver.php:182
+#, php-format
+msgid "Left out: %s."
+msgstr "හැර දමන ලදි: %s."
 
 #: includes/class-backup-job.php:42
 msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
@@ -540,18 +582,26 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "දත්ත සමුදාය: වගු %1$d, පේළි %2$s, %3$s සම්පීඩිතයි."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:473
+#: includes/class-backup-job.php:479
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "උපස්ථය සම්පූර්ණයි: %1$s ගමනාන්ත %2$d ක ගබඩා කර ඇත."
 msgstr[1] "උපස්ථය සම්පූර්ණයි: %1$s ගමනාන්ත %2$d ක ගබඩා කර ඇත."
 
-#: includes/class-backup-job.php:503
+#. translators: %s: number of files.
+#: includes/class-backup-job.php:486
+#, php-format
+msgid "%s file was left out because it could not be read; see Details."
+msgid_plural "%s files were left out because they could not be read; see Details."
+msgstr[0] "කියවීමට නොහැකි වූ නිසා %s ගොනුව ඉවත් කරන ලදී; විස්තර බලන්න."
+msgstr[1] "කියවීමට නොහැකි වූ බැවින් ගොනු %sක් ඉවත් කරන ලදී; විස්තර බලන්න."
+
+#: includes/class-backup-job.php:516
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "දැනටමත් උඩුගත කර ඇති සමහර කොටස් ඔබගේ ආචයනයෙන් ඉවත් කිරීමට නොහැකි විය; ඒවා අසම්පූර්ණ උපස්ථ ෆෝල්ඩරයක ඇති අතර ප්‍රතිසාධනය සඳහා කිසි විටෙකත් ඉදිරිපත් නොකෙරේ."
 
-#: includes/class-backup-job.php:520
+#: includes/class-backup-job.php:533
 msgid "A storage destination was removed while the backup was running."
 msgstr "උපස්ථය ක්‍රියාත්මක වන අතරතුර ගබඩා ගමනාන්තයක් ඉවත් කරන ලදී."
 

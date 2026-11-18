@@ -460,21 +460,34 @@ final class Backup_Job extends Job {
 	private function complete(): void {
 		$manifest              = (array) $this->state['manifest'];
 		$size                  = (int) ( $manifest['database']['size'] ?? 0 ) + array_sum( array_map( static fn( $p ): int => (int) $p['size'], (array) $manifest['parts'] ) );
+		$skipped               = (int) ( $this->state['arc']['skipped'] ?? 0 );
+		$named                 = array_slice( array_map( 'strval', (array) ( $this->state['arc']['skipped_files'] ?? array() ) ), 0, Archiver::SKIPPED_NAMED );
 		$this->state['result'] = array(
-			'backup' => $this->id(),
-			'remote' => $this->state['remote'],
-			'size'   => $size,
-			'type'   => $manifest['type'],
+			'backup'        => $this->id(),
+			'remote'        => $this->state['remote'],
+			'size'          => $size,
+			'type'          => $manifest['type'],
+			'skipped'       => $skipped,
+			'skipped_files' => $named,
 		);
 		Work_Dir::remove_job( $this->id() );
-		$this->finish(
-			sprintf(
-				/* translators: 1: size of the backup, 2: number of destinations. */
-				_n( 'Backup complete: %1$s stored in %2$d destination.', 'Backup complete: %1$s stored in %2$d destinations.', count( (array) $this->state['destinations'] ), 'zinn-backups' ),
-				size_format( $size ),
-				count( (array) $this->state['destinations'] )
-			)
+		foreach ( Archiver::skipped_report( $skipped, $named ) as $line ) {
+			$this->log( $line, 'warning' );
+		}
+		$message = sprintf(
+			/* translators: 1: size of the backup, 2: number of destinations. */
+			_n( 'Backup complete: %1$s stored in %2$d destination.', 'Backup complete: %1$s stored in %2$d destinations.', count( (array) $this->state['destinations'] ), 'zinn-backups' ),
+			size_format( $size ),
+			count( (array) $this->state['destinations'] )
 		);
+		if ( $skipped > 0 ) {
+			$message .= ' ' . sprintf(
+				/* translators: %s: number of files. */
+				_n( '%s file was left out because it could not be read; see Details.', '%s files were left out because they could not be read; see Details.', $skipped, 'zinn-backups' ),
+				number_format_i18n( $skipped )
+			);
+		}
+		$this->finish( $message );
 		/**
 		 * Fires when a backup is safely stored. Zinn® Backups Pro applies retention here.
 		 *

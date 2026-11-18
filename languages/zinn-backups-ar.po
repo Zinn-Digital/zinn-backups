@@ -49,17 +49,17 @@ msgid "Working…"
 msgstr "جارٍ العمل…"
 
 #: includes/class-admin.php:111
-#: includes/class-admin.php:348
+#: includes/class-admin.php:389
 msgid "Finished"
 msgstr "مكتمل"
 
 #: includes/class-admin.php:112
-#: includes/class-admin.php:349
+#: includes/class-admin.php:390
 msgid "Failed"
 msgstr "فشل"
 
 #: includes/class-admin.php:113
-#: includes/class-admin.php:350
+#: includes/class-admin.php:391
 msgid "Cancelled"
 msgstr "ملغي"
 
@@ -185,19 +185,19 @@ msgstr "ما الذي ترغب في نسخه احتياطيًا"
 
 #: includes/class-admin.php:297
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files and database"
 msgstr "الملفات وقاعدة البيانات"
 
 #: includes/class-admin.php:298
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Database only"
 msgstr "قاعدة البيانات فقط"
 
 #: includes/class-admin.php:299
 #: includes/class-admin.php:313
-#: includes/class-admin.php:459
+#: includes/class-admin.php:500
 msgid "Files only"
 msgstr "الملفات فقط"
 
@@ -246,11 +246,39 @@ msgstr "نسخ احتياطي"
 msgid "Restore / import"
 msgstr "استعادة / استيراد"
 
-#: includes/class-admin.php:351
+#. translators: %s: number of files.
+#: includes/class-admin.php:357
+#, php-format
+msgid "%s file left out"
+msgid_plural "%s files left out"
+msgstr[0] "تم استبعاد %s من الملفات"
+msgstr[1] "تم استبعاد %s ملف"
+msgstr[2] "تم استبعاد %s من الملفات"
+msgstr[3] "تم استبعاد %s من الملفات"
+msgstr[4] "تم استبعاد %s من الملفات"
+msgstr[5] "تم استبعاد %s من الملفات"
+
+#: includes/class-admin.php:361
+msgid "These files could not be read, so they are not in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr "تعذر قراءة هذه الملفات، لذا فهي غير موجودة في هذه النسخة الاحتياطية. عادةً ما تمنع أذوناتها WordPress من قراءتها، أو تم حذفها أثناء تشغيل النسخ الاحتياطي. اطلب من مستضيفك (أو استخدم مدير الملفات لديك) جعلها قابلة للقراءة بواسطة خادم الويب، ثم قم بالنسخ الاحتياطي مرة أخرى."
+
+#. translators: %s: number of further files not listed.
+#: includes/class-admin.php:373
+#, php-format
+msgid "And %s more file."
+msgid_plural "And %s more files."
+msgstr[0] "و%s من الملفات الإضافية."
+msgstr[1] "و%s ملف إضافي."
+msgstr[2] "و%s من الملفات الإضافية."
+msgstr[3] "و%s من الملفات الإضافية."
+msgstr[4] "و%s من الملفات الإضافية."
+msgstr[5] "و%s من الملفات الإضافية."
+
+#: includes/class-admin.php:392
 msgid "Running"
 msgstr "قيد التشغيل"
 
-#: includes/class-admin.php:363
+#: includes/class-admin.php:404
 msgid "Your storage"
 msgid_plural "Your storage destinations"
 msgstr[0] "وجهات التخزين الخاصة بك"
@@ -260,229 +288,259 @@ msgstr[3] "وجهات التخزين الخاصة بك"
 msgstr[4] "وجهات التخزين الخاصة بك"
 msgstr[5] "وجهات التخزين الخاصة بك"
 
-#: includes/class-admin.php:365
+#: includes/class-admin.php:406
 msgid "No storage yet. Choose where your backups go below."
 msgstr "لا توجد مساحة تخزين بعد. اختر أدناه المكان الذي تذهب إليه نسخك الاحتياطية."
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Ready"
 msgstr "جاهز"
 
-#: includes/class-admin.php:375
+#: includes/class-admin.php:416
 msgid "Not connected"
 msgstr "غير متصل"
 
-#: includes/class-admin.php:376
+#: includes/class-admin.php:417
 msgid "Connect"
 msgstr "اتصال"
 
-#: includes/class-admin.php:377
+#: includes/class-admin.php:418
 msgid "Test"
 msgstr "اختبار"
 
-#: includes/class-admin.php:378
+#: includes/class-admin.php:419
 msgid "Edit"
 msgstr "تحرير"
 
-#: includes/class-admin.php:379
+#: includes/class-admin.php:420
 msgid "Remove"
 msgstr "إزالة"
 
-#: includes/class-admin.php:385
+#: includes/class-admin.php:426
 msgid "Add storage"
 msgstr "إضافة مساحة تخزين"
 
-#: includes/class-admin.php:389
+#: includes/class-admin.php:430
 msgid "Backups go to one storage destination. To use a different one, edit or remove the one above."
 msgstr "تنتقل النسخ الاحتياطية إلى وجهة تخزين واحدة. لاستخدام وجهة مختلفة، يرجى تعديل الوجهة المذكورة أعلاه أو إزالتها."
 
-#: includes/class-admin.php:400
+#: includes/class-admin.php:441
 msgid "Kind of storage"
 msgstr "نوع التخزين"
 
-#: includes/class-admin.php:405
+#: includes/class-admin.php:446
 msgid "Name (for you)"
 msgstr "الاسم (لك)"
 
-#: includes/class-admin.php:407
+#: includes/class-admin.php:448
 msgid "Provider"
 msgstr "المزود"
 
-#: includes/class-admin.php:412
+#: includes/class-admin.php:453
 msgid "Cloudflare account id"
 msgstr "معرّف حساب Cloudflare"
 
-#: includes/class-admin.php:413
+#: includes/class-admin.php:454
 msgid "Endpoint address"
 msgstr "عنوان نقطة النهاية"
 
-#: includes/class-admin.php:414
+#: includes/class-admin.php:455
 msgid "Region"
 msgstr "المنطقة"
 
-#: includes/class-admin.php:415
+#: includes/class-admin.php:456
 msgid "Bucket"
 msgstr "حاوية"
 
-#: includes/class-admin.php:416
+#: includes/class-admin.php:457
 msgid "Access key id"
 msgstr "معرّف مفتاح الوصول"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Secret access key"
 msgstr "مفتاح الوصول السري"
 
-#: includes/class-admin.php:417
+#: includes/class-admin.php:458
 msgid "Leave empty to keep the saved key"
 msgstr "اتركه فارغًا للاحتفاظ بالمفتاح المحفوظ"
 
-#: includes/class-admin.php:418
+#: includes/class-admin.php:459
 msgid "For Cloudflare R2: in the Cloudflare dashboard open R2, create a bucket, then “Manage R2 API tokens” → create a token with Object Read & Write for that bucket, and copy the access key id and secret here."
 msgstr "بالنسبة إلى Cloudflare R2: في لوحة تحكم Cloudflare، افتح R2، وأنشئ مستودعًا (bucket)، ثم انتقل إلى \"Manage R2 API tokens\" ← أنشئ رمزًا مميزًا بصلاحية Object Read & Write لذلك المستودع، وانسخ access key id وsecret هنا."
 
-#: includes/class-admin.php:421
+#: includes/class-admin.php:462
 msgid "Dropbox app key"
 msgstr "مفتاح تطبيق Dropbox"
 
-#: includes/class-admin.php:422
+#: includes/class-admin.php:463
 msgid "Create an app at dropbox.com/developers/apps (Scoped access, App folder) with the files.content.read, files.content.write and files.metadata.read permissions, and copy its App key here. Save, then press Connect."
 msgstr "أنشئ تطبيقًا على dropbox.com/developers/apps (وصول محدد النطاق Scoped access، مجلد التطبيق App folder) مع أذونات files.content.read وfiles.content.write وfiles.metadata.read، وانسخ App key الخاص به هنا. احفظ، ثم اضغط على Connect."
 
-#: includes/class-admin.php:424
+#: includes/class-admin.php:465
 msgid "OAuth client id"
 msgstr "معرّف عميل OAuth"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "OAuth client secret"
 msgstr "سر عميل OAuth"
 
-#: includes/class-admin.php:425
+#: includes/class-admin.php:466
 msgid "Leave empty to keep the saved secret"
 msgstr "اتركه فارغًا للاحتفاظ بالسر المحفوظ"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "In Google Cloud Console, enable the Google Drive API, then create an OAuth client of type “Web application” with this address as an authorised redirect URI:"
 msgstr "في Google Cloud Console، فعّل Google Drive API، ثم أنشئ عميل OAuth من نوع \"Web application\" باستخدام هذا العنوان كمعرّف URI معتمد لإعادة التوجيه:"
 
-#: includes/class-admin.php:426
+#: includes/class-admin.php:467
 msgid "Save, then press Connect. The plugin only sees the files it creates."
 msgstr "احفظ، ثم اضغط على \"اتصال\". لا يرى المكون الإضافي إلا الملفات التي ينشئها."
 
-#: includes/class-admin.php:428
+#: includes/class-admin.php:469
 msgid "Folder inside the storage (optional)"
 msgstr "المجلد داخل مساحة التخزين (اختياري)"
 
-#: includes/class-admin.php:429
+#: includes/class-admin.php:470
 msgid "Save storage"
 msgstr "توفير مساحة التخزين"
 
-#: includes/class-admin.php:439
+#: includes/class-admin.php:480
 msgid "Import a backup from another plugin or host"
 msgstr "استيراد نسخة احتياطية من إضافة أو استضافة أخرى"
 
-#: includes/class-admin.php:440
+#: includes/class-admin.php:481
 msgid "Bring a site in from a backup made by UpdraftPlus, All-in-One WP Migration (.wpress), Duplicator (zip), BackWPup, WPvivid, Jetpack VaultPress Backup, BlogVault, Zinn® Migrate, or any zip/tar archive of a WordPress site with its .sql dump. The content goes into wp-content and the database replaces this site’s; addresses are changed to this site’s automatically."
 msgstr "قم باستيراد موقع من نسخة احتياطية تم إنشاؤها بواسطة UpdraftPlus أو All-in-One WP Migration (.wpress) أو Duplicator (zip) أو BackWPup أو WPvivid أو Jetpack VaultPress Backup أو BlogVault أو Zinn® Migrate أو أي أرشيف zip/tar لموقع WordPress يحتوي على تفريغ .sql الخاص به. ينتقل المحتوى إلى wp-content وتحل قاعدة البيانات محل قاعدة بيانات هذا الموقع؛ وتتغير العناوين إلى عناوين هذا الموقع تلقائيًا."
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Upload from your computer"
 msgstr "الرفع من جهاز الكمبيوتر الخاص بك"
 
-#: includes/class-admin.php:442
+#: includes/class-admin.php:483
 msgid "Choose every file of the backup at once (UpdraftPlus makes several). Large files are sent in small pieces, so your host’s upload limit does not apply."
 msgstr "اختر كل ملف من ملفات النسخة الاحتياطية في آنٍ واحد (ينشئ UpdraftPlus عدة ملفات). يتم إرسال الملفات الكبيرة في أجزاء صغيرة، لذلك لا ينطبق حد الرفع الخاص بمستضيفك."
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "Or from links (Google Drive, Dropbox or any download address)"
 msgstr "أو من روابط (Google Drive أو Dropbox أو أي عنوان تنزيل)"
 
-#: includes/class-admin.php:443
+#: includes/class-admin.php:484
 msgid "One link per line. For Google Drive and Dropbox, share the file with “anyone with the link” and paste that link; turn sharing off again afterwards."
 msgstr "رابط واحد في كل سطر. بالنسبة إلى Google Drive وDropbox، شارك الملف مع \"أي شخص لديه الرابط\" والصق ذلك الرابط؛ وأوقف تشغيل المشاركة مرة أخرى بعد ذلك."
 
-#: includes/class-admin.php:445
+#: includes/class-admin.php:486
 msgid "Or a file already on this server"
 msgstr "أو ملف موجود بالفعل على هذا الخادم"
 
 #. translators: %s: folder path.
-#: includes/class-admin.php:453
+#: includes/class-admin.php:494
 #, php-format
 msgid "Upload archives by FTP or your host’s file manager into %s and reload this page."
 msgstr "ارفع الأرشيفات عبر FTP أو مدير ملفات الاستضافة إلى %s وأعد تحميل هذه الصفحة."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Or a deploy code from another site"
 msgstr "أو رمز نشر من موقع آخر"
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "If another site gave you a Zinn® Backups deploy code, paste it here to copy that backup onto this site without sharing its storage keys. A code works for a few hours; treat it like a password."
 msgstr "إذا منحك موقع آخر رمز نشر من Zinn® Backups، فقم بلصقه هنا لنسخ تلك النسخة الاحتياطية إلى هذا الموقع دون مشاركة مفاتيح التخزين الخاصة بها. يعمل الرمز لبضع ساعات؛ تعامل معه ككلمة مرور."
 
-#: includes/class-admin.php:458
+#: includes/class-admin.php:499
 msgid "Passphrase (only if that backup is encrypted)"
 msgstr "عبارة المرور (فقط إذا كانت هذه النسخة الاحتياطية مشفرة)"
 
-#: includes/class-admin.php:459
-#: includes/class-admin.php:461
+#: includes/class-admin.php:500
+#: includes/class-admin.php:502
 msgid "Import"
 msgstr "استيراد"
 
-#: includes/class-admin.php:460
+#: includes/class-admin.php:501
 msgid "I understand the import replaces this site’s content and database. After it, sign in with an account from the imported site."
 msgstr "أفهم أن الاستيراد يستبدل محتوى هذا الموقع وقاعدة بياناته. بعد ذلك، قم بتسجيل الدخول باستخدام حساب من الموقع المستورد."
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Moving to Zinn® hosting?"
 msgstr "هل تنتقل إلى استضافة Zinn®؟"
 
-#: includes/class-admin.php:463
+#: includes/class-admin.php:504
 msgid "Zinn Digital® can move your site for you from your old host. If your old host gives you no FTP, SSH or control-panel access, install Zinn® Migrate on the old site; it makes one archive you can import here or hand to Zinn®."
 msgstr "يمكن لـ Zinn Digital® نقل موقعك نيابةً عنك من مضيفك القديم. إذا كان مضيفك القديم لا يوفر لك وصولاً عبر FTP أو SSH أو لوحة التحكم، فقم بتثبيت Zinn® Migrate على الموقع القديم؛ حيث ينشئ أرشيفًا واحدًا يمكنك استيراده هنا أو تسليمه إلى Zinn®."
 
-#: includes/class-admin.php:473
+#: includes/class-admin.php:514
 msgid "What goes into a backup"
 msgstr "ما الذي تتضمنه النسخة الاحتياطية"
 
-#: includes/class-admin.php:474
+#: includes/class-admin.php:515
 msgid "Include WordPress’s own files (wp-admin, wp-includes). Usually not needed: WordPress can always be reinstalled."
 msgstr "تضمين ملفات WordPress الخاصة (wp-admin، wp-includes). غير مطلوب عادةً: يمكن دائمًا إعادة تثبيت WordPress."
 
-#: includes/class-admin.php:475
+#: includes/class-admin.php:516
 msgid "Also leave out these folders or files (one per line, relative to the WordPress folder)"
 msgstr "استبعد أيضًا هذه المجلدات أو الملفات (واحد في كل سطر، نسبيًا لمجلد WordPress)"
 
-#: includes/class-admin.php:476
+#: includes/class-admin.php:517
 msgid "Always left out: caches, update scratch space, and other backup plugins’ own archive folders:"
 msgstr "تُستثنى دائمًا: ذاكرات التخزين المؤقت، ومساحة التحديث المؤقتة، ومجلدات الأرشيف الخاصة بإضافات النسخ الاحتياطي الأخرى:"
 
-#: includes/class-admin.php:477
+#: includes/class-admin.php:518
 msgid "Size of each part (MB)"
 msgstr "حجم كل جزء (ميجابايت)"
 
-#: includes/class-admin.php:478
+#: includes/class-admin.php:519
 #: includes/class-plugin.php:116
 msgid "Keep backups running when the plugin is switched off"
 msgstr "الاستمرار في تشغيل النسخ الاحتياطي عند إيقاف تشغيل الإضافة"
 
-#: includes/class-admin.php:479
+#: includes/class-admin.php:520
 msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
 msgstr "معطل ما لم تقم بتشغيله. يحافظ على استمرار تشغيل النسخ الاحتياطية وعمليات الاستعادة وأوامر WP-CLI في حال تم إيقاف هذا الملحق، أو إذا كانت قاعدة البيانات المستعادة لم تعد تدرجه كملحق نشط. يؤدي هذا إلى وضع أداة تحميل صغيرة في مجلد الإضافات التي يجب استخدامها (must-use plugins)."
 
-#: includes/class-admin.php:484
+#: includes/class-admin.php:525
 msgid "The loader is not in place. Save the settings to put it back."
 msgstr "المحمّل ليس في مكانه. احفظ الإعدادات لإعادته."
 
-#: includes/class-admin.php:490
+#: includes/class-admin.php:531
 msgid "Save settings"
 msgstr "حفظ الإعدادات"
 
-#: includes/class-archiver.php:52
+#: includes/class-archiver.php:59
 msgid "A backup part could not be opened for writing. Check that wp-content has free space."
 msgstr "تعذر فتح جزء من النسخة الاحتياطية للكتابة. تحقق من وجود مساحة فارغة في wp-content."
 
-#: includes/class-archiver.php:113
+#: includes/class-archiver.php:123
 msgid "A backup part could not be written. Check that wp-content has free space."
 msgstr "تعذر كتابة جزء من النسخة الاحتياطية. تحقق من وجود مساحة فارغة في wp-content."
+
+#. translators: %s: number of files.
+#: includes/class-archiver.php:161
+#, php-format
+msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
+msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
+msgstr[0] "تعذر قراءة %s من الملفات وليست موجودة في هذه النسخة الاحتياطية. عادةً ما تمنع أذوناتها WordPress من قراءتها، أو تم حذفها أثناء تشغيل النسخ الاحتياطي. اطلب من مستضيفك (أو استخدم مدير الملفات لديك) جعلها قابلة للقراءة بواسطة خادم الويب، ثم قم بإجراء النسخ الاحتياطي مرة أخرى."
+msgstr[1] "تعذر قراءة الملف %s وهو غير موجود في هذه النسخة الاحتياطية. عادةً ما تمنع أذوناته WordPress من قراءته، أو تم حذفه أثناء تشغيل النسخ الاحتياطي. اطلب من المستضيف الخاص بك (أو استخدم مدير الملفات) جعله قابلاً للقراءة بواسطة خادم الويب، ثم قم بالنسخ الاحتياطي مرة أخرى."
+msgstr[2] "تعذر قراءة %s من الملفات وليست موجودة في هذه النسخة الاحتياطية. عادةً ما تمنع أذوناتها WordPress من قراءتها، أو تم حذفها أثناء تشغيل النسخ الاحتياطي. اطلب من مستضيفك (أو استخدم مدير الملفات لديك) جعلها قابلة للقراءة بواسطة خادم الويب، ثم قم بإجراء النسخ الاحتياطي مرة أخرى."
+msgstr[3] "تعذر قراءة %s من الملفات وليست موجودة في هذه النسخة الاحتياطية. عادةً ما تمنع أذوناتها WordPress من قراءتها، أو تم حذفها أثناء تشغيل النسخ الاحتياطي. اطلب من مستضيفك (أو استخدم مدير الملفات لديك) جعلها قابلة للقراءة بواسطة خادم الويب، ثم قم بإجراء النسخ الاحتياطي مرة أخرى."
+msgstr[4] "تعذر قراءة %s من الملفات وليست موجودة في هذه النسخة الاحتياطية. عادةً ما تمنع أذوناتها WordPress من قراءتها، أو تم حذفها أثناء تشغيل النسخ الاحتياطي. اطلب من مستضيفك (أو استخدم مدير الملفات لديك) جعلها قابلة للقراءة بواسطة خادم الويب، ثم قم بإجراء النسخ الاحتياطي مرة أخرى."
+msgstr[5] "تعذر قراءة %s من الملفات وليست موجودة في هذه النسخة الاحتياطية. عادةً ما تمنع أذوناتها WordPress من قراءتها، أو تم حذفها أثناء تشغيل النسخ الاحتياطي. اطلب من مستضيفك (أو استخدم مدير الملفات لديك) جعلها قابلة للقراءة بواسطة خادم الويب، ثم قم بإجراء النسخ الاحتياطي مرة أخرى."
+
+#. translators: 1: comma-separated file paths, 2: number of further files not named.
+#: includes/class-archiver.php:176
+#, php-format
+msgid "Left out: %1$s (and %2$s more file)."
+msgid_plural "Left out: %1$s (and %2$s more files)."
+msgstr[0] "المستبعد: %1$s (و%2$s ملفات إضافية)."
+msgstr[1] "المستبعد: %1$s (و%2$s ملف إضافي)."
+msgstr[2] "المستبعد: %1$s (و%2$s ملفات إضافية)."
+msgstr[3] "المستبعد: %1$s (و%2$s ملفات إضافية)."
+msgstr[4] "المستبعد: %1$s (و%2$s ملفات إضافية)."
+msgstr[5] "المستبعد: %1$s (و%2$s ملفات إضافية)."
+
+#. translators: %s: comma-separated file paths.
+#: includes/class-archiver.php:182
+#, php-format
+msgid "Left out: %s."
+msgstr "المستبعد: %s."
 
 #: includes/class-backup-job.php:42
 msgid "Connect a storage destination on the Storage tab first: backups are kept in your own storage, not on this server."
@@ -544,7 +602,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "قاعدة البيانات: %1$d جداول، %2$s صفوف، %3$s مضغوطة."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:473
+#: includes/class-backup-job.php:479
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -555,11 +613,23 @@ msgstr[3] "اكتملت النسخة الاحتياطية: تم تخزين %1$s 
 msgstr[4] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d وجهة."
 msgstr[5] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d وجهة."
 
-#: includes/class-backup-job.php:503
+#. translators: %s: number of files.
+#: includes/class-backup-job.php:486
+#, php-format
+msgid "%s file was left out because it could not be read; see Details."
+msgid_plural "%s files were left out because they could not be read; see Details."
+msgstr[0] "تم استبعاد %s من الملفات لأنه تعذر قراءتها؛ راجع التفاصيل."
+msgstr[1] "تم استبعاد ملف %s لتعذر قراءته؛ راجع التفاصيل."
+msgstr[2] "تم استبعاد %s من الملفات لأنه تعذر قراءتها؛ راجع التفاصيل."
+msgstr[3] "تم استبعاد %s من الملفات لأنه تعذر قراءتها؛ راجع التفاصيل."
+msgstr[4] "تم استبعاد %s من الملفات لأنه تعذر قراءتها؛ راجع التفاصيل."
+msgstr[5] "تم استبعاد %s من الملفات لأنه تعذر قراءتها؛ راجع التفاصيل."
+
+#: includes/class-backup-job.php:516
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "تعذر حذف بعض الأجزاء التي تم رفعها بالفعل من مساحة التخزين الخاصة بك؛ فهي موجودة في مجلد نسخ احتياطي غير مكتمل ولا تُتاح أبدًا للاستعادة."
 
-#: includes/class-backup-job.php:520
+#: includes/class-backup-job.php:533
 msgid "A storage destination was removed while the backup was running."
 msgstr "تمت إزالة إحدى وجهات التخزين أثناء تشغيل النسخ الاحتياطي."
 

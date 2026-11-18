@@ -176,3 +176,15 @@
 		text-align: start;
 	}
 }
+
+.zb .zb-skipped {
+	margin-block: 4px 8px;
+	margin-inline-start: 16px;
+}
+
+.zb .zb-skipped__list {
+	max-block-size: 220px;
+	overflow-y: auto;
+	font-size: 12px;
+	padding-inline-start: 16px;
+}
