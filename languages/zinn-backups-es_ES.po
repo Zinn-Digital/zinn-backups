@@ -504,7 +504,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "No se pudo escribir una parte de la copia de seguridad. Comprueba que wp-content tenga espacio libre."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -513,7 +513,7 @@ msgstr[1] "No se han podido leer %s archivos y NO están en esta copia de seguri
 msgstr[2] "No se han podido leer %s archivos y NO están en esta copia de seguridad. Por lo general, sus permisos impiden que WordPress los lea, o bien se eliminaron mientras se ejecutaba la copia de seguridad. Pide a tu proveedor de alojamiento (o usa tu administrador de archivos) que permita al servidor web leerlos y, después, vuelve a crear la copia de seguridad."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -522,7 +522,7 @@ msgstr[1] "Omitido: %1$s (y %2$s archivos más)."
 msgstr[2] "Omitido: %1$s (y %2$s archivos más)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Omitido: %s."
@@ -587,7 +587,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Base de datos: %1$d tablas, %2$s filas, %3$s comprimido."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -596,7 +596,7 @@ msgstr[1] "Copia de seguridad completada: %1$s almacenada en %2$d destinos."
 msgstr[2] "Copia de seguridad completada: %1$s almacenada en %2$d destinos."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
@@ -604,11 +604,11 @@ msgstr[0] "Se omitió el archivo %s porque no se pudo leer; consulta Detalles."
 msgstr[1] "Se omitieron %s archivos porque no se pudieron leer; consulta Detalles."
 msgstr[2] "Se omitieron %s archivos porque no se pudieron leer; consulta Detalles."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Algunas partes ya subidas no se pudieron eliminar de tu almacenamiento; están en una carpeta de copia de seguridad incompleta y nunca se ofrecerán para restaurar."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Se eliminó un destino de almacenamiento mientras se ejecutaba la copia de seguridad."
 
@@ -753,7 +753,7 @@ msgstr "El enlace ha abierto una página web en lugar de un archivo. Para Google
 msgid "The link answered with HTTP %d."
 msgstr "El enlace respondió con HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "No se ha podido escribir la lista de archivos."
 

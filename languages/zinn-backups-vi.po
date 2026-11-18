@@ -498,21 +498,21 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Không thể ghi một phần bản sao lưu. Vui lòng kiểm tra xem wp-content có dung lượng trống hay không."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
 msgstr[0] "Không thể đọc tệp %s và tệp này KHÔNG có trong bản sao lưu này. Thông thường các quyền hạn của nó ngăn WordPress đọc, hoặc nó đã bị xóa trong khi quá trình sao lưu đang diễn ra. Hãy yêu cầu nhà cung cấp dịch vụ lưu trữ của bạn (hoặc sử dụng trình quản lý tệp của bạn) để máy chủ web có thể đọc được tệp, sau đó sao lưu lại."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
 msgstr[0] "Bỏ lại: %1$s (và thêm %2$s tệp)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Bỏ qua: %s."
@@ -577,24 +577,24 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Cơ sở dữ liệu: %1$d bảng, %2$s hàng, %3$s đã nén."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Sao lưu hoàn tất: %1$s đã lưu trữ tại %2$d đích đến."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "Tệp %s đã bị bỏ lại vì không thể đọc được; xem Chi tiết."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Một số phần đã tải lên không thể xóa khỏi bộ nhớ của bạn; chúng nằm trong thư mục sao lưu chưa hoàn tất và không bao giờ được cung cấp để khôi phục."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Một đích lưu trữ đã bị xóa trong khi quá trình sao lưu đang chạy."
 
@@ -739,7 +739,7 @@ msgstr "Liên kết đã mở một trang web thay vì một tệp. Đối với
 msgid "The link answered with HTTP %d."
 msgstr "Liên kết đã phản hồi với HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Không thể ghi danh sách tập tin."
 

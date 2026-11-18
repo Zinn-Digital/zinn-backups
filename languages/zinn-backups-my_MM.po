@@ -498,21 +498,21 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "အရန်သိမ်းဆည်းမှု အစိတ်အပိုင်းကို ရေးသား၍မရပါ။ wp-content တွင် နေရာလွတ်ရှိမရှိ စစ်ဆေးပါ။"
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
 msgstr[0] "%s ဖိုင်ကို ဖတ်၍မရသောကြောင့် ဤအရန်သိမ်းဆည်းမှုတွင် မပါဝင်ပါ။ များသောအားဖြင့် ၎င်း၏ခွင့်ပြုချက်များကြောင့် WordPress မှ ဖတ်ရှုခြင်းကို တားဆီးထားခြင်း သို့မဟုတ် အရန်သိမ်းဆည်းနေစဉ်အတွင်း ၎င်းဖိုင် ပျက်သွားခြင်းကြောင့် ဖြစ်တတ်ပါသည်။ ဝဘ်ဆာဗာမှ ၎င်းကို ဖတ်ရှုနိုင်စေရန် သင့်ဟိုစတင်းထံ မေးမြန်းပါ (သို့မဟုတ် သင့်ဖိုင်မန်နေဂျာကို အသုံးပြုပါ)၊ ထို့နောက် နောက်တစ်ကြိမ် ထပ်မံအရန်သိမ်းဆည်းပါ။"
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
 msgstr[0] "ချန်လှပ်ထားသည်- %1$s (နှင့် နောက်ထပ် ဖိုင် %2$s ခု)။"
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "ချန်လှပ်ထားသည်- %s။"
@@ -577,24 +577,24 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "ဒေတာဘေ့စ်- ဇယား %1$d ခု၊ အတန်း %2$s ခု၊ ချုံ့ထားသော %3$s။"
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "အရန်သိမ်းဆည်းမှု ပြီးပါပြီ- %1$s ကို ဦးတည်ရာ %2$d ခုတွင် သိမ်းဆည်းထားသည်။"
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "%s ဖိုင်ကို ဖတ်၍မရသောကြောင့် ချန်လှပ်ထားခဲ့သည်၊ အသေးစိတ်ကို ကြည့်ပါ။"
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "အပ်လုဒ်လုပ်ပြီးသား အချို့အပိုင်းများကို သင်၏ သိုလှောင်ခန်းမှ ဖယ်ရှား၍ မရပါ၊ ၎င်းတို့သည် မပြည့်စုံသော အရန်သိမ်းဆည်းမှု ဖိုင်တွဲထဲတွင် ရှိနေပြီး ပြန်လည်ရယူရန်အတွက် မည်သည့်အခါမျှ ကမ်းလှမ်းမည်မဟုတ်ပါ။"
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "အရန်သိမ်းဆည်းမှု လုပ်ဆောင်နေစဉ် သိုလှောင်မှုတည်နေရာတစ်ခုကို ဖယ်ရှားလိုက်ပါသည်။"
 
@@ -739,7 +739,7 @@ msgstr "လင့်ခ်သည် ဖိုင်တစ်ခုအစား �
 msgid "The link answered with HTTP %d."
 msgstr "လင့်ခ်သည် HTTP %d ဖြင့် တုံ့ပြန်ခဲ့သည်။"
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "ဖိုင်စာရင်းကို ရေးသား၍မရပါ။"
 

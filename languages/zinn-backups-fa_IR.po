@@ -501,7 +501,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "بخشی از نسخه پشتیبان نوشته نشد. بررسی فرمایید که wp-content فضای خالی داشته باشد."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -509,7 +509,7 @@ msgstr[0] "پرونده %s خوانده نشد و در این نسخه پشتی�
 msgstr[1] "%s پرونده قابل خواندن نبودند و در این نسخهٔ پشتیبان وجود ندارند. معمولاً مجوزهای آن‌ها مانع از خواندنشان توسط WordPress می‌شود، یا در زمان اجرای پشتیبان‌گیری حذف شده‌اند. از میزبان خود بخواهید (یا از مدیریت پرونده‌های خود استفاده کنید) تا آن‌ها را برای وب‌سرور قابل خواندن کند، سپس دوباره پشتیبان‌گیری نمایید."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -517,7 +517,7 @@ msgstr[0] "جاافتاده: %1$s (و %2$s پرونده دیگر)."
 msgstr[1] "نادیده‌گرفته‌شده: %1$s (و %2$s پروندهٔ دیگر)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "نادیده‌گرفته‌شده: %s."
@@ -582,7 +582,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "پایگاه داده: %1$d جدول، %2$s ردیف، %3$s فشرده شده."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -590,18 +590,18 @@ msgstr[0] "پشتیبان‌گیری کامل شد: %1$s در %2$d مقصد ذخ
 msgstr[1] "پشتیبان‌گیری کامل شد: %1$s در %2$d مقصد ذخیره شد."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "پروندهٔ %s به دلیل عدم امکان خواندن نادیده گرفته شد؛ به جزئیات مراجعه کنید."
 msgstr[1] "%s پرونده به دلیل عدم امکان خواندن نادیده گرفته شدند؛ به جزئیات مراجعه کنید."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "برخی از بخش‌های بارگذاری‌شده قابل حذف از فضای ذخیره‌سازی شما نبودند؛ آن‌ها در یک پوشه پشتیبان ناقص قرار دارند و هرگز برای بازیابی ارائه نمی‌شوند."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "یک مقصد ذخیره‌سازی در حین اجرای پشتیبان‌گیری حذف شد."
 
@@ -746,7 +746,7 @@ msgstr "پیوند به جای یک پرونده، یک صفحهٔ وب را ب�
 msgid "The link answered with HTTP %d."
 msgstr "پیوند با HTTP %d پاسخ داد."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "فهرست پرونده قابل نوشتن نبود."
 

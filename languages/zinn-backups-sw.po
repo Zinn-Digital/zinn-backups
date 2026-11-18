@@ -501,7 +501,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Sehemu ya nakala rudufu haikuweza kuandikwa. Angalia ikiwa wp-content ina nafasi ya kutosha."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -509,7 +509,7 @@ msgstr[0] "Faili la %s halikuweza kusomwa na HALIPO kwenye nakala rudufu hii. Ka
 msgstr[1] "Faili %s hazikuweza kusomwa na HAZIMO kwenye nakala hii ya akiba. Kwa kawaida ruhusa zake huzuia WordPress kuzisoma, au zilifutwa wakati nakala ya akiba ilipokuwa ikiendeshwa. Omba mtoa huduma wako wa upangishaji (au tumia kidhibiti chako cha faili) kuzifanya ziweze kusomeka na seva ya wavuti, kisha uhifadhi tena nakala ya akiba."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -517,7 +517,7 @@ msgstr[0] "Imeachwa: %1$s (na faili %2$s zaidi)."
 msgstr[1] "Iliyoachwa: %1$s (na faili nyingine %2$s)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Imeachwa: %s."
@@ -582,7 +582,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Hifadhidata: majedwali %1$d, safu mlalo %2$s, %3$s imebanwa."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -590,18 +590,18 @@ msgstr[0] "Nakala rudufu imekamilika: %1$s imehifadhiwa katika eneo %2$d."
 msgstr[1] "Nakala rudufu imekamilika: %1$s imehifadhiwa katika maeneo %2$d."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "Faili ya %s iliachwa kwa sababu haikuweza kusomwa; tazama Maelezo zaidi."
 msgstr[1] "Faili %s ziliachwa kwa sababu hazikuweza kusomwa; tazama Maelezo."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Baadhi ya sehemu zilizokwisha kupakiwa hazikuweza kuondolewa kwenye hifadhi yako; ziko kwenye folda ya nakala rudufu isiyo kamili na kamwe hazitolewi kwa ajili ya kurejesha."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Eneo la hifadhi liliondolewa wakati nakala rudufu ilipokuwa ikiendeshwa."
 
@@ -746,7 +746,7 @@ msgstr "Kiungo kilifungua ukurasa wa wavuti badala ya faili. Kwa Google Drive na
 msgid "The link answered with HTTP %d."
 msgstr "Kiungo kilijibu kwa HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Orodha ya faili haikuweza kuandikwa."
 

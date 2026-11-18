@@ -501,7 +501,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Një pjesë e kopjes rezervë nuk mund të shkruhej. Kontrolloni nëse wp-content ka hapësirë të lirë."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -509,7 +509,7 @@ msgstr[0] "Skedari %s nuk mund të lexohej dhe NUK ndodhet në këtë kopje reze
 msgstr[1] "%s skedarë nuk mund të lexoheshin dhe NUK janë në këtë kopje rezervë. Zakonisht lejet e tyre e pengojnë WordPress-in t'i lexojë ata, ose janë fshirë gjatë kryerjes së kopjes rezervë. Kërkojini pritësit tuaj (ose përdorni menaxherin tuaj të skedarëve) që t'i bëjë ata të lexueshëm nga serveri i uebit, pastaj bëni përsëri një kopje rezervë."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -517,7 +517,7 @@ msgstr[0] "U lënë jashtë: %1$s (dhe %2$s skedar tjetër)."
 msgstr[1] "Të lëna jashtë: %1$s (dhe %2$s skedarë të tjerë)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "U lë jashtë: %s."
@@ -582,7 +582,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Baza e të dhënave: %1$d tabela, %2$s rreshta, %3$s e ngjeshur."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -590,18 +590,18 @@ msgstr[0] "Kopja rezervë përfundoi: %1$s u ruajt në %2$d destinacion."
 msgstr[1] "Rezervimi përfundoi: %1$s u ruajt në %2$d destinacione."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "Skedari %s u la jashtë sepse nuk mund të lexohej; shihni Hollësitë."
 msgstr[1] "%s skedarë u lanë jashtë sepse nuk mund të lexoheshin; shihni Hollësitë."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Disa pjesë të ngarkuara tashmë nuk mund të hiqeshin nga hapësira juaj e ruajtjes; ato ndodhen në një dosje kopjimi rezervë të paplotë dhe nuk ofrohen kurrë për rikthim."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Një vendmbërritje depozitimi u hoq ndërkohë që kopja rezervë po ekzekutohej."
 
@@ -746,7 +746,7 @@ msgstr "Lidhja hapi një faqe uebi në vend të një skedari. Për Google Drive 
 msgid "The link answered with HTTP %d."
 msgstr "Lidhja u përgjigj me HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Lista e skedarëve nuk mund të shkruhej."
 

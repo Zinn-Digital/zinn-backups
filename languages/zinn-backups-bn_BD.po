@@ -501,7 +501,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "ব্যাকআপের একটি অংশ লেখা যায়নি। wp-content-এ খালি জায়গা আছে কিনা তা পরীক্ষা করুন।"
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -509,7 +509,7 @@ msgstr[0] "%s ফাইলটি পড়া যায়নি এবং এই ব�
 msgstr[1] "%s ফাইল পড়া যায়নি এবং এই ব্যাকআপে অন্তর্ভুক্ত নেই। সাধারণত সেগুলোর অনুমতি WordPress-কে সেগুলি পড়তে বাধা দেয়, অথবা ব্যাকআপ চলার সময় সেগুলি মুছে ফেলা হয়েছিল। ওয়েব সার্ভার যাতে সেগুলি পড়তে পারে সেজন্য আপনার হোস্টকে বলুন (অথবা আপনার ফাইল ম্যানেজার ব্যবহার করুন), তারপর আবার ব্যাকআপ নিন।"
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -517,7 +517,7 @@ msgstr[0] "বাদ দেওয়া হয়েছে: %1$s (এবং আ�
 msgstr[1] "বাদ দেওয়া হয়েছে: %1$s (এবং আরও %2$sটি ফাইল)।"
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "বাদ দেওয়া হয়েছে: %s।"
@@ -582,7 +582,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "ডাটাবেস: %1$d টি টেবিল, %2$s টি সারি, %3$s সংকুচিত।"
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -590,18 +590,18 @@ msgstr[0] "ব্যাকআপ সম্পন্ন: %1$s সংরক্ষ�
 msgstr[1] "ব্যাকআপ সম্পন্ন: %1$s %2$dটি গন্তব্যে সংরক্ষিত হয়েছে।"
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "পড়া সম্ভব না হওয়ায় %s ফাইলটি বাদ দেওয়া হয়েছে; বিস্তারিত দেখুন।"
 msgstr[1] "%sটি ফাইল বাদ দেওয়া হয়েছে কারণ সেগুলি পড়া যায়নি; বিবরণ দেখুন।"
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "ইতিমধ্যে আপলোড করা কিছু অংশ আপনার স্টোরেজ থেকে সরানো যায়নি; সেগুলি একটি অসম্পূর্ণ ব্যাকআপ ফোল্ডারে রয়েছে এবং পুনরুদ্ধারের জন্য কখনোই প্রদর্শিত হবে না।"
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "ব্যাকআপ চলাকালীন একটি স্টোরেজ গন্তব্য সরানো হয়েছে।"
 
@@ -746,7 +746,7 @@ msgstr "লিঙ্কটি ফাইলের পরিবর্তে এক
 msgid "The link answered with HTTP %d."
 msgstr "লিঙ্কটি HTTP %d দিয়ে সাড়া দিয়েছে।"
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "ফাইলের তালিকাটি লেখা যায়নি।"
 

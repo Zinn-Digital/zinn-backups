@@ -501,7 +501,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "بیک اپ کا ایک حصہ لکھا نہیں جا سکا۔ براہ کرم چیک کریں کہ wp-content میں خالی جگہ موجود ہے۔"
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -509,7 +509,7 @@ msgstr[0] "%s فائل پڑھی نہیں جا سکی اور اس بیک اپ م�
 msgstr[1] "%s فائلیں پڑھی نہیں جا سکیں اور اس بیک اپ میں شامل نہیں ہیں۔ عام طور پر ان کے اجازت نامے WordPress کو انہیں پڑھنے سے روکتے ہیں، یا جب بیک اپ چل رہا تھا تو انہیں حذف کر دیا گیا تھا۔ اپنے ہوسٹ سے کہیں (یا اپنے فائل مینیجر کا استعمال کریں) کہ وہ انہیں ویب سرور کے لیے پڑھنے کے قابل بنائے، پھر دوبارہ بیک اپ لیں۔"
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -517,7 +517,7 @@ msgstr[0] "چھوڑ دیا گیا: %1$s (اور %2$s مزید فائل)۔"
 msgstr[1] "چھوڑے گئے: %1$s (اور مزید %2$s فائلیں)۔"
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "چھوڑ دیا گیا: %s."
@@ -582,7 +582,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "ڈیٹا بیس: %1$d ٹیبلز، %2$s قطاریں، %3$s کمپریس شدہ۔"
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -590,18 +590,18 @@ msgstr[0] "بیک اپ مکمل ہو گیا: %1$s کو %2$d منزل میں مح
 msgstr[1] "بیک اپ مکمل: %1$s کو %2$d مقامات پر محفوظ کر دیا گیا۔"
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "%s فائل کو چھوڑ دیا گیا کیونکہ اسے پڑھا نہیں جا سکا؛ تفصیلات دیکھیں۔"
 msgstr[1] "%s فائلیں چھوڑ دی گئیں کیونکہ انہیں پڑھا نہیں جا سکا؛ تفصیلات دیکھیں۔"
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "پہلے سے اپ لوڈ کردہ کچھ حصے آپ کے اسٹوریج سے حذف نہیں کیے جا سکے؛ وہ ایک نامکمل بیک اپ فولڈر میں ہیں اور بحالی کے لیے کبھی پیش نہیں کیے جاتے۔"
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "بیک اپ چلنے کے دوران ذخیرہ کرنے کی منزل کو ہٹا دیا گیا تھا۔"
 
@@ -746,7 +746,7 @@ msgstr "لنک نے فائل کے بجائے ایک ویب صفحہ کھولا۔
 msgid "The link answered with HTTP %d."
 msgstr "ربط نے HTTP %d کے ساتھ جواب دیا۔"
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "فائلوں کی فہرست لکھی نہیں جا سکی۔"
 

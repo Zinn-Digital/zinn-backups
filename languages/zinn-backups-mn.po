@@ -501,7 +501,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Нөөцлөлтийн хэсгийг бичиж чадсангүй. wp-content дээр сул зай байгаа эсэхийг шалгана уу."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -509,7 +509,7 @@ msgstr[0] "%s файлыг уншиж чадсангүй бөгөөд энэ н�
 msgstr[1] "%s файлыг уншиж чадсангүй тул энэ нөөцлөлтөд ОРООГҮЙ болно. Ихэвчлэн тэдгээрийн зөвшөөрөл нь WordPress-ийг уншихад саад болдог, эсвэл нөөцлөлт хийгдэх явцад устгагдсан байдаг. Вэб сервер унших боломжтой болгохын тулд хостинг үйлчилгээ үзүүлэгчдээ хандана уу (эсвэл файлын менежерээ ашиглана уу), дараа нь дахин нөөцлөнө үү."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -517,7 +517,7 @@ msgstr[0] "Үлдээсэн: %1$s (ба дахин %2$s файл)."
 msgstr[1] "Алгассан: %1$s (болон дахин %2$s файл)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Орхигдсон: %s."
@@ -582,7 +582,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Өгөгдлийн сан: %1$d хүснэгт, %2$s мөр, %3$s шахагдсан."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -590,18 +590,18 @@ msgstr[0] "Нөөцлөлт дууссан: %1$s-г %2$d байршилд хад
 msgstr[1] "Нөөцлөлт дууссан: %1$s-г %2$d газарт хадгаллаа."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "%s файл уншигдах боломжгүй байсан тул орхигдсон; Дэлгэрэнгүйг үзнэ үү."
 msgstr[1] "%s файл уншигдах боломжгүй байсан тул орхигдсон; Дэлгэрэнгүйг харна уу."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Аль хэдийн байршуулсан зарим хэсгийг таны хадгалах сангаас устгах боломжгүй байв; тэдгээр нь дутуу нөөцлөлтийн хавтсанд байгаа бөгөөд сэргээхэд хэзээ ч санал болгогдохгүй."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Нөөцлөлт хийгдэж байх үед хадгалах байршил устгагдсан байна."
 
@@ -746,7 +746,7 @@ msgstr "Холбоос нь файлын оронд вэб хуудсыг нээ
 msgid "The link answered with HTTP %d."
 msgstr "Холбоос HTTP %d хариу өглөө."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Файлын жагсаалтыг бичиж чадсангүй."
 

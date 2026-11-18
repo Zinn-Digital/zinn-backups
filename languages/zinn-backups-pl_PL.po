@@ -504,7 +504,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Część kopii zapasowej nie mogła zostać zapisana. Sprawdź, czy katalog wp-content ma wolne miejsce."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -513,7 +513,7 @@ msgstr[1] "Nie udało się odczytać %s plików i NIE ma ich w tej kopii zapasow
 msgstr[2] "Nie udało się odczytać %s plików i NIE ma ich w tej kopii zapasowej. Zazwyczaj ich uprawnienia uniemożliwiają WordPressowi ich odczytanie lub zostały usunięte podczas tworzenia kopii zapasowej. Poproś swój hosting (lub użyj menedżera plików), aby umożliwić serwerowi WWW ich odczyt, a następnie utwórz kopię zapasową ponownie."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -522,7 +522,7 @@ msgstr[1] "Pominięte: %1$s (i jeszcze %2$s plików)."
 msgstr[2] "Pominięte: %1$s (i jeszcze %2$s plików)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Pominięto: %s."
@@ -587,7 +587,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Baza danych: %1$d tabel, %2$s wierszy, %3$s skompresowano."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -596,7 +596,7 @@ msgstr[1] "Kopia zapasowa ukończona: %1$s zapisano w %2$d miejscach docelowych.
 msgstr[2] "Kopia zapasowa ukończona: %1$s zapisano w %2$d miejscach docelowych."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
@@ -604,11 +604,11 @@ msgstr[0] "Plik %s został pominięty, ponieważ nie można go odczytać; zobacz
 msgstr[1] "Pominięto %s plików, ponieważ nie można było ich odczytać; zobacz Szczegóły."
 msgstr[2] "Pominięto %s plików, ponieważ nie można było ich odczytać; zobacz Szczegóły."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Niektórych przesłanych już części nie udało się usunąć z twojego magazynu; znajdują się one w folderze niekompletnej kopii zapasowej i nigdy nie są proponowane do przywrócenia."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Miejsce docelowe pamięci masowej zostało usunięte podczas wykonywania kopii zapasowej."
 
@@ -753,7 +753,7 @@ msgstr "Link otworzył stronę internetową zamiast pliku. W przypadku Google Dr
 msgid "The link answered with HTTP %d."
 msgstr "Link odpowiedział kodem HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Nie udało się zapisać listy plików."
 

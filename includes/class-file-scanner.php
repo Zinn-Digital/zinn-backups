@@ -28,11 +28,14 @@ final class File_Scanner {
 	 */
 	public static function begin( bool $include_core ): array {
 		return array(
-			'queue'        => array( '' ),
-			'files'        => 0,
-			'bytes'        => 0,
-			'include_core' => $include_core,
-			'done'         => false,
+			'queue'         => array( '' ),
+			'files'         => 0,
+			'bytes'         => 0,
+			'include_core'  => $include_core,
+			'done'          => false,
+			// Unreadable files and folders: the exact count and the first names (Archiver::SKIPPED_NAMED).
+			'skipped'       => 0,
+			'skipped_files' => array(),
 		);
 	}
 
@@ -56,8 +59,12 @@ final class File_Scanner {
 			while ( $cursor['queue'] && microtime( true ) < $deadline ) {
 				$relative = (string) array_pop( $cursor['queue'] );
 				$absolute = '' === $relative ? $root : $root . '/' . $relative;
-				$dir      = @opendir( $absolute ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- an unreadable folder is skipped and logged by the caller's count, not a warning in the site's log.
+				$dir      = @opendir( $absolute ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- an unreadable folder is left out and named in the backup's left-out list, not a warning in the site's log.
 				if ( false === $dir ) {
+					// A folder it cannot open is left out with everything in it: say so, by name.
+					if ( '' !== $relative ) {
+						self::left_out( $cursor, $relative . '/' );
+					}
 					continue;
 				}
 				$entry = readdir( $dir );
@@ -68,7 +75,9 @@ final class File_Scanner {
 						if ( ! self::excluded( $child, $excludes, (bool) $cursor['include_core'] ) && ! is_link( $path ) ) {
 							if ( is_dir( $path ) ) {
 								$cursor['queue'][] = $child;
-							} elseif ( is_file( $path ) && is_readable( $path ) ) {
+							} elseif ( is_file( $path ) && ! is_readable( $path ) ) {
+								self::left_out( $cursor, $child );
+							} elseif ( is_file( $path ) ) {
 								$size = (int) filesize( $path );
 								fwrite( $handle, (string) wp_json_encode( array( $child, $size, (int) filemtime( $path ) ), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . "\n" ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fwrite -- see above.
 								++$cursor['files'];
@@ -85,6 +94,22 @@ final class File_Scanner {
 		}
 		$cursor['done'] = empty( $cursor['queue'] );
 		return $cursor;
+	}
+
+	/**
+	 * Record one file or folder the scan could not read.
+	 *
+	 * @param array<string,mixed> $cursor   Cursor, updated in place.
+	 * @param string              $relative Path relative to the WordPress root (a folder ends in "/").
+	 * @return void
+	 */
+	private static function left_out( array &$cursor, string $relative ): void {
+		$cursor['skipped'] = (int) ( $cursor['skipped'] ?? 0 ) + 1;
+		$named             = (array) ( $cursor['skipped_files'] ?? array() );
+		if ( count( $named ) < Archiver::SKIPPED_NAMED ) {
+			$named[]                 = $relative;
+			$cursor['skipped_files'] = $named;
+		}
 	}
 
 	/**

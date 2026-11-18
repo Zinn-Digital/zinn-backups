@@ -501,7 +501,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "උපස්ථ කොටසක් ලිවීමට නොහැකි විය. wp-content හි හිස් ඉඩක් ඇත්දැයි පරීක්ෂා කරන්න."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -509,7 +509,7 @@ msgstr[0] "%s ගොනුව කියවීමට නොහැකි වූ �
 msgstr[1] "ගොනු %sක් කියවීමට නොහැකි වූ අතර මෙම උපස්ථයේ ඇතුළත් නොවේ. සාමාන්‍යයෙන් ඒවායේ අවසර මඟින් WordPress වෙත ඒවා කියවීම වළක්වයි, නැතහොත් උපස්ථය ක්‍රියාත්මක වන අතරතුර ඒවා මකා දමා ඇත. ඒවා වෙබ් සේවාදායකයට කියවිය හැකි පරිදි සකසන ලෙස ඔබේ සත්කාරකයෙන් ඉල්ලා සිටින්න (හෝ ඔබේ ගොනු කළමනාකරු භාවිතා කරන්න), පසුව නැවත උපස්ථ කරන්න."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -517,7 +517,7 @@ msgstr[0] "හැර දැමූ: %1$s (සහ තවත් ගොනු %2$s).
 msgstr[1] "හැර දැමූ: %1$s (සහ තවත් ගොනු %2$sක්)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "හැර දමන ලදි: %s."
@@ -582,7 +582,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "දත්ත සමුදාය: වගු %1$d, පේළි %2$s, %3$s සම්පීඩිතයි."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -590,18 +590,18 @@ msgstr[0] "උපස්ථය සම්පූර්ණයි: %1$s ගමනා�
 msgstr[1] "උපස්ථය සම්පූර්ණයි: %1$s ගමනාන්ත %2$d ක ගබඩා කර ඇත."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "කියවීමට නොහැකි වූ නිසා %s ගොනුව ඉවත් කරන ලදී; විස්තර බලන්න."
 msgstr[1] "කියවීමට නොහැකි වූ බැවින් ගොනු %sක් ඉවත් කරන ලදී; විස්තර බලන්න."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "දැනටමත් උඩුගත කර ඇති සමහර කොටස් ඔබගේ ආචයනයෙන් ඉවත් කිරීමට නොහැකි විය; ඒවා අසම්පූර්ණ උපස්ථ ෆෝල්ඩරයක ඇති අතර ප්‍රතිසාධනය සඳහා කිසි විටෙකත් ඉදිරිපත් නොකෙරේ."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "උපස්ථය ක්‍රියාත්මක වන අතරතුර ගබඩා ගමනාන්තයක් ඉවත් කරන ලදී."
 
@@ -746,7 +746,7 @@ msgstr "සබැඳිය ගොනුවක් වෙනුවට වෙබ්
 msgid "The link answered with HTTP %d."
 msgstr "සබැඳිය HTTP %d සමඟ ප්‍රතිචාර දැක්වීය."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "ගොනු ලැයිස්තුව ලිවීමට නොහැකි විය."
 

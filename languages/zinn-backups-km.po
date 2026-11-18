@@ -498,21 +498,21 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "មិនអាចសរសេរផ្នែកចម្លងបម្រុងទុកបានទេ។ សូមពិនិត្យមើលថា wp-content មានទំហំទំនេរ។"
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
 msgstr[0] "ឯកសារ %s មិនអាចអានបានទេ ហើយមិនមាននៅក្នុងការបម្រុងទុកនេះឡើយ។ ជាធម្មតាសិទ្ធិរបស់វាបានរារាំង WordPress មិនឱ្យអានវា ឬវាត្រូវបានលុបខណៈពេលដែលការបម្រុងទុកកំពុងដំណើរការ។ សូមស្នើឱ្យក្រុមហ៊ុនបង្ហោះរបស់អ្នក (ឬប្រើកម្មវិធីគ្រប់គ្រងឯកសាររបស់អ្នក) ដើម្បីធ្វើឱ្យម៉ាស៊ីនបម្រើបណ្ដាញអាចអានវាបាន រួចធ្វើការបម្រុងទុកម្តងទៀត។"
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
 msgstr[0] "បានទុកចោល៖ %1$s (និង %2$s ឯកសារទៀត)។"
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "បាន​រំលង៖ %s។"
@@ -577,24 +577,24 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "មូលដ្ឋានទិន្នន័យ៖ តារាង %1$d, ជួរដេក %2$s, បានបង្ហាប់ %3$s។"
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "ការបម្រុងទុកបានបញ្ចប់៖ %1$s បានរក្សាទុកក្នុងគោលដៅ %2$d។"
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "ឯកសារ %s ត្រូវបានទុកចោលដោយសារវាមិនអាចអានបាន។ សូមមើល សេចក្តីលម្អិត។"
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "ផ្នែកខ្លះដែលបានបង្ហោះរួចហើយ មិនអាចលុបចេញពីទំហំផ្ទុករបស់អ្នកបានទេ ពួកវានៅក្នុងថតបម្រុងទុកមិនពេញលេញ ហើយមិនដែលត្រូវបានផ្តល់ជូនសម្រាប់ការស្តារឡើងវិញឡើយ។"
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "គោលដៅផ្ទុកមួយត្រូវបានលុបចេញ ខណៈពេលដែលការបម្រុងទុកកំពុងដំណើរការ។"
 
@@ -739,7 +739,7 @@ msgstr "តំណភ្ជាប់បានបើកទំព័របណ្ត
 msgid "The link answered with HTTP %d."
 msgstr "តំណភ្ជាប់បានឆ្លើយតបជាមួយ HTTP %d។"
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "មិនអាចសរសេរបញ្ជីឯកសារបានទេ។"
 

@@ -501,7 +501,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Bir yedekleme parçası yazılamadı. wp-content dizininde boş alan olduğunu kontrol edin."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -509,7 +509,7 @@ msgstr[0] "%s dosyası okunamadı ve bu yedekte YER ALMIYOR. Genellikle izinleri
 msgstr[1] "%s dosya okunamadı ve bu yedekte YER ALMIYOR. Genellikle izinleri WordPress'in bunları okumasını engeller veya yedekleme çalışırken silinmişlerdir. Barındırma sağlayıcınızdan (veya dosya yöneticinizi kullanarak) bunları web sunucusu tarafından okunabilir hale getirmesini isteyin, ardından tekrar yedekleyin."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -517,7 +517,7 @@ msgstr[0] "Dışarıda bırakılan: %1$s (ve %2$s dosya daha)."
 msgstr[1] "Dışarıda bırakılan: %1$s (ve %2$s dosya daha)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Dışarıda bırakılan: %s."
@@ -582,7 +582,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Veritabanı: %1$d tablo, %2$s satır, %3$s sıkıştırılmış."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -590,18 +590,18 @@ msgstr[0] "Yedekleme tamamlandı: %1$s %2$d hedefe kaydedildi."
 msgstr[1] "Yedekleme tamamlandı: %1$s, %2$d hedefe kaydedildi."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "%s dosyası okunamadığı için hariç tutuldu; Ayrıntılar'a bakın."
 msgstr[1] "%s dosya okunamadığı için hariç tutuldu; Ayrıntılar bölümüne bakın."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Zaten yüklenmiş olan bazı parçalar depolama alanınızdan kaldırılamadı; bunlar tamamlanmamış bir yedekleme klasöründe bulunur ve geri yükleme için hiçbir zaman önerilmez."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Yedekleme çalışırken bir depolama hedefi kaldırıldı."
 
@@ -746,7 +746,7 @@ msgstr "Bağlantı bir dosya yerine bir web sayfası açtı. Google Drive ve Dro
 msgid "The link answered with HTTP %d."
 msgstr "Bağlantı HTTP %d ile yanıt verdi."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Dosya listesi yazılamadı."
 

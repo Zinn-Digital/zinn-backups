@@ -504,7 +504,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Део резервне копије није могао бити уписан. Проверите да ли у wp-content има слободног простора."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -513,7 +513,7 @@ msgstr[1] "%s датотека није могло бити прочитано �
 msgstr[2] "%s датотека није могло бити прочитано и оне НИСУ у овој резервној копији. Обично њихове дозволе спречавају WordPress да их прочита, или су избрисане током израде резервне копије. Затражите од вашег хостинга (или употребите свој менаџер датотека) да их учини читљивим за веб-сервер, а затим поново направите резервну копију."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -522,7 +522,7 @@ msgstr[1] "Изостављено: %1$s (и још %2$s датотека)."
 msgstr[2] "Изостављено: %1$s (и још %2$s датотека)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Изостављено: %s."
@@ -587,7 +587,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "База података: %1$d табела, %2$s редова, %3$s компресовано."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -596,7 +596,7 @@ msgstr[1] "Резервна копија је завршена: %1$s је сач
 msgstr[2] "Резервна копија је завршена: %1$s је сачувано на %2$d одредишта."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
@@ -604,11 +604,11 @@ msgstr[0] "Датотека %s је изостављена јер није мо�
 msgstr[1] "%s датотека је изостављено јер се нису могле прочитати; погледајте Детаље."
 msgstr[2] "%s датотека је изостављено јер се нису могле прочитати; погледајте Детаље."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Неки делови који су већ отпремљени нису могли бити уклоњени из вашег складишта; они се налазе у фасцикли непотпуне резервне копије и никада се не нуде за враћање."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Одредиште за складиштење је уклоњено током прављења резервне копије."
 
@@ -753,7 +753,7 @@ msgstr "Веза је отворила веб-страницу уместо да
 msgid "The link answered with HTTP %d."
 msgstr "Веза је одговорила са HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Није било могуће уписати списак датотека."
 

@@ -504,7 +504,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Dio sigurnosne kopije nije se mogao zapisati. Provjerite ima li u wp-content slobodnog prostora."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -513,7 +513,7 @@ msgstr[1] "%s datoteka nije se moglo pročitati i NISU u ovoj sigurnosnoj kopiji
 msgstr[2] "%s datoteka nije se moglo pročitati i NISU u ovoj sigurnosnoj kopiji. Obično njihove dozvole sprječavaju WordPress da ih pročita ili su izbrisane dok je trajala izrada sigurnosne kopije. Zatražite od svog pružatelja smještaja (ili upotrijebite svoj upravitelj datoteka) da ih učini čitljivima web poslužitelju, a zatim ponovno izradite sigurnosnu kopiju."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -522,7 +522,7 @@ msgstr[1] "Izostavljeno: %1$s (i još %2$s datoteka)."
 msgstr[2] "Izostavljeno: %1$s (i još %2$s datoteka)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Izostavljeno: %s."
@@ -587,7 +587,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Baza podataka: %1$d tablica, %2$s redaka, %3$s sažeto."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -596,7 +596,7 @@ msgstr[1] "Sigurnosna kopija dovršena: %1$s pohranjeno na %2$d odredišta."
 msgstr[2] "Sigurnosno kopiranje je dovršeno: %1$s pohranjeno na %2$d odredišta."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
@@ -604,11 +604,11 @@ msgstr[0] "Datoteka %s je izostavljena jer se nije mogla pročitati; pogledajte 
 msgstr[1] "%s datoteka je izostavljeno jer se nisu mogle pročitati; pogledajte Pojedinosti."
 msgstr[2] "%s datoteka je izostavljeno jer se nisu mogle pročitati; pogledajte Pojedinosti."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Neki dijelovi koji su već preneseni nisu se mogli ukloniti iz vaše pohrane; nalaze se u mapi nepotpunih sigurnosnih kopija i nikada se ne nude za vraćanje."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Odredište za pohranu je uklonjeno tijekom izvođenja sigurnosne kopije."
 
@@ -753,7 +753,7 @@ msgstr "Poveznica je otvorila web-stranicu umjesto datoteke. Za Google Drive i D
 msgid "The link answered with HTTP %d."
 msgstr "Poveznica je odgovorila s HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Nije bilo moguće zapisati popis datoteka."
 

@@ -501,7 +501,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Een back-uponderdeel kon niet worden weggeschreven. Controleer of wp-content vrije ruimte heeft."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -509,7 +509,7 @@ msgstr[0] "%s-bestand kon niet worden gelezen en bevindt zich NIET in deze back-
 msgstr[1] "%s bestanden konden niet worden gelezen en zitten NIET in deze back-up. Meestal verhinderen hun bestandsrechten dat WordPress ze kan lezen, of ze zijn verwijderd terwijl de back-up werd gemaakt. Vraag je host (of gebruik je bestandsbeheer) om ze leesbaar te maken voor de webserver en maak daarna opnieuw een back-up."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -517,7 +517,7 @@ msgstr[0] "Weggelaten: %1$s (en nog %2$s bestand)."
 msgstr[1] "Weggelaten: %1$s (en nog %2$s bestanden)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Weggelaten: %s."
@@ -582,7 +582,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Database: %1$d tabellen, %2$s rijen, %3$s gecomprimeerd."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -590,18 +590,18 @@ msgstr[0] "Back-up voltooid: %1$s opgeslagen op %2$d bestemming."
 msgstr[1] "Back-up voltooid: %1$s opgeslagen op %2$d bestemmingen."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "%s bestand is weggelaten omdat het niet kon worden gelezen; zie Details."
 msgstr[1] "%s bestanden zijn overgeslagen omdat ze niet konden worden gelezen; zie Details."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Sommige reeds geüploade onderdelen konden niet uit je opslag worden verwijderd; ze bevinden zich in een map met onvolledige back-ups en worden nooit aangeboden voor herstel."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Een opslaglocatie is verwijderd terwijl de back-up werd uitgevoerd."
 
@@ -746,7 +746,7 @@ msgstr "De link opende een webpagina in plaats van een bestand. Deel het bestand
 msgid "The link answered with HTTP %d."
 msgstr "De link antwoordde met HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "De bestandenlijst kon niet worden geschreven."
 

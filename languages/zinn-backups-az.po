@@ -501,7 +501,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Ehtiyat nüsxə hissəsi yazıla bilmədi. wp-content qovluğunda boş yerin olduğunu yoxlayın."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -509,7 +509,7 @@ msgstr[0] "%s faylı oxuna bilmədi və bu ehtiyat nüsxədə DEYİL. Adətən o
 msgstr[1] "%s fayl oxuna bilmədi və bu ehtiyat nüsxədə YOXDUR. Adətən onların icazələri WordPress-in onları oxumasına mane olur və ya ehtiyat nüsxələmə icra olunarkən siliniblər. Onların veb-server tərəfindən oxuna bilən olması üçün hostinq təminatçınızdan xahiş edin (və ya fayl menecerinizdən istifadə edin), sonra yenidən ehtiyat nüsxə yaradın."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -517,7 +517,7 @@ msgstr[0] "Kənarda qalanlar: %1$s (və daha %2$s fayl)."
 msgstr[1] "Kənarda qalan: %1$s (və daha %2$s fayl)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Nəzərə alınmadı: %s."
@@ -582,7 +582,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Məlumat bazası: %1$d cədvəl, %2$s sətir, %3$s sıxılmış."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -590,18 +590,18 @@ msgstr[0] "Ehtiyat nüsxələmə tamamlandı: %1$s %2$d hədəfdə saxlanıldı.
 msgstr[1] "Ehtiyat nüsxələmə tamamlandı: %1$s %2$d təyinat yerində saxlanıldı."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "Fayl oxuna bilmədiyi üçün %s kənarda qaldı; Ətraflı bölməsinə baxın."
 msgstr[1] "%s fayl oxuna bilmədiyi üçün kənarda saxlanıldı; Təfərrüatlara baxın."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Artıq yüklənmiş bəzi hissələri yaddaşınızdan silmək mümkün olmadı; onlar natamam nüsxələmə qovluğundadır və bərpa üçün heç vaxt təklif olunmur."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Yedəkləmə icra olunarkən yaddaş hədəfi silindi."
 
@@ -746,7 +746,7 @@ msgstr "Keçid fayl əvəzinə veb-səhifə açdı. Google Drive və Dropbox ü�
 msgid "The link answered with HTTP %d."
 msgstr "Keçid HTTP %d ilə cavab verdi."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Fayl siyahısı yazıla bilmədi."
 

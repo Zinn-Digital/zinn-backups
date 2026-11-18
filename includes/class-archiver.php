@@ -145,6 +145,25 @@ final class Archiver {
 	}
 
 	/**
+	 * What the scan and the archive steps left out, together: the exact count and the first names.
+	 *
+	 * The scan leaves out what it cannot read (a file, or a whole folder named with a trailing
+	 * slash); the archive step leaves out what became unreadable or vanished after the scan.
+	 *
+	 * @param array<string,mixed> ...$cursors Scan and archive cursors (`skipped`, `skipped_files`).
+	 * @return array{0:int,1:string[]}
+	 */
+	public static function combine_skipped( array ...$cursors ): array {
+		$count = 0;
+		$named = array();
+		foreach ( $cursors as $cursor ) {
+			$count += (int) ( $cursor['skipped'] ?? 0 );
+			$named  = array_merge( $named, array_map( 'strval', (array) ( $cursor['skipped_files'] ?? array() ) ) );
+		}
+		return array( $count, array_slice( $named, 0, self::SKIPPED_NAMED ) );
+	}
+
+	/**
 	 * The log lines that tell the site owner which files a backup left out and what to do.
 	 *
 	 * @param int      $count Files left out (exact).

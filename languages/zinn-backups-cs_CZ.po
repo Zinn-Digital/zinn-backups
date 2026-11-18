@@ -507,7 +507,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Část zálohy se nepodařilo zapsat. Zkontrolujte, zda je ve složce wp-content volné místo."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -517,7 +517,7 @@ msgstr[2] "%s souborů se nepodařilo přečíst a NEJSOU v této záloze. Jejic
 msgstr[3] "%s souborů se nepodařilo přečíst a NEJSOU v této záloze. Jejich oprávnění obvykle brání WordPressu v jejich čtení, nebo byly během zálohování smazány. Požádejte svůj hosting (nebo použijte správce souborů), aby je webový server mohl číst, a poté zálohování zopakujte."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -527,7 +527,7 @@ msgstr[2] "Vynecháno: %1$s (a dalších %2$s souborů)."
 msgstr[3] "Vynecháno: %1$s (a dalších %2$s souborů)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Vynecháno: %s."
@@ -592,7 +592,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Databáze: %1$d tabulek, %2$s řádků, %3$s komprimováno."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -602,7 +602,7 @@ msgstr[2] "Zálohování dokončeno: %1$s uloženo v %2$d cílech."
 msgstr[3] "Zálohování dokončeno: %1$s uloženo v %2$d cílech."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
@@ -611,11 +611,11 @@ msgstr[1] "%s souborů bylo vynecháno, protože je nebylo možné přečíst; p
 msgstr[2] "%s souborů bylo vynecháno, protože je nebylo možné přečíst; podívejte se na Podrobnosti."
 msgstr[3] "%s souborů bylo vynecháno, protože je nebylo možné přečíst; podívejte se na Podrobnosti."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Některé již nahrané součásti se nepodařilo z vašeho úložiště odstranit; nacházejí se ve složce neúplné zálohy a nikdy nebudou nabídnuty k obnovení."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Cílové úložiště bylo odebráno v průběhu zálohování."
 
@@ -760,7 +760,7 @@ msgstr "Odkaz otevřel webovou stránku místo souboru. V případě Google Driv
 msgid "The link answered with HTTP %d."
 msgstr "Odkaz odpověděl s HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Seznam souborů se nepodařilo zapsat."
 

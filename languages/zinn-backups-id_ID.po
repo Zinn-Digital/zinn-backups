@@ -498,21 +498,21 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Sebagian berkas cadangan tidak dapat ditulis. Periksa apakah wp-content memiliki ruang kosong."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
 msgstr[0] "Berkas %s tidak dapat dibaca dan TIDAK ada dalam cadangan ini. Biasanya izinnya mencegah WordPress membacanya, atau berkas tersebut dihapus saat pencadangan berjalan. Minta penyedia hos Anda (atau gunakan manajer berkas Anda) untuk membuatnya dapat dibaca oleh server web, lalu buat cadangan lagi."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
 msgstr[0] "Ditinggalkan: %1$s (dan %2$s berkas lainnya)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Dilewati: %s."
@@ -577,24 +577,24 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Basis data: %1$d tabel, %2$s baris, %3$s dikompresi."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Pencadangan selesai: %1$s disimpan di %2$d tujuan."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "Berkas %s dilewati karena tidak dapat dibaca; lihat Detail."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Beberapa bagian yang sudah diunggah tidak dapat dihapus dari penyimpanan Anda; bagian tersebut berada di folder cadangan yang tidak lengkap dan tidak pernah ditawarkan untuk dipulihkan."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Tujuan penyimpanan dihapus saat pencadangan sedang berjalan."
 
@@ -739,7 +739,7 @@ msgstr "Tautan membuka halaman web, bukan berkas. Untuk Google Drive dan Dropbox
 msgid "The link answered with HTTP %d."
 msgstr "Tautan merespons dengan HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Daftar berkas tidak dapat ditulis."
 

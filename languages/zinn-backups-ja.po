@@ -498,21 +498,21 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "バックアップの一部を書き込めませんでした。wp-content に空き容量があるか確認してください。"
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
 msgstr[0] "%s ファイルを読み取ることができなかったため、このバックアップには含まれていません。通常はパーミッションによって WordPress による読み取りがブロックされているか、バックアップの実行中に削除された可能性があります。Web サーバーが読み取れるようにホスティング会社に依頼する (またはファイルマネージャーを使用する) か、再度バックアップを実行してください。"
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
 msgstr[0] "除外: %1$s (他 %2$s 件のファイル)。"
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "除外: %s。"
@@ -577,24 +577,24 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "データベース: %1$d 個のテーブル、%2$s 行、%3$s 圧縮済み。"
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "バックアップが完了しました: %1$s が %2$d 件の保存先に保存されました。"
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "読み込めなかったため、%s ファイルは除外されました。「詳細」を参照してください。"
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "すでにアップロードされた一部のパーツをストレージから削除できませんでした。これらは不完全なバックアップフォルダー内にあり、復元の対象として提示されることはありません。"
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "バックアップの実行中にストレージの保存先が削除されました。"
 
@@ -739,7 +739,7 @@ msgstr "リンクによってファイルの代わりにウェブページが開
 msgid "The link answered with HTTP %d."
 msgstr "リンクが HTTP %d を返しました。"
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "ファイルリストを書き込めませんでした。"
 

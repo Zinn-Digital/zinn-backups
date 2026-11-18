@@ -458,11 +458,10 @@ final class Backup_Job extends Job {
 	 * @return void
 	 */
 	private function complete(): void {
-		$manifest              = (array) $this->state['manifest'];
-		$size                  = (int) ( $manifest['database']['size'] ?? 0 ) + array_sum( array_map( static fn( $p ): int => (int) $p['size'], (array) $manifest['parts'] ) );
-		$skipped               = (int) ( $this->state['arc']['skipped'] ?? 0 );
-		$named                 = array_slice( array_map( 'strval', (array) ( $this->state['arc']['skipped_files'] ?? array() ) ), 0, Archiver::SKIPPED_NAMED );
-		$this->state['result'] = array(
+		$manifest                = (array) $this->state['manifest'];
+		$size                    = (int) ( $manifest['database']['size'] ?? 0 ) + array_sum( array_map( static fn( $p ): int => (int) $p['size'], (array) $manifest['parts'] ) );
+		list( $skipped, $named ) = Archiver::combine_skipped( (array) ( $this->state['scan'] ?? array() ), (array) ( $this->state['arc'] ?? array() ) );
+		$this->state['result']   = array(
 			'backup'        => $this->id(),
 			'remote'        => $this->state['remote'],
 			'size'          => $size,

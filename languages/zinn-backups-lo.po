@@ -498,21 +498,21 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "ບໍ່ສາມາດຂຽນສ່ວນສຳຮອງຂໍ້ມູນໄດ້. ກະລຸນາກວດສອບວ່າ wp-content ມີພື້ນທີ່ວ່າງຫຼືບໍ່."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
 msgstr[0] "ບໍ່ສາມາດອ່ານໄຟລ໌ %s ໄດ້ ແລະ ບໍ່ໄດ້ຢູ່ໃນການສຳຮອງຂໍ້ມູນນີ້. ໂດຍປົກກະຕິແລ້ວ ການອະນຸຍາດຂອງມັນຂັດຂວາງ WordPress ບໍ່ໃຫ້ອ່ານມັນ, ຫຼື ມັນຖືກລຶບໃນຂະນະທີ່ກຳລັງສຳຮອງຂໍ້ມູນ. ຂໍໃຫ້ຜູ້ໃຫ້ບໍລິການໂຮສຕິ້ງຂອງທ່ານ (ຫຼື ໃຊ້ຕົວຈັດການໄຟລ໌ຂອງທ່ານ) ເຮັດໃຫ້ເວັບເຊີບເວີສາມາດອ່ານມັນໄດ້, ຈາກນັ້ນໃຫ້ສຳຮອງຂໍ້ມູນອີກຄັ້ງ."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
 msgstr[0] "ຖືກຍົກເວັ້ນ: %1$s (ແລະ ອີກ %2$s ໄຟລ໌)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "ປະໄວ້: %s."
@@ -577,24 +577,24 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "ຖານຂໍ້ມູນ: %1$d ຕາຕະລາງ, %2$s ແຖວ, %3$s ຖືກບີບອັດ."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "ການສຳຮອງຂໍ້ມູນສຳເລັດ: %1$s ຖືກເກັບໄວ້ໃນ %2$d ປາຍທາງ."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "ໄຟລ໌ %s ຖືກປະໄວ້ເນື່ອງຈາກບໍ່ສາມາດອ່ານໄດ້; ເບິ່ງລາຍລະອຽດ."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "ບາງສ່ວນທີ່ອັບໂຫຼດແລ້ວບໍ່ສາມາດລຶບອອກຈາກບ່ອນຈັດເກັບຂໍ້ມູນຂອງທ່ານໄດ້; ພວກມັນຢູ່ໃນໂຟນເດີສຳຮອງຂໍ້ມູນທີ່ບໍ່ສົມບູນ ແລະ ບໍ່ເຄີຍຖືກສະເໜີໃຫ້ກູ້ຄືນ."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "ຈຸດໝາຍປາຍທາງບ່ອນຈັດເກັບຂໍ້ມູນຖືກລຶບອອກໃນຂະນະທີ່ກຳລັງສຳຮອງຂໍ້ມູນຢູ່."
 
@@ -739,7 +739,7 @@ msgstr "ລິ້ງໄດ້ເປີດໜ້າເວັບແທນທີ່
 msgid "The link answered with HTTP %d."
 msgstr "ລິ້ງຕອບກັບດ້ວຍ HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "ບໍ່ສາມາດຂຽນລາຍການໄຟລ໌ໄດ້."
 

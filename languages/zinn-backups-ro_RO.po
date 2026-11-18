@@ -504,7 +504,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "O parte a copiei de siguranță nu a putut fi scrisă. Verifică dacă wp-content are spațiu liber."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -513,7 +513,7 @@ msgstr[1] "%s fișiere nu au putut fi citite și NU sunt în această copie de s
 msgstr[2] "%s fișiere nu au putut fi citite și NU sunt în această copie de siguranță. De obicei, permisiunile lor împiedică WordPress să le citească sau au fost șterse în timp ce se efectua copia de siguranță. Cere-i gazdei tale (sau folosește managerul de fișiere) să le facă lizibile pentru serverul web, apoi creează din nou copia de siguranță."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -522,7 +522,7 @@ msgstr[1] "Omise: %1$s (și încă %2$s fișiere)."
 msgstr[2] "Omise: %1$s (și încă %2$s fișiere)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Omis: %s."
@@ -587,7 +587,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Bază de date: %1$d tabele, %2$s rânduri, %3$s comprimat."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -596,7 +596,7 @@ msgstr[1] "Copie de siguranță finalizată: %1$s stocat în %2$d destinații."
 msgstr[2] "Copie de rezervă finalizată: %1$s stocat în %2$d de destinații."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
@@ -604,11 +604,11 @@ msgstr[0] "Fișierul %s a fost omis deoarece nu a putut fi citit; vezi Detalii."
 msgstr[1] "%s fișiere au fost omise deoarece nu au putut fi citite; vezi Detalii."
 msgstr[2] "%s fișiere au fost omise deoarece nu au putut fi citite; vezi Detalii."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Unele părți deja încărcate nu au putut fi eliminate din spațiul tău de stocare; acestea se află într-un dosar de backup incomplet și nu sunt oferite niciodată pentru restaurare."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "O destinație de stocare a fost eliminată în timp ce se executa copia de rezervă."
 
@@ -753,7 +753,7 @@ msgstr "Linkul a deschis o pagină web în loc de un fișier. Pentru Google Driv
 msgid "The link answered with HTTP %d."
 msgstr "Linkul a răspuns cu HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Nu s-a putut scrie lista de fișiere."
 

@@ -7,7 +7,7 @@ Tags: backup, restore, migration, dropbox, google drive
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.14
+Stable tag: 1.0.15
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,7 +33,7 @@ Credentials are encrypted before they are saved in your database.
 * Long backups run in short steps that pick up where they stopped, so a host's 30-second limit does not end them.
 * Large uploads go in 8 MB chunks, resumed after a network hiccup.
 * Every file is checked against its SHA-256 checksum before it is restored.
-* A file the backup could not read (usually a permissions problem) is never left out silently: the backup names it, counts it and tells you how to fix it.
+* A file or folder the backup could not read (usually a permissions problem) is never left out silently: Recent activity shows "N files left out" with the list of names, the backup log counts them, and it tells you how to fix it.
 
 = Restore safely =
 
@@ -134,6 +134,9 @@ If you want the uploads folder to match the backup exactly (for example to remov
 3. Importing an UpdraftPlus backup.
 
 == Changelog ==
+
+= 1.0.15 =
+* Fix: a file or folder the backup cannot read is now named in the left-out list as well (the scan used to skip it before the archive step could see it).
 
 = 1.0.14 =
 * A backup now names the files it had to leave out (files WordPress could not read, or that were deleted while it ran): the first 200 are listed in the backup log and under the backup in Recent activity, with what to do about them, and the backup-complete message gives the count.

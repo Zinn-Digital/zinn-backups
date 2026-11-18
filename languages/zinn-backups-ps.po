@@ -501,7 +501,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "د شاتړ یوه برخه ونه لیکل شوه. وګورئ چې wp-content خالي ځای لري."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -509,7 +509,7 @@ msgstr[0] "د %s فایل لوستل نشو او پدې بیک اپ کې نشت�
 msgstr[1] "%s فایلونه لوستل کیدی نه شول او په دې بیک اپ کې شتون نه لري. معمولا د هغوی اجازې WordPress د لوستلو څخه منع کوي، یا د بیک اپ روانیدو پرمهال حذف شوي وو. له خپل کوربه (یا د فایل مدیر وکاروئ) څخه وغواړئ چې دوی د ویب سرور له لارې د لوستلو وړ کړي، بیا بیرته بیک اپ واخلئ."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -517,7 +517,7 @@ msgstr[0] "پاتې شوی: %1$s (او %2$s نور فایل)."
 msgstr[1] "پریښودل شوي: %1$s (او %2$s نورې فایلونه)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "پریښودل شوی: %s."
@@ -582,7 +582,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "ډیټابیس: %1$d جدولونه، %2$s قطارونه، %3$s کمپرس شوی."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -590,18 +590,18 @@ msgstr[0] "شاته‌نویس بشپړ شو: %1$s په %2$d ځای کې زېر�
 msgstr[1] "بیک اپ بشپړ شو: %1$s په %2$d ځایونو کې خوندي شو."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "%s فایل پاتې شو ځکه چې لوستل کیدی نشو؛ تفصیالت وګورئ."
 msgstr[1] "%s فایلونه ځکه پرېښودل شول چې لوستل یې نه شول کېدای؛ جزئیات وګورئ."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "ځینې برخې چې مخکې پورته شوې وې، ستاسو د زېرمتون څخه ونه ایستل شوې؛ هغوی په یوه نیمګړي شاتړ فولډر کې دي او هېڅکله د بېرته راګرځولو لپاره نه وړاندې کېږي."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "د شاتړ جوړولو پرمهال د زېرمې ځای لیرې شو."
 
@@ -746,7 +746,7 @@ msgstr "دغه لینک د دوتنې پر ځای یوه وېبپاڼه پران
 msgid "The link answered with HTTP %d."
 msgstr "تړوني د HTTP %d سره ځواب ورکړ."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "د فایلونو لست ونه لیکل شو."
 

@@ -513,7 +513,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "تعذر كتابة جزء من النسخة الاحتياطية. تحقق من وجود مساحة فارغة في wp-content."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -525,7 +525,7 @@ msgstr[4] "تعذر قراءة %s من الملفات وليست موجودة ف
 msgstr[5] "تعذر قراءة %s من الملفات وليست موجودة في هذه النسخة الاحتياطية. عادةً ما تمنع أذوناتها WordPress من قراءتها، أو تم حذفها أثناء تشغيل النسخ الاحتياطي. اطلب من مستضيفك (أو استخدم مدير الملفات لديك) جعلها قابلة للقراءة بواسطة خادم الويب، ثم قم بإجراء النسخ الاحتياطي مرة أخرى."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -537,7 +537,7 @@ msgstr[4] "المستبعد: %1$s (و%2$s ملفات إضافية)."
 msgstr[5] "المستبعد: %1$s (و%2$s ملفات إضافية)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "المستبعد: %s."
@@ -602,7 +602,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "قاعدة البيانات: %1$d جداول، %2$s صفوف، %3$s مضغوطة."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -614,7 +614,7 @@ msgstr[4] "اكتملت النسخة الاحتياطية: تم تخزين %1$s 
 msgstr[5] "اكتملت النسخة الاحتياطية: تم تخزين %1$s في %2$d وجهة."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
@@ -625,11 +625,11 @@ msgstr[3] "تم استبعاد %s من الملفات لأنه تعذر قراء
 msgstr[4] "تم استبعاد %s من الملفات لأنه تعذر قراءتها؛ راجع التفاصيل."
 msgstr[5] "تم استبعاد %s من الملفات لأنه تعذر قراءتها؛ راجع التفاصيل."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "تعذر حذف بعض الأجزاء التي تم رفعها بالفعل من مساحة التخزين الخاصة بك؛ فهي موجودة في مجلد نسخ احتياطي غير مكتمل ولا تُتاح أبدًا للاستعادة."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "تمت إزالة إحدى وجهات التخزين أثناء تشغيل النسخ الاحتياطي."
 
@@ -774,7 +774,7 @@ msgstr "فتح الرابط صفحة ويب بدلاً من ملف. بالنسب
 msgid "The link answered with HTTP %d."
 msgstr "استجاب الرابط برمز HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "تعذر كتابة قائمة الملفات."
 

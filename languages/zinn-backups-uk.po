@@ -504,7 +504,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Не вдалося записати частину резервної копії. Перевірте, чи є вільне місце у wp-content."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -513,7 +513,7 @@ msgstr[1] "Не вдалося прочитати файли (%s), і вони �
 msgstr[2] "Не вдалося прочитати файли (%s), і вони НЕ включені до цієї резервної копії. Зазвичай права доступу забороняють WordPress читати їх, або їх було видалено під час створення резервної копії. Попросіть вашого хостинг-провайдера (або скористайтеся файловим менеджером) зробити їх доступними для читання вебсервером, а потім повторіть резервне копіювання."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -522,7 +522,7 @@ msgstr[1] "Пропущено: %1$s (і ще %2$s файлів)."
 msgstr[2] "Пропущено: %1$s (і ще %2$s файлів)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Пропущено: %s."
@@ -587,7 +587,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "База даних: таблиць — %1$d, рядків — %2$s, стиснуто — %3$s."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -596,7 +596,7 @@ msgstr[1] "Резервне копіювання завершено: %1$s збе
 msgstr[2] "Резервне копіювання завершено: %1$s збережено у %2$d місцях призначення."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
@@ -604,11 +604,11 @@ msgstr[0] "Файл %s пропущено, оскільки його не вда
 msgstr[1] "%s файлів було пропущено, оскільки їх не вдалося прочитати; див. Подробиці."
 msgstr[2] "%s файлів було пропущено, оскільки їх не вдалося прочитати; див. Подробиці."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Деякі вже завантажені частини не вдалося вилучити з вашого сховища; вони знаходяться в папці незавершеної резервної копії та ніколи не пропонуються для відновлення."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Місце збереження було видалено під час створення резервної копії."
 
@@ -753,7 +753,7 @@ msgstr "Посилання відкрило вебсторінку заміст�
 msgid "The link answered with HTTP %d."
 msgstr "Посилання відповіло з HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Не вдалося записати список файлів."
 

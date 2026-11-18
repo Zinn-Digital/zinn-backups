@@ -498,21 +498,21 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "A kò le kọ apá kan àwọn ẹ̀dà-ipamọ́. Ṣàyẹ̀wò bóyá wp-content ní àyè ọ̀fẹ́."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
 msgstr[0] "Kò le ka faili %s àti pé KÒ sí nínú àfẹ́yìntì yìí. Nígbà púpọ̀, àwọn àṣẹ rẹ̀ máa ń dí WordPress lọ́wọ́ láti kà á, tàbí wọ́n ti pa á rẹ́ nígbà tí àfẹ́yìntì náà ń lọ lọ́wọ́. Béèrè lọ́wọ́ agbàlejò rẹ (tàbí lo olùṣàkóso faili rẹ) láti jẹ́ kí olupin ayélujára le kà á, lẹ́yìn náà tún ṣe àfẹ́yìntì."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
 msgstr[0] "Foju fò: %1$s (ati faili %2$s siwaju sii)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "A fi silẹ: %s."
@@ -577,24 +577,24 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Àkójọ-ìpìlẹ̀ data: %1$d àwọn tábìlì, %2$s àwọn ìlà, %3$s titebi."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Aṣẹ-afẹyinti ti pari: %1$s ti wa ni ipamọ si ibi %2$d."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "A fi faili %s silẹ nitori a ko le ka a; wo Awọn alaye."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Àwọn apá kan tí a ti gbé sára kò ṣeé yọ kúrò nínú ibi-ìpamọ́ rẹ; wọ́n wà nínú àpò àtìlẹ́yìn tí kò pé, a kì í sì í pèsè wọn fún ìmúbọ̀sípò láéláé."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "A yọ ibi ipamọ kuro lakoko ti afẹyinti n lọ lọwọ."
 
@@ -739,7 +739,7 @@ msgstr "Ọna asopọ naa ṣi oju-iwe wẹẹbu kan dipo faili kan. Fun Google 
 msgid "The link answered with HTTP %d."
 msgstr "Ọna asopọ naa dahun pẹlu HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Kò le kọ àkójọ fáìlì náà."
 

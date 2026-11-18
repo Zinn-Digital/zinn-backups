@@ -501,7 +501,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Qayb ka mid ah kaydinta lama qori karin. Hubi in wp-content uu leeyahay meel bannaan."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -509,7 +509,7 @@ msgstr[0] "Faylka %s lama akhrin karin mana ku jiro kaydkan. Caadiyan ogolaanshi
 msgstr[1] "%s fayl lama akhrin karin mana ku jiraan kaydkan. Caadiyan fasaxyadooda ayaa u diidaya WordPress inuu akhriyo, ama waxaa la tirtiray intii uu kaydinta socotay. Weydiiso martigeliyahaaga (ama isticmaal maamulahaaga faylka) si looga dhigo kuwa uu akhriyi karo seerfarka shabakaddu, ka dibna mar kale kaydi."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -517,7 +517,7 @@ msgstr[0] "Laga tagay: %1$s (iyo %2$s fayl oo kale)."
 msgstr[1] "Laga tagay: %1$s (iyo %2$s faylal kale)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Laga tagay: %s."
@@ -582,7 +582,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Xog-ururin: %1$d miisas, %2$s safaf, %3$s la cufay."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -590,18 +590,18 @@ msgstr[0] "Kaydintu way dhammaatay: %1$s waxa lagu kaydiyay %2$d meel."
 msgstr[1] "Kaydintii waa dhammaatay: %1$s waxaa lagu keydiyay %2$d goobood."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "Faylka %s waa laga tagay sababtoo ah lama akhrin karin; eeg Faahfaahinta."
 msgstr[1] "%s fayl ayaa laga tagay sababtoo ah lama akhrin karin; eeg Faahfaahinta."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Qaybo ka mid ah oo horay loo soo geliyay lagama saari karo kaydintaada; waxay ku jiraan faylka kaydinta aan dhamaystirnayn weligoodna looma soo bandhigo soo celinta."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Goob kaydin ayaa la saaray intii uu socday kaydinta nuqulka."
 
@@ -746,7 +746,7 @@ msgstr "Xiriirintu waxay furtay bog internet ah halkii ay ka furi lahayd fayl. G
 msgid "The link answered with HTTP %d."
 msgstr "Xiriirintu waxay kaga jawaabtay HTTP %d."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Lama qori karin liiska faylka."
 

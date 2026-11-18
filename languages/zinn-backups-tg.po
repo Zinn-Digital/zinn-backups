@@ -498,21 +498,21 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "Қисми нусхаи эҳтиётӣ сабт нашуд. Санҷед, ки оё дар wp-content ҷои холӣ ҳаст ё на."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
 msgstr[0] "Файли %s хонда нашуд ва дар ин нусхаи эҳтиётӣ мавҷуд НЕСТ. Одатан иҷозатҳои он ба хондани он тавассути WordPress монеъ мешаванд, ё он ҳангоми сохтани нусхаи эҳтиётӣ нест карда шудааст. Аз хостинги худ хоҳиш кунед (ё мудири файлҳои худро истифода баред), то онро барои сервери веб хонданибоб гардонад, сипас дубора нусхаи эҳтиётӣ бардоред."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
 msgstr[0] "Берун монда: %1$s (ва боз %2$s парванда)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "Сарфи назар шуд: %s."
@@ -577,24 +577,24 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "Пойгоҳи додаҳо: %1$d ҷадвал, %2$s сатр, %3$s фишурда."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
 msgstr[0] "Нусхабардорӣ анҷом ёфт: %1$s дар %2$d макони таъйиншуда нигоҳ дошта шуд."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "Файли %s баромада рафт, чунки он хонда нашуд; ба Бахши ҷузъиёт нигаред."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "Баъзе қисмҳои аллакай боршударо аз анбори шумо нест кардан имконнопазир буд; онҳо дар ҷузвдони нусхаи эҳтиётии нопурра қарор доранд ва ҳеҷ гоҳ барои барқароркунӣ пешниҳод намешаванд."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "Ҳангоми иҷрои нусхабардорӣ яке аз анборҳои нигоҳдорӣ нест карда шуд."
 
@@ -739,7 +739,7 @@ msgstr "Пайванд ба ҷои файл саҳифаи интернетир�
 msgid "The link answered with HTTP %d."
 msgstr "Пайванд бо HTTP %d ҷавоб дод."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "Рӯйхати файлҳоро сабт кардан натавонист."
 

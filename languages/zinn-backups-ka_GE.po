@@ -501,7 +501,7 @@ msgid "A backup part could not be written. Check that wp-content has free space.
 msgstr "სარეზერვო ასლის ნაწილის ჩაწერა ვერ მოხერხდა. შეამოწმეთ, რომ wp-content-ს აქვს თავისუფალი ადგილი."
 
 #. translators: %s: number of files.
-#: includes/class-archiver.php:161
+#: includes/class-archiver.php:180
 #, php-format
 msgid "%s file could not be read and is NOT in this backup. Usually its permissions stop WordPress reading it, or it was deleted while the backup ran. Ask your host (or use your file manager) to make it readable by the web server, then back up again."
 msgid_plural "%s files could not be read and are NOT in this backup. Usually their permissions stop WordPress reading them, or they were deleted while the backup ran. Ask your host (or use your file manager) to make them readable by the web server, then back up again."
@@ -509,7 +509,7 @@ msgstr[0] "%s ფაილის წაკითხვა ვერ მოხე
 msgstr[1] "%s ფაილის წაკითხვა ვერ მოხერხდა და ისინი არ არის ამ სარეზერვო ასლში. ჩვეულებრივ, მათი ნებართვები უშლის ხელს WordPress-ს მათ წაკითხვაში, ან ისინი წაიშალა სარეზერვო ასლის შექმნის პროცესში. სთხოვეთ თქვენს ჰოსტინგ პროვაიდერს (ან გამოიყენეთ თქვენი ფაილების მენეჯერი), რათა ისინი ხელმისაწვდომი გახდეს ვებ-სერვერისთვის წასაკითხად, შემდეგ კი ხელახლა შექმენით სარეზერვო ასლი."
 
 #. translators: 1: comma-separated file paths, 2: number of further files not named.
-#: includes/class-archiver.php:176
+#: includes/class-archiver.php:195
 #, php-format
 msgid "Left out: %1$s (and %2$s more file)."
 msgid_plural "Left out: %1$s (and %2$s more files)."
@@ -517,7 +517,7 @@ msgstr[0] "გამოტოვებული: %1$s (და კიდევ %2
 msgstr[1] "გამოტოვებული: %1$s (და კიდევ %2$s ფაილი)."
 
 #. translators: %s: comma-separated file paths.
-#: includes/class-archiver.php:182
+#: includes/class-archiver.php:201
 #, php-format
 msgid "Left out: %s."
 msgstr "გამოტოვებული: %s."
@@ -582,7 +582,7 @@ msgid "Database: %1$d tables, %2$s rows, %3$s compressed."
 msgstr "მონაცემთა ბაზა: %1$d ცხრილი, %2$s მწკრივი, %3$s შეკუმშული."
 
 #. translators: 1: size of the backup, 2: number of destinations.
-#: includes/class-backup-job.php:479
+#: includes/class-backup-job.php:478
 #, php-format
 msgid "Backup complete: %1$s stored in %2$d destination."
 msgid_plural "Backup complete: %1$s stored in %2$d destinations."
@@ -590,18 +590,18 @@ msgstr[0] "სარეზერვო ასლი დასრულებუ�
 msgstr[1] "სარეზერვო ასლი დასრულდა: %1$s შენახულია %2$d დანიშნულების ადგილას."
 
 #. translators: %s: number of files.
-#: includes/class-backup-job.php:486
+#: includes/class-backup-job.php:485
 #, php-format
 msgid "%s file was left out because it could not be read; see Details."
 msgid_plural "%s files were left out because they could not be read; see Details."
 msgstr[0] "%s ფაილი გამოტოვებული იქნა, რადგან მისი წაკითხვა ვერ მოხერხდა; იხილეთ დეტალები."
 msgstr[1] "%s ფაილი გამოტოვებული იქნა, რადგან მათი წაკითხვა ვერ მოხერხდა; იხილეთ დეტალები."
 
-#: includes/class-backup-job.php:516
+#: includes/class-backup-job.php:515
 msgid "Some parts already uploaded could not be removed from your storage; they are in an incomplete backup folder and are never offered for restore."
 msgstr "უკვე ატვირთული ზოგიერთი ნაწილის წაშლა თქვენი საცავიდან ვერ მოხერხდა; ისინი არასრული სარეზერვო ასლის საქაღალდეშია და აღსადგენად არასდროს შემოგთავაზებენ."
 
-#: includes/class-backup-job.php:533
+#: includes/class-backup-job.php:532
 msgid "A storage destination was removed while the backup was running."
 msgstr "სარეზერვო ასლის შექმნის პროცესში მეხსიერების სამიზნე ადგილი წაიშალა."
 
@@ -746,7 +746,7 @@ msgstr "ბმულმა ფაილის ნაცვლად ვებ-�
 msgid "The link answered with HTTP %d."
 msgstr "ბმულმა უპასუხა HTTP %d-ით."
 
-#: includes/class-file-scanner.php:53
+#: includes/class-file-scanner.php:56
 msgid "The file list could not be written."
 msgstr "ფაილების სიის ჩაწერა ვერ მოხერხდა."
 
