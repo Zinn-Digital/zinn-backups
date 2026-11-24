@@ -7,7 +7,7 @@ Tags: backup, restore, migration, dropbox, google drive
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.15
+Stable tag: 1.0.16
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -134,6 +134,9 @@ If you want the uploads folder to match the backup exactly (for example to remov
 3. Importing an UpdraftPlus backup.
 
 == Changelog ==
+
+= 1.0.16 =
+* The Pro discount check no longer sends the site address in its user agent.
 
 = 1.0.15 =
 * Fix: a file or folder the backup cannot read is now named in the left-out list as well (the scan used to skip it before the archive step could see it).

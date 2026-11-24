@@ -313,6 +313,8 @@ final class Pro_Discount {
 				'timeout'     => self::TIMEOUT,
 				'sslverify'   => true,
 				'redirection' => 0,
+				// The argument, not a header: WordPress's default value carries the site address.
+				'user-agent'  => 'ZinnProDiscount/1',
 				'headers'     => array(
 					'Content-Type'           => 'application/json',
 					'X-Zinn-Cache-Timestamp' => $timestamp,
