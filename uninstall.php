@@ -27,10 +27,7 @@ function zinn_backups_uninstall(): void {
 		wp_delete_file( $loader );
 	}
 	$work_name = (string) get_option( 'zinn_backups_work_dir', '' );
-	if ( defined( 'AUTH_KEY' ) && defined( 'SECURE_AUTH_KEY' ) && strlen( (string) AUTH_KEY . (string) SECURE_AUTH_KEY ) > 40 ) {
-		$work_name = 'zinn-backups-' . substr( hash_hmac( 'sha256', 'zinn-backups-work', (string) AUTH_KEY . (string) SECURE_AUTH_KEY ), 0, 32 );
-	}
-	$uploads = wp_upload_dir( null, false );
+	$uploads   = wp_upload_dir( null, false );
 	foreach ( array( untrailingslashit( (string) $uploads['basedir'] ) ) as $parent ) {
 		$dir = $parent . '/' . $work_name;
 		if ( 1 === preg_match( '/^zinn-backups-[a-f0-9]{32}$/', $work_name ) && is_dir( $dir ) ) {

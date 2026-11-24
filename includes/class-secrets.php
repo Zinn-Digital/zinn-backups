@@ -71,9 +71,8 @@ final class Secrets {
 	 * @return string
 	 */
 	private static function key(): string {
-		$material = defined( 'SECURE_AUTH_KEY' ) && '' !== (string) SECURE_AUTH_KEY
-			? (string) SECURE_AUTH_KEY . ( defined( 'LOGGED_IN_KEY' ) ? (string) LOGGED_IN_KEY : '' )
-			: wp_salt( 'secure_auth' );
+		// wp.org 2a.2: never the wp-config keys themselves; wp_salt() is core's API for them.
+		$material = wp_salt( 'secure_auth' ) . wp_salt( 'logged_in' );
 		return sodium_crypto_generichash( 'zinn-backups-secrets|' . $material, '', SODIUM_CRYPTO_SECRETBOX_KEYBYTES );
 	}
 }

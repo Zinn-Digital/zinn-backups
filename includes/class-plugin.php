@@ -113,11 +113,12 @@ final class Plugin {
 		}
 		$on   = wp_nonce_url( admin_url( 'admin-post.php?action=zinn_backups_loader_on' ), 'zinn_backups_loader_on' );
 		$skip = wp_nonce_url( admin_url( 'admin-post.php?action=zinn_backups_loader_dismiss' ), 'zinn_backups_loader_dismiss' );
-		echo '<div class="notice notice-info"><p>' . esc_html__( 'Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask.', 'zinn-backups' ) . '</p><p><a class="button button-primary" href="' . esc_url( $on ) . '">' . esc_html__( 'Keep backups running when the plugin is switched off', 'zinn-backups' ) . '</a> <a class="button" href="' . esc_url( $skip ) . '">' . esc_html__( 'No thanks', 'zinn-backups' ) . '</a></p></div>';
+		echo '<div class="notice notice-info"><p>' . esc_html__( 'Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code.', 'zinn-backups' ) . '</p><p><a class="button button-primary" href="' . esc_url( $on ) . '">' . esc_html__( 'Keep backups running when the plugin is switched off', 'zinn-backups' ) . '</a> <a class="button" href="' . esc_url( $skip ) . '">' . esc_html__( 'No thanks', 'zinn-backups' ) . '</a></p></div>';
 	}
 
 	/**
-	 * The one-click opt-in from the offer notice: turn the setting on and put the loader in place.
+	 * The one-click opt-in from the offer notice: turn the setting on, then the settings page shows
+	 * the loader code to copy in (the plugin never writes it).
 	 *
 	 * @return void
 	 */
@@ -129,7 +130,7 @@ final class Plugin {
 		update_option( Mu_Loader::OFFERED, 'taken', false );
 		Settings::set_keep_running( true );
 		Mu_Loader::sync();
-		wp_safe_redirect( wp_get_referer() ? wp_get_referer() : admin_url( 'admin.php?page=' . self::PAGE ) );
+		wp_safe_redirect( admin_url( 'admin.php?page=' . self::PAGE ) );
 		exit;
 	}
 
@@ -525,8 +526,8 @@ final class Plugin {
 				 */
 				do_action( 'zinn_backups_save_settings', wp_unslash( $_POST ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- guard() ran; each listener sanitises its own fields.
 				if ( true !== $loader ) {
-					/* translators: %s: why the must-use loader could not be written or removed. */
-					return array( 'message' => sprintf( __( 'Settings saved, but the background loader was not changed: %s', 'zinn-backups' ), $loader ) );
+					/* translators: %s: what is left to do for the must-use loader, or why it could not be removed. */
+					return array( 'message' => sprintf( __( 'Settings saved. The background loader: %s', 'zinn-backups' ), $loader ) );
 				}
 				return array( 'message' => __( 'Settings saved.', 'zinn-backups' ) );
 			}

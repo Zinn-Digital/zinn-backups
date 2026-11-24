@@ -436,10 +436,13 @@ final class Cli {
 	 *
 	 * <action>
 	 * : status, install or remove. install and remove also switch the "Keep running" setting.
+	 * install prints the loader code for you to save into the must-use plugins folder (the
+	 * plugin never writes it there); it reports success once the current loader is in place.
 	 *
 	 * ## EXAMPLES
 	 *
 	 *     wp zinn-backups loader status
+	 *     wp zinn-backups loader install > wp-content/mu-plugins/zinn-backups-loader.php
 	 *     wp zinn-backups loader remove
 	 *
 	 * @param array<int,string> $args Positional.
@@ -452,6 +455,12 @@ final class Cli {
 				case 'remove':
 					Settings::set_keep_running( 'install' === $args[0] );
 					$result = Mu_Loader::sync();
+					if ( 'install' === $args[0] && true !== $result && '' === Mu_Loader::blocked_reason() ) {
+						// The plugin never writes the loader: print it for the site owner to save.
+						\WP_CLI::line( Mu_Loader::source() );
+						\WP_CLI::warning( $result );
+						return;
+					}
 					if ( true !== $result ) {
 						\WP_CLI::error( $result );
 					}

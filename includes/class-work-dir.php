@@ -46,17 +46,14 @@ final class Work_Dir {
 	/**
 	 * The folder's name.
 	 *
-	 * ⛔ Derived from the `wp-config.php` keys when they are set, because a restore replaces
-	 * `wp_options` mid-job and a name kept only there would change under the running restore.
-	 * The option is the fallback for a site with no keys in its config, and the restore puts
-	 * it back after the table swap ({@see Restore_Job}).
+	 * ⛔ A random name kept in an option, never derived from the `wp-config.php` keys (wp.org
+	 * review class 2a.2). A restore replaces `wp_options` mid-job, so the job carries the name
+	 * in its state and puts it back right after the table swap ({@see Restore_Job::do_swap()},
+	 * {@see self::remember()}).
 	 *
 	 * @return string
 	 */
 	public static function name(): string {
-		if ( defined( 'AUTH_KEY' ) && defined( 'SECURE_AUTH_KEY' ) && strlen( (string) AUTH_KEY . (string) SECURE_AUTH_KEY ) > 40 && ! str_contains( (string) AUTH_KEY, 'put your unique phrase here' ) ) {
-			return 'zinn-backups-' . substr( hash_hmac( 'sha256', 'zinn-backups-work', (string) AUTH_KEY . (string) SECURE_AUTH_KEY ), 0, 32 );
-		}
 		$name = (string) get_option( self::OPTION, '' );
 		if ( 1 !== preg_match( '/^zinn-backups-[a-f0-9]{32}$/', $name ) ) {
 			$name = 'zinn-backups-' . bin2hex( random_bytes( 16 ) );

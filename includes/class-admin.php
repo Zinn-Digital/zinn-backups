@@ -517,12 +517,13 @@ final class Admin {
 		echo '<p class="description">' . esc_html__( 'Always left out: caches, update scratch space, and other backup plugins’ own archive folders:', 'zinn-backups' ) . ' <code dir="ltr">' . esc_html( implode( ', ', Settings::DEFAULT_EXCLUDES ) ) . '</code></p>';
 		echo '<p><label>' . esc_html__( 'Size of each part (MB)', 'zinn-backups' ) . ' <input type="number" name="part_mb" min="10" max="2000" value="' . esc_attr( (string) $all['part_mb'] ) . '"></label></p>';
 		echo '<p><label><input type="checkbox" name="keep_running" value="1"' . checked( $all['keep_running'], true, false ) . '> ' . esc_html__( 'Keep backups running when the plugin is switched off', 'zinn-backups' ) . '</label></p>';
-		echo '<p class="description">' . esc_html__( 'Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder.', 'zinn-backups' ) . '</p>';
+		echo '<p class="description">' . esc_html__( 'Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder.', 'zinn-backups' ) . '</p>';
 		$blocked = Mu_Loader::blocked_reason();
 		if ( '' !== $blocked ) {
 			echo '<p class="description">' . esc_html( $blocked ) . '</p>';
-		} elseif ( $all['keep_running'] && ! Mu_Loader::installed() ) {
-			echo '<p class="description">' . esc_html__( 'The loader is not in place. Save the settings to put it back.', 'zinn-backups' ) . '</p>';
+		} elseif ( $all['keep_running'] && ! Mu_Loader::current() ) {
+			// The plugin never writes into the must-use folder: the site owner copies the loader in.
+			echo '<div class="notice notice-warning inline"><p>' . esc_html__( 'The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install).', 'zinn-backups' ) . '</p><p><code dir="ltr">' . esc_html( Mu_Loader::path() ) . '</code></p><textarea readonly rows="8" class="large-text code" dir="ltr">' . esc_textarea( Mu_Loader::source() ) . '</textarea></div>';
 		}
 		/**
 		 * Prints extra settings fields (Zinn® Backups Pro adds schedules, retention and encryption).

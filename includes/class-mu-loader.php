@@ -12,7 +12,9 @@ namespace ZinnDigital\Backups;
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Writes and removes `wp-content/mu-plugins/zinn-backups-loader.php`.
+ * Offers `wp-content/mu-plugins/zinn-backups-loader.php` for the site owner to copy in, and
+ * removes it when it is ours and no longer wanted. The plugin never writes it (WordPress.org
+ * review class R003: no executable code written outside the plugin's own folder).
  *
  * Why it exists: a restore replaces the options table with the backup's, and a site restored from
  * a backup made before Zinn® Backups was active no longer lists the plugin as active — halfway
@@ -23,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
  * already defined).
  *
  * ⛔ Installed and removed safely:
- *  - written to a temporary name and renamed into place, so a request never includes half a file;
+ *  - copied in by the site owner (settings page or `wp zinn-backups loader install`), never written;
  *  - never overwrites or deletes a file of that name that is not ours (the marker line);
  *  - on a multisite network only when the plugin is network-active (a must-use plugin runs on
  *    every site of the network);
@@ -165,9 +167,26 @@ final class Mu_Loader {
 	}
 
 	/**
-	 * Write the loader (atomically) unless it is already current.
+	 * Whether the loader in place is the current one for this copy of the plugin.
 	 *
-	 * @return true|string True, or why it could not be written.
+	 * @return bool
+	 */
+	public static function current(): bool {
+		try {
+			$source = self::source();
+		} catch ( \InvalidArgumentException $e ) {
+			return false;
+		}
+		$path = self::path();
+		return is_file( $path ) && (string) file_get_contents( $path ) === $source; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- a local file.
+	}
+
+	/**
+	 * The loader is never written by the plugin (WordPress.org review: a plugin does not write
+	 * executable code into the must-use plugins folder). The site owner copies it in: the code is
+	 * shown on the settings page and printed by `wp zinn-backups loader install`.
+	 *
+	 * @return true|string True when the current loader is in place, or what the owner has to do.
 	 */
 	public static function install() {
 		$blocked = self::blocked_reason();
@@ -175,33 +194,15 @@ final class Mu_Loader {
 			return $blocked;
 		}
 		try {
-			$source = self::source();
+			self::source();
 		} catch ( \InvalidArgumentException $e ) {
 			return $e->getMessage();
 		}
-		$path = self::path();
-		if ( is_file( $path ) && (string) file_get_contents( $path ) === $source ) { // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- a local file.
+		if ( self::current() ) {
 			return true;
 		}
-		if ( ! wp_mkdir_p( self::mu_dir() ) ) {
-			return __( 'The must-use plugins folder could not be created.', 'zinn-backups' );
-		}
-		if ( ! wp_is_writable( self::mu_dir() ) ) {
-			return __( 'The must-use plugins folder is not writable.', 'zinn-backups' );
-		}
-		$tmp = $path . '.' . bin2hex( random_bytes( 4 ) ) . '.tmp';
-		if ( strlen( $source ) !== file_put_contents( $tmp, $source ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents -- written to a temporary name, then renamed into place.
-			wp_delete_file( $tmp );
-			return __( 'The must-use plugins folder is not writable.', 'zinn-backups' );
-		}
-		if ( ! rename( $tmp, $path ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions.rename_rename -- an atomic replace: a request never includes half a file.
-			wp_delete_file( $tmp );
-			return __( 'The loader could not be put in place.', 'zinn-backups' );
-		}
-		if ( function_exists( 'opcache_invalidate' ) ) {
-			opcache_invalidate( $path, true );
-		}
-		return true;
+		/* translators: %s: the full path the loader file goes to. */
+		return sprintf( __( 'Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install).', 'zinn-backups' ), self::path() );
 	}
 
 	/**

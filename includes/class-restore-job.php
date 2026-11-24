@@ -788,6 +788,7 @@ final class Restore_Job extends Job {
 		$plugins = array_values(
 			array_filter(
 				(array) ( $package['Plugins'] ?? array() ),
+				// wporg-justified: a restore is the plugin's core job, started explicitly by a user with the plugin's capability and a nonce; this only reads which restored plugins exist.
 				static fn( $plugin ): bool => is_string( $plugin ) && Import\Archive_Reader::safe_name( $plugin ) && is_file( WP_PLUGIN_DIR . '/' . $plugin )
 			)
 		);
@@ -801,6 +802,7 @@ final class Restore_Job extends Job {
 			'stylesheet' => 'Stylesheet',
 		) as $option => $key ) {
 			$theme = (string) ( $package[ $key ] ?? '' );
+			// wporg-justified: a restore is the plugin's core job, started explicitly by a user with the plugin's capability and a nonce; this only reads which restored themes exist.
 			if ( '' !== $theme && Import\Archive_Reader::safe_name( $theme ) && is_dir( get_theme_root() . '/' . $theme ) ) {
 				$wpdb->update( $table, array( 'option_value' => $theme ), array( 'option_name' => $option ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery -- a restored table.
 			}
