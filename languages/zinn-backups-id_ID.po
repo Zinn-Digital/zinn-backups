@@ -478,14 +478,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "Tetap jalankan pencadangan saat plugin dinonaktifkan"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "Mati kecuali Anda mengaktifkannya. Menjaga pencadangan, pemulihan, dan perintah WP-CLI tetap berjalan jika plugin ini dimatikan, atau jika basis data yang dipulihkan tidak lagi mencantumkannya sebagai aktif. Ini menempatkan pemuat kecil di folder plugin must-use."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "Nonaktif kecuali Anda mengaktifkannya. Menjaga pencadangan, pemulihan, dan perintah WP-CLI tetap berjalan jika plugin ini dimatikan, atau jika basis data yang dipulihkan tidak lagi mencantumkannya sebagai aktif. Ini menggunakan pemuat kecil yang Anda salin ke folder plugin must-use."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "Pemuat tidak berada di tempatnya. Simpan pengaturan untuk mengembalikannya."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Pemuat belum berada di tempatnya. Zinn® Backups tidak menulis langsung ke dalam folder plugin yang wajib digunakan: salin kode di bawah ini ke berkas baru di jalur ini (WP-CLI menampilkannya dengan: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "Simpan pengaturan"
 
@@ -643,19 +643,19 @@ msgstr "Hapus %1$s dari tujuan %2$s? Cadangan ke tujuan ini akan berhenti hingga
 msgid "Removed %1$s from destination %2$s."
 msgstr "%1$s telah dihapus dari tujuan %2$s."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "Pemuat sudah berada di tempatnya."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "Pemuat telah dihapus."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Penggunaan: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "Variabel lingkungan tersebut belum diatur atau kosong."
 
@@ -767,111 +767,104 @@ msgstr "%1$s merespons dengan HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "Tidak ada rincian yang diberikan"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "Pada jaringan multisitus, pemuat hanya digunakan ketika Zinn® Backups diaktifkan di seluruh jaringan, karena plugin yang wajib digunakan berjalan di setiap situs."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "Berkas lain bernama zinn-backups-loader.php sudah ada di folder plugin wajib (must-use plugins); berkas tersebut dibiarkan apa adanya."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "Folder plugin yang harus digunakan tidak dapat dibuat."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Salin kode pemuat ke berkas baru di %s (halaman pengaturan menampilkannya; WP-CLI mencetaknya dengan: wp zinn-backups loader install)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "Folder plugin yang harus digunakan (must-use) tidak dapat ditulisi."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "Pemuat tidak dapat dipasang di tempatnya."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "Pemuat tidak dapat dihapus."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "Zinn® Backups dapat menjaga pencadangan atau pemulihan yang sedang berjalan, beserta perintah WP-CLI miliknya, tetap bekerja meskipun plugin dinonaktifkan. Ini dilakukan dengan pemuat kecil di folder must-use plugins, yang hanya ditambahkan jika Anda memintanya."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "Zinn® Backups dapat menjaga pencadangan atau pemulihan yang sedang berlangsung, serta perintah WP-CLI miliknya, tetap berjalan bahkan jika plugin dinonaktifkan. Hal ini dilakukan dengan loader kecil yang Anda salin ke folder plugin yang wajib digunakan (must-use); halaman pengaturan menampilkan kodenya."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "Tidak, terima kasih"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "Anda tidak diizinkan untuk mengelola cadangan."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "Zinn® Backups dinonaktifkan, tetapi pemuatnya di folder plugin wajib (must-use plugins) menjaga setiap pencadangan atau pemulihan yang sedang berlangsung, serta perintah WP-CLI miliknya, tetap berfungsi."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "Hentikan agar tidak berjalan di latar belakang"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Centang kotak untuk mengonfirmasi bahwa pemulihan akan menggantikan berkas dan basis data situs ini."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "Simpan tujuan terlebih dahulu."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "Terhubung: berkas uji coba telah ditulis dan dihapus."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Masukkan kunci aplikasi Dropbox Anda terlebih dahulu (lihat langkah-langkah di samping formulir)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "Jenis penyimpanan ini tidak masuk."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "Waktu masuk telah kedaluwarsa. Tekan Hubungkan lagi."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Dropbox terhubung."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "Pengaturan disimpan, tetapi pemuat latar belakang tidak diubah: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "Pengaturan disimpan. Pemuat latar belakang: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "Pengaturan disimpan."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Pencadangan, pemulihan, atau impor lain sedang berjalan. Harap tunggu hingga selesai, atau batalkan."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "Unggahan tidak dimulai dengan benar. Mulai lagi."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Potongan data tidak sampai. Server Anda mungkin membatasi ukuran unggahan; silakan coba lagi."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Centang kotak untuk mengonfirmasi bahwa impor mengganti konten dan basis data situs ini."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Pilih arsip untuk diimpor: unggah arsip, tempelkan tautan, atau pilih salah satu dari folder impor."
 
@@ -1047,11 +1040,11 @@ msgstr "Cadangan ini berasal dari jaringan multisitus. Memulihkan jaringan ke si
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Memindahkan konten dari %1$s ke %2$s."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "Pemulihan selesai. Jika Anda telah keluar, masuklah dengan akun dari situs yang dipulihkan."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "Pemulihan selesai."
 
@@ -1093,7 +1086,7 @@ msgstr "Daftar berkas cadangan tidak dapat dibaca, sehingga tidak ada unggahan t
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "Tidak ada folder yang dapat ditulisi untuk berkas cadangan sementara. Jadikan wp-content dapat ditulisi dan coba lagi."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "Tidak dapat membuat folder untuk tugas ini."
 

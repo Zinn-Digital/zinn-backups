@@ -478,14 +478,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "Tesiwaju lati ma se afẹyinti nigbati a ba pa afikun na"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "Paa ayafi ti o ba tan-an. N pa awọn afẹyinti, awọn imupadabọ ati awọn aṣẹ WP-CLI mọ lati ma ṣiṣẹ ti o ba jẹ pe a pa afikun yii, tabi ti ibi ipamọ data ti a mu pada ko ba ṣe atokọ rẹ mọ gẹgẹbi eyiti n ṣiṣẹ. Eyi fi olutẹwọle kekere kan si folda awọn afikun ti o gbọdọ lo."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "Paa ayafi ti o ba tan-an. O n jẹ ki awọn ifipamọ, awọn mimu-pada-bọsipo ati awọn aṣẹ WP-CLI tẹsiwaju lati ṣiṣẹ ti a ba pa afikun yii, tabi ti ibi ipamọ data ti a mu pada ko ba ṣe atokọ rẹ mọ gẹgẹbi eyiti n ṣiṣẹ. O nlo olutẹsiwaju kekere kan ti o ṣe adakọ sinu folda awọn afikun must-use."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "Olùgbékalẹ̀ kò sí ní ààyè rẹ̀. Fi àwọn ètò pamọ́ láti dá a padà síbẹ̀."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Olùgbéjáde náà kò tíì wà ní àyè rẹ̀. Zinn® Backups kò kọ sínú àpò-ìwé àwọn àfikún dandan fúnrarẹ̀: da koodu tí ó wà ní ìsàlẹ̀ yìí kọ sínú fáìlì tuntun ní ipa-ọ̀nà yìí (WP-CLI ń tẹ̀ ẹ́ jáde pẹ̀lú: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "Fipamọ́ àwọn ètò"
 
@@ -643,19 +643,19 @@ msgstr "Yọ %1$s kúrò nínú ibi-àyè %2$s? Àwọn àfipamọ́ sí i yóò
 msgid "Removed %1$s from destination %2$s."
 msgstr "A ti yọ %1$s kuro lati ibi ti a nlọ %2$s."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "Olùgbàwọlé náà wà ní àyè rẹ̀."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "A ti yọ agbéwọlé kúrò."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Ìlò: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "Oníyípadà àyíká yẹn kò tíì di títò tàbí ó ṣófo."
 
@@ -767,111 +767,104 @@ msgstr "%1$s dahun pẹlu HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "A kò pèsè àwọn kúlẹ́kúlẹ́"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "Lori nẹtiwọọki aaye pupọ a nlo olutrù nikan nigbati Zinn® Backups ba ṣiṣẹ lori gbogbo nẹtiwọọki, nitori pe ohun itanna ti o gbọdọ lo n ṣiṣẹ lori gbogbo aaye."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "Fáìlì mìíràn tí orúkọ rẹ̀ ń jẹ́ zinn-backups-loader.php ti wà nínú àpò àwọn àfikún dandan (must-use plugins); a fi sílẹ̀ bẹ́ẹ̀ láìfọwọ́kàn."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "A ko le ṣẹda folda awọn afikun ti o gbọdọ lo."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Ṣe adakọ koodu agberusoke sinu faili titun ni %s (oju-iwe awọn eto n ṣe afihan rẹ; WP-CLI n tẹ pẹlu: wp zinn-backups loader install)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "Fóldà àwọn àfikún agbára dandan-láti-lò (must-use) kò ṣe é kọ sínú rẹ̀."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "Aṣe-igbasilẹ naa ko le ṣe fi si aaye rẹ."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "A ko le yọ olùrù jáde."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "Zinn® Backups le jẹ ki ifipamọ tabi mimu-pada-bọsipo ti n lọ lọwọ, ati awọn aṣẹ WP-CLI rẹ, tẹsiwaju lati ṣiṣẹ paapaa ti a ba pa afikun naa. O n ṣe eyi pẹlu olutrù kekere kan ninu folda awọn afikun gbọdọ-lo (must-use), ti a n ṣafikun nikan ti ẹ ba beere."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "Zinn® Backups le jẹ ki afẹyinti tabi mimu-pada-bọsipo ti n lọ lọwọ, ati awọn aṣẹ WP-CLI rẹ, tẹsiwaju lati ṣiṣẹ paapaa ti a ba pa afikun naa. O ṣe eyi pẹlu olutẹwọle kekere kan ti o daakọ sinu folda awọn afikun must-use; oju-iwe awọn eto n ṣe afihan koodu naa."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "Rárá, oṣe"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "A kò fún ọ láàyè láti bójútó àwọn àwòkọ́fipamọ́."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "A ti pa Zinn® Backups, ṣùgbọ́n ohun èlò ìrùsókè rẹ̀ nínú àpò àwọn ohun àfikún gbọ́dọ̀-lò (must-use plugins) ń jẹ́ kí àtìlẹ́yìn tàbí ìmúbọ̀sípò èyíkéyìí tí ń lọ lọ́wọ́, àti àwọn àṣẹ WP-CLI rẹ̀, tẹ̀síwájú láti máa ṣiṣẹ́."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "Dẹkun ṣiṣe rẹ ni abẹlẹ"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Ṣayẹwo apoti naa lati jẹrisi pe imupadabọpo rọpo awọn faili ati ibi ipamọ data aaye yii."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "Kọ́kọ́ fi ibi tí o ń lọ pamọ́."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "Ti sopọ: a kọ faili idanwo kan a si yọ ọ kuro."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Kọ́kọ́ tẹ kọ́kọ́rọ́ àfilọ́lẹ̀ ti àfilọ́lẹ̀ Dropbox rẹ síbẹ̀ (wo àwọn ìgbésẹ̀ lẹ́gbẹ̀ẹ́ fọ́ọ̀mù náà)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "Irú ibi-ìpamọ́ yìí kì í wọlé."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "Wọle ti pari. Tẹ Sopọ lẹẹkansi."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "A ti so Dropbox pọ̀."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "A ti fi àwọn ètò pamọ́, ṣùgbọ́n a kò yí agbéṣẹ́ lẹ́yìn padà: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "A ti fi àwọn ètò pamọ́. Olùrù lẹ́yìn: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "A ti fi àwọn ètò pamọ́."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Afẹyinti, mimu-pada-bọsipo tabi gbigbe-wọle miiran n lọ lọwọ. Duro ki o pari, tabi fagilee rẹ."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "Ìgbéwọlé náà kò bẹ̀rẹ̀ bí ó ti yẹ. Bẹ̀rẹ̀ lẹ́ẹ̀kan síi."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Apá náà kò dé. Olùpèsè rẹ le dín ìwọ̀n ìrùsókè kù; gbìyànjú lẹ́ẹ̀kan síi."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Ṣayẹwo apoti naa lati jẹrisi pe akowọle naa rọpo akoonu aaye yii ati data data."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Yan ibi ipamọ lati gbe wọle: gbe e si ori ayelujara, lẹ ọna asopọ kan, tabi yan ọkan lati inu folda agbewọle."
 
@@ -1047,11 +1040,11 @@ msgstr "Àwọn àdàkọ afẹ́yìntì yí jẹ́ ti nẹ́tíwọ́ọ̀kì �
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Ń gbe àwọn àkoónóó láti %1$s sí %2$s."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "Mimu-pada-bọpo ti pari. Ti a ba ti yọ ọ kuro, wọle pẹlu akọọlẹ kan lati ibi aaye ti a mu pada bọpo."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "Ìmúpadàbọ̀sípò ti parí."
 
@@ -1093,7 +1086,7 @@ msgstr "A ko le ka akojọ faili afẹyinti naa, nitorina ko si awọn ikojọp�
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "Kò sí àpò tí a lè kọ sí fún àwọn fáìlì àfipamọ́ fúngbàdíẹ̀. Ṣe wp-content kí ó ṣeé kọ sí kí o sì tún gbìyànjú."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "Kò le ṣẹ̀dá àpò fún iṣẹ́ yìí."
 

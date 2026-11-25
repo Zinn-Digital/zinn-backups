@@ -481,14 +481,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "Շարունակել կրկնօրինակումների կատարումը, երբ փլագինն անջատված է"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "Անջատված է, քանի դեռ չեք միացրել այն: Ապահովում է պահուստային պատճենների, վերականգնումների և WP-CLI հրամանների անխափան աշխատանքը, եթե այս փլագինն անջատված է, կամ եթե վերականգնված տվյալների բազան այն այլևս չի նշում որպես ակտիվ: Սա տեղադրում է փոքր բեռնիչ must-use plugins պանակում:"
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "Անջատված է, քանի դեռ չեք միացրել այն: Ապահովում է պահուստավորումների, վերականգնումների և WP-CLI հրամանների գործարկումը, եթե այս փլագինն անջատված է, կամ եթե վերականգնված տվյալների բազան այն այլևս չի նշում որպես ակտիվ: Այն օգտագործում է փոքր բեռնիչ, որը դուք պատճենում եք must-use փլագինների թղթապանակում:"
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "Բեռնիչն իր տեղում չէ: Պահպանեք կարգավորումները՝ այն վերականգնելու համար:"
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Բեռնիչը դեռ իր տեղում չէ։ Zinn® Backups-ն ինքնուրույն չի գրում պարտադիր օգտագործվող փլագինների պանակում․ պատճենեք ստորև նշված կոդը այս ուղղու վրա գտնվող նոր նիշքի մեջ (WP-CLI-ն այն տպում է հետևյալով՝ wp zinn-backups loader install)։"
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "Պահպանել կարգավորումները"
 
@@ -650,19 +650,19 @@ msgstr "Հեռացնե՞լ %1$s-ը %2$s նպատակակետից: Դեպի այ�
 msgid "Removed %1$s from destination %2$s."
 msgstr "%1$s-ը հեռացվել է %2$s նպատակակետից:"
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "Բեռնիչը տեղում է:"
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "Բեռնիչը հեռացված է:"
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Կիրառում՝ wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "Այդ միջավայրի փոփոխականը սահմանված չէ կամ դատարկ է:"
 
@@ -774,111 +774,104 @@ msgstr "%1$s-ը պատասխանել է HTTP %2$d-ով՝ %3$s"
 msgid "no details given"
 msgstr "Մանրամասներ նշված չեն"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "Բազմակայք ցանցում բեռնիչն օգտագործվում է միայն այն դեպքում, երբ Zinn® Backups-ն ակտիվացված է ամբողջ ցանցի համար, քանի որ պարտադիր օգտագործվող փլագինն աշխատում է յուրաքանչյուր կայքում։"
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "zinn-backups-loader.php անունով մեկ այլ ֆայլ արդեն գտնվում է պարտադիր փլագինների (must-use plugins) պանակում․ այն մնացել է անփոփոխ։"
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "Չհաջողվեց ստեղծել պարտադիր օգտագործվող փլագինների թղթապանակը։"
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Պատճենեք բեռնիչի կոդը նոր ֆայլի մեջ %s հասցեում (կարգավորումների էջը ցույց է տալիս այն, WP-CLI-ն այն տպում է հետևյալով՝ wp zinn-backups loader install):"
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "Անհրաժեշտ փլագինների (must-use plugins) թղթապանակը գրառելի չէ:"
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "Բեռնիչը չհաջողվեց տեղադրել իր տեղում։"
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "Բեռնիչը չհաջողվեց հեռացնել:"
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "Zinn® Backups-ը կարող է պահպանել ընթացիկ պահուստավորումը կամ վերականգնումը, ինչպես նաև իր WP-CLI հրամանների աշխատանքը, նույնիսկ եթե փլագինն անջատված է: Դա կատարվում է must-use plugins թղթապանակում գտնվող փոքր բեռնիչի միջոցով, որն ավելացվում է միայն ձեր ցանկությամբ:"
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "Zinn® Backups-ը կարող է պահպանել ընթացքի մեջ գտնվող պահուստավորումը կամ վերականգնումը, ինչպես նաև իր WP-CLI հրամանները աշխատանքային վիճակում, նույնիսկ եթե փլագինն անջատված է: Այն դա անում է փոքր բեռնիչի միջոցով, որը պատճենում եք must-use փլագինների թղթապանակում. կարգավորումների էջը ցուցադրում է կոդը:"
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "Ոչ, շնորհակալություն"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "Ձեզ չի թույլատրվում կառավարել պահուստային պատճենները:"
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "Zinn® Backups-ն անջատված է, սակայն must-use փլագինների պանակում գտնվող դրա բեռնիչը շարունակում է ապահովել ընթացքի մեջ գտնվող ցանկացած պահուստավորման կամ վերականգնման, ինչպես նաև դրա WP-CLI հրամանների աշխատանքը:"
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "Դադարեցրեք դրա աշխատանքը հետին պլանում"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Նշեք վանդակը՝ հաստատելու համար, որ վերականգնումը փոխարինում է այս կայքի ֆայլերը և տվյալների բազան։"
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "Սկզբում պահպանեք նպատակակետը:"
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "Միացված է. թեստային ֆայլը գրվել և հեռացվել է:"
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Նախ մուտքագրեք ձեր Dropbox հավելվածի բանալին (տեսեք ձևաթղթի կողքի քայլերը)։"
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "Պահեստավորման այս տեսակը չի մուտքագրվում համակարգ:"
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "Մուտք գործելու ժամկետը լրացել է: Կրկին սեղմեք Միանալ:"
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Dropbox-ը միացված է:"
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "Կարգավորումները պահպանվեցին, սակայն ֆոնային բեռնիչը չփոխվեց․ %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "Կարգավորումները պահպանված են: Հետին պլանի բեռնիչը՝ %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "Կարգավորումները պահպանված են:"
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Մեկ այլ պահուստավորում, վերականգնում կամ ներմուծում ընթացքի մեջ է։ Սպասեք, մինչև այն ավարտվի, կամ չեղարկեք այն։"
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "Վերբեռնումը ճիշտ չի սկսվել: Սկսեք նորից:"
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Հատվածը չի հասել: Ձեր սերվերը կարող է սահմանափակել վերբեռնման չափերը, նորից փորձեք:"
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Նշեք վանդակը՝ հաստատելու համար, որ ներմուծումը փոխարինում է այս կայքի բովանդակությունը և տվյալների բազան։"
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Ընտրեք ներմուծման ենթակա արխիվը՝ վերբեռնեք այն, տեղադրեք հղում կամ ընտրեք որևէ մեկը ներմուծման թղթապանակից։"
 
@@ -1055,11 +1048,11 @@ msgstr "Այս պահուստային պատճենը բազմակայք ցանց
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Բովանդակության տեղափոխում %1$s-ից %2$s:"
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "Վերականգնումն ավարտված է: Եթե դուրս եք եկել համակարգից, մուտք գործեք վերականգնված կայքի հաշվով:"
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "Վերականգնումն ավարտվեց:"
 
@@ -1101,7 +1094,7 @@ msgstr "Չհաջողվեց կարդալ պահուստային պատճենի ֆ
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "Ժամանակավոր պահուստային նիշքերի համար գրելի թղթապանակ չկա: Դարձրեք wp-content-ը գրելի և փորձեք կրկին:"
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "Չհաջողվեց թղթապանակ ստեղծել այս առաջադրանքի համար:"
 

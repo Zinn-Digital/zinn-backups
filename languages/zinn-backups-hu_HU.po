@@ -481,14 +481,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "Biztonsági mentések futtatása a bővítmény kikapcsolt állapotában is"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "Kikapcsolva, hacsak nem kapcsolják be. A biztonsági mentések, a visszaállítások és a WP-CLI parancsok futását biztosítja akkor is, ha ez a bővítmény ki van kapcsolva, vagy ha egy visszaállított adatbázis már nem sorolja fel aktívként. Ez egy kis betöltőt helyez el a must-use bővítmények mappájában."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "Kikapcsolva, kivéve, ha bekapcsolják. Folyamatban tartja a biztonsági mentéseket, a visszaállításokat és a WP-CLI-parancsokat, ha ez a bővítmény ki van kapcsolva, vagy ha egy visszaállított adatbázis már nem sorolja fel aktívként. Egy kis betöltőt használ, amelyet a must-use bővítmények mappájába kell másolni."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "A betöltő nincs a helyén. Visszaállításához menteni kell a beállításokat."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "A betöltő még nincs a helyén. A Zinn® Backups önmagában nem ír a kötelezően használandó bővítmények mappájába: másoljuk az alábbi kódot egy új fájlba ezen az útvonalon (a WP-CLI ezt így írja ki: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "Beállítások mentése"
 
@@ -650,19 +650,19 @@ msgstr "%1$s eltávolítása innen: %2$s célhely? A rá készülő biztonsági 
 msgid "Removed %1$s from destination %2$s."
 msgstr "%1$s eltávolítva a(z) %2$s célhelyről."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "A betöltő a helyén van."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "A betöltő eltávolítva."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Használat: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "Ez a környezeti változó nincs beállítva vagy üres."
 
@@ -774,111 +774,104 @@ msgstr "%1$s válasza a következő HTTP %2$d hibakóddal érkezett: %3$s"
 msgid "no details given"
 msgstr "Nincsenek megadva részletek"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "Többhelyes hálózat esetén a betöltő csak akkor kerül használatra, amikor a Zinn® Backups hálózati szinten van bekapcsolva, mivel a kötelezően használandó bővítmény minden webhelyen fut."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "Már létezik egy másik, zinn-backups-loader.php nevű fájl az elengedhetetlen bővítmények (must-use plugins) mappájában; érintetlenül maradt."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "A kötelező bővítmények mappáját nem sikerült létrehozni."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Másolja a betöltő kódját egy új fájlba itt: %s (a beállítások oldalon látható; a WP-CLI a következővel írja ki: wp zinn-backups loader install)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "A kötelezően használandó bővítmények (must-use) könyvtára nem írható."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "A betöltőt nem sikerült a helyére tenni."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "A betöltőt nem sikerült eltávolítani."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "A Zinn® Backups a bővítmény kikapcsolt állapota esetén is működésben tudja tartani a folyamatban lévő biztonsági mentést vagy visszaállítást, valamint a saját WP-CLI parancsait. Ezt a must-use plugins mappában elhelyezett kis betöltővel éri el, amely csak kérésre kerül hozzáadásra."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "A Zinn® Backups képes működésben tartani a folyamatban lévő biztonsági mentést vagy visszaállítást, valamint a hozzá tartozó WP-CLI parancsokat még akkor is, ha a bővítmény ki van kapcsolva. Ezt egy kisméretű betöltővel éri el, amelyet a must-use bővítmények mappájába kell másolni; a beállítások oldalon látható a kód."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "Nem, köszönöm"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "A biztonsági mentések kezelése nem engedélyezett."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "A Zinn® Backups ki van kapcsolva, de a must-use beépülő modulok mappájában lévő betöltője biztosítja a folyamatban lévő biztonsági mentések vagy visszaállítások, valamint a hozzá tartozó WP-CLI-parancsok zavartalan működését."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "A háttérben való futás leállítása"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "A négyzet bejelölésével megerősíthető, hogy a visszaállítás felülírja a webhely fájljait és adatbázisát."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "Előbb a cél mentése szükséges."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "Csatlakozva: a tesztfájl kiírásra és törlésre került."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Először adja meg a Dropbox alkalmazás alkalmazáskulcsát (lásd az űrlap melletti lépéseket)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "Ez a fajta tárhely nem jelentkezik be."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "A bejelentkezés lejárt. Nyomja meg újra a Csatlakozás gombot."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "A Dropbox csatlakoztatva van."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "A beállítások mentve, de a háttérbetöltő nem módosult: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "Beállítások mentve. A háttérbeli betöltő: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "Beállítások elmentve."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Egy másik biztonsági mentés, visszaállítás vagy importálás van folyamatban. Várjon, amíg befejeződik, vagy szakítsa meg a folyamatot."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "A feltöltés nem indult el megfelelően. Próbálja újra a kezdéstől."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "A darab nem érkezett meg. A szerver korlátozhatja a feltöltési méretet; próbálja meg újra."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Jelölje be a négyzetet annak megerősítéséhez, hogy az importálás felülírja a webhely tartalmát és adatbázisát."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Archívum kiválasztása az importáláshoz: feltöltés, hivatkozás beillesztése vagy választás az importálási mappából."
 
@@ -1055,11 +1048,11 @@ msgstr "Ez a biztonsági mentés egy többhelyes (multisite) hálózatról kész
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Tartalom áthelyezése innen: %1$s ide: %2$s."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "A visszaállítás befejeződött. Kijelentkezés esetén jelentkezzünk be a visszaállított webhely valamelyik fiókjával."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "Visszaállítás kész."
 
@@ -1101,7 +1094,7 @@ msgstr "A biztonsági mentés fájllistáját nem sikerült beolvasni, így a me
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "Nincs írható mappa az ideiglenes biztonsági mentési fájlok számára. Legyen írható a wp-content mappa, majd próbálja újra."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "Nem sikerült mappát létrehozni ehhez a feladathoz."
 

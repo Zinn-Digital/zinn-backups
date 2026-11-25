@@ -478,14 +478,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "Идома додани нусхабардории эҳтиётӣ ҳангоми хомӯш будани плагин"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "Хомӯш аст, магар ин ки шумо онро фаъол кунед. Нусхаҳои эҳтиётӣ, барқароркунӣ ва фармонҳои WP-CLI-ро дар сурати хомӯш будани ин васлкунак ё дар сурате, ки пойгоҳи додаҳои барқароршуда онро дигар ҳамчун фаъол нишон надиҳад, дар ҳоли иҷро нигоҳ медорад. Ин як боркунандаи хурдро ба ҷузвдони васлкунакҳои ҳатмӣ (must-use) мегузорад."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "Хомӯш аст, магар ин ки шумо онро фаъол созед. Нусхаҳои эҳтиётӣ, барқароркуниҳо ва фармонҳои WP-CLI-ро идома медиҳад, агар ин васлкунак хомӯш карда шавад ё пойгоҳи додаҳои барқароршуда онро дигар ҳамчун фаъол нишон надиҳад. Он боркунаки хурдеро истифода мебарад, ки шумо ба ҷузвдони васлкунакҳои must-use нусхабардорӣ мекунед."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "Боркунанда дар ҷойи худ нест. Барои барқарор кардани он танзимотро захира кунед."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Боркунанда ҳанӯз дар ҷои худ нест. Zinn® Backups худаш ба ҷузвдони плагинҳои ҳатмӣ наменависад: рамзи зеринро ба файли нав дар ин роҳ нусхабардорӣ намоед (WP-CLI онро бо чунин чоп мекунад: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "Танзимотро сабт кунед"
 
@@ -643,19 +643,19 @@ msgstr "%1$s аз таъйиноти %2$s нест карда шавад? Нус
 msgid "Removed %1$s from destination %2$s."
 msgstr "%1$s аз таъиноти %2$s нест карда шуд."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "Боркунанда дар ҷои худ аст."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "Боркунанда нест карда шуд."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Истифода: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "Он тағйирёбандаи муҳит таъин нашудааст ё холӣ аст."
 
@@ -767,111 +767,104 @@ msgstr "%1$s бо HTTP %2$d ҷавоб дод: %3$s"
 msgid "no details given"
 msgstr "Тафсилот дода нашудааст"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "Дар шабакаи чандсойта боркунанда танҳо вақте истифода мешавад, ки Zinn® Backups дар тамоми шабака фаъол карда шуда бошад, зеро плагини ҳатмӣ дар ҳар як сойт кор мекунад."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "Файли дигаре бо номи zinn-backups-loader.php аллакай дар ҷузвдони плагинҳои ҳатмӣ (must-use plugins) мавҷуд аст; он бетағйир боқӣ монд."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "Ҷузвдони плагинҳои ҳатмӣ сохта нашуд."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Рамзи боркунандаро ба файли нав дар %s нусхабардорӣ намоед (саҳифаи танзимот онро нишон медиҳад; WP-CLI онро бо ин фармон чоп мекунад: wp zinn-backups loader install)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "Ҷузвдони плагинҳои ҳатмӣ (must-use plugins) қобили сабт нест."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "Боркунандаро дар ҷояш гузоштан имконнопазир буд."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "Боркунандаро нест кардан имконнопазир аст."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "Zinn® Backups метавонад нусхабардорӣ ё барқароркунии ҷориро, инчунин фармонҳои WP-CLI-и худро ҳатто дар ҳолати хомӯш будани плагин фаъол нигоҳ дорад. Ин амал бо ёрии боркунандаи хурд дар ҷузвдони плагинҳои ҳатмӣ (must-use) анҷом дода мешавад, ки танҳо бо дархости Шумо илова карда мешавад."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "Zinn® Backups метавонад нусхабардорӣ ё барқароркунии ҷориро, инчунин фармонҳои WP-CLI-и худро коршоям нигоҳ дорад, ҳатто агар плагин хомӯш карда шуда бошад. Он ин корро бо як боркунандаи хурде анҷом медиҳад, ки шумо ба ҷузвдони плагинҳои must-use нусхабардорӣ мекунед; саҳифаи танзимот рамзро нишон медиҳад."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "Не, ташаккур"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "Шумо барои идоракунии нусхаҳои эҳтиётӣ иҷозат надоред."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "Zinn® Backups хомӯш карда шудааст, аммо боркунандаи он дар ҷузвдони васлкунакҳои ҳатмӣ (must-use) ҳама гуна нусхабардорӣ ё барқароркунии ҷориро ва фармонҳои WP-CLI-и онро фаъол нигоҳ медорад."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "Иҷрои онро дар пасманзар қатъ кунед"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Қуттиро қайд кунед, то тасдиқ намоед, ки барқароркунӣ файлҳо ва пойгоҳи додаҳои ин сомонаро иваз мекунад."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "Аввал таъинотро захира кунед."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "Пайваст шуд: файли санҷишӣ навишта шуд ва тоза карда шуд."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Аввал калиди барномаи Dropbox-и худро ворид кунед (қадамҳои паҳлӯи шаклро бинед)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "Ин намуди нигоҳдорӣ ворид намешавад."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "Муҳлати воридшавӣ ба охир расид. Тугмаи Пайваст карданро дубора пахш кунед."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Dropbox пайваст шуд."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "Танзимот сабт шуд, аммо боркунандаи пасзамина тағйир наёфт: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "Танзимот сабт шуд. Боркунандаи пасзамина: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "Танзимот сабт шуд."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Нусхабардории эҳтиётӣ, барқароркунӣ ё воридоти дигар иҷро шуда истодааст. Мунтазир бошед, то он ба итмом расад ё онро бекор кунед."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "Боргузорӣ дуруст оғоз нашуд. Лутфан, аз нав оғоз кунед."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Қисм нарасид. Мумкин аст сервери шумо андозаи боргузориро маҳдуд кунад; бори дигар кӯшиш кунед."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Қуттиро қайд кунед, то тасдиқ намоед, ки воридот муҳтаво ва пойгоҳи додаҳои ин сомонаро иваз мекунад."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Архивро барои воридот интихоб кунед: онро боргузорӣ намоед, пайвандро гузоред ё аз ҷузвдони воридот интихоб кунед."
 
@@ -1047,11 +1040,11 @@ msgstr "Ин нусхаи эҳтиётӣ ба шабакаи чандсойта 
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Интиқоли муҳтаво аз %1$s ба %2$s."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "Барқароркунӣ ба охир расид. Агар шумо аз система баромада бошед, бо ҳисоби сайти барқароршуда ворид шавед."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "Барқароркунӣ ба анҷом расид."
 
@@ -1093,7 +1086,7 @@ msgstr "Рӯйхати файлҳои нусхаи эҳтиётӣ хонда н�
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "Барои файлҳои эҳтиётии муваққатӣ ҷузвдони қобили сабт мавҷуд нест. wp-content-ро қобили сабт гардонед ва дубора кӯшиш кунед."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "Барои ин вазифа сохтани ҷузвдон имконнопазир буд."
 

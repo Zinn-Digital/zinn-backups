@@ -481,14 +481,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "Плагин өшірілген кезде сақтық көшірме жасауды жалғастыру"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "Қоспасаңыз, өшірулі болады. Егер бұл плагин өшірулі болса немесе қалпына келтірілген дерекқор оны белсенді ретінде көрсетпесе де, сақтық көшірмелердің, қалпына келтірулердің және WP-CLI пәрмендерінің орындалуын жалғастырады. Бұл must-use плагиндер қалтасына шағын жүктегішті орналастырады."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "Сіз оны қоспағанша өшірулі болады. Егер бұл плагин өшірілсе немесе қалпына келтірілген дерекқор оны белсенді ретінде көрсетпесе, сақтық көшірмелердің, қалпына келтірулердің және WP-CLI командаларының орындалуын қамтамасыз етеді. Ол міндетті түрде пайдаланылатын (must-use) плагиндер қалтасына көшірілетін шағын жүктеуішті пайдаланады."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "Жүктеуіш орнында емес. Оны қалпына келтіру үшін баптауларды сақтаңыз."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Жүктеуіш әлі орнында емес. Zinn® Backups міндетті пайдаланылатын плагиндер қалтасына өзі жазбайды: төмендегі кодты осы жолдағы жаңа файлға көшіріңіз (WP-CLI оны мына команда арқылы басып шығарады: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "Баптауларды сақтау"
 
@@ -650,19 +650,19 @@ msgstr "%1$s нысаны %2$s тағайындалған орнынан жой�
 msgid "Removed %1$s from destination %2$s."
 msgstr "%1$s %2$s тағайындалған орнынан жойылды."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "Жүктеуіш орнында тұр."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "Жүктеуіш жойылды."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Қолданылуы: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "Бұл орта айнымалысы орнатылмаған немесе бос."
 
@@ -774,111 +774,104 @@ msgstr "%1$s келесі HTTP %2$d кодымен жауап берді: %3$s"
 msgid "no details given"
 msgstr "Мәліметтер берілмеген"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "Көпсайтты желіде жүктеуіш Zinn® Backups бүкіл желі бойынша іске қосылғанда ғана пайдаланылады, себебі міндетті плагин әрбір сайтта жұмыс істейді."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "Міндетті пайдаланылатын плагиндер (must-use plugins) бумасында zinn-backups-loader.php атты басқа файл бұрыннан бар; ол өзгеріссіз қалдырылды."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "Міндетті пайдаланылатын плагиндер қалтасын жасау мүмкін болмады."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Жүктегіш кодын %s мекенжайындағы жаңа файлға көшіріңіз (баптаулар беті оны көрсетеді; WP-CLI оны мына пәрменмен шығарады: wp zinn-backups loader install)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "Міндетті түрде қолданылатын плагиндер (must-use plugins) бумасына жазу мүмкін емес."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "Жүктегішті орнына қою мүмкін болмады."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "Жүктеуішті жою мүмкін болмады."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "Zinn® Backups плагин өшірулі болса да, орындалып жатқан сақтық көшірмені немесе қалпына келтіруді, сондай-ақ өзінің WP-CLI пәрмендерін жұмыс күйінде сақтай алады. Бұл must-use plugins қалтасындағы шағын жүктегіш арқылы жасалады және ол тек сұрауыңыз бойынша қосылады."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "Zinn® Backups плагин өшірілген болса да, орындалып жатқан сақтық көшірме жасауды немесе қалпына келтіруді және оның WP-CLI командаларын жұмыс күйінде сақтай алады. Ол мұны must-use плагиндер қалтасына көшіретін шағын жүктеуіш арқылы жасайды; баптаулар беті кодты көрсетеді."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "Жоқ, рақмет"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "Сізде сақтық көшірмелерді басқаруға рұқсат жоқ."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "Zinn® Backups өшірулі, бірақ must-use плагиндер қалтасындағы оның жүктеуіші орындалып жатқан кез келген сақтық көшірме жасау немесе қалпына келтіру процесін және оның WP-CLI пәрмендерін жұмыс күйінде сақтайды."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "Оның фонда жұмыс істеуін тоқтату"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Қалпына келтіру осы сайттың файлдары мен дерекқорын ауыстыратынын растау үшін құсбелгіні қойыңыз."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "Алдымен мақсатты орынды сақтаңыз."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "Қосылды: сынақ файлы жазылып, жойылды."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Алдымен Dropbox қолданбаңыздың қолданба кілтін енгізіңіз (пішіннің жанындағы қадамдарды қараңыз)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "Бұл сақтау түрі жүйеге кірмейді."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "Кіру мерзімі аяқталды. Қайта қосылу түймесін басыңыз."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Dropbox қосылған."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "Параметрлер сақталды, бірақ фондық жүктеуіш өзгертілмеді: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "Параметрлер сақталды. Фондық жүктеуіш: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "Баптаулар сақталды."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Басқа сақтық көшірме жасау, қалпына келтіру немесе импорттау орындалып жатыр. Оның аяқталуын күтіңіз немесе одан бас тартыңыз."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "Жүктеп салу дұрыс басталмады. Қайта бастаңыз."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Бөлік жетпеді. Серверіңіз жүктеу өлшемін шектеуі мүмкін; қайталап көріңіз."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Импорт осы сайттың мазмұны мен дерекқорын ауыстыратынын растау үшін құсбелгіні қойыңыз."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Импорттау үшін архивті таңдаңыз: оны жүктеп салыңыз, сілтемені қойыңыз немесе импорт қалтасынан біреуін таңдаңыз."
 
@@ -1055,11 +1048,11 @@ msgstr "Бұл сақтық көшірме көпсайтты желіге (mult
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Мазмұн %1$s орнынан %2$s орнына жылжытылуда."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "Қалпына келтіру аяқталды. Жүйеден шыққан болсаңыз, қалпына келтірілген сайттағы тіркелгімен кіріңіз."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "Қалпына келтіру аяқталды."
 
@@ -1101,7 +1094,7 @@ msgstr "Резервтік көшірменің файлдар тізімін о
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "Уақытша резервтік көшірме файлдары үшін жазуға болатын бума жоқ. wp-content бумасын жазуға болатындай етіп жасаңыз және қайталап көріңіз."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "Бұл тапсырма үшін қалта жасау мүмкін болмады."
 

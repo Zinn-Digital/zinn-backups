@@ -481,14 +481,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "ተሰኪው ሲጠፋም ምትኬዎች እንዲቀጥሉ ያድርጉ"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "እርስዎ እስኪያበሩት ድረስ ጠፍቷል። ይህ ፕለጊን ቢጠፋ ወይም ወደነበረበት የተመለሰ የውሂብ ጎታ ንቁ እንደሆነ አድርጎ ባይዘረዝረውም እንኳ ምትኬዎችን፣ ወደነበረበት መመለሶችን እና የ WP-CLI ትዕዛዞችን መስራታቸውን እንዲቀጥሉ ያደርጋል። ይህ በ must-use plugins አቃፊ ውስጥ ትንሽ ጫኚ ያስቀምጣል።"
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "እርስዎ እስኪያበሩት ድረስ ጠፍቷል። ይህ ተሰኪ ቢጠፋ፣ ወይም ወደነበረበት የተመለሰ የውሂብ ጎታ ከእንግዲህ ገቢር እንደሆነ አድርጎ ባይዘረዝረውም እንኳ ምትኬዎች፣ ወደነበሩበት መመለሶች እና የ WP-CLI ትዕዛዞች መስራታቸውን እንዲቀጥሉ ያደርጋል። እርስዎ ወደ must-use ተሰኪዎች አቃፊ ውስጥ የሚገለብጡትን አነስተኛ ጫኝ ይጠቀማል።"
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "ጫኚው በቦታው ላይ አይደለም። መልሶ ለማስቀመጥ ቅንብሮቹን ያስቀምጡ።"
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "ጫኚው ገና በቦታው አልተቀመጠም። Zinn® Backups ራሱ ወደ ግዴታ-ተሰኪዎች አቃፊ አይጽፍም፦ ከታች ያለውን ኮድ በዚህ ዱካ ወዳለ አዲስ ፋይል ይቅዱ (WP-CLI በዚህ ያትመዋል፦ wp zinn-backups loader install)።"
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "ቅንብሮችን አስቀምጥ"
 
@@ -650,19 +650,19 @@ msgstr "%1$sን ከመድረሻ %2$s ያስወግዱ? አዲስ እስኪዘጋ�
 msgid "Removed %1$s from destination %2$s."
 msgstr "%1$s ከመድረሻ %2$s ተወግዷል።"
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "መጫኛዉ ቦታው ላይ ነው።"
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "ጫኚው ተወግዷል።"
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "አጠቃቀም፦ wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "ያ የአካባቢ ተለዋዋጭ አልተዘጋጀም ወይም ባዶ ነው።"
 
@@ -774,111 +774,104 @@ msgstr "%1$s በ HTTP %2$d መለሰ፦ %3$s"
 msgid "no details given"
 msgstr "ምንም ዝርዝር አልተሰጠም"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "በበርካታ ገጾች አውታረ መረብ ላይ Zinn® Backups በአውታረ መረብ ደረጃ ሲነቃ ብቻ መጫኛው ጥቅም ላይ ይውላል፣ ምክንያቱም የግድ ጥቅም ላይ መዋል ያለበት ፕለጊን በእያንዳንዱ ገጽ ላይ ስለሚሰራ።"
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "zinn-backups-loader.php የተሰኘ ሌላ ፋይል አስቀድሞ በግዴታ ጥቅም ላይ በሚውሉ ተሰኪዎች (must-use plugins) አቃፊ ውስጥ ይገኛል፤ ሳይነካ እንዳለ ተትቷል።"
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "አስፈላጊ ተሰኪዎች (must-use plugins) ማህደር ሊፈጠር አልተቻለም።"
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "የጫኝ ኮዱን ወደ አዲስ ፋይል በ%s ይቅዱ (የቅንብሮች ገጹ ያሳየዋል፤ WP-CLI በ: wp zinn-backups loader install ያትመዋል)።"
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "አስገዳጅ ተሰኪዎች (must-use plugins) አቃፊ ሊጻፍበት አይችልም።"
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "ጫኚው በቦታው ሊቀመጥ አልቻለም።"
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "ጫኚው ሊወገድ አልቻለም።"
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "ፕለጊኑ ቢጠፋም እንኳ Zinn® Backups በሂደት ላይ ያለን ምትኬ ወይም ወደነበረበት መመለስን እንዲሁም የWP-CLI ትዕዛዞቹን እንዲሰሩ ማድረግ ይችላል። ይህን የሚያደርገው እርሶ ከጠየቁ ብቻ በሚጨመረው በmust-use plugins ፎልደር ውስጥ ባለ አነስተኛ ጫኝ (loader) አማካኝነት ነው።"
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "ፕለጊኑ ቢጠፋም እንኳ Zinn® Backups በሂደት ላይ ያለን መጠባበቂያ ቅጂ ወይም ወደነበረበት መመለስን፣ እንዲሁም የWP-CLI ትዕዛዞቹን እንደሰሩ እንዲቆዩ ማድረግ ይችላል። ይህን የሚያደርገው ወደ must-use ፕለጊኖች አቃፊ በሚገለብጡት አነስተኛ መጫኛ አማካኝነት ነው፤ የቅንብሮች ገጹ ኮዱን ያሳያል።"
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "አይ፣ አመሰግናለሁ"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "ምትኬዎችን እንዲያስተዳድሩ አልተፈቀደልዎትም።"
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "Zinn® Backups ጠፍቷል፣ ነገር ግን በmust-use ተሰኪዎች አቃፊ ውስጥ ያለው ጫኚው ማንኛውንም በሂደት ላይ ያለ የመጠባበቂያ ቅጂ ወይም ወደ ነበረበት መመለስ ሂደት እና የWP-CLI ትዕዛዞቹን እንደሰሩ ያቆያቸዋል።"
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "ከበስተጀርባ እንዳይሰራ ያቁሙት"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "እነበረበት መመለሱ የዚህን ጣቢያ ፋይሎች እና የውሂብ ጎታ እንደሚተካ ለማረጋገጥ ሳጥኑ ላይ ምልክት ያድርጉ።"
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "መጀመሪያ መድረሻውን ያስቀምጡ።"
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "ተገናኝቷል፦ የሙከራ ፋይል ተጽፎ ተወግዷል።"
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "መጀመሪያ የ Dropbox መተግበሪያዎን የመተግበሪያ ቁልፍ (app key) ያስገቡ (ከቅጹ አጠገብ ያሉትን ቅደም ተከተሎች ይመልከቱ)።"
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "እንዲህ ዓይነቱ ማከማቻ አይገባም።"
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "የመግቢያው ጊዜ አልፎበታል። እባክዎ እንደገና አገናኝ የሚለውን ይጫኑ።"
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Dropbox ተገናኝቷል።"
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "ቅንብሮች ተቀምጠዋል፣ ነገር ግን የበስተጀርባ ጫኚው አልተለወጠም፦ %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "ቅንብሮች ተቀምጠዋል። የጀርባ ጫኚ፦ %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "ቅንብሮች ተቀምጠዋል።"
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "ሌላ የመጠባበቂያ ቅጂ፣ ወደነበረበት የመመለስ ወይም የማስመጣት ሂደት እየሄደ ነው። እስኪያልቅ ድረስ ይጠብቁ ወይም ይሰርዙት።"
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "ጭነቱ በትክክል አልተጀመረም። እባክዎ እንደገና ይጀምሩ።"
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "ክፋዩ አልደረሰም። አገልጋይዎ የጭነት መጠኖችን ሊገድብ ይችላል፤ እባክዎ እንደገና ይሞክሩ።"
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "አስመጪው የዚህን ድረ-ገጽ ይዘት እና የውሂብ ጎታ እንደሚተካ ለማረጋገጥ ሳጥኑ ላይ ምልክት ያድርጉ።"
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "ለማስመጣት ማህደር ይምረጡ፦ ይስቀሉት፣ አገናኝ ይለጥፉ፣ ወይም ከማስመጫ አቃፊው ውስጥ አንዱን ይምረጡ።"
 
@@ -1055,11 +1048,11 @@ msgstr "ይህ ምትኬ የባለብዙ ጣቢያ አውታረ መረብ (multi
 msgid "Moving the content from %1$s to %2$s."
 msgstr "ይዘቱን ከ%1$s ወደ %2$s በማዘዋወር ላይ።"
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "ወደነበረበት መመለስ ተጠናቋል። ከመለያዎ ከወጡ፣ ከተመለሰው ጣቢያ መለያ ጋር ይግቡ።"
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "ወደ ነበረበት መመለስ ተጠናቋል።"
 
@@ -1101,7 +1094,7 @@ msgstr "የተቀመጠው ቅጂ የፋይል ዝርዝር ሊነበብ አል�
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "ለጊዜያዊ ምትኬ ፋይሎች የሚጻፍበት አቃፊ የለም። wp-content የሚጻፍበት ያድርጉና እንደገና ይሞክሩ።"
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "ለዚህ ተግባር አቃፊ መፍጠር አልተቻለም።"
 

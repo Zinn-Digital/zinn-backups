@@ -478,14 +478,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "ສືບຕໍ່ສຳຮອງຂໍ້ມູນໄວ້ເມື່ອປລັກອິນຖືກປິດ"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "ປິດຢູ່ ນອກຈາກທ່ານຈະເປີດມັນ. ຮັກສາການສຳຮອງຂໍ້ມູນ, ການກູ້ຄືນ ແລະ ຄຳສັ່ງ WP-CLI ໃຫ້ເຮັດວຽກຕໍ່ໄປ ຖ້າປລັກອິນນີ້ຖືກປິດໄວ້, ຫຼື ຖ້າຖານຂໍ້ມູນທີ່ກູ້ຄືນມາບໍ່ໄດ້ລະບຸວ່າມັນເປີດໃຊ້ງານອີກຕໍ່ໄປ. ສິ່ງນີ້ຈະວາງຕົວໂຫລດຂະໜາດນ້ອຍໄວ້ໃນໂຟນເດີ must-use plugins."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "ປິດຢູ່ ເວັ້ນເສຍແຕ່ທ່ານຈະເປີດມັນ. ຮັກສາການສຳຮອງຂໍ້ມູນ, ການກູ້ຄືນ ແລະ ຄຳສັ່ງ WP-CLI ໃຫ້ເຮັດວຽກຕໍ່ໄປ ຖ້າປລັກອິນນີ້ຖືກປິດໄວ້, ຫຼື ຖ້າຖານຂໍ້ມູນທີ່ກູ້ຄືນມາບໍ່ໄດ້ລະບຸວ່າມັນເປີດໃຊ້ງານຢູ່ຕໍ່ໄປ. ມັນໃຊ້ຕົວໂຫຼດຂະໜາດນ້ອຍທີ່ທ່ານສຳເນົາໃສ່ໃນໂຟນເດີປລັກອິນ must-use."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "ຕົວໂຫຼດບໍ່ໄດ້ຢູ່ບ່ອນເກົ່າ. ບັນທຶກການຕັ້ງຄ່າເພື່ອເອົາມັນກັບຄືນມາ."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "ຕົວໂຫຼດຍັງບໍ່ທັນຢູ່ໃນຕຳແໜ່ງ. Zinn® Backups ບໍ່ໄດ້ຂຽນໃສ່ໂຟນເດີປລັກອິນທີ່ຈຳເປັນຕ້ອງໃຊ້ດ້ວຍຕົວມັນເອງ: ສຳເນົາລະຫັດລຸ່ມນີ້ໃສ່ໄຟລ໌ໃໝ່ຕາມເສັ້ນທາງນີ້ (WP-CLI ສະແດງຜົນມັນດ້ວຍ: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "ບັນທຶກການຕັ້ງຄ່າ"
 
@@ -643,19 +643,19 @@ msgstr "ລຶບ %1$s ອອກຈາກປາຍທາງ %2$s ບໍ່? ກ�
 msgid "Removed %1$s from destination %2$s."
 msgstr "ລຶບ %1$s ອອກຈາກປາຍທາງ %2$s ແລ້ວ."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "ຕົວໂຫຼດຢູ່ໃນຕຳແໜ່ງແລ້ວ."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "ຕົວໂຫຼດຖືກລຶບອອກແລ້ວ."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "ວິທີໃຊ້: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "ຕົວແປສະພາບແວດລ້ອມນັ້ນບໍ່ໄດ້ຖືກຕັ້ງຄ່າ ຫຼື ຫວ່າງເປົ່າ."
 
@@ -767,111 +767,104 @@ msgstr "%1$s ຕອບກັບດ້ວຍ HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "ບໍ່ມີລາຍລະອຽດທີ່ລະບຸ"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "ຢູ່ໃນເຄືອຂ່າຍຫຼາຍເວັບໄຊ, ຕົວໂຫຼດຈະຖືກນຳໃຊ້ເມື່ອ Zinn® Backups ຖືກເປີດໃຊ້ງານໃນເຄືອຂ່າຍເທົ່ານັ້ນ, ເນື່ອງຈາກປລັກອິນທີ່ຕ້ອງໃຊ້ຈະເຮັດວຽກຢູ່ໃນທຸກໆ ເວັບໄຊ."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "ມີໄຟລ໌ອື່ນທີ່ມີຊື່ວ່າ zinn-backups-loader.php ຢູ່ໃນໂຟນເດີ must-use plugins ແລ້ວ; ມັນຖືກປະໄວ້ຄືເກົ່າໂດຍບໍ່ມີການປ່ຽນແປງ."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "ບໍ່ສາມາດສ້າງໂຟນເດີປລັກອິນທີ່ຈຳເປັນຕ້ອງໃຊ້ໄດ້."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "ສຳເນົາລະຫັດຕົວໂຫລດລົງໃນໄຟລ໌ໃໝ່ທີ່ %s (ໜ້າການຕັ້ງຄ່າສະແດງມັນ; WP-CLI ພິມມັນດ້ວຍ: wp zinn-backups loader install)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "ໂຟນເດີປລັກອິນທີ່ຈຳເປັນຕ້ອງໃຊ້ (must-use plugins) ບໍ່ສາມາດຂຽນໄດ້."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "ບໍ່ສາມາດວາງຕົວໂຫລດໄວ້ໃນບ່ອນໄດ້."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "ບໍ່ສາມາດລຶບຕົວໂຫລດໄດ້."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "Zinn® Backups ສາມາດຮັກສາການສຳຮອງຂໍ້ມູນ ຫຼື ການກູ້ຄືນທີ່ກຳລັງດຳເນີນຢູ່, ລວມທັງຄຳສັ່ງ WP-CLI ຂອງມັນ, ໃຫ້ເຮັດວຽກຕໍ່ໄປໄດ້ ເຖິງແມ່ນວ່າປລັກອິນຈະຖືກປິດຢູ່ກໍຕາມ. ລະບົບເຮັດສິ່ງນີ້ດ້ວຍຕົວໂຫຼດຂະໜາດນ້ອຍໃນໂຟນເດີ must-use plugins, ເຊິ່ງຈະຖືກເພີ່ມເຂົ້າເມື່ອທ່ານຮ້ອງຂໍເທົ່ານັ້ນ."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "Zinn® Backups ສາມາດຮັກສາການສຳຮອງຂໍ້ມູນ ຫຼື ການກູ້ຄືນທີ່ກຳລັງດຳເນີນຢູ່, ແລະ ຄຳສັ່ງ WP-CLI ຂອງມັນ ໃຫ້ເຮັດວຽກຕໍ່ໄປໄດ້ ເຖິງແມ່ນວ່າປລັກອິນຈະຖືກປິດໄວ້ກໍຕາມ. ມັນເຮັດສິ່ງນີ້ໄດ້ດ້ວຍຕົວໂຫລດຂະໜາດນ້ອຍທີ່ທ່ານສຳເນົາໃສ່ໃນໂຟນເດີປລັກອິນ must-use; ໜ້າການຕັ້ງຄ່າຈະສະແດງລະຫັດ."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "ບໍ່, ຂອບໃຈ"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ຈັດການການສຳຮອງຂໍ້ມູນ."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "Zinn® Backups ຖືກປິດໄວ້, ແຕ່ຕົວໂຫລດຂອງມັນຢູ່ໃນໂຟນເດີປລັກອິນ must-use ຍັງຄົງຮັກສາການສຳຮອງຂໍ້ມູນ ຫຼື ການກູ້ຄືນທີ່ກຳລັງດຳເນີນຢູ່, ພ້ອມທັງຄຳສັ່ງ WP-CLI ຂອງມັນ, ໃຫ້ເຮັດວຽກຕໍ່ໄປ."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "ຢຸດການເຮັດວຽກຂອງມັນຢູ່ໃນພື້ນຫຼັງ"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "ໝາຍຕິກໃສ່ຫ້ອງເພື່ອຢືນຢັນວ່າການກູ້ຄືນຈະປ່ຽນແທນໄຟລ໌ ແລະ ຖານຂໍ້ມູນຂອງເວັບໄຊນີ້."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "ບັນທຶກປາຍທາງກ່ອນ."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "ເຊື່ອມຕໍ່ແລ້ວ: ໄຟລ໌ທົດສອບຖືກຂຽນ ແລະ ລຶບອອກແລ້ວ."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "ກະລຸນາປ້ອນຄີແອັບຂອງ Dropbox ແອັບຂອງທ່ານກ່ອນ (ເບິ່ງຂັ້ນຕອນຢູ່ຂ້າງແບບຟອມ)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "ບ່ອນຈັດເກັບຂໍ້ມູນປະເພດນີ້ບໍ່ໄດ້ເຂົ້າສູ່ລະບົບ."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "ໝົດເວລາເຂົ້າສູ່ລະບົບແລ້ວ. ກະລຸນາກົດ ເຊື່ອມຕໍ່ ອີກຄັ້ງ."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Dropbox ເຊື່ອມຕໍ່ແລ້ວ."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "ບັນທຶກການຕັ້ງຄ່າແລ້ວ, ແຕ່ບໍ່ໄດ້ປ່ຽນຕົວໂຫລດພື້ນຫຼັງ: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "ບັນທຶກການຕັ້ງຄ່າແລ້ວ. ຕົວໂຫຼດພື້ນຫຼັງ: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "ບັນທຶກການຕັ້ງຄ່າແລ້ວ."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "ການສຳຮອງຂໍ້ມູນ, ການກູ້ຄືນ ຫຼື ການນຳເຂົ້າອື່ນກຳລັງເຮັດວຽກຢູ່. ລໍຖ້າໃຫ້ມັນສຳເລັດ, ຫຼື ຍົກເລີກມັນ."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "ການອັບໂຫຼດບໍ່ໄດ້ເລີ່ມຕົ້ນຢ່າງຖືກຕ້ອງ. ກະລຸນາເລີ່ມຕົ້ນໃໝ່."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "ສ່ວນຂໍ້ມູນບໍ່ມາຮອດ. ເຊີບເວີຂອງທ່ານອາດຈະຈຳກັດຂະໜາດການອັບໂຫຼດ; ກະລຸນາລອງໃໝ່ອີກຄັ້ງ."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "ໝາຍຕິກໃສ່ຫ້ອງເພື່ອຢືນຢັນວ່າການນຳເຂົ້າຈະປ່ຽນແທນເນື້ອຫາ ແລະ ຖານຂໍ້ມູນຂອງເວັບໄຊນີ້."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "ເລືອກບ່ອນຈັດເກັບຂໍ້ມູນເພື່ອຕື່ມເຂົ້າ: ອັບໂຫຼດມັນ, ວາງລິ້ງ, ຫຼື ເລືອກອັນໜຶ່ງຈາກໂຟນເດີຕື່ມເຂົ້າ."
 
@@ -1047,11 +1040,11 @@ msgstr "ການສຳຮອງຂໍ້ມູນນີ້ແມ່ນຂອງ
 msgid "Moving the content from %1$s to %2$s."
 msgstr "ກຳລັງຍ້າຍເນື້ອຫາຈາກ %1$s ໄປໃສ່ %2$s."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "ການກູ້ຄືນສຳເລັດແລ້ວ. ຖ້າທ່ານອອກຈາກລະບົບແລ້ວ, ໃຫ້ເຂົ້າສູ່ລະບົບດ້ວຍບັນຊີຈາກເວັບໄຊທ໌ທີ່ຖືກກູ້ຄືນ."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "ການກູ້ຄືນສຳເລັດແລ້ວ."
 
@@ -1093,7 +1086,7 @@ msgstr "ບໍ່ສາມາດອ່ານລາຍຊື່ໄຟລ໌ຂອ
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "ບໍ່ມີໂຟນເດີທີ່ສາມາດຂຽນໄດ້ສຳລັບໄຟລ໌ສຳຮອງຊົ່ວຄາວ. ກະລຸນາເຮັດໃຫ້ wp-content ສາມາດຂຽນໄດ້ ແລ້ວລອງໃໝ່ອີກຄັ້ງ."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "ບໍ່ສາມາດສ້າງໂຟນເດີສຳລັບວຽກນີ້ໄດ້."
 

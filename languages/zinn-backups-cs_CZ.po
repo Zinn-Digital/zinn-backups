@@ -487,14 +487,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "Ponechat zálohování spuštěné i po vypnutí pluginu"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "Vypnuto, pokud jej nezapnete. Udržuje zálohy, obnovení a příkazy WP-CLI spuštěné, i když je tento plugin vypnutý nebo jej obnovená databáze již neuvádí jako aktivní. Tím se do složky must-use pluginů umístí malý zavaděč."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "Vypnuto, dokud jej nezapnete. Udržuje zálohy, obnovení a příkazy WP-CLI spuštěné, pokud je tento plugin vypnutý nebo pokud jej obnovená databáze již neuvádí jako aktivní. Používá malý zavaděč, který zkopírujete do složky nutných pluginů (must-use)."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "Zavaděč není na svém místě. Chcete-li jej vrátit zpět, uložte nastavení."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Zavaděč zatím není na svém místě. Zinn® Backups sám nezapisuje do složky pro povinně používané pluginy: zkopírujte níže uvedený kód do nového souboru na této cestě (WP-CLI jej vypíše pomocí: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "Uložit nastavení"
 
@@ -664,19 +664,19 @@ msgstr "Odebrat %1$s z cíle %2$s? Zálohování do něj se zastaví, dokud nena
 msgid "Removed %1$s from destination %2$s."
 msgstr "Položka %1$s byla odstraněna z cíle %2$s."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "Zavaděč je na svém místě."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "Zavaděč byl odebrán."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Použití: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "Tato proměnná prostředí není nastavena nebo je prázdná."
 
@@ -788,111 +788,104 @@ msgstr "%1$s odpověděl s HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "Nebyly uvedeny žádné podrobnosti"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "V síti webů se zavaděč používá pouze tehdy, když je Zinn® Backups aktivován pro celou síť, protože modul typu must-use běží na každém webu."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "Další soubor s názvem zinn-backups-loader.php se již nachází ve složce nutných pluginů (must-use plugins); byl ponechán beze změny."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "Složku pro nutné pluginy se nepodařilo vytvořit."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Zkopírujte kód zavaděče do nového souboru na %s (stránka nastavení jej zobrazuje; WP-CLI jej vypíše pomocí: wp zinn-backups loader install)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "Složka pro nepostradatelné pluginy (must-use) není zapisovatelná."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "Zavaděč se nepodařilo umístit na místo."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "Zavaděč se nepodařilo odstranit."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "Zinn® Backups dokáže udržet probíhající zálohování nebo obnovu a své příkazy WP-CLI funkční, i když je plugin vypnutý. Dělá to pomocí malého zavaděče ve složce must-use plugins, který se přidá pouze na vaši žádost."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "Zinn® Backups dokáže udržet probíhající zálohování nebo obnovení a své příkazy WP-CLI funkční, i když je plugin vypnutý. Dělá to pomocí malého zavaděče, který zkopírujete do složky nezbytných pluginů (must-use); stránka nastavení kód zobrazuje."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "Ne, děkuji"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "Nemáte oprávnění ke správě záloh."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "Zinn® Backups je vypnutý, ale jeho zavaděč ve složce must-use pluginů udržuje veškeré probíhající zálohování nebo obnovení a jeho příkazy WP-CLI funkční."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "Zastavte běh na pozadí"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Zaškrtnutím políčka potvrďte, že obnovení nahradí soubory a databázi tohoto webu."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "Nejprve uložte cíl."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "Připojeno: testovací soubor byl zapsán a odstraněn."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Nejprve zadejte klíč své aplikace Dropbox (viz kroky vedle formuláře)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "Tento typ úložiště se nepřihlašuje."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "Platnost přihlášení vypršela. Stiskněte znovu Připojit."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Dropbox je připojen."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "Nastavení bylo uloženo, ale načítání na pozadí nebylo změněno: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "Nastavení bylo uloženo. Načítání na pozadí: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "Nastavení uloženo."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Právě probíhá jiná záloha, obnovení nebo import. Počkejte na dokončení, nebo operaci zrušte."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "Nahrávání nebylo správně spuštěno. Začněte znovu."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Část nedorazila. Váš server může omezovat velikost nahrávaných souborů; zkuste to znovu."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Zaškrtnutím políčka potvrďte, že import nahradí obsah a databázi tohoto webu."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Vyberte archiv k importu: nahrajte jej, vložte odkaz nebo vyberte soubor ze složky pro import."
 
@@ -1071,11 +1064,11 @@ msgstr "Tato záloha pochází ze sítě webů (multisite). Obnovení sítě na 
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Přesouvání obsahu z %1$s do %2$s."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "Obnovení bylo dokončeno. Pokud jste byli odhlášeni, přihlaste se pomocí účtu z obnoveného webu."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "Obnovení dokončeno."
 
@@ -1117,7 +1110,7 @@ msgstr "Seznam souborů zálohy se nepodařilo přečíst, proto nebyly smazány
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "Neexistuje žádná zapisovatelná složka pro dočasné záložní soubory. Nastavte pro wp-content oprávnění k zápisu a zkuste to znovu."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "Pro tuto úlohu se nepodařilo vytvořit složku."
 

@@ -484,14 +484,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "Manter os backups em execução quando o plugin estiver desativado"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "Desativado, a menos que você o ative. Mantém backups, restaurações e comandos WP-CLI em execução se este plugin for desativado ou se um banco de dados restaurado não o listar mais como ativo. Isso coloca um pequeno carregador na pasta de plugins obrigatórios (must-use plugins)."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "Desativado, a menos que você o ative. Mantém backups, restaurações e comandos do WP-CLI em execução se este plugin for desativado ou se um banco de dados restaurado não o listar mais como ativo. Ele usa um pequeno carregador que você copia para a pasta de plugins obrigatórios (must-use)."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "O carregador não está no lugar. Salve as configurações para colocá-lo de volta."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "O carregador ainda não está no lugar. O Zinn® Backups não grava diretamente na pasta de plugins obrigatórios: copie o código abaixo em um novo arquivo neste caminho (o WP-CLI o exibe com: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "Salvar alterações"
 
@@ -657,19 +657,19 @@ msgstr "Remover %1$s do destino %2$s? Os backups para ele serão interrompidos a
 msgid "Removed %1$s from destination %2$s."
 msgstr "%1$s foi removido do destino %2$s."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "O carregador está no lugar."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "O carregador foi removido."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Uso: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "Essa variável de ambiente não está definida ou está vazia."
 
@@ -781,111 +781,104 @@ msgstr "%1$s respondeu com HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "Nenhum detalhe fornecido"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "Em uma rede multissite, o carregador só é usado quando o Zinn® Backups está ativado na rede, porque um plugin obrigatório é executado em todos os sites."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "Outro arquivo chamado zinn-backups-loader.php já está na pasta de plugins obrigatórios (must-use plugins); ele foi mantido intacto."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "Não foi possível criar a pasta de plugins obrigatórios."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Copie o código do carregador para um novo arquivo em %s (a página de configurações o exibe; o WP-CLI o imprime com: wp zinn-backups loader install)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "A pasta de plugins obrigatórios (must-use) não tem permissão de escrita."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "Não foi possível colocar o carregador no lugar."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "Não foi possível remover o carregador."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "O Zinn® Backups pode manter um backup ou restauração em andamento, bem como seus comandos WP-CLI, funcionando mesmo se o plugin for desativado. Ele faz isso com um pequeno carregador na pasta de plugins obrigatórios (must-use), adicionado apenas se o senhor solicitar."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "O Zinn® Backups pode manter um backup ou restauração em andamento, bem como seus comandos WP-CLI, funcionando mesmo se o plugin estiver desativado. Ele faz isso com um pequeno carregador que você copia para a pasta de plugins must-use; a página de configurações mostra o código."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "Não, obrigado"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "Você não tem permissão para gerenciar backups."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "O Zinn® Backups está desativado, mas seu inicializador na pasta de plugins obrigatórios (must-use) mantém em funcionamento qualquer backup ou restauração em andamento, bem como seus comandos WP-CLI."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "Impeça a execução em segundo plano"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Marque a caixa para confirmar que a restauração substitui os arquivos e o banco de dados deste site."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "Salve o destino primeiro."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "Conectado: um arquivo de teste foi gravado e removido."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Insira primeiro a chave do seu aplicativo Dropbox (consulte as etapas ao lado do formulário)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "Esse tipo de armazenamento não faz login."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "A sessão expirou. Pressione Conectar novamente."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "O Dropbox está conectado."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "Configurações salvas, mas o carregador em segundo plano não foi alterado: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "Configurações salvas. O carregador em segundo plano: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "Configurações salvas."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Outro backup, restauração ou importação está em execução. Aguarde a conclusão ou cancele o processo."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "O envio não foi iniciado corretamente. Inicie novamente."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "O fragmento não chegou. O seu servidor pode limitar os tamanhos de envio; tente novamente."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Marque a caixa para confirmar que a importação substitui o conteúdo e o banco de dados deste site."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Escolha um arquivo para importar: envie-o, cole um link ou escolha um da pasta de importação."
 
@@ -1063,11 +1056,11 @@ msgstr "Este backup é de uma rede multisite. Não há suporte para a restauraç
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Movendo o conteúdo de %1$s para %2$s."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "Restauração concluída. Se você foi desconectado, faça login com uma conta do site restaurado."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "Restauração concluída."
 
@@ -1109,7 +1102,7 @@ msgstr "A lista de arquivos do backup não pôde ser lida, portanto nenhum envio
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "Não há uma pasta gravável para arquivos de backup temporários. Torne a pasta wp-content gravável e tente novamente."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "Não foi possível criar uma pasta para esta tarefa."
 

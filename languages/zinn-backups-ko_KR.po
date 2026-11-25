@@ -478,14 +478,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "플러그인이 꺼져 있을 때도 백업 계속 실행"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "직접 켜지 않는 한 꺼져 있습니다. 이 플러그인이 꺼져 있거나 복원된 데이터베이스에 더 이상 활성 상태로 표시되지 않더라도 백업, 복원 및 WP-CLI 명령이 계속 실행되도록 유지합니다. 이렇게 하면 must-use 플러그인 폴더에 작은 로더가 배치됩니다."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "직접 켜지 않는 한 꺼져 있습니다. 이 플러그인이 꺼져 있거나 복원된 데이터베이스에 더 이상 활성 상태로 표시되지 않더라도 백업, 복원 및 WP-CLI 명령이 계속 실행되도록 유지합니다. must-use 플러그인 폴더에 복사하는 작은 로더를 사용합니다."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "로더가 제자리에 있지 않습니다. 설정을 저장하여 다시 배치하십시오."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "로더가 아직 준비되지 않았습니다. Zinn® Backups는 필수 플러그인 폴더에 직접 쓰지 않습니다. 아래 코드를 이 경로의 새 파일에 복사하세요(WP-CLI는 다음 명령어로 이를 출력합니다: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "설정 저장"
 
@@ -643,19 +643,19 @@ msgstr "%2$s 대상에서 %1$s을(를) 제거하시겠습니까? 새 대상이 �
 msgid "Removed %1$s from destination %2$s."
 msgstr "대상 %2$s에서 %1$s을(를) 삭제했습니다."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "로더가 제자리에 있습니다."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "로더가 제거되었습니다."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "사용법: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "해당 환경 변수가 설정되지 않았거나 비어 있습니다."
 
@@ -767,111 +767,104 @@ msgstr "%1$s이(가) HTTP %2$d(으)로 응답했습니다: %3$s"
 msgid "no details given"
 msgstr "세부 정보가 제공되지 않음"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "다중 사이트 네트워크에서는 필수 플러그인이 모든 사이트에서 실행되므로 Zinn® Backups가 네트워크 전체에서 활성화된 경우에만 로더가 사용됩니다."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "zinn-backups-loader.php라는 이름의 다른 파일이 이미 필수 플러그인(must-use plugins) 폴더에 있습니다. 해당 파일은 그대로 유지되었습니다."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "필수 사용 플러그인 폴더를 생성할 수 없습니다."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "%s 위치의 새 파일에 로더 코드를 복사하세요(설정 페이지에 표시되며, WP-CLI에서는 wp zinn-backups loader install 명령으로 출력됩니다)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "필수 플러그인(must-use) 폴더에 쓸 수 없습니다."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "로더를 배치할 수 없습니다."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "로더를 제거할 수 없습니다."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "Zinn® Backups는 플러그인이 꺼져 있더라도 진행 중인 백업 또는 복원과 해당 WP-CLI 명령이 계속 작동하도록 유지할 수 있습니다. 이는 사용자가 요청한 경우에만 추가되는 must-use plugins 폴더의 작은 로더를 통해 수행됩니다."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "Zinn® Backups는 플러그인이 꺼져 있어도 진행 중인 백업 또는 복원과 해당 WP-CLI 명령이 계속 작동하도록 유지할 수 있습니다. 이는 must-use 플러그인 폴더에 복사하는 작은 로더를 통해 수행되며, 설정 페이지에 코드가 표시됩니다."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "아니요, 괜찮습니다"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "백업을 관리할 권한이 없습니다."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "Zinn® Backups가 꺼져 있지만, must-use 플러그인 폴더에 있는 로더 덕분에 진행 중인 백업 또는 복원 작업과 해당 WP-CLI 명령이 계속 작동합니다."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "백그라운드에서 실행되지 않도록 중지"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "복원 시 이 사이트의 파일과 데이터베이스가 대체됨을 확인하려면 확인란을 선택하세요."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "대상을 먼저 저장하세요."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "연결됨: 테스트 파일이 작성된 후 삭제되었습니다."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "먼저 Dropbox 앱의 앱 키를 입력하세요(양식 옆의 단계 참조)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "이러한 유형의 스토리지는 로그인하지 않습니다."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "로그인 시간이 만료되었습니다. 다시 연결을 누르세요."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Dropbox가 연결되었습니다."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "설정이 저장되었지만 백그라운드 로더는 변경되지 않았습니다: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "설정이 저장되었습니다. 백그라운드 로더: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "설정이 저장되었습니다."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "다른 백업, 복원 또는 가져오기가 실행 중입니다. 완료될 때까지 기다리거나 취소하세요."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "업로드가 제대로 시작되지 않았습니다. 다시 시작해 주세요."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "청크가 도착하지 않았습니다. 서버에서 업로드 크기를 제한할 수 있습니다. 다시 시도해 주세요."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "가져오기가 이 사이트의 콘텐츠와 데이터베이스를 대체함을 확인하려면 확인란을 선택하세요."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "가져올 아카이브를 선택하세요. 업로드하거나 링크를 붙여넣거나 가져오기 폴더에서 선택하세요."
 
@@ -1047,11 +1040,11 @@ msgstr "이 백업은 다중 사이트(멀티사이트) 네트워크의 백업�
 msgid "Moving the content from %1$s to %2$s."
 msgstr "콘텐츠를 %1$s에서 %2$s(으)로 이동하는 중입니다."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "복원이 완료되었습니다. 로그아웃된 경우 복원된 사이트의 계정으로 로그인하세요."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "복원이 완료되었습니다."
 
@@ -1093,7 +1086,7 @@ msgstr "백업의 파일 목록을 읽을 수 없어 남아 있는 업로드 파
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "임시 백업 파일을 저장할 수 있는 쓰기 가능한 폴더가 없습니다. wp-content 폴더를 쓰기 가능하도록 설정한 후 다시 시도해 주세요."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "이 작업에 대한 폴더를 만들 수 없습니다."
 

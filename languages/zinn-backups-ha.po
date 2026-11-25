@@ -481,14 +481,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "Ci gaba da yin ajiyar waje lokacin da aka kashe manhajar"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "A kashe yake sai dai idan ka kunna shi. Yana sa ajiyar bayanai, maido da bayanai da kuma umarnin WP-CLI ci gaba da aiki idan an kashe wannan manhaja, ko kuma idan ma'adanar bayanai da aka maido ba ta sake nuna shi a matsayin mai aiki ba. Wannan yana sanya wani karamin makaran bayanai a cikin babban fayil din manhajoji na dole (must-use plugins)."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "A kashe yake sai dai in kun kunna shi. Yana sa adana bayanai, mayar da bayanai da umarnin WP-CLI su ci gaba da aiki idan an kashe wannan manhaja, ko kuma idan ma'ajiyar bayanai da aka mayar ba ta lissafa shi a matsayin mai aiki ba. Yana amfani da karamin mai lodawa wanda kuke kwafa zuwa babban fayil na manhajojin da dole ne a yi amfani da su (must-use)."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "Manhajar ɗora bayanai ba ta nan. Ajiye saitunan domin mayar da ita."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Manhajar lodi ba ta shiga muhallinta ba tukuna. Zinn® Backups ba ya rubutawa a cikin babban fayil na must-use plugins da kansa: kwafi lambar da ke ƙasa zuwa sabon fayil a wannan hanyar (WP-CLI yana buga ta tare da: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "Ajiye saituna"
 
@@ -650,19 +650,19 @@ msgstr "Cire %1$s daga manufa %2$s? Ajiyar bayanan baya zuwa gare shi zai tsaya 
 msgid "Removed %1$s from destination %2$s."
 msgstr "An cire %1$s daga makoma %2$s."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "Manhajar lodawa tana wurin."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "An cire mai lodawa."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Amfani: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "Wannan canjin yanayi ba a saita shi ba ko kuma babu komai a ciki."
 
@@ -774,111 +774,104 @@ msgstr "%1$s ya amsa da HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "Ba a bayar da cikakkun bayanai ba"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "A kan hanyar sadarwa ta shafuka masu yawa, ana amfani da mai ɗaukar kaya ne kawai lokacin da aka kunna Zinn® Backups a faɗin hanyar sadarwa, saboda toshe mai dole ne a yi amfani da shi yana aiki a kowane shafi."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "Wani fayil mai suna zinn-backups-loader.php ya riga ya kasance a cikin babban fayil na must-use plugins; an bar shi yadda yake."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "Ba a iya ƙirƙirar babban fayil na manhajojin ƙari na dole ba."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Kwafi lambar loader ɗin zuwa sabon fayil a %s (shafin saituna yana nuna shi; WP-CLI yana buga shi tare da: wp zinn-backups loader install)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "Ba za a iya rubutawa a babban fayil na manhajojin must-use ba."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "Ba a iya saka mai ɗaukar kaya a wurin ba."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "Ba a iya cire mai ɗorawa ba."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "Zinn® Backups na iya ci gaba da aikin ajiye bayani ko dawo da su, da kuma umarnin WP-CLI nasa, yana aiki ko da an kashe manhajar. Yana yin haka ne tare da ƙaramar ma'aikatar lodawa a cikin babban fayil ɗin must-use plugins, wanda ake ƙarawa idan ka buƙata kawai."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "Zinn® Backups na iya ci gaba da aikin ajiye bayanai ko mayar da su da ke gudana, da kuma umarnin WP-CLI ɗinsa, yana aiki ko da an kashe manhajar. Yana yin haka ne da wani ɗan ƙaramin loda da kuke kwafa zuwa babban fayil ɗin manhajojin da dole ne a yi amfani da su (must-use); shafin saituna yana nuna lambar sirrin."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "A'a, na gode"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "Ba a ba ku izinin sarrafa ajiyar waje ba."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "An kashe Zinn® Backups, amma manhajar lodawa ta sa da ke cikin babban fayil na must-use plugins tana sa duk wani aikin adana bayanai ko dawo da su da ke kan gudana, da kuma umarnin WP-CLI na sa, su ci gaba da aiki."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "Dakatar da shi daga aiki a bango"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Yi alama a akwatin don tabbatar da cewa mayar da bayanan zai maye gurbin fayiloli da rumbun adana bayanai na wannan rukunin yanar gizo."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "Ajiye makomar da farko."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "An haɗa: an rubuta fayil ɗin gwaji kuma an cire shi."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Da farko shigar da maɓallin manhaja na manhajar Dropbox ɗinku (duba matakan da ke kusa da fom ɗin)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "Irin wannan ma'ajiya ba ta shiga."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "Lokacin shiga ya ƙare. Danna Haɗa kuma."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "An haɗa Dropbox."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "An ajiye saituna, amma ba a canza mai lodawa a bayan fage ba: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "An ajiye saituna. Mai lodi a bango: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "An ajiye saitunan."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Wani aikin ajiye bayanan sirri, mayarwa ko shigo da shi na gudana. Jira ya kammala, ko kuma ka soke shi."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "Ba a fara loda fayil ɗin yadda ya kamata ba. Sake farawa."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Guntun bai iso ba. Sabar ɗinka na iya iyakance girman lodi; sake gwadawa."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Yi alama a akwatin don tabbatar da cewa shigo da kaya yana maye gurbin abun ciki da bayanan wannan rukunin yanar gizon."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Zaɓi rumbun ajiya da za a shigo da shi: loda shi, liƙa hanyar haɗi, ko zaɓi ɗaya daga babban fayil ɗin shigo da kaya."
 
@@ -1055,11 +1048,11 @@ msgstr "Wannan ajiyar na hanyar sadarwa ce ta shafuka da yawa (multisite). Ba a 
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Ana matsar da abun ciki daga %1$s zuwa %2$s."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "An kammala mayarwa. Idan an fitar da ku, shiga tare da asusu daga shafin da aka mayar."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "An kammala maido da aiki."
 
@@ -1101,7 +1094,7 @@ msgstr "Ba a iya karanta jerin fayilolin ajiyar ba, don haka ba a goge sauran fa
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "Babu babban fayil da za a iya rubutawa don fayilolin ajiya na ɗan lokaci. Sanya wp-content ya zama mai yiwuwar rubutawa kuma sake gwadawa."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "Ba a iya ƙirƙirar babban fayil don wannan aikin ba."
 

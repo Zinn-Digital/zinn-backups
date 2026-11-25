@@ -7,7 +7,7 @@ Tags: backup, restore, migration, dropbox, google drive
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.18
+Stable tag: 1.0.19
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -138,6 +138,9 @@ If you want the uploads folder to match the backup exactly (for example to remov
 3. Importing an UpdraftPlus backup.
 
 == Changelog ==
+
+= 1.0.19 =
+* Translations added for the newest screen texts in every language.
 
 = 1.0.18 =
 * WordPress.org review fixes: nothing is written into or removed from the must-use, plugins or themes folders by free code without your action, add-ons hook in through actions, and translated text is filtered for every role.

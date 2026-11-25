@@ -481,14 +481,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "प्लगइन बंद असतानाही बॅकअप सुरू ठेवा"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "जोपर्यंत तुम्ही ते चालू करत नाही तोपर्यंत बंद. हे प्लगइन बंद असल्यास, किंवा पुनर्संचयित डेटाबेस यापुढे सक्रिय म्हणून सूचीबद्ध करत नसल्यास बॅकअप, पुनर्संचयित करणे आणि WP-CLI आज्ञा चालू ठेवते. हे must-use plugins फोल्डरमध्ये एक लहान लोडर ठेवते."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "तुम्ही ते सुरू करेपर्यंत बंद असते. हे प्लगइन बंद केले असल्यास किंवा पुनर्संचयित डेटाबेसमध्ये ते सक्रिय म्हणून सूचीबद्ध नसल्यास बॅकअप, पुनर्संचयने आणि WP-CLI आज्ञा चालू ठेवते. हे एक लहान लोडर वापरते जे तुम्ही must-use प्लगइन्स फोल्डरमध्ये कॉपी करता."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "लोडर योग्य ठिकाणी नाही. ते पूर्ववत करण्यासाठी सेटिंग्ज जतन करा."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "लोडर अद्याप जागेवर नाही. Zinn® Backups अनिवार्य प्लगइन्स फोल्डरमध्ये स्वतः लिहीत नाही: खालील कोड या मार्गावरील नवीन फाइलमध्ये कॉपी करा (WP-CLI यासह मुद्रित करते: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "सेटिंग्ज जतन करा"
 
@@ -650,19 +650,19 @@ msgstr "%2$s या गंतव्यावरून %1$s काढून ट�
 msgid "Removed %1$s from destination %2$s."
 msgstr "%2$s या गंतव्यावरून %1$s काढले."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "लोडर जागेवर आहे."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "लोडर काढून टाकले आहे."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "वापर: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "ते एन्व्हायर्नमेंट व्हेरिएबल सेट केलेले नाही किंवा रिकामे आहे."
 
@@ -774,111 +774,104 @@ msgstr "%1$s ने HTTP %2$d सह उत्तर दिले: %3$s"
 msgid "no details given"
 msgstr "कोणताही तपशील दिलेला नाही"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "मल्टीसाइट नेटवर्कवर लोडर केवळ तेव्हाच वापरला जातो जेव्हा Zinn® Backups नेटवर्क-सक्रिय असते, कारण आवश्यक प्लगइन प्रत्येक साइटवर चालते."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "must-use plugins फोल्डरमध्ये zinn-backups-loader.php नावाची दुसरी फाईल आधीपासूनच अस्तित्वात आहे; ती तशीच ठेवण्यात आली होती."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "अनिवार्य प्लगइन्स फोल्डर तयार करणे शक्य झाले नाही."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "लोडर कोड %s वरील नवीन फाइलमध्ये कॉपी करा (सेटिंग्ज पृष्ठ ते दाखवते; WP-CLI ते याद्वारे मुद्रित करते: wp zinn-backups loader install)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "आवश्यक प्लगइन्स (must-use plugins) फोल्डर लिहीण्यायोग्य नाही."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "लोडर जागेवर ठेवता आला नाही."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "लोडर काढता आला नाही."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "प्लगइन बंद असले तरीही Zinn® Backups प्रगतीपथावर असलेला बॅकअप किंवा पुनर्स्थापना आणि त्याचे WP-CLI आदेश चालू ठेवू शकते. हे must-use plugins फोल्डरमधील एका छोट्या लोडरच्या साहाय्याने केले जाते, जे आपण विनंती केल्यावरच जोडले जाते."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "प्लगइन बंद असले तरीही Zinn® Backups प्रगतीपथावर असलेला बॅकअप किंवा पुनर्स्थापना आणि त्याचे WP-CLI आदेश चालू ठेवू शकते. हे एका लहान लोडरसह हे कार्य करते जे आपण must-use प्लगइन फोल्डरमध्ये कॉपी करता; सेटिंग्ज पृष्ठ कोड दर्शवते."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "नको, धन्यवाद"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "तुम्हाला बॅकअप व्यवस्थापित करण्याची परवानगी नाही."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "Zinn® Backups बंद केले आहे, परंतु must-use प्लगइन्स फोल्डरमधील त्याचे लोडर चालू असलेला कोणताही बॅकअप किंवा पूर्ववत करण्याची प्रक्रिया आणि त्याचे WP-CLI आदेश कार्यरत ठेवते."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "पार्श्वभूमीमध्ये चालणे थांबवा"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "पुनर्संचयित केल्याने या साइटच्या फाइल्स आणि डेटाबेस बदलले जातील याची पुष्टी करण्यासाठी बॉक्सवर खूण करा."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "प्रथम गंतव्य जतन करा."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "कनेक्ट झाले: चाचणी फाईल लिहिली गेली आणि काढून टाकली गेली."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "प्रथम तुमच्या Dropbox ॲपची ॲप की प्रविष्ट करा (फॉर्मच्या बाजूला असलेल्या पायऱ्या पहा)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "या प्रकारचा स्टोरेज साइन इन करत नाही."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "साइन-इनची मुदत संपली आहे. पुन्हा कनेक्ट करा दाबा."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Dropbox कनेक्ट केले आहे."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "सेटिंग्ज जतन केल्या आहेत, परंतु पार्श्वभूमी लोडर बदलला गेला नाही: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "सेटिंग्ज जतन केल्या. बॅकग्राउंड लोडर: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "सेटिंग्ज जतन केल्या."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "दुसरा बॅकअप, पुनर्संचयित करणे किंवा आयात करणे चालू आहे. ते पूर्ण होण्याची प्रतीक्षा करा किंवा ते रद्द करा."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "अपलोड योग्यरित्या सुरू झाले नाही. कृपया पुन्हा सुरू करा."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "तुकडा पोहोचला नाही. तुमचा सर्व्हर अपलोड आकार मर्यादित करू शकतो; पुन्हा प्रयत्न करा."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "आयात या साइटची सामग्री आणि डेटाबेस पुनर्स्थित करते याची पुष्टी करण्यासाठी बॉक्सवर खूण करा."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "आयात करण्यासाठी एक संग्रह निवडा: तो अपलोड करा, लिंक पेस्ट करा किंवा आयात फोल्डरमधून एक निवडा."
 
@@ -1055,11 +1048,11 @@ msgstr "हा बॅकअप एका मल्टीसाइट नेट�
 msgid "Moving the content from %1$s to %2$s."
 msgstr "%1$s वरून %2$s वर मजकूर हलवत आहे."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "पुनर्संचयन पूर्ण झाले. आपण साइन आउट झाले असल्यास, पुनर्संचयित साइटवरील खात्यासह साइन इन करा."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "पुनर्संचयन पूर्ण झाले."
 
@@ -1101,7 +1094,7 @@ msgstr "बॅकअपची फाइल सूची वाचता आल�
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "तात्पुरत्या बॅकअप फाइल्ससाठी कोणतीही लिहिता येण्याजोगी फोल्डर उपलब्ध नाही. wp-content लिहिता येण्याजोगे करा आणि पुन्हा प्रयत्न करा."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "या कार्यासाठी फोल्डर तयार करता आले नाही."
 

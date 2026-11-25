@@ -481,14 +481,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "Διατήρηση της εκτέλεσης αντιγράφων ασφαλείας όταν το πρόσθετο είναι απενεργοποιημένο"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "Ανενεργό εκτός εάν το ενεργοποιήσετε. Διατηρεί τα αντίγραφα ασφαλείας, τις επαναφορές και τις εντολές WP-CLI σε λειτουργία εάν αυτό το πρόσθετο απενεργοποιηθεί ή εάν μια επαναφερμένη βάση δεδομένων δεν το εμφανίζει πλέον ως ενεργό. Αυτό τοποθετεί ένα μικρό πρόγραμμα φόρτωσης στον φάκελο must-use πρόσθετων."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "Απενεργοποιημένο εκτός εάν το ενεργοποιήσετε. Διατηρεί τα αντίγραφα ασφαλείας, τις επαναφορές και τις εντολές WP-CLI σε εκτέλεση εάν αυτό το πρόσθετο απενεργοποιηθεί ή εάν μια επαναφερμένη βάση δεδομένων δεν το εμφανίζει πλέον ως ενεργό. Χρησιμοποιεί ένα μικρό πρόγραμμα φόρτωσης που αντιγράφετε στον φάκελο των υποχρεωτικών προσθέτων (must-use)."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "Το πρόγραμμα φόρτωσης δεν βρίσκεται στη θέση του. Αποθηκεύστε τις ρυθμίσεις για να το επαναφέρετε."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Το πρόγραμμα φόρτωσης δεν είναι ακόμη στη θέση του. Το Zinn® Backups δεν εγγράφει το ίδιο στον φάκελο των υποχρεωτικών προσθέτων: αντιγράψτε τον παρακάτω κώδικα σε ένα νέο αρχείο σε αυτήν τη διαδρομή (το WP-CLI τον εκτυπώνει με: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "Αποθήκευση ρυθμίσεων"
 
@@ -650,19 +650,19 @@ msgstr "Κατάργηση του %1$s από τον προορισμό %2$s; Τ
 msgid "Removed %1$s from destination %2$s."
 msgstr "Το %1$s αφαιρέθηκε από τον προορισμό %2$s."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "Το πρόγραμμα φόρτωσης βρίσκεται στη θέση του."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "Το πρόγραμμα φόρτωσης καταργήθηκε."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Χρήση: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "Αυτή η μεταβλητή περιβάλλοντος δεν έχει οριστεί ή είναι κενή."
 
@@ -774,111 +774,104 @@ msgstr "Το %1$s απάντησε με HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "Δεν δόθηκαν λεπτομέρειες"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "Σε ένα δίκτυο πολλών ιστότοπων, ο φορτωτής χρησιμοποιείται μόνο όταν το Zinn® Backups είναι ενεργοποιημένο σε επίπεδο δικτύου, επειδή ένα πρόσθετο αναγκαστικής χρήσης εκτελείται σε κάθε ιστότοπο."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "Ένα άλλο αρχείο με όνομα zinn-backups-loader.php υπάρχει ήδη στον φάκελο των υποχρεωτικών προσθέτων (must-use plugins)· παρέμεινε ανέπαφο."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "Δεν ήταν δυνατή η δημιουργία του φακέλου των απαραίτητων πρόσθετων (must-use plugins)."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Αντιγράψτε τον κώδικα του προγράμματος φόρτωσης σε ένα νέο αρχείο στο %s (η σελίδα ρυθμίσεων τον εμφανίζει· το WP-CLI τον εκτυπώνει με: wp zinn-backups loader install)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "Ο φάκελος των απαραίτητων προσθέτων (must-use plugins) δεν είναι εγγράψιμος."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "Δεν ήταν δυνατή η τοποθέτηση του φορτωτή στη θέση του."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "Δεν ήταν δυνατή η αφαίρεση του φορτωτή."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "Το Zinn® Backups μπορεί να διατηρεί μια δημιουργία αντιγράφου ασφαλείας ή επαναφορά σε εξέλιξη, καθώς και τις εντολές WP-CLI του, σε λειτουργία ακόμη και αν το πρόσθετο είναι απενεργοποιημένο. Αυτό γίνεται με έναν μικρό φορτωτή στον φάκελο must-use plugins, ο οποίος προστίθεται μόνο αν το ζητήσετε."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "Το Zinn® Backups μπορεί να διατηρήσει μια δημιουργία αντιγράφου ασφαλείας ή επαναφορά σε εξέλιξη, καθώς και τις εντολές του WP-CLI, σε λειτουργία ακόμη και αν το πρόσθετο είναι απενεργοποιημένο. Το κάνει αυτό με έναν μικρό φορτωτή που αντιγράφετε στον φάκελο των must-use προσθέτων· η σελίδα ρυθμίσεων εμφανίζει τον κώδικα."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "Όχι, ευχαριστώ"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "Δεν σας επιτρέπεται η διαχείριση αντιγράφων ασφαλείας."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "Το Zinn® Backups είναι απενεργοποιημένο, αλλά το πρόγραμμα φόρτωσής του στον φάκελο των πρόσθετων αναγκαστικής χρήσης (must-use plugins) διατηρεί σε λειτουργία κάθε δημιουργία αντιγράφου ασφαλείας ή επαναφορά που βρίσκεται σε εξέλιξη, καθώς και τις εντολές του WP-CLI."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "Διακόψτε την εκτέλεσή του στο παρασκήνιο"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Επιλέξτε το πλαίσιο για να επιβεβαιώσετε ότι η επαναφορά αντικαθιστά τα αρχεία και τη βάση δεδομένων αυτού του ιστότοπου."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "Αποθηκεύστε πρώτα τον προορισμό."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "Συνδέθηκε: ένα δοκιμαστικό αρχείο εγγράφηκε και αφαιρέθηκε."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Εισαγάγετε πρώτα το κλειδί εφαρμογής της εφαρμογής Dropbox σας (δείτε τα βήματα δίπλα στη φόρμα)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "Αυτός ο τύπος αποθήκευσης δεν συνδέεται."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "Η σύνδεση έληξε. Πατήστε ξανά Σύνδεση."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Το Dropbox είναι συνδεδεμένο."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "Οι ρυθμίσεις αποθηκεύτηκαν, αλλά το πρόγραμμα φόρτωσης παρασκηνίου δεν άλλαξε: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "Οι ρυθμίσεις αποθηκεύτηκαν. Ο φορτωτής παρασκηνίου: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "Οι ρυθμίσεις αποθηκεύτηκαν."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Μια άλλη διαδικασία αντιγράφου ασφαλείας, επαναφοράς ή εισαγωγής βρίσκεται σε εξέλιξη. Περιμένετε να ολοκληρωθεί ή ακυρώστε την."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "Η μεταφόρτωση δεν ξεκίνησε σωστά. Ξεκινήστε ξανά."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Το τμήμα δεν έφτασε. Ο διακομιστής σας ενδέχεται να περιορίζει τα μεγέθη μεταφόρτωσης· δοκιμάστε ξανά."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Επιλέξτε το πλαίσιο για να επιβεβαιώσετε ότι η εισαγωγή αντικαθιστά το περιεχόμενο και τη βάση δεδομένων αυτού του ιστότοπου."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Επιλέξτε ένα αρχείο συμπίεσης για εισαγωγή: μεταφορτώστε το, επικολλήστε έναν σύνδεσμο ή επιλέξτε ένα από τον φάκελο εισαγωγής."
 
@@ -1055,11 +1048,11 @@ msgstr "Αυτό το αντίγραφο ασφαλείας προέρχεται
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Μεταφορά του περιεχομένου από %1$s σε %2$s."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "Η επαναφορά ολοκληρώθηκε. Αν έχετε αποσυνδεθεί, συνδεθείτε με έναν λογαριασμό από τον ιστότοπο που επαναφέρατε."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "Η επαναφορά ολοκληρώθηκε."
 
@@ -1101,7 +1094,7 @@ msgstr "Δεν ήταν δυνατή η ανάγνωση της λίστας α�
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "Δεν υπάρχει εγγράψιμος φάκελος για προσωρινά αρχεία αντιγράφων ασφαλείας. Κάντε τον φάκελο wp-content εγγράψιμο και δοκιμάστε ξανά."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "Δεν ήταν δυνατή η δημιουργία φακέλου για αυτήν την εργασία."
 

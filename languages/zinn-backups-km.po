@@ -478,14 +478,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "បន្តដំណើរការការបម្រុងទុកនៅពេលដែលកម្មវិធីជំនួយត្រូវបានបិទ"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "បិទ លុះត្រាតែអ្នកបើកវា។ រក្សាការបម្រុងទុក ការស្តារឡើងវិញ និងពាក្យបញ្ជា WP-CLI ឱ្យដំណើរការ ប្រសិនបើកម្មវិធីជំនួយនេះត្រូវបានបិទ ឬប្រសិនបើមូលដ្ឋានទិន្នន័យដែលបានស្តារឡើងវិញលែងរាយឈ្មោះវាថាសកម្ម។ វានឹងដាក់កម្មវិធីផ្ទុកទិន្នន័យតូចមួយនៅក្នុងថត must-use plugins។"
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "បិទ លុះត្រាតែអ្នកបើកវា។ រក្សាការបម្រុងទុក ការស្តារឡើងវិញ និងពាក្យបញ្ជា WP-CLI ឱ្យដំណើរការ ប្រសិនបើកម្មវិធីជំនួយនេះត្រូវបានបិទ ឬប្រសិនបើមូលដ្ឋានទិន្នន័យដែលបានស្តារឡើងវិញលែងរាយឈ្មោះវាថាសកម្ម។ វាប្រើកម្មវិធីផ្ទុកតូចមួយដែលអ្នកចម្លងទៅក្នុងថតឯកសារកម្មវិធីជំនួយ must-use។"
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "កម្មវិធីផ្ទុកមិនស្ថិតនៅកន្លែងរបស់វាទេ។ សូមរក្សាទុកការកំណត់ដើម្បីដាក់វាត្រឡប់មកវិញ។"
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "ឧបករណ៍ផ្ទុកមិនទាន់បានដាក់នៅឡើយទេ។ Zinn® Backups មិនសរសេរចូលក្នុងថតកម្មវិធីជំនួយដែលត្រូវតែប្រើដោយខ្លួនឯងទេ៖ សូមចម្លងកូដខាងក្រោមទៅក្នុងឯកសារថ្មីមួយនៅទីតាំងនេះ (WP-CLI បោះពុម្ពវាជាមួយ៖ wp zinn-backups loader install)។"
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "រក្សាទុកការកំណត់"
 
@@ -643,19 +643,19 @@ msgstr "លុប %1$s ចេញពីគោលដៅ %2$s ឬ? ការបម�
 msgid "Removed %1$s from destination %2$s."
 msgstr "បានលុប %1$s ចេញពីគោលដៅ %2$s។"
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "កម្មវិធីផ្ទុកគឺនៅនឹងកន្លែងហើយ។"
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "កម្មវិធីផ្ទុកត្រូវបានលុបចេញហើយ។"
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "ការប្រើប្រាស់៖ wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "អថេរបរិស្ថាននោះមិនត្រូវបានកំណត់ ឬទទេនោះទេ។"
 
@@ -767,111 +767,104 @@ msgstr "%1$s បានឆ្លើយតបជាមួយ HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "មិនមានសេចក្ដីលម្អិតត្រូវបានផ្ដល់ឱ្យទេ"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "នៅលើបណ្តាញ multisite កម្មវិធីផ្ទុកត្រូវបានប្រើតែនៅពេលដែល Zinn® Backups ត្រូវបានធ្វើឱ្យសកម្មលើបណ្តាញប៉ុណ្ណោះ ពីព្រោះកម្មវិធីជំនួយត្រូវតែប្រើដំណើរការលើគ្រប់គេហទំព័រ។"
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "ឯកសារមួយទៀតដែលមានឈ្មោះថា zinn-backups-loader.php មានរួចហើយនៅក្នុងថតកម្មវិធីជំនួយចាំបាច់ (must-use plugins) ហើយវាត្រូវបានរក្សាទុកដូចដើម។"
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "មិនអាចបង្កើតថតកម្មវិធីជំនួយដែលត្រូវតែប្រើបានទេ។"
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "ចម្លងកូដកម្មវិធីផ្ទុកទៅក្នុងឯកសារថ្មីនៅ %s (ទំព័រកំណត់បង្ហាញវា, WP-CLI បោះពុម្ពវាជាមួយ៖ wp zinn-backups loader install)។"
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "ថតកម្មវិធីជំនួយចាំបាច់ប្រើ (must-use plugins) មិនអាចសរសេរចូលបានទេ។"
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "កម្មវិធីផ្ទុកមិនអាចដាក់នៅនឹងកន្លែងបានទេ។"
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "មិនអាចលុបកម្មវិធីផ្ទុកបានទេ។"
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "Zinn® Backups អាចបន្តដំណើរការបម្រុងទុក ឬការស្តារឡើងវិញដែលកំពុងដំណើរការ និងពាក្យបញ្ជា WP-CLI របស់វា ទោះបីជាកម្មវិធីជំនួយត្រូវបានបិទក៏ដោយ។ វាធ្វើបែបនេះដោយប្រើឧបករណ៍ផ្ទុកតូចមួយនៅក្នុងថត must-use plugins ដែលត្រូវបានបន្ថែមនៅពេលដែលអ្នកស្នើសុំប៉ុណ្ណោះ។"
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "Zinn® Backups អាចបន្តដំណើរការការបម្រុងទុក ឬការស្តារឡើងវិញដែលកំពុងដំណើរការ និងពាក្យបញ្ជា WP-CLI របស់វា សូម្បីតែកម្មវិធីជំនួយត្រូវបានបិទក៏ដោយ។ វាធ្វើបែបនេះដោយប្រើកម្មវិធីផ្ទុកទិន្នន័យតូចមួយដែលអ្នកចម្លងទៅក្នុងថតឯកសារកម្មវិធីជំនួយ must-use ហើយទំព័រកំណត់បង្ហាញកូដនោះ។"
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "ទេ អរគុណ"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "អ្នកមិនត្រូវបានអនុញ្ញាតឱ្យគ្រប់គ្រងការបម្រុងទុកទេ។"
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "Zinn® Backups ត្រូវបានបិទ ប៉ុន្តែកម្មវិធីផ្ទុករបស់វានៅក្នុងថតកម្មវិធីជំនួយ must-use រក្សាដំណើរការការបម្រុងទុក ឬការស្តារឡើងវិញដែលកំពុងដំណើរការ និងពាក្យបញ្ជា WP-CLI របស់វាឱ្យដំណើរការដដែល។"
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "បញ្ឈប់ដំណើរការរបស់វានៅផ្ទៃខាងក្រោយ"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "គូសធីកប្រអប់ដើម្បីបញ្ជាក់ថាការស្តារឡើងវិញនឹងជំនួសឯកសារ និងមូលដ្ឋានទិន្នន័យរបស់គេហទំព័រនេះ។"
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "រក្សាទុកគោលដៅជាមុនសិន។"
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "បានភ្ជាប់៖ ឯកសារសាកល្បងត្រូវបានសរសេរ និងលុបចេញ។"
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "ដំបូងត្រូវបញ្ចូលកូនសោកម្មវិធីនៃកម្មវិធី Dropbox របស់អ្នក (សូមមើលជំហាននៅក្បែរទម្រង់បែបបទ)។"
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "ទំហំផ្ទុកប្រភេទនេះមិនចូលទេ។"
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "ការចូលបានផុតកំណត់ហើយ។ សូមចុច ភ្ជាប់ ម្តងទៀត។"
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Dropbox ត្រូវបានភ្ជាប់។"
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "បានរក្សាទុកការកំណត់ ប៉ុន្តែកម្មវិធីផ្ទុកផ្ទៃខាងក្រោយមិនត្រូវបានផ្លាស់ប្តូរទេ៖ %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "បានរក្សាទុកការកំណត់។ កម្មវិធីផ្ទុកផ្ទៃខាងក្រោយ៖ %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "បានរក្សាទុកការកំណត់។"
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "ការបម្រុងទុក ការស្តារ ឬការនាំចូលផ្សេងទៀតកំពុងដំណើរការ។ សូមរង់ចាំរហូតដល់វាបញ្ចប់ ឬបោះបង់វា។"
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "ការផ្ទុកឡើងមិនបានចាប់ផ្ដើមត្រឹមត្រូវទេ។ សូមចាប់ផ្ដើមម្ដងទៀត។"
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "ដុំទិន្នន័យមិនបានមកដល់ទេ។ ម៉ាស៊ីនបម្រើរបស់អ្នកអាចកំណត់ទំហំនៃការផ្ទុកឡើង សូមព្យាយាមម្តងទៀត។"
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "គូសធីកប្រអប់ដើម្បីបញ្ជាក់ថាការនាំចូលនឹងជំនួសមាតិកា និងមូលដ្ឋានទិន្នន័យនៃគេហទំព័រនេះ។"
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "ជ្រើសរើសប័ណ្ណសារមួយដើម្បីនាំចូល៖ ផ្ទុកវាឡើង បិទភ្ជាប់តំណ ឬជ្រើសរើសមួយពីថតនាំចូល។"
 
@@ -1047,11 +1040,11 @@ msgstr "ការបម្រុងទុកនេះគឺមកពីបណ្
 msgid "Moving the content from %1$s to %2$s."
 msgstr "កំពុងផ្លាស់ទីមាតិកាពី %1$s ទៅ %2$s។"
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "ការស្តារឡើងវិញបានបញ្ចប់។ ប្រសិនបើអ្នកត្រូវបានចាកចេញ សូមចូលដោយប្រើគណនីពីគេហទំព័រដែលបានស្តារឡើងវិញ។"
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "ការស្តារឡើងវិញបានបញ្ចប់។"
 
@@ -1093,7 +1086,7 @@ msgstr "មិនអាចអានបញ្ជីឯកសារនៃការ
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "មិនមានថតដែលអាចសរសេរបានសម្រាប់ឯកសារបម្រុងទុកបណ្តោះអាសន្នទេ។ សូមកំណត់ wp-content ឱ្យអាចសរសេរបាន ហើយព្យាយាមម្តងទៀត។"
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "មិនអាចបង្កើតថតសម្រាប់កិច្ចការនេះបានទេ។"
 

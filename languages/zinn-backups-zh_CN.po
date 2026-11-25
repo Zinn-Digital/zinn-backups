@@ -478,14 +478,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "在插件关闭时继续运行备份"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "除非您将其开启，否则处于关闭状态。如果此插件被停用，或者恢复的数据库不再将其列为已启用，它将使备份、恢复和 WP-CLI 命令保持运行。这会在必用插件（must-use plugins）文件夹中放置一个小型加载器。"
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "除非您将其开启，否则处于关闭状态。如果此插件被关闭，或者恢复的数据库不再将其列为已激活，仍可保持备份、恢复和 WP-CLI 命令继续运行。它使用一个小型加载器，您需将其复制到 must-use 插件文件夹中。"
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "加载器不在原位。请保存设置以将其恢复。"
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "加载器尚未就位。Zinn® Backups 本身不会写入必须使用的插件（must-use plugins）文件夹：请将以下代码复制到此路径下的新文件中（WP-CLI 输出命令为：wp zinn-backups loader install）。"
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "保存设置"
 
@@ -643,19 +643,19 @@ msgstr "从目标 %2$s 中移除 %1$s 吗？在设置新目标之前，备份到
 msgid "Removed %1$s from destination %2$s."
 msgstr "已从目的地 %2$s 中移除 %1$s。"
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "加载器已就位。"
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "加载器已移除。"
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "用法：wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "该环境变量未设置或为空。"
 
@@ -767,111 +767,104 @@ msgstr "%1$s 返回了 HTTP %2$d：%3$s"
 msgid "no details given"
 msgstr "未提供详细信息"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "在多站点网络中，仅当 Zinn® Backups 在网络上启用时才使用加载器，因为必须使用的插件会在每个站点上运行。"
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "必用插件（must-use plugins）文件夹中已存在另一个名为 zinn-backups-loader.php 的文件；该文件未作修改。"
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "无法创建必用插件文件夹。"
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "将加载器代码复制到 %s 处的新文件中（设置页面会显示它；WP-CLI 会通过以下命令输出它：wp zinn-backups loader install）。"
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "必用插件（must-use plugins）目录不可写。"
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "无法将加载程序放置到位。"
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "无法移除加载器。"
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "即使插件已关闭，Zinn® Backups 也可以保持正在进行的备份或恢复及其 WP-CLI 命令继续运行。它是通过在 must-use 插件文件夹中添加一个小型加载程序来实现此功能的，且仅在您要求时才会添加。"
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "即使插件已关闭，Zinn® Backups 也可以让正在进行的备份或恢复及其 WP-CLI 命令保持运行。它通过一个由您复制到 must-use 插件文件夹中的小型加载器来实现这一点；设置页面会显示该代码。"
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "不，谢谢"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "您无权管理备份。"
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "Zinn® Backups 已关闭，但其在必须使用的插件（must-use plugins）文件夹中的加载器仍会保持任何正在进行的备份或恢复操作以及其 WP-CLI 命令正常运行。"
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "停止在后台运行"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "勾选该复选框以确认恢复操作将替换此站点的文件和数据库。"
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "请先保存目标地址。"
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "已连接：测试文件已写入并删除。"
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "请先输入您的 Dropbox 应用的应用密钥（请参阅表单旁边的步骤）。"
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "此类存储不进行登录。"
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "登录已过期。请再次点击连接。"
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Dropbox 已连接。"
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "设置已保存，但后台加载器未更改：%s"
+msgid "Settings saved. The background loader: %s"
+msgstr "设置已保存。后台加载程序：%s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "设置已保存。"
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "另一个备份、恢复或导入正在运行。请等待其完成，或将其取消。"
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "上传未正常开始。请重新开始。"
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "分块未送达。您的服务器可能会限制上传大小；请重试。"
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "勾选该框以确认导入将替换本站点的所有内容和数据库。"
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "选择要导入的归档：上传它、粘贴链接或从导入文件夹中选取。"
 
@@ -1047,11 +1040,11 @@ msgstr "此备份属于多站点网络。不支持将网络恢复至单个站点
 msgid "Moving the content from %1$s to %2$s."
 msgstr "正在将内容从 %1$s 移动到 %2$s。"
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "恢复完成。如果您已退出登录，请使用已恢复网站的帐户登录。"
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "恢复完成。"
 
@@ -1093,7 +1086,7 @@ msgstr "无法读取备份的文件列表，因此未删除任何残留的上传
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "没有可用于临时备份文件的可写文件夹。请将 wp-content 设为可写，然后重试。"
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "无法为此任务创建文件夹。"
 

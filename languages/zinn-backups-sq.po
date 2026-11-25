@@ -481,14 +481,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "Vazhdoni kryerjen e kopjeve rezervë kur shtojca është e çaktivizuar"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "E çaktivizuar, përveç nëse e aktivizoni. Mban në punë kopjet rezervë, rikthimet dhe komandat WP-CLI nëse kjo shtojcë çaktivizohet, ose nëse një bazë të dhënash e rikthyer nuk e liston më atë si aktive. Kjo vendos një ngarkues të vogël në dosjen e shtojcave të domosdoshme (must-use plugins)."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "E çaktivizuar përveç nëse e aktivizoni. Mban në punë kopjet rezervë, rikthimet dhe komandat WP-CLI nëse ky shtojcë çaktivizohet, ose nëse një bazë të dhënash e rikthyer nuk e liston më atë si aktive. Ajo përdor një ngarkues të vogël që e kopjoni në dosjen e shtojcave must-use."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "Ngarkuesi nuk është në vendin e vet. Ruani rregullimet për ta rikthyer."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Ngarkuesi nuk është ende në vend. Zinn® Backups nuk shkruan vetë te dosja e shtojcave të domosdoshme: kopjoni kodin e mëposhtëm në një skedar të ri në këtë shteg (WP-CLI e printon me: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "Ruaji rregullimet"
 
@@ -650,19 +650,19 @@ msgstr "Të hiqet %1$s nga destinacioni %2$s? Kopjet rezervë në të ndalojnë 
 msgid "Removed %1$s from destination %2$s."
 msgstr "%1$s u hoq nga destinacioni %2$s."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "Ngarkuesi është në vend."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "Ngarkuesi është hequr."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "Përdorimi: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "Ajo variabël mjedisi nuk është caktuar ose është bosh."
 
@@ -774,111 +774,104 @@ msgstr "%1$s u përgjigj me HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "Nuk janë dhënë hollësi"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "Në një rrjet me shumë faqe, ngarkuesi përdoret vetëm kur Zinn® Backups është i aktivizuar në të gjithë rrjetin, sepse një shtojcë e domosdoshme ekzekutohet në çdo faqe."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "Një skedar tjetër me emrin zinn-backups-loader.php ndodhet tashmë në dosjen e shtojcave të domosdoshme (must-use plugins); ai u la i paprekur."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "Dosja e shtojcave të domosdoshme nuk mund të krijohej."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "Kopjoni kodin e ngarkuesit në një skedar të ri te %s (faqja e cilësimeve e shfaq atë; WP-CLI e printon me: wp zinn-backups loader install)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "Dosja e shtojcave të domosdoshme për përdorim (must-use) nuk është e shkrueshme."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "Ngarkuesi nuk mund të vendosej në vend."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "Ngarkuesi nuk mund të hiqej."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "Zinn® Backups mund të mbajë në punë një kopjeruajtje ose rikthim në proces, si dhe komandat e tij WP-CLI, edhe nëse shtojca është e çaktivizuar. Këtë e bën me një ngarkues të vogël në dosjen e shtojcave must-use, i cili shtohet vetëm nëse e kërkoni ju."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "Zinn® Backups mund të mbajë në punë një kopje rezervë ose rikthim në proces, si dhe komandat e tij WP-CLI, edhe nëse shtojca është e çaktivizuar. Këtë e bën me një ngarkues të vogël që ju e kopjoni në dosjen e shtojcave must-use; faqja e cilësimeve shfaq kodin."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "Jo, faleminderit"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "Nuk ju lejohet të administroni kopje rezervë."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "Zinn® Backups është i çaktivizuar, por ngarkuesi i tij në dosjen e shtojcave must-use e mban në punë çdo kopje rezervë apo rikthim në proces, si dhe komandat e tij WP-CLI."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "Ndaleni ekzekutimin e tij në prapaskenë"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "Caktoni kutinë për të konfirmuar se rikthimi zëvendëson skedarët dhe bazën e të dhënave të këtij sajti."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "Ruani fillimisht destinacionin."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "U lidh: një skedar prove u shkrua dhe u hoq."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "Vendosni fillimisht çelësin e aplikacionit tuaj Dropbox (shihni hapat pranë formularit)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "Ky lloj ruajtjeje nuk identifikohet."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "Hyrja skadoi. Shtypni sërish Lidhu."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Dropbox është i lidhur."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "Rregullimet u ruajtën, por ngarkuesi në prapaskenë nuk u ndryshua: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "Cilësimet u ruajtën. Ngarkuesi në prapaskenë: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "Rregullimet u ruajtën."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "Një tjetër kopje rezervë, rikthim ose importim është duke u kryer. Prisni që të përfundojë, ose anulojeni."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "Ngarkimi nuk filloi siç duhet. Filloni përsëri."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "Pjesa nuk mbërriti. Serveri juaj mund të kufizojë madhësitë e ngarkimit; provoni përsëri."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "Shënoni kutinë për të konfirmuar se importimi zëvendëson përmbajtjen dhe bazën e të dhënave të kësaj faqeje."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "Zgjidhni një arkiv për të importuar: ngarkojeni atë, ngjitni një lidhje ose zgjidhni një nga dosja e importit."
 
@@ -1055,11 +1048,11 @@ msgstr "Kjo kopje rezervë është e një rrjeti me shumë faqe (multisite). Rik
 msgid "Moving the content from %1$s to %2$s."
 msgstr "Po zhvendoset përmbajtja nga %1$s te %2$s."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "Rikthimi përfundoi. Nëse jeni çidentifikuar, identifikohuni me një llogari nga sajti i rikthyer."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "Rikthimi përfundoi."
 
@@ -1101,7 +1094,7 @@ msgstr "Lista e skedarëve të kopjes rezervë nuk mund të lexohej, ndaj nuk u 
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "Nuk ka dosje të shkrueshme për skedarët e përkohshëm të kopjeve rezervë. Bëjeni wp-content të shkrueshme dhe provoni përsëri."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "Nuk mund të krijohej një dosje për këtë punë."
 

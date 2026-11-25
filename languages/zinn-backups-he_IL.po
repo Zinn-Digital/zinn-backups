@@ -484,14 +484,14 @@ msgid "Keep backups running when the plugin is switched off"
 msgstr "המשך הפעלת הגיבויים כאשר התוסף כבוי"
 
 #: includes/class-admin.php:520
-msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. This puts a small loader in the must-use plugins folder."
-msgstr "כבוי אלא אם כן תפעיל אותו. שומר על גיבויים, שחזורים ופקודות WP-CLI פעילים אם תוסף זה כבוי, או אם מסד נתונים ששוחזר אינו מציג אותו עוד כפעיל. פעולה זו מציבה טוען קטן בתיקיית תוספי החובה (must-use plugins)."
+msgid "Off unless you turn it on. Keeps backups, restores and WP-CLI commands running if this plugin is switched off, or if a restored database no longer lists it as active. It uses a small loader that you copy into the must-use plugins folder."
+msgstr "כבוי אלא אם כן תפעיל אותו. שומר על פעולת הגיבויים, השחזורים ופקודות WP-CLI אם תוסף זה כבוי, או אם מסד נתונים ששוחזר אינו מציג אותו עוד כפעיל. הוא משתמש בטוען קטן שמעתיקים לתיקיית התוספים ההכרחיים (must-use)."
 
-#: includes/class-admin.php:525
-msgid "The loader is not in place. Save the settings to put it back."
-msgstr "הטוען אינו במקומו. שמרו את ההגדרות כדי להחזירו."
+#: includes/class-admin.php:526
+msgid "The loader is not in place yet. Zinn® Backups does not write into the must-use plugins folder itself: copy the code below into a new file at this path (WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "הטוען עדיין אינו במקומו. Zinn® Backups אינו כותב בעצמו לתיקיית התוספים ההכרחיים: העתיקו את הקוד שלהלן לקובץ חדש בנתיב זה (WP-CLI מדפיס זאת באמצעות: wp zinn-backups loader install)."
 
-#: includes/class-admin.php:531
+#: includes/class-admin.php:532
 msgid "Save settings"
 msgstr "שמור הגדרות"
 
@@ -657,19 +657,19 @@ msgstr "להסיר את %1$s מיעד %2$s? הגיבויים אליו יופסק
 msgid "Removed %1$s from destination %2$s."
 msgstr "הפריט %1$s הוסר מהיעד %2$s."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is in place."
 msgstr "הטוען נמצא במקומו."
 
-#: includes/class-cli.php:458
+#: includes/class-cli.php:467
 msgid "The loader is removed."
 msgstr "הטוען הוסר."
 
-#: includes/class-cli.php:486
+#: includes/class-cli.php:495
 msgid "Use: wp zinn-backups loader status|install|remove"
 msgstr "שימוש: wp zinn-backups loader status|install|remove"
 
-#: includes/class-cli.php:504
+#: includes/class-cli.php:513
 msgid "That environment variable is not set or is empty."
 msgstr "משתנה סביבה זה אינו מוגדר או שהוא ריק."
 
@@ -781,111 +781,104 @@ msgstr "%1$s השיב עם HTTP %2$d: %3$s"
 msgid "no details given"
 msgstr "לא סופקו פרטים"
 
-#: includes/class-mu-loader.php:148
+#: includes/class-mu-loader.php:150
 msgid "On a multisite network the loader is only used when Zinn® Backups is network-activated, because a must-use plugin runs on every site."
 msgstr "ברשת אתרים, הטוען משמש רק כאשר Zinn® Backups מופעל בכל הרשת, מכיוון שתוסף חובה פועל בכל אתר."
 
-#: includes/class-mu-loader.php:153
+#: includes/class-mu-loader.php:155
 msgid "Another file named zinn-backups-loader.php is already in the must-use plugins folder; it was left alone."
 msgstr "קובץ נוסף בשם zinn-backups-loader.php כבר קיים בתיקיית תוספי החובה (must-use plugins); הוא הושאר ללא שינוי."
 
-#: includes/class-mu-loader.php:187
-msgid "The must-use plugins folder could not be created."
-msgstr "לא ניתן היה ליצור את תיקיית תוספי החובה (Must-Use)."
+#. translators: %s: the full path the loader file goes to.
+#: includes/class-mu-loader.php:205
+#, php-format
+msgid "Copy the loader code into a new file at %s (the settings page shows it; WP-CLI prints it with: wp zinn-backups loader install)."
+msgstr "יש להעתיק את קוד הטוען לקובץ חדש בנתיב %s (עמוד ההגדרות מציג אותו; ה-WP-CLI מדפיס אותו באמצעות: wp zinn-backups loader install)."
 
-#: includes/class-mu-loader.php:190
-#: includes/class-mu-loader.php:195
-msgid "The must-use plugins folder is not writable."
-msgstr "תיקיית תוספי החובה (must-use) אינה ניתנת לכתיבה."
-
-#: includes/class-mu-loader.php:199
-msgid "The loader could not be put in place."
-msgstr "לא ניתן היה למקם את הטוען במקומו."
-
-#: includes/class-mu-loader.php:230
+#: includes/class-mu-loader.php:231
 msgid "The loader could not be removed."
 msgstr "לא ניתן היה להסיר את הטוען."
 
 #: includes/class-plugin.php:116
-msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader in the must-use plugins folder, added only if you ask."
-msgstr "התוסף Zinn® Backups יכול להמשיך להריץ גיבוי או שחזור שנמצאים בעיצומם, ואת פקודות ה-WP-CLI שלו, גם אם התוסף כבוי. הוא עושה זאת באמצעות טוען קטן בתיקיית must-use plugins, שמתווסף רק אם תבקש."
+msgid "Zinn® Backups can keep a backup or restore in progress, and its WP-CLI commands, working even if the plugin is switched off. It does this with a small loader that you copy into the must-use plugins folder; the settings page shows the code."
+msgstr "התוסף Zinn® Backups יכול להמשיך להפעיל גיבוי או שחזור שמתבצעים כעת, ואת פקודות ה-WP-CLI שלו, גם אם התוסף כבוי. הוא עושה זאת באמצעות טוען קטן שמעתיקים לתיקיית התוספים ההכרחיים (must-use); עמוד ההגדרות מציג את הקוד."
 
 #: includes/class-plugin.php:116
 msgid "No thanks"
 msgstr "לא, תודה"
 
-#: includes/class-plugin.php:126
-#: includes/class-plugin.php:143
-#: includes/class-plugin.php:172
-#: includes/class-plugin.php:210
+#: includes/class-plugin.php:127
+#: includes/class-plugin.php:144
+#: includes/class-plugin.php:173
+#: includes/class-plugin.php:211
 msgid "You are not allowed to manage backups."
 msgstr "אין לך הרשאה לנהל גיבויים."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Zinn® Backups is switched off, but its loader in the must-use plugins folder keeps any backup or restore in progress, and its WP-CLI commands, working."
 msgstr "התוסף Zinn® Backups כבוי, אך מנגנון הטעינה שלו בתיקיית תוספי החובה (must-use plugins) משאיר פעילים כל גיבוי או שחזור שמתבצעים כעת, וכך גם את פקודות ה-WP-CLI שלו."
 
-#: includes/class-plugin.php:162
+#: includes/class-plugin.php:163
 msgid "Stop it running in the background"
 msgstr "הפסקת הפעולה ברקע"
 
-#: includes/class-plugin.php:310
+#: includes/class-plugin.php:311
 msgid "Tick the box to confirm that the restore replaces this site’s files and database."
 msgstr "סמן את התיבה כדי לאשר שהשחזור מחליף את הקבצים ומסד הנתונים של אתר זה."
 
-#: includes/class-plugin.php:385
-#: includes/class-plugin.php:404
+#: includes/class-plugin.php:386
+#: includes/class-plugin.php:405
 msgid "Save the destination first."
 msgstr "יש לשמור תחילה את היעד."
 
-#: includes/class-plugin.php:388
+#: includes/class-plugin.php:389
 msgid "Connected: a test file was written and removed."
 msgstr "מחובר: קובץ בדיקה נכתב והוסר."
 
-#: includes/class-plugin.php:420
+#: includes/class-plugin.php:421
 msgid "Enter the app key of your Dropbox app first (see the steps beside the form)."
 msgstr "הזן תחילה את מפתח היישום של יישום ה-Dropbox שלך (ראה את השלבים לצד הטופס)."
 
-#: includes/class-plugin.php:433
+#: includes/class-plugin.php:434
 msgid "This kind of storage does not sign in."
 msgstr "סוג אחסון זה אינו מתחבר."
 
-#: includes/class-plugin.php:450
+#: includes/class-plugin.php:451
 msgid "The sign-in expired. Press Connect again."
 msgstr "תוקף הכניסה פג. לחץ שוב על התחבר."
 
-#: includes/class-plugin.php:456
+#: includes/class-plugin.php:457
 msgid "Dropbox is connected."
 msgstr "Dropbox מחובר."
 
-#. translators: %s: why the must-use loader could not be written or removed.
-#: includes/class-plugin.php:529
+#. translators: %s: what is left to do for the must-use loader, or why it could not be removed.
+#: includes/class-plugin.php:530
 #, php-format
-msgid "Settings saved, but the background loader was not changed: %s"
-msgstr "ההגדרות נשמרו, אך טוען הרקע לא השתנה: %s"
+msgid "Settings saved. The background loader: %s"
+msgstr "ההגדרות נשמרו. טוען הרקע: %s"
 
-#: includes/class-plugin.php:531
+#: includes/class-plugin.php:532
 msgid "Settings saved."
 msgstr "ההגדרות נשמרו."
 
-#: includes/class-plugin.php:547
+#: includes/class-plugin.php:548
 #: includes/class-runner.php:70
 msgid "Another backup, restore or import is running. Wait for it to finish, or cancel it."
 msgstr "גיבוי, שחזור או ייבוא אחר פועל כעת. המתן לסיומו, או בטל אותו."
 
-#: includes/class-plugin.php:573
+#: includes/class-plugin.php:574
 msgid "The upload was not started properly. Start again."
 msgstr "ההעלאה לא התחילה כראוי. יש להתחיל שוב."
 
-#: includes/class-plugin.php:577
+#: includes/class-plugin.php:578
 msgid "The chunk did not arrive. Your server may limit upload sizes; try again."
 msgstr "המקטע לא הגיע. ייתכן שהשרת שלך מגביל את נפח ההעלאות; כדאי לנסות שוב."
 
-#: includes/class-plugin.php:601
+#: includes/class-plugin.php:602
 msgid "Tick the box to confirm that the import replaces this site’s content and database."
 msgstr "סמן את התיבה כדי לאשר שהייבוא מחליף את התוכן ואת מסד הנתונים של אתר זה."
 
-#: includes/class-plugin.php:667
+#: includes/class-plugin.php:668
 msgid "Choose an archive to import: upload it, paste a link, or pick one from the import folder."
 msgstr "יש לבחור ארכיון לייבוא: להעלות אותו, להדביק קישור, או לבחור קובץ מתיקיית הייבוא."
 
@@ -1063,11 +1056,11 @@ msgstr "גיבוי זה הוא של רשת אתרים (multisite). שחזור ר
 msgid "Moving the content from %1$s to %2$s."
 msgstr "מעביר את התוכן מ-%1$s אל %2$s."
 
-#: includes/class-restore-job.php:857
+#: includes/class-restore-job.php:859
 msgid "Restore complete. If you are signed out, sign in with an account from the restored site."
 msgstr "השחזור הושלם. אם נותקת, יש להתחבר באמצעות חשבון מהאתר ששוחזר."
 
-#: includes/class-restore-job.php:858
+#: includes/class-restore-job.php:860
 msgid "Restore complete."
 msgstr "השחזור הושלם."
 
@@ -1109,7 +1102,7 @@ msgstr "לא ניתן היה לקרוא את רשימת הקבצים של הגי
 msgid "There is no writable folder for temporary backup files. Make wp-content writable and try again."
 msgstr "אין תיקייה עם הרשאות כתיבה עבור קובצי גיבוי זמניים. יש להגדיר הרשאות כתיבה עבור wp-content ולנסות שוב."
 
-#: includes/class-work-dir.php:90
+#: includes/class-work-dir.php:87
 msgid "Could not create a folder for this job."
 msgstr "לא ניתן היה ליצור תיקייה עבור משימה זו."
 
